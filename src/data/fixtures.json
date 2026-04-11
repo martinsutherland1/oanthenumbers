@@ -1,0 +1,1108 @@
+[
+  {
+    "date": "02-08-2025",
+    "home": "kilmarnock",
+    "away": "livingston",
+    "xg_home": 0.91,
+    "xg_away": 1.04
+  },
+  {
+    "date": "02-08-2025",
+    "home": "motherwell",
+    "away": "rangers",
+    "xg_home": 2.13,
+    "xg_away": 0.83
+  },
+  {
+    "date": "03-08-2025",
+    "home": "celtic",
+    "away": "st-mirren",
+    "xg_home": 1.4,
+    "xg_away": 0.27
+  },
+  {
+    "date": "03-08-2025",
+    "home": "dundee-fc",
+    "away": "hibernian",
+    "xg_home": 0.13,
+    "xg_away": 1.42
+  },
+  {
+    "date": "03-08-2025",
+    "home": "falkirk",
+    "away": "dundee-united",
+    "xg_home": 2.02,
+    "xg_away": 1.19
+  },
+  {
+    "date": "04-08-2025",
+    "home": "hearts",
+    "away": "aberdeen",
+    "xg_home": 1.02,
+    "xg_away": 1.4
+  },
+  {
+    "date": "09-08-2025",
+    "home": "aberdeen",
+    "away": "celtic",
+    "xg_home": 0.55,
+    "xg_away": 1.16
+  },
+  {
+    "date": "09-08-2025",
+    "home": "rangers",
+    "away": "dundee-fc",
+    "xg_home": 1.18,
+    "xg_away": 0.34
+  },
+  {
+    "date": "09-08-2025",
+    "home": "livingston",
+    "away": "falkirk",
+    "xg_home": 0.8,
+    "xg_away": 0.79
+  },
+  {
+    "date": "09-08-2025",
+    "home": "st-mirren",
+    "away": "motherwell",
+    "xg_home": 1.31,
+    "xg_away": 0.53
+  },
+  {
+    "date": "10-08-2025",
+    "home": "dundee-united",
+    "away": "hearts",
+    "xg_home": 0.71,
+    "xg_away": 1.08
+  },
+  {
+    "date": "10-08-2025",
+    "home": "hibernian",
+    "away": "kilmarnock",
+    "xg_home": 1.77,
+    "xg_away": 0.94
+  },
+  {
+    "date": "23-08-2025",
+    "home": "celtic",
+    "away": "livingston",
+    "xg_home": 3,
+    "xg_away": 0.24
+  },
+  {
+    "date": "23-08-2025",
+    "home": "kilmarnock",
+    "away": "dundee-fc",
+    "xg_home": 1.11,
+    "xg_away": 0.26
+  },
+  {
+    "date": "23-08-2025",
+    "home": "hearts",
+    "away": "motherwell",
+    "xg_home": 2.18,
+    "xg_away": 1.52
+  },
+  {
+    "date": "23-08-2025",
+    "home": "st-mirren",
+    "away": "rangers",
+    "xg_home": 1.01,
+    "xg_away": 1.56
+  },
+  {
+    "date": "27-08-2025",
+    "home": "motherwell",
+    "away": "aberdeen",
+    "xg_home": 1.24,
+    "xg_away": 1
+  },
+  {
+    "date": "27-08-2025",
+    "home": "celtic",
+    "away": "hibernian",
+    "xg_home": 2.8,
+    "xg_away": 0.7
+  },
+  {
+    "date": "27-08-2025",
+    "home": "st-mirren",
+    "away": "dundee-fc",
+    "xg_home": 0.74,
+    "xg_away": 0.62
+  },
+  {
+    "date": "27-08-2025",
+    "home": "dundee-united",
+    "away": "kilmarnock",
+    "xg_home": 1.42,
+    "xg_away": 1.49
+  },
+  {
+    "date": "27-08-2025",
+    "home": "hearts",
+    "away": "falkirk",
+    "xg_home": 1.94,
+    "xg_away": 0.67
+  },
+  {
+    "date": "30-08-2025",
+    "home": "rangers",
+    "away": "celtic",
+    "xg_home": 0.15,
+    "xg_away": 0.19
+  },
+  {
+    "date": "30-08-2025",
+    "home": "livingston",
+    "away": "hearts",
+    "xg_home": 0.5,
+    "xg_away": 1.33
+  },
+  {
+    "date": "30-08-2025",
+    "home": "motherwell",
+    "away": "kilmarnock",
+    "xg_home": 1.68,
+    "xg_away": 1.2
+  },
+  {
+    "date": "31-08-2025",
+    "home": "aberdeen",
+    "away": "falkirk",
+    "xg_home": 0.96,
+    "xg_away": 1.26
+  },
+  {
+    "date": "31-08-2025",
+    "home": "dundee-fc",
+    "away": "dundee-united",
+    "xg_home": 0.12,
+    "xg_away": 0.91
+  },
+  {
+    "date": "31-08-2025",
+    "home": "hibernian",
+    "away": "st-mirren",
+    "xg_home": 2.42,
+    "xg_away": 0.84
+  },
+  {
+    "date": "13-09-2025",
+    "home": "aberdeen",
+    "away": "livingston",
+    "xg_home": 1.22,
+    "xg_away": 0.56
+  },
+  {
+    "date": "13-09-2025",
+    "home": "dundee-fc",
+    "away": "motherwell",
+    "xg_home": 0.82,
+    "xg_away": 2.28
+  },
+  {
+    "date": "13-09-2025",
+    "home": "hibernian",
+    "away": "dundee-united",
+    "xg_home": 2.26,
+    "xg_away": 1.78
+  },
+  {
+    "date": "13-09-2025",
+    "home": "falkirk",
+    "away": "st-mirren",
+    "xg_home": 0.7,
+    "xg_away": 1.57
+  },
+  {
+    "date": "13-09-2025",
+    "home": "rangers",
+    "away": "hearts",
+    "xg_home": 1.1,
+    "xg_away": 0.98
+  },
+  {
+    "date": "14-09-2025",
+    "home": "kilmarnock",
+    "away": "celtic",
+    "xg_home": 1.32,
+    "xg_away": 2.05
+  },
+  {
+    "date": "20-09-2025",
+    "home": "dundee-fc",
+    "away": "livingston",
+    "xg_home": 1.95,
+    "xg_away": 0.72
+  },
+  {
+    "date": "23-09-2025",
+    "home": "dundee-united",
+    "away": "aberdeen",
+    "xg_home": 1.33,
+    "xg_away": 1.33
+  },
+  {
+    "date": "23-09-2025",
+    "home": "falkirk",
+    "away": "hibernian",
+    "xg_home": 1.18,
+    "xg_away": 1.64
+  },
+  {
+    "date": "28-09-2025",
+    "home": "livingston",
+    "away": "rangers",
+    "xg_home": 0.74,
+    "xg_away": 1.59
+  },
+  {
+    "date": "04-10-2025",
+    "home": "dundee-united",
+    "away": "livingston",
+    "xg_home": 2.13,
+    "xg_away": 1.26
+  },
+  {
+    "date": "04-10-2025",
+    "home": "hearts",
+    "away": "hibernian",
+    "xg_home": 0.8,
+    "xg_away": 0.43
+  },
+  {
+    "date": "04-10-2025",
+    "home": "kilmarnock",
+    "away": "st-mirren",
+    "xg_home": 1.96,
+    "xg_away": 0.43
+  },
+  {
+    "date": "05-10-2025",
+    "home": "aberdeen",
+    "away": "dundee-fc",
+    "xg_home": 2.01,
+    "xg_away": 0.31
+  },
+  {
+    "date": "05-10-2025",
+    "home": "celtic",
+    "away": "motherwell",
+    "xg_home": 1.83,
+    "xg_away": 0.6
+  },
+  {
+    "date": "05-10-2025",
+    "home": "falkirk",
+    "away": "rangers",
+    "xg_home": 1.32,
+    "xg_away": 1.09
+  },
+  {
+    "date": "18-10-2025",
+    "home": "st-mirren",
+    "away": "aberdeen",
+    "xg_home": 0.48,
+    "xg_away": 1.83
+  },
+  {
+    "date": "18-10-2025",
+    "home": "rangers",
+    "away": "dundee-united",
+    "xg_home": 1.62,
+    "xg_away": 0.62
+  },
+  {
+    "date": "18-10-2025",
+    "home": "motherwell",
+    "away": "falkirk",
+    "xg_home": 1.01,
+    "xg_away": 1.35
+  },
+  {
+    "date": "18-10-2025",
+    "home": "kilmarnock",
+    "away": "hearts",
+    "xg_home": 0.26,
+    "xg_away": 2.85
+  },
+  {
+    "date": "18-10-2025",
+    "home": "hibernian",
+    "away": "livingston",
+    "xg_home": 2.01,
+    "xg_away": 0.42
+  },
+  {
+    "date": "19-10-2025",
+    "home": "dundee-fc",
+    "away": "celtic",
+    "xg_home": 1.3,
+    "xg_away": 2.7
+  },
+  {
+    "date": "25-10-2025",
+    "home": "falkirk",
+    "away": "dundee-fc",
+    "xg_home": 1.07,
+    "xg_away": 1.21
+  },
+  {
+    "date": "25-10-2025",
+    "home": "dundee-united",
+    "away": "st-mirren",
+    "xg_home": 1.42,
+    "xg_away": 2.28
+  },
+  {
+    "date": "25-10-2025",
+    "home": "livingston",
+    "away": "motherwell",
+    "xg_home": 1.64,
+    "xg_away": 1.37
+  },
+  {
+    "date": "26-10-2025",
+    "home": "aberdeen",
+    "away": "hibernian",
+    "xg_home": 1.24,
+    "xg_away": 2.43
+  },
+  {
+    "date": "26-10-2025",
+    "home": "hearts",
+    "away": "celtic",
+    "xg_home": 0.78,
+    "xg_away": 0.88
+  },
+  {
+    "date": "26-10-2025",
+    "home": "rangers",
+    "away": "kilmarnock",
+    "xg_home": 1.36,
+    "xg_away": 1.04
+  },
+  {
+    "date": "29-10-2025",
+    "home": "kilmarnock",
+    "away": "aberdeen",
+    "xg_home": 1.36,
+    "xg_away": 0.61
+  },
+  {
+    "date": "29-10-2025",
+    "home": "celtic",
+    "away": "falkirk",
+    "xg_home": 4.18,
+    "xg_away": 0.5
+  },
+  {
+    "date": "29-10-2025",
+    "home": "motherwell",
+    "away": "dundee-united",
+    "xg_home": 1.08,
+    "xg_away": 0.48
+  },
+  {
+    "date": "29-10-2025",
+    "home": "st-mirren",
+    "away": "hearts",
+    "xg_home": 1.01,
+    "xg_away": 1.57
+  },
+  {
+    "date": "29-10-2025",
+    "home": "hibernian",
+    "away": "rangers",
+    "xg_home": 1.22,
+    "xg_away": 0.52
+  },
+  {
+    "date": "01-11-2025",
+    "home": "hearts",
+    "away": "dundee-fc",
+    "xg_home": 3.34,
+    "xg_away": 0.1
+  },
+  {
+    "date": "01-11-2025",
+    "home": "falkirk",
+    "away": "kilmarnock",
+    "xg_home": 2.07,
+    "xg_away": 0.43
+  },
+  {
+    "date": "01-11-2025",
+    "home": "livingston",
+    "away": "hibernian",
+    "xg_home": 1.09,
+    "xg_away": 0.78
+  },
+  {
+    "date": "08-11-2025",
+    "home": "falkirk",
+    "away": "livingston",
+    "xg_home": 1.04,
+    "xg_away": 0.62
+  },
+  {
+    "date": "08-11-2025",
+    "home": "st-mirren",
+    "away": "hibernian",
+    "xg_home": 0.73,
+    "xg_away": 1.62
+  },
+  {
+    "date": "09-11-2025",
+    "home": "aberdeen",
+    "away": "motherwell",
+    "xg_home": 0.79,
+    "xg_away": 0.68
+  },
+  {
+    "date": "09-11-2025",
+    "home": "celtic",
+    "away": "kilmarnock",
+    "xg_home": 2.06,
+    "xg_away": 0.38
+  },
+  {
+    "date": "09-11-2025",
+    "home": "dundee-fc",
+    "away": "rangers",
+    "xg_home": 0.43,
+    "xg_away": 0.85
+  },
+  {
+    "date": "09-11-2025",
+    "home": "hearts",
+    "away": "dundee-united",
+    "xg_home": 0.45,
+    "xg_away": 0.34
+  },
+  {
+    "date": "22-11-2025",
+    "home": "st-mirren",
+    "away": "celtic",
+    "xg_home": 1.53,
+    "xg_away": 0.88
+  },
+  {
+    "date": "22-11-2025",
+    "home": "hibernian",
+    "away": "dundee-fc",
+    "xg_home": 2.26,
+    "xg_away": 0.56
+  },
+  {
+    "date": "22-11-2025",
+    "home": "dundee-united",
+    "away": "falkirk",
+    "xg_home": 0.69,
+    "xg_away": 1.73
+  },
+  {
+    "date": "22-11-2025",
+    "home": "kilmarnock",
+    "away": "motherwell",
+    "xg_home": 1.73,
+    "xg_away": 1.4
+  },
+  {
+    "date": "22-11-2025",
+    "home": "rangers",
+    "away": "livingston",
+    "xg_home": 1.39,
+    "xg_away": 1.37
+  },
+  {
+    "date": "23-11-2025",
+    "home": "aberdeen",
+    "away": "hearts",
+    "xg_home": 0.58,
+    "xg_away": 2.3
+  },
+  {
+    "date": "25-11-2025",
+    "home": "motherwell",
+    "away": "hibernian",
+    "xg_home": 1.35,
+    "xg_away": 0.77
+  },
+  {
+    "date": "29-11-2025",
+    "home": "dundee-fc",
+    "away": "st-mirren",
+    "xg_home": 0.68,
+    "xg_away": 1.39
+  },
+  {
+    "date": "29-11-2025",
+    "home": "kilmarnock",
+    "away": "dundee-united",
+    "xg_home": 0.69,
+    "xg_away": 1.07
+  },
+  {
+    "date": "29-11-2025",
+    "home": "motherwell",
+    "away": "hearts",
+    "xg_home": 0.58,
+    "xg_away": 0.41
+  },
+  {
+    "date": "30-11-2025",
+    "home": "livingston",
+    "away": "aberdeen",
+    "xg_home": 0.99,
+    "xg_away": 0.76
+  },
+  {
+    "date": "30-11-2025",
+    "home": "hibernian",
+    "away": "celtic",
+    "xg_home": 0.86,
+    "xg_away": 1.33
+  },
+  {
+    "date": "30-11-2025",
+    "home": "rangers",
+    "away": "falkirk",
+    "xg_home": 2.13,
+    "xg_away": 0.12
+  },
+  {
+    "date": "03-12-2025",
+    "home": "aberdeen",
+    "away": "st-mirren",
+    "xg_home": 2.12,
+    "xg_away": 1.04
+  },
+  {
+    "date": "03-12-2025",
+    "home": "celtic",
+    "away": "dundee-fc",
+    "xg_home": 2.07,
+    "xg_away": 0.21
+  },
+  {
+    "date": "03-12-2025",
+    "home": "dundee-united",
+    "away": "rangers",
+    "xg_home": 1.38,
+    "xg_away": 3.6
+  },
+  {
+    "date": "03-12-2025",
+    "home": "falkirk",
+    "away": "motherwell",
+    "xg_home": 0.57,
+    "xg_away": 0.47
+  },
+  {
+    "date": "03-12-2025",
+    "home": "hearts",
+    "away": "kilmarnock",
+    "xg_home": 2.19,
+    "xg_away": 1.75
+  },
+  {
+    "date": "06-12-2025",
+    "home": "dundee-fc",
+    "away": "aberdeen",
+    "xg_home": 1.12,
+    "xg_away": 1.36
+  },
+  {
+    "date": "06-12-2025",
+    "home": "st-mirren",
+    "away": "dundee-united",
+    "xg_home": 1.22,
+    "xg_away": 1.01
+  },
+  {
+    "date": "06-12-2025",
+    "home": "hibernian",
+    "away": "falkirk",
+    "xg_home": 1.23,
+    "xg_away": 0.49
+  },
+  {
+    "date": "06-12-2025",
+    "home": "kilmarnock",
+    "away": "rangers",
+    "xg_home": 0.66,
+    "xg_away": 0.75
+  },
+  {
+    "date": "06-12-2025",
+    "home": "motherwell",
+    "away": "livingston",
+    "xg_home": 1.62,
+    "xg_away": 0.67
+  },
+  {
+    "date": "07-12-2025",
+    "home": "celtic",
+    "away": "hearts",
+    "xg_home": 1.86,
+    "xg_away": 0.5
+  },
+  {
+    "date": "13-12-2025",
+    "home": "livingston",
+    "away": "dundee-fc",
+    "xg_home": 0.89,
+    "xg_away": 0.46
+  },
+  {
+    "date": "13-12-2025",
+    "home": "dundee-united",
+    "away": "motherwell",
+    "xg_home": 0.49,
+    "xg_away": 0.68
+  },
+  {
+    "date": "13-12-2025",
+    "home": "falkirk",
+    "away": "hearts",
+    "xg_home": 1.03,
+    "xg_away": 1.5
+  },
+  {
+    "date": "14-12-2025",
+    "home": "aberdeen",
+    "away": "kilmarnock",
+    "xg_home": 2.75,
+    "xg_away": 1.02
+  },
+  {
+    "date": "15-12-2025",
+    "home": "rangers",
+    "away": "hibernian",
+    "xg_home": 1.84,
+    "xg_away": 0.53
+  },
+  {
+    "date": "17-12-2025",
+    "home": "dundee-united",
+    "away": "celtic",
+    "xg_home": 1.45,
+    "xg_away": 3.2
+  },
+  {
+    "date": "20-12-2025",
+    "home": "motherwell",
+    "away": "dundee-fc",
+    "xg_home": 1.23,
+    "xg_away": 0.23
+  },
+  {
+    "date": "20-12-2025",
+    "home": "dundee-united",
+    "away": "hibernian",
+    "xg_home": 0.82,
+    "xg_away": 1.26
+  },
+  {
+    "date": "20-12-2025",
+    "home": "kilmarnock",
+    "away": "falkirk",
+    "xg_home": 1.19,
+    "xg_away": 1.46
+  },
+  {
+    "date": "20-12-2025",
+    "home": "st-mirren",
+    "away": "livingston",
+    "xg_home": 2.1,
+    "xg_away": 0.24
+  },
+  {
+    "date": "21-12-2025",
+    "home": "celtic",
+    "away": "aberdeen",
+    "xg_home": 4.72,
+    "xg_away": 0.91
+  },
+  {
+    "date": "21-12-2025",
+    "home": "hearts",
+    "away": "rangers",
+    "xg_home": 1.7,
+    "xg_away": 2.33
+  },
+  {
+    "date": "27-12-2025",
+    "home": "aberdeen",
+    "away": "dundee-united",
+    "xg_home": 1.1,
+    "xg_away": 0.8
+  },
+  {
+    "date": "27-12-2025",
+    "home": "livingston",
+    "away": "celtic",
+    "xg_home": 1.09,
+    "xg_away": 3.04
+  },
+  {
+    "date": "27-12-2025",
+    "home": "dundee-fc",
+    "away": "falkirk",
+    "xg_home": 0.46,
+    "xg_away": 1.33
+  },
+  {
+    "date": "27-12-2025",
+    "home": "hibernian",
+    "away": "hearts",
+    "xg_home": 1.51,
+    "xg_away": 1.73
+  },
+  {
+    "date": "27-12-2025",
+    "home": "st-mirren",
+    "away": "kilmarnock",
+    "xg_home": 1.36,
+    "xg_away": 0.75
+  },
+  {
+    "date": "27-12-2025",
+    "home": "rangers",
+    "away": "motherwell",
+    "xg_home": 4.04,
+    "xg_away": 1.06
+  },
+  {
+    "date": "30-12-2025",
+    "home": "hibernian",
+    "away": "aberdeen",
+    "xg_home": 1.64,
+    "xg_away": 0.54
+  },
+  {
+    "date": "30-12-2025",
+    "home": "motherwell",
+    "away": "celtic",
+    "xg_home": 1.4,
+    "xg_away": 0.59
+  },
+  {
+    "date": "30-12-2025",
+    "home": "dundee-fc",
+    "away": "kilmarnock",
+    "xg_home": 2.23,
+    "xg_away": 1.27
+  },
+  {
+    "date": "30-12-2025",
+    "home": "livingston",
+    "away": "dundee-united",
+    "xg_home": 0.45,
+    "xg_away": 3.24
+  },
+  {
+    "date": "30-12-2025",
+    "home": "rangers",
+    "away": "st-mirren",
+    "xg_home": 1.89,
+    "xg_away": 0.89
+  },
+  {
+    "date": "03-01-2026",
+    "home": "falkirk",
+    "away": "aberdeen",
+    "xg_home": 1.53,
+    "xg_away": 0.53
+  },
+  {
+    "date": "03-01-2026",
+    "home": "celtic",
+    "away": "rangers",
+    "xg_home": 2.33,
+    "xg_away": 1.06
+  },
+  {
+    "date": "03-01-2026",
+    "home": "dundee-united",
+    "away": "dundee-fc",
+    "xg_home": 1.5,
+    "xg_away": 1.87
+  },
+  {
+    "date": "03-01-2026",
+    "home": "hearts",
+    "away": "livingston",
+    "xg_home": 2.23,
+    "xg_away": 0.54
+  },
+  {
+    "date": "03-01-2026",
+    "home": "kilmarnock",
+    "away": "hibernian",
+    "xg_home": 0.48,
+    "xg_away": 1.87
+  },
+  {
+    "date": "03-01-2026",
+    "home": "motherwell",
+    "away": "st-mirren",
+    "xg_home": 1.88,
+    "xg_away": 0.29
+  },
+  {
+    "date": "06-01-2026",
+    "home": "rangers",
+    "away": "aberdeen",
+    "xg_home": 1.81,
+    "xg_away": 1.05
+  },
+  {
+    "date": "10-01-2026",
+    "home": "celtic",
+    "away": "dundee-united",
+    "xg_home": 3.11,
+    "xg_away": 0.34
+  },
+  {
+    "date": "10-01-2026",
+    "home": "st-mirren",
+    "away": "falkirk",
+    "xg_home": 0.54,
+    "xg_away": 0.52
+  },
+  {
+    "date": "10-01-2026",
+    "home": "hibernian",
+    "away": "motherwell",
+    "xg_home": 1.31,
+    "xg_away": 1.03
+  },
+  {
+    "date": "10-01-2026",
+    "home": "livingston",
+    "away": "kilmarnock",
+    "xg_home": 1.3,
+    "xg_away": 1.49
+  },
+  {
+    "date": "11-01-2026",
+    "home": "aberdeen",
+    "away": "rangers",
+    "xg_home": 0.32,
+    "xg_away": 1.16
+  },
+  {
+    "date": "11-01-2026",
+    "home": "dundee-fc",
+    "away": "hearts",
+    "xg_home": 1.34,
+    "xg_away": 0.36
+  },
+  {
+    "date": "14-01-2026",
+    "home": "falkirk",
+    "away": "celtic",
+    "xg_home": 1.72,
+    "xg_away": 0.62
+  },
+  {
+    "date": "14-01-2026",
+    "home": "hearts",
+    "away": "st-mirren",
+    "xg_home": 2.11,
+    "xg_away": 0.98
+  },
+  {
+    "date": "20-01-2026",
+    "home": "livingston",
+    "away": "st-mirren",
+    "xg_home": 1.32,
+    "xg_away": 1.41
+  },
+  {
+    "date": "24-01-2026",
+    "home": "aberdeen",
+    "away": "livingston",
+    "xg_home": 3.08,
+    "xg_away": 1.74
+  },
+  {
+    "date": "24-01-2026",
+    "home": "falkirk",
+    "away": "hibernian",
+    "xg_home": 3.64,
+    "xg_away": 0.73
+  },
+  {
+    "date": "24-01-2026",
+    "home": "motherwell",
+    "away": "kilmarnock",
+    "xg_home": 2.71,
+    "xg_away": 0.49
+  },
+  {
+    "date": "25-01-2026",
+    "home": "hearts",
+    "away": "celtic",
+    "xg_home": 1.66,
+    "xg_away": 1.32
+  },
+  {
+    "date": "25-01-2026",
+    "home": "rangers",
+    "away": "dundee-fc",
+    "xg_home": 1.72,
+    "xg_away": 0.24
+  },
+  {
+    "date": "31-01-2026",
+    "home": "kilmarnock",
+    "away": "aberdeen",
+    "xg_home": 2.45,
+    "xg_away": 0.66
+  },
+  {
+    "date": "31-01-2026",
+    "home": "st-mirren",
+    "away": "dundee-fc",
+    "xg_home": 0.9,
+    "xg_away": 0.78
+  },
+  {
+    "date": "31-01-2026",
+    "home": "dundee-united",
+    "away": "hearts",
+    "xg_home": 0.18,
+    "xg_away": 3.45
+  },
+  {
+    "date": "31-01-2026",
+    "home": "livingston",
+    "away": "motherwell",
+    "xg_home": 0.24,
+    "xg_away": 1.62
+  },
+  {
+    "date": "01-02-2026",
+    "home": "celtic",
+    "away": "falkirk",
+    "xg_home": 0.66,
+    "xg_away": 1.07
+  },
+  {
+    "date": "01-02-2026",
+    "home": "hibernian",
+    "away": "rangers",
+    "xg_home": 1.88,
+    "xg_away": 0.58
+  },
+  {
+    "date": "03-02-2026",
+    "home": "st-mirren",
+    "away": "hearts",
+    "xg_home": 2.29,
+    "xg_away": 0.25
+  },
+  {
+    "date": "04-02-2026",
+    "home": "hibernian",
+    "away": "dundee-united",
+    "xg_home": 2.54,
+    "xg_away": 1.73
+  },
+  {
+    "date": "04-02-2026",
+    "home": "livingston",
+    "away": "falkirk",
+    "xg_home": 0.57,
+    "xg_away": 2.42
+  },
+  {
+    "date": "04-02-2026",
+    "home": "rangers",
+    "away": "kilmarnock",
+    "xg_home": 2.36,
+    "xg_away": 1.29
+  },
+  {
+    "date": "10-02-2026",
+    "home": "hearts",
+    "away": "hibernian",
+    "xg_home": 0.66,
+    "xg_away": 0.38
+  },
+  {
+    "date": "11-02-2026",
+    "home": "celtic",
+    "away": "livingston",
+    "xg_home": 3.39,
+    "xg_away": 0.27
+  },
+  {
+    "date": "11-02-2026",
+    "home": "falkirk",
+    "away": "dundee-fc",
+    "xg_home": 0.98,
+    "xg_away": 0.8
+  },
+  {
+    "date": "11-02-2026",
+    "home": "kilmarnock",
+    "away": "st-mirren",
+    "xg_home": 2.65,
+    "xg_away": 1.96
+  },
+  {
+    "date": "11-02-2026",
+    "home": "motherwell",
+    "away": "rangers",
+    "xg_home": 1.56,
+    "xg_away": 1.64
+  },
+  {
+    "date": "14-02-2026",
+    "home": "dundee-fc",
+    "away": "livingston",
+    "xg_home": 1.02,
+    "xg_away": 1.44
+  },
+  {
+    "date": "14-02-2026",
+    "home": "falkirk",
+    "away": "dundee-united",
+    "xg_home": 0.69,
+    "xg_away": 1.06
+  },
+  {
+    "date": "14-02-2026",
+    "home": "hibernian",
+    "away": "st-mirren",
+    "xg_home": 0.92,
+    "xg_away": 0.3
+  },
+  {
+    "date": "15-02-2026",
+    "home": "motherwell",
+    "away": "aberdeen",
+    "xg_home": 2.24,
+    "xg_away": 0.68
+  },
+  {
+    "date": "15-02-2026",
+    "home": "kilmarnock",
+    "away": "celtic",
+    "xg_home": 0.94,
+    "xg_away": 2.81
+  },
+  {
+    "date": "15-02-2026",
+    "home": "rangers",
+    "away": "hearts",
+    "xg_home": 2.41,
+    "xg_away": 0.35
+  }
+]

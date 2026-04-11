@@ -1,0 +1,1 @@
+{"root":["./src/app.tsx","./src/main.tsx","./src/components/charttoggle.tsx","./src/components/statstable.tsx","./src/components/teamselector.tsx","./src/components/themetoggle.tsx","./src/components/xgchart.tsx","./src/components/xglinechart.tsx","./src/hooks/usetheme.ts","./src/types/index.ts","./src/utils/dataprocessing.ts","./src/utils/teamcolors.ts"],"version":"5.9.3"}
