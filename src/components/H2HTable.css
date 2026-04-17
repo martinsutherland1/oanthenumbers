@@ -13,7 +13,7 @@
 }
 
 .h2h-table-wrapper {
-  overflow-x: auto;
+  overflow-x: hidden;
 }
 
 .h2h-table {
@@ -49,7 +49,6 @@
   align-items: center;
   gap: 8px;
   font-weight: 500;
-  white-space: nowrap;
 }
 
 .team-color-dot {
@@ -105,9 +104,18 @@
 }
 
 @media (max-width: 480px) {
+  .h2h-table {
+    table-layout: fixed;
+    width: 100%;
+  }
+
   .h2h-table th,
   .h2h-table td {
-    padding: 8px;
-    font-size: 0.8rem;
+    padding: 7px 5px;
+    font-size: 0.72rem;
+  }
+
+  .team-color-dot {
+    display: none;
   }
 }

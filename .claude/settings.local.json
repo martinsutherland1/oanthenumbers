@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx tsc:*)",
+      "Bash(git -C /Users/martinsutherland/projects_2025/python_logic/oanthenumberapp status --short)",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)",
+      "Bash(git -C /Users/martinsutherland/projects_2025/python_logic/oanthenumberapp add .github/workflows/deploy.yml)",
+      "Bash(git push *)"
+    ]
+  }
+}
