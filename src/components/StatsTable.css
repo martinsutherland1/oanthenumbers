@@ -10,10 +10,37 @@
   font-size: 1rem;
   font-weight: 600;
   color: var(--text);
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.stats-subtitle {
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: var(--text-secondary);
+}
+
+.sortable {
+  cursor: pointer;
+  user-select: none;
+}
+
+.sortable:hover {
+  color: var(--text);
+}
+
+.sort-active {
+  color: var(--primary) !important;
+}
+
+.sort-indicator {
+  font-size: 0.75rem;
+  margin-left: 2px;
 }
 
 .stats-table-wrapper {
-  overflow-x: auto;
+  overflow-x: hidden;
 }
 
 .stats-table {
@@ -99,9 +126,27 @@
 }
 
 @media (max-width: 480px) {
+  .stats-table {
+    table-layout: fixed;
+    width: 100%;
+  }
+
   .stats-table th,
   .stats-table td {
-    padding: 8px;
-    font-size: 0.8rem;
+    padding: 7px 5px;
+    font-size: 0.72rem;
+  }
+
+  .stats-table th:first-child,
+  .stats-table td:first-child {
+    width: 28px;
+  }
+
+  .team-name {
+    gap: 5px;
+  }
+
+  .team-color-indicator {
+    display: none;
   }
 }

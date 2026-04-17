@@ -1,23 +1,57 @@
-import { getTeamColor } from '../utils/teamColors';
+import { getTeamColor, getTeamName, TOP_6, BOTTOM_6 } from '../utils/teamColors';
 import './TeamSelector.css';
 
 interface TeamSelectorProps {
   teams: string[];
   selectedTeams: string[];
   onTeamToggle: (team: string) => void;
+  onSelectAll: () => void;
   onClearAll: () => void;
+  onSelectTop6: () => void;
+  onSelectBottom6: () => void;
 }
 
-export function TeamSelector({ teams, selectedTeams, onTeamToggle, onClearAll }: TeamSelectorProps) {
+export function TeamSelector({ teams, selectedTeams, onTeamToggle, onSelectAll, onClearAll, onSelectTop6, onSelectBottom6 }: TeamSelectorProps) {
+  const allSelected = selectedTeams.length === teams.length;
+  const top6InData = TOP_6.filter(t => teams.includes(t));
+  const bottom6InData = BOTTOM_6.filter(t => teams.includes(t));
+
+  const isTop6Selected = top6InData.length > 0 &&
+    top6InData.every(t => selectedTeams.includes(t)) &&
+    selectedTeams.length === top6InData.length;
+
+  const isBottom6Selected = bottom6InData.length > 0 &&
+    bottom6InData.every(t => selectedTeams.includes(t)) &&
+    selectedTeams.length === bottom6InData.length;
+
   return (
     <div className="team-selector">
       <div className="team-selector-header">
         <h3>Compare Teams</h3>
-        {selectedTeams.length > 0 && (
-          <button className="clear-btn" onClick={onClearAll}>
-            Clear All
+        <div className="team-selector-buttons">
+          <button
+            className={`quick-select-btn${isTop6Selected ? ' active' : ''}`}
+            onClick={onSelectTop6}
+          >
+            Top 6
           </button>
-        )}
+          <button
+            className={`quick-select-btn${isBottom6Selected ? ' active' : ''}`}
+            onClick={onSelectBottom6}
+          >
+            Bottom 6
+          </button>
+          {!allSelected && (
+            <button className="select-all-btn" onClick={onSelectAll}>
+              Select All
+            </button>
+          )}
+          {selectedTeams.length > 0 && (
+            <button className="clear-btn" onClick={onClearAll}>
+              Clear
+            </button>
+          )}
+        </div>
       </div>
       <div className="team-chips">
         {teams.map(team => {
@@ -38,7 +72,7 @@ export function TeamSelector({ teams, selectedTeams, onTeamToggle, onClearAll }:
                 className="team-color-dot"
                 style={{ backgroundColor: teamColor }}
               />
-              {team}
+              {getTeamName(team)}
             </button>
           );
         })}

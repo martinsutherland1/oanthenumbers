@@ -1,62 +1,95 @@
-import type { Fixture, TeamGame, TeamRollingAverage, RollingAveragePoint, LineChartDataPoint } from '../types';
+import type { Fixture, FixturesData, TeamGame, TeamRollingAverage, RollingAveragePoint, LineChartDataPoint } from '../types';
+import { normalizeTeamName } from './teamColors';
 
-// Parse date string in DD-MM-YYYY format
+export type MetricType = 'xg' | 'goals' | 'points';
+
+// Parse date string in YYYY-MM-DD format
 export function parseDate(dateStr: string): Date {
-  const [day, month, year] = dateStr.split('-').map(Number);
+  const [year, month, day] = dateStr.split('-').map(Number);
   return new Date(year, month - 1, day);
+}
+
+// Flatten date-keyed fixtures object into array, normalizing team name variants
+export function flattenFixtures(fixturesData: FixturesData): Fixture[] {
+  return Object.values(fixturesData).flat().map(f => ({
+    ...f,
+    home_team: normalizeTeamName(f.home_team),
+    away_team: normalizeTeamName(f.away_team),
+  }));
 }
 
 // Extract all unique teams from fixtures
 export function extractTeams(fixtures: Fixture[]): string[] {
   const teams = new Set<string>();
   fixtures.forEach(fixture => {
-    teams.add(fixture.home);
-    teams.add(fixture.away);
+    teams.add(fixture.home_team);
+    teams.add(fixture.away_team);
   });
   return Array.from(teams).sort();
 }
 
-// Convert fixtures to individual team games
+// Convert fixtures to individual team games with xG difference
 export function fixtureToTeamGames(fixture: Fixture): TeamGame[] {
   const date = parseDate(fixture.date);
+  // xG difference: team's npxG minus opponent's npxG
+  const homeXgDiff = fixture.home_npxg - fixture.away_npxg;
+  const awayXgDiff = fixture.away_npxg - fixture.home_npxg;
   return [
     {
       date,
-      team: fixture.home,
-      xg: fixture.xg_home,
-      opponent: fixture.away,
+      team: fixture.home_team,
+      xgDiff: homeXgDiff,
+      opponent: fixture.away_team,
       isHome: true
     },
     {
       date,
-      team: fixture.away,
-      xg: fixture.xg_away,
-      opponent: fixture.home,
+      team: fixture.away_team,
+      xgDiff: awayXgDiff,
+      opponent: fixture.home_team,
       isHome: false
     }
   ];
 }
 
 // Get all games for a specific team, sorted by date (most recent first)
-export function getTeamGames(fixtures: Fixture[], team: string): TeamGame[] {
+export function getTeamGames(fixtures: Fixture[], team: string, metric: MetricType = 'xg'): TeamGame[] {
   const games: TeamGame[] = [];
 
   fixtures.forEach(fixture => {
     const date = parseDate(fixture.date);
-    if (fixture.home === team) {
+
+    // Calculate difference based on metric type
+    let homeDiff: number;
+    let awayDiff: number;
+
+    if (metric === 'goals') {
+      homeDiff = fixture.home_goals - fixture.away_goals;
+      awayDiff = fixture.away_goals - fixture.home_goals;
+    } else if (metric === 'points') {
+      const hg = fixture.home_goals ?? 0;
+      const ag = fixture.away_goals ?? 0;
+      homeDiff = hg > ag ? 3 : hg === ag ? 1 : 0;
+      awayDiff = ag > hg ? 3 : ag === hg ? 1 : 0;
+    } else {
+      homeDiff = fixture.home_npxg - fixture.away_npxg;
+      awayDiff = fixture.away_npxg - fixture.home_npxg;
+    }
+
+    if (fixture.home_team === team) {
       games.push({
         date,
         team,
-        xg: fixture.xg_home,
-        opponent: fixture.away,
+        xgDiff: homeDiff,
+        opponent: fixture.away_team,
         isHome: true
       });
-    } else if (fixture.away === team) {
+    } else if (fixture.away_team === team) {
       games.push({
         date,
         team,
-        xg: fixture.xg_away,
-        opponent: fixture.home,
+        xgDiff: awayDiff,
+        opponent: fixture.home_team,
         isHome: false
       });
     }
@@ -66,17 +99,17 @@ export function getTeamGames(fixtures: Fixture[], team: string): TeamGame[] {
   return games.sort((a, b) => b.date.getTime() - a.date.getTime());
 }
 
-// Calculate rolling average xG for a team (last 10 games or all if less than 10)
-export function calculateRollingAverage(fixtures: Fixture[], team: string, maxGames: number = 10): TeamRollingAverage {
-  const games = getTeamGames(fixtures, team);
+// Calculate rolling average difference for a team (last 10 games or all if less than 10)
+export function calculateRollingAverage(fixtures: Fixture[], team: string, maxGames: number = 10, metric: MetricType = 'xg'): TeamRollingAverage {
+  const games = getTeamGames(fixtures, team, metric);
   const recentGames = games.slice(0, maxGames);
 
   if (recentGames.length === 0) {
     return { team, average: 0, gamesPlayed: 0 };
   }
 
-  const totalXg = recentGames.reduce((sum, game) => sum + game.xg, 0);
-  const average = totalXg / recentGames.length;
+  const totalDiff = recentGames.reduce((sum, game) => sum + game.xgDiff, 0);
+  const average = totalDiff / recentGames.length;
 
   return {
     team,
@@ -86,9 +119,9 @@ export function calculateRollingAverage(fixtures: Fixture[], team: string, maxGa
 }
 
 // Calculate league average (average of all team averages)
-export function calculateLeagueAverage(fixtures: Fixture[], maxGames: number = 10): number {
+export function calculateLeagueAverage(fixtures: Fixture[], maxGames: number = 10, metric: MetricType = 'xg'): number {
   const teams = extractTeams(fixtures);
-  const averages = teams.map(team => calculateRollingAverage(fixtures, team, maxGames));
+  const averages = teams.map(team => calculateRollingAverage(fixtures, team, maxGames, metric));
 
   if (averages.length === 0) return 0;
 
@@ -96,16 +129,41 @@ export function calculateLeagueAverage(fixtures: Fixture[], maxGames: number = 1
   return Math.round((totalAverage / averages.length) * 100) / 100;
 }
 
-// Get all team rolling averages
-export function getAllTeamAverages(fixtures: Fixture[], maxGames: number = 10): TeamRollingAverage[] {
+// Full stats for a team across all three metrics
+export interface TeamFullStats {
+  team: string;
+  avgXg: number;
+  avgGoals: number;
+  avgPoints: number;
+  gamesPlayed: number;
+}
+
+export function getAllTeamFullStats(fixtures: Fixture[], maxGames: number = 10): TeamFullStats[] {
   const teams = extractTeams(fixtures);
-  return teams.map(team => calculateRollingAverage(fixtures, team, maxGames))
+  return teams.map(team => {
+    const xg = calculateRollingAverage(fixtures, team, maxGames, 'xg');
+    const goals = calculateRollingAverage(fixtures, team, maxGames, 'goals');
+    const pts = calculateRollingAverage(fixtures, team, maxGames, 'points');
+    return {
+      team,
+      avgXg: xg.average,
+      avgGoals: goals.average,
+      avgPoints: pts.average,
+      gamesPlayed: xg.gamesPlayed,
+    };
+  });
+}
+
+// Get all team rolling averages
+export function getAllTeamAverages(fixtures: Fixture[], maxGames: number = 10, metric: MetricType = 'xg'): TeamRollingAverage[] {
+  const teams = extractTeams(fixtures);
+  return teams.map(team => calculateRollingAverage(fixtures, team, maxGames, metric))
     .sort((a, b) => b.average - a.average);
 }
 
-// Get rolling average progression over time for a team
-export function getTeamRollingAverageOverTime(fixtures: Fixture[], team: string, maxGames: number = 10): RollingAveragePoint[] {
-  const games = getTeamGames(fixtures, team);
+// Get rolling average difference progression over time for a team
+export function getTeamRollingAverageOverTime(fixtures: Fixture[], team: string, maxGames: number = 10, metric: MetricType = 'xg'): RollingAveragePoint[] {
+  const games = getTeamGames(fixtures, team, metric);
   // Sort oldest first for chronological order
   const sortedGames = [...games].sort((a, b) => a.date.getTime() - b.date.getTime());
 
@@ -116,8 +174,8 @@ export function getTeamRollingAverageOverTime(fixtures: Fixture[], team: string,
     const startIdx = Math.max(0, i + 1 - maxGames);
     const relevantGames = sortedGames.slice(startIdx, i + 1);
 
-    const totalXg = relevantGames.reduce((sum, game) => sum + game.xg, 0);
-    const average = totalXg / relevantGames.length;
+    const totalDiff = relevantGames.reduce((sum, game) => sum + game.xgDiff, 0);
+    const average = totalDiff / relevantGames.length;
 
     result.push({
       matchNumber: i + 1,
@@ -131,10 +189,10 @@ export function getTeamRollingAverageOverTime(fixtures: Fixture[], team: string,
 }
 
 // Get rolling average for league average line (average of all teams at each match number)
-export function getLeagueAverageOverTime(fixtures: Fixture[], maxGames: number = 10): Map<number, number> {
+export function getLeagueAverageOverTime(fixtures: Fixture[], maxGames: number = 10, metric: MetricType = 'xg'): Map<number, number> {
   const teams = extractTeams(fixtures);
   const maxMatchNumber = Math.max(
-    ...teams.map(team => getTeamGames(fixtures, team).length)
+    ...teams.map(team => getTeamGames(fixtures, team, metric).length)
   );
 
   const averages = new Map<number, number>();
@@ -143,7 +201,7 @@ export function getLeagueAverageOverTime(fixtures: Fixture[], maxGames: number =
     const teamAveragesAtMatch: number[] = [];
 
     teams.forEach(team => {
-      const teamData = getTeamRollingAverageOverTime(fixtures, team, maxGames);
+      const teamData = getTeamRollingAverageOverTime(fixtures, team, maxGames, metric);
       const point = teamData.find(p => p.matchNumber === matchNum);
       if (point) {
         teamAveragesAtMatch.push(point.rollingAverage);
@@ -159,9 +217,62 @@ export function getLeagueAverageOverTime(fixtures: Fixture[], maxGames: number =
   return averages;
 }
 
+// Head to head record for a team against each opponent
+export interface H2HRecord {
+  opponent: string;
+  played: number;
+  wins: number;
+  draws: number;
+  losses: number;
+  points: number;
+  possiblePoints: number;
+  winPct: number;
+}
+
+export function getH2HData(fixtures: Fixture[], team: string): H2HRecord[] {
+  const records = new Map<string, { wins: number; draws: number; losses: number }>();
+
+  fixtures.forEach(fixture => {
+    let opponent = '';
+    let teamGoals = 0;
+    let oppGoals = 0;
+
+    if (fixture.home_team === team) {
+      opponent = fixture.away_team;
+      teamGoals = fixture.home_goals;
+      oppGoals = fixture.away_goals;
+    } else if (fixture.away_team === team) {
+      opponent = fixture.home_team;
+      teamGoals = fixture.away_goals;
+      oppGoals = fixture.home_goals;
+    } else {
+      return;
+    }
+
+    if (!records.has(opponent)) {
+      records.set(opponent, { wins: 0, draws: 0, losses: 0 });
+    }
+    const rec = records.get(opponent)!;
+
+    if (teamGoals > oppGoals) rec.wins++;
+    else if (teamGoals === oppGoals) rec.draws++;
+    else rec.losses++;
+  });
+
+  return Array.from(records.entries())
+    .map(([opponent, rec]) => {
+      const played = rec.wins + rec.draws + rec.losses;
+      const points = rec.wins * 3 + rec.draws;
+      const possiblePoints = played * 3;
+      const winPct = played > 0 ? Math.round((rec.wins / played) * 100) : 0;
+      return { opponent, played, ...rec, points, possiblePoints, winPct };
+    })
+    .sort((a, b) => b.points - a.points || b.winPct - a.winPct);
+}
+
 // Get line chart data for selected teams
-export function getLineChartData(fixtures: Fixture[], selectedTeams: string[], maxGames: number = 10): LineChartDataPoint[] {
-  const leagueAverages = getLeagueAverageOverTime(fixtures, maxGames);
+export function getLineChartData(fixtures: Fixture[], selectedTeams: string[], maxGames: number = 10, metric: MetricType = 'xg'): LineChartDataPoint[] {
+  const leagueAverages = getLeagueAverageOverTime(fixtures, maxGames, metric);
   const maxMatchNumber = Math.max(...leagueAverages.keys());
 
   const result: LineChartDataPoint[] = [];
@@ -173,7 +284,7 @@ export function getLineChartData(fixtures: Fixture[], selectedTeams: string[], m
     };
 
     selectedTeams.forEach(team => {
-      const teamData = getTeamRollingAverageOverTime(fixtures, team, maxGames);
+      const teamData = getTeamRollingAverageOverTime(fixtures, team, maxGames, metric);
       const teamPoint = teamData.find(p => p.matchNumber === matchNum);
       if (teamPoint) {
         point[team] = teamPoint.rollingAverage;

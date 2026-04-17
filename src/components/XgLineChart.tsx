@@ -9,13 +9,15 @@ import {
   Legend
 } from 'recharts';
 import type { LineChartDataPoint } from '../types';
-import { getTeamColor, LEAGUE_AVERAGE_COLOR } from '../utils/teamColors';
+import type { MetricType } from './MetricToggle';
+import { getTeamColor, getTeamName, LEAGUE_AVERAGE_COLOR } from '../utils/teamColors';
 import './XgLineChart.css';
 
 interface XgLineChartProps {
   data: LineChartDataPoint[];
   selectedTeams: string[];
   leagueAverage: number;
+  metricType: MetricType;
 }
 
 interface CustomTooltipProps {
@@ -35,7 +37,7 @@ function CustomTooltip({ active, payload, label }: CustomTooltipProps) {
         <p className="tooltip-match">Match {label}</p>
         {payload.map((entry, index) => (
           <p key={index} className="tooltip-entry" style={{ color: entry.color }}>
-            {entry.dataKey}: <strong>{entry.value.toFixed(2)}</strong>
+            {getTeamName(entry.dataKey)}: <strong>{entry.value.toFixed(2)}</strong>
           </p>
         ))}
       </div>
@@ -44,12 +46,14 @@ function CustomTooltip({ active, payload, label }: CustomTooltipProps) {
   return null;
 }
 
-export function XgLineChart({ data, selectedTeams, leagueAverage }: XgLineChartProps) {
+export function XgLineChart({ data, selectedTeams, leagueAverage, metricType }: XgLineChartProps) {
+  const metricLabel = metricType === 'xg' ? 'xG' : metricType === 'goals' ? 'Goal' : 'Points';
+
   if (selectedTeams.length === 0) {
     return (
       <div className="line-chart-container">
         <div className="chart-header">
-          <h3>Rolling xG Progression</h3>
+          <h3>Rolling {metricLabel} Difference Progression</h3>
           <div className="legend">
             <div className="legend-item">
               <span
@@ -61,7 +65,7 @@ export function XgLineChart({ data, selectedTeams, leagueAverage }: XgLineChartP
           </div>
         </div>
         <div className="no-selection-message">
-          <p>Select one or more teams to view their rolling xG progression over matches</p>
+          <p>Select one or more teams to view their rolling {metricLabel.toLowerCase()} difference progression over matches</p>
         </div>
       </div>
     );
@@ -70,7 +74,7 @@ export function XgLineChart({ data, selectedTeams, leagueAverage }: XgLineChartP
   return (
     <div className="line-chart-container">
       <div className="chart-header">
-        <h3>Rolling xG Progression</h3>
+        <h3>Rolling {metricLabel} Difference Progression</h3>
       </div>
       <div className="chart-wrapper">
         <ResponsiveContainer width="100%" height={350}>
@@ -86,7 +90,7 @@ export function XgLineChart({ data, selectedTeams, leagueAverage }: XgLineChartP
             />
             <YAxis
               tick={{ fill: 'var(--text-secondary)', fontSize: 11 }}
-              domain={[0, 'auto']}
+              domain={['auto', 'auto']}
               tickMargin={8}
               width={35}
             />
@@ -115,7 +119,7 @@ export function XgLineChart({ data, selectedTeams, leagueAverage }: XgLineChartP
                 key={team}
                 type="monotone"
                 dataKey={team}
-                name={team}
+                name={getTeamName(team)}
                 stroke={getTeamColor(team)}
                 strokeWidth={2.5}
                 dot={{ fill: getTeamColor(team), strokeWidth: 0, r: 3 }}

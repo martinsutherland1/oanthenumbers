@@ -1,0 +1,45 @@
+.metric-toggle {
+  display: flex;
+  gap: 4px;
+  background: var(--background);
+  padding: 4px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+}
+
+.metric-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 8px;
+  background: transparent;
+  color: var(--text-secondary);
+  cursor: pointer;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.metric-btn:hover {
+  background: var(--surface-hover);
+  color: var(--text);
+}
+
+.metric-btn.active {
+  background: var(--primary);
+  color: white;
+}
+
+.metric-btn.active:hover {
+  background: var(--primary);
+  opacity: 0.9;
+}
+
+@media (max-width: 480px) {
+  .metric-btn {
+    padding: 6px 10px;
+    font-size: 0.8rem;
+  }
+}

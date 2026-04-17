@@ -19,7 +19,14 @@
   color: var(--text);
 }
 
-.clear-btn {
+.team-selector-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.select-all-btn,
+.clear-btn,
+.quick-select-btn {
   background: none;
   border: none;
   color: var(--primary);
@@ -30,8 +37,15 @@
   transition: background 0.2s ease;
 }
 
-.clear-btn:hover {
+.select-all-btn:hover,
+.clear-btn:hover,
+.quick-select-btn:hover {
   background: var(--surface-hover);
+}
+
+.quick-select-btn.active {
+  background: var(--primary);
+  color: var(--surface);
 }
 
 .team-chips {

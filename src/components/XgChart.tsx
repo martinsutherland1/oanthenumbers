@@ -10,17 +10,20 @@ import {
   Cell
 } from 'recharts';
 import type { TeamRollingAverage } from '../types';
-import { getTeamColor, LEAGUE_AVERAGE_COLOR } from '../utils/teamColors';
+import type { MetricType } from './MetricToggle';
+import { getTeamColor, getTeamName, LEAGUE_AVERAGE_COLOR } from '../utils/teamColors';
 import './XgChart.css';
 
 interface XgChartProps {
   data: TeamRollingAverage[];
   selectedTeams: string[];
   leagueAverage: number;
+  metricType: MetricType;
 }
 
 interface ChartData {
   name: string;
+  slug: string;
   value: number;
   gamesPlayed: number;
   isSelected: boolean;
@@ -29,15 +32,17 @@ interface ChartData {
 interface CustomTooltipProps {
   active?: boolean;
   payload?: Array<{ payload: ChartData }>;
+  metricType: MetricType;
 }
 
-function CustomTooltip({ active, payload }: CustomTooltipProps) {
+function CustomTooltip({ active, payload, metricType }: CustomTooltipProps) {
   if (active && payload && payload.length) {
     const data = payload[0].payload;
+    const label = metricType === 'xg' ? 'xG Diff' : metricType === 'goals' ? 'Goal Diff' : 'Pts/Game';
     return (
       <div className="custom-tooltip">
         <p className="tooltip-team">{data.name}</p>
-        <p className="tooltip-xg">xG: <strong>{data.value.toFixed(2)}</strong></p>
+        <p className="tooltip-xg">{label}: <strong>{data.value.toFixed(2)}</strong></p>
         <p className="tooltip-games">Games: {data.gamesPlayed}/10</p>
       </div>
     );
@@ -45,9 +50,10 @@ function CustomTooltip({ active, payload }: CustomTooltipProps) {
   return null;
 }
 
-export function XgChart({ data, selectedTeams, leagueAverage }: XgChartProps) {
+export function XgChart({ data, selectedTeams, leagueAverage, metricType }: XgChartProps) {
   const chartData: ChartData[] = data.map(team => ({
-    name: team.team,
+    name: getTeamName(team.team),
+    slug: team.team,
     value: team.average,
     gamesPlayed: team.gamesPlayed,
     isSelected: selectedTeams.includes(team.team)
@@ -55,15 +61,18 @@ export function XgChart({ data, selectedTeams, leagueAverage }: XgChartProps) {
 
   const getBarColor = (entry: ChartData): string => {
     if (selectedTeams.length === 0) {
-      return getTeamColor(entry.name);
+      return getTeamColor(entry.slug);
     }
-    return entry.isSelected ? getTeamColor(entry.name) : '#cccccc40';
+    return entry.isSelected ? getTeamColor(entry.slug) : '#cccccc40';
   };
+
+  const metricLabel = metricType === 'xg' ? 'xG' : metricType === 'goals' ? 'Goal' : 'Points';
+  const yAxisLabel = metricType === 'xg' ? 'xG Diff' : metricType === 'goals' ? 'Goal Diff' : 'Pts/Game';
 
   return (
     <div className="chart-container">
       <div className="chart-header">
-        <h3>Rolling 10-Game Average xG</h3>
+        <h3>Rolling 10-Game Average {metricLabel} Difference</h3>
         <div className="legend">
           <div className="legend-item">
             <span
@@ -90,15 +99,15 @@ export function XgChart({ data, selectedTeams, leagueAverage }: XgChartProps) {
           />
           <YAxis
             tick={{ fill: 'var(--text-secondary)', fontSize: 12 }}
-            domain={[0, 'auto']}
+            domain={['auto', 'auto']}
             label={{
-              value: 'xG',
+              value: yAxisLabel,
               angle: -90,
               position: 'insideLeft',
               fill: 'var(--text-secondary)'
             }}
           />
-          <Tooltip content={<CustomTooltip />} />
+          <Tooltip content={<CustomTooltip metricType={metricType} />} />
           <ReferenceLine
             y={leagueAverage}
             stroke={LEAGUE_AVERAGE_COLOR}

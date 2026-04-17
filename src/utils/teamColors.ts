@@ -1,3 +1,41 @@
+// Aliases that map alternate spellings to canonical team slugs
+export const TEAM_ALIASES: Record<string, string> = {
+  'dundee': 'dundee-fc',
+  'dundee utd': 'dundee-united',
+  'st mirren': 'st-mirren',
+};
+
+export function normalizeTeamName(name: string): string {
+  return TEAM_ALIASES[name] ?? name;
+}
+
+// Display names for team slugs
+export const TEAM_NAMES: Record<string, string> = {
+  'aberdeen': 'Aberdeen',
+  'celtic': 'Celtic',
+  'dundee-fc': 'Dundee FC',
+  'dundee-united': 'Dundee United',
+  'falkirk': 'Falkirk',
+  'hearts': 'Hearts',
+  'hibernian': 'Hibernian',
+  'kilmarnock': 'Kilmarnock',
+  'livingston': 'Livingston',
+  'motherwell': 'Motherwell',
+  'rangers': 'Rangers',
+  'st-mirren': 'St. Mirren',
+  'ross-county': 'Ross County',
+  'st-johnstone': 'St. Johnstone',
+  'partick-thistle': 'Partick Thistle',
+};
+
+export function getTeamName(team: string): string {
+  return TEAM_NAMES[team] || team;
+}
+
+// Top 6 and bottom 6 team slugs
+export const TOP_6 = ['hearts', 'rangers', 'celtic', 'motherwell', 'hibernian', 'falkirk'];
+export const BOTTOM_6 = ['aberdeen', 'dundee-fc', 'dundee-united', 'kilmarnock', 'livingston', 'st-mirren'];
+
 // SPFL Premiership team colors - accurate club colors
 export const TEAM_COLORS: Record<string, string> = {
   'aberdeen': '#DC2626',

@@ -1,0 +1,113 @@
+.h2h-table-container {
+  background: var(--surface);
+  border-radius: 12px;
+  padding: 16px;
+  border: 1px solid var(--border);
+}
+
+.h2h-table-container h3 {
+  margin: 0 0 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.h2h-table-wrapper {
+  overflow-x: auto;
+}
+
+.h2h-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+}
+
+.h2h-table th,
+.h2h-table td {
+  padding: 10px 12px;
+  text-align: left;
+}
+
+.h2h-table th {
+  color: var(--text-secondary);
+  font-weight: 500;
+  border-bottom: 2px solid var(--border);
+  white-space: nowrap;
+}
+
+.h2h-table td {
+  border-bottom: 1px solid var(--border);
+  color: var(--text);
+}
+
+.h2h-table tbody tr:hover {
+  background: var(--surface-hover);
+}
+
+.h2h-opponent-name {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.team-color-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.h2h-num {
+  font-variant-numeric: tabular-nums;
+}
+
+.h2h-points {
+  font-weight: 600;
+}
+
+.h2h-wins {
+  color: #22c55e;
+}
+
+.h2h-losses {
+  color: #ef4444;
+}
+
+.h2h-draws {
+  color: var(--text-secondary);
+}
+
+.h2h-pct.positive {
+  color: #22c55e;
+  font-weight: 600;
+}
+
+.h2h-pct.neutral {
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.h2h-pct.negative {
+  color: #ef4444;
+  font-weight: 500;
+}
+
+.h2h-empty {
+  text-align: center;
+  padding: 40px 20px;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  background: var(--surface);
+  border-radius: 12px;
+  border: 1px solid var(--border);
+}
+
+@media (max-width: 480px) {
+  .h2h-table th,
+  .h2h-table td {
+    padding: 8px;
+    font-size: 0.8rem;
+  }
+}
