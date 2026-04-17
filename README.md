@@ -1,73 +1,25 @@
-# React + TypeScript + Vite
+# @oanthenumbers — SPFL Premiership Analysis
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A data visualisation app for tracking SPFL Premiership team performance across the season, built with React and TypeScript.
 
-Currently, two official plugins are available:
+## What it does
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+The app presents rolling 10-game averages for every team in the league across three metrics:
 
-## React Compiler
+- **xG difference** — non-penalty expected goals for minus against
+- **Goal difference** — actual goals for minus against
+- **Points per game** — rolling average points earned
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Views
 
-## Expanding the ESLint configuration
+**Overview** — the default view. Shows a chart (line or bar) of the selected metric for chosen teams, plus a full league stats table. The chart updates based on the metric and chart-type toggles in the header; the table always shows all three metrics side by side and can be sorted by any column.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+**H2H** — head-to-head records. Select one or more teams to see their results against every opponent they've faced: games played, wins, draws, losses, points earned vs possible, and win percentage.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### Team selector
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+Teams can be toggled individually or filtered quickly using the Top 6 / Bottom 6 presets. Selected teams are highlighted in the chart; unselected teams are dimmed.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## Deployment
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+The app is deployed to GitHub Pages automatically on every push to `main` via a GitHub Actions workflow.
