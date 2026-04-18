@@ -76,30 +76,16 @@ function App() {
             <h1 className="title">@oanthenumbers</h1>
             <span className="subtitle">SPFL Premiership Analysis</span>
           </div>
-          <div className="header-controls">
-            <MetricToggle metricType={metricType} onToggle={setMetricType} />
-            <ChartToggle chartType={chartType} onToggle={setChartType} />
-          </div>
         </div>
       </header>
 
       <main className="app-main">
-        <TeamSelector
-          teams={teams}
-          selectedTeams={selectedTeams}
-          onTeamToggle={handleTeamToggle}
-          onSelectAll={handleSelectAll}
-          onClearAll={handleClearAll}
-          onSelectTop6={handleSelectTop6}
-          onSelectBottom6={handleSelectBottom6}
-        />
-
         <div className="view-tabs">
           <button
             className={`view-tab ${viewMode === 'overview' ? 'active' : ''}`}
             onClick={() => setViewMode('overview')}
           >
-            Overview
+            Graph
           </button>
           <button
             className={`view-tab ${viewMode === 'table' ? 'active' : ''}`}
@@ -114,6 +100,25 @@ function App() {
             H2H
           </button>
         </div>
+
+        {viewMode !== 'table' && (
+          <TeamSelector
+            teams={teams}
+            selectedTeams={selectedTeams}
+            onTeamToggle={handleTeamToggle}
+            onSelectAll={handleSelectAll}
+            onClearAll={handleClearAll}
+            onSelectTop6={handleSelectTop6}
+            onSelectBottom6={handleSelectBottom6}
+          />
+        )}
+
+        {viewMode === 'overview' && (
+          <div className="graph-controls">
+            <MetricToggle metricType={metricType} onToggle={setMetricType} />
+            <ChartToggle chartType={chartType} onToggle={setChartType} />
+          </div>
+        )}
 
         {viewMode === 'overview' && (
           <>

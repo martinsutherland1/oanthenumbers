@@ -85,6 +85,13 @@ body {
   gap: 24px;
 }
 
+.graph-controls {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: center;
+}
+
 .view-tabs {
   display: flex;
   gap: 4px;

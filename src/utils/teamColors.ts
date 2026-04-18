@@ -14,7 +14,7 @@ export const TEAM_NAMES: Record<string, string> = {
   'aberdeen': 'Aberdeen',
   'celtic': 'Celtic',
   'dundee-fc': 'Dundee FC',
-  'dundee-united': 'Dundee United',
+  'dundee-united': 'Dundee Utd',
   'falkirk': 'Falkirk',
   'hearts': 'Hearts',
   'hibernian': 'Hibernian',
