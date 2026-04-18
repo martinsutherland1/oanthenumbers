@@ -4,6 +4,7 @@ import { XgChart } from './components/XgChart';
 import { XgLineChart } from './components/XgLineChart';
 import { StatsTable } from './components/StatsTable';
 import { H2HTable } from './components/H2HTable';
+import { LeagueTable } from './components/LeagueTable';
 import { ChartToggle } from './components/ChartToggle';
 import { MetricToggle } from './components/MetricToggle';
 import type { ChartType } from './components/ChartToggle';
@@ -15,6 +16,7 @@ import {
   calculateLeagueAverage,
   getLineChartData,
   getH2HData,
+  getLeagueTable,
   flattenFixtures
 } from './utils/dataProcessing';
 import { TOP_6, BOTTOM_6 } from './utils/teamColors';
@@ -22,7 +24,7 @@ import fixturesData from './data/fixtures.json';
 import type { FixturesData } from './types';
 import './App.css';
 
-type ViewMode = 'overview' | 'h2h';
+type ViewMode = 'overview' | 'table' | 'h2h';
 
 const fixtures = flattenFixtures(fixturesData as FixturesData);
 
@@ -36,6 +38,7 @@ function App() {
   const teamAverages = useMemo(() => getAllTeamAverages(fixtures, 10, metricType), [metricType]);
   const leagueAverage = useMemo(() => calculateLeagueAverage(fixtures, 10, metricType), [metricType]);
   const teamFullStats = useMemo(() => getAllTeamFullStats(fixtures, 10), []);
+  const leagueTableData = useMemo(() => getLeagueTable(fixtures), []);
   const lineChartData = useMemo(
     () => getLineChartData(fixtures, selectedTeams, 10, metricType),
     [selectedTeams, metricType]
@@ -99,6 +102,12 @@ function App() {
             Overview
           </button>
           <button
+            className={`view-tab ${viewMode === 'table' ? 'active' : ''}`}
+            onClick={() => setViewMode('table')}
+          >
+            Table
+          </button>
+          <button
             className={`view-tab ${viewMode === 'h2h' ? 'active' : ''}`}
             onClick={() => setViewMode('h2h')}
           >
@@ -106,7 +115,7 @@ function App() {
           </button>
         </div>
 
-        {viewMode === 'overview' ? (
+        {viewMode === 'overview' && (
           <>
             {chartType === 'bar' ? (
               <XgChart
@@ -123,10 +132,15 @@ function App() {
                 metricType={metricType}
               />
             )}
-
             <StatsTable data={teamFullStats} />
           </>
-        ) : (
+        )}
+
+        {viewMode === 'table' && (
+          <LeagueTable data={leagueTableData} />
+        )}
+
+        {viewMode === 'h2h' && (
           <>
             {selectedTeams.length === 0 ? (
               <div className="h2h-empty">Select a team above to view their head-to-head record.</div>

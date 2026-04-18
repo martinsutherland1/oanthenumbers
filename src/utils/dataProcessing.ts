@@ -217,6 +217,74 @@ export function getLeagueAverageOverTime(fixtures: Fixture[], maxGames: number =
   return averages;
 }
 
+// League table row
+export interface LeagueTableRow {
+  position: number;
+  team: string;
+  played: number;
+  won: number;
+  drawn: number;
+  lost: number;
+  goalsFor: number;
+  goalsAgainst: number;
+  goalDiff: number;
+  points: number;
+  form: ('W' | 'D' | 'L')[];
+}
+
+export function getTeamForm(fixtures: Fixture[], team: string, count: number = 5): ('W' | 'D' | 'L')[] {
+  return fixtures
+    .filter(f => f.home_team === team || f.away_team === team)
+    .sort((a, b) => parseDate(b.date).getTime() - parseDate(a.date).getTime())
+    .slice(0, count)
+    .reverse()
+    .map(f => {
+      const isHome = f.home_team === team;
+      const scored = isHome ? f.home_goals : f.away_goals;
+      const conceded = isHome ? f.away_goals : f.home_goals;
+      return scored > conceded ? 'W' : scored === conceded ? 'D' : 'L';
+    });
+}
+
+export function getLeagueTable(fixtures: Fixture[]): LeagueTableRow[] {
+  const teams = extractTeams(fixtures);
+  const stats = new Map<string, { won: number; drawn: number; lost: number; gf: number; ga: number }>();
+
+  teams.forEach(t => stats.set(t, { won: 0, drawn: 0, lost: 0, gf: 0, ga: 0 }));
+
+  fixtures.forEach(f => {
+    const h = stats.get(f.home_team)!;
+    const a = stats.get(f.away_team)!;
+    h.gf += f.home_goals; h.ga += f.away_goals;
+    a.gf += f.away_goals; a.ga += f.home_goals;
+    if (f.home_goals > f.away_goals)      { h.won++; a.lost++; }
+    else if (f.home_goals === f.away_goals) { h.drawn++; a.drawn++; }
+    else                                    { h.lost++; a.won++; }
+  });
+
+  const rows = teams.map(team => {
+    const s = stats.get(team)!;
+    const played = s.won + s.drawn + s.lost;
+    return {
+      position: 0,
+      team,
+      played,
+      won: s.won,
+      drawn: s.drawn,
+      lost: s.lost,
+      goalsFor: s.gf,
+      goalsAgainst: s.ga,
+      goalDiff: s.gf - s.ga,
+      points: s.won * 3 + s.drawn,
+      form: getTeamForm(fixtures, team, 5),
+    };
+  });
+
+  rows.sort((a, b) => b.points - a.points || b.goalDiff - a.goalDiff || b.goalsFor - a.goalsFor);
+  rows.forEach((r, i) => { r.position = i + 1; });
+  return rows;
+}
+
 // Head to head record for a team against each opponent
 export interface H2HRecord {
   opponent: string;

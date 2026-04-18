@@ -62,3 +62,22 @@ export const LEAGUE_AVERAGE_COLOR = '#6B7280';
 export function getTeamColor(team: string): string {
   return TEAM_COLORS[team] || '#6B7280';
 }
+
+export const TEAM_ABBR: Record<string, string> = {
+  'aberdeen': 'ABD',
+  'celtic': 'CEL',
+  'dundee-fc': 'DFC',
+  'dundee-united': 'DUN',
+  'falkirk': 'FAL',
+  'hearts': 'HRT',
+  'hibernian': 'HIB',
+  'kilmarnock': 'KIL',
+  'livingston': 'LIV',
+  'motherwell': 'MTW',
+  'rangers': 'RAN',
+  'st-mirren': 'STM',
+};
+
+export function getTeamAbbr(team: string): string {
+  return TEAM_ABBR[team] || team.slice(0, 3).toUpperCase();
+}

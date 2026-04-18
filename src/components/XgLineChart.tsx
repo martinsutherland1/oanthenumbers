@@ -47,13 +47,13 @@ function CustomTooltip({ active, payload, label }: CustomTooltipProps) {
 }
 
 export function XgLineChart({ data, selectedTeams, leagueAverage, metricType }: XgLineChartProps) {
-  const metricLabel = metricType === 'xg' ? 'xG' : metricType === 'goals' ? 'Goal' : 'Points';
+  const chartTitle = metricType === 'xg' ? 'Rolling xG Difference Progression' : metricType === 'goals' ? 'Rolling Goal Difference Progression' : 'Rolling Points Progression';
 
   if (selectedTeams.length === 0) {
     return (
       <div className="line-chart-container">
         <div className="chart-header">
-          <h3>Rolling {metricLabel} Difference Progression</h3>
+          <h3>{chartTitle}</h3>
           <div className="legend">
             <div className="legend-item">
               <span
@@ -65,7 +65,7 @@ export function XgLineChart({ data, selectedTeams, leagueAverage, metricType }: 
           </div>
         </div>
         <div className="no-selection-message">
-          <p>Select one or more teams to view their rolling {metricLabel.toLowerCase()} difference progression over matches</p>
+          <p>Select one or more teams to view their {chartTitle.toLowerCase()} over matches</p>
         </div>
       </div>
     );
@@ -74,7 +74,7 @@ export function XgLineChart({ data, selectedTeams, leagueAverage, metricType }: 
   return (
     <div className="line-chart-container">
       <div className="chart-header">
-        <h3>Rolling {metricLabel} Difference Progression</h3>
+        <h3>{chartTitle}</h3>
       </div>
       <div className="chart-wrapper">
         <ResponsiveContainer width="100%" height={350}>

@@ -32,7 +32,7 @@ export function H2HTable({ team, data }: H2HTableProps) {
                     className="team-color-dot"
                     style={{ backgroundColor: getTeamColor(row.opponent) }}
                   />
-                  v {getTeamName(row.opponent)}
+                  {getTeamName(row.opponent)}
                 </td>
                 <td className="h2h-num">{row.played}</td>
                 <td className="h2h-num h2h-wins">{row.wins}</td>

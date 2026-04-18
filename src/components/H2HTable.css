@@ -111,8 +111,41 @@
 
   .h2h-table th,
   .h2h-table td {
-    padding: 7px 5px;
+    padding: 7px 4px;
     font-size: 0.72rem;
+    text-align: center;
+  }
+
+  /* Opponent column — wide enough for longest name on one line */
+  .h2h-table th:first-child,
+  .h2h-table td:first-child {
+    width: 46%;
+    text-align: left;
+    white-space: nowrap;
+  }
+
+  /* P, W, D, L */
+  .h2h-table th:nth-child(2),
+  .h2h-table td:nth-child(2),
+  .h2h-table th:nth-child(3),
+  .h2h-table td:nth-child(3),
+  .h2h-table th:nth-child(4),
+  .h2h-table td:nth-child(4),
+  .h2h-table th:nth-child(5),
+  .h2h-table td:nth-child(5) {
+    width: 6%;
+  }
+
+  /* Points */
+  .h2h-table th:nth-child(6),
+  .h2h-table td:nth-child(6) {
+    width: 16%;
+  }
+
+  /* Win % */
+  .h2h-table th:nth-child(7),
+  .h2h-table td:nth-child(7) {
+    width: 14%;
   }
 
   .team-color-dot {

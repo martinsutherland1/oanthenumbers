@@ -10,7 +10,7 @@ interface StatsTableProps {
 }
 
 export function StatsTable({ data }: StatsTableProps) {
-  const [sortKey, setSortKey] = useState<SortKey>('avgPoints');
+  const [sortKey, setSortKey] = useState<SortKey>('avgXg');
 
   const sorted = [...data].sort((a, b) => b[sortKey] - a[sortKey]);
 
