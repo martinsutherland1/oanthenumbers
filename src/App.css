@@ -1,6 +1,6 @@
 :root {
-  --primary: #818cf8;
-  --primary-light: rgba(129, 140, 248, 0.15);
+  --primary: #f1c40f;
+  --primary-light: rgba(241, 196, 15, 0.15);
   --background: #0f172a;
   --surface: #1e293b;
   --surface-hover: #334155;
@@ -65,7 +65,7 @@ body {
 
 .subtitle {
   font-size: 0.8rem;
-  color: var(--text-secondary);
+  color: var(--primary);
 }
 
 .header-controls {
@@ -132,9 +132,22 @@ body {
 }
 
 .app-footer p {
-  margin: 0;
+  margin: 0 0 4px;
   color: var(--text-secondary);
   font-size: 0.875rem;
+}
+
+.app-footer p:last-child {
+  margin-bottom: 0;
+}
+
+.app-footer a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.app-footer a:hover {
+  text-decoration: underline;
 }
 
 @media (max-width: 768px) {

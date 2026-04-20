@@ -42,6 +42,10 @@
   background: var(--surface-hover);
 }
 
+.league-table tbody tr.divider-below td {
+  border-bottom: 2px dashed var(--primary);
+}
+
 .col-pos  { width: 36px; }
 .col-team { text-align: left; width: auto; }
 .col-pts  { font-weight: 700; }

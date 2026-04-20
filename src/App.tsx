@@ -163,7 +163,8 @@ function App() {
       </main>
 
       <footer className="app-footer">
-        <p>Rolling 10-game average {metricType === 'xg' ? 'expected goals (xG) difference' : metricType === 'goals' ? 'goal difference' : 'points per game'}</p>
+        <p className="footer-source">Data sourced from <a href="https://www.fotmob.com" target="_blank" rel="noreferrer">fotmob.com</a></p>
+        <p className="footer-credit">Created by <a href="https://x.com/oanthenumbers" target="_blank" rel="noreferrer">@oanthenumbers</a></p>
       </footer>
     </div>
   );

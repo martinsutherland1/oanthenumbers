@@ -42,7 +42,7 @@ export function LeagueTable({ data }: LeagueTableProps) {
           </thead>
           <tbody>
             {data.map(row => (
-              <tr key={row.team}>
+              <tr key={row.team} className={[1, 6, 11, 12].includes(row.position) ? 'divider-below' : ''}>
                 <td className="col-pos">{row.position}</td>
                 <td className="col-team">
                   <div className="team-cell">
