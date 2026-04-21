@@ -111,20 +111,20 @@
 
   .h2h-table th,
   .h2h-table td {
-    padding: 7px 4px;
-    font-size: 0.72rem;
+    padding: 7px 3px;
+    font-size: 0.7rem;
     text-align: center;
   }
 
-  /* Opponent column — wide enough for longest name on one line */
+  /* Opponent */
   .h2h-table th:first-child,
   .h2h-table td:first-child {
-    width: 46%;
+    width: 38%;
     text-align: left;
     white-space: nowrap;
   }
 
-  /* P, W, D, L */
+  /* P, W, D, L, GF, GA */
   .h2h-table th:nth-child(2),
   .h2h-table td:nth-child(2),
   .h2h-table th:nth-child(3),
@@ -132,20 +132,24 @@
   .h2h-table th:nth-child(4),
   .h2h-table td:nth-child(4),
   .h2h-table th:nth-child(5),
-  .h2h-table td:nth-child(5) {
-    width: 6%;
+  .h2h-table td:nth-child(5),
+  .h2h-table th:nth-child(6),
+  .h2h-table td:nth-child(6),
+  .h2h-table th:nth-child(7),
+  .h2h-table td:nth-child(7) {
+    width: 5%;
   }
 
   /* Points */
-  .h2h-table th:nth-child(6),
-  .h2h-table td:nth-child(6) {
-    width: 16%;
+  .h2h-table th:nth-child(8),
+  .h2h-table td:nth-child(8) {
+    width: 15%;
   }
 
   /* Win % */
-  .h2h-table th:nth-child(7),
-  .h2h-table td:nth-child(7) {
-    width: 14%;
+  .h2h-table th:nth-child(9),
+  .h2h-table td:nth-child(9) {
+    width: 12%;
   }
 
   .team-color-dot {

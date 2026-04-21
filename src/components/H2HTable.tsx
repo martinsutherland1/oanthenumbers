@@ -20,6 +20,8 @@ export function H2HTable({ team, data }: H2HTableProps) {
               <th>W</th>
               <th>D</th>
               <th>L</th>
+              <th>GF</th>
+              <th>GA</th>
               <th>Points</th>
               <th>Win %</th>
             </tr>
@@ -38,6 +40,8 @@ export function H2HTable({ team, data }: H2HTableProps) {
                 <td className="h2h-num h2h-wins">{row.wins}</td>
                 <td className="h2h-num h2h-draws">{row.draws}</td>
                 <td className="h2h-num h2h-losses">{row.losses}</td>
+                <td className="h2h-num">{row.goalsFor}</td>
+                <td className="h2h-num">{row.goalsAgainst}</td>
                 <td className="h2h-num h2h-points">{row.points}/{row.possiblePoints}</td>
                 <td className={`h2h-num h2h-pct ${row.winPct >= 50 ? 'positive' : row.winPct >= 33 ? 'neutral' : 'negative'}`}>
                   {row.winPct}%

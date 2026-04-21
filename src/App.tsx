@@ -5,6 +5,7 @@ import { XgLineChart } from './components/XgLineChart';
 import { StatsTable } from './components/StatsTable';
 import { H2HTable } from './components/H2HTable';
 import { LeagueTable } from './components/LeagueTable';
+import { StatsView } from './components/StatsView';
 import { ChartToggle } from './components/ChartToggle';
 import { MetricToggle } from './components/MetricToggle';
 import type { ChartType } from './components/ChartToggle';
@@ -17,6 +18,9 @@ import {
   getLineChartData,
   getH2HData,
   getLeagueTable,
+  getUnbeatenRuns,
+  getGamesWithoutWin,
+  getTeamSeasonStats,
   flattenFixtures
 } from './utils/dataProcessing';
 import { TOP_6, BOTTOM_6 } from './utils/teamColors';
@@ -24,7 +28,7 @@ import fixturesData from './data/fixtures.json';
 import type { FixturesData } from './types';
 import './App.css';
 
-type ViewMode = 'overview' | 'table' | 'h2h';
+type ViewMode = 'overview' | 'table' | 'h2h' | 'stats';
 
 const fixtures = flattenFixtures(fixturesData as FixturesData);
 
@@ -39,6 +43,9 @@ function App() {
   const leagueAverage = useMemo(() => calculateLeagueAverage(fixtures, 10, metricType), [metricType]);
   const teamFullStats = useMemo(() => getAllTeamFullStats(fixtures, 10), []);
   const leagueTableData = useMemo(() => getLeagueTable(fixtures), []);
+  const unbeatenRuns = useMemo(() => getUnbeatenRuns(fixtures), []);
+  const gamesWithoutWin = useMemo(() => getGamesWithoutWin(fixtures), []);
+  const seasonStats = useMemo(() => getTeamSeasonStats(fixtures), []);
   const lineChartData = useMemo(
     () => getLineChartData(fixtures, selectedTeams, 10, metricType),
     [selectedTeams, metricType]
@@ -99,9 +106,15 @@ function App() {
           >
             H2H
           </button>
+          <button
+            className={`view-tab ${viewMode === 'stats' ? 'active' : ''}`}
+            onClick={() => setViewMode('stats')}
+          >
+            Stats
+          </button>
         </div>
 
-        {viewMode !== 'table' && (
+        {(viewMode === 'overview' || viewMode === 'h2h') && (
           <TeamSelector
             teams={teams}
             selectedTeams={selectedTeams}
@@ -160,10 +173,15 @@ function App() {
             )}
           </>
         )}
+
+        {viewMode === 'stats' && (
+          <StatsView stats={seasonStats} unbeatenRuns={unbeatenRuns} gamesWithoutWin={gamesWithoutWin} />
+        )}
       </main>
 
       <footer className="app-footer">
         <p className="footer-source">Data sourced from <a href="https://www.fotmob.com" target="_blank" rel="noreferrer">fotmob.com</a></p>
+        <p className="footer-source">xG figures are No-Penalty xG (npxG)</p>
         <p className="footer-credit">Created by <a href="https://x.com/oanthenumbers" target="_blank" rel="noreferrer">@oanthenumbers</a></p>
       </footer>
     </div>

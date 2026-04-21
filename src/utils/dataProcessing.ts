@@ -292,13 +292,15 @@ export interface H2HRecord {
   wins: number;
   draws: number;
   losses: number;
+  goalsFor: number;
+  goalsAgainst: number;
   points: number;
   possiblePoints: number;
   winPct: number;
 }
 
 export function getH2HData(fixtures: Fixture[], team: string): H2HRecord[] {
-  const records = new Map<string, { wins: number; draws: number; losses: number }>();
+  const records = new Map<string, { wins: number; draws: number; losses: number; gf: number; ga: number }>();
 
   fixtures.forEach(fixture => {
     let opponent = '';
@@ -318,9 +320,11 @@ export function getH2HData(fixtures: Fixture[], team: string): H2HRecord[] {
     }
 
     if (!records.has(opponent)) {
-      records.set(opponent, { wins: 0, draws: 0, losses: 0 });
+      records.set(opponent, { wins: 0, draws: 0, losses: 0, gf: 0, ga: 0 });
     }
     const rec = records.get(opponent)!;
+    rec.gf += teamGoals;
+    rec.ga += oppGoals;
 
     if (teamGoals > oppGoals) rec.wins++;
     else if (teamGoals === oppGoals) rec.draws++;
@@ -333,9 +337,112 @@ export function getH2HData(fixtures: Fixture[], team: string): H2HRecord[] {
       const points = rec.wins * 3 + rec.draws;
       const possiblePoints = played * 3;
       const winPct = played > 0 ? Math.round((rec.wins / played) * 100) : 0;
-      return { opponent, played, ...rec, points, possiblePoints, winPct };
+      return { opponent, played, wins: rec.wins, draws: rec.draws, losses: rec.losses, goalsFor: rec.gf, goalsAgainst: rec.ga, points, possiblePoints, winPct };
     })
     .sort((a, b) => b.points - a.points || b.winPct - a.winPct);
+}
+
+// Streak record: consecutive games (most recent first) matching a condition
+export interface UnbeatenRun {
+  team: string;
+  games: number;
+}
+
+export function getUnbeatenRuns(fixtures: Fixture[]): UnbeatenRun[] {
+  const teams = extractTeams(fixtures);
+  const runs: UnbeatenRun[] = [];
+
+  teams.forEach(team => {
+    const sorted = fixtures
+      .filter(f => f.home_team === team || f.away_team === team)
+      .sort((a, b) => parseDate(b.date).getTime() - parseDate(a.date).getTime());
+
+    let streak = 0;
+    for (const f of sorted) {
+      const isHome = f.home_team === team;
+      const scored = isHome ? f.home_goals : f.away_goals;
+      const conceded = isHome ? f.away_goals : f.home_goals;
+      if (scored < conceded) break;
+      streak++;
+    }
+
+    if (streak > 0) runs.push({ team, games: streak });
+  });
+
+  return runs.sort((a, b) => b.games - a.games);
+}
+
+// Games without a win: consecutive games (most recent first) with no win
+export function getGamesWithoutWin(fixtures: Fixture[]): UnbeatenRun[] {
+  const teams = extractTeams(fixtures);
+  const runs: UnbeatenRun[] = [];
+
+  teams.forEach(team => {
+    const sorted = fixtures
+      .filter(f => f.home_team === team || f.away_team === team)
+      .sort((a, b) => parseDate(b.date).getTime() - parseDate(a.date).getTime());
+
+    let streak = 0;
+    for (const f of sorted) {
+      const isHome = f.home_team === team;
+      const scored = isHome ? f.home_goals : f.away_goals;
+      const conceded = isHome ? f.away_goals : f.home_goals;
+      if (scored > conceded) break;
+      streak++;
+    }
+
+    if (streak > 0) runs.push({ team, games: streak });
+  });
+
+  return runs.sort((a, b) => b.games - a.games);
+}
+
+// Season-wide stats per team for the Stats tab
+export interface TeamSeasonStats {
+  team: string;
+  gamesPlayed: number;
+  totalGoals: number;
+  totalGoalsAgainst: number;
+  totalXg: number;
+  totalXgAgainst: number;
+  goalsPerGame: number;
+  goalsAgainstPerGame: number;
+  xgPerGame: number;
+  xgAgainstPerGame: number;
+}
+
+export function getTeamSeasonStats(fixtures: Fixture[]): TeamSeasonStats[] {
+  const teams = extractTeams(fixtures);
+  const statsMap = new Map<string, { goals: number; ga: number; xg: number; xga: number; played: number }>();
+  teams.forEach(t => statsMap.set(t, { goals: 0, ga: 0, xg: 0, xga: 0, played: 0 }));
+
+  fixtures.forEach(f => {
+    const h = statsMap.get(f.home_team)!;
+    const a = statsMap.get(f.away_team)!;
+    h.goals += f.home_goals ?? 0; h.ga += f.away_goals ?? 0;
+    h.xg += f.home_npxg ?? 0;   h.xga += f.away_npxg ?? 0;
+    h.played++;
+    a.goals += f.away_goals ?? 0; a.ga += f.home_goals ?? 0;
+    a.xg += f.away_npxg ?? 0;    a.xga += f.home_npxg ?? 0;
+    a.played++;
+  });
+
+  const r2 = (n: number) => Math.round(n * 100) / 100;
+  return teams.map(team => {
+    const s = statsMap.get(team)!;
+    return {
+      team,
+      gamesPlayed: s.played,
+      totalGoals: s.goals,
+      totalGoalsAgainst: s.ga,
+      totalXg: r2(s.xg),
+      totalXgAgainst: r2(s.xga),
+      goalsPerGame: r2(s.played > 0 ? s.goals / s.played : 0),
+      goalsAgainstPerGame: r2(s.played > 0 ? s.ga / s.played : 0),
+      xgPerGame: r2(s.played > 0 ? s.xg / s.played : 0),
+      xgAgainstPerGame: r2(s.played > 0 ? s.xga / s.played : 0),
+    };
+  });
 }
 
 // Get line chart data for selected teams
