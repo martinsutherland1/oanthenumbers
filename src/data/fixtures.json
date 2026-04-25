@@ -7312,5 +7312,55 @@
       "home_touches_in_box": null, "away_touches_in_box": null, "home_shots_outside_box": null, "away_shots_outside_box": null,
       "home_fouls": null, "away_fouls": null, "home_corners": null, "away_corners": null
     }
+  ],
+  "2026-04-26": [
+    {
+      "date": "2026-04-26",
+      "home_team": "aberdeen",
+      "away_team": "kilmarnock",
+      "home_goals": 1,
+      "away_goals": 0,
+      "home_shots": null, "away_shots": null, "home_shots_on_target": null, "away_shots_on_target": null,
+      "home_xG": null, "away_xG": null, "home_xg_open_play": null, "away_xg_open_play": null,
+      "home_xg_set_play": null, "away_xg_set_play": null,
+      "home_npxg": 0.47, "away_npxg": 0.54,
+      "home_xgot": null, "away_xgot": null, "home_possession": null, "away_possession": null,
+      "home_big_chances": null, "away_big_chances": null, "home_big_chances_missed": null, "away_big_chances_missed": null,
+      "home_accurate_passes": null, "away_accurate_passes": null, "home_passes_opp_half": null, "away_passes_opp_half": null,
+      "home_touches_in_box": null, "away_touches_in_box": null, "home_shots_outside_box": null, "away_shots_outside_box": null,
+      "home_fouls": null, "away_fouls": null, "home_corners": null, "away_corners": null
+    },
+    {
+      "date": "2026-04-26",
+      "home_team": "st mirren",
+      "away_team": "livingston",
+      "home_goals": 0,
+      "away_goals": 2,
+      "home_shots": null, "away_shots": null, "home_shots_on_target": null, "away_shots_on_target": null,
+      "home_xG": null, "away_xG": null, "home_xg_open_play": null, "away_xg_open_play": null,
+      "home_xg_set_play": null, "away_xg_set_play": null,
+      "home_npxg": 1.35, "away_npxg": 0.79,
+      "home_xgot": null, "away_xgot": null, "home_possession": null, "away_possession": null,
+      "home_big_chances": null, "away_big_chances": null, "home_big_chances_missed": null, "away_big_chances_missed": null,
+      "home_accurate_passes": null, "away_accurate_passes": null, "home_passes_opp_half": null, "away_passes_opp_half": null,
+      "home_touches_in_box": null, "away_touches_in_box": null, "home_shots_outside_box": null, "away_shots_outside_box": null,
+      "home_fouls": null, "away_fouls": null, "home_corners": null, "away_corners": null
+    },
+    {
+      "date": "2026-04-26",
+      "home_team": "celtic",
+      "away_team": "falkirk",
+      "home_goals": 3,
+      "away_goals": 1,
+      "home_shots": null, "away_shots": null, "home_shots_on_target": null, "away_shots_on_target": null,
+      "home_xG": null, "away_xG": null, "home_xg_open_play": null, "away_xg_open_play": null,
+      "home_xg_set_play": null, "away_xg_set_play": null,
+      "home_npxg": 1.2, "away_npxg": 0.81,
+      "home_xgot": null, "away_xgot": null, "home_possession": null, "away_possession": null,
+      "home_big_chances": null, "away_big_chances": null, "home_big_chances_missed": null, "away_big_chances_missed": null,
+      "home_accurate_passes": null, "away_accurate_passes": null, "home_passes_opp_half": null, "away_passes_opp_half": null,
+      "home_touches_in_box": null, "away_touches_in_box": null, "home_shots_outside_box": null, "away_shots_outside_box": null,
+      "home_fouls": null, "away_fouls": null, "home_corners": null, "away_corners": null
+    }
   ]
 }
