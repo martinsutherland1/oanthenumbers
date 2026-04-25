@@ -285,6 +285,49 @@ export function getLeagueTable(fixtures: Fixture[]): LeagueTableRow[] {
   return rows;
 }
 
+// Partition fixtures into pre-split (first N games per team) and post-split
+export function partitionFixtures(fixtures: Fixture[], splitAt: number = 33): { pre: Fixture[]; post: Fixture[] } {
+  const teams = extractTeams(fixtures);
+  const sorted = [...fixtures].sort((a, b) => parseDate(a.date).getTime() - parseDate(b.date).getTime());
+  const gameCount = new Map<string, number>();
+  teams.forEach(t => gameCount.set(t, 0));
+  const pre: Fixture[] = [];
+  const post: Fixture[] = [];
+  sorted.forEach(f => {
+    const hCount = gameCount.get(f.home_team) ?? 0;
+    const aCount = gameCount.get(f.away_team) ?? 0;
+    if (hCount < splitAt && aCount < splitAt) {
+      pre.push(f);
+    } else {
+      post.push(f);
+    }
+    gameCount.set(f.home_team, hCount + 1);
+    gameCount.set(f.away_team, aCount + 1);
+  });
+  return { pre, post };
+}
+
+export interface SplitData {
+  championship: LeagueTableRow[];
+  relegation: LeagueTableRow[];
+  hasPostSplitGames: boolean;
+}
+
+export function getSplitTable(fixtures: Fixture[], splitAt: number = 33): SplitData {
+  const { pre, post } = partitionFixtures(fixtures, splitAt);
+  const hasPostSplitGames = post.length > 0;
+  const preSplitTable = getLeagueTable(pre.length > 0 ? pre : fixtures);
+  const topTeams = new Set(preSplitTable.slice(0, 6).map(r => r.team));
+  const fullTable = getLeagueTable(fixtures);
+  const championship = fullTable
+    .filter(r => topTeams.has(r.team))
+    .map((r, i) => ({ ...r, position: i + 1 }));
+  const relegation = fullTable
+    .filter(r => !topTeams.has(r.team))
+    .map((r, i) => ({ ...r, position: i + 1 }));
+  return { championship, relegation, hasPostSplitGames };
+}
+
 // Head to head record for a team against each opponent
 export interface H2HRecord {
   opponent: string;
@@ -441,6 +484,36 @@ export function getTeamSeasonStats(fixtures: Fixture[]): TeamSeasonStats[] {
       goalsAgainstPerGame: r2(s.played > 0 ? s.ga / s.played : 0),
       xgPerGame: r2(s.played > 0 ? s.xg / s.played : 0),
       xgAgainstPerGame: r2(s.played > 0 ? s.xga / s.played : 0),
+    };
+  });
+}
+
+// Per-game averages over each team's last N games
+export function getTeamRecentSeasonStats(fixtures: Fixture[], recentN: number = 6): TeamSeasonStats[] {
+  const teams = extractTeams(fixtures);
+  const r2 = (n: number) => Math.round(n * 100) / 100;
+  return teams.map(team => {
+    const recent = fixtures
+      .filter(f => f.home_team === team || f.away_team === team)
+      .sort((a, b) => parseDate(b.date).getTime() - parseDate(a.date).getTime())
+      .slice(0, recentN);
+    let goals = 0, ga = 0, xg = 0, xga = 0;
+    recent.forEach(f => {
+      const isHome = f.home_team === team;
+      goals += isHome ? (f.home_goals ?? 0) : (f.away_goals ?? 0);
+      ga    += isHome ? (f.away_goals ?? 0) : (f.home_goals ?? 0);
+      xg    += isHome ? (f.home_npxg ?? 0)  : (f.away_npxg ?? 0);
+      xga   += isHome ? (f.away_npxg ?? 0)  : (f.home_npxg ?? 0);
+    });
+    const played = recent.length;
+    return {
+      team, gamesPlayed: played,
+      totalGoals: goals, totalGoalsAgainst: ga,
+      totalXg: r2(xg), totalXgAgainst: r2(xga),
+      goalsPerGame:        r2(played > 0 ? goals / played : 0),
+      goalsAgainstPerGame: r2(played > 0 ? ga / played : 0),
+      xgPerGame:           r2(played > 0 ? xg / played : 0),
+      xgAgainstPerGame:    r2(played > 0 ? xga / played : 0),
     };
   });
 }

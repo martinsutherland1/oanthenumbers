@@ -1,0 +1,30 @@
+.split-table-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.split-group {
+  background: var(--surface);
+  border-radius: 12px;
+  padding: 16px;
+  border: 1px solid var(--border);
+}
+
+.split-group-title {
+  margin: 0 0 12px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.split-note {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  text-align: center;
+  margin: 0;
+  padding: 10px 16px;
+  background: var(--surface);
+  border-radius: 8px;
+  border: 1px solid var(--border);
+}

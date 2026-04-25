@@ -124,6 +124,38 @@ body {
   color: #fff;
 }
 
+.table-subtabs {
+  display: flex;
+  gap: 4px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 3px;
+  align-self: center;
+}
+
+.subtab {
+  padding: 4px 16px;
+  border: none;
+  border-radius: 5px;
+  background: transparent;
+  color: var(--text-secondary);
+  font-size: 0.8rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.subtab.active {
+  background: var(--primary);
+  color: #fff;
+}
+
+.subtab:hover:not(.active) {
+  color: var(--text);
+  background: var(--surface-hover);
+}
+
 .app-footer {
   background: var(--surface);
   border-top: 1px solid var(--border);

@@ -5,6 +5,7 @@ import './StatsView.css';
 
 interface StatsViewProps {
   stats: TeamSeasonStats[];
+  recentStats: TeamSeasonStats[];
   unbeatenRuns: UnbeatenRun[];
   gamesWithoutWin: UnbeatenRun[];
 }
@@ -50,11 +51,49 @@ function StatTableSection({
   );
 }
 
-export function StatsView({ stats, unbeatenRuns, gamesWithoutWin }: StatsViewProps) {
-  const byGoals = useMemo(() => [...stats].sort((a, b) => b.goalsPerGame - a.goalsPerGame), [stats]);
-  const byGA    = useMemo(() => [...stats].sort((a, b) => a.goalsAgainstPerGame - b.goalsAgainstPerGame), [stats]);
-  const byXg    = useMemo(() => [...stats].sort((a, b) => b.xgPerGame - a.xgPerGame), [stats]);
-  const byXgA   = useMemo(() => [...stats].sort((a, b) => a.xgAgainstPerGame - b.xgAgainstPerGame), [stats]);
+interface DualCardProps {
+  label: string;
+  seasonTeam: string;
+  seasonValue: string;
+  recentTeam: string;
+  recentValue: string;
+}
+
+function DualStatCard({ label, seasonTeam, seasonValue, recentTeam, recentValue }: DualCardProps) {
+  return (
+    <div className="stat-card">
+      <span className="stat-card-label">{label} <span className="stat-per-game">per game</span></span>
+      <div className="stat-card-row">
+        <span className="stat-row-period">Season</span>
+        <div className="stat-card-team">
+          <span className="team-color-dot" style={{ backgroundColor: getTeamColor(seasonTeam) }} />
+          <span className="stat-card-name">{getTeamName(seasonTeam)}</span>
+        </div>
+        <span className="stat-card-value">{seasonValue}</span>
+      </div>
+      <div className="stat-card-row">
+        <span className="stat-row-period">Last 6</span>
+        <div className="stat-card-team">
+          <span className="team-color-dot" style={{ backgroundColor: getTeamColor(recentTeam) }} />
+          <span className="stat-card-name">{getTeamName(recentTeam)}</span>
+        </div>
+        <span className="stat-card-value">{recentValue}</span>
+      </div>
+    </div>
+  );
+}
+
+export function StatsView({ stats, recentStats, unbeatenRuns, gamesWithoutWin }: StatsViewProps) {
+  const byGoals  = useMemo(() => [...stats].sort((a, b) => b.goalsPerGame - a.goalsPerGame), [stats]);
+  const byGA     = useMemo(() => [...stats].sort((a, b) => a.goalsAgainstPerGame - b.goalsAgainstPerGame), [stats]);
+  const byXg     = useMemo(() => [...stats].sort((a, b) => b.xgPerGame - a.xgPerGame), [stats]);
+  const byXgA    = useMemo(() => [...stats].sort((a, b) => a.xgAgainstPerGame - b.xgAgainstPerGame), [stats]);
+
+  const rByGoals = useMemo(() => [...recentStats].sort((a, b) => b.goalsPerGame - a.goalsPerGame), [recentStats]);
+  const rByGA    = useMemo(() => [...recentStats].sort((a, b) => a.goalsAgainstPerGame - b.goalsAgainstPerGame), [recentStats]);
+  const rByXg    = useMemo(() => [...recentStats].sort((a, b) => b.xgPerGame - a.xgPerGame), [recentStats]);
+  const rByXgA   = useMemo(() => [...recentStats].sort((a, b) => a.xgAgainstPerGame - b.xgAgainstPerGame), [recentStats]);
+
   const filteredRuns    = useMemo(() => unbeatenRuns.filter(r => r.games > 1), [unbeatenRuns]);
   const filteredWinless = useMemo(() => gamesWithoutWin.filter(r => r.games > 1), [gamesWithoutWin]);
 
@@ -62,7 +101,7 @@ export function StatsView({ stats, unbeatenRuns, gamesWithoutWin }: StatsViewPro
     <div className="stats-view">
       <div className="stat-cards">
         {filteredRuns.length > 0 && (
-          <div className="stat-card">
+          <div className="stat-card stat-card-streak">
             <span className="stat-card-label">Unbeaten <span className="stat-per-game">2+ games</span></span>
             <div className="stat-card-team">
               <span className="team-color-dot" style={{ backgroundColor: getTeamColor(filteredRuns[0].team) }} />
@@ -73,7 +112,7 @@ export function StatsView({ stats, unbeatenRuns, gamesWithoutWin }: StatsViewPro
         )}
 
         {filteredWinless.length > 0 && (
-          <div className="stat-card">
+          <div className="stat-card stat-card-streak">
             <span className="stat-card-label">Winless <span className="stat-per-game">2+ games</span></span>
             <div className="stat-card-team">
               <span className="team-color-dot" style={{ backgroundColor: getTeamColor(filteredWinless[0].team) }} />
@@ -83,56 +122,41 @@ export function StatsView({ stats, unbeatenRuns, gamesWithoutWin }: StatsViewPro
           </div>
         )}
 
-        {byGoals.length > 0 && (
-          <div className="stat-card">
-            <span className="stat-card-label">Goals For <span className="stat-per-game">per game</span></span>
-            <div className="stat-card-team">
-              <span className="team-color-dot" style={{ backgroundColor: getTeamColor(byGoals[0].team) }} />
-              <span className="stat-card-name">{getTeamName(byGoals[0].team)}</span>
-            </div>
-            <span className="stat-card-value">{byGoals[0].goalsPerGame.toFixed(2)}</span>
-          </div>
+        {byGoals.length > 0 && rByGoals.length > 0 && (
+          <DualStatCard
+            label="Goals For"
+            seasonTeam={byGoals[0].team}   seasonValue={byGoals[0].goalsPerGame.toFixed(2)}
+            recentTeam={rByGoals[0].team}  recentValue={rByGoals[0].goalsPerGame.toFixed(2)}
+          />
         )}
-
-        {byGA.length > 0 && (
-          <div className="stat-card">
-            <span className="stat-card-label">Goals Against <span className="stat-per-game">per game</span></span>
-            <div className="stat-card-team">
-              <span className="team-color-dot" style={{ backgroundColor: getTeamColor(byGA[0].team) }} />
-              <span className="stat-card-name">{getTeamName(byGA[0].team)}</span>
-            </div>
-            <span className="stat-card-value">{byGA[0].goalsAgainstPerGame.toFixed(2)}</span>
-          </div>
+        {byGA.length > 0 && rByGA.length > 0 && (
+          <DualStatCard
+            label="Goals Against"
+            seasonTeam={byGA[0].team}   seasonValue={byGA[0].goalsAgainstPerGame.toFixed(2)}
+            recentTeam={rByGA[0].team}  recentValue={rByGA[0].goalsAgainstPerGame.toFixed(2)}
+          />
         )}
-
-        {byXg.length > 0 && (
-          <div className="stat-card">
-            <span className="stat-card-label">xG For <span className="stat-per-game">per game</span></span>
-            <div className="stat-card-team">
-              <span className="team-color-dot" style={{ backgroundColor: getTeamColor(byXg[0].team) }} />
-              <span className="stat-card-name">{getTeamName(byXg[0].team)}</span>
-            </div>
-            <span className="stat-card-value">{byXg[0].xgPerGame.toFixed(2)}</span>
-          </div>
+        {byXg.length > 0 && rByXg.length > 0 && (
+          <DualStatCard
+            label="xG For"
+            seasonTeam={byXg[0].team}   seasonValue={byXg[0].xgPerGame.toFixed(2)}
+            recentTeam={rByXg[0].team}  recentValue={rByXg[0].xgPerGame.toFixed(2)}
+          />
         )}
-
-        {byXgA.length > 0 && (
-          <div className="stat-card">
-            <span className="stat-card-label">xG Against <span className="stat-per-game">per game</span></span>
-            <div className="stat-card-team">
-              <span className="team-color-dot" style={{ backgroundColor: getTeamColor(byXgA[0].team) }} />
-              <span className="stat-card-name">{getTeamName(byXgA[0].team)}</span>
-            </div>
-            <span className="stat-card-value">{byXgA[0].xgAgainstPerGame.toFixed(2)}</span>
-          </div>
+        {byXgA.length > 0 && rByXgA.length > 0 && (
+          <DualStatCard
+            label="xG Against"
+            seasonTeam={byXgA[0].team}   seasonValue={byXgA[0].xgAgainstPerGame.toFixed(2)}
+            recentTeam={rByXgA[0].team}  recentValue={rByXgA[0].xgAgainstPerGame.toFixed(2)}
+          />
         )}
       </div>
 
       <div className="stats-tables-grid">
-        <StatTableSection title="Goals For"    rows={byGoals} valueKey="goalsPerGame" />
+        <StatTableSection title="Goals For"     rows={byGoals} valueKey="goalsPerGame" />
         <StatTableSection title="Goals Against" rows={byGA}    valueKey="goalsAgainstPerGame" />
-        <StatTableSection title="xG For"       rows={byXg}   valueKey="xgPerGame" />
-        <StatTableSection title="xG Against"   rows={byXgA}  valueKey="xgAgainstPerGame" />
+        <StatTableSection title="xG For"        rows={byXg}   valueKey="xgPerGame" />
+        <StatTableSection title="xG Against"    rows={byXgA}  valueKey="xgAgainstPerGame" />
       </div>
     </div>
   );

@@ -5,6 +5,7 @@ import { XgLineChart } from './components/XgLineChart';
 import { StatsTable } from './components/StatsTable';
 import { H2HTable } from './components/H2HTable';
 import { LeagueTable } from './components/LeagueTable';
+import { SplitTable } from './components/SplitTable';
 import { StatsView } from './components/StatsView';
 import { ChartToggle } from './components/ChartToggle';
 import { MetricToggle } from './components/MetricToggle';
@@ -21,6 +22,9 @@ import {
   getUnbeatenRuns,
   getGamesWithoutWin,
   getTeamSeasonStats,
+  getTeamRecentSeasonStats,
+  partitionFixtures,
+  getSplitTable,
   flattenFixtures
 } from './utils/dataProcessing';
 import { TOP_6, BOTTOM_6 } from './utils/teamColors';
@@ -37,12 +41,16 @@ function App() {
   const [chartType, setChartType] = useState<ChartType>('line');
   const [metricType, setMetricType] = useState<MetricType>('xg');
   const [viewMode, setViewMode] = useState<ViewMode>('overview');
+  const [tableView, setTableView] = useState<'league' | 'split'>('league');
 
   const teams = useMemo(() => extractTeams(fixtures), []);
   const teamAverages = useMemo(() => getAllTeamAverages(fixtures, 10, metricType), [metricType]);
   const leagueAverage = useMemo(() => calculateLeagueAverage(fixtures, 10, metricType), [metricType]);
   const teamFullStats = useMemo(() => getAllTeamFullStats(fixtures, 10), []);
-  const leagueTableData = useMemo(() => getLeagueTable(fixtures), []);
+  const { pre: preSplitFixtures } = useMemo(() => partitionFixtures(fixtures), []);
+  const leagueTableData  = useMemo(() => getLeagueTable(preSplitFixtures), []);
+  const splitData        = useMemo(() => getSplitTable(fixtures), []);
+  const recentSeasonStats = useMemo(() => getTeamRecentSeasonStats(fixtures), []);
   const unbeatenRuns = useMemo(() => getUnbeatenRuns(fixtures), []);
   const gamesWithoutWin = useMemo(() => getGamesWithoutWin(fixtures), []);
   const seasonStats = useMemo(() => getTeamSeasonStats(fixtures), []);
@@ -155,8 +163,13 @@ function App() {
         )}
 
         {viewMode === 'table' && (
-          <LeagueTable data={leagueTableData} />
+          <div className="table-subtabs">
+            <button className={`subtab ${tableView === 'league' ? 'active' : ''}`} onClick={() => setTableView('league')}>League</button>
+            <button className={`subtab ${tableView === 'split' ? 'active' : ''}`} onClick={() => setTableView('split')}>Split</button>
+          </div>
         )}
+        {viewMode === 'table' && tableView === 'league' && <LeagueTable data={leagueTableData} />}
+        {viewMode === 'table' && tableView === 'split'  && <SplitTable data={splitData} />}
 
         {viewMode === 'h2h' && (
           <>
@@ -175,7 +188,7 @@ function App() {
         )}
 
         {viewMode === 'stats' && (
-          <StatsView stats={seasonStats} unbeatenRuns={unbeatenRuns} gamesWithoutWin={gamesWithoutWin} />
+          <StatsView stats={seasonStats} recentStats={recentSeasonStats} unbeatenRuns={unbeatenRuns} gamesWithoutWin={gamesWithoutWin} />
         )}
       </main>
 

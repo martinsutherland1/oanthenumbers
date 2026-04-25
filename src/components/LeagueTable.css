@@ -51,6 +51,8 @@
 .col-team { text-align: left; width: auto; }
 .col-pts  { font-weight: 700; }
 .col-form { width: 90px; }
+.col-p  { width: 26px; }
+.col-gd { width: 32px; }
 
 .col-w { color: #22c55e; }
 .col-d { color: var(--text-secondary); }
@@ -171,6 +173,9 @@
 
   .col-pos  { width: 24px; }
   .col-form { width: 58px; }
+  .col-p   { width: 24px; }
+  .col-gd  { width: 28px; }
+  .col-pts { width: 30px; }
 
   .form-squares {
     gap: 2px;

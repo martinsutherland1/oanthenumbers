@@ -1,10 +1,10 @@
-import type { LeagueTableRow } from '../utils/dataProcessing';
+import type { SplitData, LeagueTableRow } from '../utils/dataProcessing';
 import { getTeamColor, getTeamName } from '../utils/teamColors';
-import { NEXT_FIXTURES } from '../data/nextFixtures';
 import './LeagueTable.css';
+import './SplitTable.css';
 
-interface LeagueTableProps {
-  data: LeagueTableRow[];
+interface SplitTableProps {
+  data: SplitData;
 }
 
 function FormSquares({ form }: { form: ('W' | 'D' | 'L')[] }) {
@@ -17,12 +17,10 @@ function FormSquares({ form }: { form: ('W' | 'D' | 'L')[] }) {
   );
 }
 
-export function LeagueTable({ data }: LeagueTableProps) {
-  const formByTeam = Object.fromEntries(data.map(r => [r.team, r.form]));
-
+function GroupTable({ rows, title }: { rows: LeagueTableRow[]; title: string }) {
   return (
-    <div className="league-table-container">
-      <h3>League Table</h3>
+    <div className="split-group">
+      <h4 className="split-group-title">{title}</h4>
       <div className="league-table-wrapper">
         <table className="league-table">
           <thead>
@@ -36,20 +34,17 @@ export function LeagueTable({ data }: LeagueTableProps) {
               <th className="hide-mobile">GF</th>
               <th className="hide-mobile">GA</th>
               <th className="col-gd">GD</th>
-              <th>Pts</th>
+              <th className="col-pts">Pts</th>
               <th className="col-form">Form</th>
             </tr>
           </thead>
           <tbody>
-            {data.map(row => (
-              <tr key={row.team} className={[1, 6, 11, 12].includes(row.position) ? 'divider-below' : ''}>
+            {rows.map(row => (
+              <tr key={row.team}>
                 <td className="col-pos">{row.position}</td>
                 <td className="col-team">
                   <div className="team-cell">
-                    <span
-                      className="team-color-dot"
-                      style={{ backgroundColor: getTeamColor(row.team) }}
-                    />
+                    <span className="team-color-dot" style={{ backgroundColor: getTeamColor(row.team) }} />
                     {getTeamName(row.team)}
                   </div>
                 </td>
@@ -69,27 +64,18 @@ export function LeagueTable({ data }: LeagueTableProps) {
           </tbody>
         </table>
       </div>
+    </div>
+  );
+}
 
-      <div className="next-fixtures">
-        <h4>Next Fixtures</h4>
-        {NEXT_FIXTURES.map(([home, away]) => (
-          <div key={`${home}-${away}`} className="fixture-row">
-            <div className="fixture-team fixture-home">
-              <span className="team-color-dot" style={{ backgroundColor: getTeamColor(home) }} />
-              <span className="fixture-name">{getTeamName(home)}</span>
-            </div>
-            <div className="fixture-centre">
-              <FormSquares form={formByTeam[home] ?? []} />
-              <span className="fixture-vs">v</span>
-              <FormSquares form={formByTeam[away] ?? []} />
-            </div>
-            <div className="fixture-team fixture-away">
-              <span className="fixture-name">{getTeamName(away)}</span>
-              <span className="team-color-dot" style={{ backgroundColor: getTeamColor(away) }} />
-            </div>
-          </div>
-        ))}
-      </div>
+export function SplitTable({ data }: SplitTableProps) {
+  return (
+    <div className="split-table-container">
+      {!data.hasPostSplitGames && (
+        <p className="split-note">Split fixtures not yet played — groups based on current standings.</p>
+      )}
+      <GroupTable rows={data.championship} title="Championship Group" />
+      <GroupTable rows={data.relegation} title="Relegation Group" />
     </div>
   );
 }

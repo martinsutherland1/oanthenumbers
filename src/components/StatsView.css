@@ -57,6 +57,23 @@
   color: var(--primary);
 }
 
+.stat-card-streak {
+  /* streak cards are narrower, single-row layout unchanged */
+}
+
+.stat-card-row {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.stat-row-period {
+  font-size: 0.65rem;
+  color: var(--text-secondary);
+  min-width: 36px;
+  flex-shrink: 0;
+}
+
 /* Tables grid */
 .stats-tables-grid {
   display: grid;
