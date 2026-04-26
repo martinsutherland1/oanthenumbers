@@ -7362,5 +7362,55 @@
       "home_touches_in_box": null, "away_touches_in_box": null, "home_shots_outside_box": null, "away_shots_outside_box": null,
       "home_fouls": null, "away_fouls": null, "home_corners": null, "away_corners": null
     }
+  ],
+  "2026-04-27": [
+    {
+      "date": "2026-04-27",
+      "home_team": "dundee utd",
+      "away_team": "dundee",
+      "home_goals": 3,
+      "away_goals": 0,
+      "home_shots": null, "away_shots": null, "home_shots_on_target": null, "away_shots_on_target": null,
+      "home_xG": null, "away_xG": null, "home_xg_open_play": null, "away_xg_open_play": null,
+      "home_xg_set_play": null, "away_xg_set_play": null,
+      "home_npxg": 2.18, "away_npxg": 0.85,
+      "home_xgot": null, "away_xgot": null, "home_possession": null, "away_possession": null,
+      "home_big_chances": null, "away_big_chances": null, "home_big_chances_missed": null, "away_big_chances_missed": null,
+      "home_accurate_passes": null, "away_accurate_passes": null, "home_passes_opp_half": null, "away_passes_opp_half": null,
+      "home_touches_in_box": null, "away_shots_outside_box": null, "home_shots_outside_box": null, "away_touches_in_box": null,
+      "home_fouls": null, "away_fouls": null, "home_corners": null, "away_corners": null
+    },
+    {
+      "date": "2026-04-27",
+      "home_team": "rangers",
+      "away_team": "motherwell",
+      "home_goals": 2,
+      "away_goals": 3,
+      "home_shots": null, "away_shots": null, "home_shots_on_target": null, "away_shots_on_target": null,
+      "home_xG": null, "away_xG": null, "home_xg_open_play": null, "away_xg_open_play": null,
+      "home_xg_set_play": null, "away_xg_set_play": null,
+      "home_npxg": 2.21, "away_npxg": 0.57,
+      "home_xgot": null, "away_xgot": null, "home_possession": null, "away_possession": null,
+      "home_big_chances": null, "away_big_chances": null, "home_big_chances_missed": null, "away_big_chances_missed": null,
+      "home_accurate_passes": null, "away_accurate_passes": null, "home_passes_opp_half": null, "away_passes_opp_half": null,
+      "home_touches_in_box": null, "away_shots_outside_box": null, "home_shots_outside_box": null, "away_touches_in_box": null,
+      "home_fouls": null, "away_fouls": null, "home_corners": null, "away_corners": null
+    },
+    {
+      "date": "2026-04-27",
+      "home_team": "hibernian",
+      "away_team": "hearts",
+      "home_goals": 1,
+      "away_goals": 2,
+      "home_shots": null, "away_shots": null, "home_shots_on_target": null, "away_shots_on_target": null,
+      "home_xG": null, "away_xG": null, "home_xg_open_play": null, "away_xg_open_play": null,
+      "home_xg_set_play": null, "away_xg_set_play": null,
+      "home_npxg": 0.52, "away_npxg": 1.83,
+      "home_xgot": null, "away_xgot": null, "home_possession": null, "away_possession": null,
+      "home_big_chances": null, "away_big_chances": null, "home_big_chances_missed": null, "away_big_chances_missed": null,
+      "home_accurate_passes": null, "away_accurate_passes": null, "home_passes_opp_half": null, "away_passes_opp_half": null,
+      "home_touches_in_box": null, "away_shots_outside_box": null, "home_shots_outside_box": null, "away_touches_in_box": null,
+      "home_fouls": null, "away_fouls": null, "home_corners": null, "away_corners": null
+    }
   ]
 }

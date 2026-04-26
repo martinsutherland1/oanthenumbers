@@ -44,20 +44,20 @@ function DualStatCard({ label, seasonTeam, seasonValue, recentTeam, recentValue 
     <div className="stat-card">
       <span className="stat-card-label">{label} <span className="stat-per-game">per game</span></span>
       <div className="stat-card-row">
-        <span className="stat-row-period">Season</span>
-        <div className="stat-card-team">
-          <span className="team-color-dot" style={{ backgroundColor: getTeamColor(seasonTeam) }} />
-          <span className="stat-card-name">{getTeamName(seasonTeam)}</span>
-        </div>
-        <span className="stat-card-value">{seasonValue}</span>
-      </div>
-      <div className="stat-card-row">
         <span className="stat-row-period">Last 6</span>
         <div className="stat-card-team">
           <span className="team-color-dot" style={{ backgroundColor: getTeamColor(recentTeam) }} />
           <span className="stat-card-name">{getTeamName(recentTeam)}</span>
         </div>
         <span className="stat-card-value">{recentValue}</span>
+      </div>
+      <div className="stat-card-row">
+        <span className="stat-row-period">Season</span>
+        <div className="stat-card-team">
+          <span className="team-color-dot" style={{ backgroundColor: getTeamColor(seasonTeam) }} />
+          <span className="stat-card-name">{getTeamName(seasonTeam)}</span>
+        </div>
+        <span className="stat-card-value">{seasonValue}</span>
       </div>
     </div>
   );
@@ -91,7 +91,7 @@ function DiffTable({ title, rows, valueKey }: {
                     {getTeamName(row.team)}
                   </div>
                 </td>
-                <td className={`stats-num stats-highlight ${val > 0 ? 'diff-positive' : val < 0 ? 'diff-negative' : ''}`}>
+                <td className={`stats-num ${val > 0 ? 'diff-positive' : val < 0 ? 'diff-negative' : ''}`}>
                   {val > 0 ? '+' : ''}{val.toFixed(2)}
                 </td>
               </tr>
