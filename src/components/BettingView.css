@@ -1,0 +1,102 @@
+.betting-view {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.betting-section {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 14px;
+}
+
+.betting-section h4 {
+  margin: 0 0 10px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.betting-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.82rem;
+}
+
+.betting-table th,
+.betting-table td {
+  padding: 7px 6px;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+}
+
+.betting-table th {
+  color: var(--text-secondary);
+  font-weight: 500;
+  border-bottom: 2px solid var(--border);
+  font-size: 0.75rem;
+  white-space: nowrap;
+  cursor: pointer;
+  user-select: none;
+}
+
+.betting-table th:hover {
+  color: var(--text);
+}
+
+.betting-table th.sort-active {
+  color: var(--primary);
+}
+
+.betting-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.betting-table tbody tr:hover {
+  background: var(--surface-hover);
+}
+
+.bet-rank-col { width: 28px; }
+.bet-val-col  { width: 72px; text-align: right; }
+
+.bet-rank {
+  color: var(--text-secondary);
+  font-size: 0.75rem;
+}
+
+.bet-team-cell {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: var(--text);
+}
+
+.bet-num {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.bet-num.sort-active {
+  font-weight: 600;
+  color: var(--primary);
+}
+
+.sort-arrow {
+  font-size: 0.7rem;
+}
+
+@media (max-width: 640px) {
+  .betting-table {
+    font-size: 0.75rem;
+  }
+
+  .bet-val-col {
+    width: 52px;
+  }
+
+  .betting-table th,
+  .betting-table td {
+    padding: 6px 4px;
+  }
+}

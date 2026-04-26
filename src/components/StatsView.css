@@ -57,9 +57,35 @@
   color: var(--primary);
 }
 
-.stat-card-streak {
-  /* streak cards are narrower, single-row layout unchanged */
+.streak-value-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
 }
+
+.streak-indicator {
+  font-size: 0.85rem;
+  line-height: 1;
+}
+
+.streak-active { color: #22c55e; }
+.streak-record { color: var(--primary); }
+
+.streak-key {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}
+
+.streak-key-sep {
+  display: inline-block;
+  width: 16px;
+}
+
+.diff-positive { color: #22c55e; }
+.diff-negative { color: #ef4444; }
 
 .stat-card-row {
   display: flex;
