@@ -285,6 +285,53 @@ export function getLeagueTable(fixtures: Fixture[]): LeagueTableRow[] {
   return rows;
 }
 
+// Mini-league: standings among a subset of selected teams
+export interface MiniLeagueRow {
+  position: number;
+  team: string;
+  played: number;
+  won: number;
+  drawn: number;
+  lost: number;
+  goalsFor: number;
+  goalsAgainst: number;
+  goalDiff: number;
+  points: number;
+}
+
+export function getMiniLeague(fixtures: Fixture[], teams: string[]): MiniLeagueRow[] {
+  const teamSet = new Set(teams);
+  const relevant = fixtures.filter(f => teamSet.has(f.home_team) && teamSet.has(f.away_team));
+  const stats = new Map<string, { won: number; drawn: number; lost: number; gf: number; ga: number }>();
+  teams.forEach(t => stats.set(t, { won: 0, drawn: 0, lost: 0, gf: 0, ga: 0 }));
+
+  relevant.forEach(f => {
+    const h = stats.get(f.home_team)!;
+    const a = stats.get(f.away_team)!;
+    h.gf += f.home_goals ?? 0; h.ga += f.away_goals ?? 0;
+    a.gf += f.away_goals ?? 0; a.ga += f.home_goals ?? 0;
+    if ((f.home_goals ?? 0) > (f.away_goals ?? 0)) { h.won++; a.lost++; }
+    else if (f.home_goals === f.away_goals)          { h.drawn++; a.drawn++; }
+    else                                              { h.lost++; a.won++; }
+  });
+
+  const rows = teams.map(team => {
+    const s = stats.get(team)!;
+    const played = s.won + s.drawn + s.lost;
+    return {
+      position: 0, team, played,
+      won: s.won, drawn: s.drawn, lost: s.lost,
+      goalsFor: s.gf, goalsAgainst: s.ga,
+      goalDiff: s.gf - s.ga,
+      points: s.won * 3 + s.drawn,
+    };
+  });
+
+  rows.sort((a, b) => b.points - a.points || b.goalDiff - a.goalDiff || b.goalsFor - a.goalsFor);
+  rows.forEach((r, i) => { r.position = i + 1; });
+  return rows;
+}
+
 // Partition fixtures into pre-split (first N games per team) and post-split
 export function partitionFixtures(fixtures: Fixture[], splitAt: number = 33): { pre: Fixture[]; post: Fixture[] } {
   const teams = extractTeams(fixtures);
@@ -385,60 +432,65 @@ export function getH2HData(fixtures: Fixture[], team: string): H2HRecord[] {
     .sort((a, b) => b.points - a.points || b.winPct - a.winPct);
 }
 
-// Streak record: consecutive games (most recent first) matching a condition
-export interface UnbeatenRun {
+// Streak record with active indicator
+export interface StreakRecord {
   team: string;
   games: number;
+  isActive: boolean;
 }
 
-export function getUnbeatenRuns(fixtures: Fixture[]): UnbeatenRun[] {
-  const teams = extractTeams(fixtures);
-  const runs: UnbeatenRun[] = [];
+// Keep UnbeatenRun as alias for backwards compat
+export type UnbeatenRun = StreakRecord;
 
-  teams.forEach(team => {
-    const sorted = fixtures
-      .filter(f => f.home_team === team || f.away_team === team)
-      .sort((a, b) => parseDate(b.date).getTime() - parseDate(a.date).getTime());
+function bestStreak(
+  fixtures: Fixture[],
+  team: string,
+  matches: (scored: number, conceded: number) => boolean
+): { games: number; isActive: boolean } {
+  const sorted = fixtures
+    .filter(f => f.home_team === team || f.away_team === team)
+    .sort((a, b) => parseDate(a.date).getTime() - parseDate(b.date).getTime());
 
-    let streak = 0;
-    for (const f of sorted) {
-      const isHome = f.home_team === team;
-      const scored = isHome ? f.home_goals : f.away_goals;
-      const conceded = isHome ? f.away_goals : f.home_goals;
-      if (scored < conceded) break;
-      streak++;
+  let maxStreak = 0;
+  let currentStreak = 0;
+  for (const f of sorted) {
+    const isHome = f.home_team === team;
+    const scored = (isHome ? f.home_goals : f.away_goals) ?? 0;
+    const conceded = (isHome ? f.away_goals : f.home_goals) ?? 0;
+    if (matches(scored, conceded)) {
+      currentStreak++;
+      if (currentStreak > maxStreak) maxStreak = currentStreak;
+    } else {
+      currentStreak = 0;
     }
-
-    if (streak > 0) runs.push({ team, games: streak });
-  });
-
-  return runs.sort((a, b) => b.games - a.games);
+  }
+  return { games: maxStreak, isActive: maxStreak > 0 && currentStreak === maxStreak };
 }
 
-// Games without a win: consecutive games (most recent first) with no win
-export function getGamesWithoutWin(fixtures: Fixture[]): UnbeatenRun[] {
-  const teams = extractTeams(fixtures);
-  const runs: UnbeatenRun[] = [];
-
-  teams.forEach(team => {
-    const sorted = fixtures
-      .filter(f => f.home_team === team || f.away_team === team)
-      .sort((a, b) => parseDate(b.date).getTime() - parseDate(a.date).getTime());
-
-    let streak = 0;
-    for (const f of sorted) {
-      const isHome = f.home_team === team;
-      const scored = isHome ? f.home_goals : f.away_goals;
-      const conceded = isHome ? f.away_goals : f.home_goals;
-      if (scored > conceded) break;
-      streak++;
-    }
-
-    if (streak > 0) runs.push({ team, games: streak });
-  });
-
-  return runs.sort((a, b) => b.games - a.games);
+export function getBestWinStreaks(fixtures: Fixture[]): StreakRecord[] {
+  return extractTeams(fixtures)
+    .map(team => ({ team, ...bestStreak(fixtures, team, (s, c) => s > c) }))
+    .filter(r => r.games > 1)
+    .sort((a, b) => b.games - a.games);
 }
+
+export function getBestUnbeatenStreaks(fixtures: Fixture[]): StreakRecord[] {
+  return extractTeams(fixtures)
+    .map(team => ({ team, ...bestStreak(fixtures, team, (s, c) => s >= c) }))
+    .filter(r => r.games > 1)
+    .sort((a, b) => b.games - a.games);
+}
+
+export function getBestWinlessStreaks(fixtures: Fixture[]): StreakRecord[] {
+  return extractTeams(fixtures)
+    .map(team => ({ team, ...bestStreak(fixtures, team, (s, c) => s <= c) }))
+    .filter(r => r.games > 1)
+    .sort((a, b) => b.games - a.games);
+}
+
+// Keep old names for any existing references
+export const getUnbeatenRuns = getBestUnbeatenStreaks;
+export const getGamesWithoutWin = getBestWinlessStreaks;
 
 // Season-wide stats per team for the Stats tab
 export interface TeamSeasonStats {
@@ -452,6 +504,8 @@ export interface TeamSeasonStats {
   goalsAgainstPerGame: number;
   xgPerGame: number;
   xgAgainstPerGame: number;
+  goalDiffPerGame: number;
+  xgDiffPerGame: number;
 }
 
 export function getTeamSeasonStats(fixtures: Fixture[]): TeamSeasonStats[] {
@@ -473,6 +527,10 @@ export function getTeamSeasonStats(fixtures: Fixture[]): TeamSeasonStats[] {
   const r2 = (n: number) => Math.round(n * 100) / 100;
   return teams.map(team => {
     const s = statsMap.get(team)!;
+    const gpg = r2(s.played > 0 ? s.goals / s.played : 0);
+    const gapg = r2(s.played > 0 ? s.ga / s.played : 0);
+    const xgpg = r2(s.played > 0 ? s.xg / s.played : 0);
+    const xgapg = r2(s.played > 0 ? s.xga / s.played : 0);
     return {
       team,
       gamesPlayed: s.played,
@@ -480,10 +538,12 @@ export function getTeamSeasonStats(fixtures: Fixture[]): TeamSeasonStats[] {
       totalGoalsAgainst: s.ga,
       totalXg: r2(s.xg),
       totalXgAgainst: r2(s.xga),
-      goalsPerGame: r2(s.played > 0 ? s.goals / s.played : 0),
-      goalsAgainstPerGame: r2(s.played > 0 ? s.ga / s.played : 0),
-      xgPerGame: r2(s.played > 0 ? s.xg / s.played : 0),
-      xgAgainstPerGame: r2(s.played > 0 ? s.xga / s.played : 0),
+      goalsPerGame: gpg,
+      goalsAgainstPerGame: gapg,
+      xgPerGame: xgpg,
+      xgAgainstPerGame: xgapg,
+      goalDiffPerGame: r2(gpg - gapg),
+      xgDiffPerGame: r2(xgpg - xgapg),
     };
   });
 }
@@ -506,14 +566,95 @@ export function getTeamRecentSeasonStats(fixtures: Fixture[], recentN: number = 
       xga   += isHome ? (f.away_npxg ?? 0)  : (f.home_npxg ?? 0);
     });
     const played = recent.length;
+    const gpg  = r2(played > 0 ? goals / played : 0);
+    const gapg = r2(played > 0 ? ga / played : 0);
+    const xgpg  = r2(played > 0 ? xg / played : 0);
+    const xgapg = r2(played > 0 ? xga / played : 0);
     return {
       team, gamesPlayed: played,
       totalGoals: goals, totalGoalsAgainst: ga,
       totalXg: r2(xg), totalXgAgainst: r2(xga),
-      goalsPerGame:        r2(played > 0 ? goals / played : 0),
-      goalsAgainstPerGame: r2(played > 0 ? ga / played : 0),
-      xgPerGame:           r2(played > 0 ? xg / played : 0),
-      xgAgainstPerGame:    r2(played > 0 ? xga / played : 0),
+      goalsPerGame: gpg, goalsAgainstPerGame: gapg,
+      xgPerGame: xgpg, xgAgainstPerGame: xgapg,
+      goalDiffPerGame: r2(gpg - gapg),
+      xgDiffPerGame: r2(xgpg - xgapg),
+    };
+  });
+}
+
+// Betting stats per team
+export interface TeamBettingStats {
+  team: string;
+  played: number;
+  btts: number;
+  over15: number;
+  over25: number;
+  over35: number;
+  over45: number;
+  winBy1: number;
+  winBy2Plus: number;
+  scoreDraw: number;
+  bttsWin: number;
+  cleanSheet: number;
+  failedToScore: number;
+  winToNil: number;
+}
+
+export function getBettingStats(fixtures: Fixture[]): TeamBettingStats[] {
+  const teams = extractTeams(fixtures);
+  const stats = new Map<string, Omit<TeamBettingStats, 'team'>>();
+  teams.forEach(t => stats.set(t, {
+    played: 0, btts: 0, over15: 0, over25: 0, over35: 0, over45: 0,
+    winBy1: 0, winBy2Plus: 0, scoreDraw: 0, bttsWin: 0,
+    cleanSheet: 0, failedToScore: 0, winToNil: 0,
+  }));
+
+  fixtures.forEach(f => {
+    const hg = f.home_goals ?? 0;
+    const ag = f.away_goals ?? 0;
+    const total = hg + ag;
+    const bothScored = hg > 0 && ag > 0;
+
+    [
+      { team: f.home_team, scored: hg, conceded: ag },
+      { team: f.away_team, scored: ag, conceded: hg },
+    ].forEach(({ team, scored, conceded }) => {
+      const s = stats.get(team)!;
+      s.played++;
+      if (bothScored) s.btts++;
+      if (total > 1) s.over15++;
+      if (total > 2) s.over25++;
+      if (total > 3) s.over35++;
+      if (total > 4) s.over45++;
+      const diff = scored - conceded;
+      if (diff === 1) s.winBy1++;
+      if (diff >= 2) s.winBy2Plus++;
+      if (scored > 0 && conceded > 0 && scored === conceded) s.scoreDraw++;
+      if (bothScored && scored > conceded) s.bttsWin++;
+      if (conceded === 0) s.cleanSheet++;
+      if (scored === 0) s.failedToScore++;
+      if (scored > conceded && conceded === 0) s.winToNil++;
+    });
+  });
+
+  const pct = (n: number, d: number) => d > 0 ? Math.round((n / d) * 100) : 0;
+  return teams.map(team => {
+    const s = stats.get(team)!;
+    return {
+      team,
+      played: s.played,
+      btts: pct(s.btts, s.played),
+      over15: pct(s.over15, s.played),
+      over25: pct(s.over25, s.played),
+      over35: pct(s.over35, s.played),
+      over45: pct(s.over45, s.played),
+      winBy1: pct(s.winBy1, s.played),
+      winBy2Plus: pct(s.winBy2Plus, s.played),
+      scoreDraw: pct(s.scoreDraw, s.played),
+      bttsWin: pct(s.bttsWin, s.played),
+      cleanSheet: pct(s.cleanSheet, s.played),
+      failedToScore: pct(s.failedToScore, s.played),
+      winToNil: pct(s.winToNil, s.played),
     };
   });
 }

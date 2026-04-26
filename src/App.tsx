@@ -4,9 +4,11 @@ import { XgChart } from './components/XgChart';
 import { XgLineChart } from './components/XgLineChart';
 import { StatsTable } from './components/StatsTable';
 import { H2HTable } from './components/H2HTable';
+import { H2HMiniLeague } from './components/H2HMiniLeague';
 import { LeagueTable } from './components/LeagueTable';
 import { SplitTable } from './components/SplitTable';
 import { StatsView } from './components/StatsView';
+import { BettingView } from './components/BettingView';
 import { ChartToggle } from './components/ChartToggle';
 import { MetricToggle } from './components/MetricToggle';
 import type { ChartType } from './components/ChartToggle';
@@ -18,13 +20,16 @@ import {
   calculateLeagueAverage,
   getLineChartData,
   getH2HData,
+  getMiniLeague,
   getLeagueTable,
-  getUnbeatenRuns,
-  getGamesWithoutWin,
+  getBestWinStreaks,
+  getBestUnbeatenStreaks,
+  getBestWinlessStreaks,
   getTeamSeasonStats,
   getTeamRecentSeasonStats,
   partitionFixtures,
   getSplitTable,
+  getBettingStats,
   flattenFixtures
 } from './utils/dataProcessing';
 import { TOP_6, BOTTOM_6 } from './utils/teamColors';
@@ -32,7 +37,7 @@ import fixturesData from './data/fixtures.json';
 import type { FixturesData } from './types';
 import './App.css';
 
-type ViewMode = 'overview' | 'table' | 'h2h' | 'stats';
+type ViewMode = 'overview' | 'table' | 'h2h' | 'stats' | 'betting';
 
 const fixtures = flattenFixtures(fixturesData as FixturesData);
 
@@ -51,9 +56,11 @@ function App() {
   const leagueTableData  = useMemo(() => getLeagueTable(preSplitFixtures), []);
   const splitData        = useMemo(() => getSplitTable(fixtures), []);
   const recentSeasonStats = useMemo(() => getTeamRecentSeasonStats(fixtures), []);
-  const unbeatenRuns = useMemo(() => getUnbeatenRuns(fixtures), []);
-  const gamesWithoutWin = useMemo(() => getGamesWithoutWin(fixtures), []);
+  const unbeatenRuns    = useMemo(() => getBestUnbeatenStreaks(fixtures), []);
+  const gamesWithoutWin = useMemo(() => getBestWinlessStreaks(fixtures), []);
+  const winStreaks       = useMemo(() => getBestWinStreaks(fixtures), []);
   const seasonStats = useMemo(() => getTeamSeasonStats(fixtures), []);
+  const bettingStats = useMemo(() => getBettingStats(fixtures), []);
   const lineChartData = useMemo(
     () => getLineChartData(fixtures, selectedTeams, 10, metricType),
     [selectedTeams, metricType]
@@ -120,6 +127,12 @@ function App() {
           >
             Stats
           </button>
+          <button
+            className={`view-tab ${viewMode === 'betting' ? 'active' : ''}`}
+            onClick={() => setViewMode('betting')}
+          >
+            Betting
+          </button>
         </div>
 
         {(viewMode === 'overview' || viewMode === 'h2h') && (
@@ -175,20 +188,32 @@ function App() {
           <>
             {selectedTeams.length === 0 ? (
               <div className="h2h-empty">Select a team above to view their head-to-head record.</div>
+            ) : selectedTeams.length === 1 ? (
+              <H2HTable
+                team={selectedTeams[0]}
+                data={getH2HData(fixtures, selectedTeams[0])}
+              />
             ) : (
-              selectedTeams.map(team => (
-                <H2HTable
-                  key={team}
-                  team={team}
-                  data={getH2HData(fixtures, team)}
-                />
-              ))
+              <>
+                <H2HMiniLeague rows={getMiniLeague(fixtures, selectedTeams)} />
+                {selectedTeams.map(team => (
+                  <H2HTable
+                    key={team}
+                    team={team}
+                    data={getH2HData(fixtures, team)}
+                  />
+                ))}
+              </>
             )}
           </>
         )}
 
         {viewMode === 'stats' && (
-          <StatsView stats={seasonStats} recentStats={recentSeasonStats} unbeatenRuns={unbeatenRuns} gamesWithoutWin={gamesWithoutWin} />
+          <StatsView stats={seasonStats} recentStats={recentSeasonStats} unbeatenRuns={unbeatenRuns} gamesWithoutWin={gamesWithoutWin} winStreaks={winStreaks} />
+        )}
+
+        {viewMode === 'betting' && (
+          <BettingView data={bettingStats} />
         )}
       </main>
 
