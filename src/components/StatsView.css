@@ -84,13 +84,21 @@
   width: 16px;
 }
 
-.diff-positive { color: #22c55e; }
-.diff-negative { color: #ef4444; }
+.diff-positive { color: #22c55e; font-weight: 600; }
+.diff-negative { color: #ef4444; font-weight: 600; }
 
 .stat-card-row {
   display: flex;
   align-items: center;
   gap: 5px;
+}
+
+.stat-card-row .stat-card-team {
+  flex: 1;
+}
+
+.stat-card-row .stat-card-value {
+  flex-shrink: 0;
 }
 
 .stat-row-period {
