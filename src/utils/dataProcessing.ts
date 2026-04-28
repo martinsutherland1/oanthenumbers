@@ -500,28 +500,34 @@ export interface TeamSeasonStats {
   totalGoalsAgainst: number;
   totalXg: number;
   totalXgAgainst: number;
+  totalPoints: number;
   goalsPerGame: number;
   goalsAgainstPerGame: number;
   xgPerGame: number;
   xgAgainstPerGame: number;
   goalDiffPerGame: number;
   xgDiffPerGame: number;
+  pointsPerGame: number;
 }
 
 export function getTeamSeasonStats(fixtures: Fixture[]): TeamSeasonStats[] {
   const teams = extractTeams(fixtures);
-  const statsMap = new Map<string, { goals: number; ga: number; xg: number; xga: number; played: number }>();
-  teams.forEach(t => statsMap.set(t, { goals: 0, ga: 0, xg: 0, xga: 0, played: 0 }));
+  const statsMap = new Map<string, { goals: number; ga: number; xg: number; xga: number; played: number; pts: number }>();
+  teams.forEach(t => statsMap.set(t, { goals: 0, ga: 0, xg: 0, xga: 0, played: 0, pts: 0 }));
 
   fixtures.forEach(f => {
     const h = statsMap.get(f.home_team)!;
     const a = statsMap.get(f.away_team)!;
-    h.goals += f.home_goals ?? 0; h.ga += f.away_goals ?? 0;
-    h.xg += f.home_npxg ?? 0;   h.xga += f.away_npxg ?? 0;
+    const hg = f.home_goals ?? 0, ag = f.away_goals ?? 0;
+    h.goals += hg; h.ga += ag;
+    h.xg += f.home_npxg ?? 0; h.xga += f.away_npxg ?? 0;
     h.played++;
-    a.goals += f.away_goals ?? 0; a.ga += f.home_goals ?? 0;
-    a.xg += f.away_npxg ?? 0;    a.xga += f.home_npxg ?? 0;
+    a.goals += ag; a.ga += hg;
+    a.xg += f.away_npxg ?? 0; a.xga += f.home_npxg ?? 0;
     a.played++;
+    if (hg > ag)       { h.pts += 3; }
+    else if (hg === ag) { h.pts += 1; a.pts += 1; }
+    else               { a.pts += 3; }
   });
 
   const r2 = (n: number) => Math.round(n * 100) / 100;
@@ -538,12 +544,14 @@ export function getTeamSeasonStats(fixtures: Fixture[]): TeamSeasonStats[] {
       totalGoalsAgainst: s.ga,
       totalXg: r2(s.xg),
       totalXgAgainst: r2(s.xga),
+      totalPoints: s.pts,
       goalsPerGame: gpg,
       goalsAgainstPerGame: gapg,
       xgPerGame: xgpg,
       xgAgainstPerGame: xgapg,
       goalDiffPerGame: r2(gpg - gapg),
       xgDiffPerGame: r2(xgpg - xgapg),
+      pointsPerGame: r2(s.played > 0 ? s.pts / s.played : 0),
     };
   });
 }
@@ -557,13 +565,16 @@ export function getTeamRecentSeasonStats(fixtures: Fixture[], recentN: number = 
       .filter(f => f.home_team === team || f.away_team === team)
       .sort((a, b) => parseDate(b.date).getTime() - parseDate(a.date).getTime())
       .slice(0, recentN);
-    let goals = 0, ga = 0, xg = 0, xga = 0;
+    let goals = 0, ga = 0, xg = 0, xga = 0, pts = 0;
     recent.forEach(f => {
       const isHome = f.home_team === team;
-      goals += isHome ? (f.home_goals ?? 0) : (f.away_goals ?? 0);
-      ga    += isHome ? (f.away_goals ?? 0) : (f.home_goals ?? 0);
-      xg    += isHome ? (f.home_npxg ?? 0)  : (f.away_npxg ?? 0);
-      xga   += isHome ? (f.away_npxg ?? 0)  : (f.home_npxg ?? 0);
+      const scored   = isHome ? (f.home_goals ?? 0) : (f.away_goals ?? 0);
+      const conceded = isHome ? (f.away_goals ?? 0) : (f.home_goals ?? 0);
+      goals += scored; ga += conceded;
+      xg  += isHome ? (f.home_npxg ?? 0) : (f.away_npxg ?? 0);
+      xga += isHome ? (f.away_npxg ?? 0) : (f.home_npxg ?? 0);
+      if (scored > conceded) pts += 3;
+      else if (scored === conceded) pts += 1;
     });
     const played = recent.length;
     const gpg  = r2(played > 0 ? goals / played : 0);
@@ -574,10 +585,12 @@ export function getTeamRecentSeasonStats(fixtures: Fixture[], recentN: number = 
       team, gamesPlayed: played,
       totalGoals: goals, totalGoalsAgainst: ga,
       totalXg: r2(xg), totalXgAgainst: r2(xga),
+      totalPoints: pts,
       goalsPerGame: gpg, goalsAgainstPerGame: gapg,
       xgPerGame: xgpg, xgAgainstPerGame: xgapg,
       goalDiffPerGame: r2(gpg - gapg),
       xgDiffPerGame: r2(xgpg - xgapg),
+      pointsPerGame: r2(played > 0 ? pts / played : 0),
     };
   });
 }

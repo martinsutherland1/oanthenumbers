@@ -36,9 +36,12 @@
   font-weight: 500;
   border-bottom: 2px solid var(--border);
   font-size: 0.75rem;
-  white-space: nowrap;
+  white-space: normal;
+  word-break: break-word;
   cursor: pointer;
   user-select: none;
+  vertical-align: bottom;
+  line-height: 1.2;
 }
 
 .betting-table th:hover {
@@ -57,8 +60,8 @@
   background: var(--surface-hover);
 }
 
-.bet-rank-col { width: 28px; }
-.bet-val-col  { width: 72px; text-align: right; }
+.bet-rank-col { width: 24px; }
+.bet-val-col  { width: 52px; text-align: right; }
 
 .bet-rank {
   color: var(--text-secondary);
