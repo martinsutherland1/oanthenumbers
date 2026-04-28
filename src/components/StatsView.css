@@ -43,12 +43,16 @@
   display: flex;
   align-items: center;
   gap: 6px;
+  min-width: 0;
 }
 
 .stat-card-name {
   font-size: 0.875rem;
   font-weight: 600;
   color: var(--text);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .stat-card-value {
@@ -142,6 +146,11 @@
   width: 100%;
   border-collapse: collapse;
   font-size: 0.82rem;
+  table-layout: fixed;
+}
+
+.xgvg-section .stats-table {
+  font-size: 0.78rem;
 }
 
 .stats-table th,
@@ -197,6 +206,80 @@
   height: 8px;
   border-radius: 50%;
   flex-shrink: 0;
+}
+
+.streak-inline {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex-shrink: 0;
+}
+
+.streak-inline .stat-card-value {
+  font-size: 0.95rem;
+}
+
+/* All Stats tables */
+.allstats-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.allstats-mode-toggle {
+  display: flex;
+  gap: 4px;
+}
+
+.allstats-toggle-btn {
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 3px 10px;
+  font-size: 0.72rem;
+  color: var(--text-secondary);
+  cursor: pointer;
+}
+
+.allstats-toggle-btn.active {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: #000;
+  font-weight: 600;
+}
+
+.allstats-val-col {
+  width: 62px;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.xgvg-section .stats-table th,
+.xgvg-section .stats-table td {
+  padding: 6px 5px;
+}
+
+.xgvg-group-header {
+  text-align: center;
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  border-bottom: 1px solid var(--border) !important;
+  padding-bottom: 3px !important;
+}
+
+.xgvg-sortable {
+  cursor: pointer;
+  user-select: none;
+}
+
+.xgvg-sortable:hover {
+  color: var(--text);
+}
+
+.xgvg-active {
+  color: var(--primary) !important;
+  font-weight: 600;
 }
 
 @media (max-width: 640px) {
