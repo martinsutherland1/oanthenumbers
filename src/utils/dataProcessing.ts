@@ -64,8 +64,8 @@ export function getTeamGames(fixtures: Fixture[], team: string, metric: MetricTy
     let awayDiff: number;
 
     if (metric === 'goals') {
-      homeDiff = fixture.home_goals - fixture.away_goals;
-      awayDiff = fixture.away_goals - fixture.home_goals;
+      homeDiff = (fixture.home_goals ?? 0) - (fixture.away_goals ?? 0);
+      awayDiff = (fixture.away_goals ?? 0) - (fixture.home_goals ?? 0);
     } else if (metric === 'points') {
       const hg = fixture.home_goals ?? 0;
       const ag = fixture.away_goals ?? 0;
@@ -240,8 +240,8 @@ export function getTeamForm(fixtures: Fixture[], team: string, count: number = 5
     .reverse()
     .map(f => {
       const isHome = f.home_team === team;
-      const scored = isHome ? f.home_goals : f.away_goals;
-      const conceded = isHome ? f.away_goals : f.home_goals;
+      const scored = (isHome ? f.home_goals : f.away_goals) ?? 0;
+      const conceded = (isHome ? f.away_goals : f.home_goals) ?? 0;
       return scored > conceded ? 'W' : scored === conceded ? 'D' : 'L';
     });
 }
@@ -253,13 +253,15 @@ export function getLeagueTable(fixtures: Fixture[]): LeagueTableRow[] {
   teams.forEach(t => stats.set(t, { won: 0, drawn: 0, lost: 0, gf: 0, ga: 0 }));
 
   fixtures.forEach(f => {
+    const hg = f.home_goals ?? 0;
+    const ag = f.away_goals ?? 0;
     const h = stats.get(f.home_team)!;
     const a = stats.get(f.away_team)!;
-    h.gf += f.home_goals; h.ga += f.away_goals;
-    a.gf += f.away_goals; a.ga += f.home_goals;
-    if (f.home_goals > f.away_goals)      { h.won++; a.lost++; }
-    else if (f.home_goals === f.away_goals) { h.drawn++; a.drawn++; }
-    else                                    { h.lost++; a.won++; }
+    h.gf += hg; h.ga += ag;
+    a.gf += ag; a.ga += hg;
+    if (hg > ag)        { h.won++; a.lost++; }
+    else if (hg === ag)  { h.drawn++; a.drawn++; }
+    else                 { h.lost++; a.won++; }
   });
 
   const rows = teams.map(team => {

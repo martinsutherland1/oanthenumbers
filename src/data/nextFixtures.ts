@@ -16,7 +16,7 @@ export const NEXT_OPPONENT: Record<string, string> = {
 
 // Ordered fixture pairs [home, away] — update each gameweek
 export const NEXT_FIXTURES: [string, string][] = [
-  ['celtic', 'falkirk'],
+  ['Motherwell', 'falkirk'],
   ['aberdeen', 'kilmarnock'],
   ['st-mirren', 'livingston'],
   ['rangers', 'motherwell'],
