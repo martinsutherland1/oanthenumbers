@@ -1,25 +1,25 @@
 // Next opponent for each team — update each gameweek
 export const NEXT_OPPONENT: Record<string, string> = {
-  'celtic': 'falkirk',
-  'falkirk': 'celtic',
-  'aberdeen': 'kilmarnock',
-  'kilmarnock': 'aberdeen',
-  'st-mirren': 'livingston',
-  'livingston': 'st-mirren',
-  'rangers': 'motherwell',
-  'motherwell': 'rangers',
-  'hibernian': 'hearts',
-  'hearts': 'hibernian',
-  'dundee-united': 'dundee-fc',
-  'dundee-fc': 'dundee-united',
+  'celtic': 'rangers',
+  'falkirk': 'st-johnstone',
+  'aberdeen': 'hibernian',
+  'kilmarnock': 'heart-midlothian',
+  'st-mirren': 'dundee-united',
+  'st-johnstone': 'falkirk',
+  'rangers': 'celtic',
+  'motherwell': 'dundee-fc',
+  'hibernian': 'aberdeen',
+  'heart-midlothian': 'kilmarnock',
+  'dundee-united': 'st-mirren',
+  'dundee-fc': 'motherwell',
 };
 
 // Ordered fixture pairs [home, away] — update each gameweek
 export const NEXT_FIXTURES: [string, string][] = [
-  ['celtic', 'falkirk'],
-  ['aberdeen', 'kilmarnock'],
-  ['st-mirren', 'livingston'],
-  ['rangers', 'motherwell'],
-  ['hibernian', 'hearts'],
-  ['dundee-united', 'dundee-fc'],
+  ['dundee-fc', 'motherwell'],
+  ['hibernian', 'aberdeen'],
+  ['st-johnstone', 'falkirk'],
+  ['st-mirren', 'dundee-united'],
+  ['kilmarnock', 'heart-midlothian'],
+  ['celtic', 'rangers'],
 ];
