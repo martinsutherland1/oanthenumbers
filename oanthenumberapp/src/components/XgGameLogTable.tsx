@@ -12,10 +12,13 @@ interface XgGameLogTableProps {
 const fmt = (n: number) => n.toFixed(2);
 const diffClass = (n: number) => (n > 0 ? 'xg-log-positive' : n < 0 ? 'xg-log-negative' : '');
 
+// The log only offers the headline metrics; the other xG types stay available elsewhere
+const LOG_METRICS = XG_TYPES.filter(m => m.key === 'xg' || m.key === 'npxg');
+
 export function XgGameLogTable({ fixtures, team }: XgGameLogTableProps) {
   const [metric, setMetric] = useState<XgType>('npxg');
   const games = useMemo(() => getTeamXgGameLog(fixtures, team, metric), [fixtures, team, metric]);
-  const { label, description } = XG_TYPES.find(m => m.key === metric)!;
+  const { description } = LOG_METRICS.find(m => m.key === metric)!;
 
   const count = games.length;
   const avgFor = count ? games.reduce((sum, g) => sum + g.valueFor, 0) / count : 0;
@@ -25,9 +28,9 @@ export function XgGameLogTable({ fixtures, team }: XgGameLogTableProps) {
   return (
     <div className="xg-log-container">
       <div className="xg-log-header">
-        <h3>{label} Game Log <span className="xg-log-subtitle">{description}, all games played</span></h3>
+        <h3>xG Log <span className="xg-log-subtitle">{description}</span></h3>
         <div className="xg-log-toggle" role="group" aria-label="xG metric">
-          {XG_TYPES.map(m => (
+          {LOG_METRICS.map(m => (
             <button
               key={m.key}
               className={`xg-log-btn ${metric === m.key ? 'active' : ''}`}
@@ -45,8 +48,7 @@ export function XgGameLogTable({ fixtures, team }: XgGameLogTableProps) {
             <tr>
               <th>Date</th>
               <th>Opponent</th>
-              <th className="xg-log-num">{label} For</th>
-              <th className="xg-log-num">{label} Against</th>
+              <th className="xg-log-num">For – Ag</th>
               <th className="xg-log-num">Diff</th>
             </tr>
           </thead>
@@ -58,8 +60,7 @@ export function XgGameLogTable({ fixtures, team }: XgGameLogTableProps) {
                   <span className="xg-log-venue">{g.isHome ? 'H' : 'A'}</span>
                   {getTeamName(g.opponent)}
                 </td>
-                <td className="xg-log-num">{fmt(g.valueFor)}</td>
-                <td className="xg-log-num">{fmt(g.valueAgainst)}</td>
+                <td className="xg-log-num">{fmt(g.valueFor)} – {fmt(g.valueAgainst)}</td>
                 <td className={`xg-log-num ${diffClass(g.diff)}`}>
                   {g.diff > 0 ? '+' : ''}{fmt(g.diff)}
                 </td>
@@ -69,8 +70,7 @@ export function XgGameLogTable({ fixtures, team }: XgGameLogTableProps) {
           <tfoot>
             <tr>
               <td colSpan={2}>Average</td>
-              <td className="xg-log-num">{fmt(avgFor)}</td>
-              <td className="xg-log-num">{fmt(avgAgainst)}</td>
+              <td className="xg-log-num">{fmt(avgFor)} – {fmt(avgAgainst)}</td>
               <td className={`xg-log-num ${diffClass(avgDiff)}`}>
                 {avgDiff > 0 ? '+' : ''}{fmt(avgDiff)}
               </td>
