@@ -20,6 +20,7 @@ import spflLastSeasonFixturesData from './data/spfl_results_2025_26.json';
 import spflTwoSeasonsAgoFixturesData from './data/spfl_results_2024_25.json';
 import eplFixturesData from './data/epl_results_2026_27.json';
 import eplLastSeasonFixturesData from './data/epl_results_2025_26.json';
+import dataUpdate from './data/data_update.json';
 import type { Fixture, FixturesData } from './types';
 import logo from './assets/logo-header.png';
 import './App.css';
@@ -75,6 +76,15 @@ const LEAGUE_CONFIG: Record<League, LeagueConfig> = {
 };
 
 const LEAGUE_ORDER: League[] = ['spfl', 'epl'];
+
+const lastUpdated = new Date(dataUpdate.updateTime).toLocaleString('en-GB', {
+  timeZone: 'Europe/London',
+  day: 'numeric',
+  month: 'short',
+  year: 'numeric',
+  hour: '2-digit',
+  minute: '2-digit',
+});
 
 function getSeasonLabel(fixtures: Fixture[]): string {
   if (fixtures.length === 0) return '';
@@ -264,6 +274,7 @@ function App() {
 
       <footer className="app-footer">
         <p className="footer-source">Data sourced from <a href="https://www.fotmob.com" target="_blank" rel="noreferrer">fotmob.com</a></p>
+        <p className="footer-updated">Last updated {lastUpdated}</p>
         <p className="footer-credit">Created by <a href="https://x.com/oanthenumbers" target="_blank" rel="noreferrer">@oanthenumbers</a></p>
       </footer>
     </div>
