@@ -1,0 +1,17 @@
+.team-overview {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.metric-trend-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+@media (max-width: 640px) {
+  .metric-trend-grid {
+    grid-template-columns: 1fr;
+  }
+}

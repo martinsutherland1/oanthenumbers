@@ -1,0 +1,1906 @@
+{
+  "fixtures_0": [
+    {
+      "team_home": "benfica",
+      "team_away": "estrela",
+      "date": "2025-08-08",
+      "time": "20:00"
+    },
+    {
+      "team_home": "porto",
+      "team_away": "farense",
+      "date": "2025-08-09",
+      "time": "12:30"
+    },
+    {
+      "team_home": "sporting-cp",
+      "team_away": "estoril",
+      "date": "2025-08-09",
+      "time": "15:00"
+    },
+    {
+      "team_home": "braga",
+      "team_away": "chaves",
+      "date": "2025-08-09",
+      "time": "15:00"
+    },
+    {
+      "team_home": "guimaraes",
+      "team_away": "portimonense",
+      "date": "2025-08-10",
+      "time": "14:00"
+    },
+    {
+      "team_home": "boavista",
+      "team_away": "vizela",
+      "date": "2025-08-10",
+      "time": "14:00"
+    },
+    {
+      "team_home": "moreirense",
+      "team_away": "casa-pia",
+      "date": "2025-08-10",
+      "time": "16:30"
+    },
+    {
+      "team_home": "famalicao",
+      "team_away": "arouca",
+      "date": "2025-08-10",
+      "time": "19:00"
+    },
+    {
+      "team_home": "gil-vicente",
+      "team_away": "rio-ave",
+      "date": "2025-08-11",
+      "time": "20:00"
+    }
+  ],
+  "fixtures_1": [
+    {
+      "team_home": "benfica",
+      "team_away": "farense",
+      "date": "2025-08-15",
+      "time": "20:00"
+    },
+    {
+      "team_home": "estrela",
+      "team_away": "estoril",
+      "date": "2025-08-16",
+      "time": "12:30"
+    },
+    {
+      "team_home": "porto",
+      "team_away": "chaves",
+      "date": "2025-08-16",
+      "time": "15:00"
+    },
+    {
+      "team_home": "sporting-cp",
+      "team_away": "portimonense",
+      "date": "2025-08-16",
+      "time": "15:00"
+    },
+    {
+      "team_home": "braga",
+      "team_away": "vizela",
+      "date": "2025-08-17",
+      "time": "14:00"
+    },
+    {
+      "team_home": "guimaraes",
+      "team_away": "casa-pia",
+      "date": "2025-08-17",
+      "time": "14:00"
+    },
+    {
+      "team_home": "boavista",
+      "team_away": "arouca",
+      "date": "2025-08-17",
+      "time": "16:30"
+    },
+    {
+      "team_home": "moreirense",
+      "team_away": "rio-ave",
+      "date": "2025-08-17",
+      "time": "19:00"
+    },
+    {
+      "team_home": "famalicao",
+      "team_away": "gil-vicente",
+      "date": "2025-08-18",
+      "time": "20:00"
+    }
+  ],
+  "fixtures_2": [
+    {
+      "team_home": "benfica",
+      "team_away": "estoril",
+      "date": "2025-08-22",
+      "time": "20:00"
+    },
+    {
+      "team_home": "farense",
+      "team_away": "chaves",
+      "date": "2025-08-23",
+      "time": "12:30"
+    },
+    {
+      "team_home": "estrela",
+      "team_away": "portimonense",
+      "date": "2025-08-23",
+      "time": "15:00"
+    },
+    {
+      "team_home": "porto",
+      "team_away": "vizela",
+      "date": "2025-08-23",
+      "time": "15:00"
+    },
+    {
+      "team_home": "sporting-cp",
+      "team_away": "casa-pia",
+      "date": "2025-08-24",
+      "time": "14:00"
+    },
+    {
+      "team_home": "braga",
+      "team_away": "arouca",
+      "date": "2025-08-24",
+      "time": "14:00"
+    },
+    {
+      "team_home": "guimaraes",
+      "team_away": "rio-ave",
+      "date": "2025-08-24",
+      "time": "16:30"
+    },
+    {
+      "team_home": "boavista",
+      "team_away": "gil-vicente",
+      "date": "2025-08-24",
+      "time": "19:00"
+    },
+    {
+      "team_home": "moreirense",
+      "team_away": "famalicao",
+      "date": "2025-08-25",
+      "time": "20:00"
+    }
+  ],
+  "fixtures_3": [
+    {
+      "team_home": "benfica",
+      "team_away": "chaves",
+      "date": "2025-08-29",
+      "time": "20:00"
+    },
+    {
+      "team_home": "estoril",
+      "team_away": "portimonense",
+      "date": "2025-08-30",
+      "time": "12:30"
+    },
+    {
+      "team_home": "farense",
+      "team_away": "vizela",
+      "date": "2025-08-30",
+      "time": "15:00"
+    },
+    {
+      "team_home": "estrela",
+      "team_away": "casa-pia",
+      "date": "2025-08-30",
+      "time": "15:00"
+    },
+    {
+      "team_home": "porto",
+      "team_away": "arouca",
+      "date": "2025-08-31",
+      "time": "14:00"
+    },
+    {
+      "team_home": "sporting-cp",
+      "team_away": "rio-ave",
+      "date": "2025-08-31",
+      "time": "14:00"
+    },
+    {
+      "team_home": "braga",
+      "team_away": "gil-vicente",
+      "date": "2025-08-31",
+      "time": "16:30"
+    },
+    {
+      "team_home": "guimaraes",
+      "team_away": "famalicao",
+      "date": "2025-08-31",
+      "time": "19:00"
+    },
+    {
+      "team_home": "boavista",
+      "team_away": "moreirense",
+      "date": "2025-09-01",
+      "time": "20:00"
+    }
+  ],
+  "fixtures_4": [
+    {
+      "team_home": "benfica",
+      "team_away": "portimonense",
+      "date": "2025-09-05",
+      "time": "20:00"
+    },
+    {
+      "team_home": "chaves",
+      "team_away": "vizela",
+      "date": "2025-09-06",
+      "time": "12:30"
+    },
+    {
+      "team_home": "estoril",
+      "team_away": "casa-pia",
+      "date": "2025-09-06",
+      "time": "15:00"
+    },
+    {
+      "team_home": "farense",
+      "team_away": "arouca",
+      "date": "2025-09-06",
+      "time": "15:00"
+    },
+    {
+      "team_home": "estrela",
+      "team_away": "rio-ave",
+      "date": "2025-09-07",
+      "time": "14:00"
+    },
+    {
+      "team_home": "porto",
+      "team_away": "gil-vicente",
+      "date": "2025-09-07",
+      "time": "14:00"
+    },
+    {
+      "team_home": "sporting-cp",
+      "team_away": "famalicao",
+      "date": "2025-09-07",
+      "time": "16:30"
+    },
+    {
+      "team_home": "braga",
+      "team_away": "moreirense",
+      "date": "2025-09-07",
+      "time": "19:00"
+    },
+    {
+      "team_home": "guimaraes",
+      "team_away": "boavista",
+      "date": "2025-09-08",
+      "time": "20:00"
+    }
+  ],
+  "fixtures_5": [
+    {
+      "team_home": "benfica",
+      "team_away": "vizela",
+      "date": "2025-09-12",
+      "time": "20:00"
+    },
+    {
+      "team_home": "portimonense",
+      "team_away": "casa-pia",
+      "date": "2025-09-13",
+      "time": "12:30"
+    },
+    {
+      "team_home": "chaves",
+      "team_away": "arouca",
+      "date": "2025-09-13",
+      "time": "15:00"
+    },
+    {
+      "team_home": "estoril",
+      "team_away": "rio-ave",
+      "date": "2025-09-13",
+      "time": "15:00"
+    },
+    {
+      "team_home": "farense",
+      "team_away": "gil-vicente",
+      "date": "2025-09-14",
+      "time": "14:00"
+    },
+    {
+      "team_home": "estrela",
+      "team_away": "famalicao",
+      "date": "2025-09-14",
+      "time": "14:00"
+    },
+    {
+      "team_home": "porto",
+      "team_away": "moreirense",
+      "date": "2025-09-14",
+      "time": "16:30"
+    },
+    {
+      "team_home": "sporting-cp",
+      "team_away": "boavista",
+      "date": "2025-09-14",
+      "time": "19:00"
+    },
+    {
+      "team_home": "braga",
+      "team_away": "guimaraes",
+      "date": "2025-09-15",
+      "time": "20:00"
+    }
+  ],
+  "fixtures_6": [
+    {
+      "team_home": "benfica",
+      "team_away": "casa-pia",
+      "date": "2025-09-19",
+      "time": "20:00"
+    },
+    {
+      "team_home": "vizela",
+      "team_away": "arouca",
+      "date": "2025-09-20",
+      "time": "12:30"
+    },
+    {
+      "team_home": "portimonense",
+      "team_away": "rio-ave",
+      "date": "2025-09-20",
+      "time": "15:00"
+    },
+    {
+      "team_home": "chaves",
+      "team_away": "gil-vicente",
+      "date": "2025-09-20",
+      "time": "15:00"
+    },
+    {
+      "team_home": "estoril",
+      "team_away": "famalicao",
+      "date": "2025-09-21",
+      "time": "14:00"
+    },
+    {
+      "team_home": "farense",
+      "team_away": "moreirense",
+      "date": "2025-09-21",
+      "time": "14:00"
+    },
+    {
+      "team_home": "estrela",
+      "team_away": "boavista",
+      "date": "2025-09-21",
+      "time": "16:30"
+    },
+    {
+      "team_home": "porto",
+      "team_away": "guimaraes",
+      "date": "2025-09-21",
+      "time": "19:00"
+    },
+    {
+      "team_home": "sporting-cp",
+      "team_away": "braga",
+      "date": "2025-09-22",
+      "time": "20:00"
+    }
+  ],
+  "fixtures_7": [
+    {
+      "team_home": "benfica",
+      "team_away": "arouca",
+      "date": "2025-09-26",
+      "time": "20:00"
+    },
+    {
+      "team_home": "casa-pia",
+      "team_away": "rio-ave",
+      "date": "2025-09-27",
+      "time": "12:30"
+    },
+    {
+      "team_home": "vizela",
+      "team_away": "gil-vicente",
+      "date": "2025-09-27",
+      "time": "15:00"
+    },
+    {
+      "team_home": "portimonense",
+      "team_away": "famalicao",
+      "date": "2025-09-27",
+      "time": "15:00"
+    },
+    {
+      "team_home": "chaves",
+      "team_away": "moreirense",
+      "date": "2025-09-28",
+      "time": "14:00"
+    },
+    {
+      "team_home": "estoril",
+      "team_away": "boavista",
+      "date": "2025-09-28",
+      "time": "14:00"
+    },
+    {
+      "team_home": "farense",
+      "team_away": "guimaraes",
+      "date": "2025-09-28",
+      "time": "16:30"
+    },
+    {
+      "team_home": "estrela",
+      "team_away": "braga",
+      "date": "2025-09-28",
+      "time": "19:00"
+    },
+    {
+      "team_home": "porto",
+      "team_away": "sporting-cp",
+      "date": "2025-09-29",
+      "time": "20:00"
+    }
+  ],
+  "fixtures_8": [
+    {
+      "team_home": "benfica",
+      "team_away": "rio-ave",
+      "date": "2025-10-03",
+      "time": "20:00"
+    },
+    {
+      "team_home": "arouca",
+      "team_away": "gil-vicente",
+      "date": "2025-10-04",
+      "time": "12:30"
+    },
+    {
+      "team_home": "casa-pia",
+      "team_away": "famalicao",
+      "date": "2025-10-04",
+      "time": "15:00"
+    },
+    {
+      "team_home": "vizela",
+      "team_away": "moreirense",
+      "date": "2025-10-04",
+      "time": "15:00"
+    },
+    {
+      "team_home": "portimonense",
+      "team_away": "boavista",
+      "date": "2025-10-05",
+      "time": "14:00"
+    },
+    {
+      "team_home": "chaves",
+      "team_away": "guimaraes",
+      "date": "2025-10-05",
+      "time": "14:00"
+    },
+    {
+      "team_home": "estoril",
+      "team_away": "braga",
+      "date": "2025-10-05",
+      "time": "16:30"
+    },
+    {
+      "team_home": "farense",
+      "team_away": "sporting-cp",
+      "date": "2025-10-05",
+      "time": "19:00"
+    },
+    {
+      "team_home": "estrela",
+      "team_away": "porto",
+      "date": "2025-10-06",
+      "time": "20:00"
+    }
+  ],
+  "fixtures_9": [
+    {
+      "team_home": "benfica",
+      "team_away": "gil-vicente",
+      "date": "2025-10-10",
+      "time": "20:00"
+    },
+    {
+      "team_home": "rio-ave",
+      "team_away": "famalicao",
+      "date": "2025-10-11",
+      "time": "12:30"
+    },
+    {
+      "team_home": "arouca",
+      "team_away": "moreirense",
+      "date": "2025-10-11",
+      "time": "15:00"
+    },
+    {
+      "team_home": "casa-pia",
+      "team_away": "boavista",
+      "date": "2025-10-11",
+      "time": "15:00"
+    },
+    {
+      "team_home": "vizela",
+      "team_away": "guimaraes",
+      "date": "2025-10-12",
+      "time": "14:00"
+    },
+    {
+      "team_home": "portimonense",
+      "team_away": "braga",
+      "date": "2025-10-12",
+      "time": "14:00"
+    },
+    {
+      "team_home": "chaves",
+      "team_away": "sporting-cp",
+      "date": "2025-10-12",
+      "time": "16:30"
+    },
+    {
+      "team_home": "estoril",
+      "team_away": "porto",
+      "date": "2025-10-12",
+      "time": "19:00"
+    },
+    {
+      "team_home": "farense",
+      "team_away": "estrela",
+      "date": "2025-10-13",
+      "time": "20:00"
+    }
+  ],
+  "fixtures_10": [
+    {
+      "team_home": "benfica",
+      "team_away": "famalicao",
+      "date": "2025-10-17",
+      "time": "20:00"
+    },
+    {
+      "team_home": "gil-vicente",
+      "team_away": "moreirense",
+      "date": "2025-10-18",
+      "time": "12:30"
+    },
+    {
+      "team_home": "rio-ave",
+      "team_away": "boavista",
+      "date": "2025-10-18",
+      "time": "15:00"
+    },
+    {
+      "team_home": "arouca",
+      "team_away": "guimaraes",
+      "date": "2025-10-18",
+      "time": "15:00"
+    },
+    {
+      "team_home": "casa-pia",
+      "team_away": "braga",
+      "date": "2025-10-19",
+      "time": "14:00"
+    },
+    {
+      "team_home": "vizela",
+      "team_away": "sporting-cp",
+      "date": "2025-10-19",
+      "time": "14:00"
+    },
+    {
+      "team_home": "portimonense",
+      "team_away": "porto",
+      "date": "2025-10-19",
+      "time": "16:30"
+    },
+    {
+      "team_home": "chaves",
+      "team_away": "estrela",
+      "date": "2025-10-19",
+      "time": "19:00"
+    },
+    {
+      "team_home": "estoril",
+      "team_away": "farense",
+      "date": "2025-10-20",
+      "time": "20:00"
+    }
+  ],
+  "fixtures_11": [
+    {
+      "team_home": "benfica",
+      "team_away": "moreirense",
+      "date": "2025-10-31",
+      "time": "20:00"
+    },
+    {
+      "team_home": "famalicao",
+      "team_away": "boavista",
+      "date": "2025-11-01",
+      "time": "12:30"
+    },
+    {
+      "team_home": "gil-vicente",
+      "team_away": "guimaraes",
+      "date": "2025-11-01",
+      "time": "15:00"
+    },
+    {
+      "team_home": "rio-ave",
+      "team_away": "braga",
+      "date": "2025-11-01",
+      "time": "15:00"
+    },
+    {
+      "team_home": "arouca",
+      "team_away": "sporting-cp",
+      "date": "2025-11-02",
+      "time": "14:00"
+    },
+    {
+      "team_home": "casa-pia",
+      "team_away": "porto",
+      "date": "2025-11-02",
+      "time": "14:00"
+    },
+    {
+      "team_home": "vizela",
+      "team_away": "estrela",
+      "date": "2025-11-02",
+      "time": "16:30"
+    },
+    {
+      "team_home": "portimonense",
+      "team_away": "farense",
+      "date": "2025-11-02",
+      "time": "19:00"
+    },
+    {
+      "team_home": "chaves",
+      "team_away": "estoril",
+      "date": "2025-11-03",
+      "time": "20:00"
+    }
+  ],
+  "fixtures_12": [
+    {
+      "team_home": "benfica",
+      "team_away": "boavista",
+      "date": "2025-11-07",
+      "time": "20:00"
+    },
+    {
+      "team_home": "moreirense",
+      "team_away": "guimaraes",
+      "date": "2025-11-08",
+      "time": "12:30"
+    },
+    {
+      "team_home": "famalicao",
+      "team_away": "braga",
+      "date": "2025-11-08",
+      "time": "15:00"
+    },
+    {
+      "team_home": "gil-vicente",
+      "team_away": "sporting-cp",
+      "date": "2025-11-08",
+      "time": "15:00"
+    },
+    {
+      "team_home": "rio-ave",
+      "team_away": "porto",
+      "date": "2025-11-09",
+      "time": "14:00"
+    },
+    {
+      "team_home": "arouca",
+      "team_away": "estrela",
+      "date": "2025-11-09",
+      "time": "14:00"
+    },
+    {
+      "team_home": "casa-pia",
+      "team_away": "farense",
+      "date": "2025-11-09",
+      "time": "16:30"
+    },
+    {
+      "team_home": "vizela",
+      "team_away": "estoril",
+      "date": "2025-11-09",
+      "time": "19:00"
+    },
+    {
+      "team_home": "portimonense",
+      "team_away": "chaves",
+      "date": "2025-11-10",
+      "time": "20:00"
+    }
+  ],
+  "fixtures_13": [
+    {
+      "team_home": "benfica",
+      "team_away": "guimaraes",
+      "date": "2025-11-14",
+      "time": "20:00"
+    },
+    {
+      "team_home": "boavista",
+      "team_away": "braga",
+      "date": "2025-11-15",
+      "time": "12:30"
+    },
+    {
+      "team_home": "moreirense",
+      "team_away": "sporting-cp",
+      "date": "2025-11-15",
+      "time": "15:00"
+    },
+    {
+      "team_home": "famalicao",
+      "team_away": "porto",
+      "date": "2025-11-15",
+      "time": "15:00"
+    },
+    {
+      "team_home": "gil-vicente",
+      "team_away": "estrela",
+      "date": "2025-11-16",
+      "time": "14:00"
+    },
+    {
+      "team_home": "rio-ave",
+      "team_away": "farense",
+      "date": "2025-11-16",
+      "time": "14:00"
+    },
+    {
+      "team_home": "arouca",
+      "team_away": "estoril",
+      "date": "2025-11-16",
+      "time": "16:30"
+    },
+    {
+      "team_home": "casa-pia",
+      "team_away": "chaves",
+      "date": "2025-11-16",
+      "time": "19:00"
+    },
+    {
+      "team_home": "vizela",
+      "team_away": "portimonense",
+      "date": "2025-11-17",
+      "time": "20:00"
+    }
+  ],
+  "fixtures_14": [
+    {
+      "team_home": "benfica",
+      "team_away": "braga",
+      "date": "2025-11-21",
+      "time": "20:00"
+    },
+    {
+      "team_home": "guimaraes",
+      "team_away": "sporting-cp",
+      "date": "2025-11-22",
+      "time": "12:30"
+    },
+    {
+      "team_home": "boavista",
+      "team_away": "porto",
+      "date": "2025-11-22",
+      "time": "15:00"
+    },
+    {
+      "team_home": "moreirense",
+      "team_away": "estrela",
+      "date": "2025-11-22",
+      "time": "15:00"
+    },
+    {
+      "team_home": "famalicao",
+      "team_away": "farense",
+      "date": "2025-11-23",
+      "time": "14:00"
+    },
+    {
+      "team_home": "gil-vicente",
+      "team_away": "estoril",
+      "date": "2025-11-23",
+      "time": "14:00"
+    },
+    {
+      "team_home": "rio-ave",
+      "team_away": "chaves",
+      "date": "2025-11-23",
+      "time": "16:30"
+    },
+    {
+      "team_home": "arouca",
+      "team_away": "portimonense",
+      "date": "2025-11-23",
+      "time": "19:00"
+    },
+    {
+      "team_home": "casa-pia",
+      "team_away": "vizela",
+      "date": "2025-11-24",
+      "time": "20:00"
+    }
+  ],
+  "fixtures_15": [
+    {
+      "team_home": "benfica",
+      "team_away": "sporting-cp",
+      "date": "2025-11-28",
+      "time": "20:00"
+    },
+    {
+      "team_home": "braga",
+      "team_away": "porto",
+      "date": "2025-11-29",
+      "time": "12:30"
+    },
+    {
+      "team_home": "guimaraes",
+      "team_away": "estrela",
+      "date": "2025-11-29",
+      "time": "15:00"
+    },
+    {
+      "team_home": "boavista",
+      "team_away": "farense",
+      "date": "2025-11-29",
+      "time": "15:00"
+    },
+    {
+      "team_home": "moreirense",
+      "team_away": "estoril",
+      "date": "2025-11-30",
+      "time": "14:00"
+    },
+    {
+      "team_home": "famalicao",
+      "team_away": "chaves",
+      "date": "2025-11-30",
+      "time": "14:00"
+    },
+    {
+      "team_home": "gil-vicente",
+      "team_away": "portimonense",
+      "date": "2025-11-30",
+      "time": "16:30"
+    },
+    {
+      "team_home": "rio-ave",
+      "team_away": "vizela",
+      "date": "2025-11-30",
+      "time": "19:00"
+    },
+    {
+      "team_home": "arouca",
+      "team_away": "casa-pia",
+      "date": "2025-12-01",
+      "time": "20:00"
+    }
+  ],
+  "fixtures_16": [
+    {
+      "team_home": "benfica",
+      "team_away": "porto",
+      "date": "2025-12-05",
+      "time": "20:00"
+    },
+    {
+      "team_home": "sporting-cp",
+      "team_away": "estrela",
+      "date": "2025-12-06",
+      "time": "12:30"
+    },
+    {
+      "team_home": "braga",
+      "team_away": "farense",
+      "date": "2025-12-06",
+      "time": "15:00"
+    },
+    {
+      "team_home": "guimaraes",
+      "team_away": "estoril",
+      "date": "2025-12-06",
+      "time": "15:00"
+    },
+    {
+      "team_home": "boavista",
+      "team_away": "chaves",
+      "date": "2025-12-07",
+      "time": "14:00"
+    },
+    {
+      "team_home": "moreirense",
+      "team_away": "portimonense",
+      "date": "2025-12-07",
+      "time": "14:00"
+    },
+    {
+      "team_home": "famalicao",
+      "team_away": "vizela",
+      "date": "2025-12-07",
+      "time": "16:30"
+    },
+    {
+      "team_home": "gil-vicente",
+      "team_away": "casa-pia",
+      "date": "2025-12-07",
+      "time": "19:00"
+    },
+    {
+      "team_home": "rio-ave",
+      "team_away": "arouca",
+      "date": "2025-12-08",
+      "time": "20:00"
+    }
+  ],
+  "fixtures_17": [
+    {
+      "team_home": "estrela",
+      "team_away": "benfica",
+      "date": "2025-12-12",
+      "time": "20:00"
+    },
+    {
+      "team_home": "farense",
+      "team_away": "porto",
+      "date": "2025-12-13",
+      "time": "12:30"
+    },
+    {
+      "team_home": "estoril",
+      "team_away": "sporting-cp",
+      "date": "2025-12-13",
+      "time": "15:00"
+    },
+    {
+      "team_home": "chaves",
+      "team_away": "braga",
+      "date": "2025-12-13",
+      "time": "15:00"
+    },
+    {
+      "team_home": "portimonense",
+      "team_away": "guimaraes",
+      "date": "2025-12-14",
+      "time": "14:00"
+    },
+    {
+      "team_home": "vizela",
+      "team_away": "boavista",
+      "date": "2025-12-14",
+      "time": "14:00"
+    },
+    {
+      "team_home": "casa-pia",
+      "team_away": "moreirense",
+      "date": "2025-12-14",
+      "time": "16:30"
+    },
+    {
+      "team_home": "arouca",
+      "team_away": "famalicao",
+      "date": "2025-12-14",
+      "time": "19:00"
+    },
+    {
+      "team_home": "rio-ave",
+      "team_away": "gil-vicente",
+      "date": "2025-12-15",
+      "time": "20:00"
+    }
+  ],
+  "fixtures_18": [
+    {
+      "team_home": "farense",
+      "team_away": "benfica",
+      "date": "2025-12-19",
+      "time": "20:00"
+    },
+    {
+      "team_home": "estoril",
+      "team_away": "estrela",
+      "date": "2025-12-20",
+      "time": "12:30"
+    },
+    {
+      "team_home": "chaves",
+      "team_away": "porto",
+      "date": "2025-12-20",
+      "time": "15:00"
+    },
+    {
+      "team_home": "portimonense",
+      "team_away": "sporting-cp",
+      "date": "2025-12-20",
+      "time": "15:00"
+    },
+    {
+      "team_home": "vizela",
+      "team_away": "braga",
+      "date": "2025-12-21",
+      "time": "14:00"
+    },
+    {
+      "team_home": "casa-pia",
+      "team_away": "guimaraes",
+      "date": "2025-12-21",
+      "time": "14:00"
+    },
+    {
+      "team_home": "arouca",
+      "team_away": "boavista",
+      "date": "2025-12-21",
+      "time": "16:30"
+    },
+    {
+      "team_home": "rio-ave",
+      "team_away": "moreirense",
+      "date": "2025-12-21",
+      "time": "19:00"
+    },
+    {
+      "team_home": "gil-vicente",
+      "team_away": "famalicao",
+      "date": "2025-12-22",
+      "time": "20:00"
+    }
+  ],
+  "fixtures_19": [
+    {
+      "team_home": "estoril",
+      "team_away": "benfica",
+      "date": "2025-12-26",
+      "time": "20:00"
+    },
+    {
+      "team_home": "chaves",
+      "team_away": "farense",
+      "date": "2025-12-27",
+      "time": "12:30"
+    },
+    {
+      "team_home": "portimonense",
+      "team_away": "estrela",
+      "date": "2025-12-27",
+      "time": "15:00"
+    },
+    {
+      "team_home": "vizela",
+      "team_away": "porto",
+      "date": "2025-12-27",
+      "time": "15:00"
+    },
+    {
+      "team_home": "casa-pia",
+      "team_away": "sporting-cp",
+      "date": "2025-12-28",
+      "time": "14:00"
+    },
+    {
+      "team_home": "arouca",
+      "team_away": "braga",
+      "date": "2025-12-28",
+      "time": "14:00"
+    },
+    {
+      "team_home": "rio-ave",
+      "team_away": "guimaraes",
+      "date": "2025-12-28",
+      "time": "16:30"
+    },
+    {
+      "team_home": "gil-vicente",
+      "team_away": "boavista",
+      "date": "2025-12-28",
+      "time": "19:00"
+    },
+    {
+      "team_home": "famalicao",
+      "team_away": "moreirense",
+      "date": "2025-12-29",
+      "time": "20:00"
+    }
+  ],
+  "fixtures_20": [
+    {
+      "team_home": "chaves",
+      "team_away": "benfica",
+      "date": "2026-01-02",
+      "time": "20:00"
+    },
+    {
+      "team_home": "portimonense",
+      "team_away": "estoril",
+      "date": "2026-01-03",
+      "time": "12:30"
+    },
+    {
+      "team_home": "vizela",
+      "team_away": "farense",
+      "date": "2026-01-03",
+      "time": "15:00"
+    },
+    {
+      "team_home": "casa-pia",
+      "team_away": "estrela",
+      "date": "2026-01-03",
+      "time": "15:00"
+    },
+    {
+      "team_home": "arouca",
+      "team_away": "porto",
+      "date": "2026-01-04",
+      "time": "14:00"
+    },
+    {
+      "team_home": "rio-ave",
+      "team_away": "sporting-cp",
+      "date": "2026-01-04",
+      "time": "14:00"
+    },
+    {
+      "team_home": "gil-vicente",
+      "team_away": "braga",
+      "date": "2026-01-04",
+      "time": "16:30"
+    },
+    {
+      "team_home": "famalicao",
+      "team_away": "guimaraes",
+      "date": "2026-01-04",
+      "time": "19:00"
+    },
+    {
+      "team_home": "moreirense",
+      "team_away": "boavista",
+      "date": "2026-01-05",
+      "time": "20:00"
+    }
+  ],
+  "fixtures_21": [
+    {
+      "team_home": "portimonense",
+      "team_away": "benfica",
+      "date": "2026-01-16",
+      "time": "20:00"
+    },
+    {
+      "team_home": "vizela",
+      "team_away": "chaves",
+      "date": "2026-01-17",
+      "time": "12:30"
+    },
+    {
+      "team_home": "casa-pia",
+      "team_away": "estoril",
+      "date": "2026-01-17",
+      "time": "15:00"
+    },
+    {
+      "team_home": "arouca",
+      "team_away": "farense",
+      "date": "2026-01-17",
+      "time": "15:00"
+    },
+    {
+      "team_home": "rio-ave",
+      "team_away": "estrela",
+      "date": "2026-01-18",
+      "time": "14:00"
+    },
+    {
+      "team_home": "gil-vicente",
+      "team_away": "porto",
+      "date": "2026-01-18",
+      "time": "14:00"
+    },
+    {
+      "team_home": "famalicao",
+      "team_away": "sporting-cp",
+      "date": "2026-01-18",
+      "time": "16:30"
+    },
+    {
+      "team_home": "moreirense",
+      "team_away": "braga",
+      "date": "2026-01-18",
+      "time": "19:00"
+    },
+    {
+      "team_home": "boavista",
+      "team_away": "guimaraes",
+      "date": "2026-01-19",
+      "time": "20:00"
+    }
+  ],
+  "fixtures_22": [
+    {
+      "team_home": "vizela",
+      "team_away": "benfica",
+      "date": "2026-01-23",
+      "time": "20:00"
+    },
+    {
+      "team_home": "casa-pia",
+      "team_away": "portimonense",
+      "date": "2026-01-24",
+      "time": "12:30"
+    },
+    {
+      "team_home": "arouca",
+      "team_away": "chaves",
+      "date": "2026-01-24",
+      "time": "15:00"
+    },
+    {
+      "team_home": "rio-ave",
+      "team_away": "estoril",
+      "date": "2026-01-24",
+      "time": "15:00"
+    },
+    {
+      "team_home": "gil-vicente",
+      "team_away": "farense",
+      "date": "2026-01-25",
+      "time": "14:00"
+    },
+    {
+      "team_home": "famalicao",
+      "team_away": "estrela",
+      "date": "2026-01-25",
+      "time": "14:00"
+    },
+    {
+      "team_home": "moreirense",
+      "team_away": "porto",
+      "date": "2026-01-25",
+      "time": "16:30"
+    },
+    {
+      "team_home": "boavista",
+      "team_away": "sporting-cp",
+      "date": "2026-01-25",
+      "time": "19:00"
+    },
+    {
+      "team_home": "guimaraes",
+      "team_away": "braga",
+      "date": "2026-01-26",
+      "time": "20:00"
+    }
+  ],
+  "fixtures_23": [
+    {
+      "team_home": "casa-pia",
+      "team_away": "benfica",
+      "date": "2026-01-30",
+      "time": "20:00"
+    },
+    {
+      "team_home": "arouca",
+      "team_away": "vizela",
+      "date": "2026-01-31",
+      "time": "12:30"
+    },
+    {
+      "team_home": "rio-ave",
+      "team_away": "portimonense",
+      "date": "2026-01-31",
+      "time": "15:00"
+    },
+    {
+      "team_home": "gil-vicente",
+      "team_away": "chaves",
+      "date": "2026-01-31",
+      "time": "15:00"
+    },
+    {
+      "team_home": "famalicao",
+      "team_away": "estoril",
+      "date": "2026-02-01",
+      "time": "14:00"
+    },
+    {
+      "team_home": "moreirense",
+      "team_away": "farense",
+      "date": "2026-02-01",
+      "time": "14:00"
+    },
+    {
+      "team_home": "boavista",
+      "team_away": "estrela",
+      "date": "2026-02-01",
+      "time": "16:30"
+    },
+    {
+      "team_home": "guimaraes",
+      "team_away": "porto",
+      "date": "2026-02-01",
+      "time": "19:00"
+    },
+    {
+      "team_home": "braga",
+      "team_away": "sporting-cp",
+      "date": "2026-02-02",
+      "time": "20:00"
+    }
+  ],
+  "fixtures_24": [
+    {
+      "team_home": "arouca",
+      "team_away": "benfica",
+      "date": "2026-02-06",
+      "time": "20:00"
+    },
+    {
+      "team_home": "rio-ave",
+      "team_away": "casa-pia",
+      "date": "2026-02-07",
+      "time": "12:30"
+    },
+    {
+      "team_home": "gil-vicente",
+      "team_away": "vizela",
+      "date": "2026-02-07",
+      "time": "15:00"
+    },
+    {
+      "team_home": "famalicao",
+      "team_away": "portimonense",
+      "date": "2026-02-07",
+      "time": "15:00"
+    },
+    {
+      "team_home": "moreirense",
+      "team_away": "chaves",
+      "date": "2026-02-08",
+      "time": "14:00"
+    },
+    {
+      "team_home": "boavista",
+      "team_away": "estoril",
+      "date": "2026-02-08",
+      "time": "14:00"
+    },
+    {
+      "team_home": "guimaraes",
+      "team_away": "farense",
+      "date": "2026-02-08",
+      "time": "16:30"
+    },
+    {
+      "team_home": "braga",
+      "team_away": "estrela",
+      "date": "2026-02-08",
+      "time": "19:00"
+    },
+    {
+      "team_home": "sporting-cp",
+      "team_away": "porto",
+      "date": "2026-02-09",
+      "time": "20:00"
+    }
+  ],
+  "fixtures_25": [
+    {
+      "team_home": "rio-ave",
+      "team_away": "benfica",
+      "date": "2026-02-13",
+      "time": "20:00"
+    },
+    {
+      "team_home": "gil-vicente",
+      "team_away": "arouca",
+      "date": "2026-02-14",
+      "time": "12:30"
+    },
+    {
+      "team_home": "famalicao",
+      "team_away": "casa-pia",
+      "date": "2026-02-14",
+      "time": "15:00"
+    },
+    {
+      "team_home": "moreirense",
+      "team_away": "vizela",
+      "date": "2026-02-14",
+      "time": "15:00"
+    },
+    {
+      "team_home": "boavista",
+      "team_away": "portimonense",
+      "date": "2026-02-15",
+      "time": "14:00"
+    },
+    {
+      "team_home": "guimaraes",
+      "team_away": "chaves",
+      "date": "2026-02-15",
+      "time": "14:00"
+    },
+    {
+      "team_home": "braga",
+      "team_away": "estoril",
+      "date": "2026-02-15",
+      "time": "16:30"
+    },
+    {
+      "team_home": "sporting-cp",
+      "team_away": "farense",
+      "date": "2026-02-15",
+      "time": "19:00"
+    },
+    {
+      "team_home": "porto",
+      "team_away": "estrela",
+      "date": "2026-02-16",
+      "time": "20:00"
+    }
+  ],
+  "fixtures_26": [
+    {
+      "team_home": "gil-vicente",
+      "team_away": "benfica",
+      "date": "2026-02-20",
+      "time": "20:00"
+    },
+    {
+      "team_home": "famalicao",
+      "team_away": "rio-ave",
+      "date": "2026-02-21",
+      "time": "12:30"
+    },
+    {
+      "team_home": "moreirense",
+      "team_away": "arouca",
+      "date": "2026-02-21",
+      "time": "15:00"
+    },
+    {
+      "team_home": "boavista",
+      "team_away": "casa-pia",
+      "date": "2026-02-21",
+      "time": "15:00"
+    },
+    {
+      "team_home": "guimaraes",
+      "team_away": "vizela",
+      "date": "2026-02-22",
+      "time": "14:00"
+    },
+    {
+      "team_home": "braga",
+      "team_away": "portimonense",
+      "date": "2026-02-22",
+      "time": "14:00"
+    },
+    {
+      "team_home": "sporting-cp",
+      "team_away": "chaves",
+      "date": "2026-02-22",
+      "time": "16:30"
+    },
+    {
+      "team_home": "porto",
+      "team_away": "estoril",
+      "date": "2026-02-22",
+      "time": "19:00"
+    },
+    {
+      "team_home": "estrela",
+      "team_away": "farense",
+      "date": "2026-02-23",
+      "time": "20:00"
+    }
+  ],
+  "fixtures_27": [
+    {
+      "team_home": "famalicao",
+      "team_away": "benfica",
+      "date": "2026-02-27",
+      "time": "20:00"
+    },
+    {
+      "team_home": "moreirense",
+      "team_away": "gil-vicente",
+      "date": "2026-02-28",
+      "time": "12:30"
+    },
+    {
+      "team_home": "boavista",
+      "team_away": "rio-ave",
+      "date": "2026-02-28",
+      "time": "15:00"
+    },
+    {
+      "team_home": "guimaraes",
+      "team_away": "arouca",
+      "date": "2026-02-28",
+      "time": "15:00"
+    },
+    {
+      "team_home": "braga",
+      "team_away": "casa-pia",
+      "date": "2026-03-01",
+      "time": "14:00"
+    },
+    {
+      "team_home": "sporting-cp",
+      "team_away": "vizela",
+      "date": "2026-03-01",
+      "time": "14:00"
+    },
+    {
+      "team_home": "porto",
+      "team_away": "portimonense",
+      "date": "2026-03-01",
+      "time": "16:30"
+    },
+    {
+      "team_home": "estrela",
+      "team_away": "chaves",
+      "date": "2026-03-01",
+      "time": "19:00"
+    },
+    {
+      "team_home": "farense",
+      "team_away": "estoril",
+      "date": "2026-03-02",
+      "time": "20:00"
+    }
+  ],
+  "fixtures_28": [
+    {
+      "team_home": "moreirense",
+      "team_away": "benfica",
+      "date": "2026-03-06",
+      "time": "20:00"
+    },
+    {
+      "team_home": "boavista",
+      "team_away": "famalicao",
+      "date": "2026-03-07",
+      "time": "12:30"
+    },
+    {
+      "team_home": "guimaraes",
+      "team_away": "gil-vicente",
+      "date": "2026-03-07",
+      "time": "15:00"
+    },
+    {
+      "team_home": "braga",
+      "team_away": "rio-ave",
+      "date": "2026-03-07",
+      "time": "15:00"
+    },
+    {
+      "team_home": "sporting-cp",
+      "team_away": "arouca",
+      "date": "2026-03-08",
+      "time": "14:00"
+    },
+    {
+      "team_home": "porto",
+      "team_away": "casa-pia",
+      "date": "2026-03-08",
+      "time": "14:00"
+    },
+    {
+      "team_home": "estrela",
+      "team_away": "vizela",
+      "date": "2026-03-08",
+      "time": "16:30"
+    },
+    {
+      "team_home": "farense",
+      "team_away": "portimonense",
+      "date": "2026-03-08",
+      "time": "19:00"
+    },
+    {
+      "team_home": "estoril",
+      "team_away": "chaves",
+      "date": "2026-03-09",
+      "time": "20:00"
+    }
+  ],
+  "fixtures_29": [
+    {
+      "team_home": "boavista",
+      "team_away": "benfica",
+      "date": "2026-03-13",
+      "time": "20:00"
+    },
+    {
+      "team_home": "guimaraes",
+      "team_away": "moreirense",
+      "date": "2026-03-14",
+      "time": "12:30"
+    },
+    {
+      "team_home": "braga",
+      "team_away": "famalicao",
+      "date": "2026-03-14",
+      "time": "15:00"
+    },
+    {
+      "team_home": "sporting-cp",
+      "team_away": "gil-vicente",
+      "date": "2026-03-14",
+      "time": "15:00"
+    },
+    {
+      "team_home": "porto",
+      "team_away": "rio-ave",
+      "date": "2026-03-15",
+      "time": "14:00"
+    },
+    {
+      "team_home": "estrela",
+      "team_away": "arouca",
+      "date": "2026-03-15",
+      "time": "14:00"
+    },
+    {
+      "team_home": "farense",
+      "team_away": "casa-pia",
+      "date": "2026-03-15",
+      "time": "16:30"
+    },
+    {
+      "team_home": "estoril",
+      "team_away": "vizela",
+      "date": "2026-03-15",
+      "time": "19:00"
+    },
+    {
+      "team_home": "chaves",
+      "team_away": "portimonense",
+      "date": "2026-03-16",
+      "time": "20:00"
+    }
+  ],
+  "fixtures_30": [
+    {
+      "team_home": "guimaraes",
+      "team_away": "benfica",
+      "date": "2026-03-20",
+      "time": "20:00"
+    },
+    {
+      "team_home": "braga",
+      "team_away": "boavista",
+      "date": "2026-03-21",
+      "time": "12:30"
+    },
+    {
+      "team_home": "sporting-cp",
+      "team_away": "moreirense",
+      "date": "2026-03-21",
+      "time": "15:00"
+    },
+    {
+      "team_home": "porto",
+      "team_away": "famalicao",
+      "date": "2026-03-21",
+      "time": "15:00"
+    },
+    {
+      "team_home": "estrela",
+      "team_away": "gil-vicente",
+      "date": "2026-03-22",
+      "time": "14:00"
+    },
+    {
+      "team_home": "farense",
+      "team_away": "rio-ave",
+      "date": "2026-03-22",
+      "time": "14:00"
+    },
+    {
+      "team_home": "estoril",
+      "team_away": "arouca",
+      "date": "2026-03-22",
+      "time": "16:30"
+    },
+    {
+      "team_home": "chaves",
+      "team_away": "casa-pia",
+      "date": "2026-03-22",
+      "time": "19:00"
+    },
+    {
+      "team_home": "portimonense",
+      "team_away": "vizela",
+      "date": "2026-03-23",
+      "time": "20:00"
+    }
+  ],
+  "fixtures_31": [
+    {
+      "team_home": "braga",
+      "team_away": "benfica",
+      "date": "2026-04-03",
+      "time": "20:00"
+    },
+    {
+      "team_home": "sporting-cp",
+      "team_away": "guimaraes",
+      "date": "2026-04-04",
+      "time": "12:30"
+    },
+    {
+      "team_home": "porto",
+      "team_away": "boavista",
+      "date": "2026-04-04",
+      "time": "15:00"
+    },
+    {
+      "team_home": "estrela",
+      "team_away": "moreirense",
+      "date": "2026-04-04",
+      "time": "15:00"
+    },
+    {
+      "team_home": "farense",
+      "team_away": "famalicao",
+      "date": "2026-04-05",
+      "time": "14:00"
+    },
+    {
+      "team_home": "estoril",
+      "team_away": "gil-vicente",
+      "date": "2026-04-05",
+      "time": "14:00"
+    },
+    {
+      "team_home": "chaves",
+      "team_away": "rio-ave",
+      "date": "2026-04-05",
+      "time": "16:30"
+    },
+    {
+      "team_home": "portimonense",
+      "team_away": "arouca",
+      "date": "2026-04-05",
+      "time": "19:00"
+    },
+    {
+      "team_home": "vizela",
+      "team_away": "casa-pia",
+      "date": "2026-04-06",
+      "time": "20:00"
+    }
+  ],
+  "fixtures_32": [
+    {
+      "team_home": "sporting-cp",
+      "team_away": "benfica",
+      "date": "2026-04-10",
+      "time": "20:00"
+    },
+    {
+      "team_home": "porto",
+      "team_away": "braga",
+      "date": "2026-04-11",
+      "time": "12:30"
+    },
+    {
+      "team_home": "estrela",
+      "team_away": "guimaraes",
+      "date": "2026-04-11",
+      "time": "15:00"
+    },
+    {
+      "team_home": "farense",
+      "team_away": "boavista",
+      "date": "2026-04-11",
+      "time": "15:00"
+    },
+    {
+      "team_home": "estoril",
+      "team_away": "moreirense",
+      "date": "2026-04-12",
+      "time": "14:00"
+    },
+    {
+      "team_home": "chaves",
+      "team_away": "famalicao",
+      "date": "2026-04-12",
+      "time": "14:00"
+    },
+    {
+      "team_home": "portimonense",
+      "team_away": "gil-vicente",
+      "date": "2026-04-12",
+      "time": "16:30"
+    },
+    {
+      "team_home": "vizela",
+      "team_away": "rio-ave",
+      "date": "2026-04-12",
+      "time": "19:00"
+    },
+    {
+      "team_home": "casa-pia",
+      "team_away": "arouca",
+      "date": "2026-04-13",
+      "time": "20:00"
+    }
+  ],
+  "fixtures_33": [
+    {
+      "team_home": "porto",
+      "team_away": "benfica",
+      "date": "2026-04-17",
+      "time": "20:00"
+    },
+    {
+      "team_home": "estrela",
+      "team_away": "sporting-cp",
+      "date": "2026-04-18",
+      "time": "12:30"
+    },
+    {
+      "team_home": "farense",
+      "team_away": "braga",
+      "date": "2026-04-18",
+      "time": "15:00"
+    },
+    {
+      "team_home": "estoril",
+      "team_away": "guimaraes",
+      "date": "2026-04-18",
+      "time": "15:00"
+    },
+    {
+      "team_home": "chaves",
+      "team_away": "boavista",
+      "date": "2026-04-19",
+      "time": "14:00"
+    },
+    {
+      "team_home": "portimonense",
+      "team_away": "moreirense",
+      "date": "2026-04-19",
+      "time": "14:00"
+    },
+    {
+      "team_home": "vizela",
+      "team_away": "famalicao",
+      "date": "2026-04-19",
+      "time": "16:30"
+    },
+    {
+      "team_home": "casa-pia",
+      "team_away": "gil-vicente",
+      "date": "2026-04-19",
+      "time": "19:00"
+    },
+    {
+      "team_home": "arouca",
+      "team_away": "rio-ave",
+      "date": "2026-04-20",
+      "time": "20:00"
+    }
+  ]
+}

@@ -5,6 +5,18 @@ on:
     branches:
       - main
       - master
+    paths:
+      - 'oanthenumberapp/**'
+      - '.github/workflows/deploy.yml'
+  workflow_dispatch:
+  # Called by collect-data.yml once new data has been committed
+  workflow_call:
+    inputs:
+      ref:
+        description: Commit to build (defaults to the triggering commit)
+        type: string
+        required: false
+        default: ''
 
 permissions:
   contents: read
@@ -15,12 +27,18 @@ concurrency:
   group: pages
   cancel-in-progress: false
 
+defaults:
+  run:
+    working-directory: oanthenumberapp
+
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          ref: ${{ inputs.ref }}
 
       - name: Configure Pages
         uses: actions/configure-pages@v4
@@ -30,6 +48,7 @@ jobs:
         with:
           node-version: 22
           cache: npm
+          cache-dependency-path: oanthenumberapp/package-lock.json
 
       - name: Install dependencies
         run: npm ci
@@ -40,7 +59,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: dist
+          path: oanthenumberapp/dist
 
   deploy:
     needs: build

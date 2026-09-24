@@ -1,0 +1,130 @@
+name: Collect match data
+
+# SPFL at 23:00 and EPL at 23:15 UK time. GitHub cron runs in UTC, so each time is scheduled
+# for both BST (22:xx UTC) and GMT (23:xx UTC) and the "plan" job skips whichever doesn't
+# match the current UK offset.
+on:
+  schedule:
+    - cron: '0 22 * * *'   # SPFL, 23:00 BST
+    - cron: '0 23 * * *'   # SPFL, 23:00 GMT
+    - cron: '15 22 * * *'  # EPL, 23:15 BST
+    - cron: '15 23 * * *'  # EPL, 23:15 GMT
+  workflow_dispatch:
+    inputs:
+      league:
+        description: League to collect
+        type: choice
+        options: [both, spfl, epl]
+        default: both
+
+# Queue runs so the SPFL and EPL commits never race each other
+concurrency:
+  group: collect-data
+  cancel-in-progress: false
+
+env:
+  # The collectors read fixture kick-off times as local time
+  TZ: Europe/London
+
+jobs:
+  plan:
+    runs-on: ubuntu-latest
+    outputs:
+      leagues: ${{ steps.plan.outputs.leagues }}
+    steps:
+      - id: plan
+        env:
+          SCHEDULE: ${{ github.event.schedule }}
+          LEAGUE_INPUT: ${{ inputs.league }}
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            case "$LEAGUE_INPUT" in
+              both) leagues="spfl epl" ;;
+              *) leagues="$LEAGUE_INPUT" ;;
+            esac
+          else
+            offset=$(date +%z)   # +0100 in BST, +0000 in GMT
+            case "$SCHEDULE" in
+              '0 22 * * *')  [ "$offset" = "+0100" ] && leagues=spfl ;;
+              '0 23 * * *')  [ "$offset" = "+0000" ] && leagues=spfl ;;
+              '15 22 * * *') [ "$offset" = "+0100" ] && leagues=epl ;;
+              '15 23 * * *') [ "$offset" = "+0000" ] && leagues=epl ;;
+            esac
+          fi
+          echo "UK offset $(date +%z), schedule '$SCHEDULE' -> leagues: '${leagues:-none}'"
+          echo "leagues=${leagues:-}" >> "$GITHUB_OUTPUT"
+
+  collect:
+    needs: plan
+    if: needs.plan.outputs.leagues != ''
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    outputs:
+      changed: ${{ steps.commit.outputs.changed }}
+      sha: ${{ steps.commit.outputs.sha }}
+    defaults:
+      run:
+        working-directory: playwright_js
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: playwright_js/package-lock.json
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install Playwright Firefox
+        run: npx playwright install --with-deps firefox
+
+      - name: Collect SPFL 2026/27
+        if: contains(needs.plan.outputs.leagues, 'spfl')
+        run: npm run collect_spfl_2026_27
+
+      - name: Collect EPL 2026/27
+        if: contains(needs.plan.outputs.leagues, 'epl')
+        run: npm run collect_epl_2026_27
+
+      - name: Upload Playwright report
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-report
+          path: playwright_js/playwright-report
+          retention-days: 7
+
+      - name: Commit updated data
+        id: commit
+        working-directory: .
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898699+github-actions[bot]@users.noreply.github.com"
+          git add playwright_js/collectedData playwright_js/transferredData oanthenumberapp/src/data
+          if git diff --cached --quiet; then
+            echo "No new data"
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          git commit -m "Update ${{ needs.plan.outputs.leagues }} data ($(date +%Y-%m-%d))"
+          git pull --rebase origin "${GITHUB_REF_NAME}"
+          git push origin "HEAD:${GITHUB_REF_NAME}"
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+          echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+
+  # Pushes made with GITHUB_TOKEN don't trigger other workflows, so call the deploy directly
+  deploy:
+    needs: collect
+    if: needs.collect.outputs.changed == 'true'
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    uses: ./.github/workflows/deploy.yml
+    with:
+      ref: ${{ needs.collect.outputs.sha }}

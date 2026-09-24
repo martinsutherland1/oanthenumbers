@@ -1,0 +1,151 @@
+.xg-log-container {
+  background: var(--surface);
+  border-radius: 12px;
+  padding: 16px;
+  border: 1px solid var(--border);
+}
+
+.xg-log-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.xg-log-container h3 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text);
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.xg-log-toggle {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  background: var(--background);
+  padding: 4px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+}
+
+.xg-log-btn {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 8px;
+  background: transparent;
+  color: var(--text-secondary);
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-weight: 500;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+}
+
+.xg-log-btn:hover {
+  background: var(--surface-hover);
+  color: var(--text);
+}
+
+.xg-log-btn.active {
+  background: var(--primary);
+  color: white;
+}
+
+.xg-log-subtitle {
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: var(--text-secondary);
+}
+
+.xg-log-wrapper {
+  overflow-x: auto;
+}
+
+.xg-log-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+}
+
+.xg-log-table th,
+.xg-log-table td {
+  padding: 8px 12px;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.xg-log-table th {
+  color: var(--text-secondary);
+  font-weight: 500;
+  border-bottom: 2px solid var(--border);
+}
+
+.xg-log-table tbody td {
+  border-bottom: 1px solid var(--border);
+  color: var(--text);
+}
+
+.xg-log-table tbody tr:hover {
+  background: var(--surface-hover);
+}
+
+.xg-log-table tfoot td {
+  padding-top: 10px;
+  font-weight: 600;
+  color: var(--text);
+  border-top: 2px solid var(--border);
+}
+
+.xg-log-num {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.xg-log-date {
+  color: var(--text-secondary);
+}
+
+.xg-log-opponent {
+  font-weight: 500;
+}
+
+.xg-log-venue {
+  display: inline-block;
+  width: 18px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.xg-log-table tbody td.xg-log-positive,
+.xg-log-table tfoot td.xg-log-positive {
+  color: #22c55e;
+}
+
+.xg-log-table tbody td.xg-log-negative,
+.xg-log-table tfoot td.xg-log-negative {
+  color: #ef4444;
+}
+
+@media (max-width: 480px) {
+  .xg-log-container h3 {
+    flex-wrap: wrap;
+  }
+
+  .xg-log-btn {
+    padding: 5px 8px;
+    font-size: 0.75rem;
+  }
+
+  .xg-log-table th,
+  .xg-log-table td {
+    padding: 7px 8px;
+    font-size: 0.78rem;
+  }
+}

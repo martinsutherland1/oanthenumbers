@@ -1,0 +1,28 @@
+{
+  "name": "playwright_js",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "collect_spfl_2024_25": "npx playwright test tests/collectData_2024_25-SPFL.spec.js && node mergeData_spfl_2024_25.js && mkdir -p ../oanthenumberapp/src/data && cp ./transferredData/data_breakdown_spfl_2024_25.json ../oanthenumberapp/src/data/spfl_results_2024_25.json",
+    "collect_spfl_2025_26": "npx playwright test tests/collectData_2025_26-SPFL.spec.js && node mergeData_spfl_2025_26.js && mkdir -p ../oanthenumberapp/src/data && cp ./transferredData/data_breakdown_spfl_2025_26.json ../oanthenumberapp/src/data/spfl_results_2025_26.json",
+    "collect_spfl_2026_27": "npx playwright test tests/collectData_2026_27-SPFL.spec.js && node mergeData_spfl_2026_27.js && mkdir -p ../oanthenumberapp/src/data && cp ./transferredData/data_breakdown_spfl_2026_27.json ../oanthenumberapp/src/data/spfl_results_2026_27.json",
+    "collect_epl_2025_26": "npx playwright test tests/collectData_2025_26-EPL.spec.js && node mergeData_epl_2025_26.js && mkdir -p ../oanthenumberapp/src/data && cp ./transferredData/data_breakdown_epl_2025_26.json ../oanthenumberapp/src/data/epl_results_2025_26.json",
+    "collect_epl_2026_27": "npx playwright test tests/collectData_2026_27-EPL.spec.js && node mergeData_epl_2026_27.js && mkdir -p ../oanthenumberapp/src/data && cp ./transferredData/data_breakdown_epl_2026_27.json ../oanthenumberapp/src/data/epl_results_2026_27.json",
+    "collect_laliga_2025_26": "npx playwright test tests/collectData_2025_26-LaLiga.spec.js && node mergeData_laliga_2025_26.js && mkdir -p /Users/martinsutherland/projects_2025/python_logic/football-predictor/data/collected && cp LaLiga_data_2025_26.json data_breakdown_laliga_2025_26.json /Users/martinsutherland/projects_2025/python_logic/football-predictor/data/collected/",
+    "collect_ligaportugal_2025_26": "npx playwright test tests/collectData_2025_26-LigaPortugal.spec.js && node mergeData_ligaportugal_2025_26.js && mkdir -p /Users/martinsutherland/projects_2025/python_logic/football-predictor/data/collected && cp LigaPortugal_data_2025_26.json data_breakdown_ligaportugal_2025_26.json /Users/martinsutherland/projects_2025/python_logic/football-predictor/data/collected/",
+    "collect_ligue1_2025_26": "npx playwright test tests/collectData_2025_26-Ligue1.spec.js && node mergeData_ligue1_2025_26.js && mkdir -p /Users/martinsutherland/projects_2025/python_logic/football-predictor/data/collected && cp Ligue1_data_2025_26.json data_breakdown_ligue1_2025_26.json /Users/martinsutherland/projects_2025/python_logic/football-predictor/data/collected/",
+    "collect_seriea_2025_26": "npx playwright test tests/collectData_2025_26-SerieA.spec.js && node mergeData_seriea_2025_26.js && mkdir -p /Users/martinsutherland/projects_2025/python_logic/football-predictor/data/collected && cp SerieA_data_2025_26.json data_breakdown_seriea_2025_26.json /Users/martinsutherland/projects_2025/python_logic/football-predictor/data/collected/",
+    "predict_epl": "npx playwright test tests/predictEPL.spec.js && mkdir -p /Users/martinsutherland/projects_2025/python_logic/football-predictor/data/predictions && cp epl_predictions.json /Users/martinsutherland/projects_2025/python_logic/football-predictor/data/predictions/",
+    "predict_spfl": "npx playwright test tests/predictSPFL.spec.js && mkdir -p /Users/martinsutherland/projects_2025/python_logic/football-predictor/data/predictions && cp spfl_predictions.json /Users/martinsutherland/projects_2025/python_logic/football-predictor/data/predictions/",
+    "predict_all": "npm run predict_epl && npm run predict_spfl"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@playwright/test": "^1.56.1",
+    "@types/node": "^24.10.1"
+  }
+}

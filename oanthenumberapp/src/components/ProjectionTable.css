@@ -1,0 +1,10 @@
+.projection-table .col-xgdiff { width: 80px; }
+.projection-table .col-xpts { width: 72px; }
+.projection-table .col-rem { width: 56px; }
+.projection-table .col-cur-pts { width: 48px; }
+.projection-table .col-proj-pts { width: 84px; }
+
+@media (max-width: 480px) {
+  .projection-table .col-xgdiff { width: 72px; }
+  .projection-table .col-proj-pts { width: 68px; }
+}

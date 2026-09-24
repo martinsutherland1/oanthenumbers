@@ -1,0 +1,1205 @@
+{
+  "fixtures_0": [
+    {
+      "team_home": "heart-midlothian",
+      "team_away": "rangers",
+      "date": "2024-08-03"
+    },
+    {
+      "team_home": "motherwell",
+      "team_away": "ross-county",
+      "date": "2024-08-03"
+    },
+    {
+      "team_home": "dundee-united",
+      "team_away": "dundee-fc",
+      "date": "2024-08-04"
+    },
+    {
+      "team_home": "st-mirren",
+      "team_away": "hibernian",
+      "date": "2024-08-04"
+    },
+    {
+      "team_home": "celtic",
+      "team_away": "kilmarnock",
+      "date": "2024-08-04"
+    },
+    {
+      "team_home": "st-johnstone",
+      "team_away": "aberdeen",
+      "date": "2024-08-05"
+    }
+  ],
+  "fixtures_1": [
+    {
+      "team_home": "rangers",
+      "team_away": "motherwell",
+      "date": "2024-08-10"
+    },
+    {
+      "team_home": "ross-county",
+      "team_away": "dundee-united",
+      "date": "2024-08-10"
+    },
+    {
+      "team_home": "dundee-fc",
+      "team_away": "heart-midlothian",
+      "date": "2024-08-10"
+    },
+    {
+      "team_home": "hibernian",
+      "team_away": "celtic",
+      "date": "2024-08-11"
+    },
+    {
+      "team_home": "aberdeen",
+      "team_away": "st-mirren",
+      "date": "2024-08-11"
+    },
+    {
+      "team_home": "kilmarnock",
+      "team_away": "st-johnstone",
+      "date": "2024-08-11"
+    }
+  ],
+  "fixtures_2": [
+    {
+      "team_home": "dundee-united",
+      "team_away": "st-johnstone",
+      "date": "2024-08-24"
+    },
+    {
+      "team_home": "hibernian",
+      "team_away": "dundee-fc",
+      "date": "2024-08-24"
+    },
+    {
+      "team_home": "rangers",
+      "team_away": "ross-county",
+      "date": "2024-08-24"
+    },
+    {
+      "team_home": "st-mirren",
+      "team_away": "celtic",
+      "date": "2024-08-25"
+    },
+    {
+      "team_home": "aberdeen",
+      "team_away": "kilmarnock",
+      "date": "2024-08-25"
+    },
+    {
+      "team_home": "motherwell",
+      "team_away": "heart-midlothian",
+      "date": "2024-08-25"
+    }
+  ],
+  "fixtures_3": [
+    {
+      "team_home": "dundee-fc",
+      "team_away": "st-mirren",
+      "date": "2024-08-31"
+    },
+    {
+      "team_home": "st-johnstone",
+      "team_away": "motherwell",
+      "date": "2024-08-31"
+    },
+    {
+      "team_home": "ross-county",
+      "team_away": "aberdeen",
+      "date": "2024-08-31"
+    },
+    {
+      "team_home": "celtic",
+      "team_away": "rangers",
+      "date": "2024-09-01"
+    },
+    {
+      "team_home": "heart-midlothian",
+      "team_away": "dundee-united",
+      "date": "2024-09-01"
+    },
+    {
+      "team_home": "kilmarnock",
+      "team_away": "hibernian",
+      "date": "2024-09-01"
+    }
+  ],
+  "fixtures_4": [
+    {
+      "team_home": "aberdeen",
+      "team_away": "motherwell",
+      "date": "2024-09-14"
+    },
+    {
+      "team_home": "celtic",
+      "team_away": "heart-midlothian",
+      "date": "2024-09-14"
+    },
+    {
+      "team_home": "hibernian",
+      "team_away": "st-johnstone",
+      "date": "2024-09-14"
+    },
+    {
+      "team_home": "ross-county",
+      "team_away": "dundee-fc",
+      "date": "2024-09-14"
+    },
+    {
+      "team_home": "st-mirren",
+      "team_away": "kilmarnock",
+      "date": "2024-09-14"
+    },
+    {
+      "team_home": "dundee-united",
+      "team_away": "rangers",
+      "date": "2024-09-15"
+    }
+  ],
+  "fixtures_5": [
+    {
+      "team_home": "dundee-fc",
+      "team_away": "aberdeen",
+      "date": "2024-09-28"
+    },
+    {
+      "team_home": "heart-midlothian",
+      "team_away": "ross-county",
+      "date": "2024-09-28"
+    },
+    {
+      "team_home": "kilmarnock",
+      "team_away": "dundee-united",
+      "date": "2024-09-28"
+    },
+    {
+      "team_home": "motherwell",
+      "team_away": "st-mirren",
+      "date": "2024-09-28"
+    },
+    {
+      "team_home": "st-johnstone",
+      "team_away": "celtic",
+      "date": "2024-09-28"
+    },
+    {
+      "team_home": "rangers",
+      "team_away": "hibernian",
+      "date": "2024-09-29"
+    }
+  ],
+  "fixtures_6": [
+    {
+      "team_home": "dundee-fc",
+      "team_away": "kilmarnock",
+      "date": "2024-10-05"
+    },
+    {
+      "team_home": "hibernian",
+      "team_away": "motherwell",
+      "date": "2024-10-05"
+    },
+    {
+      "team_home": "st-mirren",
+      "team_away": "dundee-united",
+      "date": "2024-10-05"
+    },
+    {
+      "team_home": "ross-county",
+      "team_away": "celtic",
+      "date": "2024-10-06"
+    },
+    {
+      "team_home": "aberdeen",
+      "team_away": "heart-midlothian",
+      "date": "2024-10-06"
+    },
+    {
+      "team_home": "rangers",
+      "team_away": "st-johnstone",
+      "date": "2024-10-06"
+    }
+  ],
+  "fixtures_7": [
+    {
+      "team_home": "celtic",
+      "team_away": "aberdeen",
+      "date": "2024-10-19"
+    },
+    {
+      "team_home": "dundee-united",
+      "team_away": "hibernian",
+      "date": "2024-10-19"
+    },
+    {
+      "team_home": "heart-midlothian",
+      "team_away": "st-mirren",
+      "date": "2024-10-19"
+    },
+    {
+      "team_home": "motherwell",
+      "team_away": "dundee-fc",
+      "date": "2024-10-19"
+    },
+    {
+      "team_home": "st-johnstone",
+      "team_away": "ross-county",
+      "date": "2024-10-19"
+    },
+    {
+      "team_home": "kilmarnock",
+      "team_away": "rangers",
+      "date": "2024-10-20"
+    }
+  ],
+  "fixtures_8": [
+    {
+      "team_home": "dundee-fc",
+      "team_away": "st-johnstone",
+      "date": "2024-10-26"
+    },
+    {
+      "team_home": "ross-county",
+      "team_away": "kilmarnock",
+      "date": "2024-10-26"
+    },
+    {
+      "team_home": "aberdeen",
+      "team_away": "dundee-united",
+      "date": "2024-10-26"
+    },
+    {
+      "team_home": "hibernian",
+      "team_away": "heart-midlothian",
+      "date": "2024-10-27"
+    },
+    {
+      "team_home": "motherwell",
+      "team_away": "celtic",
+      "date": "2024-10-27"
+    },
+    {
+      "team_home": "rangers",
+      "team_away": "st-mirren",
+      "date": "2024-10-27"
+    }
+  ],
+  "fixtures_9": [
+    {
+      "team_home": "celtic",
+      "team_away": "dundee-fc",
+      "date": "2024-10-30"
+    },
+    {
+      "team_home": "dundee-united",
+      "team_away": "motherwell",
+      "date": "2024-10-30"
+    },
+    {
+      "team_home": "heart-midlothian",
+      "team_away": "kilmarnock",
+      "date": "2024-10-30"
+    },
+    {
+      "team_home": "ross-county",
+      "team_away": "hibernian",
+      "date": "2024-10-30"
+    },
+    {
+      "team_home": "st-mirren",
+      "team_away": "st-johnstone",
+      "date": "2024-10-30"
+    },
+    {
+      "team_home": "aberdeen",
+      "team_away": "rangers",
+      "date": "2024-10-30"
+    }
+  ],
+  "fixtures_10": [
+    {
+      "team_home": "st-johnstone",
+      "team_away": "heart-midlothian",
+      "date": "2024-11-02"
+    },
+    {
+      "team_home": "st-mirren",
+      "team_away": "ross-county",
+      "date": "2024-11-02"
+    },
+    {
+      "team_home": "hibernian",
+      "team_away": "aberdeen",
+      "date": "2024-11-26"
+    },
+    {
+      "team_home": "celtic",
+      "team_away": "dundee-united",
+      "date": "2025-01-08"
+    },
+    {
+      "team_home": "kilmarnock",
+      "team_away": "motherwell",
+      "date": "2025-01-08"
+    },
+    {
+      "team_home": "dundee-fc",
+      "team_away": "rangers",
+      "date": "2025-01-09"
+    }
+  ],
+  "fixtures_11": [
+    {
+      "team_home": "dundee-united",
+      "team_away": "ross-county",
+      "date": "2024-11-09"
+    },
+    {
+      "team_home": "hibernian",
+      "team_away": "st-mirren",
+      "date": "2024-11-09"
+    },
+    {
+      "team_home": "motherwell",
+      "team_away": "st-johnstone",
+      "date": "2024-11-09"
+    },
+    {
+      "team_home": "aberdeen",
+      "team_away": "dundee-fc",
+      "date": "2024-11-09"
+    },
+    {
+      "team_home": "kilmarnock",
+      "team_away": "celtic",
+      "date": "2024-11-10"
+    },
+    {
+      "team_home": "rangers",
+      "team_away": "heart-midlothian",
+      "date": "2024-11-10"
+    }
+  ],
+  "fixtures_12": [
+    {
+      "team_home": "ross-county",
+      "team_away": "motherwell",
+      "date": "2024-11-23"
+    },
+    {
+      "team_home": "st-johnstone",
+      "team_away": "kilmarnock",
+      "date": "2024-11-23"
+    },
+    {
+      "team_home": "rangers",
+      "team_away": "dundee-united",
+      "date": "2024-11-23"
+    },
+    {
+      "team_home": "st-mirren",
+      "team_away": "aberdeen",
+      "date": "2024-11-23"
+    },
+    {
+      "team_home": "dundee-fc",
+      "team_away": "hibernian",
+      "date": "2024-11-23"
+    },
+    {
+      "team_home": "heart-midlothian",
+      "team_away": "celtic",
+      "date": "2024-11-23"
+    }
+  ],
+  "fixtures_13": [
+    {
+      "team_home": "celtic",
+      "team_away": "ross-county",
+      "date": "2024-11-30"
+    },
+    {
+      "team_home": "dundee-united",
+      "team_away": "st-mirren",
+      "date": "2024-11-30"
+    },
+    {
+      "team_home": "kilmarnock",
+      "team_away": "dundee-fc",
+      "date": "2024-11-30"
+    },
+    {
+      "team_home": "motherwell",
+      "team_away": "hibernian",
+      "date": "2024-11-30"
+    },
+    {
+      "team_home": "st-johnstone",
+      "team_away": "rangers",
+      "date": "2024-12-01"
+    },
+    {
+      "team_home": "heart-midlothian",
+      "team_away": "aberdeen",
+      "date": "2024-12-01"
+    }
+  ],
+  "fixtures_14": [
+    {
+      "team_home": "ross-county",
+      "team_away": "st-johnstone",
+      "date": "2024-09-21"
+    },
+    {
+      "team_home": "st-mirren",
+      "team_away": "heart-midlothian",
+      "date": "2024-09-21"
+    },
+    {
+      "team_home": "hibernian",
+      "team_away": "dundee-united",
+      "date": "2024-11-03"
+    },
+    {
+      "team_home": "dundee-fc",
+      "team_away": "motherwell",
+      "date": "2024-12-04"
+    },
+    {
+      "team_home": "rangers",
+      "team_away": "kilmarnock",
+      "date": "2024-12-04"
+    },
+    {
+      "team_home": "aberdeen",
+      "team_away": "celtic",
+      "date": "2024-12-04"
+    }
+  ],
+  "fixtures_15": [
+    {
+      "team_home": "aberdeen",
+      "team_away": "st-johnstone",
+      "date": "2024-12-07"
+    },
+    {
+      "team_home": "celtic",
+      "team_away": "hibernian",
+      "date": "2024-12-07"
+    },
+    {
+      "team_home": "dundee-united",
+      "team_away": "kilmarnock",
+      "date": "2024-12-07"
+    },
+    {
+      "team_home": "heart-midlothian",
+      "team_away": "dundee-fc",
+      "date": "2024-12-07"
+    },
+    {
+      "team_home": "st-mirren",
+      "team_away": "motherwell",
+      "date": "2024-12-07"
+    },
+    {
+      "team_home": "ross-county",
+      "team_away": "rangers",
+      "date": "2024-12-08"
+    }
+  ],
+  "fixtures_16": [
+    {
+      "team_home": "hibernian",
+      "team_away": "ross-county",
+      "date": "2024-12-14"
+    },
+    {
+      "team_home": "motherwell",
+      "team_away": "dundee-united",
+      "date": "2024-12-14"
+    },
+    {
+      "team_home": "st-johnstone",
+      "team_away": "st-mirren",
+      "date": "2024-12-14"
+    },
+    {
+      "team_home": "kilmarnock",
+      "team_away": "heart-midlothian",
+      "date": "2024-12-15"
+    },
+    {
+      "team_home": "dundee-fc",
+      "team_away": "celtic",
+      "date": "2025-01-14"
+    },
+    {
+      "team_home": "rangers",
+      "team_away": "aberdeen",
+      "date": "2025-01-15"
+    }
+  ],
+  "fixtures_17": [
+    {
+      "team_home": "motherwell",
+      "team_away": "kilmarnock",
+      "date": "2024-12-20"
+    },
+    {
+      "team_home": "aberdeen",
+      "team_away": "hibernian",
+      "date": "2024-12-21"
+    },
+    {
+      "team_home": "rangers",
+      "team_away": "dundee-fc",
+      "date": "2024-12-21"
+    },
+    {
+      "team_home": "ross-county",
+      "team_away": "st-mirren",
+      "date": "2024-12-21"
+    },
+    {
+      "team_home": "dundee-united",
+      "team_away": "celtic",
+      "date": "2024-12-22"
+    },
+    {
+      "team_home": "heart-midlothian",
+      "team_away": "st-johnstone",
+      "date": "2024-12-22"
+    }
+  ],
+  "fixtures_18": [
+    {
+      "team_home": "heart-midlothian",
+      "team_away": "hibernian",
+      "date": "2024-12-26"
+    },
+    {
+      "team_home": "celtic",
+      "team_away": "motherwell",
+      "date": "2024-12-26"
+    },
+    {
+      "team_home": "dundee-fc",
+      "team_away": "ross-county",
+      "date": "2024-12-26"
+    },
+    {
+      "team_home": "kilmarnock",
+      "team_away": "aberdeen",
+      "date": "2024-12-26"
+    },
+    {
+      "team_home": "st-johnstone",
+      "team_away": "dundee-united",
+      "date": "2024-12-26"
+    },
+    {
+      "team_home": "st-mirren",
+      "team_away": "rangers",
+      "date": "2024-12-26"
+    }
+  ],
+  "fixtures_19": [
+    {
+      "team_home": "celtic",
+      "team_away": "st-johnstone",
+      "date": "2024-12-29"
+    },
+    {
+      "team_home": "hibernian",
+      "team_away": "kilmarnock",
+      "date": "2024-12-29"
+    },
+    {
+      "team_home": "motherwell",
+      "team_away": "rangers",
+      "date": "2024-12-29"
+    },
+    {
+      "team_home": "ross-county",
+      "team_away": "heart-midlothian",
+      "date": "2024-12-29"
+    },
+    {
+      "team_home": "st-mirren",
+      "team_away": "dundee-fc",
+      "date": "2024-12-29"
+    },
+    {
+      "team_home": "dundee-united",
+      "team_away": "aberdeen",
+      "date": "2024-12-29"
+    }
+  ],
+  "fixtures_20": [
+    {
+      "team_home": "aberdeen",
+      "team_away": "ross-county",
+      "date": "2025-01-02"
+    },
+    {
+      "team_home": "heart-midlothian",
+      "team_away": "motherwell",
+      "date": "2025-01-02"
+    },
+    {
+      "team_home": "kilmarnock",
+      "team_away": "st-mirren",
+      "date": "2025-01-02"
+    },
+    {
+      "team_home": "rangers",
+      "team_away": "celtic",
+      "date": "2025-01-02"
+    },
+    {
+      "team_home": "st-johnstone",
+      "team_away": "hibernian",
+      "date": "2025-01-02"
+    },
+    {
+      "team_home": "dundee-fc",
+      "team_away": "dundee-united",
+      "date": "2025-01-02"
+    }
+  ],
+  "fixtures_21": [
+    {
+      "team_home": "hibernian",
+      "team_away": "rangers",
+      "date": "2025-01-05"
+    },
+    {
+      "team_home": "motherwell",
+      "team_away": "aberdeen",
+      "date": "2025-01-05"
+    },
+    {
+      "team_home": "celtic",
+      "team_away": "st-mirren",
+      "date": "2025-01-05"
+    },
+    {
+      "team_home": "dundee-united",
+      "team_away": "heart-midlothian",
+      "date": "2025-01-05"
+    },
+    {
+      "team_home": "kilmarnock",
+      "team_away": "ross-county",
+      "date": "2025-01-05"
+    },
+    {
+      "team_home": "st-johnstone",
+      "team_away": "dundee-fc",
+      "date": "2025-01-05"
+    }
+  ],
+  "fixtures_22": [
+    {
+      "team_home": "dundee-fc",
+      "team_away": "kilmarnock",
+      "date": "2025-01-12"
+    },
+    {
+      "team_home": "ross-county",
+      "team_away": "celtic",
+      "date": "2025-01-12"
+    },
+    {
+      "team_home": "hibernian",
+      "team_away": "motherwell",
+      "date": "2025-01-12"
+    },
+    {
+      "team_home": "st-mirren",
+      "team_away": "dundee-united",
+      "date": "2025-01-13"
+    },
+    {
+      "team_home": "aberdeen",
+      "team_away": "heart-midlothian",
+      "date": "2025-01-13"
+    }
+  ],
+  "fixtures_23": [
+    {
+      "team_home": "aberdeen",
+      "team_away": "st-mirren",
+      "date": "2025-01-26"
+    },
+    {
+      "team_home": "heart-midlothian",
+      "team_away": "kilmarnock",
+      "date": "2025-01-26"
+    },
+    {
+      "team_home": "ross-county",
+      "team_away": "hibernian",
+      "date": "2025-01-26"
+    },
+    {
+      "team_home": "st-johnstone",
+      "team_away": "motherwell",
+      "date": "2025-01-26"
+    },
+    {
+      "team_home": "dundee-united",
+      "team_away": "rangers",
+      "date": "2025-01-27"
+    },
+    {
+      "team_home": "celtic",
+      "team_away": "dundee-fc",
+      "date": "2025-02-05"
+    }
+  ],
+  "fixtures_24": [
+    {
+      "team_home": "dundee-fc",
+      "team_away": "heart-midlothian",
+      "date": "2025-02-02"
+    },
+    {
+      "team_home": "hibernian",
+      "team_away": "aberdeen",
+      "date": "2025-02-02"
+    },
+    {
+      "team_home": "st-mirren",
+      "team_away": "st-johnstone",
+      "date": "2025-02-02"
+    },
+    {
+      "team_home": "motherwell",
+      "team_away": "celtic",
+      "date": "2025-02-03"
+    },
+    {
+      "team_home": "rangers",
+      "team_away": "ross-county",
+      "date": "2025-02-03"
+    }
+  ],
+  "fixtures_25": [
+    {
+      "team_home": "celtic",
+      "team_away": "dundee-united",
+      "date": "2025-02-16"
+    },
+    {
+      "team_home": "dundee-fc",
+      "team_away": "aberdeen",
+      "date": "2025-02-16"
+    },
+    {
+      "team_home": "kilmarnock",
+      "team_away": "st-johnstone",
+      "date": "2025-02-16"
+    },
+    {
+      "team_home": "motherwell",
+      "team_away": "ross-county",
+      "date": "2025-02-16"
+    },
+    {
+      "team_home": "heart-midlothian",
+      "team_away": "rangers",
+      "date": "2025-02-17"
+    },
+    {
+      "team_home": "st-mirren",
+      "team_away": "hibernian",
+      "date": "2025-02-17"
+    }
+  ],
+  "fixtures_26": [
+    {
+      "team_home": "hibernian",
+      "team_away": "celtic",
+      "date": "2025-02-23"
+    },
+    {
+      "team_home": "aberdeen",
+      "team_away": "kilmarnock",
+      "date": "2025-02-23"
+    },
+    {
+      "team_home": "dundee-united",
+      "team_away": "motherwell",
+      "date": "2025-02-23"
+    },
+    {
+      "team_home": "rangers",
+      "team_away": "st-mirren",
+      "date": "2025-02-23"
+    },
+    {
+      "team_home": "ross-county",
+      "team_away": "dundee-fc",
+      "date": "2025-02-23"
+    },
+    {
+      "team_home": "st-johnstone",
+      "team_away": "heart-midlothian",
+      "date": "2025-02-23"
+    }
+  ],
+  "fixtures_27": [
+    {
+      "team_home": "celtic",
+      "team_away": "aberdeen",
+      "date": "2025-02-26"
+    },
+    {
+      "team_home": "dundee-united",
+      "team_away": "hibernian",
+      "date": "2025-02-27"
+    },
+    {
+      "team_home": "heart-midlothian",
+      "team_away": "st-mirren",
+      "date": "2025-02-27"
+    },
+    {
+      "team_home": "motherwell",
+      "team_away": "dundee-fc",
+      "date": "2025-02-27"
+    },
+    {
+      "team_home": "st-johnstone",
+      "team_away": "ross-county",
+      "date": "2025-02-27"
+    },
+    {
+      "team_home": "rangers",
+      "team_away": "kilmarnock",
+      "date": "2025-02-27"
+    }
+  ],
+  "fixtures_28": [
+    {
+      "team_home": "dundee-fc",
+      "team_away": "st-johnstone",
+      "date": "2025-03-01"
+    },
+    {
+      "team_home": "rangers",
+      "team_away": "motherwell",
+      "date": "2025-03-01"
+    },
+    {
+      "team_home": "ross-county",
+      "team_away": "kilmarnock",
+      "date": "2025-03-01"
+    },
+    {
+      "team_home": "st-mirren",
+      "team_away": "celtic",
+      "date": "2025-03-01"
+    },
+    {
+      "team_home": "hibernian",
+      "team_away": "heart-midlothian",
+      "date": "2025-03-02"
+    },
+    {
+      "team_home": "aberdeen",
+      "team_away": "dundee-united",
+      "date": "2025-03-02"
+    }
+  ],
+  "fixtures_29": [
+    {
+      "team_home": "heart-midlothian",
+      "team_away": "ross-county",
+      "date": "2025-03-16"
+    },
+    {
+      "team_home": "kilmarnock",
+      "team_away": "hibernian",
+      "date": "2025-03-16"
+    },
+    {
+      "team_home": "motherwell",
+      "team_away": "st-mirren",
+      "date": "2025-03-16"
+    },
+    {
+      "team_home": "st-johnstone",
+      "team_away": "aberdeen",
+      "date": "2025-03-16"
+    },
+    {
+      "team_home": "celtic",
+      "team_away": "rangers",
+      "date": "2025-03-17"
+    },
+    {
+      "team_home": "dundee-united",
+      "team_away": "dundee-fc",
+      "date": "2025-03-17"
+    }
+  ],
+  "fixtures_30": [
+    {
+      "team_home": "aberdeen",
+      "team_away": "motherwell",
+      "date": "2025-03-30"
+    },
+    {
+      "team_home": "celtic",
+      "team_away": "heart-midlothian",
+      "date": "2025-03-30"
+    },
+    {
+      "team_home": "hibernian",
+      "team_away": "st-johnstone",
+      "date": "2025-03-30"
+    },
+    {
+      "team_home": "st-mirren",
+      "team_away": "kilmarnock",
+      "date": "2025-03-30"
+    },
+    {
+      "team_home": "dundee-fc",
+      "team_away": "rangers",
+      "date": "2025-03-30"
+    },
+    {
+      "team_home": "ross-county",
+      "team_away": "dundee-united",
+      "date": "2025-03-31"
+    }
+  ],
+  "fixtures_31": [
+    {
+      "team_home": "dundee-fc",
+      "team_away": "st-mirren",
+      "date": "2025-04-06"
+    },
+    {
+      "team_home": "kilmarnock",
+      "team_away": "motherwell",
+      "date": "2025-04-06"
+    },
+    {
+      "team_home": "rangers",
+      "team_away": "hibernian",
+      "date": "2025-04-06"
+    },
+    {
+      "team_home": "ross-county",
+      "team_away": "aberdeen",
+      "date": "2025-04-06"
+    },
+    {
+      "team_home": "st-johnstone",
+      "team_away": "celtic",
+      "date": "2025-04-06"
+    },
+    {
+      "team_home": "heart-midlothian",
+      "team_away": "dundee-united",
+      "date": "2025-04-07"
+    }
+  ],
+  "fixtures_32": [
+    {
+      "team_home": "celtic",
+      "team_away": "kilmarnock",
+      "date": "2025-04-12"
+    },
+    {
+      "team_home": "dundee-united",
+      "team_away": "st-johnstone",
+      "date": "2025-04-13"
+    },
+    {
+      "team_home": "motherwell",
+      "team_away": "heart-midlothian",
+      "date": "2025-04-13"
+    },
+    {
+      "team_home": "st-mirren",
+      "team_away": "ross-county",
+      "date": "2025-04-13"
+    },
+    {
+      "team_home": "aberdeen",
+      "team_away": "rangers",
+      "date": "2025-04-13"
+    },
+    {
+      "team_home": "hibernian",
+      "team_away": "dundee-fc",
+      "date": "2025-04-14"
+    }
+  ],
+  "fixtures_33": [
+    {
+      "team_home": "dundee-united",
+      "team_away": "celtic",
+      "date": "2025-04-26"
+    },
+    {
+      "team_home": "aberdeen",
+      "team_away": "hibernian",
+      "date": "2025-04-27"
+    },
+    {
+      "team_home": "heart-midlothian",
+      "team_away": "dundee-fc",
+      "date": "2025-04-27"
+    },
+    {
+      "team_home": "kilmarnock",
+      "team_away": "ross-county",
+      "date": "2025-04-27"
+    },
+    {
+      "team_home": "motherwell",
+      "team_away": "st-johnstone",
+      "date": "2025-04-27"
+    },
+    {
+      "team_home": "st-mirren",
+      "team_away": "rangers",
+      "date": "2025-04-27"
+    }
+  ],
+  "fixtures_34": [
+    {
+      "team_home": "dundee-fc",
+      "team_away": "motherwell",
+      "date": "2025-05-04"
+    },
+    {
+      "team_home": "hibernian",
+      "team_away": "dundee-united",
+      "date": "2025-05-04"
+    },
+    {
+      "team_home": "ross-county",
+      "team_away": "heart-midlothian",
+      "date": "2025-05-04"
+    },
+    {
+      "team_home": "st-johnstone",
+      "team_away": "kilmarnock",
+      "date": "2025-05-04"
+    },
+    {
+      "team_home": "st-mirren",
+      "team_away": "aberdeen",
+      "date": "2025-05-04"
+    },
+    {
+      "team_home": "rangers",
+      "team_away": "celtic",
+      "date": "2025-05-04"
+    }
+  ],
+  "fixtures_35": [
+    {
+      "team_home": "celtic",
+      "team_away": "hibernian",
+      "date": "2025-05-06"
+    },
+    {
+      "team_home": "heart-midlothian",
+      "team_away": "motherwell",
+      "date": "2025-05-06"
+    },
+    {
+      "team_home": "kilmarnock",
+      "team_away": "dundee-fc",
+      "date": "2025-05-06"
+    },
+    {
+      "team_home": "st-johnstone",
+      "team_away": "ross-county",
+      "date": "2025-05-06"
+    },
+    {
+      "team_home": "rangers",
+      "team_away": "aberdeen",
+      "date": "2025-05-06"
+    }
+  ],
+  "fixtures_36": [
+    {
+      "team_home": "dundee-fc",
+      "team_away": "ross-county",
+      "date": "2025-05-15"
+    },
+    {
+      "team_home": "heart-midlothian",
+      "team_away": "st-johnstone",
+      "date": "2025-05-15"
+    },
+    {
+      "team_home": "motherwell",
+      "team_away": "kilmarnock",
+      "date": "2025-05-15"
+    },
+    {
+      "team_home": "rangers",
+      "team_away": "dundee-united",
+      "date": "2025-05-15"
+    },
+    {
+      "team_home": "st-mirren",
+      "team_away": "hibernian",
+      "date": "2025-05-15"
+    },
+    {
+      "team_home": "aberdeen",
+      "team_away": "celtic",
+      "date": "2025-05-11"
+    }
+  ],
+  "fixtures_37": [
+    {
+      "team_home": "celtic",
+      "team_away": "st-mirren",
+      "date": "2025-05-17"
+    },
+    {
+      "team_home": "dundee-united",
+      "team_away": "aberdeen",
+      "date": "2025-05-17"
+    },
+    {
+      "team_home": "hibernian",
+      "team_away": "rangers",
+      "date": "2025-05-17"
+    },
+    {
+      "team_home": "kilmarnock",
+      "team_away": "heart-midlothian",
+      "date": "2025-05-19"
+    },
+    {
+      "team_home": "ross-county",
+      "team_away": "motherwell",
+      "date": "2025-05-19"
+    },
+    {
+      "team_home": "st-johnstone",
+      "team_away": "dundee-fc",
+      "date": "2025-05-19"
+    }
+  ]
+}
+
+

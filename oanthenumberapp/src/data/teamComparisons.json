@@ -1,0 +1,18 @@
+{
+  "_comment": "Which team's data from last season to use for each team's year-on-year comparison. Defaults to the team itself; override when a team wasn't in the league last season (e.g. newly promoted) with the team it effectively replaced, or an array of teams to average when there's no single obvious replacement.",
+  "aberdeen": "aberdeen",
+  "celtic": "celtic",
+  "dundee-fc": "dundee-fc",
+  "dundee-united": "dundee-united",
+  "falkirk": "falkirk",
+  "heart-midlothian": "heart-midlothian",
+  "hibernian": "hibernian",
+  "kilmarnock": "kilmarnock",
+  "motherwell": "motherwell",
+  "rangers": "rangers",
+  "st-mirren": "st-mirren",
+  "st-johnstone": "livingston",
+  "coventry-city": ["west-ham-united", "burnley", "wolverhampton-wanderers"],
+  "ipswich-town": ["west-ham-united", "burnley", "wolverhampton-wanderers"],
+  "hull-city": ["west-ham-united", "burnley", "wolverhampton-wanderers"]
+}

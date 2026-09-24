@@ -1,0 +1,2358 @@
+{
+  "fixtures_0": [
+    {
+      "team_home": "real-madrid",
+      "team_away": "alaves",
+      "date": "2025-08-15",
+      "time": "20:00"
+    },
+    {
+      "team_home": "barcelona",
+      "team_away": "real-oviedo",
+      "date": "2025-08-16",
+      "time": "12:30"
+    },
+    {
+      "team_home": "atletico-madrid",
+      "team_away": "elche",
+      "date": "2025-08-16",
+      "time": "15:00"
+    },
+    {
+      "team_home": "athletic-bilbao",
+      "team_away": "levante",
+      "date": "2025-08-16",
+      "time": "15:00"
+    },
+    {
+      "team_home": "real-sociedad",
+      "team_away": "espanyol",
+      "date": "2025-08-17",
+      "time": "14:00"
+    },
+    {
+      "team_home": "real-betis",
+      "team_away": "girona",
+      "date": "2025-08-17",
+      "time": "14:00"
+    },
+    {
+      "team_home": "villarreal",
+      "team_away": "mallorca",
+      "date": "2025-08-17",
+      "time": "16:30"
+    },
+    {
+      "team_home": "sevilla",
+      "team_away": "rayo-vallecano",
+      "date": "2025-08-17",
+      "time": "19:00"
+    },
+    {
+      "team_home": "valencia",
+      "team_away": "celta-vigo",
+      "date": "2025-08-18",
+      "time": "20:00"
+    },
+    {
+      "team_home": "getafe",
+      "team_away": "osasuna",
+      "date": "2025-08-18",
+      "time": "20:00"
+    }
+  ],
+  "fixtures_1": [
+    {
+      "team_home": "real-madrid",
+      "team_away": "real-oviedo",
+      "date": "2025-08-22",
+      "time": "20:00"
+    },
+    {
+      "team_home": "alaves",
+      "team_away": "elche",
+      "date": "2025-08-23",
+      "time": "12:30"
+    },
+    {
+      "team_home": "barcelona",
+      "team_away": "levante",
+      "date": "2025-08-23",
+      "time": "15:00"
+    },
+    {
+      "team_home": "atletico-madrid",
+      "team_away": "espanyol",
+      "date": "2025-08-23",
+      "time": "15:00"
+    },
+    {
+      "team_home": "athletic-bilbao",
+      "team_away": "girona",
+      "date": "2025-08-24",
+      "time": "14:00"
+    },
+    {
+      "team_home": "real-sociedad",
+      "team_away": "mallorca",
+      "date": "2025-08-24",
+      "time": "14:00"
+    },
+    {
+      "team_home": "real-betis",
+      "team_away": "rayo-vallecano",
+      "date": "2025-08-24",
+      "time": "16:30"
+    },
+    {
+      "team_home": "villarreal",
+      "team_away": "celta-vigo",
+      "date": "2025-08-24",
+      "time": "19:00"
+    },
+    {
+      "team_home": "sevilla",
+      "team_away": "osasuna",
+      "date": "2025-08-25",
+      "time": "20:00"
+    },
+    {
+      "team_home": "valencia",
+      "team_away": "getafe",
+      "date": "2025-08-25",
+      "time": "20:00"
+    }
+  ],
+  "fixtures_2": [
+    {
+      "team_home": "real-madrid",
+      "team_away": "elche",
+      "date": "2025-08-29",
+      "time": "20:00"
+    },
+    {
+      "team_home": "real-oviedo",
+      "team_away": "levante",
+      "date": "2025-08-30",
+      "time": "12:30"
+    },
+    {
+      "team_home": "alaves",
+      "team_away": "espanyol",
+      "date": "2025-08-30",
+      "time": "15:00"
+    },
+    {
+      "team_home": "barcelona",
+      "team_away": "girona",
+      "date": "2025-08-30",
+      "time": "15:00"
+    },
+    {
+      "team_home": "atletico-madrid",
+      "team_away": "mallorca",
+      "date": "2025-08-31",
+      "time": "14:00"
+    },
+    {
+      "team_home": "athletic-bilbao",
+      "team_away": "rayo-vallecano",
+      "date": "2025-08-31",
+      "time": "14:00"
+    },
+    {
+      "team_home": "real-sociedad",
+      "team_away": "celta-vigo",
+      "date": "2025-08-31",
+      "time": "16:30"
+    },
+    {
+      "team_home": "real-betis",
+      "team_away": "osasuna",
+      "date": "2025-08-31",
+      "time": "19:00"
+    },
+    {
+      "team_home": "villarreal",
+      "team_away": "getafe",
+      "date": "2025-09-01",
+      "time": "20:00"
+    },
+    {
+      "team_home": "sevilla",
+      "team_away": "valencia",
+      "date": "2025-09-01",
+      "time": "20:00"
+    }
+  ],
+  "fixtures_3": [
+    {
+      "team_home": "real-madrid",
+      "team_away": "levante",
+      "date": "2025-09-05",
+      "time": "20:00"
+    },
+    {
+      "team_home": "elche",
+      "team_away": "espanyol",
+      "date": "2025-09-06",
+      "time": "12:30"
+    },
+    {
+      "team_home": "real-oviedo",
+      "team_away": "girona",
+      "date": "2025-09-06",
+      "time": "15:00"
+    },
+    {
+      "team_home": "alaves",
+      "team_away": "mallorca",
+      "date": "2025-09-06",
+      "time": "15:00"
+    },
+    {
+      "team_home": "barcelona",
+      "team_away": "rayo-vallecano",
+      "date": "2025-09-07",
+      "time": "14:00"
+    },
+    {
+      "team_home": "atletico-madrid",
+      "team_away": "celta-vigo",
+      "date": "2025-09-07",
+      "time": "14:00"
+    },
+    {
+      "team_home": "athletic-bilbao",
+      "team_away": "osasuna",
+      "date": "2025-09-07",
+      "time": "16:30"
+    },
+    {
+      "team_home": "real-sociedad",
+      "team_away": "getafe",
+      "date": "2025-09-07",
+      "time": "19:00"
+    },
+    {
+      "team_home": "real-betis",
+      "team_away": "valencia",
+      "date": "2025-09-08",
+      "time": "20:00"
+    },
+    {
+      "team_home": "villarreal",
+      "team_away": "sevilla",
+      "date": "2025-09-08",
+      "time": "20:00"
+    }
+  ],
+  "fixtures_4": [
+    {
+      "team_home": "real-madrid",
+      "team_away": "espanyol",
+      "date": "2025-09-12",
+      "time": "20:00"
+    },
+    {
+      "team_home": "levante",
+      "team_away": "girona",
+      "date": "2025-09-13",
+      "time": "12:30"
+    },
+    {
+      "team_home": "elche",
+      "team_away": "mallorca",
+      "date": "2025-09-13",
+      "time": "15:00"
+    },
+    {
+      "team_home": "real-oviedo",
+      "team_away": "rayo-vallecano",
+      "date": "2025-09-13",
+      "time": "15:00"
+    },
+    {
+      "team_home": "alaves",
+      "team_away": "celta-vigo",
+      "date": "2025-09-14",
+      "time": "14:00"
+    },
+    {
+      "team_home": "barcelona",
+      "team_away": "osasuna",
+      "date": "2025-09-14",
+      "time": "14:00"
+    },
+    {
+      "team_home": "atletico-madrid",
+      "team_away": "getafe",
+      "date": "2025-09-14",
+      "time": "16:30"
+    },
+    {
+      "team_home": "athletic-bilbao",
+      "team_away": "valencia",
+      "date": "2025-09-14",
+      "time": "19:00"
+    },
+    {
+      "team_home": "real-sociedad",
+      "team_away": "sevilla",
+      "date": "2025-09-15",
+      "time": "20:00"
+    },
+    {
+      "team_home": "real-betis",
+      "team_away": "villarreal",
+      "date": "2025-09-15",
+      "time": "20:00"
+    }
+  ],
+  "fixtures_5": [
+    {
+      "team_home": "real-madrid",
+      "team_away": "girona",
+      "date": "2025-09-19",
+      "time": "20:00"
+    },
+    {
+      "team_home": "espanyol",
+      "team_away": "mallorca",
+      "date": "2025-09-20",
+      "time": "12:30"
+    },
+    {
+      "team_home": "levante",
+      "team_away": "rayo-vallecano",
+      "date": "2025-09-20",
+      "time": "15:00"
+    },
+    {
+      "team_home": "elche",
+      "team_away": "celta-vigo",
+      "date": "2025-09-20",
+      "time": "15:00"
+    },
+    {
+      "team_home": "real-oviedo",
+      "team_away": "osasuna",
+      "date": "2025-09-21",
+      "time": "14:00"
+    },
+    {
+      "team_home": "alaves",
+      "team_away": "getafe",
+      "date": "2025-09-21",
+      "time": "14:00"
+    },
+    {
+      "team_home": "barcelona",
+      "team_away": "valencia",
+      "date": "2025-09-21",
+      "time": "16:30"
+    },
+    {
+      "team_home": "atletico-madrid",
+      "team_away": "sevilla",
+      "date": "2025-09-21",
+      "time": "19:00"
+    },
+    {
+      "team_home": "athletic-bilbao",
+      "team_away": "villarreal",
+      "date": "2025-09-22",
+      "time": "20:00"
+    },
+    {
+      "team_home": "real-sociedad",
+      "team_away": "real-betis",
+      "date": "2025-09-22",
+      "time": "20:00"
+    }
+  ],
+  "fixtures_6": [
+    {
+      "team_home": "real-madrid",
+      "team_away": "mallorca",
+      "date": "2025-09-26",
+      "time": "20:00"
+    },
+    {
+      "team_home": "girona",
+      "team_away": "rayo-vallecano",
+      "date": "2025-09-27",
+      "time": "12:30"
+    },
+    {
+      "team_home": "espanyol",
+      "team_away": "celta-vigo",
+      "date": "2025-09-27",
+      "time": "15:00"
+    },
+    {
+      "team_home": "levante",
+      "team_away": "osasuna",
+      "date": "2025-09-27",
+      "time": "15:00"
+    },
+    {
+      "team_home": "elche",
+      "team_away": "getafe",
+      "date": "2025-09-28",
+      "time": "14:00"
+    },
+    {
+      "team_home": "real-oviedo",
+      "team_away": "valencia",
+      "date": "2025-09-28",
+      "time": "14:00"
+    },
+    {
+      "team_home": "alaves",
+      "team_away": "sevilla",
+      "date": "2025-09-28",
+      "time": "16:30"
+    },
+    {
+      "team_home": "barcelona",
+      "team_away": "villarreal",
+      "date": "2025-09-28",
+      "time": "19:00"
+    },
+    {
+      "team_home": "atletico-madrid",
+      "team_away": "real-betis",
+      "date": "2025-09-29",
+      "time": "20:00"
+    },
+    {
+      "team_home": "athletic-bilbao",
+      "team_away": "real-sociedad",
+      "date": "2025-09-29",
+      "time": "20:00"
+    }
+  ],
+  "fixtures_7": [
+    {
+      "team_home": "real-madrid",
+      "team_away": "rayo-vallecano",
+      "date": "2025-10-03",
+      "time": "20:00"
+    },
+    {
+      "team_home": "mallorca",
+      "team_away": "celta-vigo",
+      "date": "2025-10-04",
+      "time": "12:30"
+    },
+    {
+      "team_home": "girona",
+      "team_away": "osasuna",
+      "date": "2025-10-04",
+      "time": "15:00"
+    },
+    {
+      "team_home": "espanyol",
+      "team_away": "getafe",
+      "date": "2025-10-04",
+      "time": "15:00"
+    },
+    {
+      "team_home": "levante",
+      "team_away": "valencia",
+      "date": "2025-10-05",
+      "time": "14:00"
+    },
+    {
+      "team_home": "elche",
+      "team_away": "sevilla",
+      "date": "2025-10-05",
+      "time": "14:00"
+    },
+    {
+      "team_home": "real-oviedo",
+      "team_away": "villarreal",
+      "date": "2025-10-05",
+      "time": "16:30"
+    },
+    {
+      "team_home": "alaves",
+      "team_away": "real-betis",
+      "date": "2025-10-05",
+      "time": "19:00"
+    },
+    {
+      "team_home": "barcelona",
+      "team_away": "real-sociedad",
+      "date": "2025-10-06",
+      "time": "20:00"
+    },
+    {
+      "team_home": "atletico-madrid",
+      "team_away": "athletic-bilbao",
+      "date": "2025-10-06",
+      "time": "20:00"
+    }
+  ],
+  "fixtures_8": [
+    {
+      "team_home": "real-madrid",
+      "team_away": "celta-vigo",
+      "date": "2025-10-10",
+      "time": "20:00"
+    },
+    {
+      "team_home": "rayo-vallecano",
+      "team_away": "osasuna",
+      "date": "2025-10-11",
+      "time": "12:30"
+    },
+    {
+      "team_home": "mallorca",
+      "team_away": "getafe",
+      "date": "2025-10-11",
+      "time": "15:00"
+    },
+    {
+      "team_home": "girona",
+      "team_away": "valencia",
+      "date": "2025-10-11",
+      "time": "15:00"
+    },
+    {
+      "team_home": "espanyol",
+      "team_away": "sevilla",
+      "date": "2025-10-12",
+      "time": "14:00"
+    },
+    {
+      "team_home": "levante",
+      "team_away": "villarreal",
+      "date": "2025-10-12",
+      "time": "14:00"
+    },
+    {
+      "team_home": "elche",
+      "team_away": "real-betis",
+      "date": "2025-10-12",
+      "time": "16:30"
+    },
+    {
+      "team_home": "real-oviedo",
+      "team_away": "real-sociedad",
+      "date": "2025-10-12",
+      "time": "19:00"
+    },
+    {
+      "team_home": "alaves",
+      "team_away": "athletic-bilbao",
+      "date": "2025-10-13",
+      "time": "20:00"
+    },
+    {
+      "team_home": "barcelona",
+      "team_away": "atletico-madrid",
+      "date": "2025-10-13",
+      "time": "20:00"
+    }
+  ],
+  "fixtures_9": [
+    {
+      "team_home": "real-madrid",
+      "team_away": "osasuna",
+      "date": "2025-10-17",
+      "time": "20:00"
+    },
+    {
+      "team_home": "celta-vigo",
+      "team_away": "getafe",
+      "date": "2025-10-18",
+      "time": "12:30"
+    },
+    {
+      "team_home": "rayo-vallecano",
+      "team_away": "valencia",
+      "date": "2025-10-18",
+      "time": "15:00"
+    },
+    {
+      "team_home": "mallorca",
+      "team_away": "sevilla",
+      "date": "2025-10-18",
+      "time": "15:00"
+    },
+    {
+      "team_home": "girona",
+      "team_away": "villarreal",
+      "date": "2025-10-19",
+      "time": "14:00"
+    },
+    {
+      "team_home": "espanyol",
+      "team_away": "real-betis",
+      "date": "2025-10-19",
+      "time": "14:00"
+    },
+    {
+      "team_home": "levante",
+      "team_away": "real-sociedad",
+      "date": "2025-10-19",
+      "time": "16:30"
+    },
+    {
+      "team_home": "elche",
+      "team_away": "athletic-bilbao",
+      "date": "2025-10-19",
+      "time": "19:00"
+    },
+    {
+      "team_home": "real-oviedo",
+      "team_away": "atletico-madrid",
+      "date": "2025-10-20",
+      "time": "20:00"
+    },
+    {
+      "team_home": "alaves",
+      "team_away": "barcelona",
+      "date": "2025-10-20",
+      "time": "20:00"
+    }
+  ],
+  "fixtures_10": [
+    {
+      "team_home": "real-madrid",
+      "team_away": "getafe",
+      "date": "2025-10-24",
+      "time": "20:00"
+    },
+    {
+      "team_home": "osasuna",
+      "team_away": "valencia",
+      "date": "2025-10-25",
+      "time": "12:30"
+    },
+    {
+      "team_home": "celta-vigo",
+      "team_away": "sevilla",
+      "date": "2025-10-25",
+      "time": "15:00"
+    },
+    {
+      "team_home": "rayo-vallecano",
+      "team_away": "villarreal",
+      "date": "2025-10-25",
+      "time": "15:00"
+    },
+    {
+      "team_home": "mallorca",
+      "team_away": "real-betis",
+      "date": "2025-10-26",
+      "time": "14:00"
+    },
+    {
+      "team_home": "girona",
+      "team_away": "real-sociedad",
+      "date": "2025-10-26",
+      "time": "14:00"
+    },
+    {
+      "team_home": "espanyol",
+      "team_away": "athletic-bilbao",
+      "date": "2025-10-26",
+      "time": "16:30"
+    },
+    {
+      "team_home": "levante",
+      "team_away": "atletico-madrid",
+      "date": "2025-10-26",
+      "time": "19:00"
+    },
+    {
+      "team_home": "elche",
+      "team_away": "barcelona",
+      "date": "2025-10-27",
+      "time": "20:00"
+    },
+    {
+      "team_home": "real-oviedo",
+      "team_away": "alaves",
+      "date": "2025-10-27",
+      "time": "20:00"
+    }
+  ],
+  "fixtures_11": [
+    {
+      "team_home": "real-madrid",
+      "team_away": "valencia",
+      "date": "2025-11-07",
+      "time": "20:00"
+    },
+    {
+      "team_home": "getafe",
+      "team_away": "sevilla",
+      "date": "2025-11-08",
+      "time": "12:30"
+    },
+    {
+      "team_home": "osasuna",
+      "team_away": "villarreal",
+      "date": "2025-11-08",
+      "time": "15:00"
+    },
+    {
+      "team_home": "celta-vigo",
+      "team_away": "real-betis",
+      "date": "2025-11-08",
+      "time": "15:00"
+    },
+    {
+      "team_home": "rayo-vallecano",
+      "team_away": "real-sociedad",
+      "date": "2025-11-09",
+      "time": "14:00"
+    },
+    {
+      "team_home": "mallorca",
+      "team_away": "athletic-bilbao",
+      "date": "2025-11-09",
+      "time": "14:00"
+    },
+    {
+      "team_home": "girona",
+      "team_away": "atletico-madrid",
+      "date": "2025-11-09",
+      "time": "16:30"
+    },
+    {
+      "team_home": "espanyol",
+      "team_away": "barcelona",
+      "date": "2025-11-09",
+      "time": "19:00"
+    },
+    {
+      "team_home": "levante",
+      "team_away": "alaves",
+      "date": "2025-11-10",
+      "time": "20:00"
+    },
+    {
+      "team_home": "elche",
+      "team_away": "real-oviedo",
+      "date": "2025-11-10",
+      "time": "20:00"
+    }
+  ],
+  "fixtures_12": [
+    {
+      "team_home": "real-madrid",
+      "team_away": "sevilla",
+      "date": "2025-11-14",
+      "time": "20:00"
+    },
+    {
+      "team_home": "valencia",
+      "team_away": "villarreal",
+      "date": "2025-11-15",
+      "time": "12:30"
+    },
+    {
+      "team_home": "getafe",
+      "team_away": "real-betis",
+      "date": "2025-11-15",
+      "time": "15:00"
+    },
+    {
+      "team_home": "osasuna",
+      "team_away": "real-sociedad",
+      "date": "2025-11-15",
+      "time": "15:00"
+    },
+    {
+      "team_home": "celta-vigo",
+      "team_away": "athletic-bilbao",
+      "date": "2025-11-16",
+      "time": "14:00"
+    },
+    {
+      "team_home": "rayo-vallecano",
+      "team_away": "atletico-madrid",
+      "date": "2025-11-16",
+      "time": "14:00"
+    },
+    {
+      "team_home": "mallorca",
+      "team_away": "barcelona",
+      "date": "2025-11-16",
+      "time": "16:30"
+    },
+    {
+      "team_home": "girona",
+      "team_away": "alaves",
+      "date": "2025-11-16",
+      "time": "19:00"
+    },
+    {
+      "team_home": "espanyol",
+      "team_away": "real-oviedo",
+      "date": "2025-11-17",
+      "time": "20:00"
+    },
+    {
+      "team_home": "levante",
+      "team_away": "elche",
+      "date": "2025-11-17",
+      "time": "20:00"
+    }
+  ],
+  "fixtures_13": [
+    {
+      "team_home": "real-madrid",
+      "team_away": "villarreal",
+      "date": "2025-11-21",
+      "time": "20:00"
+    },
+    {
+      "team_home": "sevilla",
+      "team_away": "real-betis",
+      "date": "2025-11-22",
+      "time": "12:30"
+    },
+    {
+      "team_home": "valencia",
+      "team_away": "real-sociedad",
+      "date": "2025-11-22",
+      "time": "15:00"
+    },
+    {
+      "team_home": "getafe",
+      "team_away": "athletic-bilbao",
+      "date": "2025-11-22",
+      "time": "15:00"
+    },
+    {
+      "team_home": "osasuna",
+      "team_away": "atletico-madrid",
+      "date": "2025-11-23",
+      "time": "14:00"
+    },
+    {
+      "team_home": "celta-vigo",
+      "team_away": "barcelona",
+      "date": "2025-11-23",
+      "time": "14:00"
+    },
+    {
+      "team_home": "rayo-vallecano",
+      "team_away": "alaves",
+      "date": "2025-11-23",
+      "time": "16:30"
+    },
+    {
+      "team_home": "mallorca",
+      "team_away": "real-oviedo",
+      "date": "2025-11-23",
+      "time": "19:00"
+    },
+    {
+      "team_home": "girona",
+      "team_away": "elche",
+      "date": "2025-11-24",
+      "time": "20:00"
+    },
+    {
+      "team_home": "espanyol",
+      "team_away": "levante",
+      "date": "2025-11-24",
+      "time": "20:00"
+    }
+  ],
+  "fixtures_14": [
+    {
+      "team_home": "real-madrid",
+      "team_away": "real-betis",
+      "date": "2025-11-28",
+      "time": "20:00"
+    },
+    {
+      "team_home": "villarreal",
+      "team_away": "real-sociedad",
+      "date": "2025-11-29",
+      "time": "12:30"
+    },
+    {
+      "team_home": "sevilla",
+      "team_away": "athletic-bilbao",
+      "date": "2025-11-29",
+      "time": "15:00"
+    },
+    {
+      "team_home": "valencia",
+      "team_away": "atletico-madrid",
+      "date": "2025-11-29",
+      "time": "15:00"
+    },
+    {
+      "team_home": "getafe",
+      "team_away": "barcelona",
+      "date": "2025-11-30",
+      "time": "14:00"
+    },
+    {
+      "team_home": "osasuna",
+      "team_away": "alaves",
+      "date": "2025-11-30",
+      "time": "14:00"
+    },
+    {
+      "team_home": "celta-vigo",
+      "team_away": "real-oviedo",
+      "date": "2025-11-30",
+      "time": "16:30"
+    },
+    {
+      "team_home": "rayo-vallecano",
+      "team_away": "elche",
+      "date": "2025-11-30",
+      "time": "19:00"
+    },
+    {
+      "team_home": "mallorca",
+      "team_away": "levante",
+      "date": "2025-12-01",
+      "time": "20:00"
+    },
+    {
+      "team_home": "girona",
+      "team_away": "espanyol",
+      "date": "2025-12-01",
+      "time": "20:00"
+    }
+  ],
+  "fixtures_15": [
+    {
+      "team_home": "real-madrid",
+      "team_away": "real-sociedad",
+      "date": "2025-12-05",
+      "time": "20:00"
+    },
+    {
+      "team_home": "real-betis",
+      "team_away": "athletic-bilbao",
+      "date": "2025-12-06",
+      "time": "12:30"
+    },
+    {
+      "team_home": "villarreal",
+      "team_away": "atletico-madrid",
+      "date": "2025-12-06",
+      "time": "15:00"
+    },
+    {
+      "team_home": "sevilla",
+      "team_away": "barcelona",
+      "date": "2025-12-06",
+      "time": "15:00"
+    },
+    {
+      "team_home": "valencia",
+      "team_away": "alaves",
+      "date": "2025-12-07",
+      "time": "14:00"
+    },
+    {
+      "team_home": "getafe",
+      "team_away": "real-oviedo",
+      "date": "2025-12-07",
+      "time": "14:00"
+    },
+    {
+      "team_home": "osasuna",
+      "team_away": "elche",
+      "date": "2025-12-07",
+      "time": "16:30"
+    },
+    {
+      "team_home": "celta-vigo",
+      "team_away": "levante",
+      "date": "2025-12-07",
+      "time": "19:00"
+    },
+    {
+      "team_home": "rayo-vallecano",
+      "team_away": "espanyol",
+      "date": "2025-12-08",
+      "time": "20:00"
+    },
+    {
+      "team_home": "mallorca",
+      "team_away": "girona",
+      "date": "2025-12-08",
+      "time": "20:00"
+    }
+  ],
+  "fixtures_16": [
+    {
+      "team_home": "real-madrid",
+      "team_away": "athletic-bilbao",
+      "date": "2025-12-12",
+      "time": "20:00"
+    },
+    {
+      "team_home": "real-sociedad",
+      "team_away": "atletico-madrid",
+      "date": "2025-12-13",
+      "time": "12:30"
+    },
+    {
+      "team_home": "real-betis",
+      "team_away": "barcelona",
+      "date": "2025-12-13",
+      "time": "15:00"
+    },
+    {
+      "team_home": "villarreal",
+      "team_away": "alaves",
+      "date": "2025-12-13",
+      "time": "15:00"
+    },
+    {
+      "team_home": "sevilla",
+      "team_away": "real-oviedo",
+      "date": "2025-12-14",
+      "time": "14:00"
+    },
+    {
+      "team_home": "valencia",
+      "team_away": "elche",
+      "date": "2025-12-14",
+      "time": "14:00"
+    },
+    {
+      "team_home": "getafe",
+      "team_away": "levante",
+      "date": "2025-12-14",
+      "time": "16:30"
+    },
+    {
+      "team_home": "osasuna",
+      "team_away": "espanyol",
+      "date": "2025-12-14",
+      "time": "19:00"
+    },
+    {
+      "team_home": "celta-vigo",
+      "team_away": "girona",
+      "date": "2025-12-15",
+      "time": "20:00"
+    },
+    {
+      "team_home": "rayo-vallecano",
+      "team_away": "mallorca",
+      "date": "2025-12-15",
+      "time": "20:00"
+    }
+  ],
+  "fixtures_17": [
+    {
+      "team_home": "real-madrid",
+      "team_away": "atletico-madrid",
+      "date": "2025-12-19",
+      "time": "20:00"
+    },
+    {
+      "team_home": "athletic-bilbao",
+      "team_away": "barcelona",
+      "date": "2025-12-20",
+      "time": "12:30"
+    },
+    {
+      "team_home": "real-sociedad",
+      "team_away": "alaves",
+      "date": "2025-12-20",
+      "time": "15:00"
+    },
+    {
+      "team_home": "real-betis",
+      "team_away": "real-oviedo",
+      "date": "2025-12-20",
+      "time": "15:00"
+    },
+    {
+      "team_home": "villarreal",
+      "team_away": "elche",
+      "date": "2025-12-21",
+      "time": "14:00"
+    },
+    {
+      "team_home": "sevilla",
+      "team_away": "levante",
+      "date": "2025-12-21",
+      "time": "14:00"
+    },
+    {
+      "team_home": "valencia",
+      "team_away": "espanyol",
+      "date": "2025-12-21",
+      "time": "16:30"
+    },
+    {
+      "team_home": "getafe",
+      "team_away": "girona",
+      "date": "2025-12-21",
+      "time": "19:00"
+    },
+    {
+      "team_home": "osasuna",
+      "team_away": "mallorca",
+      "date": "2025-12-22",
+      "time": "20:00"
+    },
+    {
+      "team_home": "celta-vigo",
+      "team_away": "rayo-vallecano",
+      "date": "2025-12-22",
+      "time": "20:00"
+    }
+  ],
+  "fixtures_18": [
+    {
+      "team_home": "real-madrid",
+      "team_away": "barcelona",
+      "date": "2025-12-26",
+      "time": "20:00"
+    },
+    {
+      "team_home": "atletico-madrid",
+      "team_away": "alaves",
+      "date": "2025-12-27",
+      "time": "12:30"
+    },
+    {
+      "team_home": "athletic-bilbao",
+      "team_away": "real-oviedo",
+      "date": "2025-12-27",
+      "time": "15:00"
+    },
+    {
+      "team_home": "real-sociedad",
+      "team_away": "elche",
+      "date": "2025-12-27",
+      "time": "15:00"
+    },
+    {
+      "team_home": "real-betis",
+      "team_away": "levante",
+      "date": "2025-12-28",
+      "time": "14:00"
+    },
+    {
+      "team_home": "villarreal",
+      "team_away": "espanyol",
+      "date": "2025-12-28",
+      "time": "14:00"
+    },
+    {
+      "team_home": "sevilla",
+      "team_away": "girona",
+      "date": "2025-12-28",
+      "time": "16:30"
+    },
+    {
+      "team_home": "valencia",
+      "team_away": "mallorca",
+      "date": "2025-12-28",
+      "time": "19:00"
+    },
+    {
+      "team_home": "getafe",
+      "team_away": "rayo-vallecano",
+      "date": "2025-12-29",
+      "time": "20:00"
+    },
+    {
+      "team_home": "osasuna",
+      "team_away": "celta-vigo",
+      "date": "2025-12-29",
+      "time": "20:00"
+    }
+  ],
+  "fixtures_19": [
+    {
+      "team_home": "alaves",
+      "team_away": "real-madrid",
+      "date": "2026-01-02",
+      "time": "20:00"
+    },
+    {
+      "team_home": "real-oviedo",
+      "team_away": "barcelona",
+      "date": "2026-01-03",
+      "time": "12:30"
+    },
+    {
+      "team_home": "elche",
+      "team_away": "atletico-madrid",
+      "date": "2026-01-03",
+      "time": "15:00"
+    },
+    {
+      "team_home": "levante",
+      "team_away": "athletic-bilbao",
+      "date": "2026-01-03",
+      "time": "15:00"
+    },
+    {
+      "team_home": "espanyol",
+      "team_away": "real-sociedad",
+      "date": "2026-01-04",
+      "time": "14:00"
+    },
+    {
+      "team_home": "girona",
+      "team_away": "real-betis",
+      "date": "2026-01-04",
+      "time": "14:00"
+    },
+    {
+      "team_home": "mallorca",
+      "team_away": "villarreal",
+      "date": "2026-01-04",
+      "time": "16:30"
+    },
+    {
+      "team_home": "rayo-vallecano",
+      "team_away": "sevilla",
+      "date": "2026-01-04",
+      "time": "19:00"
+    },
+    {
+      "team_home": "celta-vigo",
+      "team_away": "valencia",
+      "date": "2026-01-05",
+      "time": "20:00"
+    },
+    {
+      "team_home": "osasuna",
+      "team_away": "getafe",
+      "date": "2026-01-05",
+      "time": "20:00"
+    }
+  ],
+  "fixtures_20": [
+    {
+      "team_home": "real-oviedo",
+      "team_away": "real-madrid",
+      "date": "2026-01-09",
+      "time": "20:00"
+    },
+    {
+      "team_home": "elche",
+      "team_away": "alaves",
+      "date": "2026-01-10",
+      "time": "12:30"
+    },
+    {
+      "team_home": "levante",
+      "team_away": "barcelona",
+      "date": "2026-01-10",
+      "time": "15:00"
+    },
+    {
+      "team_home": "espanyol",
+      "team_away": "atletico-madrid",
+      "date": "2026-01-10",
+      "time": "15:00"
+    },
+    {
+      "team_home": "girona",
+      "team_away": "athletic-bilbao",
+      "date": "2026-01-11",
+      "time": "14:00"
+    },
+    {
+      "team_home": "mallorca",
+      "team_away": "real-sociedad",
+      "date": "2026-01-11",
+      "time": "14:00"
+    },
+    {
+      "team_home": "rayo-vallecano",
+      "team_away": "real-betis",
+      "date": "2026-01-11",
+      "time": "16:30"
+    },
+    {
+      "team_home": "celta-vigo",
+      "team_away": "villarreal",
+      "date": "2026-01-11",
+      "time": "19:00"
+    },
+    {
+      "team_home": "osasuna",
+      "team_away": "sevilla",
+      "date": "2026-01-12",
+      "time": "20:00"
+    },
+    {
+      "team_home": "getafe",
+      "team_away": "valencia",
+      "date": "2026-01-12",
+      "time": "20:00"
+    }
+  ],
+  "fixtures_21": [
+    {
+      "team_home": "elche",
+      "team_away": "real-madrid",
+      "date": "2026-01-23",
+      "time": "20:00"
+    },
+    {
+      "team_home": "levante",
+      "team_away": "real-oviedo",
+      "date": "2026-01-24",
+      "time": "12:30"
+    },
+    {
+      "team_home": "espanyol",
+      "team_away": "alaves",
+      "date": "2026-01-24",
+      "time": "15:00"
+    },
+    {
+      "team_home": "girona",
+      "team_away": "barcelona",
+      "date": "2026-01-24",
+      "time": "15:00"
+    },
+    {
+      "team_home": "mallorca",
+      "team_away": "atletico-madrid",
+      "date": "2026-01-25",
+      "time": "14:00"
+    },
+    {
+      "team_home": "rayo-vallecano",
+      "team_away": "athletic-bilbao",
+      "date": "2026-01-25",
+      "time": "14:00"
+    },
+    {
+      "team_home": "celta-vigo",
+      "team_away": "real-sociedad",
+      "date": "2026-01-25",
+      "time": "16:30"
+    },
+    {
+      "team_home": "osasuna",
+      "team_away": "real-betis",
+      "date": "2026-01-25",
+      "time": "19:00"
+    },
+    {
+      "team_home": "getafe",
+      "team_away": "villarreal",
+      "date": "2026-01-26",
+      "time": "20:00"
+    },
+    {
+      "team_home": "valencia",
+      "team_away": "sevilla",
+      "date": "2026-01-26",
+      "time": "20:00"
+    }
+  ],
+  "fixtures_22": [
+    {
+      "team_home": "levante",
+      "team_away": "real-madrid",
+      "date": "2026-01-30",
+      "time": "20:00"
+    },
+    {
+      "team_home": "espanyol",
+      "team_away": "elche",
+      "date": "2026-01-31",
+      "time": "12:30"
+    },
+    {
+      "team_home": "girona",
+      "team_away": "real-oviedo",
+      "date": "2026-01-31",
+      "time": "15:00"
+    },
+    {
+      "team_home": "mallorca",
+      "team_away": "alaves",
+      "date": "2026-01-31",
+      "time": "15:00"
+    },
+    {
+      "team_home": "rayo-vallecano",
+      "team_away": "barcelona",
+      "date": "2026-02-01",
+      "time": "14:00"
+    },
+    {
+      "team_home": "celta-vigo",
+      "team_away": "atletico-madrid",
+      "date": "2026-02-01",
+      "time": "14:00"
+    },
+    {
+      "team_home": "osasuna",
+      "team_away": "athletic-bilbao",
+      "date": "2026-02-01",
+      "time": "16:30"
+    },
+    {
+      "team_home": "getafe",
+      "team_away": "real-sociedad",
+      "date": "2026-02-01",
+      "time": "19:00"
+    },
+    {
+      "team_home": "valencia",
+      "team_away": "real-betis",
+      "date": "2026-02-02",
+      "time": "20:00"
+    },
+    {
+      "team_home": "sevilla",
+      "team_away": "villarreal",
+      "date": "2026-02-02",
+      "time": "20:00"
+    }
+  ],
+  "fixtures_23": [
+    {
+      "team_home": "espanyol",
+      "team_away": "real-madrid",
+      "date": "2026-02-06",
+      "time": "20:00"
+    },
+    {
+      "team_home": "girona",
+      "team_away": "levante",
+      "date": "2026-02-07",
+      "time": "12:30"
+    },
+    {
+      "team_home": "mallorca",
+      "team_away": "elche",
+      "date": "2026-02-07",
+      "time": "15:00"
+    },
+    {
+      "team_home": "rayo-vallecano",
+      "team_away": "real-oviedo",
+      "date": "2026-02-07",
+      "time": "15:00"
+    },
+    {
+      "team_home": "celta-vigo",
+      "team_away": "alaves",
+      "date": "2026-02-08",
+      "time": "14:00"
+    },
+    {
+      "team_home": "osasuna",
+      "team_away": "barcelona",
+      "date": "2026-02-08",
+      "time": "14:00"
+    },
+    {
+      "team_home": "getafe",
+      "team_away": "atletico-madrid",
+      "date": "2026-02-08",
+      "time": "16:30"
+    },
+    {
+      "team_home": "valencia",
+      "team_away": "athletic-bilbao",
+      "date": "2026-02-08",
+      "time": "19:00"
+    },
+    {
+      "team_home": "sevilla",
+      "team_away": "real-sociedad",
+      "date": "2026-02-09",
+      "time": "20:00"
+    },
+    {
+      "team_home": "villarreal",
+      "team_away": "real-betis",
+      "date": "2026-02-09",
+      "time": "20:00"
+    }
+  ],
+  "fixtures_24": [
+    {
+      "team_home": "girona",
+      "team_away": "real-madrid",
+      "date": "2026-02-13",
+      "time": "20:00"
+    },
+    {
+      "team_home": "mallorca",
+      "team_away": "espanyol",
+      "date": "2026-02-14",
+      "time": "12:30"
+    },
+    {
+      "team_home": "rayo-vallecano",
+      "team_away": "levante",
+      "date": "2026-02-14",
+      "time": "15:00"
+    },
+    {
+      "team_home": "celta-vigo",
+      "team_away": "elche",
+      "date": "2026-02-14",
+      "time": "15:00"
+    },
+    {
+      "team_home": "osasuna",
+      "team_away": "real-oviedo",
+      "date": "2026-02-15",
+      "time": "14:00"
+    },
+    {
+      "team_home": "getafe",
+      "team_away": "alaves",
+      "date": "2026-02-15",
+      "time": "14:00"
+    },
+    {
+      "team_home": "valencia",
+      "team_away": "barcelona",
+      "date": "2026-02-15",
+      "time": "16:30"
+    },
+    {
+      "team_home": "sevilla",
+      "team_away": "atletico-madrid",
+      "date": "2026-02-15",
+      "time": "19:00"
+    },
+    {
+      "team_home": "villarreal",
+      "team_away": "athletic-bilbao",
+      "date": "2026-02-16",
+      "time": "20:00"
+    },
+    {
+      "team_home": "real-betis",
+      "team_away": "real-sociedad",
+      "date": "2026-02-16",
+      "time": "20:00"
+    }
+  ],
+  "fixtures_25": [
+    {
+      "team_home": "mallorca",
+      "team_away": "real-madrid",
+      "date": "2026-02-20",
+      "time": "20:00"
+    },
+    {
+      "team_home": "rayo-vallecano",
+      "team_away": "girona",
+      "date": "2026-02-21",
+      "time": "12:30"
+    },
+    {
+      "team_home": "celta-vigo",
+      "team_away": "espanyol",
+      "date": "2026-02-21",
+      "time": "15:00"
+    },
+    {
+      "team_home": "osasuna",
+      "team_away": "levante",
+      "date": "2026-02-21",
+      "time": "15:00"
+    },
+    {
+      "team_home": "getafe",
+      "team_away": "elche",
+      "date": "2026-02-22",
+      "time": "14:00"
+    },
+    {
+      "team_home": "valencia",
+      "team_away": "real-oviedo",
+      "date": "2026-02-22",
+      "time": "14:00"
+    },
+    {
+      "team_home": "sevilla",
+      "team_away": "alaves",
+      "date": "2026-02-22",
+      "time": "16:30"
+    },
+    {
+      "team_home": "villarreal",
+      "team_away": "barcelona",
+      "date": "2026-02-22",
+      "time": "19:00"
+    },
+    {
+      "team_home": "real-betis",
+      "team_away": "atletico-madrid",
+      "date": "2026-02-23",
+      "time": "20:00"
+    },
+    {
+      "team_home": "real-sociedad",
+      "team_away": "athletic-bilbao",
+      "date": "2026-02-23",
+      "time": "20:00"
+    }
+  ],
+  "fixtures_26": [
+    {
+      "team_home": "rayo-vallecano",
+      "team_away": "real-madrid",
+      "date": "2026-02-27",
+      "time": "20:00"
+    },
+    {
+      "team_home": "celta-vigo",
+      "team_away": "mallorca",
+      "date": "2026-02-28",
+      "time": "12:30"
+    },
+    {
+      "team_home": "osasuna",
+      "team_away": "girona",
+      "date": "2026-02-28",
+      "time": "15:00"
+    },
+    {
+      "team_home": "getafe",
+      "team_away": "espanyol",
+      "date": "2026-02-28",
+      "time": "15:00"
+    },
+    {
+      "team_home": "valencia",
+      "team_away": "levante",
+      "date": "2026-03-01",
+      "time": "14:00"
+    },
+    {
+      "team_home": "sevilla",
+      "team_away": "elche",
+      "date": "2026-03-01",
+      "time": "14:00"
+    },
+    {
+      "team_home": "villarreal",
+      "team_away": "real-oviedo",
+      "date": "2026-03-01",
+      "time": "16:30"
+    },
+    {
+      "team_home": "real-betis",
+      "team_away": "alaves",
+      "date": "2026-03-01",
+      "time": "19:00"
+    },
+    {
+      "team_home": "real-sociedad",
+      "team_away": "barcelona",
+      "date": "2026-03-02",
+      "time": "20:00"
+    },
+    {
+      "team_home": "athletic-bilbao",
+      "team_away": "atletico-madrid",
+      "date": "2026-03-02",
+      "time": "20:00"
+    }
+  ],
+  "fixtures_27": [
+    {
+      "team_home": "celta-vigo",
+      "team_away": "real-madrid",
+      "date": "2026-03-06",
+      "time": "20:00"
+    },
+    {
+      "team_home": "osasuna",
+      "team_away": "rayo-vallecano",
+      "date": "2026-03-07",
+      "time": "12:30"
+    },
+    {
+      "team_home": "getafe",
+      "team_away": "mallorca",
+      "date": "2026-03-07",
+      "time": "15:00"
+    },
+    {
+      "team_home": "valencia",
+      "team_away": "girona",
+      "date": "2026-03-07",
+      "time": "15:00"
+    },
+    {
+      "team_home": "sevilla",
+      "team_away": "espanyol",
+      "date": "2026-03-08",
+      "time": "14:00"
+    },
+    {
+      "team_home": "villarreal",
+      "team_away": "levante",
+      "date": "2026-03-08",
+      "time": "14:00"
+    },
+    {
+      "team_home": "real-betis",
+      "team_away": "elche",
+      "date": "2026-03-08",
+      "time": "16:30"
+    },
+    {
+      "team_home": "real-sociedad",
+      "team_away": "real-oviedo",
+      "date": "2026-03-08",
+      "time": "19:00"
+    },
+    {
+      "team_home": "athletic-bilbao",
+      "team_away": "alaves",
+      "date": "2026-03-09",
+      "time": "20:00"
+    },
+    {
+      "team_home": "atletico-madrid",
+      "team_away": "barcelona",
+      "date": "2026-03-09",
+      "time": "20:00"
+    }
+  ],
+  "fixtures_28": [
+    {
+      "team_home": "osasuna",
+      "team_away": "real-madrid",
+      "date": "2026-03-13",
+      "time": "20:00"
+    },
+    {
+      "team_home": "getafe",
+      "team_away": "celta-vigo",
+      "date": "2026-03-14",
+      "time": "12:30"
+    },
+    {
+      "team_home": "valencia",
+      "team_away": "rayo-vallecano",
+      "date": "2026-03-14",
+      "time": "15:00"
+    },
+    {
+      "team_home": "sevilla",
+      "team_away": "mallorca",
+      "date": "2026-03-14",
+      "time": "15:00"
+    },
+    {
+      "team_home": "villarreal",
+      "team_away": "girona",
+      "date": "2026-03-15",
+      "time": "14:00"
+    },
+    {
+      "team_home": "real-betis",
+      "team_away": "espanyol",
+      "date": "2026-03-15",
+      "time": "14:00"
+    },
+    {
+      "team_home": "real-sociedad",
+      "team_away": "levante",
+      "date": "2026-03-15",
+      "time": "16:30"
+    },
+    {
+      "team_home": "athletic-bilbao",
+      "team_away": "elche",
+      "date": "2026-03-15",
+      "time": "19:00"
+    },
+    {
+      "team_home": "atletico-madrid",
+      "team_away": "real-oviedo",
+      "date": "2026-03-16",
+      "time": "20:00"
+    },
+    {
+      "team_home": "barcelona",
+      "team_away": "alaves",
+      "date": "2026-03-16",
+      "time": "20:00"
+    }
+  ],
+  "fixtures_29": [
+    {
+      "team_home": "getafe",
+      "team_away": "real-madrid",
+      "date": "2026-03-20",
+      "time": "20:00"
+    },
+    {
+      "team_home": "valencia",
+      "team_away": "osasuna",
+      "date": "2026-03-21",
+      "time": "12:30"
+    },
+    {
+      "team_home": "sevilla",
+      "team_away": "celta-vigo",
+      "date": "2026-03-21",
+      "time": "15:00"
+    },
+    {
+      "team_home": "villarreal",
+      "team_away": "rayo-vallecano",
+      "date": "2026-03-21",
+      "time": "15:00"
+    },
+    {
+      "team_home": "real-betis",
+      "team_away": "mallorca",
+      "date": "2026-03-22",
+      "time": "14:00"
+    },
+    {
+      "team_home": "real-sociedad",
+      "team_away": "girona",
+      "date": "2026-03-22",
+      "time": "14:00"
+    },
+    {
+      "team_home": "athletic-bilbao",
+      "team_away": "espanyol",
+      "date": "2026-03-22",
+      "time": "16:30"
+    },
+    {
+      "team_home": "atletico-madrid",
+      "team_away": "levante",
+      "date": "2026-03-22",
+      "time": "19:00"
+    },
+    {
+      "team_home": "barcelona",
+      "team_away": "elche",
+      "date": "2026-03-23",
+      "time": "20:00"
+    },
+    {
+      "team_home": "alaves",
+      "team_away": "real-oviedo",
+      "date": "2026-03-23",
+      "time": "20:00"
+    }
+  ],
+  "fixtures_30": [
+    {
+      "team_home": "valencia",
+      "team_away": "real-madrid",
+      "date": "2026-03-27",
+      "time": "20:00"
+    },
+    {
+      "team_home": "sevilla",
+      "team_away": "getafe",
+      "date": "2026-03-28",
+      "time": "12:30"
+    },
+    {
+      "team_home": "villarreal",
+      "team_away": "osasuna",
+      "date": "2026-03-28",
+      "time": "15:00"
+    },
+    {
+      "team_home": "real-betis",
+      "team_away": "celta-vigo",
+      "date": "2026-03-28",
+      "time": "15:00"
+    },
+    {
+      "team_home": "real-sociedad",
+      "team_away": "rayo-vallecano",
+      "date": "2026-03-29",
+      "time": "14:00"
+    },
+    {
+      "team_home": "athletic-bilbao",
+      "team_away": "mallorca",
+      "date": "2026-03-29",
+      "time": "14:00"
+    },
+    {
+      "team_home": "atletico-madrid",
+      "team_away": "girona",
+      "date": "2026-03-29",
+      "time": "16:30"
+    },
+    {
+      "team_home": "barcelona",
+      "team_away": "espanyol",
+      "date": "2026-03-29",
+      "time": "19:00"
+    },
+    {
+      "team_home": "alaves",
+      "team_away": "levante",
+      "date": "2026-03-30",
+      "time": "20:00"
+    },
+    {
+      "team_home": "real-oviedo",
+      "team_away": "elche",
+      "date": "2026-03-30",
+      "time": "20:00"
+    }
+  ],
+  "fixtures_31": [
+    {
+      "team_home": "sevilla",
+      "team_away": "real-madrid",
+      "date": "2026-04-10",
+      "time": "20:00"
+    },
+    {
+      "team_home": "villarreal",
+      "team_away": "valencia",
+      "date": "2026-04-11",
+      "time": "12:30"
+    },
+    {
+      "team_home": "real-betis",
+      "team_away": "getafe",
+      "date": "2026-04-11",
+      "time": "15:00"
+    },
+    {
+      "team_home": "real-sociedad",
+      "team_away": "osasuna",
+      "date": "2026-04-11",
+      "time": "15:00"
+    },
+    {
+      "team_home": "athletic-bilbao",
+      "team_away": "celta-vigo",
+      "date": "2026-04-12",
+      "time": "14:00"
+    },
+    {
+      "team_home": "atletico-madrid",
+      "team_away": "rayo-vallecano",
+      "date": "2026-04-12",
+      "time": "14:00"
+    },
+    {
+      "team_home": "barcelona",
+      "team_away": "mallorca",
+      "date": "2026-04-12",
+      "time": "16:30"
+    },
+    {
+      "team_home": "alaves",
+      "team_away": "girona",
+      "date": "2026-04-12",
+      "time": "19:00"
+    },
+    {
+      "team_home": "real-oviedo",
+      "team_away": "espanyol",
+      "date": "2026-04-13",
+      "time": "20:00"
+    },
+    {
+      "team_home": "elche",
+      "team_away": "levante",
+      "date": "2026-04-13",
+      "time": "20:00"
+    }
+  ],
+  "fixtures_32": [
+    {
+      "team_home": "villarreal",
+      "team_away": "real-madrid",
+      "date": "2026-04-17",
+      "time": "20:00"
+    },
+    {
+      "team_home": "real-betis",
+      "team_away": "sevilla",
+      "date": "2026-04-18",
+      "time": "12:30"
+    },
+    {
+      "team_home": "real-sociedad",
+      "team_away": "valencia",
+      "date": "2026-04-18",
+      "time": "15:00"
+    },
+    {
+      "team_home": "athletic-bilbao",
+      "team_away": "getafe",
+      "date": "2026-04-18",
+      "time": "15:00"
+    },
+    {
+      "team_home": "atletico-madrid",
+      "team_away": "osasuna",
+      "date": "2026-04-19",
+      "time": "14:00"
+    },
+    {
+      "team_home": "barcelona",
+      "team_away": "celta-vigo",
+      "date": "2026-04-19",
+      "time": "14:00"
+    },
+    {
+      "team_home": "alaves",
+      "team_away": "rayo-vallecano",
+      "date": "2026-04-19",
+      "time": "16:30"
+    },
+    {
+      "team_home": "real-oviedo",
+      "team_away": "mallorca",
+      "date": "2026-04-19",
+      "time": "19:00"
+    },
+    {
+      "team_home": "elche",
+      "team_away": "girona",
+      "date": "2026-04-20",
+      "time": "20:00"
+    },
+    {
+      "team_home": "levante",
+      "team_away": "espanyol",
+      "date": "2026-04-20",
+      "time": "20:00"
+    }
+  ],
+  "fixtures_33": [
+    {
+      "team_home": "real-betis",
+      "team_away": "real-madrid",
+      "date": "2026-04-24",
+      "time": "20:00"
+    },
+    {
+      "team_home": "real-sociedad",
+      "team_away": "villarreal",
+      "date": "2026-04-25",
+      "time": "12:30"
+    },
+    {
+      "team_home": "athletic-bilbao",
+      "team_away": "sevilla",
+      "date": "2026-04-25",
+      "time": "15:00"
+    },
+    {
+      "team_home": "atletico-madrid",
+      "team_away": "valencia",
+      "date": "2026-04-25",
+      "time": "15:00"
+    },
+    {
+      "team_home": "barcelona",
+      "team_away": "getafe",
+      "date": "2026-04-26",
+      "time": "14:00"
+    },
+    {
+      "team_home": "alaves",
+      "team_away": "osasuna",
+      "date": "2026-04-26",
+      "time": "14:00"
+    },
+    {
+      "team_home": "real-oviedo",
+      "team_away": "celta-vigo",
+      "date": "2026-04-26",
+      "time": "16:30"
+    },
+    {
+      "team_home": "elche",
+      "team_away": "rayo-vallecano",
+      "date": "2026-04-26",
+      "time": "19:00"
+    },
+    {
+      "team_home": "levante",
+      "team_away": "mallorca",
+      "date": "2026-04-27",
+      "time": "20:00"
+    },
+    {
+      "team_home": "espanyol",
+      "team_away": "girona",
+      "date": "2026-04-27",
+      "time": "20:00"
+    }
+  ],
+  "fixtures_34": [
+    {
+      "team_home": "real-sociedad",
+      "team_away": "real-madrid",
+      "date": "2026-05-01",
+      "time": "20:00"
+    },
+    {
+      "team_home": "athletic-bilbao",
+      "team_away": "real-betis",
+      "date": "2026-05-02",
+      "time": "12:30"
+    },
+    {
+      "team_home": "atletico-madrid",
+      "team_away": "villarreal",
+      "date": "2026-05-02",
+      "time": "15:00"
+    },
+    {
+      "team_home": "barcelona",
+      "team_away": "sevilla",
+      "date": "2026-05-02",
+      "time": "15:00"
+    },
+    {
+      "team_home": "alaves",
+      "team_away": "valencia",
+      "date": "2026-05-03",
+      "time": "14:00"
+    },
+    {
+      "team_home": "real-oviedo",
+      "team_away": "getafe",
+      "date": "2026-05-03",
+      "time": "14:00"
+    },
+    {
+      "team_home": "elche",
+      "team_away": "osasuna",
+      "date": "2026-05-03",
+      "time": "16:30"
+    },
+    {
+      "team_home": "levante",
+      "team_away": "celta-vigo",
+      "date": "2026-05-03",
+      "time": "19:00"
+    },
+    {
+      "team_home": "espanyol",
+      "team_away": "rayo-vallecano",
+      "date": "2026-05-04",
+      "time": "20:00"
+    },
+    {
+      "team_home": "girona",
+      "team_away": "mallorca",
+      "date": "2026-05-04",
+      "time": "20:00"
+    }
+  ],
+  "fixtures_35": [
+    {
+      "team_home": "athletic-bilbao",
+      "team_away": "real-madrid",
+      "date": "2026-05-08",
+      "time": "20:00"
+    },
+    {
+      "team_home": "atletico-madrid",
+      "team_away": "real-sociedad",
+      "date": "2026-05-09",
+      "time": "12:30"
+    },
+    {
+      "team_home": "barcelona",
+      "team_away": "real-betis",
+      "date": "2026-05-09",
+      "time": "15:00"
+    },
+    {
+      "team_home": "alaves",
+      "team_away": "villarreal",
+      "date": "2026-05-09",
+      "time": "15:00"
+    },
+    {
+      "team_home": "real-oviedo",
+      "team_away": "sevilla",
+      "date": "2026-05-10",
+      "time": "14:00"
+    },
+    {
+      "team_home": "elche",
+      "team_away": "valencia",
+      "date": "2026-05-10",
+      "time": "14:00"
+    },
+    {
+      "team_home": "levante",
+      "team_away": "getafe",
+      "date": "2026-05-10",
+      "time": "16:30"
+    },
+    {
+      "team_home": "espanyol",
+      "team_away": "osasuna",
+      "date": "2026-05-10",
+      "time": "19:00"
+    },
+    {
+      "team_home": "girona",
+      "team_away": "celta-vigo",
+      "date": "2026-05-11",
+      "time": "20:00"
+    },
+    {
+      "team_home": "mallorca",
+      "team_away": "rayo-vallecano",
+      "date": "2026-05-11",
+      "time": "20:00"
+    }
+  ],
+  "fixtures_36": [
+    {
+      "team_home": "atletico-madrid",
+      "team_away": "real-madrid",
+      "date": "2026-05-15",
+      "time": "20:00"
+    },
+    {
+      "team_home": "barcelona",
+      "team_away": "athletic-bilbao",
+      "date": "2026-05-16",
+      "time": "12:30"
+    },
+    {
+      "team_home": "alaves",
+      "team_away": "real-sociedad",
+      "date": "2026-05-16",
+      "time": "15:00"
+    },
+    {
+      "team_home": "real-oviedo",
+      "team_away": "real-betis",
+      "date": "2026-05-16",
+      "time": "15:00"
+    },
+    {
+      "team_home": "elche",
+      "team_away": "villarreal",
+      "date": "2026-05-17",
+      "time": "14:00"
+    },
+    {
+      "team_home": "levante",
+      "team_away": "sevilla",
+      "date": "2026-05-17",
+      "time": "14:00"
+    },
+    {
+      "team_home": "espanyol",
+      "team_away": "valencia",
+      "date": "2026-05-17",
+      "time": "16:30"
+    },
+    {
+      "team_home": "girona",
+      "team_away": "getafe",
+      "date": "2026-05-17",
+      "time": "19:00"
+    },
+    {
+      "team_home": "mallorca",
+      "team_away": "osasuna",
+      "date": "2026-05-18",
+      "time": "20:00"
+    },
+    {
+      "team_home": "rayo-vallecano",
+      "team_away": "celta-vigo",
+      "date": "2026-05-18",
+      "time": "20:00"
+    }
+  ],
+  "fixtures_37": [
+    {
+      "team_home": "barcelona",
+      "team_away": "real-madrid",
+      "date": "2026-05-22",
+      "time": "20:00"
+    },
+    {
+      "team_home": "alaves",
+      "team_away": "atletico-madrid",
+      "date": "2026-05-23",
+      "time": "12:30"
+    },
+    {
+      "team_home": "real-oviedo",
+      "team_away": "athletic-bilbao",
+      "date": "2026-05-23",
+      "time": "15:00"
+    },
+    {
+      "team_home": "elche",
+      "team_away": "real-sociedad",
+      "date": "2026-05-23",
+      "time": "15:00"
+    },
+    {
+      "team_home": "levante",
+      "team_away": "real-betis",
+      "date": "2026-05-24",
+      "time": "14:00"
+    },
+    {
+      "team_home": "espanyol",
+      "team_away": "villarreal",
+      "date": "2026-05-24",
+      "time": "14:00"
+    },
+    {
+      "team_home": "girona",
+      "team_away": "sevilla",
+      "date": "2026-05-24",
+      "time": "16:30"
+    },
+    {
+      "team_home": "mallorca",
+      "team_away": "valencia",
+      "date": "2026-05-24",
+      "time": "19:00"
+    },
+    {
+      "team_home": "rayo-vallecano",
+      "team_away": "getafe",
+      "date": "2026-05-25",
+      "time": "20:00"
+    },
+    {
+      "team_home": "celta-vigo",
+      "team_away": "osasuna",
+      "date": "2026-05-25",
+      "time": "20:00"
+    }
+  ]
+}
