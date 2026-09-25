@@ -566,6 +566,9 @@ export interface TeamSeasonStats {
   goalsAgainstPerGame: number;
   xgPerGame: number;
   xgAgainstPerGame: number;
+  xgOpenPlayPerGame: number;
+  xgSetPlayPerGame: number;
+  xgotPerGame: number;
   goalDiffPerGame: number;
   xgDiffPerGame: number;
   pointsPerGame: number;
@@ -573,8 +576,8 @@ export interface TeamSeasonStats {
 
 export function getTeamSeasonStats(fixtures: Fixture[]): TeamSeasonStats[] {
   const teams = extractTeams(fixtures);
-  const statsMap = new Map<string, { goals: number; ga: number; xg: number; xga: number; played: number; pts: number }>();
-  teams.forEach(t => statsMap.set(t, { goals: 0, ga: 0, xg: 0, xga: 0, played: 0, pts: 0 }));
+  const statsMap = new Map<string, { goals: number; ga: number; xg: number; xga: number; op: number; sp: number; xgot: number; played: number; pts: number }>();
+  teams.forEach(t => statsMap.set(t, { goals: 0, ga: 0, xg: 0, xga: 0, op: 0, sp: 0, xgot: 0, played: 0, pts: 0 }));
 
   fixtures.forEach(f => {
     const h = statsMap.get(f.home_team)!;
@@ -582,6 +585,8 @@ export function getTeamSeasonStats(fixtures: Fixture[]): TeamSeasonStats[] {
     const hg = f.home_goals ?? 0, ag = f.away_goals ?? 0;
     h.goals += hg; h.ga += ag;
     h.xg += f.home_npxg ?? 0; h.xga += f.away_npxg ?? 0;
+    h.op += f.home_xg_open_play ?? 0; h.sp += f.home_xg_set_play ?? 0; h.xgot += f.home_xgot ?? 0;
+    a.op += f.away_xg_open_play ?? 0; a.sp += f.away_xg_set_play ?? 0; a.xgot += f.away_xgot ?? 0;
     h.played++;
     a.goals += ag; a.ga += hg;
     a.xg += f.away_npxg ?? 0; a.xga += f.home_npxg ?? 0;
@@ -610,6 +615,9 @@ export function getTeamSeasonStats(fixtures: Fixture[]): TeamSeasonStats[] {
       goalsAgainstPerGame: gapg,
       xgPerGame: xgpg,
       xgAgainstPerGame: xgapg,
+      xgOpenPlayPerGame: r2(s.played > 0 ? s.op / s.played : 0),
+      xgSetPlayPerGame: r2(s.played > 0 ? s.sp / s.played : 0),
+      xgotPerGame: r2(s.played > 0 ? s.xgot / s.played : 0),
       goalDiffPerGame: r2(gpg - gapg),
       xgDiffPerGame: r2(xgpg - xgapg),
       pointsPerGame: r2(s.played > 0 ? s.pts / s.played : 0),
@@ -626,7 +634,7 @@ export function getTeamRecentSeasonStats(fixtures: Fixture[], recentN: number = 
       .filter(f => f.home_team === team || f.away_team === team)
       .sort((a, b) => parseDate(b.date).getTime() - parseDate(a.date).getTime())
       .slice(0, recentN);
-    let goals = 0, ga = 0, xg = 0, xga = 0, pts = 0;
+    let goals = 0, ga = 0, xg = 0, xga = 0, op = 0, sp = 0, xgot = 0, pts = 0;
     recent.forEach(f => {
       const isHome = f.home_team === team;
       const scored   = isHome ? (f.home_goals ?? 0) : (f.away_goals ?? 0);
@@ -634,6 +642,9 @@ export function getTeamRecentSeasonStats(fixtures: Fixture[], recentN: number = 
       goals += scored; ga += conceded;
       xg  += isHome ? (f.home_npxg ?? 0) : (f.away_npxg ?? 0);
       xga += isHome ? (f.away_npxg ?? 0) : (f.home_npxg ?? 0);
+      op   += (isHome ? f.home_xg_open_play : f.away_xg_open_play) ?? 0;
+      sp   += (isHome ? f.home_xg_set_play : f.away_xg_set_play) ?? 0;
+      xgot += (isHome ? f.home_xgot : f.away_xgot) ?? 0;
       if (scored > conceded) pts += 3;
       else if (scored === conceded) pts += 1;
     });
@@ -649,6 +660,9 @@ export function getTeamRecentSeasonStats(fixtures: Fixture[], recentN: number = 
       totalPoints: pts,
       goalsPerGame: gpg, goalsAgainstPerGame: gapg,
       xgPerGame: xgpg, xgAgainstPerGame: xgapg,
+      xgOpenPlayPerGame: r2(played > 0 ? op / played : 0),
+      xgSetPlayPerGame: r2(played > 0 ? sp / played : 0),
+      xgotPerGame: r2(played > 0 ? xgot / played : 0),
       goalDiffPerGame: r2(gpg - gapg),
       xgDiffPerGame: r2(xgpg - xgapg),
       pointsPerGame: r2(played > 0 ? pts / played : 0),
@@ -1232,4 +1246,69 @@ export function getLineChartData(fixtures: Fixture[], selectedTeams: string[], m
   }
 
   return result;
+}
+
+// League-leading team highlights (best attack/defence/set play/streaks)
+export interface TeamHighlightStats {
+  team: string;
+  goalsForP90: number;
+  goalsAgainstP90: number;
+  xgP90: number;
+  xgAgainstP90: number;
+  xgSetPlayP90: number;
+  currentWinStreak: number;
+  bestWinStreak: number;
+  currentUnbeatenStreak: number;
+  bestUnbeatenStreak: number;
+}
+
+function currentAndBestStreak(
+  sortedGames: { scored: number; conceded: number }[],
+  matches: (scored: number, conceded: number) => boolean
+): { current: number; best: number } {
+  let current = 0;
+  let best = 0;
+  for (const g of sortedGames) {
+    if (matches(g.scored, g.conceded)) {
+      current++;
+      if (current > best) best = current;
+    } else {
+      current = 0;
+    }
+  }
+  return { current, best };
+}
+
+export function getTeamHighlightStats(fixtures: Fixture[]): TeamHighlightStats[] {
+  return extractTeams(fixtures).map(team => {
+    const games = fixtures
+      .filter(f => f.home_team === team || f.away_team === team)
+      .sort((a, b) => parseDate(a.date).getTime() - parseDate(b.date).getTime());
+    const n = games.length || 1;
+    let gf = 0, ga = 0, xg = 0, xga = 0, xgSp = 0;
+    const results = games.map(f => {
+      const isHome = f.home_team === team;
+      const scored = (isHome ? f.home_goals : f.away_goals) ?? 0;
+      const conceded = (isHome ? f.away_goals : f.home_goals) ?? 0;
+      gf += scored; ga += conceded;
+      xg += (isHome ? f.home_xG : f.away_xG) ?? 0;
+      xga += (isHome ? f.away_xG : f.home_xG) ?? 0;
+      xgSp += (isHome ? f.home_xg_set_play : f.away_xg_set_play) ?? 0;
+      return { scored, conceded };
+    });
+    const win = currentAndBestStreak(results, (s, c) => s > c);
+    const unbeaten = currentAndBestStreak(results, (s, c) => s >= c);
+    return {
+      team,
+      goalsForP90: gf / n,
+      goalsAgainstP90: ga / n,
+      xgP90: xg / n,
+      xgAgainstP90: xga / n,
+      xgSetPlayP90: xgSp / n,
+      currentWinStreak: win.current,
+      bestWinStreak: win.best,
+      currentUnbeatenStreak: unbeaten.current,
+      bestUnbeatenStreak: unbeaten.best,
+    };
+  });
 }

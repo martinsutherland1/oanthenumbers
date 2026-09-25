@@ -1,0 +1,31 @@
+.view-toggle {
+  display: inline-flex;
+  gap: 4px;
+  background: var(--background);
+  padding: 4px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+}
+
+.view-toggle-btn {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 8px;
+  background: transparent;
+  color: var(--text-secondary);
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-weight: 500;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+}
+
+.view-toggle-btn:hover {
+  background: var(--surface-hover);
+  color: var(--text);
+}
+
+.view-toggle-btn.active {
+  background: var(--primary);
+  color: white;
+}

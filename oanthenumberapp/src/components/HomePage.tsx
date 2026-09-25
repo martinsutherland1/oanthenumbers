@@ -1,6 +1,6 @@
 import './HomePage.css';
 
-export type LeagueFlag = 'scotland' | 'england';
+export type LeagueFlag = 'scotland' | 'england' | 'spain' | 'germany';
 
 export interface HomeLeagueTile {
   key: string;
@@ -33,9 +33,30 @@ function EnglandFlag() {
   );
 }
 
+function SpainFlag() {
+  return (
+    <svg className="league-tile-flag" viewBox="0 0 60 36" role="img" aria-label="Spain flag">
+      <rect width="60" height="36" fill="#AA151B" />
+      <rect y="9" width="60" height="18" fill="#F1BF00" />
+    </svg>
+  );
+}
+
+function GermanyFlag() {
+  return (
+    <svg className="league-tile-flag" viewBox="0 0 60 36" role="img" aria-label="Germany flag">
+      <rect width="60" height="12" fill="#000000" />
+      <rect y="12" width="60" height="12" fill="#DD0000" />
+      <rect y="24" width="60" height="12" fill="#FFCE00" />
+    </svg>
+  );
+}
+
 const FLAG_COMPONENTS: Record<LeagueFlag, () => JSX.Element> = {
   scotland: ScotlandFlag,
   england: EnglandFlag,
+  spain: SpainFlag,
+  germany: GermanyFlag,
 };
 
 export function HomePage({ leagues, onSelectLeague }: HomePageProps) {

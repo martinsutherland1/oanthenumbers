@@ -6,6 +6,8 @@ import {
   getProjectedPositionOverTime,
   getProjectedStandings,
   getPerformanceScore,
+  getTeamSeasonStats,
+  getTeamRecentSeasonStats,
   ordinalSuffix,
   type LeagueTableRow,
   type ProjectionContext,
@@ -17,6 +19,8 @@ import { MetricTrendCard } from './MetricTrendCard';
 import { PerformanceIndicator, type TrendDirection, type PerformanceBreakdownTable } from './PerformanceIndicator';
 import { XgGameLogTable } from './XgGameLogTable';
 import { XgTypeSelect } from './XgTypeSelect';
+import { TeamRadarChart, type RadarSeries } from './TeamRadarChart';
+import { ViewToggle } from './ViewToggle';
 import './TeamOverview.css';
 
 interface TeamOverviewProps {
@@ -25,7 +29,11 @@ interface TeamOverviewProps {
   lastSeasonFixtures: Fixture[];
   leagueTable: LeagueTableRow[];
   projection?: ProjectionContext;
+  seasonGames?: number;
 }
+
+// Fixed contrast colour so form stands apart from the team-coloured season shape
+const LAST_6_COLOR = '#F59E0B';
 
 function signTone(n: number | null): 'positive' | 'negative' | 'neutral' {
   if (n === null || n === 0) return 'neutral';
@@ -54,7 +62,7 @@ function getTrendDirection(series: { rollingAverage: number }[]): TrendDirection
   return 'steady';
 }
 
-export function TeamOverview({ team, fixtures, lastSeasonFixtures, leagueTable, projection }: TeamOverviewProps) {
+export function TeamOverview({ team, fixtures, lastSeasonFixtures, leagueTable, projection, seasonGames }: TeamOverviewProps) {
   const leagueRow = leagueTable.find(r => r.team === team);
   const color = getTeamColor(team);
 
@@ -66,13 +74,13 @@ export function TeamOverview({ team, fixtures, lastSeasonFixtures, leagueTable, 
   );
   const goalsSeries = useMemo(() => getTeamRollingAverageOverTime(fixtures, team, 10, 'goals'), [fixtures, team]);
   const pointsSeries = useMemo(() => getTeamRollingAverageOverTime(fixtures, team, 10, 'points'), [fixtures, team]);
-  const positionSeries = useMemo(() => getProjectedPositionOverTime(fixtures, team, undefined, projection), [fixtures, team, projection]);
+  const positionSeries = useMemo(() => getProjectedPositionOverTime(fixtures, team, seasonGames, projection), [fixtures, team, seasonGames, projection]);
   const leaguePpg = useMemo(() => calculateLeagueAverage(fixtures, 10, 'points'), [fixtures]);
 
   // Every team's "current" projection must come from the same full-dataset snapshot,
   // otherwise teams whose last match fell on an earlier date than a rival's get compared
   // against stale standings and can end up sharing a rank.
-  const currentStandings = useMemo(() => getProjectedStandings(fixtures, undefined, projection), [fixtures, projection]);
+  const currentStandings = useMemo(() => getProjectedStandings(fixtures, seasonGames, projection), [fixtures, seasonGames, projection]);
   const currentProjection = currentStandings.find(s => s.team === team) ?? null;
 
   const currentXg = xgChartSeries.length ? xgChartSeries[xgChartSeries.length - 1].rollingAverage : 0;
@@ -81,9 +89,21 @@ export function TeamOverview({ team, fixtures, lastSeasonFixtures, leagueTable, 
   const ppgVsAvg = currentPpg - leaguePpg;
   const trend = getTrendDirection(xgSeries);
 
+  const [logView, setLogView] = useState<'log' | 'radar'>('log');
+  const seasonStats = useMemo(() => getTeamSeasonStats(fixtures), [fixtures]);
+  const recentStats = useMemo(() => getTeamRecentSeasonStats(fixtures, 6), [fixtures]);
+  const radarSeries = useMemo<RadarSeries[]>(() => {
+    const season = seasonStats.find(s => s.team === team);
+    const recent = recentStats.find(s => s.team === team);
+    const out: RadarSeries[] = [];
+    if (season) out.push({ id: 'season', label: 'Season', color, stats: season, pool: seasonStats, fillOpacity: 0.3 });
+    if (recent) out.push({ id: 'last6', label: 'Last 6', color: LAST_6_COLOR, stats: recent, pool: recentStats, dashed: true, fillOpacity: 0.08 });
+    return out;
+  }, [seasonStats, recentStats, team, color]);
+
   const performanceScore = useMemo(
-    () => getPerformanceScore(fixtures, lastSeasonFixtures, team, undefined, projection),
-    [fixtures, lastSeasonFixtures, team, projection]
+    () => getPerformanceScore(fixtures, lastSeasonFixtures, team, seasonGames, projection),
+    [fixtures, lastSeasonFixtures, team, seasonGames, projection]
   );
 
 
@@ -171,7 +191,17 @@ export function TeamOverview({ team, fixtures, lastSeasonFixtures, leagueTable, 
         />
       </div>
 
-      <XgGameLogTable fixtures={fixtures} team={team} />
+      <div className="log-view-toggle">
+        <ViewToggle
+          ariaLabel="Team stats view"
+          options={[{ key: 'log', label: 'Log' }, { key: 'radar', label: 'Radar' }]}
+          value={logView}
+          onChange={setLogView}
+        />
+      </div>
+      {logView === 'log'
+        ? <XgGameLogTable fixtures={fixtures} team={team} />
+        : <TeamRadarChart series={radarSeries} title={`${getTeamName(team)} — Goals & xG`} />}
     </div>
   );
 }

@@ -1,0 +1,208 @@
+.league-highlights {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.highlight-group {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 16px;
+}
+
+.highlight-group h3 {
+  margin: 0 0 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.highlight-tiles {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.highlight-tile {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+.highlight-label {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.highlight-value {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.highlight-teams {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 12px;
+}
+
+.highlight-team {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 0.875rem;
+  min-width: 0;
+}
+
+.highlight-team .team-color-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.highlight-team-name {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.highlight-info-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  padding: 0;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--background);
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.highlight-info-btn:hover {
+  color: white;
+  background: var(--primary);
+  border-color: var(--primary);
+}
+
+.highlight-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  background: rgba(0, 0, 0, 0.55);
+}
+
+.highlight-modal {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 520px;
+  max-height: 85vh;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
+}
+
+.highlight-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 18px;
+  border-bottom: 1px solid var(--border);
+}
+
+.highlight-modal-header h3 {
+  margin: 0;
+  font-size: 1.05rem;
+  color: var(--text);
+}
+
+.highlight-modal-close {
+  border: none;
+  background: transparent;
+  color: var(--text-secondary);
+  font-size: 1.6rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.highlight-modal-close:hover {
+  color: var(--text);
+}
+
+.highlight-modal-body {
+  overflow: auto;
+  padding: 0 8px 8px;
+}
+
+.highlight-modal-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+}
+
+.highlight-modal-table th {
+  position: sticky;
+  top: 0;
+  padding: 10px 8px;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  text-align: right;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  white-space: nowrap;
+}
+
+.highlight-modal-table th:nth-child(2) {
+  text-align: left;
+}
+
+.highlight-modal-table td {
+  padding: 8px;
+  border-bottom: 1px solid var(--border);
+  color: var(--text);
+}
+
+.highlight-rank-col {
+  width: 28px;
+  text-align: center !important;
+  color: var(--text-secondary);
+}
+
+.highlight-num {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.highlight-sortable {
+  cursor: pointer;
+  user-select: none;
+}
+
+.highlight-sortable:hover {
+  color: var(--text);
+}
+
+.highlight-sort-active {
+  color: var(--primary) !important;
+  font-weight: 600;
+}

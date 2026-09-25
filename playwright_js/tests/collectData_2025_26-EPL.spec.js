@@ -126,10 +126,17 @@ async function getStatPair(page, label, numericParser) {
   // matched by the stable "StatBox" component-name suffix.
   const boxes = row.locator('div[class*="StatBox"]');
 
-  const homeText = await boxes.nth(0).innerText();
-  const awayText = await boxes.nth(1).innerText();
-
-  return [numericParser(homeText), numericParser(awayText)];
+  // innerText() auto-waits, so slow-to-render stats still resolve. If the stat
+  // never appears (not published for this match), default both values to 0
+  // so one missing stat doesn't abort the whole fixture loop.
+  try {
+    const homeText = await boxes.nth(0).innerText({ timeout: 5000 });
+    const awayText = await boxes.nth(1).innerText({ timeout: 5000 });
+    return [numericParser(homeText), numericParser(awayText)];
+  } catch (err) {
+    console.warn(`Stat "${label}" not found, defaulting to 0.`);
+    return [0, 0];
+  }
 }
 
 

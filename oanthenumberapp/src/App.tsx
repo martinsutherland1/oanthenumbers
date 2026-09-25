@@ -1,6 +1,7 @@
 import { useMemo, useState } from 'react';
 import { HomePage, type LeagueFlag } from './components/HomePage';
 import { LeagueTable } from './components/LeagueTable';
+import { LeagueHighlights } from './components/LeagueHighlights';
 import { ProjectionTable } from './components/ProjectionTable';
 import { TeamOverview } from './components/TeamOverview';
 import { ComparisonsView } from './components/ComparisonsView';
@@ -20,6 +21,10 @@ import spflLastSeasonFixturesData from './data/spfl_results_2025_26.json';
 import spflTwoSeasonsAgoFixturesData from './data/spfl_results_2024_25.json';
 import eplFixturesData from './data/epl_results_2026_27.json';
 import eplLastSeasonFixturesData from './data/epl_results_2025_26.json';
+import laligaFixturesData from './data/laliga_results_2026_27.json';
+import laligaLastSeasonFixturesData from './data/laliga_results_2025_26.json';
+import bundesligaFixturesData from './data/bundesliga_results_2026_27.json';
+import bundesligaLastSeasonFixturesData from './data/bundesliga_results_2025_26.json';
 import dataUpdate from './data/data_update.json';
 import type { Fixture, FixturesData } from './types';
 import logo from './assets/logo-header.png';
@@ -29,7 +34,7 @@ type Page = 'home' | 'league';
 type Section = 'tables' | 'stats';
 type TablesTab = 'current' | 'projection';
 type StatsTab = 'team' | 'comparisons';
-type League = 'spfl' | 'epl';
+type League = 'spfl' | 'epl' | 'laliga' | 'bundesliga';
 
 const spflFixtures = flattenFixtures(spflFixturesData as FixturesData);
 // Some older fixtures in prior-season files are missing extended stats (xG breakdowns, shots,
@@ -38,6 +43,10 @@ const spflLastSeasonFixtures = flattenFixtures(spflLastSeasonFixturesData as unk
 const spflTwoSeasonsAgoFixtures = flattenFixtures(spflTwoSeasonsAgoFixturesData as unknown as FixturesData);
 const eplFixtures = flattenFixtures(eplFixturesData as FixturesData);
 const eplLastSeasonFixtures = flattenFixtures(eplLastSeasonFixturesData as FixturesData);
+const laligaFixtures = flattenFixtures(laligaFixturesData as FixturesData);
+const laligaLastSeasonFixtures = flattenFixtures(laligaLastSeasonFixturesData as FixturesData);
+const bundesligaFixtures = flattenFixtures(bundesligaFixturesData as FixturesData);
+const bundesligaLastSeasonFixtures = flattenFixtures(bundesligaLastSeasonFixturesData as FixturesData);
 
 interface LeagueConfig {
   label: string;
@@ -48,6 +57,8 @@ interface LeagueConfig {
   // promoted-team priors
   historicalSeasons: Fixture[][];
   projection: ProjectionConfig;
+  // Games each team plays in a full season
+  seasonGames: number;
   tableDividers: number[];
   projectionDividers: number[];
 }
@@ -60,6 +71,7 @@ const LEAGUE_CONFIG: Record<League, LeagueConfig> = {
     lastSeasonFixtures: spflLastSeasonFixtures,
     historicalSeasons: [spflTwoSeasonsAgoFixtures, spflLastSeasonFixtures],
     projection: PROJECTION_CONFIG.spfl,
+    seasonGames: 38,
     tableDividers: [1, 6, 10, 11],
     projectionDividers: [1, 6, 10, 11],
   },
@@ -70,12 +82,35 @@ const LEAGUE_CONFIG: Record<League, LeagueConfig> = {
     lastSeasonFixtures: eplLastSeasonFixtures,
     historicalSeasons: [eplLastSeasonFixtures],
     projection: PROJECTION_CONFIG.epl,
+    seasonGames: 38,
     tableDividers: [4, 10, 17],
     projectionDividers: [4, 10, 17],
   },
+  laliga: {
+    label: 'La Liga',
+    flag: 'spain',
+    fixtures: laligaFixtures,
+    lastSeasonFixtures: laligaLastSeasonFixtures,
+    historicalSeasons: [laligaLastSeasonFixtures],
+    projection: PROJECTION_CONFIG.laliga,
+    seasonGames: 38,
+    tableDividers: [4, 7, 17],
+    projectionDividers: [4, 7, 17],
+  },
+  bundesliga: {
+    label: 'Bundesliga',
+    flag: 'germany',
+    fixtures: bundesligaFixtures,
+    lastSeasonFixtures: bundesligaLastSeasonFixtures,
+    historicalSeasons: [bundesligaLastSeasonFixtures],
+    projection: PROJECTION_CONFIG.bundesliga,
+    seasonGames: 34,
+    tableDividers: [4, 6, 15, 16],
+    projectionDividers: [4, 6, 15, 16],
+  },
 };
 
-const LEAGUE_ORDER: League[] = ['spfl', 'epl'];
+const LEAGUE_ORDER: League[] = ['spfl', 'epl', 'laliga', 'bundesliga'];
 
 const lastUpdated = new Date(dataUpdate.updateTime).toLocaleString('en-GB', {
   timeZone: 'Europe/London',
@@ -117,8 +152,8 @@ function App() {
     [config]
   );
   const projectedStandings = useMemo(
-    () => getProjectedStandings(fixtures, undefined, projectionContext),
-    [fixtures, projectionContext]
+    () => getProjectedStandings(fixtures, config.seasonGames, projectionContext),
+    [fixtures, config.seasonGames, projectionContext]
   );
   const activeTeam = selectedTeam || teams[0] || '';
 
@@ -251,7 +286,10 @@ function App() {
             </div>
 
             {section === 'tables' && tablesTab === 'current' && (
-              <LeagueTable data={leagueTableData} dividerPositions={config.tableDividers} />
+              <>
+                <LeagueTable data={leagueTableData} dividerPositions={config.tableDividers} />
+                <LeagueHighlights fixtures={fixtures} />
+              </>
             )}
             {section === 'tables' && tablesTab === 'projection' && (
               <ProjectionTable data={projectedStandings} dividerPositions={config.projectionDividers} />
@@ -263,6 +301,7 @@ function App() {
                 lastSeasonFixtures={lastSeasonFixtures}
                 leagueTable={leagueTableData}
                 projection={projectionContext}
+                seasonGames={config.seasonGames}
               />
             )}
             {section === 'stats' && statsTab === 'comparisons' && (

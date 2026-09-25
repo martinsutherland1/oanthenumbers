@@ -12,7 +12,49 @@
   "rangers": "rangers",
   "st-mirren": "st-mirren",
   "st-johnstone": "livingston",
-  "coventry-city": ["west-ham-united", "burnley", "wolverhampton-wanderers"],
-  "ipswich-town": ["west-ham-united", "burnley", "wolverhampton-wanderers"],
-  "hull-city": ["west-ham-united", "burnley", "wolverhampton-wanderers"]
+  "coventry-city": [
+    "west-ham-united",
+    "burnley",
+    "wolverhampton-wanderers"
+  ],
+  "ipswich-town": [
+    "west-ham-united",
+    "burnley",
+    "wolverhampton-wanderers"
+  ],
+  "hull-city": [
+    "west-ham-united",
+    "burnley",
+    "wolverhampton-wanderers"
+  ],
+  "racing-santander": [
+    "mallorca",
+    "girona",
+    "real-oviedo"
+  ],
+  "deportivo-coruna": [
+    "mallorca",
+    "girona",
+    "real-oviedo"
+  ],
+  "malaga": [
+    "mallorca",
+    "girona",
+    "real-oviedo"
+  ],
+  "elversberg": [
+    "heidenheim",
+    "st-pauli",
+    "wolfsburg"
+  ],
+  "paderborn": [
+    "heidenheim",
+    "st-pauli",
+    "wolfsburg"
+  ],
+  "schalke": [
+    "heidenheim",
+    "st-pauli",
+    "wolfsburg"
+  ]
 }

@@ -15,18 +15,26 @@ async function loadFixtures() {
   const fixturesPath = path.join(
     __dirname,
     "fixtures",
-    "epl",
-    "fixtures_epl_2026_27.json"
+    "bundesliga",
+    "bundesliga_2026-27_fixtures.json"
   );
   const raw = await fs.readFile(fixturesPath, "utf-8");
-  return JSON.parse(raw);
+  const parsed = JSON.parse(raw);
+  // The Bundesliga fixtures file is one flat list, so regroup it by round
+  // ("fixtures_<round - 1>") to match the per-round layout used below.
+  const byRound = {};
+  for (const fixture of Object.values(parsed).flat()) {
+    const key = `fixtures_${fixture.round - 1}`;
+    (byRound[key] = byRound[key] || []).push(fixture);
+  }
+  return byRound;
 }
 
 const OUTPUT_PATH = path.join(
   __dirname,
   "..",
   "collectedData",
-  "EPL_data_2026_27.json"
+  "Bundesliga_data_2026_27.json"
 );
 
 // Allow time after kick-off for the match to finish and stats to be published
@@ -42,15 +50,23 @@ async function loadExistingData() {
 }
 
 function hasBeenPlayed(fixture) {
-  const kickOff = new Date(`${fixture.date}T${fixture.time || "00:00"}`);
+  // Without a kick-off time, only treat the match as played from the next day
+  if (!fixture.time) {
+    const nextDay = new Date(`${fixture.date}T00:00`);
+    nextDay.setDate(nextDay.getDate() + 1);
+    return nextDay.getTime() <= Date.now();
+  }
+  const kickOff = new Date(`${fixture.date}T${fixture.time}`);
   return kickOff.getTime() + MATCH_DURATION_MS <= Date.now();
 }
 
-// A home team only hosts each opponent once per season, so
-// opposition + location identifies the fixture even if it was rescheduled.
+// The date is included so each fixture is identified uniquely.
 function isCollected(seasonData, fixture) {
   return (seasonData[fixture.team_home] || []).some(
-    (f) => f.opposition === fixture.team_away && f.location === "home"
+    (f) =>
+      f.opposition === fixture.team_away &&
+      f.location === "home" &&
+      f.date === fixture.date
   );
 }
 
@@ -113,26 +129,24 @@ test("iterate fixtures by round", async ({ page }) => {
   const fixtures = await loadFixtures();
   const seasonData = await loadExistingData();
   const teams = [
-    "afc-bournemouth",
-    "arsenal",
-    "aston-villa",
-    "brentford",
-    "brighton-hove-albion",
-    "chelsea",
-    "coventry-city",
-    "crystal-palace",
-    "everton",
-    "fulham",
-    "hull-city",
-    "ipswich-town",
-    "leeds-united",
-    "liverpool",
-    "manchester-city",
-    "manchester-united",
-    "newcastle-united",
-    "nottingham-forest",
-    "sunderland",
-    "tottenham-hotspur"
+    "augsburg",
+    "bayer-leverkusen",
+    "bayern-munchen",
+    "borussia-dortmund",
+    "borussia-monchengladbach",
+    "eintracht-frankfurt",
+    "elversberg",
+    "freiburg",
+    "hamburger-sv",
+    "hoffenheim",
+    "koln",
+    "mainz",
+    "paderborn",
+    "rb-leipzig",
+    "schalke",
+    "stuttgart",
+    "union-berlin",
+    "werder-bremen"
   ];
   teams.forEach((team) => {
     seasonData[team] = seasonData[team] || [];
@@ -191,7 +205,7 @@ async function getStatPair(page, label, numericParser) {
     }
 
     await page.goto(
-      `https://www.fotmob.com/en-GB/leagues/47/fixtures/premier-league?group=by-round&round=${roundIndex}`
+      `https://www.fotmob.com/en-GB/leagues/54/fixtures/bundesliga?group=by-round&round=${roundIndex}`
     );
 
     for (const fixture of fixtureList) {
@@ -434,6 +448,20 @@ async function getStatPair(page, label, numericParser) {
           location: "away",
         };
 
+        // DEBUG: log team keys that don't exist in seasonData
+        for (const [role, key] of [["home", team_home], ["away", team_away]]) {
+          if (!seasonData[key]) {
+            console.error(
+              `[DEBUG] Unknown ${role} team key "${key}" (type: ${typeof key}, JSON: ${JSON.stringify(key)}) ` +
+                `in fixture ${JSON.stringify(fixture)}`
+            );
+            console.error(
+              `[DEBUG] Known keys: ${Object.keys(seasonData).join(", ")}`
+            );
+            throw new Error(`Unknown ${role} team key: ${JSON.stringify(key)}`);
+          }
+        }
+
         seasonData[team_home].push(fixture_object_home);
         seasonData[team_away].push(fixture_object_away);
       } finally {
@@ -447,5 +475,3 @@ async function getStatPair(page, label, numericParser) {
     saveJSON(OUTPUT_PATH, seasonData);
   }
 });
-
-

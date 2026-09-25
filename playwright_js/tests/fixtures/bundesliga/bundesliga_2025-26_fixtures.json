@@ -1,0 +1,1840 @@
+{
+  "fixtures_0": [
+    {
+      "date": "2025-08-22",
+      "team_home": "bayern-munchen",
+      "team_away": "rb-leipzig",
+      "round": 1
+    },
+    {
+      "date": "2025-08-23",
+      "team_home": "eintracht-frankfurt",
+      "team_away": "werder-bremen",
+      "round": 1
+    },
+    {
+      "date": "2025-08-23",
+      "team_home": "bayer-leverkusen",
+      "team_away": "hoffenheim",
+      "round": 1
+    },
+    {
+      "date": "2025-08-23",
+      "team_home": "freiburg",
+      "team_away": "augsburg",
+      "round": 1
+    },
+    {
+      "date": "2025-08-23",
+      "team_home": "union-berlin",
+      "team_away": "stuttgart",
+      "round": 1
+    },
+    {
+      "date": "2025-08-23",
+      "team_home": "heidenheim",
+      "team_away": "wolfsburg",
+      "round": 1
+    },
+    {
+      "date": "2025-08-23",
+      "team_home": "st-pauli",
+      "team_away": "borussia-dortmund",
+      "round": 1
+    },
+    {
+      "date": "2025-08-24",
+      "team_home": "mainz",
+      "team_away": "koln",
+      "round": 1
+    },
+    {
+      "date": "2025-08-24",
+      "team_home": "borussia-monchengladbach",
+      "team_away": "hamburger-sv",
+      "round": 1
+    },
+    {
+      "date": "2025-08-29",
+      "team_home": "hamburger-sv",
+      "team_away": "st-pauli",
+      "round": 2
+    },
+    {
+      "date": "2025-08-30",
+      "team_home": "rb-leipzig",
+      "team_away": "heidenheim",
+      "round": 2
+    },
+    {
+      "date": "2025-08-30",
+      "team_home": "werder-bremen",
+      "team_away": "bayer-leverkusen",
+      "round": 2
+    },
+    {
+      "date": "2025-08-30",
+      "team_home": "stuttgart",
+      "team_away": "borussia-monchengladbach",
+      "round": 2
+    },
+    {
+      "date": "2025-08-30",
+      "team_home": "hoffenheim",
+      "team_away": "eintracht-frankfurt",
+      "round": 2
+    },
+    {
+      "date": "2025-08-30",
+      "team_home": "augsburg",
+      "team_away": "bayern-munchen",
+      "round": 2
+    },
+    {
+      "date": "2025-08-31",
+      "team_home": "wolfsburg",
+      "team_away": "mainz",
+      "round": 2
+    },
+    {
+      "date": "2025-08-31",
+      "team_home": "borussia-dortmund",
+      "team_away": "union-berlin",
+      "round": 2
+    },
+    {
+      "date": "2025-08-31",
+      "team_home": "koln",
+      "team_away": "freiburg",
+      "round": 2
+    },
+    {
+      "date": "2025-09-12",
+      "team_home": "bayer-leverkusen",
+      "team_away": "eintracht-frankfurt",
+      "round": 3
+    },
+    {
+      "date": "2025-09-13",
+      "team_home": "freiburg",
+      "team_away": "stuttgart",
+      "round": 3
+    },
+    {
+      "date": "2025-09-13",
+      "team_home": "mainz",
+      "team_away": "rb-leipzig",
+      "round": 3
+    },
+    {
+      "date": "2025-09-13",
+      "team_home": "wolfsburg",
+      "team_away": "koln",
+      "round": 3
+    },
+    {
+      "date": "2025-09-13",
+      "team_home": "union-berlin",
+      "team_away": "hoffenheim",
+      "round": 3
+    },
+    {
+      "date": "2025-09-13",
+      "team_home": "heidenheim",
+      "team_away": "borussia-dortmund",
+      "round": 3
+    },
+    {
+      "date": "2025-09-13",
+      "team_home": "bayern-munchen",
+      "team_away": "hamburger-sv",
+      "round": 3
+    },
+    {
+      "date": "2025-09-14",
+      "team_home": "st-pauli",
+      "team_away": "augsburg",
+      "round": 3
+    },
+    {
+      "date": "2025-09-14",
+      "team_home": "borussia-monchengladbach",
+      "team_away": "werder-bremen",
+      "round": 3
+    },
+    {
+      "date": "2025-09-19",
+      "team_home": "stuttgart",
+      "team_away": "st-pauli",
+      "round": 4
+    },
+    {
+      "date": "2025-09-20",
+      "team_home": "werder-bremen",
+      "team_away": "freiburg",
+      "round": 4
+    },
+    {
+      "date": "2025-09-20",
+      "team_home": "augsburg",
+      "team_away": "mainz",
+      "round": 4
+    },
+    {
+      "date": "2025-09-20",
+      "team_home": "hoffenheim",
+      "team_away": "bayern-munchen",
+      "round": 4
+    },
+    {
+      "date": "2025-09-20",
+      "team_home": "hamburger-sv",
+      "team_away": "heidenheim",
+      "round": 4
+    },
+    {
+      "date": "2025-09-20",
+      "team_home": "rb-leipzig",
+      "team_away": "koln",
+      "round": 4
+    },
+    {
+      "date": "2025-09-21",
+      "team_home": "eintracht-frankfurt",
+      "team_away": "union-berlin",
+      "round": 4
+    },
+    {
+      "date": "2025-09-21",
+      "team_home": "bayer-leverkusen",
+      "team_away": "borussia-monchengladbach",
+      "round": 4
+    },
+    {
+      "date": "2025-09-21",
+      "team_home": "borussia-dortmund",
+      "team_away": "wolfsburg",
+      "round": 4
+    },
+    {
+      "date": "2025-09-26",
+      "team_home": "bayern-munchen",
+      "team_away": "werder-bremen",
+      "round": 5
+    },
+    {
+      "date": "2025-09-27",
+      "team_home": "mainz",
+      "team_away": "borussia-dortmund",
+      "round": 5
+    },
+    {
+      "date": "2025-09-27",
+      "team_home": "wolfsburg",
+      "team_away": "rb-leipzig",
+      "round": 5
+    },
+    {
+      "date": "2025-09-27",
+      "team_home": "st-pauli",
+      "team_away": "bayer-leverkusen",
+      "round": 5
+    },
+    {
+      "date": "2025-09-27",
+      "team_home": "heidenheim",
+      "team_away": "augsburg",
+      "round": 5
+    },
+    {
+      "date": "2025-09-27",
+      "team_home": "borussia-monchengladbach",
+      "team_away": "eintracht-frankfurt",
+      "round": 5
+    },
+    {
+      "date": "2025-09-28",
+      "team_home": "freiburg",
+      "team_away": "hoffenheim",
+      "round": 5
+    },
+    {
+      "date": "2025-09-28",
+      "team_home": "koln",
+      "team_away": "stuttgart",
+      "round": 5
+    },
+    {
+      "date": "2025-09-28",
+      "team_home": "union-berlin",
+      "team_away": "hamburger-sv",
+      "round": 5
+    },
+    {
+      "date": "2025-10-03",
+      "team_home": "hoffenheim",
+      "team_away": "koln",
+      "round": 6
+    },
+    {
+      "date": "2025-10-04",
+      "team_home": "bayer-leverkusen",
+      "team_away": "union-berlin",
+      "round": 6
+    },
+    {
+      "date": "2025-10-04",
+      "team_home": "borussia-dortmund",
+      "team_away": "rb-leipzig",
+      "round": 6
+    },
+    {
+      "date": "2025-10-04",
+      "team_home": "werder-bremen",
+      "team_away": "st-pauli",
+      "round": 6
+    },
+    {
+      "date": "2025-10-04",
+      "team_home": "augsburg",
+      "team_away": "wolfsburg",
+      "round": 6
+    },
+    {
+      "date": "2025-10-04",
+      "team_home": "eintracht-frankfurt",
+      "team_away": "bayern-munchen",
+      "round": 6
+    },
+    {
+      "date": "2025-10-05",
+      "team_home": "stuttgart",
+      "team_away": "heidenheim",
+      "round": 6
+    },
+    {
+      "date": "2025-10-05",
+      "team_home": "hamburger-sv",
+      "team_away": "mainz",
+      "round": 6
+    },
+    {
+      "date": "2025-10-05",
+      "team_home": "borussia-monchengladbach",
+      "team_away": "freiburg",
+      "round": 6
+    },
+    {
+      "date": "2025-10-17",
+      "team_home": "union-berlin",
+      "team_away": "borussia-monchengladbach",
+      "round": 7
+    },
+    {
+      "date": "2025-10-18",
+      "team_home": "mainz",
+      "team_away": "bayer-leverkusen",
+      "round": 7
+    },
+    {
+      "date": "2025-10-18",
+      "team_home": "rb-leipzig",
+      "team_away": "hamburger-sv",
+      "round": 7
+    },
+    {
+      "date": "2025-10-18",
+      "team_home": "wolfsburg",
+      "team_away": "stuttgart",
+      "round": 7
+    },
+    {
+      "date": "2025-10-18",
+      "team_home": "heidenheim",
+      "team_away": "werder-bremen",
+      "round": 7
+    },
+    {
+      "date": "2025-10-18",
+      "team_home": "koln",
+      "team_away": "augsburg",
+      "round": 7
+    },
+    {
+      "date": "2025-10-18",
+      "team_home": "bayern-munchen",
+      "team_away": "borussia-dortmund",
+      "round": 7
+    },
+    {
+      "date": "2025-10-19",
+      "team_home": "freiburg",
+      "team_away": "eintracht-frankfurt",
+      "round": 7
+    },
+    {
+      "date": "2025-10-19",
+      "team_home": "st-pauli",
+      "team_away": "hoffenheim",
+      "round": 7
+    },
+    {
+      "date": "2025-10-24",
+      "team_home": "werder-bremen",
+      "team_away": "union-berlin",
+      "round": 8
+    },
+    {
+      "date": "2025-10-25",
+      "team_home": "eintracht-frankfurt",
+      "team_away": "st-pauli",
+      "round": 8
+    },
+    {
+      "date": "2025-10-25",
+      "team_home": "augsburg",
+      "team_away": "rb-leipzig",
+      "round": 8
+    },
+    {
+      "date": "2025-10-25",
+      "team_home": "hoffenheim",
+      "team_away": "heidenheim",
+      "round": 8
+    },
+    {
+      "date": "2025-10-25",
+      "team_home": "hamburger-sv",
+      "team_away": "wolfsburg",
+      "round": 8
+    },
+    {
+      "date": "2025-10-25",
+      "team_home": "borussia-monchengladbach",
+      "team_away": "bayern-munchen",
+      "round": 8
+    },
+    {
+      "date": "2025-10-25",
+      "team_home": "borussia-dortmund",
+      "team_away": "koln",
+      "round": 8
+    },
+    {
+      "date": "2025-10-26",
+      "team_home": "bayer-leverkusen",
+      "team_away": "freiburg",
+      "round": 8
+    },
+    {
+      "date": "2025-10-26",
+      "team_home": "stuttgart",
+      "team_away": "mainz",
+      "round": 8
+    },
+    {
+      "date": "2025-10-31",
+      "team_home": "augsburg",
+      "team_away": "borussia-dortmund",
+      "round": 9
+    },
+    {
+      "date": "2025-11-01",
+      "team_home": "mainz",
+      "team_away": "werder-bremen",
+      "round": 9
+    },
+    {
+      "date": "2025-11-01",
+      "team_home": "rb-leipzig",
+      "team_away": "stuttgart",
+      "round": 9
+    },
+    {
+      "date": "2025-11-01",
+      "team_home": "union-berlin",
+      "team_away": "freiburg",
+      "round": 9
+    },
+    {
+      "date": "2025-11-01",
+      "team_home": "st-pauli",
+      "team_away": "borussia-monchengladbach",
+      "round": 9
+    },
+    {
+      "date": "2025-11-01",
+      "team_home": "heidenheim",
+      "team_away": "eintracht-frankfurt",
+      "round": 9
+    },
+    {
+      "date": "2025-11-01",
+      "team_home": "bayern-munchen",
+      "team_away": "bayer-leverkusen",
+      "round": 9
+    },
+    {
+      "date": "2025-11-02",
+      "team_home": "koln",
+      "team_away": "hamburger-sv",
+      "round": 9
+    },
+    {
+      "date": "2025-11-02",
+      "team_home": "wolfsburg",
+      "team_away": "hoffenheim",
+      "round": 9
+    },
+    {
+      "date": "2025-11-07",
+      "team_home": "werder-bremen",
+      "team_away": "wolfsburg",
+      "round": 10
+    },
+    {
+      "date": "2025-11-08",
+      "team_home": "bayer-leverkusen",
+      "team_away": "heidenheim",
+      "round": 10
+    },
+    {
+      "date": "2025-11-08",
+      "team_home": "union-berlin",
+      "team_away": "bayern-munchen",
+      "round": 10
+    },
+    {
+      "date": "2025-11-08",
+      "team_home": "hoffenheim",
+      "team_away": "rb-leipzig",
+      "round": 10
+    },
+    {
+      "date": "2025-11-08",
+      "team_home": "hamburger-sv",
+      "team_away": "borussia-dortmund",
+      "round": 10
+    },
+    {
+      "date": "2025-11-08",
+      "team_home": "borussia-monchengladbach",
+      "team_away": "koln",
+      "round": 10
+    },
+    {
+      "date": "2025-11-09",
+      "team_home": "freiburg",
+      "team_away": "st-pauli",
+      "round": 10
+    },
+    {
+      "date": "2025-11-09",
+      "team_home": "stuttgart",
+      "team_away": "augsburg",
+      "round": 10
+    },
+    {
+      "date": "2025-11-09",
+      "team_home": "eintracht-frankfurt",
+      "team_away": "mainz",
+      "round": 10
+    },
+    {
+      "date": "2025-11-21",
+      "team_home": "mainz",
+      "team_away": "hoffenheim",
+      "round": 11
+    },
+    {
+      "date": "2025-11-22",
+      "team_home": "bayern-munchen",
+      "team_away": "freiburg",
+      "round": 11
+    },
+    {
+      "date": "2025-11-22",
+      "team_home": "borussia-dortmund",
+      "team_away": "stuttgart",
+      "round": 11
+    },
+    {
+      "date": "2025-11-22",
+      "team_home": "wolfsburg",
+      "team_away": "bayer-leverkusen",
+      "round": 11
+    },
+    {
+      "date": "2025-11-22",
+      "team_home": "augsburg",
+      "team_away": "hamburger-sv",
+      "round": 11
+    },
+    {
+      "date": "2025-11-22",
+      "team_home": "heidenheim",
+      "team_away": "borussia-monchengladbach",
+      "round": 11
+    },
+    {
+      "date": "2025-11-22",
+      "team_home": "koln",
+      "team_away": "eintracht-frankfurt",
+      "round": 11
+    },
+    {
+      "date": "2025-11-23",
+      "team_home": "rb-leipzig",
+      "team_away": "werder-bremen",
+      "round": 11
+    },
+    {
+      "date": "2025-11-23",
+      "team_home": "st-pauli",
+      "team_away": "union-berlin",
+      "round": 11
+    },
+    {
+      "date": "2025-11-28",
+      "team_home": "borussia-monchengladbach",
+      "team_away": "rb-leipzig",
+      "round": 12
+    },
+    {
+      "date": "2025-11-29",
+      "team_home": "bayern-munchen",
+      "team_away": "st-pauli",
+      "round": 12
+    },
+    {
+      "date": "2025-11-29",
+      "team_home": "werder-bremen",
+      "team_away": "koln",
+      "round": 12
+    },
+    {
+      "date": "2025-11-29",
+      "team_home": "union-berlin",
+      "team_away": "heidenheim",
+      "round": 12
+    },
+    {
+      "date": "2025-11-29",
+      "team_home": "hoffenheim",
+      "team_away": "augsburg",
+      "round": 12
+    },
+    {
+      "date": "2025-11-29",
+      "team_home": "bayer-leverkusen",
+      "team_away": "borussia-dortmund",
+      "round": 12
+    },
+    {
+      "date": "2025-11-30",
+      "team_home": "hamburger-sv",
+      "team_away": "stuttgart",
+      "round": 12
+    },
+    {
+      "date": "2025-11-30",
+      "team_home": "eintracht-frankfurt",
+      "team_away": "wolfsburg",
+      "round": 12
+    },
+    {
+      "date": "2025-11-30",
+      "team_home": "freiburg",
+      "team_away": "mainz",
+      "round": 12
+    },
+    {
+      "date": "2025-12-05",
+      "team_home": "mainz",
+      "team_away": "borussia-monchengladbach",
+      "round": 13
+    },
+    {
+      "date": "2025-12-06",
+      "team_home": "stuttgart",
+      "team_away": "bayern-munchen",
+      "round": 13
+    },
+    {
+      "date": "2025-12-06",
+      "team_home": "wolfsburg",
+      "team_away": "union-berlin",
+      "round": 13
+    },
+    {
+      "date": "2025-12-06",
+      "team_home": "heidenheim",
+      "team_away": "freiburg",
+      "round": 13
+    },
+    {
+      "date": "2025-12-06",
+      "team_home": "koln",
+      "team_away": "st-pauli",
+      "round": 13
+    },
+    {
+      "date": "2025-12-06",
+      "team_home": "augsburg",
+      "team_away": "bayer-leverkusen",
+      "round": 13
+    },
+    {
+      "date": "2025-12-06",
+      "team_home": "rb-leipzig",
+      "team_away": "eintracht-frankfurt",
+      "round": 13
+    },
+    {
+      "date": "2025-12-07",
+      "team_home": "hamburger-sv",
+      "team_away": "werder-bremen",
+      "round": 13
+    },
+    {
+      "date": "2025-12-07",
+      "team_home": "borussia-dortmund",
+      "team_away": "hoffenheim",
+      "round": 13
+    },
+    {
+      "date": "2025-12-12",
+      "team_home": "union-berlin",
+      "team_away": "rb-leipzig",
+      "round": 14
+    },
+    {
+      "date": "2025-12-13",
+      "team_home": "eintracht-frankfurt",
+      "team_away": "augsburg",
+      "round": 14
+    },
+    {
+      "date": "2025-12-13",
+      "team_home": "borussia-monchengladbach",
+      "team_away": "wolfsburg",
+      "round": 14
+    },
+    {
+      "date": "2025-12-13",
+      "team_home": "st-pauli",
+      "team_away": "heidenheim",
+      "round": 14
+    },
+    {
+      "date": "2025-12-13",
+      "team_home": "hoffenheim",
+      "team_away": "hamburger-sv",
+      "round": 14
+    },
+    {
+      "date": "2025-12-13",
+      "team_home": "bayer-leverkusen",
+      "team_away": "koln",
+      "round": 14
+    },
+    {
+      "date": "2025-12-14",
+      "team_home": "freiburg",
+      "team_away": "borussia-dortmund",
+      "round": 14
+    },
+    {
+      "date": "2025-12-14",
+      "team_home": "bayern-munchen",
+      "team_away": "mainz",
+      "round": 14
+    },
+    {
+      "date": "2025-12-14",
+      "team_home": "werder-bremen",
+      "team_away": "stuttgart",
+      "round": 14
+    },
+    {
+      "date": "2025-12-19",
+      "team_home": "borussia-dortmund",
+      "team_away": "borussia-monchengladbach",
+      "round": 15
+    },
+    {
+      "date": "2025-12-20",
+      "team_home": "stuttgart",
+      "team_away": "hoffenheim",
+      "round": 15
+    },
+    {
+      "date": "2025-12-20",
+      "team_home": "wolfsburg",
+      "team_away": "freiburg",
+      "round": 15
+    },
+    {
+      "date": "2025-12-20",
+      "team_home": "augsburg",
+      "team_away": "werder-bremen",
+      "round": 15
+    },
+    {
+      "date": "2025-12-20",
+      "team_home": "koln",
+      "team_away": "union-berlin",
+      "round": 15
+    },
+    {
+      "date": "2025-12-20",
+      "team_home": "hamburger-sv",
+      "team_away": "eintracht-frankfurt",
+      "round": 15
+    },
+    {
+      "date": "2025-12-20",
+      "team_home": "rb-leipzig",
+      "team_away": "bayer-leverkusen",
+      "round": 15
+    },
+    {
+      "date": "2025-12-21",
+      "team_home": "mainz",
+      "team_away": "st-pauli",
+      "round": 15
+    },
+    {
+      "date": "2025-12-21",
+      "team_home": "heidenheim",
+      "team_away": "bayern-munchen",
+      "round": 15
+    },
+    {
+      "date": "2026-01-09",
+      "team_home": "eintracht-frankfurt",
+      "team_away": "borussia-dortmund",
+      "round": 16
+    },
+    {
+      "date": "2026-01-10",
+      "team_home": "freiburg",
+      "team_away": "hamburger-sv",
+      "round": 16
+    },
+    {
+      "date": "2026-01-10",
+      "team_home": "union-berlin",
+      "team_away": "mainz",
+      "round": 16
+    },
+    {
+      "date": "2026-01-10",
+      "team_home": "heidenheim",
+      "team_away": "koln",
+      "round": 16
+    },
+    {
+      "date": "2026-01-10",
+      "team_home": "bayer-leverkusen",
+      "team_away": "stuttgart",
+      "round": 16
+    },
+    {
+      "date": "2026-01-11",
+      "team_home": "borussia-monchengladbach",
+      "team_away": "augsburg",
+      "round": 16
+    },
+    {
+      "date": "2026-01-11",
+      "team_home": "bayern-munchen",
+      "team_away": "wolfsburg",
+      "round": 16
+    },
+    {
+      "date": "2026-01-27",
+      "team_home": "werder-bremen",
+      "team_away": "hoffenheim",
+      "round": 16
+    },
+    {
+      "date": "2026-01-27",
+      "team_home": "st-pauli",
+      "team_away": "rb-leipzig",
+      "round": 16
+    },
+    {
+      "date": "2026-01-13",
+      "team_home": "stuttgart",
+      "team_away": "eintracht-frankfurt",
+      "round": 17
+    },
+    {
+      "date": "2026-01-13",
+      "team_home": "borussia-dortmund",
+      "team_away": "werder-bremen",
+      "round": 17
+    },
+    {
+      "date": "2026-01-13",
+      "team_home": "mainz",
+      "team_away": "heidenheim",
+      "round": 17
+    },
+    {
+      "date": "2026-01-14",
+      "team_home": "wolfsburg",
+      "team_away": "st-pauli",
+      "round": 17
+    },
+    {
+      "date": "2026-01-14",
+      "team_home": "rb-leipzig",
+      "team_away": "freiburg",
+      "round": 17
+    },
+    {
+      "date": "2026-01-14",
+      "team_home": "hoffenheim",
+      "team_away": "borussia-monchengladbach",
+      "round": 17
+    },
+    {
+      "date": "2026-01-14",
+      "team_home": "koln",
+      "team_away": "bayern-munchen",
+      "round": 17
+    },
+    {
+      "date": "2026-01-15",
+      "team_home": "augsburg",
+      "team_away": "union-berlin",
+      "round": 17
+    },
+    {
+      "date": "2026-03-04",
+      "team_home": "hamburger-sv",
+      "team_away": "bayer-leverkusen",
+      "round": 17
+    },
+    {
+      "date": "2026-01-16",
+      "team_home": "werder-bremen",
+      "team_away": "eintracht-frankfurt",
+      "round": 18
+    },
+    {
+      "date": "2026-01-17",
+      "team_home": "hoffenheim",
+      "team_away": "bayer-leverkusen",
+      "round": 18
+    },
+    {
+      "date": "2026-01-17",
+      "team_home": "koln",
+      "team_away": "mainz",
+      "round": 18
+    },
+    {
+      "date": "2026-01-17",
+      "team_home": "hamburger-sv",
+      "team_away": "borussia-monchengladbach",
+      "round": 18
+    },
+    {
+      "date": "2026-01-17",
+      "team_home": "borussia-dortmund",
+      "team_away": "st-pauli",
+      "round": 18
+    },
+    {
+      "date": "2026-01-17",
+      "team_home": "wolfsburg",
+      "team_away": "heidenheim",
+      "round": 18
+    },
+    {
+      "date": "2026-01-17",
+      "team_home": "rb-leipzig",
+      "team_away": "bayern-munchen",
+      "round": 18
+    },
+    {
+      "date": "2026-01-18",
+      "team_home": "stuttgart",
+      "team_away": "union-berlin",
+      "round": 18
+    },
+    {
+      "date": "2026-01-18",
+      "team_home": "augsburg",
+      "team_away": "freiburg",
+      "round": 18
+    },
+    {
+      "date": "2026-01-23",
+      "team_home": "st-pauli",
+      "team_away": "hamburger-sv",
+      "round": 19
+    },
+    {
+      "date": "2026-01-24",
+      "team_home": "heidenheim",
+      "team_away": "rb-leipzig",
+      "round": 19
+    },
+    {
+      "date": "2026-01-24",
+      "team_home": "bayer-leverkusen",
+      "team_away": "werder-bremen",
+      "round": 19
+    },
+    {
+      "date": "2026-01-24",
+      "team_home": "mainz",
+      "team_away": "wolfsburg",
+      "round": 19
+    },
+    {
+      "date": "2026-01-24",
+      "team_home": "bayern-munchen",
+      "team_away": "augsburg",
+      "round": 19
+    },
+    {
+      "date": "2026-01-24",
+      "team_home": "eintracht-frankfurt",
+      "team_away": "hoffenheim",
+      "round": 19
+    },
+    {
+      "date": "2026-01-24",
+      "team_home": "union-berlin",
+      "team_away": "borussia-dortmund",
+      "round": 19
+    },
+    {
+      "date": "2026-01-25",
+      "team_home": "borussia-monchengladbach",
+      "team_away": "stuttgart",
+      "round": 19
+    },
+    {
+      "date": "2026-01-25",
+      "team_home": "freiburg",
+      "team_away": "koln",
+      "round": 19
+    },
+    {
+      "date": "2026-01-30",
+      "team_home": "koln",
+      "team_away": "wolfsburg",
+      "round": 20
+    },
+    {
+      "date": "2026-01-31",
+      "team_home": "eintracht-frankfurt",
+      "team_away": "bayer-leverkusen",
+      "round": 20
+    },
+    {
+      "date": "2026-01-31",
+      "team_home": "rb-leipzig",
+      "team_away": "mainz",
+      "round": 20
+    },
+    {
+      "date": "2026-01-31",
+      "team_home": "werder-bremen",
+      "team_away": "borussia-monchengladbach",
+      "round": 20
+    },
+    {
+      "date": "2026-01-31",
+      "team_home": "hoffenheim",
+      "team_away": "union-berlin",
+      "round": 20
+    },
+    {
+      "date": "2026-01-31",
+      "team_home": "augsburg",
+      "team_away": "st-pauli",
+      "round": 20
+    },
+    {
+      "date": "2026-01-31",
+      "team_home": "hamburger-sv",
+      "team_away": "bayern-munchen",
+      "round": 20
+    },
+    {
+      "date": "2026-02-01",
+      "team_home": "stuttgart",
+      "team_away": "freiburg",
+      "round": 20
+    },
+    {
+      "date": "2026-02-01",
+      "team_home": "borussia-dortmund",
+      "team_away": "heidenheim",
+      "round": 20
+    },
+    {
+      "date": "2026-02-06",
+      "team_home": "union-berlin",
+      "team_away": "eintracht-frankfurt",
+      "round": 21
+    },
+    {
+      "date": "2026-02-07",
+      "team_home": "wolfsburg",
+      "team_away": "borussia-dortmund",
+      "round": 21
+    },
+    {
+      "date": "2026-02-07",
+      "team_home": "freiburg",
+      "team_away": "werder-bremen",
+      "round": 21
+    },
+    {
+      "date": "2026-02-07",
+      "team_home": "st-pauli",
+      "team_away": "stuttgart",
+      "round": 21
+    },
+    {
+      "date": "2026-02-07",
+      "team_home": "mainz",
+      "team_away": "augsburg",
+      "round": 21
+    },
+    {
+      "date": "2026-02-07",
+      "team_home": "heidenheim",
+      "team_away": "hamburger-sv",
+      "round": 21
+    },
+    {
+      "date": "2026-02-07",
+      "team_home": "borussia-monchengladbach",
+      "team_away": "bayer-leverkusen",
+      "round": 21
+    },
+    {
+      "date": "2026-02-08",
+      "team_home": "koln",
+      "team_away": "rb-leipzig",
+      "round": 21
+    },
+    {
+      "date": "2026-02-08",
+      "team_home": "bayern-munchen",
+      "team_away": "hoffenheim",
+      "round": 21
+    },
+    {
+      "date": "2026-02-13",
+      "team_home": "borussia-dortmund",
+      "team_away": "mainz",
+      "round": 22
+    },
+    {
+      "date": "2026-02-14",
+      "team_home": "werder-bremen",
+      "team_away": "bayern-munchen",
+      "round": 22
+    },
+    {
+      "date": "2026-02-14",
+      "team_home": "hoffenheim",
+      "team_away": "freiburg",
+      "round": 22
+    },
+    {
+      "date": "2026-02-14",
+      "team_home": "eintracht-frankfurt",
+      "team_away": "borussia-monchengladbach",
+      "round": 22
+    },
+    {
+      "date": "2026-02-14",
+      "team_home": "hamburger-sv",
+      "team_away": "union-berlin",
+      "round": 22
+    },
+    {
+      "date": "2026-02-14",
+      "team_home": "bayer-leverkusen",
+      "team_away": "st-pauli",
+      "round": 22
+    },
+    {
+      "date": "2026-02-14",
+      "team_home": "stuttgart",
+      "team_away": "koln",
+      "round": 22
+    },
+    {
+      "date": "2026-02-15",
+      "team_home": "augsburg",
+      "team_away": "heidenheim",
+      "round": 22
+    },
+    {
+      "date": "2026-02-15",
+      "team_home": "rb-leipzig",
+      "team_away": "wolfsburg",
+      "round": 22
+    },
+    {
+      "date": "2026-02-20",
+      "team_home": "mainz",
+      "team_away": "hamburger-sv",
+      "round": 23
+    },
+    {
+      "date": "2026-02-21",
+      "team_home": "union-berlin",
+      "team_away": "bayer-leverkusen",
+      "round": 23
+    },
+    {
+      "date": "2026-02-21",
+      "team_home": "bayern-munchen",
+      "team_away": "eintracht-frankfurt",
+      "round": 23
+    },
+    {
+      "date": "2026-02-21",
+      "team_home": "wolfsburg",
+      "team_away": "augsburg",
+      "round": 23
+    },
+    {
+      "date": "2026-02-21",
+      "team_home": "koln",
+      "team_away": "hoffenheim",
+      "round": 23
+    },
+    {
+      "date": "2026-02-21",
+      "team_home": "rb-leipzig",
+      "team_away": "borussia-dortmund",
+      "round": 23
+    },
+    {
+      "date": "2026-02-22",
+      "team_home": "freiburg",
+      "team_away": "borussia-monchengladbach",
+      "round": 23
+    },
+    {
+      "date": "2026-02-22",
+      "team_home": "st-pauli",
+      "team_away": "werder-bremen",
+      "round": 23
+    },
+    {
+      "date": "2026-02-22",
+      "team_home": "heidenheim",
+      "team_away": "stuttgart",
+      "round": 23
+    },
+    {
+      "date": "2026-02-27",
+      "team_home": "augsburg",
+      "team_away": "koln",
+      "round": 24
+    },
+    {
+      "date": "2026-02-28",
+      "team_home": "bayer-leverkusen",
+      "team_away": "mainz",
+      "round": 24
+    },
+    {
+      "date": "2026-02-28",
+      "team_home": "borussia-monchengladbach",
+      "team_away": "union-berlin",
+      "round": 24
+    },
+    {
+      "date": "2026-02-28",
+      "team_home": "hoffenheim",
+      "team_away": "st-pauli",
+      "round": 24
+    },
+    {
+      "date": "2026-02-28",
+      "team_home": "werder-bremen",
+      "team_away": "heidenheim",
+      "round": 24
+    },
+    {
+      "date": "2026-02-28",
+      "team_home": "borussia-dortmund",
+      "team_away": "bayern-munchen",
+      "round": 24
+    },
+    {
+      "date": "2026-03-01",
+      "team_home": "stuttgart",
+      "team_away": "wolfsburg",
+      "round": 24
+    },
+    {
+      "date": "2026-03-01",
+      "team_home": "eintracht-frankfurt",
+      "team_away": "freiburg",
+      "round": 24
+    },
+    {
+      "date": "2026-03-01",
+      "team_home": "hamburger-sv",
+      "team_away": "rb-leipzig",
+      "round": 24
+    },
+    {
+      "date": "2026-03-06",
+      "team_home": "bayern-munchen",
+      "team_away": "borussia-monchengladbach",
+      "round": 25
+    },
+    {
+      "date": "2026-03-07",
+      "team_home": "freiburg",
+      "team_away": "bayer-leverkusen",
+      "round": 25
+    },
+    {
+      "date": "2026-03-07",
+      "team_home": "mainz",
+      "team_away": "stuttgart",
+      "round": 25
+    },
+    {
+      "date": "2026-03-07",
+      "team_home": "rb-leipzig",
+      "team_away": "augsburg",
+      "round": 25
+    },
+    {
+      "date": "2026-03-07",
+      "team_home": "heidenheim",
+      "team_away": "hoffenheim",
+      "round": 25
+    },
+    {
+      "date": "2026-03-07",
+      "team_home": "wolfsburg",
+      "team_away": "hamburger-sv",
+      "round": 25
+    },
+    {
+      "date": "2026-03-07",
+      "team_home": "koln",
+      "team_away": "borussia-dortmund",
+      "round": 25
+    },
+    {
+      "date": "2026-03-08",
+      "team_home": "st-pauli",
+      "team_away": "eintracht-frankfurt",
+      "round": 25
+    },
+    {
+      "date": "2026-03-08",
+      "team_home": "union-berlin",
+      "team_away": "werder-bremen",
+      "round": 25
+    },
+    {
+      "date": "2026-03-13",
+      "team_home": "borussia-monchengladbach",
+      "team_away": "st-pauli",
+      "round": 26
+    },
+    {
+      "date": "2026-03-14",
+      "team_home": "bayer-leverkusen",
+      "team_away": "bayern-munchen",
+      "round": 26
+    },
+    {
+      "date": "2026-03-14",
+      "team_home": "hoffenheim",
+      "team_away": "wolfsburg",
+      "round": 26
+    },
+    {
+      "date": "2026-03-14",
+      "team_home": "borussia-dortmund",
+      "team_away": "augsburg",
+      "round": 26
+    },
+    {
+      "date": "2026-03-14",
+      "team_home": "eintracht-frankfurt",
+      "team_away": "heidenheim",
+      "round": 26
+    },
+    {
+      "date": "2026-03-14",
+      "team_home": "hamburger-sv",
+      "team_away": "koln",
+      "round": 26
+    },
+    {
+      "date": "2026-03-15",
+      "team_home": "werder-bremen",
+      "team_away": "mainz",
+      "round": 26
+    },
+    {
+      "date": "2026-03-15",
+      "team_home": "freiburg",
+      "team_away": "union-berlin",
+      "round": 26
+    },
+    {
+      "date": "2026-03-15",
+      "team_home": "stuttgart",
+      "team_away": "rb-leipzig",
+      "round": 26
+    },
+    {
+      "date": "2026-03-20",
+      "team_home": "rb-leipzig",
+      "team_away": "hoffenheim",
+      "round": 27
+    },
+    {
+      "date": "2026-03-21",
+      "team_home": "heidenheim",
+      "team_away": "bayer-leverkusen",
+      "round": 27
+    },
+    {
+      "date": "2026-03-21",
+      "team_home": "wolfsburg",
+      "team_away": "werder-bremen",
+      "round": 27
+    },
+    {
+      "date": "2026-03-21",
+      "team_home": "koln",
+      "team_away": "borussia-monchengladbach",
+      "round": 27
+    },
+    {
+      "date": "2026-03-21",
+      "team_home": "bayern-munchen",
+      "team_away": "union-berlin",
+      "round": 27
+    },
+    {
+      "date": "2026-03-21",
+      "team_home": "borussia-dortmund",
+      "team_away": "hamburger-sv",
+      "round": 27
+    },
+    {
+      "date": "2026-03-22",
+      "team_home": "mainz",
+      "team_away": "eintracht-frankfurt",
+      "round": 27
+    },
+    {
+      "date": "2026-03-22",
+      "team_home": "st-pauli",
+      "team_away": "freiburg",
+      "round": 27
+    },
+    {
+      "date": "2026-03-22",
+      "team_home": "augsburg",
+      "team_away": "stuttgart",
+      "round": 27
+    },
+    {
+      "date": "2026-04-04",
+      "team_home": "freiburg",
+      "team_away": "bayern-munchen",
+      "round": 28
+    },
+    {
+      "date": "2026-04-04",
+      "team_home": "hoffenheim",
+      "team_away": "mainz",
+      "round": 28
+    },
+    {
+      "date": "2026-04-04",
+      "team_home": "werder-bremen",
+      "team_away": "rb-leipzig",
+      "round": 28
+    },
+    {
+      "date": "2026-04-04",
+      "team_home": "bayer-leverkusen",
+      "team_away": "wolfsburg",
+      "round": 28
+    },
+    {
+      "date": "2026-04-04",
+      "team_home": "hamburger-sv",
+      "team_away": "augsburg",
+      "round": 28
+    },
+    {
+      "date": "2026-04-04",
+      "team_home": "borussia-monchengladbach",
+      "team_away": "heidenheim",
+      "round": 28
+    },
+    {
+      "date": "2026-04-04",
+      "team_home": "stuttgart",
+      "team_away": "borussia-dortmund",
+      "round": 28
+    },
+    {
+      "date": "2026-04-05",
+      "team_home": "union-berlin",
+      "team_away": "st-pauli",
+      "round": 28
+    },
+    {
+      "date": "2026-04-05",
+      "team_home": "eintracht-frankfurt",
+      "team_away": "koln",
+      "round": 28
+    },
+    {
+      "date": "2026-04-10",
+      "team_home": "augsburg",
+      "team_away": "hoffenheim",
+      "round": 29
+    },
+    {
+      "date": "2026-04-11",
+      "team_home": "borussia-dortmund",
+      "team_away": "bayer-leverkusen",
+      "round": 29
+    },
+    {
+      "date": "2026-04-11",
+      "team_home": "wolfsburg",
+      "team_away": "eintracht-frankfurt",
+      "round": 29
+    },
+    {
+      "date": "2026-04-11",
+      "team_home": "rb-leipzig",
+      "team_away": "borussia-monchengladbach",
+      "round": 29
+    },
+    {
+      "date": "2026-04-11",
+      "team_home": "heidenheim",
+      "team_away": "union-berlin",
+      "round": 29
+    },
+    {
+      "date": "2026-04-11",
+      "team_home": "st-pauli",
+      "team_away": "bayern-munchen",
+      "round": 29
+    },
+    {
+      "date": "2026-04-12",
+      "team_home": "koln",
+      "team_away": "werder-bremen",
+      "round": 29
+    },
+    {
+      "date": "2026-04-12",
+      "team_home": "stuttgart",
+      "team_away": "hamburger-sv",
+      "round": 29
+    },
+    {
+      "date": "2026-04-12",
+      "team_home": "mainz",
+      "team_away": "freiburg",
+      "round": 29
+    },
+    {
+      "date": "2026-04-17",
+      "team_home": "st-pauli",
+      "team_away": "koln",
+      "round": 30
+    },
+    {
+      "date": "2026-04-18",
+      "team_home": "werder-bremen",
+      "team_away": "hamburger-sv",
+      "round": 30
+    },
+    {
+      "date": "2026-04-18",
+      "team_home": "bayer-leverkusen",
+      "team_away": "augsburg",
+      "round": 30
+    },
+    {
+      "date": "2026-04-18",
+      "team_home": "hoffenheim",
+      "team_away": "borussia-dortmund",
+      "round": 30
+    },
+    {
+      "date": "2026-04-18",
+      "team_home": "union-berlin",
+      "team_away": "wolfsburg",
+      "round": 30
+    },
+    {
+      "date": "2026-04-18",
+      "team_home": "eintracht-frankfurt",
+      "team_away": "rb-leipzig",
+      "round": 30
+    },
+    {
+      "date": "2026-04-19",
+      "team_home": "freiburg",
+      "team_away": "heidenheim",
+      "round": 30
+    },
+    {
+      "date": "2026-04-19",
+      "team_home": "bayern-munchen",
+      "team_away": "stuttgart",
+      "round": 30
+    },
+    {
+      "date": "2026-04-19",
+      "team_home": "borussia-monchengladbach",
+      "team_away": "mainz",
+      "round": 30
+    },
+    {
+      "date": "2026-04-24",
+      "team_home": "rb-leipzig",
+      "team_away": "union-berlin",
+      "round": 31
+    },
+    {
+      "date": "2026-04-25",
+      "team_home": "mainz",
+      "team_away": "bayern-munchen",
+      "round": 31
+    },
+    {
+      "date": "2026-04-25",
+      "team_home": "koln",
+      "team_away": "bayer-leverkusen",
+      "round": 31
+    },
+    {
+      "date": "2026-04-25",
+      "team_home": "augsburg",
+      "team_away": "eintracht-frankfurt",
+      "round": 31
+    },
+    {
+      "date": "2026-04-25",
+      "team_home": "wolfsburg",
+      "team_away": "borussia-monchengladbach",
+      "round": 31
+    },
+    {
+      "date": "2026-04-25",
+      "team_home": "heidenheim",
+      "team_away": "st-pauli",
+      "round": 31
+    },
+    {
+      "date": "2026-04-25",
+      "team_home": "hamburger-sv",
+      "team_away": "hoffenheim",
+      "round": 31
+    },
+    {
+      "date": "2026-04-26",
+      "team_home": "stuttgart",
+      "team_away": "werder-bremen",
+      "round": 31
+    },
+    {
+      "date": "2026-04-26",
+      "team_home": "borussia-dortmund",
+      "team_away": "freiburg",
+      "round": 31
+    },
+    {
+      "date": "2026-05-02",
+      "team_home": "hoffenheim",
+      "team_away": "stuttgart",
+      "round": 32
+    },
+    {
+      "date": "2026-05-02",
+      "team_home": "werder-bremen",
+      "team_away": "augsburg",
+      "round": 32
+    },
+    {
+      "date": "2026-05-02",
+      "team_home": "bayern-munchen",
+      "team_away": "heidenheim",
+      "round": 32
+    },
+    {
+      "date": "2026-05-02",
+      "team_home": "union-berlin",
+      "team_away": "koln",
+      "round": 32
+    },
+    {
+      "date": "2026-05-02",
+      "team_home": "eintracht-frankfurt",
+      "team_away": "hamburger-sv",
+      "round": 32
+    },
+    {
+      "date": "2026-05-02",
+      "team_home": "bayer-leverkusen",
+      "team_away": "rb-leipzig",
+      "round": 32
+    },
+    {
+      "date": "2026-05-03",
+      "team_home": "st-pauli",
+      "team_away": "mainz",
+      "round": 32
+    },
+    {
+      "date": "2026-05-03",
+      "team_home": "borussia-monchengladbach",
+      "team_away": "borussia-dortmund",
+      "round": 32
+    },
+    {
+      "date": "2026-05-03",
+      "team_home": "freiburg",
+      "team_away": "wolfsburg",
+      "round": 32
+    },
+    {
+      "date": "2026-05-08",
+      "team_home": "borussia-dortmund",
+      "team_away": "eintracht-frankfurt",
+      "round": 33
+    },
+    {
+      "date": "2026-05-09",
+      "team_home": "stuttgart",
+      "team_away": "bayer-leverkusen",
+      "round": 33
+    },
+    {
+      "date": "2026-05-09",
+      "team_home": "hoffenheim",
+      "team_away": "werder-bremen",
+      "round": 33
+    },
+    {
+      "date": "2026-05-09",
+      "team_home": "augsburg",
+      "team_away": "borussia-monchengladbach",
+      "round": 33
+    },
+    {
+      "date": "2026-05-09",
+      "team_home": "rb-leipzig",
+      "team_away": "st-pauli",
+      "round": 33
+    },
+    {
+      "date": "2026-05-09",
+      "team_home": "wolfsburg",
+      "team_away": "bayern-munchen",
+      "round": 33
+    },
+    {
+      "date": "2026-05-10",
+      "team_home": "hamburger-sv",
+      "team_away": "freiburg",
+      "round": 33
+    },
+    {
+      "date": "2026-05-10",
+      "team_home": "koln",
+      "team_away": "heidenheim",
+      "round": 33
+    },
+    {
+      "date": "2026-05-10",
+      "team_home": "mainz",
+      "team_away": "union-berlin",
+      "round": 33
+    },
+    {
+      "date": "2026-05-16",
+      "team_home": "werder-bremen",
+      "team_away": "borussia-dortmund",
+      "round": 34
+    },
+    {
+      "date": "2026-05-16",
+      "team_home": "heidenheim",
+      "team_away": "mainz",
+      "round": 34
+    },
+    {
+      "date": "2026-05-16",
+      "team_home": "freiburg",
+      "team_away": "rb-leipzig",
+      "round": 34
+    },
+    {
+      "date": "2026-05-16",
+      "team_home": "eintracht-frankfurt",
+      "team_away": "stuttgart",
+      "round": 34
+    },
+    {
+      "date": "2026-05-16",
+      "team_home": "st-pauli",
+      "team_away": "wolfsburg",
+      "round": 34
+    },
+    {
+      "date": "2026-05-16",
+      "team_home": "union-berlin",
+      "team_away": "augsburg",
+      "round": 34
+    },
+    {
+      "date": "2026-05-16",
+      "team_home": "borussia-monchengladbach",
+      "team_away": "hoffenheim",
+      "round": 34
+    },
+    {
+      "date": "2026-05-16",
+      "team_home": "bayern-munchen",
+      "team_away": "koln",
+      "round": 34
+    },
+    {
+      "date": "2026-05-16",
+      "team_home": "bayer-leverkusen",
+      "team_away": "hamburger-sv",
+      "round": 34
+    }
+  ]
+}

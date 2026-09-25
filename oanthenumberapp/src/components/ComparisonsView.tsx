@@ -1,10 +1,12 @@
 import { useMemo, useState } from 'react';
 import type { Fixture } from '../types';
-import { calculateLeagueAverage, getLineChartData, type MetricType, type XgType } from '../utils/dataProcessing';
-import { TOP_6, BOTTOM_6 } from '../utils/teamColors';
+import { calculateLeagueAverage, getLineChartData, getTeamSeasonStats, getTeamRecentSeasonStats, type MetricType, type XgType } from '../utils/dataProcessing';
+import { getTeamColor, getTeamName } from '../utils/teamColors';
 import { TeamSelector } from './TeamSelector';
 import { MetricToggle } from './MetricToggle';
 import { XgLineChart } from './XgLineChart';
+import { TeamRadarChart, type RadarSeries } from './TeamRadarChart';
+import { ViewToggle } from './ViewToggle';
 import './ComparisonsView.css';
 
 interface ComparisonsViewProps {
@@ -29,13 +31,24 @@ export function ComparisonsView({ fixtures, teams }: ComparisonsViewProps) {
     [fixtures, selectedTeams, metricType, xgType]
   );
 
+  const [view, setView] = useState<'line' | 'radar'>('line');
+  const seasonStats = useMemo(() => getTeamSeasonStats(fixtures), [fixtures]);
+  const [period, setPeriod] = useState<'season' | 'last6'>('season');
+  const recentStats = useMemo(() => getTeamRecentSeasonStats(fixtures, 6), [fixtures]);
+  const pool = period === 'season' ? seasonStats : recentStats;
+  const radarSeries = useMemo<RadarSeries[]>(
+    () => selectedTeams.flatMap(t => {
+      const stats = pool.find(s => s.team === t);
+      return stats ? [{ id: t, label: getTeamName(t), color: getTeamColor(t), stats, pool }] : [];
+    }),
+    [selectedTeams, pool]
+  );
+
   const handleTeamToggle = (team: string) => {
     setSelectedTeams(prev => prev.includes(team) ? prev.filter(t => t !== team) : [...prev, team]);
   };
   const handleSelectAll = () => setSelectedTeams(teams);
   const handleClearAll = () => setSelectedTeams([]);
-  const handleSelectTop6 = () => setSelectedTeams(TOP_6.filter(t => teams.includes(t)));
-  const handleSelectBottom6 = () => setSelectedTeams(BOTTOM_6.filter(t => teams.includes(t)));
 
   return (
     <div className="comparisons-view">
@@ -45,16 +58,33 @@ export function ComparisonsView({ fixtures, teams }: ComparisonsViewProps) {
         onTeamToggle={handleTeamToggle}
         onSelectAll={handleSelectAll}
         onClearAll={handleClearAll}
-        onSelectTop6={handleSelectTop6}
-        onSelectBottom6={handleSelectBottom6}
       />
 
-      <MetricToggle metricType={metricType} onToggle={setMetricType} />
+      <div className="comparisons-controls">
+        {view === 'line'
+          ? <MetricToggle metricType={metricType} onToggle={setMetricType} />
+          : (
+            <ViewToggle
+              ariaLabel="Radar period"
+              options={[{ key: 'season', label: 'Season' }, { key: 'last6', label: 'Last 6' }]}
+              value={period}
+              onChange={setPeriod}
+            />
+          )}
+        <ViewToggle
+          ariaLabel="Comparison chart type"
+          options={[{ key: 'line', label: 'Line Chart' }, { key: 'radar', label: 'Radar' }]}
+          value={view}
+          onChange={setView}
+        />
+      </div>
 
       {selectedTeams.length < 2 ? (
         <div className="comparisons-empty">
           <p>Select at least two teams above to compare their trends.</p>
         </div>
+      ) : view === 'radar' ? (
+        <TeamRadarChart series={radarSeries} title={period === 'season' ? 'Season Goals & xG' : 'Last 6 Goals & xG'} />
       ) : (
         <XgLineChart
           data={chartData}

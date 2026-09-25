@@ -15,18 +15,26 @@ async function loadFixtures() {
   const fixturesPath = path.join(
     __dirname,
     "fixtures",
-    "epl",
-    "fixtures_epl_2026_27.json"
+    "bundesliga",
+    "bundesliga_2025-26_fixtures.json"
   );
   const raw = await fs.readFile(fixturesPath, "utf-8");
-  return JSON.parse(raw);
+  const parsed = JSON.parse(raw);
+  // The Bundesliga fixtures file is one flat list, so regroup it by round
+  // ("fixtures_<round - 1>") to match the per-round layout used below.
+  const byRound = {};
+  for (const fixture of Object.values(parsed).flat()) {
+    const key = `fixtures_${fixture.round - 1}`;
+    (byRound[key] = byRound[key] || []).push(fixture);
+  }
+  return byRound;
 }
 
 const OUTPUT_PATH = path.join(
   __dirname,
   "..",
   "collectedData",
-  "EPL_data_2026_27.json"
+  "Bundesliga_data_2025_26.json"
 );
 
 // Allow time after kick-off for the match to finish and stats to be published
@@ -42,15 +50,23 @@ async function loadExistingData() {
 }
 
 function hasBeenPlayed(fixture) {
-  const kickOff = new Date(`${fixture.date}T${fixture.time || "00:00"}`);
+  // Without a kick-off time, only treat the match as played from the next day
+  if (!fixture.time) {
+    const nextDay = new Date(`${fixture.date}T00:00`);
+    nextDay.setDate(nextDay.getDate() + 1);
+    return nextDay.getTime() <= Date.now();
+  }
+  const kickOff = new Date(`${fixture.date}T${fixture.time}`);
   return kickOff.getTime() + MATCH_DURATION_MS <= Date.now();
 }
 
-// A home team only hosts each opponent once per season, so
-// opposition + location identifies the fixture even if it was rescheduled.
+// The date is included so each fixture is identified uniquely.
 function isCollected(seasonData, fixture) {
   return (seasonData[fixture.team_home] || []).some(
-    (f) => f.opposition === fixture.team_away && f.location === "home"
+    (f) =>
+      f.opposition === fixture.team_away &&
+      f.location === "home" &&
+      f.date === fixture.date
   );
 }
 
@@ -113,26 +129,24 @@ test("iterate fixtures by round", async ({ page }) => {
   const fixtures = await loadFixtures();
   const seasonData = await loadExistingData();
   const teams = [
-    "afc-bournemouth",
-    "arsenal",
-    "aston-villa",
-    "brentford",
-    "brighton-hove-albion",
-    "chelsea",
-    "coventry-city",
-    "crystal-palace",
-    "everton",
-    "fulham",
-    "hull-city",
-    "ipswich-town",
-    "leeds-united",
-    "liverpool",
-    "manchester-city",
-    "manchester-united",
-    "newcastle-united",
-    "nottingham-forest",
-    "sunderland",
-    "tottenham-hotspur"
+    "augsburg",
+    "bayer-leverkusen",
+    "bayern-munchen",
+    "borussia-dortmund",
+    "borussia-monchengladbach",
+    "eintracht-frankfurt",
+    "freiburg",
+    "hamburger-sv",
+    "heidenheim",
+    "hoffenheim",
+    "koln",
+    "mainz",
+    "rb-leipzig",
+    "st-pauli",
+    "stuttgart",
+    "union-berlin",
+    "werder-bremen",
+    "wolfsburg"
   ];
   teams.forEach((team) => {
     seasonData[team] = seasonData[team] || [];
@@ -191,7 +205,7 @@ async function getStatPair(page, label, numericParser) {
     }
 
     await page.goto(
-      `https://www.fotmob.com/en-GB/leagues/47/fixtures/premier-league?group=by-round&round=${roundIndex}`
+      `https://www.fotmob.com/en-GB/leagues/54/fixtures/bundesliga?season=2025-2026&group=by-round&round=${roundIndex}`
     );
 
     for (const fixture of fixtureList) {
@@ -447,5 +461,3 @@ async function getStatPair(page, label, numericParser) {
     saveJSON(OUTPUT_PATH, seasonData);
   }
 });
-
-
