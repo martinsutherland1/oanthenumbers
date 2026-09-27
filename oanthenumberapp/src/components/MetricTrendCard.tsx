@@ -13,6 +13,8 @@ import './MetricTrendCard.css';
 export interface MetricTrendPoint {
   matchNumber: number;
   value: number;
+  // Optional extra stat for each point, shown in the tooltip only
+  secondary?: number;
 }
 
 interface MetricTrendCardProps {
@@ -22,27 +24,35 @@ interface MetricTrendCardProps {
   badgeText: string;
   badgeTone?: 'positive' | 'negative' | 'neutral';
   baseline?: number;
+  primaryLabel?: string;
+  secondaryLabel?: string;
 }
 
 interface TooltipProps {
   active?: boolean;
-  payload?: Array<{ value: number }>;
+  payload?: Array<{ value: number; payload: MetricTrendPoint }>;
   label?: number;
+  primaryLabel?: string;
+  secondaryLabel?: string;
 }
 
-function CardTooltip({ active, payload, label }: TooltipProps) {
+function CardTooltip({ active, payload, label, primaryLabel, secondaryLabel }: TooltipProps) {
   if (active && payload && payload.length) {
+    const point = payload[0].payload;
+    const primary = { value: payload[0].value };
+    const secondary = point.secondary !== undefined ? { value: point.secondary } : undefined;
     return (
       <div className="metric-trend-tooltip">
         <span>Match {label}</span>
-        <strong>{payload[0].value.toFixed(2)}</strong>
+        <strong>{primaryLabel ? `${primaryLabel}: ` : ''}{primary.value.toFixed(2)}</strong>
+        {secondary && <strong>{secondaryLabel ? `${secondaryLabel}: ` : ''}{secondary.value}</strong>}
       </div>
     );
   }
   return null;
 }
 
-export function MetricTrendCard({ title, data, color, badgeText, badgeTone = 'neutral', baseline }: MetricTrendCardProps) {
+export function MetricTrendCard({ title, data, color, badgeText, badgeTone = 'neutral', baseline, primaryLabel, secondaryLabel }: MetricTrendCardProps) {
   const gradientId = `metric-trend-gradient-${useId()}`;
   const axisTickStyle = { fill: 'var(--text-secondary)', fontSize: 10 };
 
@@ -79,7 +89,7 @@ export function MetricTrendCard({ title, data, color, badgeText, badgeTone = 'ne
                 axisLine={{ stroke: 'var(--border)' }}
                 width={34}
               />
-              <Tooltip content={<CardTooltip />} />
+              <Tooltip content={<CardTooltip primaryLabel={primaryLabel} secondaryLabel={secondaryLabel} />} />
               <Area
                 type="monotone"
                 dataKey="value"

@@ -6,9 +6,10 @@ import './ProjectionTable.css';
 interface ProjectionTableProps {
   data: ProjectedStanding[];
   dividerPositions?: number[];
+  onTeamClick?: (team: string) => void;
 }
 
-export function ProjectionTable({ data, dividerPositions = [] }: ProjectionTableProps) {
+export function ProjectionTable({ data, dividerPositions = [], onTeamClick }: ProjectionTableProps) {
   return (
     <div className="league-table-container">
       <h3>Projected Final Standings</h3>
@@ -31,7 +32,10 @@ export function ProjectionTable({ data, dividerPositions = [] }: ProjectionTable
               <tr key={row.team} className={dividerPositions.includes(row.projectedPosition) ? 'divider-below' : ''}>
                 <td className="col-pos">{row.projectedPosition}</td>
                 <td className="col-team">
-                  <div className="team-cell">
+                  <div
+                    className={`team-cell${onTeamClick ? ' team-cell-link' : ''}`}
+                    onClick={onTeamClick ? () => onTeamClick(row.team) : undefined}
+                  >
                     <span className="team-color-dot" style={{ backgroundColor: getTeamColor(row.team) }} />
                     <span className="team-cell-name">{getTeamName(row.team)}</span>
                   </div>

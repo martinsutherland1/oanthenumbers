@@ -1,6 +1,5 @@
-import type { Fixture, FixturesData, TeamGame, TeamRollingAverage, RollingAveragePoint, LineChartDataPoint } from '../types';
+import type { Fixture, FixturesData, ScheduleData, ScheduledFixture, TeamGame, TeamRollingAverage, RollingAveragePoint, LineChartDataPoint } from '../types';
 import { normalizeTeamName } from './teamColors';
-import teamComparisonsData from '../data/teamComparisons.json';
 
 export type MetricType = 'xg' | 'goals' | 'points';
 
@@ -19,6 +18,16 @@ export function flattenFixtures(fixturesData: FixturesData): Fixture[] {
     home_team: normalizeTeamName(f.home_team),
     away_team: normalizeTeamName(f.away_team),
   }));
+}
+
+export function flattenSchedule(data: ScheduleData): ScheduledFixture[] {
+  return Object.values(data).flatMap((matches, i) => matches.map(m => ({
+    date: m.date,
+    time: m.time,
+    home_team: normalizeTeamName(m.team_home),
+    away_team: normalizeTeamName(m.team_away),
+    round: m.round ?? i + 1,
+  })));
 }
 
 // Extract all unique teams from fixtures
@@ -807,7 +816,9 @@ function getSeasonToDateXStats(fixtures: Fixture[], team: string): { xgDiffPerGa
 //
 // PriorPPG is last season's xPPG (same xG-diff bucket scale as CurrentXPPG, falling back to
 // actual PPG when last season's xG is missing), regressed towards the league mean by r.
-// Teams that weren't in the league last season get the promoted-team prior instead.
+// Teams that weren't in the league last season get the promoted-team prior instead: the
+// average prior of the sides relegated out of the league (falling back to the historical
+// first-season PPG of promoted sides when this season's team list isn't complete yet).
 // ---------------------------------------------------------------------------------------
 
 export type ProjectionMethod = 'current' | 'prior_weighted';
@@ -908,19 +919,35 @@ function getLastSeasonBase(lastSeason: Fixture[], team: string): { value: number
   return row && row.played > 0 ? { value: row.points / row.played, basis: 'points' } : null;
 }
 
+// Mean prior PPG of last season's sides that aren't in this season's league (i.e. were
+// relegated). Null unless the current team list is complete, so a partially played opening
+// round can't mistake teams yet to play for relegated ones.
+function getRelegatedAvgPriorPpg(
+  teamPriors: Record<string, TeamPrior>,
+  lastSeasonTeams: string[],
+  currentTeams?: string[]
+): number | null {
+  if (!currentTeams || currentTeams.length < lastSeasonTeams.length) return null;
+  const current = new Set(currentTeams);
+  const relegated = lastSeasonTeams.filter(t => !current.has(t) && teamPriors[t]);
+  if (relegated.length === 0) return null;
+  return relegated.reduce((sum, t) => sum + teamPriors[t].priorPpg, 0) / relegated.length;
+}
+
 // history: completed seasons in chronological order, normally ending with lastSeason. Only
 // pass seasons that finished before the one being projected, otherwise the prior leaks.
 export function buildProjectionPriors(
   lastSeason: Fixture[],
   history: Fixture[][],
-  config: ProjectionConfig = DEFAULT_PROJECTION_CONFIG
+  config: ProjectionConfig = DEFAULT_PROJECTION_CONFIG,
+  currentTeams?: string[]
 ): ProjectionPriors {
   const leagueAvgPpg = config.leagueAvgPpg ?? getHistoricalLeagueAvgPpg(history) ?? FALLBACK_LEAGUE_AVG_PPG;
-  const promotedPriorPpg = config.promotedPriorPpg ?? getHistoricalPromotedPpg(history) ?? FALLBACK_PROMOTED_PRIOR_PPG;
   const r = config.priorRegressionR;
 
   const teamPriors: Record<string, TeamPrior> = {};
-  extractTeams(lastSeason).forEach(team => {
+  const lastSeasonTeams = extractTeams(lastSeason);
+  lastSeasonTeams.forEach(team => {
     const base = getLastSeasonBase(lastSeason, team);
     if (!base) return;
     teamPriors[team] = {
@@ -930,15 +957,21 @@ export function buildProjectionPriors(
     };
   });
 
+  const promotedPriorPpg = config.promotedPriorPpg
+    ?? getRelegatedAvgPriorPpg(teamPriors, lastSeasonTeams, currentTeams)
+    ?? getHistoricalPromotedPpg(history)
+    ?? FALLBACK_PROMOTED_PRIOR_PPG;
+
   return { leagueAvgPpg, promotedPriorPpg, teamPriors };
 }
 
 export function createProjectionContext(
   lastSeason: Fixture[],
   history: Fixture[][],
-  config: ProjectionConfig = DEFAULT_PROJECTION_CONFIG
+  config: ProjectionConfig = DEFAULT_PROJECTION_CONFIG,
+  currentTeams?: string[]
 ): ProjectionContext {
-  return { config, priors: buildProjectionPriors(lastSeason, history, config) };
+  return { config, priors: buildProjectionPriors(lastSeason, history, config, currentTeams) };
 }
 
 export function getTeamPrior(priors: ProjectionPriors, team: string): TeamPrior {
@@ -981,9 +1014,15 @@ const round1 = (n: number) => Math.round(n * 10) / 10;
 export function getProjectionResult(
   fixtures: Fixture[],
   seasonGames: number = SEASON_GAMES,
-  projection?: ProjectionContext
+  projection?: ProjectionContext,
+  allTeams?: string[]
 ): ProjectionResult {
-  const table = getLeagueTable(fixtures);
+  const table: { team: string; played: number; points: number }[] = getLeagueTable(fixtures);
+  // Teams that haven't kicked a ball yet still take part in the ranking, on their prior alone
+  if (allTeams) {
+    const present = new Set(table.map(r => r.team));
+    allTeams.filter(t => !present.has(t)).forEach(team => table.push({ team, played: 0, points: 0 }));
+  }
 
   const rows = table.map(row => {
     const { xgDiffPerGame, xPointsPerGame } = getSeasonToDateXStats(fixtures, row.team);
@@ -1056,9 +1095,10 @@ export function getProjectionResult(
 export function getProjectedStandings(
   fixtures: Fixture[],
   seasonGames: number = SEASON_GAMES,
-  projection?: ProjectionContext
+  projection?: ProjectionContext,
+  allTeams?: string[]
 ): ProjectedStanding[] {
-  return getProjectionResult(fixtures, seasonGames, projection).rows;
+  return getProjectionResult(fixtures, seasonGames, projection, allTeams).rows;
 }
 
 export interface ProjectedPositionPoint {
@@ -1079,10 +1119,12 @@ export function getProjectedPositionOverTime(
     .filter(f => f.home_team === team || f.away_team === team)
     .sort((a, b) => parseDate(a.date).getTime() - parseDate(b.date).getTime());
 
+  const allTeams = extractTeams(fixtures);
   return teamFixtures.map((f, idx) => {
     const cutoff = parseDate(f.date).getTime();
     const fixturesSoFar = fixtures.filter(g => parseDate(g.date).getTime() <= cutoff);
-    const standings = getProjectedStandings(fixturesSoFar, seasonGames, projection);
+    // Rank against the whole league so early-season points aren't among only the teams that had played
+    const standings = getProjectedStandings(fixturesSoFar, seasonGames, projection, allTeams);
     const row = standings.find(s => s.team === team)!;
     return {
       matchNumber: idx + 1,
@@ -1102,14 +1144,19 @@ export function ordinalSuffix(n: number): string {
   return `${n}th`;
 }
 
-// Which prior-season team(s) to use for a team's year-on-year comparison (see
-// src/data/teamComparisons.json — defaults to the team itself if unlisted). A team can map to
-// several comparison teams (e.g. a newly promoted side with no obvious single replacement),
-// in which case their prior-season points are averaged.
-export function getYoyComparisonTeams(team: string): string[] {
-  const map = teamComparisonsData as Record<string, string | string[]>;
-  const entry = map[team] ?? team;
-  return Array.isArray(entry) ? entry : [entry];
+// Which prior-season team(s) to use for a team's year-on-year comparison. Teams that were in
+// the league last season compare against themselves. Newly promoted sides compare against the
+// average of the sides relegated out of the league (last season's teams absent from this
+// season's list). That needs this season's team list to be complete, otherwise teams yet to
+// play would look relegated, so it falls back to the team itself until then.
+export function getYoyComparisonTeams(team: string, fixtures: Fixture[], lastSeasonFixtures: Fixture[]): string[] {
+  const lastSeasonTeams = extractTeams(lastSeasonFixtures);
+  if (lastSeasonTeams.includes(team)) return [team];
+  const currentTeams = extractTeams(fixtures);
+  if (currentTeams.length < lastSeasonTeams.length) return [team];
+  const current = new Set(currentTeams);
+  const relegated = lastSeasonTeams.filter(t => !current.has(t));
+  return relegated.length > 0 ? relegated : [team];
 }
 
 // Points earned by a team across its first n games (chronologically) in a given fixture
@@ -1139,7 +1186,7 @@ export function getPointsAfterNGames(fixtures: Fixture[], team: string, n: numbe
 //  2. Actual points to date vs cumulative xPoints to date (each game's own xG diff mapped
 //     through the xPoints bucket table, then summed — not a single average-then-bucket step)
 //  3. Points at the same number of games played vs the same stage last season (using the
-//     team's year-on-year comparison team from teamComparisons.json)
+//     team's year-on-year comparison teams: itself, or the relegated sides if promoted)
 export interface PerformanceScoreBreakdown {
   blendedScore: number;
   positionSignal: number | null;
@@ -1186,7 +1233,7 @@ export function getPerformanceScore(
     pointsSignal = clamp(pointsDelta / currentRow.played, -1, 1);
   }
 
-  const yoyComparisonTeams = getYoyComparisonTeams(team);
+  const yoyComparisonTeams = getYoyComparisonTeams(team, fixtures, lastSeasonFixtures);
   let yoySignal: number | null = null;
   let yoyDelta: number | null = null;
   let yoyComparisonPoints: number | null = null;

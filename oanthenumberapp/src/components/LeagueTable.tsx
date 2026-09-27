@@ -5,6 +5,7 @@ import './LeagueTable.css';
 interface LeagueTableProps {
   data: LeagueTableRow[];
   dividerPositions?: number[];
+  onTeamClick?: (team: string) => void;
 }
 
 function FormSquares({ form }: { form: ('W' | 'D' | 'L')[] }) {
@@ -17,7 +18,7 @@ function FormSquares({ form }: { form: ('W' | 'D' | 'L')[] }) {
   );
 }
 
-export function LeagueTable({ data, dividerPositions = [] }: LeagueTableProps) {
+export function LeagueTable({ data, dividerPositions = [], onTeamClick }: LeagueTableProps) {
   return (
     <div className="league-table-container">
       <h3>League Table</h3>
@@ -43,7 +44,10 @@ export function LeagueTable({ data, dividerPositions = [] }: LeagueTableProps) {
               <tr key={row.team} className={dividerPositions.includes(row.position) && row.position !== data.length ? 'divider-below' : ''}>
                 <td className="col-pos">{row.position}</td>
                 <td className="col-team">
-                  <div className="team-cell">
+                  <div
+                    className={`team-cell${onTeamClick ? ' team-cell-link' : ''}`}
+                    onClick={onTeamClick ? () => onTeamClick(row.team) : undefined}
+                  >
                     <span
                       className="team-color-dot"
                       style={{ backgroundColor: getTeamColor(row.team) }}

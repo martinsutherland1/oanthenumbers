@@ -100,6 +100,7 @@ function runLeague(league: 'spfl' | 'epl') {
     const lastSeason = seasons[i - 1].fixtures;
     const history = seasons.slice(0, i).map(s => s.fixtures);
     const finalTable = getLeagueTable(season.fixtures);
+    const currentTeams = finalTable.map(r => r.team);
     const actual = new Map(finalTable.map(r => [r.team, r.points]));
     const seasonGames = Math.max(...finalTable.map(r => r.played));
     const cutoffs = getMatchweekCutoffs(season.fixtures);
@@ -119,7 +120,7 @@ function runLeague(league: 'spfl' | 'epl') {
     R_VALUES.forEach(r => {
       K_VALUES.forEach(k => {
         const config: ProjectionConfig = { ...baseConfig, method: 'prior_weighted', k, priorRegressionR: r };
-        const context = createProjectionContext(lastSeason, history, config);
+        const context = createProjectionContext(lastSeason, history, config, currentTeams);
         const key = `${k}|${r}`;
         if (!grid.has(key)) grid.set(key, new ErrorStats());
         snapshots.forEach(({ matchweek, fixtures }) => {
@@ -131,7 +132,7 @@ function runLeague(league: 'spfl' | 'epl') {
     });
 
     // Scaling applied by normalisation under the configured k and r
-    const context = createProjectionContext(lastSeason, history, { ...baseConfig, method: 'prior_weighted' });
+    const context = createProjectionContext(lastSeason, history, { ...baseConfig, method: 'prior_weighted' }, currentTeams);
     snapshots.forEach(({ fixtures }) => {
       const earned = getLeagueTable(fixtures).reduce((s, row) => s + row.points, 0);
       const rows = getProjectedStandings(fixtures, seasonGames, context);

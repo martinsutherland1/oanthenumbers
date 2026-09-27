@@ -136,7 +136,7 @@ export function TeamRadarChart({ series, title = 'Goals & xG Radar' }: TeamRadar
               fillOpacity={s.fillOpacity ?? (series.length > 3 ? 0.06 : 0.2)}
               strokeWidth={2.5}
               strokeDasharray={s.dashed ? '6 4' : undefined}
-              dot={{ r: s.dashed ? 4 : 3, fill: s.dashed ? 'var(--surface)' : s.color, stroke: s.color, strokeWidth: s.dashed ? 2 : 0 }}
+              dot={s.dashed ? false : { r: 3, fill: s.color, strokeWidth: 0 }}
             />
           ))}
         </RadarChart>

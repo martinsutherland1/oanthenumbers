@@ -3,7 +3,7 @@ import { DEFAULT_PROJECTION_CONFIG, type ProjectionConfig } from './dataProcessi
 // Per-league projection settings. leagueAvgPpg / promotedPriorPpg are left unset so they're
 // computed from each league's completed seasons (falling back to 1.37 / 1.05 without history).
 // Tune k and priorRegressionR with `npm run backtest`.
-export const PROJECTION_CONFIG: Record<'spfl' | 'epl' | 'laliga' | 'bundesliga', ProjectionConfig> = {
+export const PROJECTION_CONFIG: Record<'spfl' | 'epl' | 'laliga' | 'bundesliga' | 'seriea' | 'ligue1', ProjectionConfig> = {
   spfl: {
     ...DEFAULT_PROJECTION_CONFIG,
     // e.g. teamOverrides: { 'hibernian': { k: 6 } } for a team with a new manager
@@ -18,6 +18,14 @@ export const PROJECTION_CONFIG: Record<'spfl' | 'epl' | 'laliga' | 'bundesliga',
     teamOverrides: {},
   },
   bundesliga: {
+    ...DEFAULT_PROJECTION_CONFIG,
+    teamOverrides: {},
+  },
+  seriea: {
+    ...DEFAULT_PROJECTION_CONFIG,
+    teamOverrides: {},
+  },
+  ligue1: {
     ...DEFAULT_PROJECTION_CONFIG,
     teamOverrides: {},
   },

@@ -32,9 +32,6 @@ interface TeamOverviewProps {
   seasonGames?: number;
 }
 
-// Fixed contrast colour so form stands apart from the team-coloured season shape
-const LAST_6_COLOR = '#F59E0B';
-
 function signTone(n: number | null): 'positive' | 'negative' | 'neutral' {
   if (n === null || n === 0) return 'neutral';
   return n > 0 ? 'positive' : 'negative';
@@ -97,7 +94,7 @@ export function TeamOverview({ team, fixtures, lastSeasonFixtures, leagueTable, 
     const recent = recentStats.find(s => s.team === team);
     const out: RadarSeries[] = [];
     if (season) out.push({ id: 'season', label: 'Season', color, stats: season, pool: seasonStats, fillOpacity: 0.3 });
-    if (recent) out.push({ id: 'last6', label: 'Last 6', color: LAST_6_COLOR, stats: recent, pool: recentStats, dashed: true, fillOpacity: 0.08 });
+    if (recent) out.push({ id: 'last6', label: 'Last 6', color, stats: recent, pool: recentStats, dashed: true, fillOpacity: 0.08 });
     return out;
   }, [seasonStats, recentStats, team, color]);
 
@@ -184,7 +181,9 @@ export function TeamOverview({ team, fixtures, lastSeasonFixtures, leagueTable, 
         />
         <MetricTrendCard
           title="Predicted Finishing Position"
-          data={positionSeries.map(p => ({ matchNumber: p.matchNumber, value: p.projectedPoints }))}
+          data={positionSeries.map(p => ({ matchNumber: p.matchNumber, value: p.projectedPoints, secondary: p.projectedPosition }))}
+          primaryLabel="Points"
+          secondaryLabel="Position"
           color={color}
           badgeText={currentProjection ? `Proj. ${ordinalSuffix(currentProjection.projectedPosition)}` : 'No data yet'}
           badgeTone="neutral"

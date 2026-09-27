@@ -5,6 +5,7 @@ import { LeagueHighlights } from './components/LeagueHighlights';
 import { ProjectionTable } from './components/ProjectionTable';
 import { TeamOverview } from './components/TeamOverview';
 import { ComparisonsView } from './components/ComparisonsView';
+import { FixturesView } from './components/FixturesView';
 import {
   extractTeams,
   getLeagueTable,
@@ -12,6 +13,7 @@ import {
   createProjectionContext,
   parseDate,
   flattenFixtures,
+  flattenSchedule,
   type ProjectionConfig
 } from './utils/dataProcessing';
 import { PROJECTION_CONFIG } from './utils/projectionConfig';
@@ -25,16 +27,27 @@ import laligaFixturesData from './data/laliga_results_2026_27.json';
 import laligaLastSeasonFixturesData from './data/laliga_results_2025_26.json';
 import bundesligaFixturesData from './data/bundesliga_results_2026_27.json';
 import bundesligaLastSeasonFixturesData from './data/bundesliga_results_2025_26.json';
+import serieaFixturesData from './data/seriea_results_2026_27.json';
+import serieaLastSeasonFixturesData from './data/seriea_results_2025_26.json';
+import ligue1FixturesData from './data/ligue1_results_2026_27.json';
+import ligue1LastSeasonFixturesData from './data/ligue1_results_2025_26.json';
+import eplScheduleData from './data/epl_fixtures_2026_27.json';
+import spflScheduleData from './data/spfl_fixtures_2026_27.json';
+import laligaScheduleData from './data/laliga_fixtures_2026_27.json';
+import bundesligaScheduleData from './data/bundesliga_fixtures_2026_27.json';
+import serieaScheduleData from './data/seriea_fixtures_2026_27.json';
+import ligue1ScheduleData from './data/ligue1_fixtures_2026_27.json';
 import dataUpdate from './data/data_update.json';
-import type { Fixture, FixturesData } from './types';
+import type { Fixture, FixturesData, ScheduleData, ScheduledFixture } from './types';
 import logo from './assets/logo-header.png';
 import './App.css';
 
 type Page = 'home' | 'league';
-type Section = 'tables' | 'stats';
+type Section = 'tables' | 'stats' | 'fixtures';
 type TablesTab = 'current' | 'projection';
+type FixturesTab = 'fixtures' | 'results';
 type StatsTab = 'team' | 'comparisons';
-type League = 'spfl' | 'epl' | 'laliga' | 'bundesliga';
+type League = 'spfl' | 'epl' | 'laliga' | 'bundesliga' | 'seriea' | 'ligue1';
 
 const spflFixtures = flattenFixtures(spflFixturesData as FixturesData);
 // Some older fixtures in prior-season files are missing extended stats (xG breakdowns, shots,
@@ -48,8 +61,23 @@ const laligaLastSeasonFixtures = flattenFixtures(laligaLastSeasonFixturesData as
 const bundesligaFixtures = flattenFixtures(bundesligaFixturesData as FixturesData);
 const bundesligaLastSeasonFixtures = flattenFixtures(bundesligaLastSeasonFixturesData as FixturesData);
 
+const serieaFixtures = flattenFixtures(serieaFixturesData as FixturesData);
+const serieaLastSeasonFixtures = flattenFixtures(serieaLastSeasonFixturesData as FixturesData);
+
+const ligue1Fixtures = flattenFixtures(ligue1FixturesData as FixturesData);
+const ligue1LastSeasonFixtures = flattenFixtures(ligue1LastSeasonFixturesData as FixturesData);
+
+const spflSchedule = flattenSchedule(spflScheduleData as ScheduleData);
+const eplSchedule = flattenSchedule(eplScheduleData as ScheduleData);
+const laligaSchedule = flattenSchedule(laligaScheduleData as ScheduleData);
+const bundesligaSchedule = flattenSchedule(bundesligaScheduleData as ScheduleData);
+const serieaSchedule = flattenSchedule(serieaScheduleData as ScheduleData);
+const ligue1Schedule = flattenSchedule(ligue1ScheduleData as ScheduleData);
+
 interface LeagueConfig {
   label: string;
+  // Full-season schedule, played and unplayed
+  schedule: ScheduledFixture[];
   flag: LeagueFlag;
   fixtures: Fixture[];
   lastSeasonFixtures: Fixture[];
@@ -67,6 +95,7 @@ const LEAGUE_CONFIG: Record<League, LeagueConfig> = {
   spfl: {
     label: 'SPFL Premiership',
     flag: 'scotland',
+    schedule: spflSchedule,
     fixtures: spflFixtures,
     lastSeasonFixtures: spflLastSeasonFixtures,
     historicalSeasons: [spflTwoSeasonsAgoFixtures, spflLastSeasonFixtures],
@@ -78,6 +107,7 @@ const LEAGUE_CONFIG: Record<League, LeagueConfig> = {
   epl: {
     label: 'Premier League',
     flag: 'england',
+    schedule: eplSchedule,
     fixtures: eplFixtures,
     lastSeasonFixtures: eplLastSeasonFixtures,
     historicalSeasons: [eplLastSeasonFixtures],
@@ -89,6 +119,7 @@ const LEAGUE_CONFIG: Record<League, LeagueConfig> = {
   laliga: {
     label: 'La Liga',
     flag: 'spain',
+    schedule: laligaSchedule,
     fixtures: laligaFixtures,
     lastSeasonFixtures: laligaLastSeasonFixtures,
     historicalSeasons: [laligaLastSeasonFixtures],
@@ -100,6 +131,7 @@ const LEAGUE_CONFIG: Record<League, LeagueConfig> = {
   bundesliga: {
     label: 'Bundesliga',
     flag: 'germany',
+    schedule: bundesligaSchedule,
     fixtures: bundesligaFixtures,
     lastSeasonFixtures: bundesligaLastSeasonFixtures,
     historicalSeasons: [bundesligaLastSeasonFixtures],
@@ -108,9 +140,33 @@ const LEAGUE_CONFIG: Record<League, LeagueConfig> = {
     tableDividers: [4, 6, 15, 16],
     projectionDividers: [4, 6, 15, 16],
   },
+  seriea: {
+    label: 'Serie A',
+    flag: 'italy',
+    schedule: serieaSchedule,
+    fixtures: serieaFixtures,
+    lastSeasonFixtures: serieaLastSeasonFixtures,
+    historicalSeasons: [serieaLastSeasonFixtures],
+    projection: PROJECTION_CONFIG.seriea,
+    seasonGames: 38,
+    tableDividers: [4, 6, 17],
+    projectionDividers: [4, 6, 17],
+  },
+  ligue1: {
+    label: 'Ligue 1',
+    flag: 'france',
+    schedule: ligue1Schedule,
+    fixtures: ligue1Fixtures,
+    lastSeasonFixtures: ligue1LastSeasonFixtures,
+    historicalSeasons: [ligue1LastSeasonFixtures],
+    projection: PROJECTION_CONFIG.ligue1,
+    seasonGames: 34,
+    tableDividers: [4, 6, 15, 16],
+    projectionDividers: [4, 6, 15, 16],
+  },
 };
 
-const LEAGUE_ORDER: League[] = ['spfl', 'epl', 'laliga', 'bundesliga'];
+const LEAGUE_ORDER: League[] = ['spfl', 'epl', 'laliga', 'bundesliga', 'seriea', 'ligue1'];
 
 const lastUpdated = new Date(dataUpdate.updateTime).toLocaleString('en-GB', {
   timeZone: 'Europe/London',
@@ -137,6 +193,7 @@ function App() {
   const [league, setLeague] = useState<League>('spfl');
   const [section, setSection] = useState<Section>('tables');
   const [tablesTab, setTablesTab] = useState<TablesTab>('current');
+  const [fixturesTab, setFixturesTab] = useState<FixturesTab>('fixtures');
   const [statsTab, setStatsTab] = useState<StatsTab>('team');
   const [selectedTeam, setSelectedTeam] = useState<string>('');
 
@@ -148,7 +205,7 @@ function App() {
   const teams = useMemo(() => extractTeams(fixtures), [fixtures]);
   const leagueTableData = useMemo(() => getLeagueTable(fixtures), [fixtures]);
   const projectionContext = useMemo(
-    () => createProjectionContext(config.lastSeasonFixtures, config.historicalSeasons, config.projection),
+    () => createProjectionContext(config.lastSeasonFixtures, config.historicalSeasons, config.projection, extractTeams(config.fixtures)),
     [config]
   );
   const projectedStandings = useMemo(
@@ -170,7 +227,14 @@ function App() {
     setSection('tables');
     setTablesTab('current');
     setStatsTab('team');
+    setFixturesTab('fixtures');
     setPage('league');
+  };
+
+  const handleTeamClick = (team: string) => {
+    setSelectedTeam(team);
+    setStatsTab('team');
+    setSection('stats');
   };
 
   const handleGoHome = () => {
@@ -232,6 +296,12 @@ function App() {
                 >
                   Stats
                 </button>
+                <button
+                  className={`view-tab ${section === 'fixtures' ? 'active' : ''}`}
+                  onClick={() => setSection('fixtures')}
+                >
+                  Fixtures
+                </button>
               </div>
 
               {section === 'tables' && (
@@ -268,6 +338,23 @@ function App() {
                 </div>
               )}
 
+              {section === 'fixtures' && (
+                <div className="view-tabs secondary-tabs">
+                  <button
+                    className={`view-tab ${fixturesTab === 'fixtures' ? 'active' : ''}`}
+                    onClick={() => setFixturesTab('fixtures')}
+                  >
+                    Fixtures
+                  </button>
+                  <button
+                    className={`view-tab ${fixturesTab === 'results' ? 'active' : ''}`}
+                    onClick={() => setFixturesTab('results')}
+                  >
+                    Results
+                  </button>
+                </div>
+              )}
+
               {section === 'stats' && statsTab === 'team' && (
                 <div className="team-select-group">
                   <label htmlFor="team-select">Team</label>
@@ -287,12 +374,12 @@ function App() {
 
             {section === 'tables' && tablesTab === 'current' && (
               <>
-                <LeagueTable data={leagueTableData} dividerPositions={config.tableDividers} />
+                <LeagueTable data={leagueTableData} dividerPositions={config.tableDividers} onTeamClick={handleTeamClick} />
                 <LeagueHighlights fixtures={fixtures} />
               </>
             )}
             {section === 'tables' && tablesTab === 'projection' && (
-              <ProjectionTable data={projectedStandings} dividerPositions={config.projectionDividers} />
+              <ProjectionTable data={projectedStandings} dividerPositions={config.projectionDividers} onTeamClick={handleTeamClick} />
             )}
             {section === 'stats' && statsTab === 'team' && activeTeam && (
               <TeamOverview
@@ -307,6 +394,7 @@ function App() {
             {section === 'stats' && statsTab === 'comparisons' && (
               <ComparisonsView fixtures={fixtures} teams={teams} />
             )}
+            {section === 'fixtures' && <FixturesView mode={fixturesTab} results={fixtures} schedule={config.schedule} />}
           </>
         )}
       </main>

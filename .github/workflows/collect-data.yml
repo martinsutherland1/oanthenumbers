@@ -1,21 +1,29 @@
 name: Collect match data
 
-# SPFL at 23:00 and EPL at 23:15 UK time. GitHub cron runs in UTC, so each time is scheduled
-# for both BST (22:xx UTC) and GMT (23:xx UTC) and the "plan" job skips whichever doesn't
-# match the current UK offset.
+# Each league runs at its own UK time (SPFL 23:00, EPL 23:15, La Liga 23:30, Bundesliga 23:45,
+# Serie A 01:00, Ligue 1 01:15). GitHub cron runs in UTC, so each time is scheduled for both BST and GMT and
+# the "plan" job skips whichever doesn't match the current UK offset.
 on:
   schedule:
     - cron: '0 22 * * *'   # SPFL, 23:00 BST
     - cron: '0 23 * * *'   # SPFL, 23:00 GMT
     - cron: '15 22 * * *'  # EPL, 23:15 BST
     - cron: '15 23 * * *'  # EPL, 23:15 GMT
+    - cron: '30 22 * * *'  # La Liga, 23:30 BST
+    - cron: '30 23 * * *'  # La Liga, 23:30 GMT
+    - cron: '45 22 * * *'  # Bundesliga, 23:45 BST
+    - cron: '45 23 * * *'  # Bundesliga, 23:45 GMT
+    - cron: '0 0 * * *'    # Serie A, 01:00 BST
+    - cron: '0 1 * * *'    # Serie A, 01:00 GMT
+    - cron: '15 0 * * *'   # Ligue 1, 01:15 BST
+    - cron: '15 1 * * *'   # Ligue 1, 01:15 GMT
   workflow_dispatch:
     inputs:
       league:
         description: League to collect
         type: choice
-        options: [both, spfl, epl]
-        default: both
+        options: [all, spfl, epl, laliga, bundesliga, seriea, ligue1]
+        default: all
 
 # Queue runs so the SPFL and EPL commits never race each other
 concurrency:
@@ -39,7 +47,7 @@ jobs:
         run: |
           if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
             case "$LEAGUE_INPUT" in
-              both) leagues="spfl epl" ;;
+              all) leagues="spfl epl laliga bundesliga seriea ligue1" ;;
               *) leagues="$LEAGUE_INPUT" ;;
             esac
           else
@@ -49,6 +57,14 @@ jobs:
               '0 23 * * *')  [ "$offset" = "+0000" ] && leagues=spfl ;;
               '15 22 * * *') [ "$offset" = "+0100" ] && leagues=epl ;;
               '15 23 * * *') [ "$offset" = "+0000" ] && leagues=epl ;;
+              '30 22 * * *') [ "$offset" = "+0100" ] && leagues=laliga ;;
+              '30 23 * * *') [ "$offset" = "+0000" ] && leagues=laliga ;;
+              '45 22 * * *') [ "$offset" = "+0100" ] && leagues=bundesliga ;;
+              '45 23 * * *') [ "$offset" = "+0000" ] && leagues=bundesliga ;;
+              '0 0 * * *')   [ "$offset" = "+0100" ] && leagues=seriea ;;
+              '0 1 * * *')   [ "$offset" = "+0000" ] && leagues=seriea ;;
+              '15 0 * * *')  [ "$offset" = "+0100" ] && leagues=ligue1 ;;
+              '15 1 * * *')  [ "$offset" = "+0000" ] && leagues=ligue1 ;;
             esac
           fi
           echo "UK offset $(date +%z), schedule '$SCHEDULE' -> leagues: '${leagues:-none}'"
@@ -90,6 +106,22 @@ jobs:
       - name: Collect EPL 2026/27
         if: contains(needs.plan.outputs.leagues, 'epl')
         run: npm run collect_epl_2026_27
+
+      - name: Collect La Liga 2026/27
+        if: contains(needs.plan.outputs.leagues, 'laliga')
+        run: npm run collect_laliga_2026_27
+
+      - name: Collect Bundesliga 2026/27
+        if: contains(needs.plan.outputs.leagues, 'bundesliga')
+        run: npm run collect_bundesliga_2026_27
+
+      - name: Collect Serie A 2026/27
+        if: contains(needs.plan.outputs.leagues, 'seriea')
+        run: npm run collect_seriea_2026_27
+
+      - name: Collect Ligue 1 2026/27
+        if: contains(needs.plan.outputs.leagues, 'ligue1')
+        run: npm run collect_ligue1_2026_27
 
       - name: Upload Playwright report
         if: failure()

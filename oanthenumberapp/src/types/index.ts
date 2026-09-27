@@ -16,6 +16,20 @@ export interface Fixture {
   away_xgot: number;
 }
 
+export interface ScheduledFixture {
+  date: string;
+  time?: string;
+  home_team: string;
+  away_team: string;
+  round: number;
+}
+
+// Round-keyed schedule files: "fixtures_0", "fixtures_1", ... (round is implied by the key
+// when the entries carry no round of their own)
+export interface ScheduleData {
+  [key: string]: Array<{ date: string; time?: string; team_home: string; team_away: string; round?: number }>;
+}
+
 export interface FixturesData {
   [date: string]: Fixture[];
 }

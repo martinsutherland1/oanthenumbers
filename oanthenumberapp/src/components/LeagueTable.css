@@ -136,3 +136,11 @@
     height: 7px;
   }
 }
+
+.team-cell-link {
+  cursor: pointer;
+}
+
+.team-cell-link:hover .team-cell-name {
+  text-decoration: underline;
+}

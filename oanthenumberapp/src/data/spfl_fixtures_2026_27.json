@@ -1,0 +1,838 @@
+{
+  "fixtures_0": [
+    {
+      "date": "2026-08-01",
+      "team_home": "dundee-united",
+      "team_away": "rangers",
+      "round": 1
+    },
+    {
+      "date": "2026-08-02",
+      "team_home": "falkirk",
+      "team_away": "st-mirren",
+      "round": 1
+    },
+    {
+      "date": "2026-08-02",
+      "team_home": "aberdeen",
+      "team_away": "heart-midlothian",
+      "round": 1
+    },
+    {
+      "date": "2026-08-03",
+      "team_home": "st-johnstone",
+      "team_away": "kilmarnock",
+      "round": 1
+    },
+    {
+      "date": "2026-08-03",
+      "team_home": "hibernian",
+      "team_away": "motherwell",
+      "round": 1
+    },
+    {
+      "date": "2026-08-04",
+      "team_home": "celtic",
+      "team_away": "dundee-fc",
+      "round": 1
+    }
+  ],
+  "fixtures_1": [
+    {
+      "date": "2026-08-09",
+      "team_home": "dundee-fc",
+      "team_away": "aberdeen",
+      "round": 2
+    },
+    {
+      "date": "2026-08-09",
+      "team_home": "st-mirren",
+      "team_away": "st-johnstone",
+      "round": 2
+    },
+    {
+      "date": "2026-08-10",
+      "team_home": "kilmarnock",
+      "team_away": "celtic",
+      "round": 2
+    },
+    {
+      "date": "2026-08-10",
+      "team_home": "heart-midlothian",
+      "team_away": "dundee-united",
+      "round": 2
+    },
+    {
+      "date": "2026-08-10",
+      "team_home": "motherwell",
+      "team_away": "falkirk",
+      "round": 2
+    },
+    {
+      "date": "2026-08-10",
+      "team_home": "rangers",
+      "team_away": "hibernian",
+      "round": 2
+    }
+  ],
+  "fixtures_2": [
+    {
+      "date": "2026-08-23",
+      "team_home": "dundee-united",
+      "team_away": "dundee-fc",
+      "round": 3
+    },
+    {
+      "date": "2026-09-10",
+      "team_home": "rangers",
+      "team_away": "st-mirren",
+      "round": 3
+    },
+    {
+      "date": "2026-09-10",
+      "team_home": "st-johnstone",
+      "team_away": "celtic",
+      "round": 3
+    },
+    {
+      "date": "2026-09-16",
+      "team_home": "falkirk",
+      "team_away": "heart-midlothian",
+      "round": 3
+    },
+    {
+      "date": "2026-09-16",
+      "team_home": "hibernian",
+      "team_away": "kilmarnock",
+      "round": 3
+    },
+    {
+      "date": "2026-09-16",
+      "team_home": "motherwell",
+      "team_away": "aberdeen",
+      "round": 3
+    }
+  ],
+  "fixtures_3": [
+    {
+      "date": "2026-08-30",
+      "team_home": "celtic",
+      "team_away": "falkirk",
+      "round": 4
+    },
+    {
+      "date": "2026-08-30",
+      "team_home": "heart-midlothian",
+      "team_away": "st-johnstone",
+      "round": 4
+    },
+    {
+      "date": "2026-08-30",
+      "team_home": "kilmarnock",
+      "team_away": "dundee-united",
+      "round": 4
+    },
+    {
+      "date": "2026-08-31",
+      "team_home": "aberdeen",
+      "team_away": "rangers",
+      "round": 4
+    },
+    {
+      "date": "2026-08-31",
+      "team_home": "dundee-fc",
+      "team_away": "hibernian",
+      "round": 4
+    },
+    {
+      "date": "2026-08-31",
+      "team_home": "st-mirren",
+      "team_away": "motherwell",
+      "round": 4
+    }
+  ],
+  "fixtures_4": [
+    {
+      "date": "2026-09-03",
+      "team_home": "celtic",
+      "team_away": "aberdeen",
+      "round": 5
+    },
+    {
+      "date": "2026-09-03",
+      "team_home": "dundee-fc",
+      "team_away": "st-johnstone",
+      "round": 5
+    },
+    {
+      "date": "2026-09-03",
+      "team_home": "kilmarnock",
+      "team_away": "st-mirren",
+      "round": 5
+    },
+    {
+      "date": "2026-09-03",
+      "team_home": "motherwell",
+      "team_away": "dundee-united",
+      "round": 5
+    },
+    {
+      "date": "2026-09-03",
+      "team_home": "falkirk",
+      "team_away": "rangers",
+      "round": 5
+    },
+    {
+      "date": "2026-09-04",
+      "team_home": "hibernian",
+      "team_away": "heart-midlothian",
+      "round": 5
+    }
+  ],
+  "fixtures_5": [
+    {
+      "date": "2026-09-06",
+      "team_home": "aberdeen",
+      "team_away": "kilmarnock",
+      "round": 6
+    },
+    {
+      "date": "2026-09-06",
+      "team_home": "dundee-united",
+      "team_away": "falkirk",
+      "round": 6
+    },
+    {
+      "date": "2026-09-06",
+      "team_home": "rangers",
+      "team_away": "motherwell",
+      "round": 6
+    },
+    {
+      "date": "2026-09-06",
+      "team_home": "st-mirren",
+      "team_away": "celtic",
+      "round": 6
+    },
+    {
+      "date": "2026-09-07",
+      "team_home": "heart-midlothian",
+      "team_away": "dundee-fc",
+      "round": 6
+    },
+    {
+      "date": "2026-09-07",
+      "team_home": "st-johnstone",
+      "team_away": "hibernian",
+      "round": 6
+    }
+  ],
+  "fixtures_6": [
+    {
+      "date": "2026-09-19",
+      "team_home": "dundee-fc",
+      "team_away": "motherwell",
+      "round": 7
+    },
+    {
+      "date": "2026-09-19",
+      "team_home": "hibernian",
+      "team_away": "aberdeen",
+      "round": 7
+    },
+    {
+      "date": "2026-09-19",
+      "team_home": "st-johnstone",
+      "team_away": "falkirk",
+      "round": 7
+    },
+    {
+      "date": "2026-09-19",
+      "team_home": "st-mirren",
+      "team_away": "dundee-united",
+      "round": 7
+    },
+    {
+      "date": "2026-09-19",
+      "team_home": "kilmarnock",
+      "team_away": "heart-midlothian",
+      "round": 7
+    },
+    {
+      "date": "2026-09-20",
+      "team_home": "celtic",
+      "team_away": "rangers",
+      "round": 7
+    }
+  ],
+  "fixtures_7": [
+    {
+      "date": "2026-10-10",
+      "team_home": "dundee-united",
+      "team_away": "hibernian",
+      "round": 8
+    },
+    {
+      "date": "2026-10-10",
+      "team_home": "falkirk",
+      "team_away": "dundee-fc",
+      "round": 8
+    },
+    {
+      "date": "2026-10-10",
+      "team_home": "heart-midlothian",
+      "team_away": "st-mirren",
+      "round": 8
+    },
+    {
+      "date": "2026-10-10",
+      "team_home": "rangers",
+      "team_away": "kilmarnock",
+      "round": 8
+    },
+    {
+      "date": "2026-10-11",
+      "team_home": "aberdeen",
+      "team_away": "st-johnstone",
+      "round": 8
+    },
+    {
+      "date": "2026-10-11",
+      "team_home": "motherwell",
+      "team_away": "celtic",
+      "round": 8
+    }
+  ],
+  "fixtures_8": [
+    {
+      "date": "2026-10-17",
+      "team_home": "aberdeen",
+      "team_away": "st-mirren",
+      "round": 9
+    },
+    {
+      "date": "2026-10-17",
+      "team_home": "dundee-fc",
+      "team_away": "rangers",
+      "round": 9
+    },
+    {
+      "date": "2026-10-17",
+      "team_home": "hibernian",
+      "team_away": "falkirk",
+      "round": 9
+    },
+    {
+      "date": "2026-10-17",
+      "team_home": "kilmarnock",
+      "team_away": "motherwell",
+      "round": 9
+    },
+    {
+      "date": "2026-10-17",
+      "team_home": "st-johnstone",
+      "team_away": "dundee-united",
+      "round": 9
+    },
+    {
+      "date": "2026-10-18",
+      "team_home": "celtic",
+      "team_away": "heart-midlothian",
+      "round": 9
+    }
+  ],
+  "fixtures_9": [
+    {
+      "date": "2026-10-24",
+      "team_home": "dundee-united",
+      "team_away": "aberdeen",
+      "round": 10
+    },
+    {
+      "date": "2026-10-24",
+      "team_home": "falkirk",
+      "team_away": "kilmarnock",
+      "round": 10
+    },
+    {
+      "date": "2026-10-24",
+      "team_home": "rangers",
+      "team_away": "st-johnstone",
+      "round": 10
+    },
+    {
+      "date": "2026-10-24",
+      "team_home": "st-mirren",
+      "team_away": "dundee-fc",
+      "round": 10
+    },
+    {
+      "date": "2026-10-25",
+      "team_home": "hibernian",
+      "team_away": "celtic",
+      "round": 10
+    },
+    {
+      "date": "2026-10-25",
+      "team_home": "motherwell",
+      "team_away": "heart-midlothian",
+      "round": 10
+    }
+  ],
+  "fixtures_10": [
+    {
+      "date": "2026-10-28",
+      "team_home": "aberdeen",
+      "team_away": "falkirk",
+      "round": 11
+    },
+    {
+      "date": "2026-10-28",
+      "team_home": "celtic",
+      "team_away": "dundee-united",
+      "round": 11
+    },
+    {
+      "date": "2026-10-28",
+      "team_home": "dundee-fc",
+      "team_away": "kilmarnock",
+      "round": 11
+    },
+    {
+      "date": "2026-10-28",
+      "team_home": "heart-midlothian",
+      "team_away": "rangers",
+      "round": 11
+    },
+    {
+      "date": "2026-10-28",
+      "team_home": "st-johnstone",
+      "team_away": "motherwell",
+      "round": 11
+    },
+    {
+      "date": "2026-10-28",
+      "team_home": "st-mirren",
+      "team_away": "hibernian",
+      "round": 11
+    }
+  ],
+  "fixtures_11": [
+    {
+      "date": "2026-10-31",
+      "team_home": "falkirk",
+      "team_away": "celtic",
+      "round": 12
+    },
+    {
+      "date": "2026-10-31",
+      "team_home": "hibernian",
+      "team_away": "dundee-fc",
+      "round": 12
+    },
+    {
+      "date": "2026-10-31",
+      "team_home": "kilmarnock",
+      "team_away": "st-johnstone",
+      "round": 12
+    },
+    {
+      "date": "2026-10-31",
+      "team_home": "motherwell",
+      "team_away": "st-mirren",
+      "round": 12
+    },
+    {
+      "date": "2026-10-31",
+      "team_home": "rangers",
+      "team_away": "aberdeen",
+      "round": 12
+    },
+    {
+      "date": "TBC",
+      "team_home": "dundee-united",
+      "team_away": "heart-midlothian",
+      "round": 12
+    }
+  ],
+  "fixtures_12": [
+    {
+      "date": "2026-11-07",
+      "team_home": "aberdeen",
+      "team_away": "hibernian",
+      "round": 13
+    },
+    {
+      "date": "2026-11-07",
+      "team_home": "dundee-united",
+      "team_away": "motherwell",
+      "round": 13
+    },
+    {
+      "date": "2026-11-07",
+      "team_home": "st-johnstone",
+      "team_away": "dundee-fc",
+      "round": 13
+    },
+    {
+      "date": "2026-11-07",
+      "team_home": "st-mirren",
+      "team_away": "rangers",
+      "round": 13
+    },
+    {
+      "date": "2026-11-08",
+      "team_home": "celtic",
+      "team_away": "kilmarnock",
+      "round": 13
+    },
+    {
+      "date": "2026-11-08",
+      "team_home": "heart-midlothian",
+      "team_away": "falkirk",
+      "round": 13
+    }
+  ],
+  "fixtures_13": [
+    {
+      "date": "2026-11-21",
+      "team_home": "celtic",
+      "team_away": "st-mirren",
+      "round": 14
+    },
+    {
+      "date": "2026-11-21",
+      "team_home": "dundee-fc",
+      "team_away": "heart-midlothian",
+      "round": 14
+    },
+    {
+      "date": "2026-11-21",
+      "team_home": "falkirk",
+      "team_away": "st-johnstone",
+      "round": 14
+    },
+    {
+      "date": "2026-11-21",
+      "team_home": "hibernian",
+      "team_away": "dundee-united",
+      "round": 14
+    },
+    {
+      "date": "2026-11-21",
+      "team_home": "kilmarnock",
+      "team_away": "aberdeen",
+      "round": 14
+    },
+    {
+      "date": "2026-11-21",
+      "team_home": "motherwell",
+      "team_away": "rangers",
+      "round": 14
+    }
+  ],
+  "fixtures_14": [
+    {
+      "date": "2026-11-28",
+      "team_home": "aberdeen",
+      "team_away": "dundee-fc",
+      "round": 15
+    },
+    {
+      "date": "2026-11-28",
+      "team_home": "dundee-united",
+      "team_away": "st-johnstone",
+      "round": 15
+    },
+    {
+      "date": "2026-11-28",
+      "team_home": "motherwell",
+      "team_away": "hibernian",
+      "round": 15
+    },
+    {
+      "date": "2026-11-28",
+      "team_home": "rangers",
+      "team_away": "falkirk",
+      "round": 15
+    },
+    {
+      "date": "2026-11-28",
+      "team_home": "st-mirren",
+      "team_away": "kilmarnock",
+      "round": 15
+    },
+    {
+      "date": "2026-11-29",
+      "team_home": "heart-midlothian",
+      "team_away": "celtic",
+      "round": 15
+    }
+  ],
+  "fixtures_15": [
+    {
+      "date": "2026-12-02",
+      "team_home": "dundee-fc",
+      "team_away": "celtic",
+      "round": 16
+    },
+    {
+      "date": "2026-12-02",
+      "team_home": "falkirk",
+      "team_away": "motherwell",
+      "round": 16
+    },
+    {
+      "date": "2026-12-02",
+      "team_home": "heart-midlothian",
+      "team_away": "aberdeen",
+      "round": 16
+    },
+    {
+      "date": "2026-12-02",
+      "team_home": "kilmarnock",
+      "team_away": "hibernian",
+      "round": 16
+    },
+    {
+      "date": "2026-12-02",
+      "team_home": "rangers",
+      "team_away": "dundee-united",
+      "round": 16
+    },
+    {
+      "date": "2026-12-02",
+      "team_home": "st-johnstone",
+      "team_away": "st-mirren",
+      "round": 16
+    }
+  ],
+  "fixtures_16": [
+    {
+      "date": "2026-12-05",
+      "team_home": "aberdeen",
+      "team_away": "dundee-united",
+      "round": 17
+    },
+    {
+      "date": "2026-12-05",
+      "team_home": "celtic",
+      "team_away": "st-johnstone",
+      "round": 17
+    },
+    {
+      "date": "2026-12-05",
+      "team_home": "dundee-fc",
+      "team_away": "falkirk",
+      "round": 17
+    },
+    {
+      "date": "2026-12-05",
+      "team_home": "hibernian",
+      "team_away": "rangers",
+      "round": 17
+    },
+    {
+      "date": "2026-12-05",
+      "team_home": "motherwell",
+      "team_away": "kilmarnock",
+      "round": 17
+    },
+    {
+      "date": "2026-12-05",
+      "team_home": "st-mirren",
+      "team_away": "heart-midlothian",
+      "round": 17
+    }
+  ],
+  "fixtures_17": [
+    {
+      "date": "2026-12-12",
+      "team_home": "dundee-united",
+      "team_away": "st-mirren",
+      "round": 18
+    },
+    {
+      "date": "2026-12-12",
+      "team_home": "falkirk",
+      "team_away": "aberdeen",
+      "round": 18
+    },
+    {
+      "date": "2026-12-12",
+      "team_home": "kilmarnock",
+      "team_away": "dundee-fc",
+      "round": 18
+    },
+    {
+      "date": "2026-12-12",
+      "team_home": "st-johnstone",
+      "team_away": "rangers",
+      "round": 18
+    },
+    {
+      "date": "2026-12-13",
+      "team_home": "celtic",
+      "team_away": "hibernian",
+      "round": 18
+    },
+    {
+      "date": "2026-12-13",
+      "team_home": "heart-midlothian",
+      "team_away": "motherwell",
+      "round": 18
+    }
+  ],
+  "fixtures_18": [
+    {
+      "date": "2026-12-19",
+      "team_home": "aberdeen",
+      "team_away": "celtic",
+      "round": 19
+    },
+    {
+      "date": "2026-12-19",
+      "team_home": "dundee-united",
+      "team_away": "kilmarnock",
+      "round": 19
+    },
+    {
+      "date": "2026-12-19",
+      "team_home": "hibernian",
+      "team_away": "st-johnstone",
+      "round": 19
+    },
+    {
+      "date": "2026-12-19",
+      "team_home": "motherwell",
+      "team_away": "dundee-fc",
+      "round": 19
+    },
+    {
+      "date": "2026-12-19",
+      "team_home": "st-mirren",
+      "team_away": "falkirk",
+      "round": 19
+    },
+    {
+      "date": "2026-12-20",
+      "team_home": "rangers",
+      "team_away": "heart-midlothian",
+      "round": 19
+    }
+  ],
+  "fixtures_19": [
+    {
+      "date": "2026-12-26",
+      "team_home": "celtic",
+      "team_away": "motherwell",
+      "round": 20
+    },
+    {
+      "date": "2026-12-26",
+      "team_home": "dundee-fc",
+      "team_away": "st-mirren",
+      "round": 20
+    },
+    {
+      "date": "2026-12-26",
+      "team_home": "falkirk",
+      "team_away": "dundee-united",
+      "round": 20
+    },
+    {
+      "date": "2026-12-26",
+      "team_home": "kilmarnock",
+      "team_away": "rangers",
+      "round": 20
+    },
+    {
+      "date": "2026-12-26",
+      "team_home": "st-johnstone",
+      "team_away": "aberdeen",
+      "round": 20
+    },
+    {
+      "date": "2026-12-27",
+      "team_home": "heart-midlothian",
+      "team_away": "hibernian",
+      "round": 20
+    }
+  ],
+  "fixtures_20": [
+    {
+      "date": "2026-12-30",
+      "team_home": "aberdeen",
+      "team_away": "motherwell",
+      "round": 21
+    },
+    {
+      "date": "2026-12-30",
+      "team_home": "dundee-united",
+      "team_away": "celtic",
+      "round": 21
+    },
+    {
+      "date": "2026-12-30",
+      "team_home": "hibernian",
+      "team_away": "st-mirren",
+      "round": 21
+    },
+    {
+      "date": "2026-12-30",
+      "team_home": "kilmarnock",
+      "team_away": "falkirk",
+      "round": 21
+    },
+    {
+      "date": "2026-12-30",
+      "team_home": "rangers",
+      "team_away": "dundee-fc",
+      "round": 21
+    },
+    {
+      "date": "2026-12-30",
+      "team_home": "st-johnstone",
+      "team_away": "heart-midlothian",
+      "round": 21
+    }
+  ],
+  "fixtures_21": [
+    {
+      "date": "2027-01-02",
+      "team_home": "dundee-fc",
+      "team_away": "dundee-united",
+      "round": 22
+    },
+    {
+      "date": "2027-01-02",
+      "team_home": "falkirk",
+      "team_away": "hibernian",
+      "round": 22
+    },
+    {
+      "date": "2027-01-02",
+      "team_home": "heart-midlothian",
+      "team_away": "kilmarnock",
+      "round": 22
+    },
+    {
+      "date": "2027-01-02",
+      "team_home": "motherwell",
+      "team_away": "st-johnstone",
+      "round": 22
+    },
+    {
+      "date": "2027-01-03",
+      "team_home": "rangers",
+      "team_away": "celtic",
+      "round": 22
+    },
+    {
+      "date": "2027-01-03",
+      "team_home": "st-mirren",
+      "team_away": "aberdeen",
+      "round": 22
+    }
+  ]
+}

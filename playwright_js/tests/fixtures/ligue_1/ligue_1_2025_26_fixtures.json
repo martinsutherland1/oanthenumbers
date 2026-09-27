@@ -1,0 +1,1600 @@
+{
+  "fixtures_0": [
+    {
+      "date": "2025-08-15",
+      "team_home": "rennes",
+      "team_away": "marseille"
+    },
+    {
+      "date": "2025-08-16",
+      "team_home": "lens",
+      "team_away": "lyon"
+    },
+    {
+      "date": "2025-08-16",
+      "team_home": "monaco",
+      "team_away": "le-havre"
+    },
+    {
+      "date": "2025-08-16",
+      "team_home": "nice",
+      "team_away": "toulouse"
+    },
+    {
+      "date": "2025-08-17",
+      "team_home": "brest",
+      "team_away": "lille"
+    },
+    {
+      "date": "2025-08-17",
+      "team_home": "auxerre",
+      "team_away": "lorient"
+    },
+    {
+      "date": "2025-08-17",
+      "team_home": "metz",
+      "team_away": "strasbourg"
+    },
+    {
+      "date": "2025-08-17",
+      "team_home": "angers",
+      "team_away": "paris-fc"
+    },
+    {
+      "date": "2025-08-17",
+      "team_home": "nantes",
+      "team_away": "paris-saint-germain"
+    }
+  ],
+  "fixtures_1": [
+    {
+      "date": "2025-08-22",
+      "team_home": "paris-saint-germain",
+      "team_away": "angers"
+    },
+    {
+      "date": "2025-08-23",
+      "team_home": "marseille",
+      "team_away": "paris-fc"
+    },
+    {
+      "date": "2025-08-23",
+      "team_home": "nice",
+      "team_away": "auxerre"
+    },
+    {
+      "date": "2025-08-23",
+      "team_home": "lyon",
+      "team_away": "metz"
+    },
+    {
+      "date": "2025-08-24",
+      "team_home": "lorient",
+      "team_away": "rennes"
+    },
+    {
+      "date": "2025-08-24",
+      "team_home": "le-havre",
+      "team_away": "lens"
+    },
+    {
+      "date": "2025-08-24",
+      "team_home": "toulouse",
+      "team_away": "brest"
+    },
+    {
+      "date": "2025-08-24",
+      "team_home": "strasbourg",
+      "team_away": "nantes"
+    },
+    {
+      "date": "2025-08-24",
+      "team_home": "lille",
+      "team_away": "monaco"
+    }
+  ],
+  "fixtures_2": [
+    {
+      "date": "2025-08-29",
+      "team_home": "lens",
+      "team_away": "brest"
+    },
+    {
+      "date": "2025-08-30",
+      "team_home": "lorient",
+      "team_away": "lille"
+    },
+    {
+      "date": "2025-08-30",
+      "team_home": "nantes",
+      "team_away": "auxerre"
+    },
+    {
+      "date": "2025-08-30",
+      "team_home": "toulouse",
+      "team_away": "paris-saint-germain"
+    },
+    {
+      "date": "2025-08-31",
+      "team_home": "angers",
+      "team_away": "rennes"
+    },
+    {
+      "date": "2025-08-31",
+      "team_home": "le-havre",
+      "team_away": "nice"
+    },
+    {
+      "date": "2025-08-31",
+      "team_home": "monaco",
+      "team_away": "strasbourg"
+    },
+    {
+      "date": "2025-08-31",
+      "team_home": "paris-fc",
+      "team_away": "metz"
+    },
+    {
+      "date": "2025-08-31",
+      "team_home": "lyon",
+      "team_away": "marseille"
+    }
+  ],
+  "fixtures_3": [
+    {
+      "date": "2025-09-12",
+      "team_home": "marseille",
+      "team_away": "lorient"
+    },
+    {
+      "date": "2025-09-13",
+      "team_home": "nice",
+      "team_away": "nantes"
+    },
+    {
+      "date": "2025-09-13",
+      "team_home": "auxerre",
+      "team_away": "monaco"
+    },
+    {
+      "date": "2025-09-14",
+      "team_home": "lille",
+      "team_away": "toulouse"
+    },
+    {
+      "date": "2025-09-14",
+      "team_home": "metz",
+      "team_away": "angers"
+    },
+    {
+      "date": "2025-09-14",
+      "team_home": "paris-saint-germain",
+      "team_away": "lens"
+    },
+    {
+      "date": "2025-09-14",
+      "team_home": "strasbourg",
+      "team_away": "le-havre"
+    },
+    {
+      "date": "2025-09-14",
+      "team_home": "brest",
+      "team_away": "paris-fc"
+    },
+    {
+      "date": "2025-09-14",
+      "team_home": "rennes",
+      "team_away": "lyon"
+    }
+  ],
+  "fixtures_4": [
+    {
+      "date": "2025-09-19",
+      "team_home": "lyon",
+      "team_away": "angers"
+    },
+    {
+      "date": "2025-09-20",
+      "team_home": "nantes",
+      "team_away": "rennes"
+    },
+    {
+      "date": "2025-09-20",
+      "team_home": "brest",
+      "team_away": "nice"
+    },
+    {
+      "date": "2025-09-20",
+      "team_home": "lens",
+      "team_away": "lille"
+    },
+    {
+      "date": "2025-09-21",
+      "team_home": "paris-fc",
+      "team_away": "strasbourg"
+    },
+    {
+      "date": "2025-09-21",
+      "team_home": "le-havre",
+      "team_away": "lorient"
+    },
+    {
+      "date": "2025-09-21",
+      "team_home": "auxerre",
+      "team_away": "toulouse"
+    },
+    {
+      "date": "2025-09-21",
+      "team_home": "monaco",
+      "team_away": "metz"
+    },
+    {
+      "date": "2025-09-22",
+      "team_home": "marseille",
+      "team_away": "paris-saint-germain"
+    }
+  ],
+  "fixtures_5": [
+    {
+      "date": "2025-09-26",
+      "team_home": "strasbourg",
+      "team_away": "marseille"
+    },
+    {
+      "date": "2025-09-27",
+      "team_home": "lorient",
+      "team_away": "monaco"
+    },
+    {
+      "date": "2025-09-27",
+      "team_home": "toulouse",
+      "team_away": "nantes"
+    },
+    {
+      "date": "2025-09-27",
+      "team_home": "paris-saint-germain",
+      "team_away": "auxerre"
+    },
+    {
+      "date": "2025-09-28",
+      "team_home": "nice",
+      "team_away": "paris-fc"
+    },
+    {
+      "date": "2025-09-28",
+      "team_home": "metz",
+      "team_away": "le-havre"
+    },
+    {
+      "date": "2025-09-28",
+      "team_home": "lille",
+      "team_away": "lyon"
+    },
+    {
+      "date": "2025-09-28",
+      "team_home": "angers",
+      "team_away": "brest"
+    },
+    {
+      "date": "2025-09-28",
+      "team_home": "rennes",
+      "team_away": "lens"
+    }
+  ],
+  "fixtures_6": [
+    {
+      "date": "2025-10-03",
+      "team_home": "paris-fc",
+      "team_away": "lorient"
+    },
+    {
+      "date": "2025-10-04",
+      "team_home": "metz",
+      "team_away": "marseille"
+    },
+    {
+      "date": "2025-10-04",
+      "team_home": "brest",
+      "team_away": "nantes"
+    },
+    {
+      "date": "2025-10-04",
+      "team_home": "auxerre",
+      "team_away": "lens"
+    },
+    {
+      "date": "2025-10-05",
+      "team_home": "lyon",
+      "team_away": "toulouse"
+    },
+    {
+      "date": "2025-10-05",
+      "team_home": "strasbourg",
+      "team_away": "angers"
+    },
+    {
+      "date": "2025-10-05",
+      "team_home": "le-havre",
+      "team_away": "rennes"
+    },
+    {
+      "date": "2025-10-05",
+      "team_home": "monaco",
+      "team_away": "nice"
+    },
+    {
+      "date": "2025-10-05",
+      "team_home": "lille",
+      "team_away": "paris-saint-germain"
+    }
+  ],
+  "fixtures_7": [
+    {
+      "date": "2025-10-17",
+      "team_home": "paris-saint-germain",
+      "team_away": "strasbourg"
+    },
+    {
+      "date": "2025-10-18",
+      "team_home": "nice",
+      "team_away": "lyon"
+    },
+    {
+      "date": "2025-10-18",
+      "team_home": "angers",
+      "team_away": "monaco"
+    },
+    {
+      "date": "2025-10-18",
+      "team_home": "marseille",
+      "team_away": "le-havre"
+    },
+    {
+      "date": "2025-10-19",
+      "team_home": "lens",
+      "team_away": "paris-fc"
+    },
+    {
+      "date": "2025-10-19",
+      "team_home": "lorient",
+      "team_away": "brest"
+    },
+    {
+      "date": "2025-10-19",
+      "team_home": "toulouse",
+      "team_away": "metz"
+    },
+    {
+      "date": "2025-10-19",
+      "team_home": "rennes",
+      "team_away": "auxerre"
+    },
+    {
+      "date": "2025-10-19",
+      "team_home": "nantes",
+      "team_away": "lille"
+    }
+  ],
+  "fixtures_8": [
+    {
+      "date": "2025-10-24",
+      "team_home": "paris-fc",
+      "team_away": "nantes"
+    },
+    {
+      "date": "2025-10-25",
+      "team_home": "brest",
+      "team_away": "paris-saint-germain"
+    },
+    {
+      "date": "2025-10-25",
+      "team_home": "monaco",
+      "team_away": "toulouse"
+    },
+    {
+      "date": "2025-10-25",
+      "team_home": "lens",
+      "team_away": "marseille"
+    },
+    {
+      "date": "2025-10-26",
+      "team_home": "lille",
+      "team_away": "metz"
+    },
+    {
+      "date": "2025-10-26",
+      "team_home": "auxerre",
+      "team_away": "le-havre"
+    },
+    {
+      "date": "2025-10-26",
+      "team_home": "angers",
+      "team_away": "lorient"
+    },
+    {
+      "date": "2025-10-26",
+      "team_home": "rennes",
+      "team_away": "nice"
+    },
+    {
+      "date": "2025-10-26",
+      "team_home": "lyon",
+      "team_away": "strasbourg"
+    }
+  ],
+  "fixtures_9": [
+    {
+      "date": "2025-10-29",
+      "team_home": "le-havre",
+      "team_away": "brest"
+    },
+    {
+      "date": "2025-10-29",
+      "team_home": "lorient",
+      "team_away": "paris-saint-germain"
+    },
+    {
+      "date": "2025-10-29",
+      "team_home": "metz",
+      "team_away": "lens"
+    },
+    {
+      "date": "2025-10-29",
+      "team_home": "nice",
+      "team_away": "lille"
+    },
+    {
+      "date": "2025-10-29",
+      "team_home": "nantes",
+      "team_away": "monaco"
+    },
+    {
+      "date": "2025-10-29",
+      "team_home": "paris-fc",
+      "team_away": "lyon"
+    },
+    {
+      "date": "2025-10-29",
+      "team_home": "toulouse",
+      "team_away": "rennes"
+    },
+    {
+      "date": "2025-10-29",
+      "team_home": "marseille",
+      "team_away": "angers"
+    },
+    {
+      "date": "2025-10-29",
+      "team_home": "strasbourg",
+      "team_away": "auxerre"
+    }
+  ],
+  "fixtures_10": [
+    {
+      "date": "2025-11-01",
+      "team_home": "paris-saint-germain",
+      "team_away": "nice"
+    },
+    {
+      "date": "2025-11-01",
+      "team_home": "monaco",
+      "team_away": "paris-fc"
+    },
+    {
+      "date": "2025-11-01",
+      "team_home": "auxerre",
+      "team_away": "marseille"
+    },
+    {
+      "date": "2025-11-02",
+      "team_home": "rennes",
+      "team_away": "strasbourg"
+    },
+    {
+      "date": "2025-11-02",
+      "team_home": "nantes",
+      "team_away": "metz"
+    },
+    {
+      "date": "2025-11-02",
+      "team_home": "toulouse",
+      "team_away": "le-havre"
+    },
+    {
+      "date": "2025-11-02",
+      "team_home": "lille",
+      "team_away": "angers"
+    },
+    {
+      "date": "2025-11-02",
+      "team_home": "lens",
+      "team_away": "lorient"
+    },
+    {
+      "date": "2025-11-02",
+      "team_home": "brest",
+      "team_away": "lyon"
+    }
+  ],
+  "fixtures_11": [
+    {
+      "date": "2025-11-07",
+      "team_home": "paris-fc",
+      "team_away": "rennes"
+    },
+    {
+      "date": "2025-11-08",
+      "team_home": "marseille",
+      "team_away": "brest"
+    },
+    {
+      "date": "2025-11-08",
+      "team_home": "le-havre",
+      "team_away": "nantes"
+    },
+    {
+      "date": "2025-11-08",
+      "team_home": "monaco",
+      "team_away": "lens"
+    },
+    {
+      "date": "2025-11-09",
+      "team_home": "lorient",
+      "team_away": "toulouse"
+    },
+    {
+      "date": "2025-11-09",
+      "team_home": "metz",
+      "team_away": "nice"
+    },
+    {
+      "date": "2025-11-09",
+      "team_home": "strasbourg",
+      "team_away": "lille"
+    },
+    {
+      "date": "2025-11-09",
+      "team_home": "angers",
+      "team_away": "auxerre"
+    },
+    {
+      "date": "2025-11-09",
+      "team_home": "lyon",
+      "team_away": "paris-saint-germain"
+    }
+  ],
+  "fixtures_12": [
+    {
+      "date": "2025-11-21",
+      "team_home": "nice",
+      "team_away": "marseille"
+    },
+    {
+      "date": "2025-11-22",
+      "team_home": "lens",
+      "team_away": "strasbourg"
+    },
+    {
+      "date": "2025-11-22",
+      "team_home": "rennes",
+      "team_away": "monaco"
+    },
+    {
+      "date": "2025-11-22",
+      "team_home": "paris-saint-germain",
+      "team_away": "le-havre"
+    },
+    {
+      "date": "2025-11-23",
+      "team_home": "auxerre",
+      "team_away": "lyon"
+    },
+    {
+      "date": "2025-11-23",
+      "team_home": "nantes",
+      "team_away": "lorient"
+    },
+    {
+      "date": "2025-11-23",
+      "team_home": "toulouse",
+      "team_away": "angers"
+    },
+    {
+      "date": "2025-11-23",
+      "team_home": "brest",
+      "team_away": "metz"
+    },
+    {
+      "date": "2025-11-23",
+      "team_home": "lille",
+      "team_away": "paris-fc"
+    }
+  ],
+  "fixtures_13": [
+    {
+      "date": "2025-11-28",
+      "team_home": "metz",
+      "team_away": "rennes"
+    },
+    {
+      "date": "2025-11-29",
+      "team_home": "monaco",
+      "team_away": "paris-saint-germain"
+    },
+    {
+      "date": "2025-11-29",
+      "team_home": "paris-fc",
+      "team_away": "auxerre"
+    },
+    {
+      "date": "2025-11-29",
+      "team_home": "marseille",
+      "team_away": "toulouse"
+    },
+    {
+      "date": "2025-11-30",
+      "team_home": "strasbourg",
+      "team_away": "brest"
+    },
+    {
+      "date": "2025-11-30",
+      "team_home": "le-havre",
+      "team_away": "lille"
+    },
+    {
+      "date": "2025-11-30",
+      "team_home": "lorient",
+      "team_away": "nice"
+    },
+    {
+      "date": "2025-11-30",
+      "team_home": "angers",
+      "team_away": "lens"
+    },
+    {
+      "date": "2025-11-30",
+      "team_home": "lyon",
+      "team_away": "nantes"
+    }
+  ],
+  "fixtures_14": [
+    {
+      "date": "2025-12-05",
+      "team_home": "brest",
+      "team_away": "monaco"
+    },
+    {
+      "date": "2025-12-05",
+      "team_home": "lille",
+      "team_away": "marseille"
+    },
+    {
+      "date": "2025-12-06",
+      "team_home": "nantes",
+      "team_away": "lens"
+    },
+    {
+      "date": "2025-12-06",
+      "team_home": "toulouse",
+      "team_away": "strasbourg"
+    },
+    {
+      "date": "2025-12-06",
+      "team_home": "paris-saint-germain",
+      "team_away": "rennes"
+    },
+    {
+      "date": "2025-12-07",
+      "team_home": "nice",
+      "team_away": "angers"
+    },
+    {
+      "date": "2025-12-07",
+      "team_home": "le-havre",
+      "team_away": "paris-fc"
+    },
+    {
+      "date": "2025-12-07",
+      "team_home": "auxerre",
+      "team_away": "metz"
+    },
+    {
+      "date": "2025-12-07",
+      "team_home": "lorient",
+      "team_away": "lyon"
+    }
+  ],
+  "fixtures_15": [
+    {
+      "date": "2025-12-12",
+      "team_home": "angers",
+      "team_away": "nantes"
+    },
+    {
+      "date": "2025-12-13",
+      "team_home": "rennes",
+      "team_away": "brest"
+    },
+    {
+      "date": "2025-12-13",
+      "team_home": "metz",
+      "team_away": "paris-saint-germain"
+    },
+    {
+      "date": "2025-12-13",
+      "team_home": "paris-fc",
+      "team_away": "toulouse"
+    },
+    {
+      "date": "2025-12-14",
+      "team_home": "lyon",
+      "team_away": "le-havre"
+    },
+    {
+      "date": "2025-12-14",
+      "team_home": "auxerre",
+      "team_away": "lille"
+    },
+    {
+      "date": "2025-12-14",
+      "team_home": "strasbourg",
+      "team_away": "lorient"
+    },
+    {
+      "date": "2025-12-14",
+      "team_home": "lens",
+      "team_away": "nice"
+    },
+    {
+      "date": "2025-12-14",
+      "team_home": "marseille",
+      "team_away": "monaco"
+    }
+  ],
+  "fixtures_16": [
+    {
+      "date": "2026-01-02",
+      "team_home": "toulouse",
+      "team_away": "lens"
+    },
+    {
+      "date": "2026-01-03",
+      "team_home": "monaco",
+      "team_away": "lyon"
+    },
+    {
+      "date": "2026-01-03",
+      "team_home": "nice",
+      "team_away": "strasbourg"
+    },
+    {
+      "date": "2026-01-03",
+      "team_home": "lille",
+      "team_away": "rennes"
+    },
+    {
+      "date": "2026-01-04",
+      "team_home": "marseille",
+      "team_away": "nantes"
+    },
+    {
+      "date": "2026-01-04",
+      "team_home": "le-havre",
+      "team_away": "angers"
+    },
+    {
+      "date": "2026-01-04",
+      "team_home": "lorient",
+      "team_away": "metz"
+    },
+    {
+      "date": "2026-01-04",
+      "team_home": "brest",
+      "team_away": "auxerre"
+    },
+    {
+      "date": "2026-01-04",
+      "team_home": "paris-saint-germain",
+      "team_away": "paris-fc"
+    }
+  ],
+  "fixtures_17": [
+    {
+      "date": "2026-01-16",
+      "team_home": "monaco",
+      "team_away": "lorient"
+    },
+    {
+      "date": "2026-01-16",
+      "team_home": "paris-saint-germain",
+      "team_away": "lille"
+    },
+    {
+      "date": "2026-01-17",
+      "team_home": "lens",
+      "team_away": "auxerre"
+    },
+    {
+      "date": "2026-01-17",
+      "team_home": "toulouse",
+      "team_away": "nice"
+    },
+    {
+      "date": "2026-01-17",
+      "team_home": "angers",
+      "team_away": "marseille"
+    },
+    {
+      "date": "2026-01-18",
+      "team_home": "strasbourg",
+      "team_away": "metz"
+    },
+    {
+      "date": "2026-01-18",
+      "team_home": "nantes",
+      "team_away": "paris-fc"
+    },
+    {
+      "date": "2026-01-18",
+      "team_home": "rennes",
+      "team_away": "le-havre"
+    },
+    {
+      "date": "2026-01-18",
+      "team_home": "lyon",
+      "team_away": "brest"
+    }
+  ],
+  "fixtures_18": [
+    {
+      "date": "2026-01-23",
+      "team_home": "auxerre",
+      "team_away": "paris-saint-germain"
+    },
+    {
+      "date": "2026-01-24",
+      "team_home": "rennes",
+      "team_away": "lorient"
+    },
+    {
+      "date": "2026-01-24",
+      "team_home": "le-havre",
+      "team_away": "monaco"
+    },
+    {
+      "date": "2026-01-24",
+      "team_home": "marseille",
+      "team_away": "lens"
+    },
+    {
+      "date": "2026-01-25",
+      "team_home": "nantes",
+      "team_away": "nice"
+    },
+    {
+      "date": "2026-01-25",
+      "team_home": "metz",
+      "team_away": "lyon"
+    },
+    {
+      "date": "2026-01-25",
+      "team_home": "paris-fc",
+      "team_away": "angers"
+    },
+    {
+      "date": "2026-01-25",
+      "team_home": "brest",
+      "team_away": "toulouse"
+    },
+    {
+      "date": "2026-01-25",
+      "team_home": "lille",
+      "team_away": "strasbourg"
+    }
+  ],
+  "fixtures_19": [
+    {
+      "date": "2026-01-30",
+      "team_home": "lens",
+      "team_away": "le-havre"
+    },
+    {
+      "date": "2026-01-31",
+      "team_home": "paris-fc",
+      "team_away": "marseille"
+    },
+    {
+      "date": "2026-01-31",
+      "team_home": "lorient",
+      "team_away": "nantes"
+    },
+    {
+      "date": "2026-01-31",
+      "team_home": "monaco",
+      "team_away": "rennes"
+    },
+    {
+      "date": "2026-02-01",
+      "team_home": "lyon",
+      "team_away": "lille"
+    },
+    {
+      "date": "2026-02-01",
+      "team_home": "toulouse",
+      "team_away": "auxerre"
+    },
+    {
+      "date": "2026-02-01",
+      "team_home": "nice",
+      "team_away": "brest"
+    },
+    {
+      "date": "2026-02-01",
+      "team_home": "angers",
+      "team_away": "metz"
+    },
+    {
+      "date": "2026-02-01",
+      "team_home": "strasbourg",
+      "team_away": "paris-saint-germain"
+    }
+  ],
+  "fixtures_20": [
+    {
+      "date": "2026-02-06",
+      "team_home": "metz",
+      "team_away": "lille"
+    },
+    {
+      "date": "2026-02-07",
+      "team_home": "lens",
+      "team_away": "rennes"
+    },
+    {
+      "date": "2026-02-07",
+      "team_home": "brest",
+      "team_away": "lorient"
+    },
+    {
+      "date": "2026-02-07",
+      "team_home": "nantes",
+      "team_away": "lyon"
+    },
+    {
+      "date": "2026-02-08",
+      "team_home": "nice",
+      "team_away": "monaco"
+    },
+    {
+      "date": "2026-02-08",
+      "team_home": "le-havre",
+      "team_away": "strasbourg"
+    },
+    {
+      "date": "2026-02-08",
+      "team_home": "auxerre",
+      "team_away": "paris-fc"
+    },
+    {
+      "date": "2026-02-08",
+      "team_home": "angers",
+      "team_away": "toulouse"
+    },
+    {
+      "date": "2026-02-08",
+      "team_home": "paris-saint-germain",
+      "team_away": "marseille"
+    }
+  ],
+  "fixtures_21": [
+    {
+      "date": "2026-02-13",
+      "team_home": "rennes",
+      "team_away": "paris-saint-germain"
+    },
+    {
+      "date": "2026-02-13",
+      "team_home": "monaco",
+      "team_away": "nantes"
+    },
+    {
+      "date": "2026-02-14",
+      "team_home": "marseille",
+      "team_away": "strasbourg"
+    },
+    {
+      "date": "2026-02-14",
+      "team_home": "lille",
+      "team_away": "brest"
+    },
+    {
+      "date": "2026-02-14",
+      "team_home": "paris-fc",
+      "team_away": "lens"
+    },
+    {
+      "date": "2026-02-15",
+      "team_home": "le-havre",
+      "team_away": "toulouse"
+    },
+    {
+      "date": "2026-02-15",
+      "team_home": "lorient",
+      "team_away": "angers"
+    },
+    {
+      "date": "2026-02-15",
+      "team_home": "metz",
+      "team_away": "auxerre"
+    },
+    {
+      "date": "2026-02-15",
+      "team_home": "lyon",
+      "team_away": "nice"
+    }
+  ],
+  "fixtures_22": [
+    {
+      "date": "2026-02-20",
+      "team_home": "brest",
+      "team_away": "marseille"
+    },
+    {
+      "date": "2026-02-21",
+      "team_home": "lens",
+      "team_away": "monaco"
+    },
+    {
+      "date": "2026-02-21",
+      "team_home": "toulouse",
+      "team_away": "paris-fc"
+    },
+    {
+      "date": "2026-02-21",
+      "team_home": "paris-saint-germain",
+      "team_away": "metz"
+    },
+    {
+      "date": "2026-02-22",
+      "team_home": "auxerre",
+      "team_away": "rennes"
+    },
+    {
+      "date": "2026-02-22",
+      "team_home": "nantes",
+      "team_away": "le-havre"
+    },
+    {
+      "date": "2026-02-22",
+      "team_home": "nice",
+      "team_away": "lorient"
+    },
+    {
+      "date": "2026-02-22",
+      "team_home": "angers",
+      "team_away": "lille"
+    },
+    {
+      "date": "2026-02-22",
+      "team_home": "strasbourg",
+      "team_away": "lyon"
+    }
+  ],
+  "fixtures_23": [
+    {
+      "date": "2026-02-27",
+      "team_home": "strasbourg",
+      "team_away": "lens"
+    },
+    {
+      "date": "2026-02-28",
+      "team_home": "rennes",
+      "team_away": "toulouse"
+    },
+    {
+      "date": "2026-02-28",
+      "team_home": "monaco",
+      "team_away": "angers"
+    },
+    {
+      "date": "2026-02-28",
+      "team_home": "le-havre",
+      "team_away": "paris-saint-germain"
+    },
+    {
+      "date": "2026-03-01",
+      "team_home": "paris-fc",
+      "team_away": "nice"
+    },
+    {
+      "date": "2026-03-01",
+      "team_home": "lorient",
+      "team_away": "auxerre"
+    },
+    {
+      "date": "2026-03-01",
+      "team_home": "metz",
+      "team_away": "brest"
+    },
+    {
+      "date": "2026-03-01",
+      "team_home": "lille",
+      "team_away": "nantes"
+    },
+    {
+      "date": "2026-03-01",
+      "team_home": "marseille",
+      "team_away": "lyon"
+    }
+  ],
+  "fixtures_24": [
+    {
+      "date": "2026-03-06",
+      "team_home": "paris-saint-germain",
+      "team_away": "monaco"
+    },
+    {
+      "date": "2026-03-07",
+      "team_home": "nantes",
+      "team_away": "angers"
+    },
+    {
+      "date": "2026-03-07",
+      "team_home": "auxerre",
+      "team_away": "strasbourg"
+    },
+    {
+      "date": "2026-03-07",
+      "team_home": "toulouse",
+      "team_away": "marseille"
+    },
+    {
+      "date": "2026-03-08",
+      "team_home": "lens",
+      "team_away": "metz"
+    },
+    {
+      "date": "2026-03-08",
+      "team_home": "nice",
+      "team_away": "rennes"
+    },
+    {
+      "date": "2026-03-08",
+      "team_home": "lille",
+      "team_away": "lorient"
+    },
+    {
+      "date": "2026-03-08",
+      "team_home": "brest",
+      "team_away": "le-havre"
+    },
+    {
+      "date": "2026-03-08",
+      "team_home": "lyon",
+      "team_away": "paris-fc"
+    }
+  ],
+  "fixtures_25": [
+    {
+      "date": "2026-03-13",
+      "team_home": "marseille",
+      "team_away": "auxerre"
+    },
+    {
+      "date": "2026-03-14",
+      "team_home": "lorient",
+      "team_away": "lens"
+    },
+    {
+      "date": "2026-03-14",
+      "team_home": "angers",
+      "team_away": "nice"
+    },
+    {
+      "date": "2026-03-14",
+      "team_home": "monaco",
+      "team_away": "brest"
+    },
+    {
+      "date": "2026-03-15",
+      "team_home": "strasbourg",
+      "team_away": "paris-fc"
+    },
+    {
+      "date": "2026-03-15",
+      "team_home": "le-havre",
+      "team_away": "lyon"
+    },
+    {
+      "date": "2026-03-15",
+      "team_home": "metz",
+      "team_away": "toulouse"
+    },
+    {
+      "date": "2026-03-15",
+      "team_home": "rennes",
+      "team_away": "lille"
+    },
+    {
+      "date": "2026-04-22",
+      "team_home": "paris-saint-germain",
+      "team_away": "nantes"
+    }
+  ],
+  "fixtures_26": [
+    {
+      "date": "2026-03-20",
+      "team_home": "lens",
+      "team_away": "angers"
+    },
+    {
+      "date": "2026-03-21",
+      "team_home": "toulouse",
+      "team_away": "lorient"
+    },
+    {
+      "date": "2026-03-21",
+      "team_home": "auxerre",
+      "team_away": "brest"
+    },
+    {
+      "date": "2026-03-21",
+      "team_home": "nice",
+      "team_away": "paris-saint-germain"
+    },
+    {
+      "date": "2026-03-22",
+      "team_home": "lyon",
+      "team_away": "monaco"
+    },
+    {
+      "date": "2026-03-22",
+      "team_home": "paris-fc",
+      "team_away": "le-havre"
+    },
+    {
+      "date": "2026-03-22",
+      "team_home": "marseille",
+      "team_away": "lille"
+    },
+    {
+      "date": "2026-03-22",
+      "team_home": "rennes",
+      "team_away": "metz"
+    },
+    {
+      "date": "2026-03-22",
+      "team_home": "nantes",
+      "team_away": "strasbourg"
+    }
+  ],
+  "fixtures_27": [
+    {
+      "date": "2026-04-03",
+      "team_home": "paris-saint-germain",
+      "team_away": "toulouse"
+    },
+    {
+      "date": "2026-04-04",
+      "team_home": "strasbourg",
+      "team_away": "nice"
+    },
+    {
+      "date": "2026-04-04",
+      "team_home": "brest",
+      "team_away": "rennes"
+    },
+    {
+      "date": "2026-04-04",
+      "team_home": "lille",
+      "team_away": "lens"
+    },
+    {
+      "date": "2026-04-05",
+      "team_home": "angers",
+      "team_away": "lyon"
+    },
+    {
+      "date": "2026-04-05",
+      "team_home": "le-havre",
+      "team_away": "auxerre"
+    },
+    {
+      "date": "2026-04-05",
+      "team_home": "lorient",
+      "team_away": "paris-fc"
+    },
+    {
+      "date": "2026-04-05",
+      "team_home": "metz",
+      "team_away": "nantes"
+    },
+    {
+      "date": "2026-04-05",
+      "team_home": "monaco",
+      "team_away": "marseille"
+    }
+  ],
+  "fixtures_28": [
+    {
+      "date": "2026-04-10",
+      "team_home": "paris-fc",
+      "team_away": "monaco"
+    },
+    {
+      "date": "2026-04-10",
+      "team_home": "marseille",
+      "team_away": "metz"
+    },
+    {
+      "date": "2026-04-11",
+      "team_home": "auxerre",
+      "team_away": "nantes"
+    },
+    {
+      "date": "2026-04-11",
+      "team_home": "rennes",
+      "team_away": "angers"
+    },
+    {
+      "date": "2026-04-12",
+      "team_home": "toulouse",
+      "team_away": "lille"
+    },
+    {
+      "date": "2026-04-12",
+      "team_home": "nice",
+      "team_away": "le-havre"
+    },
+    {
+      "date": "2026-04-12",
+      "team_home": "lyon",
+      "team_away": "lorient"
+    },
+    {
+      "date": "2026-05-13",
+      "team_home": "brest",
+      "team_away": "strasbourg"
+    },
+    {
+      "date": "2026-05-13",
+      "team_home": "lens",
+      "team_away": "paris-saint-germain"
+    }
+  ],
+  "fixtures_29": [
+    {
+      "date": "2026-04-17",
+      "team_home": "lens",
+      "team_away": "toulouse"
+    },
+    {
+      "date": "2026-04-18",
+      "team_home": "lorient",
+      "team_away": "marseille"
+    },
+    {
+      "date": "2026-04-18",
+      "team_home": "angers",
+      "team_away": "le-havre"
+    },
+    {
+      "date": "2026-04-18",
+      "team_home": "lille",
+      "team_away": "nice"
+    },
+    {
+      "date": "2026-04-19",
+      "team_home": "monaco",
+      "team_away": "auxerre"
+    },
+    {
+      "date": "2026-04-19",
+      "team_home": "metz",
+      "team_away": "paris-fc"
+    },
+    {
+      "date": "2026-04-19",
+      "team_home": "nantes",
+      "team_away": "brest"
+    },
+    {
+      "date": "2026-04-19",
+      "team_home": "strasbourg",
+      "team_away": "rennes"
+    },
+    {
+      "date": "2026-04-19",
+      "team_home": "paris-saint-germain",
+      "team_away": "lyon"
+    }
+  ],
+  "fixtures_30": [
+    {
+      "date": "2026-04-24",
+      "team_home": "brest",
+      "team_away": "lens"
+    },
+    {
+      "date": "2026-04-25",
+      "team_home": "lyon",
+      "team_away": "auxerre"
+    },
+    {
+      "date": "2026-04-25",
+      "team_home": "angers",
+      "team_away": "paris-saint-germain"
+    },
+    {
+      "date": "2026-04-25",
+      "team_home": "toulouse",
+      "team_away": "monaco"
+    },
+    {
+      "date": "2026-04-26",
+      "team_home": "lorient",
+      "team_away": "strasbourg"
+    },
+    {
+      "date": "2026-04-26",
+      "team_home": "le-havre",
+      "team_away": "metz"
+    },
+    {
+      "date": "2026-04-26",
+      "team_home": "paris-fc",
+      "team_away": "lille"
+    },
+    {
+      "date": "2026-04-26",
+      "team_home": "rennes",
+      "team_away": "nantes"
+    },
+    {
+      "date": "2026-04-26",
+      "team_home": "marseille",
+      "team_away": "nice"
+    }
+  ],
+  "fixtures_31": [
+    {
+      "date": "2026-05-02",
+      "team_home": "nantes",
+      "team_away": "marseille"
+    },
+    {
+      "date": "2026-05-02",
+      "team_home": "paris-saint-germain",
+      "team_away": "lorient"
+    },
+    {
+      "date": "2026-05-02",
+      "team_home": "metz",
+      "team_away": "monaco"
+    },
+    {
+      "date": "2026-05-02",
+      "team_home": "nice",
+      "team_away": "lens"
+    },
+    {
+      "date": "2026-05-03",
+      "team_home": "lille",
+      "team_away": "le-havre"
+    },
+    {
+      "date": "2026-05-03",
+      "team_home": "auxerre",
+      "team_away": "angers"
+    },
+    {
+      "date": "2026-05-03",
+      "team_home": "paris-fc",
+      "team_away": "brest"
+    },
+    {
+      "date": "2026-05-03",
+      "team_home": "strasbourg",
+      "team_away": "toulouse"
+    },
+    {
+      "date": "2026-05-03",
+      "team_home": "lyon",
+      "team_away": "rennes"
+    }
+  ],
+  "fixtures_32": [
+    {
+      "date": "2026-05-08",
+      "team_home": "lens",
+      "team_away": "nantes"
+    },
+    {
+      "date": "2026-05-10",
+      "team_home": "le-havre",
+      "team_away": "marseille"
+    },
+    {
+      "date": "2026-05-10",
+      "team_home": "auxerre",
+      "team_away": "nice"
+    },
+    {
+      "date": "2026-05-10",
+      "team_home": "monaco",
+      "team_away": "lille"
+    },
+    {
+      "date": "2026-05-10",
+      "team_home": "metz",
+      "team_away": "lorient"
+    },
+    {
+      "date": "2026-05-10",
+      "team_home": "toulouse",
+      "team_away": "lyon"
+    },
+    {
+      "date": "2026-05-10",
+      "team_home": "paris-saint-germain",
+      "team_away": "brest"
+    },
+    {
+      "date": "2026-05-10",
+      "team_home": "angers",
+      "team_away": "strasbourg"
+    },
+    {
+      "date": "2026-05-10",
+      "team_home": "rennes",
+      "team_away": "paris-fc"
+    }
+  ],
+  "fixtures_33": [
+    {
+      "date": "2026-05-17",
+      "team_home": "lorient",
+      "team_away": "le-havre"
+    },
+    {
+      "date": "2026-05-17",
+      "team_home": "nantes",
+      "team_away": "toulouse"
+    },
+    {
+      "date": "2026-05-17",
+      "team_home": "paris-fc",
+      "team_away": "paris-saint-germain"
+    },
+    {
+      "date": "2026-05-17",
+      "team_home": "nice",
+      "team_away": "metz"
+    },
+    {
+      "date": "2026-05-17",
+      "team_home": "lyon",
+      "team_away": "lens"
+    },
+    {
+      "date": "2026-05-17",
+      "team_home": "marseille",
+      "team_away": "rennes"
+    },
+    {
+      "date": "2026-05-17",
+      "team_home": "lille",
+      "team_away": "auxerre"
+    },
+    {
+      "date": "2026-05-17",
+      "team_home": "strasbourg",
+      "team_away": "monaco"
+    },
+    {
+      "date": "2026-05-17",
+      "team_home": "brest",
+      "team_away": "angers"
+    }
+  ]
+}
