@@ -72,6 +72,7 @@
   text-overflow: ellipsis;
   white-space: nowrap;
   min-width: 0;
+  font-weight: 700;
 }
 
 .team-color-dot {
