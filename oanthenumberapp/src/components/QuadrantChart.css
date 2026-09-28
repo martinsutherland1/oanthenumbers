@@ -1,0 +1,23 @@
+.quadrant-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid var(--border);
+}
+
+.quadrant-legend-item {
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+}
+
+@media (max-width: 480px) {
+  .quadrant-legend {
+    gap: 6px 12px;
+  }
+
+  .quadrant-legend-item {
+    font-size: 0.72rem;
+  }
+}

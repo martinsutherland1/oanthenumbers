@@ -169,6 +169,86 @@ export function getTeamXgGameLog(fixtures: Fixture[], team: string, metric: XgTy
   return games.sort((a, b) => b.date.getTime() - a.date.getTime());
 }
 
+export interface TeamStatTotal {
+  team: string;
+  total: number;
+  perGame: number;
+  gamesPlayed: number;
+}
+
+// Per-team season total and per-game average for a given xG category
+export function getTeamXgTotals(fixtures: Fixture[], xgType: XgType): TeamStatTotal[] {
+  const teams = extractTeams(fixtures);
+  const fields = XG_TYPE_FIELDS[xgType];
+  const r2 = (n: number) => Math.round(n * 100) / 100;
+
+  return teams.map(team => {
+    const teamFixtures = fixtures.filter(f => f.home_team === team || f.away_team === team);
+    let total = 0;
+    teamFixtures.forEach(f => {
+      const isHome = f.home_team === team;
+      total += Number(isHome ? f[fields.home] : f[fields.away]) || 0;
+    });
+    const played = teamFixtures.length;
+    return {
+      team,
+      total: r2(total),
+      perGame: r2(played > 0 ? total / played : 0),
+      gamesPlayed: played,
+    };
+  });
+}
+
+// Per-team cumulative and per-game xPoints (each game's own xG diff mapped through the
+// xPoints bucket table, then summed), matching the model used in the performance score
+export function getTeamXPointsTotals(fixtures: Fixture[]): TeamStatTotal[] {
+  const teams = extractTeams(fixtures);
+  const r2 = (n: number) => Math.round(n * 100) / 100;
+
+  return teams.map(team => {
+    const games = getTeamGames(fixtures, team, 'xg');
+    const total = games.reduce((sum, g) => sum + getXPointsPerGame(g.xgDiff), 0);
+    return {
+      team,
+      total: r2(total),
+      perGame: r2(games.length > 0 ? total / games.length : 0),
+      gamesPlayed: games.length,
+    };
+  });
+}
+
+export interface TeamGoalsVsXg {
+  team: string;
+  goalsPerGame: number;
+  xgPerGame: number;
+  gamesPlayed: number;
+}
+
+// Per-team goals scored vs a chosen xG category, per game, for quadrant-style comparisons
+export function getTeamGoalsVsXg(fixtures: Fixture[], xgType: XgType = 'npxg'): TeamGoalsVsXg[] {
+  const teams = extractTeams(fixtures);
+  const fields = XG_TYPE_FIELDS[xgType];
+  const r2 = (n: number) => Math.round(n * 100) / 100;
+
+  return teams.map(team => {
+    const teamFixtures = fixtures.filter(f => f.home_team === team || f.away_team === team);
+    let goals = 0;
+    let xg = 0;
+    teamFixtures.forEach(f => {
+      const isHome = f.home_team === team;
+      goals += isHome ? (f.home_goals ?? 0) : (f.away_goals ?? 0);
+      xg += Number(isHome ? f[fields.home] : f[fields.away]) || 0;
+    });
+    const played = teamFixtures.length;
+    return {
+      team,
+      goalsPerGame: r2(played > 0 ? goals / played : 0),
+      xgPerGame: r2(played > 0 ? xg / played : 0),
+      gamesPlayed: played,
+    };
+  });
+}
+
 // Calculate rolling average difference for a team (last 10 games or all if less than 10)
 export function calculateRollingAverage(fixtures: Fixture[], team: string, maxGames: number = 10, metric: MetricType = 'xg', xgType: XgType = 'npxg'): TeamRollingAverage {
   const games = getTeamGames(fixtures, team, metric, xgType);

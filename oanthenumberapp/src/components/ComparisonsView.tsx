@@ -1,11 +1,12 @@
 import { useMemo, useState } from 'react';
 import type { Fixture } from '../types';
-import { calculateLeagueAverage, getLineChartData, getTeamSeasonStats, getTeamRecentSeasonStats, type MetricType, type XgType } from '../utils/dataProcessing';
+import { calculateLeagueAverage, getLineChartData, getTeamSeasonStats, getTeamRecentSeasonStats, getTeamGoalsVsXg, type MetricType, type XgType } from '../utils/dataProcessing';
 import { getTeamColor, getTeamName } from '../utils/teamColors';
 import { TeamSelector } from './TeamSelector';
 import { MetricToggle } from './MetricToggle';
 import { XgLineChart } from './XgLineChart';
 import { TeamRadarChart, type RadarSeries } from './TeamRadarChart';
+import { QuadrantChart } from './QuadrantChart';
 import { ViewToggle } from './ViewToggle';
 import './ComparisonsView.css';
 
@@ -31,11 +32,12 @@ export function ComparisonsView({ fixtures, teams }: ComparisonsViewProps) {
     [fixtures, selectedTeams, metricType, xgType]
   );
 
-  const [view, setView] = useState<'line' | 'radar'>('line');
+  const [view, setView] = useState<'line' | 'radar' | 'quadrant'>('line');
   const seasonStats = useMemo(() => getTeamSeasonStats(fixtures), [fixtures]);
   const [period, setPeriod] = useState<'season' | 'last6'>('season');
   const recentStats = useMemo(() => getTeamRecentSeasonStats(fixtures, 6), [fixtures]);
   const pool = period === 'season' ? seasonStats : recentStats;
+  const goalsVsXg = useMemo(() => getTeamGoalsVsXg(fixtures, xgType), [fixtures, xgType]);
   const radarSeries = useMemo<RadarSeries[]>(
     () => selectedTeams.flatMap(t => {
       const stats = pool.find(s => s.team === t);
@@ -61,25 +63,31 @@ export function ComparisonsView({ fixtures, teams }: ComparisonsViewProps) {
       />
 
       <div className="comparisons-controls">
-        {view === 'line'
-          ? <MetricToggle metricType={metricType} onToggle={setMetricType} />
-          : (
-            <ViewToggle
-              ariaLabel="Radar period"
-              options={[{ key: 'season', label: 'Season' }, { key: 'last6', label: 'Last 6' }]}
-              value={period}
-              onChange={setPeriod}
-            />
-          )}
         <ViewToggle
           ariaLabel="Comparison chart type"
-          options={[{ key: 'line', label: 'Line Chart' }, { key: 'radar', label: 'Radar' }]}
+          options={[{ key: 'line', label: 'Line' }, { key: 'radar', label: 'Radar' }, { key: 'quadrant', label: 'Quadrant' }]}
           value={view}
           onChange={setView}
         />
+        {view === 'line' && <MetricToggle metricType={metricType} onToggle={setMetricType} />}
+        {view === 'radar' && (
+          <ViewToggle
+            ariaLabel="Radar period"
+            options={[{ key: 'season', label: 'Season' }, { key: 'last6', label: 'Last 6' }]}
+            value={period}
+            onChange={setPeriod}
+          />
+        )}
       </div>
 
-      {selectedTeams.length < 2 ? (
+      {view === 'quadrant' ? (
+        <QuadrantChart
+          data={goalsVsXg}
+          selectedTeams={selectedTeams}
+          xgType={xgType}
+          onXgTypeChange={setXgType}
+        />
+      ) : selectedTeams.length < 2 ? (
         <div className="comparisons-empty">
           <p>Select at least two teams above to compare their trends.</p>
         </div>

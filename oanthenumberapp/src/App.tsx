@@ -5,6 +5,7 @@ import { LeagueHighlights } from './components/LeagueHighlights';
 import { ProjectionTable } from './components/ProjectionTable';
 import { TeamOverview } from './components/TeamOverview';
 import { ComparisonsView } from './components/ComparisonsView';
+import { AllStatsView } from './components/AllStatsView';
 import { FixturesView } from './components/FixturesView';
 import {
   extractTeams,
@@ -46,7 +47,7 @@ type Page = 'home' | 'league';
 type Section = 'tables' | 'stats' | 'fixtures';
 type TablesTab = 'current' | 'projection';
 type FixturesTab = 'fixtures' | 'results';
-type StatsTab = 'team' | 'comparisons';
+type StatsTab = 'team' | 'all' | 'comparisons';
 type League = 'spfl' | 'epl' | 'laliga' | 'bundesliga' | 'seriea' | 'ligue1';
 
 const spflFixtures = flattenFixtures(spflFixturesData as FixturesData);
@@ -273,15 +274,9 @@ function App() {
             </div>
           )}
         </div>
-      </header>
-
-      <main className="app-main">
-        {page === 'home' && (
-          <HomePage leagues={homeLeagueTiles} onSelectLeague={handleSelectLeague} />
-        )}
 
         {page === 'league' && (
-          <>
+          <div className="toolbar-bar">
             <div className="view-toolbar">
               <div className="view-tabs">
                 <button
@@ -330,10 +325,16 @@ function App() {
                     Team
                   </button>
                   <button
+                    className={`view-tab ${statsTab === 'all' ? 'active' : ''}`}
+                    onClick={() => setStatsTab('all')}
+                  >
+                    All
+                  </button>
+                  <button
                     className={`view-tab ${statsTab === 'comparisons' ? 'active' : ''}`}
                     onClick={() => setStatsTab('comparisons')}
                   >
-                    Comparisons
+                    Charts
                   </button>
                 </div>
               )}
@@ -371,7 +372,17 @@ function App() {
                 </div>
               )}
             </div>
+          </div>
+        )}
+      </header>
 
+      <main className="app-main">
+        {page === 'home' && (
+          <HomePage leagues={homeLeagueTiles} onSelectLeague={handleSelectLeague} />
+        )}
+
+        {page === 'league' && (
+          <>
             {section === 'tables' && tablesTab === 'current' && (
               <>
                 <LeagueTable data={leagueTableData} dividerPositions={config.tableDividers} onTeamClick={handleTeamClick} />
@@ -390,6 +401,9 @@ function App() {
                 projection={projectionContext}
                 seasonGames={config.seasonGames}
               />
+            )}
+            {section === 'stats' && statsTab === 'all' && (
+              <AllStatsView fixtures={fixtures} />
             )}
             {section === 'stats' && statsTab === 'comparisons' && (
               <ComparisonsView fixtures={fixtures} teams={teams} />
