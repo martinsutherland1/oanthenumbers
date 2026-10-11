@@ -795,6 +795,23 @@
       "xgot_for": 0.99,
       "xgot_against": 0.87,
       "location": "away"
+    },
+    {
+      "date": "2026-10-11",
+      "opposition": "nottingham-forest",
+      "goals_for": 3,
+      "goals_against": 1,
+      "xG_for": 2.41,
+      "xG_against": 3.34,
+      "xg_open_play_for": 1.64,
+      "xg_open_play_against": 2.36,
+      "xg_set_play_for": 0.78,
+      "xg_set_play_against": 0.98,
+      "npxg_for": 2.41,
+      "npxg_against": 3.34,
+      "xgot_for": 3.31,
+      "xgot_against": 2.06,
+      "location": "home"
     }
   ],
   "everton": [
@@ -882,6 +899,23 @@
       "xgot_for": 1.38,
       "xgot_against": 0.53,
       "location": "home"
+    },
+    {
+      "date": "2026-10-11",
+      "opposition": "hull-city",
+      "goals_for": 2,
+      "goals_against": 2,
+      "xG_for": 1.71,
+      "xG_against": 1.33,
+      "xg_open_play_for": 0.88,
+      "xg_open_play_against": 1.04,
+      "xg_set_play_for": 0.83,
+      "xg_set_play_against": 0.3,
+      "npxg_for": 1.71,
+      "npxg_against": 1.33,
+      "xgot_for": 1.74,
+      "xgot_against": 1.2,
+      "location": "away"
     }
   ],
   "fulham": [
@@ -1073,6 +1107,23 @@
       "xgot_for": 1.44,
       "xgot_against": 1.75,
       "location": "away"
+    },
+    {
+      "date": "2026-10-11",
+      "opposition": "everton",
+      "goals_for": 2,
+      "goals_against": 2,
+      "xG_for": 1.33,
+      "xG_against": 1.71,
+      "xg_open_play_for": 1.04,
+      "xg_open_play_against": 0.88,
+      "xg_set_play_for": 0.3,
+      "xg_set_play_against": 0.83,
+      "npxg_for": 1.33,
+      "npxg_against": 1.71,
+      "xgot_for": 1.2,
+      "xgot_against": 1.74,
+      "location": "home"
     }
   ],
   "ipswich-town": [
@@ -1368,6 +1419,23 @@
       "xgot_for": 1.01,
       "xgot_against": 0.84,
       "location": "away"
+    },
+    {
+      "date": "2026-10-11",
+      "opposition": "manchester-city",
+      "goals_for": 0,
+      "goals_against": 3,
+      "xG_for": 0.86,
+      "xG_against": 1.3,
+      "xg_open_play_for": 0.38,
+      "xg_open_play_against": 1.23,
+      "xg_set_play_for": 0.48,
+      "xg_set_play_against": 0.07,
+      "npxg_for": 0.86,
+      "npxg_against": 1.3,
+      "xgot_for": 0.94,
+      "xgot_against": 1.67,
+      "location": "home"
     }
   ],
   "manchester-city": [
@@ -1455,6 +1523,23 @@
       "xgot_for": 2.23,
       "xgot_against": 2.81,
       "location": "home"
+    },
+    {
+      "date": "2026-10-11",
+      "opposition": "liverpool",
+      "goals_for": 3,
+      "goals_against": 0,
+      "xG_for": 1.3,
+      "xG_against": 0.86,
+      "xg_open_play_for": 1.23,
+      "xg_open_play_against": 0.38,
+      "xg_set_play_for": 0.07,
+      "xg_set_play_against": 0.48,
+      "npxg_for": 1.3,
+      "npxg_against": 0.86,
+      "xgot_for": 1.67,
+      "xgot_against": 0.94,
+      "location": "away"
     }
   ],
   "manchester-united": [
@@ -1733,6 +1818,23 @@
       "xgot_for": 0.08,
       "xgot_against": 0.23,
       "location": "home"
+    },
+    {
+      "date": "2026-10-11",
+      "opposition": "crystal-palace",
+      "goals_for": 1,
+      "goals_against": 3,
+      "xG_for": 3.34,
+      "xG_against": 2.41,
+      "xg_open_play_for": 2.36,
+      "xg_open_play_against": 1.64,
+      "xg_set_play_for": 0.98,
+      "xg_set_play_against": 0.78,
+      "npxg_for": 3.34,
+      "npxg_against": 2.41,
+      "xgot_for": 2.06,
+      "xgot_against": 3.31,
+      "location": "away"
     }
   ],
   "sunderland": [
