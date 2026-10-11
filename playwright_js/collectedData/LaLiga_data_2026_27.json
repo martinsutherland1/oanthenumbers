@@ -118,6 +118,23 @@
       "xgot_for": 0,
       "xgot_against": 0.98,
       "location": "away"
+    },
+    {
+      "date": "2026-10-10",
+      "opposition": "atletico-madrid",
+      "goals_for": 1,
+      "goals_against": 2,
+      "xG_for": 1.3,
+      "xG_against": 2.05,
+      "xg_open_play_for": 0.5,
+      "xg_open_play_against": 1.5,
+      "xg_set_play_for": 0.01,
+      "xg_set_play_against": 0.55,
+      "npxg_for": 0.51,
+      "npxg_against": 2.05,
+      "xgot_for": 1.12,
+      "xgot_against": 1.1,
+      "location": "home"
     }
   ],
   "athletic-club": [
@@ -222,6 +239,23 @@
       "xgot_for": 0.98,
       "xgot_against": 0,
       "location": "home"
+    },
+    {
+      "date": "2026-10-10",
+      "opposition": "rayo-vallecano",
+      "goals_for": 0,
+      "goals_against": 0,
+      "xG_for": 0.06,
+      "xG_against": 0.02,
+      "xg_open_play_for": 0,
+      "xg_open_play_against": 0.02,
+      "xg_set_play_for": 0.06,
+      "xg_set_play_against": 0,
+      "npxg_for": 0.06,
+      "npxg_against": 0.02,
+      "xgot_for": 0,
+      "xgot_against": 0.28,
+      "location": "away"
     }
   ],
   "atletico-madrid": [
@@ -343,6 +377,23 @@
       "xgot_for": 2.87,
       "xgot_against": 0.43,
       "location": "home"
+    },
+    {
+      "date": "2026-10-10",
+      "opposition": "alaves",
+      "goals_for": 2,
+      "goals_against": 1,
+      "xG_for": 2.05,
+      "xG_against": 1.3,
+      "xg_open_play_for": 1.5,
+      "xg_open_play_against": 0.5,
+      "xg_set_play_for": 0.55,
+      "xg_set_play_against": 0.01,
+      "npxg_for": 2.05,
+      "npxg_against": 0.51,
+      "xgot_for": 1.1,
+      "xgot_against": 1.12,
+      "location": "away"
     }
   ],
   "barcelona": [
@@ -464,6 +515,23 @@
       "xgot_for": 1.62,
       "xgot_against": 0.81,
       "location": "away"
+    },
+    {
+      "date": "2026-10-10",
+      "opposition": "getafe",
+      "goals_for": 3,
+      "goals_against": 0,
+      "xG_for": 1.93,
+      "xG_against": 0.14,
+      "xg_open_play_for": 1.02,
+      "xg_open_play_against": 0.11,
+      "xg_set_play_for": 0.91,
+      "xg_set_play_against": 0.03,
+      "npxg_for": 1.93,
+      "npxg_against": 0.14,
+      "xgot_for": 1.7,
+      "xgot_against": 0.23,
+      "location": "home"
     }
   ],
   "celta-vigo": [
@@ -948,6 +1016,23 @@
       "xgot_for": 0.48,
       "xgot_against": 2.05,
       "location": "home"
+    },
+    {
+      "date": "2026-10-09",
+      "opposition": "malaga",
+      "goals_for": 1,
+      "goals_against": 1,
+      "xG_for": 1.08,
+      "xG_against": 0.69,
+      "xg_open_play_for": 0.94,
+      "xg_open_play_against": 0.39,
+      "xg_set_play_for": 0.14,
+      "xg_set_play_against": 0.3,
+      "npxg_for": 1.08,
+      "npxg_against": 0.69,
+      "xgot_for": 0.82,
+      "xgot_against": 0.77,
+      "location": "away"
     }
   ],
   "getafe": [
@@ -1069,6 +1154,23 @@
       "xgot_for": 1.24,
       "xgot_against": 0.28,
       "location": "home"
+    },
+    {
+      "date": "2026-10-10",
+      "opposition": "barcelona",
+      "goals_for": 0,
+      "goals_against": 3,
+      "xG_for": 0.14,
+      "xG_against": 1.93,
+      "xg_open_play_for": 0.11,
+      "xg_open_play_against": 1.02,
+      "xg_set_play_for": 0.03,
+      "xg_set_play_against": 0.91,
+      "npxg_for": 0.14,
+      "npxg_against": 1.93,
+      "xgot_for": 0.23,
+      "xgot_against": 1.7,
+      "location": "away"
     }
   ],
   "levante": [
@@ -1294,6 +1396,23 @@
       "xgot_for": 0.28,
       "xgot_against": 1.24,
       "location": "away"
+    },
+    {
+      "date": "2026-10-09",
+      "opposition": "espanyol",
+      "goals_for": 1,
+      "goals_against": 1,
+      "xG_for": 0.69,
+      "xG_against": 1.08,
+      "xg_open_play_for": 0.39,
+      "xg_open_play_against": 0.94,
+      "xg_set_play_for": 0.3,
+      "xg_set_play_against": 0.14,
+      "npxg_for": 0.69,
+      "npxg_against": 1.08,
+      "xgot_for": 0.77,
+      "xgot_against": 0.82,
+      "location": "home"
     }
   ],
   "osasuna": [
@@ -1657,6 +1776,23 @@
       "xgot_for": 0.43,
       "xgot_against": 0.79,
       "location": "away"
+    },
+    {
+      "date": "2026-10-10",
+      "opposition": "athletic-club",
+      "goals_for": 0,
+      "goals_against": 0,
+      "xG_for": 0.02,
+      "xG_against": 0.06,
+      "xg_open_play_for": 0.02,
+      "xg_open_play_against": 0,
+      "xg_set_play_for": 0,
+      "xg_set_play_against": 0.06,
+      "npxg_for": 0.02,
+      "npxg_against": 0.06,
+      "xgot_for": 0.28,
+      "xgot_against": 0,
+      "location": "home"
     }
   ],
   "real-betis": [
@@ -1899,6 +2035,23 @@
       "xgot_for": 0.43,
       "xgot_against": 2.87,
       "location": "away"
+    },
+    {
+      "date": "2026-10-10",
+      "opposition": "villarreal",
+      "goals_for": 1,
+      "goals_against": 0,
+      "xG_for": 0.95,
+      "xG_against": 0.62,
+      "xg_open_play_for": 0.92,
+      "xg_open_play_against": 0.5,
+      "xg_set_play_for": 0.03,
+      "xg_set_play_against": 0.12,
+      "npxg_for": 0.95,
+      "npxg_against": 0.62,
+      "xgot_for": 1.12,
+      "xgot_against": 0.87,
+      "location": "home"
     }
   ],
   "real-sociedad": [
@@ -2383,6 +2536,23 @@
       "xgot_for": 2.96,
       "xgot_against": 0.51,
       "location": "home"
+    },
+    {
+      "date": "2026-10-10",
+      "opposition": "real-madrid",
+      "goals_for": 0,
+      "goals_against": 1,
+      "xG_for": 0.62,
+      "xG_against": 0.95,
+      "xg_open_play_for": 0.5,
+      "xg_open_play_against": 0.92,
+      "xg_set_play_for": 0.12,
+      "xg_set_play_against": 0.03,
+      "npxg_for": 0.62,
+      "npxg_against": 0.95,
+      "xgot_for": 0.87,
+      "xgot_against": 1.12,
+      "location": "away"
     }
   ]
 }

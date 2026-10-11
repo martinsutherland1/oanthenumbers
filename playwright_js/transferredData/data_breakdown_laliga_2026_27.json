@@ -1233,5 +1233,94 @@
       "home_xgot": 1.05,
       "away_xgot": 2.68
     }
+  ],
+  "2026-10-09": [
+    {
+      "date": "2026-10-09",
+      "home_team": "malaga",
+      "away_team": "espanyol",
+      "home_goals": 1,
+      "away_goals": 1,
+      "home_xG": 0.69,
+      "away_xG": 1.08,
+      "home_xg_open_play": 0.39,
+      "away_xg_open_play": 0.94,
+      "home_xg_set_play": 0.3,
+      "away_xg_set_play": 0.14,
+      "home_npxg": 0.69,
+      "away_npxg": 1.08,
+      "home_xgot": 0.77,
+      "away_xgot": 0.82
+    }
+  ],
+  "2026-10-10": [
+    {
+      "date": "2026-10-10",
+      "home_team": "alaves",
+      "away_team": "atletico-madrid",
+      "home_goals": 1,
+      "away_goals": 2,
+      "home_xG": 1.3,
+      "away_xG": 2.05,
+      "home_xg_open_play": 0.5,
+      "away_xg_open_play": 1.5,
+      "home_xg_set_play": 0.01,
+      "away_xg_set_play": 0.55,
+      "home_npxg": 0.51,
+      "away_npxg": 2.05,
+      "home_xgot": 1.12,
+      "away_xgot": 1.1
+    },
+    {
+      "date": "2026-10-10",
+      "home_team": "rayo-vallecano",
+      "away_team": "athletic-club",
+      "home_goals": 0,
+      "away_goals": 0,
+      "home_xG": 0.02,
+      "away_xG": 0.06,
+      "home_xg_open_play": 0.02,
+      "away_xg_open_play": 0,
+      "home_xg_set_play": 0,
+      "away_xg_set_play": 0.06,
+      "home_npxg": 0.02,
+      "away_npxg": 0.06,
+      "home_xgot": 0.28,
+      "away_xgot": 0
+    },
+    {
+      "date": "2026-10-10",
+      "home_team": "barcelona",
+      "away_team": "getafe",
+      "home_goals": 3,
+      "away_goals": 0,
+      "home_xG": 1.93,
+      "away_xG": 0.14,
+      "home_xg_open_play": 1.02,
+      "away_xg_open_play": 0.11,
+      "home_xg_set_play": 0.91,
+      "away_xg_set_play": 0.03,
+      "home_npxg": 1.93,
+      "away_npxg": 0.14,
+      "home_xgot": 1.7,
+      "away_xgot": 0.23
+    },
+    {
+      "date": "2026-10-10",
+      "home_team": "real-madrid",
+      "away_team": "villarreal",
+      "home_goals": 1,
+      "away_goals": 0,
+      "home_xG": 0.95,
+      "away_xG": 0.62,
+      "home_xg_open_play": 0.92,
+      "away_xg_open_play": 0.5,
+      "home_xg_set_play": 0.03,
+      "away_xg_set_play": 0.12,
+      "home_npxg": 0.95,
+      "away_npxg": 0.62,
+      "home_xgot": 1.12,
+      "away_xgot": 0.87
+    }
   ]
 }
