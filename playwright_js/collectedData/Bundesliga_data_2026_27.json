@@ -415,6 +415,23 @@
       "xgot_for": 3.41,
       "xgot_against": 3.09,
       "location": "home"
+    },
+    {
+      "date": "2026-10-11",
+      "opposition": "koln",
+      "goals_for": 1,
+      "goals_against": 2,
+      "xG_for": 1.17,
+      "xG_against": 1.32,
+      "xg_open_play_for": 0.96,
+      "xg_open_play_against": 0.9,
+      "xg_set_play_for": 0.21,
+      "xg_set_play_against": 0.42,
+      "npxg_for": 1.17,
+      "npxg_against": 1.32,
+      "xgot_for": 1.77,
+      "xgot_against": 1.39,
+      "location": "away"
     }
   ],
   "eintracht-frankfurt": [
@@ -659,6 +676,23 @@
       "xgot_for": 2.07,
       "xgot_against": 1.95,
       "location": "away"
+    },
+    {
+      "date": "2026-10-11",
+      "opposition": "schalke",
+      "goals_for": 2,
+      "goals_against": 1,
+      "xG_for": 1.15,
+      "xG_against": 0.32,
+      "xg_open_play_for": 0.67,
+      "xg_open_play_against": 0.09,
+      "xg_set_play_for": 0.48,
+      "xg_set_play_against": 0.23,
+      "npxg_for": 1.15,
+      "npxg_against": 0.32,
+      "xgot_for": 1.37,
+      "xgot_against": 0.7,
+      "location": "home"
     }
   ],
   "hamburger-sv": [
@@ -903,6 +937,23 @@
       "xgot_for": 0.66,
       "xgot_against": 2.01,
       "location": "away"
+    },
+    {
+      "date": "2026-10-11",
+      "opposition": "borussia-monchengladbach",
+      "goals_for": 2,
+      "goals_against": 1,
+      "xG_for": 1.32,
+      "xG_against": 1.17,
+      "xg_open_play_for": 0.9,
+      "xg_open_play_against": 0.96,
+      "xg_set_play_for": 0.42,
+      "xg_set_play_against": 0.21,
+      "npxg_for": 1.32,
+      "npxg_against": 1.17,
+      "xgot_for": 1.39,
+      "xgot_against": 1.77,
+      "location": "home"
     }
   ],
   "mainz": [
@@ -1234,6 +1285,23 @@
       "xgot_for": 0.16,
       "xgot_against": 0.4,
       "location": "home"
+    },
+    {
+      "date": "2026-10-11",
+      "opposition": "freiburg",
+      "goals_for": 1,
+      "goals_against": 2,
+      "xG_for": 0.32,
+      "xG_against": 1.15,
+      "xg_open_play_for": 0.09,
+      "xg_open_play_against": 0.67,
+      "xg_set_play_for": 0.23,
+      "xg_set_play_against": 0.48,
+      "npxg_for": 0.32,
+      "npxg_against": 1.15,
+      "xgot_for": 0.7,
+      "xgot_against": 1.37,
+      "location": "away"
     }
   ],
   "stuttgart": [

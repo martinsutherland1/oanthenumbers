@@ -188,6 +188,23 @@
       "xgot_for": 1.14,
       "xgot_against": 0.16,
       "location": "home"
+    },
+    {
+      "date": "2026-10-11",
+      "opposition": "rennes",
+      "goals_for": 1,
+      "goals_against": 4,
+      "xG_for": 1.76,
+      "xG_against": 2.56,
+      "xg_open_play_for": 1.65,
+      "xg_open_play_against": 1.87,
+      "xg_set_play_for": 0.11,
+      "xg_set_play_against": 0.7,
+      "npxg_for": 1.76,
+      "npxg_against": 2.56,
+      "xgot_for": 1.73,
+      "xgot_against": 3.71,
+      "location": "away"
     }
   ],
   "brest": [
@@ -1003,6 +1020,23 @@
       "xgot_for": 0.87,
       "xgot_against": 4.51,
       "location": "home"
+    },
+    {
+      "date": "2026-10-11",
+      "opposition": "troyes",
+      "goals_for": 2,
+      "goals_against": 0,
+      "xG_for": 1.26,
+      "xG_against": 1.14,
+      "xg_open_play_for": 0.27,
+      "xg_open_play_against": 0.92,
+      "xg_set_play_for": 0.2,
+      "xg_set_play_against": 0.21,
+      "npxg_for": 0.47,
+      "npxg_against": 1.14,
+      "xgot_for": 1.02,
+      "xgot_against": 0.23,
+      "location": "away"
     }
   ],
   "monaco": [
@@ -1193,6 +1227,23 @@
       "npxg_against": 1.81,
       "xgot_for": 1.33,
       "xgot_against": 2.22,
+      "location": "home"
+    },
+    {
+      "date": "2026-10-11",
+      "opposition": "strasbourg",
+      "goals_for": 2,
+      "goals_against": 1,
+      "xG_for": 1.25,
+      "xG_against": 0.63,
+      "xg_open_play_for": 1.22,
+      "xg_open_play_against": 0.36,
+      "xg_set_play_for": 0.03,
+      "xg_set_play_against": 0.27,
+      "npxg_for": 1.25,
+      "npxg_against": 0.63,
+      "xgot_for": 1.25,
+      "xgot_against": 0.69,
       "location": "home"
     }
   ],
@@ -1489,6 +1540,23 @@
       "xgot_for": 0.45,
       "xgot_against": 3.5,
       "location": "away"
+    },
+    {
+      "date": "2026-10-11",
+      "opposition": "auxerre",
+      "goals_for": 4,
+      "goals_against": 1,
+      "xG_for": 2.56,
+      "xG_against": 1.76,
+      "xg_open_play_for": 1.87,
+      "xg_open_play_against": 1.65,
+      "xg_set_play_for": 0.7,
+      "xg_set_play_against": 0.11,
+      "npxg_for": 2.56,
+      "npxg_against": 1.76,
+      "xgot_for": 3.71,
+      "xgot_against": 1.73,
+      "location": "home"
     }
   ],
   "strasbourg": [
@@ -1575,6 +1643,23 @@
       "npxg_against": 1.05,
       "xgot_for": 0.07,
       "xgot_against": 1.28,
+      "location": "away"
+    },
+    {
+      "date": "2026-10-11",
+      "opposition": "nice",
+      "goals_for": 1,
+      "goals_against": 2,
+      "xG_for": 0.63,
+      "xG_against": 1.25,
+      "xg_open_play_for": 0.36,
+      "xg_open_play_against": 1.22,
+      "xg_set_play_for": 0.27,
+      "xg_set_play_against": 0.03,
+      "npxg_for": 0.63,
+      "npxg_against": 1.25,
+      "xgot_for": 0.69,
+      "xgot_against": 1.25,
       "location": "away"
     }
   ],
@@ -1767,6 +1852,23 @@
       "xgot_for": 1.02,
       "xgot_against": 2.05,
       "location": "away"
+    },
+    {
+      "date": "2026-10-11",
+      "opposition": "marseille",
+      "goals_for": 0,
+      "goals_against": 2,
+      "xG_for": 1.14,
+      "xG_against": 1.26,
+      "xg_open_play_for": 0.92,
+      "xg_open_play_against": 0.27,
+      "xg_set_play_for": 0.21,
+      "xg_set_play_against": 0.2,
+      "npxg_for": 1.14,
+      "npxg_against": 0.47,
+      "xgot_for": 0.23,
+      "xgot_against": 1.02,
+      "location": "home"
     }
   ]
 }

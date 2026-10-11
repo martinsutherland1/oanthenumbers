@@ -118,6 +118,23 @@
       "xgot_for": 1.1,
       "xgot_against": 0.97,
       "location": "away"
+    },
+    {
+      "date": "2026-10-11",
+      "opposition": "st-johnstone",
+      "goals_for": 0,
+      "goals_against": 1,
+      "xG_for": 1.23,
+      "xG_against": 1.1,
+      "xg_open_play_for": 0.84,
+      "xg_open_play_against": 0.26,
+      "xg_set_play_for": 0.38,
+      "xg_set_play_against": 0.05,
+      "npxg_for": 1.23,
+      "npxg_against": 0.31,
+      "xgot_for": 0.4,
+      "xgot_against": 0.8,
+      "location": "home"
     }
   ],
   "celtic": [
@@ -239,6 +256,23 @@
       "xgot_for": 0.77,
       "xgot_against": 1.31,
       "location": "home"
+    },
+    {
+      "date": "2026-10-11",
+      "opposition": "motherwell",
+      "goals_for": 2,
+      "goals_against": 0,
+      "xG_for": 2.85,
+      "xG_against": 1.05,
+      "xg_open_play_for": 2.52,
+      "xg_open_play_against": 0.7,
+      "xg_set_play_for": 0.34,
+      "xg_set_play_against": 0.35,
+      "npxg_for": 2.85,
+      "npxg_against": 1.05,
+      "xgot_for": 3.58,
+      "xgot_against": 0.38,
+      "location": "away"
     }
   ],
   "dundee-fc": [
@@ -1188,6 +1222,23 @@
       "xgot_for": 1.87,
       "xgot_against": 3.42,
       "location": "away"
+    },
+    {
+      "date": "2026-10-11",
+      "opposition": "celtic",
+      "goals_for": 0,
+      "goals_against": 2,
+      "xG_for": 1.05,
+      "xG_against": 2.85,
+      "xg_open_play_for": 0.7,
+      "xg_open_play_against": 2.52,
+      "xg_set_play_for": 0.35,
+      "xg_set_play_against": 0.34,
+      "npxg_for": 1.05,
+      "npxg_against": 2.85,
+      "xgot_for": 0.38,
+      "xgot_against": 3.58,
+      "location": "home"
     }
   ],
   "rangers": [
@@ -1447,6 +1498,23 @@
       "xgot_for": 0.67,
       "xgot_against": 1.53,
       "location": "home"
+    },
+    {
+      "date": "2026-10-11",
+      "opposition": "aberdeen",
+      "goals_for": 1,
+      "goals_against": 0,
+      "xG_for": 1.1,
+      "xG_against": 1.23,
+      "xg_open_play_for": 0.26,
+      "xg_open_play_against": 0.84,
+      "xg_set_play_for": 0.05,
+      "xg_set_play_against": 0.38,
+      "npxg_for": 0.31,
+      "npxg_against": 1.23,
+      "xgot_for": 0.8,
+      "xgot_against": 0.4,
+      "location": "away"
     }
   ],
   "st-mirren": [

@@ -757,5 +757,41 @@
       "home_xgot": 0.4,
       "away_xgot": 1.85
     }
+  ],
+  "2026-10-11": [
+    {
+      "date": "2026-10-11",
+      "home_team": "koln",
+      "away_team": "borussia-monchengladbach",
+      "home_goals": 2,
+      "away_goals": 1,
+      "home_xG": 1.32,
+      "away_xG": 1.17,
+      "home_xg_open_play": 0.9,
+      "away_xg_open_play": 0.96,
+      "home_xg_set_play": 0.42,
+      "away_xg_set_play": 0.21,
+      "home_npxg": 1.32,
+      "away_npxg": 1.17,
+      "home_xgot": 1.39,
+      "away_xgot": 1.77
+    },
+    {
+      "date": "2026-10-11",
+      "home_team": "freiburg",
+      "away_team": "schalke",
+      "home_goals": 2,
+      "away_goals": 1,
+      "home_xG": 1.15,
+      "away_xG": 0.32,
+      "home_xg_open_play": 0.67,
+      "away_xg_open_play": 0.09,
+      "home_xg_set_play": 0.48,
+      "away_xg_set_play": 0.23,
+      "home_npxg": 1.15,
+      "away_npxg": 0.32,
+      "home_xgot": 1.37,
+      "away_xgot": 0.7
+    }
   ]
 }
