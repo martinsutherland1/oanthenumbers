@@ -1039,5 +1039,24 @@
       "home_xgot": 0.94,
       "away_xgot": 1.67
     }
+  ],
+  "2026-10-12": [
+    {
+      "date": "2026-10-12",
+      "home_team": "coventry-city",
+      "away_team": "newcastle-united",
+      "home_goals": 4,
+      "away_goals": 1,
+      "home_xG": 1.43,
+      "away_xG": 1.84,
+      "home_xg_open_play": 0.44,
+      "away_xg_open_play": 1.81,
+      "home_xg_set_play": 0.2,
+      "away_xg_set_play": 0.03,
+      "home_npxg": 0.64,
+      "away_npxg": 1.84,
+      "home_xgot": 2.63,
+      "away_xgot": 0.39
+    }
   ]
 }

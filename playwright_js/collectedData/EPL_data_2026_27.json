@@ -708,6 +708,23 @@
       "xgot_for": 0.23,
       "xgot_against": 0.08,
       "location": "away"
+    },
+    {
+      "date": "2026-10-12",
+      "opposition": "newcastle-united",
+      "goals_for": 4,
+      "goals_against": 1,
+      "xG_for": 1.43,
+      "xG_against": 1.84,
+      "xg_open_play_for": 0.44,
+      "xg_open_play_against": 1.81,
+      "xg_set_play_for": 0.2,
+      "xg_set_play_against": 0.03,
+      "npxg_for": 0.64,
+      "npxg_against": 1.84,
+      "xgot_for": 2.63,
+      "xgot_against": 0.39,
+      "location": "home"
     }
   ],
   "crystal-palace": [
@@ -1731,6 +1748,23 @@
       "xgot_for": 1.75,
       "xgot_against": 1.44,
       "location": "home"
+    },
+    {
+      "date": "2026-10-12",
+      "opposition": "coventry-city",
+      "goals_for": 1,
+      "goals_against": 4,
+      "xG_for": 1.84,
+      "xG_against": 1.43,
+      "xg_open_play_for": 1.81,
+      "xg_open_play_against": 0.44,
+      "xg_set_play_for": 0.03,
+      "xg_set_play_against": 0.2,
+      "npxg_for": 1.84,
+      "npxg_against": 0.64,
+      "xgot_for": 0.39,
+      "xgot_against": 2.63,
+      "location": "away"
     }
   ],
   "nottingham-forest": [
