@@ -1,6 +1,7 @@
 import { useMemo } from 'react';
 import type { Fixture, ScheduledFixture } from '../types';
 import { parseDate } from '../utils/dataProcessing';
+import { tipKey, type FixtureTip, type LeagueTips } from '../utils/bettingTips';
 import { getTeamName } from '../utils/teamColors';
 import './FixturesView.css';
 
@@ -8,6 +9,7 @@ interface FixturesViewProps {
   mode: 'fixtures' | 'results';
   results: Fixture[];
   schedule: ScheduledFixture[];
+  tips: LeagueTips;
 }
 
 interface Round<T> {
@@ -32,12 +34,14 @@ function groupByRound<T extends { date: string; time?: string }>(items: T[], rou
   return [...rounds.entries()].sort((a, b) => a[0] - b[0]).map(([round, matches]) => ({ round, matches }));
 }
 
-function MatchRow({ date, time, home, away, result }: {
+function MatchRow({ date, time, home, away, result, tip, topTip }: {
   date: string;
   time?: string;
   home: string;
   away: string;
   result?: Fixture;
+  tip?: FixtureTip;
+  topTip?: boolean;
 }) {
   return (
     <div className="fixture-row">
@@ -55,11 +59,20 @@ function MatchRow({ date, time, home, away, result }: {
         ) : 'v'}
       </span>
       <span className="fixture-team fixture-away">{getTeamName(away)}</span>
+      {tip && (
+        <span className={`fixture-tip ${topTip ? 'fixture-tip-top' : ''}`}>
+          {topTip && <span aria-label="Top tip">★ </span>}
+          Tip: {tip.bet.label} <strong>{Math.round(tip.bet.likelihood * 100)}%</strong>
+        </span>
+      )}
     </div>
   );
 }
 
-export function FixturesView({ mode, results, schedule }: FixturesViewProps) {
+export function FixturesView({ mode, results, schedule, tips }: FixturesViewProps) {
+  const tipByPair = useMemo(() => new Map(tips.next.map(t => [tipKey(t), t])), [tips]);
+  const topPairs = useMemo(() => new Set(tips.top.map(tipKey)), [tips]);
+
   const { upcoming, played } = useMemo(() => {
     const roundByPair = new Map(schedule.map(s => [pairKey(s.home_team, s.away_team), s.round]));
     const resultKeys = new Set(results.map(r => pairKey(r.home_team, r.away_team)));
@@ -81,9 +94,20 @@ export function FixturesView({ mode, results, schedule }: FixturesViewProps) {
         {upcoming.map((r, i) => (
           <div key={r.round} className="fixtures-round">
             <h4>Round {r.round}{i === 0 && <span className="fixtures-round-label">Next</span>}</h4>
-            {r.matches.map(m => (
-              <MatchRow key={pairKey(m.home_team, m.away_team)} date={m.date} time={m.time} home={m.home_team} away={m.away_team} />
-            ))}
+            {r.matches.map(m => {
+              const key = pairKey(m.home_team, m.away_team);
+              return (
+                <MatchRow
+                  key={key}
+                  date={m.date}
+                  time={m.time}
+                  home={m.home_team}
+                  away={m.away_team}
+                  tip={tipByPair.get(key)}
+                  topTip={topPairs.has(key)}
+                />
+              );
+            })}
           </div>
         ))}
       </div>

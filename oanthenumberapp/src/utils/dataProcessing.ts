@@ -763,27 +763,32 @@ export function getTeamRecentSeasonStats(fixtures: Fixture[], recentN: number = 
 export interface TeamBettingStats {
   team: string;
   played: number;
-  btts: number;
   over15: number;
   over25: number;
   over35: number;
   over45: number;
-  winBy1: number;
-  winBy2Plus: number;
-  scoreDraw: number;
+  btts: number;
   bttsWin: number;
-  cleanSheet: number;
-  failedToScore: number;
+  bttsDraw: number;
   winToNil: number;
+  draw: number;
+  winBy1: number;
+  winBy2: number;
+  winBy3Plus: number;
+  loseBy1: number;
+  loseBy2: number;
+  loseBy3Plus: number;
 }
 
+// Percentage of each team's games hitting common betting markets. Win/lose margins are
+// exact for 1 and 2 goals and 3+ for the last, so they sum with draw to 100%.
 export function getBettingStats(fixtures: Fixture[]): TeamBettingStats[] {
   const teams = extractTeams(fixtures);
   const stats = new Map<string, Omit<TeamBettingStats, 'team'>>();
   teams.forEach(t => stats.set(t, {
-    played: 0, btts: 0, over15: 0, over25: 0, over35: 0, over45: 0,
-    winBy1: 0, winBy2Plus: 0, scoreDraw: 0, bttsWin: 0,
-    cleanSheet: 0, failedToScore: 0, winToNil: 0,
+    played: 0, over15: 0, over25: 0, over35: 0, over45: 0,
+    btts: 0, bttsWin: 0, bttsDraw: 0, winToNil: 0, draw: 0,
+    winBy1: 0, winBy2: 0, winBy3Plus: 0, loseBy1: 0, loseBy2: 0, loseBy3Plus: 0,
   }));
 
   fixtures.forEach(f => {
@@ -797,42 +802,33 @@ export function getBettingStats(fixtures: Fixture[]): TeamBettingStats[] {
       { team: f.away_team, scored: ag, conceded: hg },
     ].forEach(({ team, scored, conceded }) => {
       const s = stats.get(team)!;
+      const diff = scored - conceded;
       s.played++;
-      if (bothScored) s.btts++;
       if (total > 1) s.over15++;
       if (total > 2) s.over25++;
       if (total > 3) s.over35++;
       if (total > 4) s.over45++;
-      const diff = scored - conceded;
+      if (bothScored) s.btts++;
+      if (bothScored && diff > 0) s.bttsWin++;
+      if (bothScored && diff === 0) s.bttsDraw++;
+      if (diff > 0 && conceded === 0) s.winToNil++;
+      if (diff === 0) s.draw++;
       if (diff === 1) s.winBy1++;
-      if (diff >= 2) s.winBy2Plus++;
-      if (scored > 0 && conceded > 0 && scored === conceded) s.scoreDraw++;
-      if (bothScored && scored > conceded) s.bttsWin++;
-      if (conceded === 0) s.cleanSheet++;
-      if (scored === 0) s.failedToScore++;
-      if (scored > conceded && conceded === 0) s.winToNil++;
+      if (diff === 2) s.winBy2++;
+      if (diff >= 3) s.winBy3Plus++;
+      if (diff === -1) s.loseBy1++;
+      if (diff === -2) s.loseBy2++;
+      if (diff <= -3) s.loseBy3Plus++;
     });
   });
 
   const pct = (n: number, d: number) => d > 0 ? Math.round((n / d) * 100) : 0;
   return teams.map(team => {
-    const s = stats.get(team)!;
-    return {
-      team,
-      played: s.played,
-      btts: pct(s.btts, s.played),
-      over15: pct(s.over15, s.played),
-      over25: pct(s.over25, s.played),
-      over35: pct(s.over35, s.played),
-      over45: pct(s.over45, s.played),
-      winBy1: pct(s.winBy1, s.played),
-      winBy2Plus: pct(s.winBy2Plus, s.played),
-      scoreDraw: pct(s.scoreDraw, s.played),
-      bttsWin: pct(s.bttsWin, s.played),
-      cleanSheet: pct(s.cleanSheet, s.played),
-      failedToScore: pct(s.failedToScore, s.played),
-      winToNil: pct(s.winToNil, s.played),
-    };
+    const { played, ...counts } = stats.get(team)!;
+    const pcts = Object.fromEntries(
+      Object.entries(counts).map(([k, v]) => [k, pct(v, played)])
+    ) as Omit<TeamBettingStats, 'team' | 'played'>;
+    return { team, played, ...pcts };
   });
 }
 

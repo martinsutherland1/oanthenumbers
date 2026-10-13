@@ -80,33 +80,39 @@ interface BettingViewProps {
 export function BettingView({ data }: BettingViewProps) {
   return (
     <div className="betting-view">
+      <p className="betting-note">
+        Share of each team's games this season. Tap a column to sort.
+      </p>
       <BettingTable
         title="Goals"
         columns={[
-          { key: 'btts', label: 'BTTS' },
           { key: 'over15', label: 'O1.5' },
           { key: 'over25', label: 'O2.5' },
           { key: 'over35', label: 'O3.5' },
           { key: 'over45', label: 'O4.5' },
+          { key: 'btts', label: 'BTTS' },
         ]}
         rows={data}
       />
       <BettingTable
         title="Results"
         columns={[
-          { key: 'winBy1', label: 'W by 1' },
-          { key: 'winBy2Plus', label: 'W by 2+' },
-          { key: 'scoreDraw', label: 'Score Draw' },
-          { key: 'bttsWin', label: 'BTTS+Win' },
+          { key: 'draw', label: 'Draw' },
+          { key: 'bttsWin', label: 'BTTS & Win' },
+          { key: 'bttsDraw', label: 'BTTS & Draw' },
+          { key: 'winToNil', label: 'Win to Nil' },
         ]}
         rows={data}
       />
       <BettingTable
-        title="Defence"
+        title="Winning Margin"
         columns={[
-          { key: 'cleanSheet', label: 'Clean Sheet' },
-          { key: 'winToNil', label: 'Win to Nil' },
-          { key: 'failedToScore', label: 'Failed to Score' },
+          { key: 'winBy1', label: 'W -1' },
+          { key: 'winBy2', label: 'W -2' },
+          { key: 'winBy3Plus', label: 'W -3>' },
+          { key: 'loseBy1', label: 'L -1' },
+          { key: 'loseBy2', label: 'L -2' },
+          { key: 'loseBy3Plus', label: 'L -3>' },
         ]}
         rows={data}
       />

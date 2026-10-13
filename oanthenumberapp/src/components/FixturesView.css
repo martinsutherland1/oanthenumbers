@@ -67,6 +67,25 @@
   color: var(--text-secondary);
 }
 
+.fixture-tip {
+  grid-column: 1 / -1;
+  justify-self: center;
+  padding: 2px 8px;
+  border-radius: 4px;
+  background: var(--surface-hover);
+  color: var(--text-secondary);
+  font-size: 0.75rem;
+}
+
+.fixture-tip strong {
+  color: var(--text);
+}
+
+.fixture-tip-top,
+.fixture-tip-top strong {
+  color: var(--primary);
+}
+
 @media (max-width: 600px) {
   .fixture-row {
     grid-template-columns: 1fr auto 1fr;
