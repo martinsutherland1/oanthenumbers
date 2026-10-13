@@ -1024,5 +1024,41 @@
       "home_xgot": 2.16,
       "away_xgot": 1.92
     }
+  ],
+  "2026-10-12": [
+    {
+      "date": "2026-10-12",
+      "home_team": "atalanta",
+      "away_team": "venezia",
+      "home_goals": 3,
+      "away_goals": 1,
+      "home_xG": 2.19,
+      "away_xG": 2.48,
+      "home_xg_open_play": 1.64,
+      "away_xg_open_play": 2.08,
+      "home_xg_set_play": 0.55,
+      "away_xg_set_play": 0.4,
+      "home_npxg": 2.19,
+      "away_npxg": 2.48,
+      "home_xgot": 2.32,
+      "away_xgot": 1.44
+    },
+    {
+      "date": "2026-10-12",
+      "home_team": "torino",
+      "away_team": "udinese",
+      "home_goals": 2,
+      "away_goals": 1,
+      "home_xG": 2.42,
+      "away_xG": 0.7,
+      "home_xg_open_play": 1.26,
+      "away_xg_open_play": 0.61,
+      "home_xg_set_play": 1.17,
+      "away_xg_set_play": 0.09,
+      "home_npxg": 2.42,
+      "away_npxg": 0.7,
+      "home_xgot": 2.13,
+      "away_xgot": 0.15
+    }
   ]
 }

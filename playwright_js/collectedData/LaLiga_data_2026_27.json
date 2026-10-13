@@ -1326,6 +1326,23 @@
       "xgot_for": 0.51,
       "xgot_against": 2.96,
       "location": "away"
+    },
+    {
+      "date": "2026-10-12",
+      "opposition": "sevilla",
+      "goals_for": 3,
+      "goals_against": 3,
+      "xG_for": 1.95,
+      "xG_against": 2.53,
+      "xg_open_play_for": 1.47,
+      "xg_open_play_against": 2.47,
+      "xg_set_play_for": 0.48,
+      "xg_set_play_against": 0.06,
+      "npxg_for": 1.95,
+      "npxg_against": 2.53,
+      "xgot_for": 3.15,
+      "xgot_against": 2.61,
+      "location": "home"
     }
   ],
   "malaga": [
@@ -2413,6 +2430,23 @@
       "xgot_for": 0.81,
       "xgot_against": 1.62,
       "location": "home"
+    },
+    {
+      "date": "2026-10-12",
+      "opposition": "levante",
+      "goals_for": 3,
+      "goals_against": 3,
+      "xG_for": 2.53,
+      "xG_against": 1.95,
+      "xg_open_play_for": 2.47,
+      "xg_open_play_against": 1.47,
+      "xg_set_play_for": 0.06,
+      "xg_set_play_against": 0.48,
+      "npxg_for": 2.53,
+      "npxg_against": 1.95,
+      "xgot_for": 2.61,
+      "xgot_against": 3.15,
+      "location": "away"
     }
   ],
   "valencia": [
