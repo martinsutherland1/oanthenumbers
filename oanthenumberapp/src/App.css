@@ -349,3 +349,9 @@ body {
     flex-shrink: 0;
   }
 }
+
+.projection-view-toggle {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 12px;
+}

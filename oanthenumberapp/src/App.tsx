@@ -7,6 +7,8 @@ import { TeamOverview } from './components/TeamOverview';
 import { ComparisonsView } from './components/ComparisonsView';
 import { AllStatsView } from './components/AllStatsView';
 import { FixturesView } from './components/FixturesView';
+import { NextFixtureProjection } from './components/NextFixtureProjection';
+import { ViewToggle } from './components/ViewToggle';
 import {
   extractTeams,
   getLeagueTable,
@@ -46,6 +48,7 @@ import './App.css';
 type Page = 'home' | 'league';
 type Section = 'tables' | 'stats' | 'fixtures';
 type TablesTab = 'current' | 'projection';
+type ProjectionView = 'table' | 'next';
 type FixturesTab = 'fixtures' | 'results';
 type StatsTab = 'team' | 'all' | 'comparisons';
 type League = 'spfl' | 'epl' | 'laliga' | 'bundesliga' | 'seriea' | 'ligue1';
@@ -194,6 +197,7 @@ function App() {
   const [league, setLeague] = useState<League>('spfl');
   const [section, setSection] = useState<Section>('tables');
   const [tablesTab, setTablesTab] = useState<TablesTab>('current');
+  const [projectionView, setProjectionView] = useState<ProjectionView>('table');
   const [fixturesTab, setFixturesTab] = useState<FixturesTab>('fixtures');
   const [statsTab, setStatsTab] = useState<StatsTab>('team');
   const [selectedTeam, setSelectedTeam] = useState<string>('');
@@ -390,7 +394,24 @@ function App() {
               </>
             )}
             {section === 'tables' && tablesTab === 'projection' && (
-              <ProjectionTable data={projectedStandings} dividerPositions={config.projectionDividers} onTeamClick={handleTeamClick} />
+              <>
+                <div className="projection-view-toggle">
+                  <ViewToggle
+                    ariaLabel="Projection view"
+                    options={[
+                      { key: 'table', label: 'Final Table' },
+                      { key: 'next', label: 'Next Fixtures' },
+                    ]}
+                    value={projectionView}
+                    onChange={setProjectionView}
+                  />
+                </div>
+                {projectionView === 'table' ? (
+                  <ProjectionTable data={projectedStandings} dividerPositions={config.projectionDividers} onTeamClick={handleTeamClick} />
+                ) : (
+                  <NextFixtureProjection fixtures={fixtures} lastSeasonFixtures={lastSeasonFixtures} schedule={config.schedule} />
+                )}
+              </>
             )}
             {section === 'stats' && statsTab === 'team' && activeTeam && (
               <TeamOverview
