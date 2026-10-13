@@ -89,3 +89,52 @@
 .tips-star {
   color: var(--primary);
 }
+
+.tips-table th {
+  white-space: nowrap;
+}
+
+.tips-table .bet-val-col {
+  width: 72px;
+}
+
+.all-tips-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.all-tips-header h3 {
+  margin: 0;
+}
+
+.all-tips-league {
+  font-weight: 400;
+  color: var(--text-secondary);
+}
+
+.all-tips-link {
+  padding: 0;
+  border: none;
+  background: none;
+  color: var(--text);
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.all-tips-link:hover {
+  color: var(--primary);
+}
+
+.all-tips-pool {
+  margin-top: 12px;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+.all-tips-pool summary {
+  cursor: pointer;
+  margin-bottom: 8px;
+}

@@ -12,6 +12,7 @@ import { ViewToggle } from './components/ViewToggle';
 import { ProjectionAccuracy } from './components/ProjectionAccuracy';
 import { BettingView } from './components/BettingView';
 import { TipsView } from './components/TipsView';
+import { AllTipsView } from './components/AllTipsView';
 import {
   extractTeams,
   getLeagueTable,
@@ -51,7 +52,7 @@ import type { Fixture, FixturesData, ScheduleData, ScheduledFixture } from './ty
 import logo from './assets/logo-header.png';
 import './App.css';
 
-type Page = 'home' | 'league';
+type Page = 'home' | 'league' | 'tips';
 type Section = 'tables' | 'stats' | 'fixtures' | 'analysis';
 type TablesTab = 'current' | 'projection';
 type ProjectionView = 'table' | 'next' | 'analysis';
@@ -238,6 +239,15 @@ function App() {
     () => getLeagueTips(fixtures, lastSeasonFixtures, config.schedule),
     [fixtures, lastSeasonFixtures, config.schedule]
   );
+  // Only worked out when the all-leagues tips page is open
+  const allLeagueTips = useMemo(
+    () => page !== 'tips' ? [] : LEAGUE_ORDER.map(key => ({
+      key,
+      label: LEAGUE_CONFIG[key].label,
+      tips: getLeagueTips(LEAGUE_CONFIG[key].fixtures, LEAGUE_CONFIG[key].lastSeasonFixtures, LEAGUE_CONFIG[key].schedule),
+    })),
+    [page]
+  );
   const activeTeam = selectedTeam || teams[0] || '';
 
   const homeLeagueTiles = useMemo(() => LEAGUE_ORDER.map(key => ({
@@ -247,7 +257,7 @@ function App() {
     flag: LEAGUE_CONFIG[key].flag,
   })), []);
 
-  const handleSelectLeague = (next: string) => {
+  const handleSelectLeague = (next: string, tab?: 'tips') => {
     setLeague(next as League);
     setSelectedTeam('');
     setSection('tables');
@@ -255,6 +265,10 @@ function App() {
     setStatsTab('team');
     setFixturesTab('fixtures');
     setAnalysisTab('data');
+    if (tab) {
+      setSection('analysis');
+      setAnalysisTab(tab);
+    }
     setPage('league');
   };
 
@@ -274,8 +288,8 @@ function App() {
         <div className="header-content">
           <div className="logo-section">
             <h1
-              className={`title ${page === 'league' ? 'title-clickable' : ''}`}
-              onClick={page === 'league' ? handleGoHome : undefined}
+              className={`title ${page !== 'home' ? 'title-clickable' : ''}`}
+              onClick={page !== 'home' ? handleGoHome : undefined}
             >
               <button
                 type="button"
@@ -427,7 +441,15 @@ function App() {
 
       <main className="app-main">
         {page === 'home' && (
-          <HomePage leagues={homeLeagueTiles} onSelectLeague={handleSelectLeague} />
+          <HomePage leagues={homeLeagueTiles} onSelectLeague={handleSelectLeague} onShowTips={() => setPage('tips')} />
+        )}
+
+        {page === 'tips' && (
+          <AllTipsView
+            leagues={allLeagueTips}
+            onBack={handleGoHome}
+            onSelectLeague={key => handleSelectLeague(key, 'tips')}
+          />
         )}
 
         {page === 'league' && (

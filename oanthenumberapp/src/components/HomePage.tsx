@@ -12,6 +12,7 @@ export interface HomeLeagueTile {
 interface HomePageProps {
   leagues: HomeLeagueTile[];
   onSelectLeague: (key: string) => void;
+  onShowTips: () => void;
 }
 
 function ScotlandFlag() {
@@ -81,9 +82,10 @@ const FLAG_COMPONENTS: Record<LeagueFlag, () => JSX.Element> = {
   france: FranceFlag,
 };
 
-export function HomePage({ leagues, onSelectLeague }: HomePageProps) {
+export function HomePage({ leagues, onSelectLeague, onShowTips }: HomePageProps) {
   return (
     <div className="home-page">
+      <button className="home-tips-btn" onClick={onShowTips}>Tips</button>
       <div className="home-intro">
         <h2 className="home-heading">Choose a League</h2>
         <p className="home-tagline">Tables, projections, stats and team comparisons for the season.</p>
