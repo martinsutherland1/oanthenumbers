@@ -9,17 +9,23 @@ import { AllStatsView } from './components/AllStatsView';
 import { FixturesView } from './components/FixturesView';
 import { NextFixtureProjection } from './components/NextFixtureProjection';
 import { ViewToggle } from './components/ViewToggle';
+import { ProjectionAccuracy } from './components/ProjectionAccuracy';
+import { BettingView } from './components/BettingView';
+import { TipsView } from './components/TipsView';
 import {
   extractTeams,
   getLeagueTable,
   getProjectedStandings,
+  getBettingStats,
   createProjectionContext,
   parseDate,
   flattenFixtures,
   flattenSchedule,
   type ProjectionConfig
 } from './utils/dataProcessing';
+import { getLeagueTips } from './utils/bettingTips';
 import { PROJECTION_CONFIG } from './utils/projectionConfig';
+import { SHOW_PROJECTION_EXTRAS } from './utils/featureFlags';
 import { getTeamName } from './utils/teamColors';
 import spflFixturesData from './data/spfl_results_2026_27.json';
 import spflLastSeasonFixturesData from './data/spfl_results_2025_26.json';
@@ -46,11 +52,12 @@ import logo from './assets/logo-header.png';
 import './App.css';
 
 type Page = 'home' | 'league';
-type Section = 'tables' | 'stats' | 'fixtures';
+type Section = 'tables' | 'stats' | 'fixtures' | 'analysis';
 type TablesTab = 'current' | 'projection';
-type ProjectionView = 'table' | 'next';
+type ProjectionView = 'table' | 'next' | 'analysis';
 type FixturesTab = 'fixtures' | 'results';
 type StatsTab = 'team' | 'all' | 'comparisons';
+type AnalysisTab = 'data' | 'tips';
 type League = 'spfl' | 'epl' | 'laliga' | 'bundesliga' | 'seriea' | 'ligue1';
 
 const spflFixtures = flattenFixtures(spflFixturesData as FixturesData);
@@ -172,6 +179,14 @@ const LEAGUE_CONFIG: Record<League, LeagueConfig> = {
 
 const LEAGUE_ORDER: League[] = ['spfl', 'epl', 'laliga', 'bundesliga', 'seriea', 'ligue1'];
 
+const ANALYSIS_LEAGUES = LEAGUE_ORDER.map(key => ({
+  key,
+  label: LEAGUE_CONFIG[key].label,
+  fixtures: LEAGUE_CONFIG[key].fixtures,
+  lastSeasonFixtures: LEAGUE_CONFIG[key].lastSeasonFixtures,
+  schedule: LEAGUE_CONFIG[key].schedule,
+}));
+
 const lastUpdated = new Date(dataUpdate.updateTime).toLocaleString('en-GB', {
   timeZone: 'Europe/London',
   day: 'numeric',
@@ -200,6 +215,7 @@ function App() {
   const [projectionView, setProjectionView] = useState<ProjectionView>('table');
   const [fixturesTab, setFixturesTab] = useState<FixturesTab>('fixtures');
   const [statsTab, setStatsTab] = useState<StatsTab>('team');
+  const [analysisTab, setAnalysisTab] = useState<AnalysisTab>('data');
   const [selectedTeam, setSelectedTeam] = useState<string>('');
 
   const config = LEAGUE_CONFIG[league];
@@ -209,6 +225,7 @@ function App() {
   const seasonLabel = useMemo(() => getSeasonLabel(fixtures), [fixtures]);
   const teams = useMemo(() => extractTeams(fixtures), [fixtures]);
   const leagueTableData = useMemo(() => getLeagueTable(fixtures), [fixtures]);
+  const bettingStats = useMemo(() => getBettingStats(fixtures), [fixtures]);
   const projectionContext = useMemo(
     () => createProjectionContext(config.lastSeasonFixtures, config.historicalSeasons, config.projection, extractTeams(config.fixtures)),
     [config]
@@ -216,6 +233,10 @@ function App() {
   const projectedStandings = useMemo(
     () => getProjectedStandings(fixtures, config.seasonGames, projectionContext),
     [fixtures, config.seasonGames, projectionContext]
+  );
+  const tips = useMemo(
+    () => getLeagueTips(fixtures, lastSeasonFixtures, config.schedule),
+    [fixtures, lastSeasonFixtures, config.schedule]
   );
   const activeTeam = selectedTeam || teams[0] || '';
 
@@ -233,6 +254,7 @@ function App() {
     setTablesTab('current');
     setStatsTab('team');
     setFixturesTab('fixtures');
+    setAnalysisTab('data');
     setPage('league');
   };
 
@@ -301,6 +323,12 @@ function App() {
                 >
                   Fixtures
                 </button>
+                <button
+                  className={`view-tab ${section === 'analysis' ? 'active' : ''}`}
+                  onClick={() => setSection('analysis')}
+                >
+                  Analysis
+                </button>
               </div>
 
               {section === 'tables' && (
@@ -360,6 +388,23 @@ function App() {
                 </div>
               )}
 
+              {section === 'analysis' && (
+                <div className="view-tabs secondary-tabs">
+                  <button
+                    className={`view-tab ${analysisTab === 'data' ? 'active' : ''}`}
+                    onClick={() => setAnalysisTab('data')}
+                  >
+                    Data
+                  </button>
+                  <button
+                    className={`view-tab ${analysisTab === 'tips' ? 'active' : ''}`}
+                    onClick={() => setAnalysisTab('tips')}
+                  >
+                    Tips
+                  </button>
+                </div>
+              )}
+
               {section === 'stats' && statsTab === 'team' && (
                 <div className="team-select-group">
                   <label htmlFor="team-select">Team</label>
@@ -395,22 +440,27 @@ function App() {
             )}
             {section === 'tables' && tablesTab === 'projection' && (
               <>
-                <div className="projection-view-toggle">
-                  <ViewToggle
-                    ariaLabel="Projection view"
-                    options={[
-                      { key: 'table', label: 'Final Table' },
-                      { key: 'next', label: 'Next Fixtures' },
-                    ]}
-                    value={projectionView}
-                    onChange={setProjectionView}
-                  />
-                </div>
-                {projectionView === 'table' ? (
+                {SHOW_PROJECTION_EXTRAS && (
+                  <div className="projection-view-toggle">
+                    <ViewToggle
+                      ariaLabel="Projection view"
+                      options={[
+                        { key: 'table', label: 'Final Table' },
+                        { key: 'next', label: 'Next Fixtures' },
+                        { key: 'analysis', label: 'Analysis' },
+                      ]}
+                      value={projectionView}
+                      onChange={setProjectionView}
+                    />
+                  </div>
+                )}
+                {(!SHOW_PROJECTION_EXTRAS || projectionView === 'table') && (
                   <ProjectionTable data={projectedStandings} dividerPositions={config.projectionDividers} onTeamClick={handleTeamClick} />
-                ) : (
+                )}
+                {SHOW_PROJECTION_EXTRAS && projectionView === 'next' && (
                   <NextFixtureProjection fixtures={fixtures} lastSeasonFixtures={lastSeasonFixtures} schedule={config.schedule} />
                 )}
+                {SHOW_PROJECTION_EXTRAS && projectionView === 'analysis' && <ProjectionAccuracy leagues={ANALYSIS_LEAGUES} activeLeague={league} />}
               </>
             )}
             {section === 'stats' && statsTab === 'team' && activeTeam && (
@@ -429,7 +479,9 @@ function App() {
             {section === 'stats' && statsTab === 'comparisons' && (
               <ComparisonsView fixtures={fixtures} teams={teams} />
             )}
-            {section === 'fixtures' && <FixturesView mode={fixturesTab} results={fixtures} schedule={config.schedule} />}
+            {section === 'fixtures' && <FixturesView mode={fixturesTab} results={fixtures} schedule={config.schedule} tips={tips} />}
+            {section === 'analysis' && analysisTab === 'data' && <BettingView key={league} data={bettingStats} />}
+            {section === 'analysis' && analysisTab === 'tips' && <TipsView tips={tips} />}
           </>
         )}
       </main>

@@ -1,22 +1,12 @@
 name: Collect match data
 
-# Each league runs at its own UK time (SPFL 23:00, EPL 23:15, La Liga 23:30, Bundesliga 23:45,
-# Serie A 01:00, Ligue 1 01:15). GitHub cron runs in UTC, so each time is scheduled for both BST and GMT and
-# the "plan" job skips whichever doesn't match the current UK offset.
+# All leagues are collected at midnight UK time. GitHub cron runs in UTC, so midnight is
+# scheduled for both BST (23:00 UTC) and GMT (00:00 UTC) and the "plan" job skips whichever
+# doesn't match the current UK offset.
 on:
   schedule:
-    - cron: '0 22 * * *'   # SPFL, 23:00 BST
-    - cron: '0 23 * * *'   # SPFL, 23:00 GMT
-    - cron: '15 22 * * *'  # EPL, 23:15 BST
-    - cron: '15 23 * * *'  # EPL, 23:15 GMT
-    - cron: '30 22 * * *'  # La Liga, 23:30 BST
-    - cron: '30 23 * * *'  # La Liga, 23:30 GMT
-    - cron: '45 22 * * *'  # Bundesliga, 23:45 BST
-    - cron: '45 23 * * *'  # Bundesliga, 23:45 GMT
-    - cron: '0 0 * * *'    # Serie A, 01:00 BST
-    - cron: '0 1 * * *'    # Serie A, 01:00 GMT
-    - cron: '15 0 * * *'   # Ligue 1, 01:15 BST
-    - cron: '15 1 * * *'   # Ligue 1, 01:15 GMT
+    - cron: '0 23 * * *'   # midnight BST
+    - cron: '0 0 * * *'    # midnight GMT
   workflow_dispatch:
     inputs:
       league:
@@ -25,7 +15,7 @@ on:
         options: [all, spfl, epl, laliga, bundesliga, seriea, ligue1]
         default: all
 
-# Queue runs so the SPFL and EPL commits never race each other
+# Queue runs so overlapping commits never race each other
 concurrency:
   group: collect-data
   cancel-in-progress: false
@@ -45,26 +35,17 @@ jobs:
           SCHEDULE: ${{ github.event.schedule }}
           LEAGUE_INPUT: ${{ inputs.league }}
         run: |
+          all="spfl epl laliga bundesliga seriea ligue1"
           if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
             case "$LEAGUE_INPUT" in
-              all) leagues="spfl epl laliga bundesliga seriea ligue1" ;;
+              all) leagues="$all" ;;
               *) leagues="$LEAGUE_INPUT" ;;
             esac
           else
             offset=$(date +%z)   # +0100 in BST, +0000 in GMT
             case "$SCHEDULE" in
-              '0 22 * * *')  [ "$offset" = "+0100" ] && leagues=spfl ;;
-              '0 23 * * *')  [ "$offset" = "+0000" ] && leagues=spfl ;;
-              '15 22 * * *') [ "$offset" = "+0100" ] && leagues=epl ;;
-              '15 23 * * *') [ "$offset" = "+0000" ] && leagues=epl ;;
-              '30 22 * * *') [ "$offset" = "+0100" ] && leagues=laliga ;;
-              '30 23 * * *') [ "$offset" = "+0000" ] && leagues=laliga ;;
-              '45 22 * * *') [ "$offset" = "+0100" ] && leagues=bundesliga ;;
-              '45 23 * * *') [ "$offset" = "+0000" ] && leagues=bundesliga ;;
-              '0 0 * * *')   [ "$offset" = "+0100" ] && leagues=seriea ;;
-              '0 1 * * *')   [ "$offset" = "+0000" ] && leagues=seriea ;;
-              '15 0 * * *')  [ "$offset" = "+0100" ] && leagues=ligue1 ;;
-              '15 1 * * *')  [ "$offset" = "+0000" ] && leagues=ligue1 ;;
+              '0 23 * * *') [ "$offset" = "+0100" ] && leagues="$all" ;;
+              '0 0 * * *')  [ "$offset" = "+0000" ] && leagues="$all" ;;
             esac
           fi
           echo "UK offset $(date +%z), schedule '$SCHEDULE' -> leagues: '${leagues:-none}'"

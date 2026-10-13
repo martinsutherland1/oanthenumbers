@@ -3,6 +3,7 @@ import type { Fixture, ScheduledFixture } from '../types';
 import { extractTeams, parseDate } from '../utils/dataProcessing';
 import {
   createGoalProjectionContext,
+  errorBand,
   getBackdatedProjections,
   getNextRoundProjections,
   getProjectionAccuracy,
@@ -23,6 +24,9 @@ const formatDate = (date: string) =>
   parseDate(date).toLocaleDateString('en-GB', { weekday: 'short', day: 'numeric', month: 'short' });
 
 const pairKey = (m: MatchGoalProjection) => `${m.home.team}|${m.away.team}`;
+
+const BAND_CLASS = { good: 'positive', fair: '', poor: 'negative' } as const;
+const errorClass = (err: number) => BAND_CLASS[errorBand(err)];
 
 function TeamName({ team }: { team: string }) {
   return (
@@ -171,9 +175,8 @@ export function NextFixtureProjection({ fixtures, lastSeasonFixtures, schedule }
               <tbody>
                 {roundMatches.map(m => {
                   const a = m.actual!;
-                  const homeErr = m.home.projectedGoals - a.home;
-                  const awayErr = m.away.projectedGoals - a.away;
-                  const err = Math.abs(homeErr) + Math.abs(awayErr);
+                  const homeErr = Math.abs(m.home.projectedGoals - a.home);
+                  const awayErr = Math.abs(m.away.projectedGoals - a.away);
                   return (
                     <tr key={pairKey(m)}>
                       <td className="gp-col-match">
@@ -194,8 +197,9 @@ export function NextFixtureProjection({ fixtures, lastSeasonFixtures, schedule }
                         <span>{a.homeXg.toFixed(2)}</span>
                         <span>{a.awayXg.toFixed(2)}</span>
                       </td>
-                      <td className={`gp-col-err ${err <= 1 ? 'positive' : err >= 2.5 ? 'negative' : ''}`}>
-                        {err.toFixed(2)}
+                      <td className="gp-col-err gp-stack">
+                        <span className={errorClass(homeErr)}>{homeErr.toFixed(2)}</span>
+                        <span className={errorClass(awayErr)}>{awayErr.toFixed(2)}</span>
                       </td>
                     </tr>
                   );
@@ -203,7 +207,7 @@ export function NextFixtureProjection({ fixtures, lastSeasonFixtures, schedule }
               </tbody>
             </table>
           </div>
-          <p className="gp-note gp-footnote">Error is the combined absolute difference between projected and actual goals for both sides.</p>
+          <p className="gp-note gp-footnote">Error is the absolute difference between projected and actual goals for each side.</p>
         </div>
       )}
     </div>

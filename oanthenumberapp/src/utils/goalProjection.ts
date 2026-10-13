@@ -306,3 +306,26 @@ export function getProjectionAccuracy(projections: MatchGoalProjection[], curren
   const n = scored.length * 2;
   return { matches: scored.length, mae: absErr / n, baselineMae: baseErr / n, bias: bias / n };
 }
+
+// Per-team goal error bands: within half a goal is good, a goal and a quarter or more is poor
+export type ErrorBand = 'good' | 'fair' | 'poor';
+export const ERROR_BAND_THRESHOLDS = { good: 0.5, poor: 1.25 };
+
+export function errorBand(err: number): ErrorBand {
+  const abs = Math.abs(err);
+  return abs <= ERROR_BAND_THRESHOLDS.good ? 'good' : abs >= ERROR_BAND_THRESHOLDS.poor ? 'poor' : 'fair';
+}
+
+export type ErrorBandCounts = Record<ErrorBand, number> & { predictions: number };
+
+// Each played match gives two predictions, one per side
+export function getErrorBandCounts(projections: MatchGoalProjection[]): ErrorBandCounts {
+  const counts: ErrorBandCounts = { predictions: 0, good: 0, fair: 0, poor: 0 };
+  projections.forEach(p => {
+    if (!p.actual) return;
+    counts[errorBand(p.home.projectedGoals - p.actual.home)]++;
+    counts[errorBand(p.away.projectedGoals - p.actual.away)]++;
+    counts.predictions += 2;
+  });
+  return counts;
+}
