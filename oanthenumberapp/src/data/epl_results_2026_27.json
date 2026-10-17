@@ -1058,5 +1058,75 @@
       "home_xgot": 2.63,
       "away_xgot": 0.39
     }
+  ],
+  "2026-10-17": [
+    {
+      "date": "2026-10-17",
+      "home_team": "brentford",
+      "away_team": "liverpool",
+      "home_goals": 1,
+      "away_goals": 2,
+      "home_xG": 0.85,
+      "away_xG": 1.51,
+      "home_xg_open_play": 0.53,
+      "away_xg_open_play": 1.18,
+      "home_xg_set_play": 0.32,
+      "away_xg_set_play": 0.33,
+      "home_npxg": 0.85,
+      "away_npxg": 1.51,
+      "home_xgot": 1.21,
+      "away_xgot": 1.27
+    },
+    {
+      "date": "2026-10-17",
+      "home_team": "everton",
+      "away_team": "chelsea",
+      "home_goals": 0,
+      "away_goals": 2,
+      "home_xG": 0.43,
+      "away_xG": 1.47,
+      "home_xg_open_play": 0.13,
+      "away_xg_open_play": 0.95,
+      "home_xg_set_play": 0.3,
+      "away_xg_set_play": 0.51,
+      "home_npxg": 0.43,
+      "away_npxg": 1.47,
+      "home_xgot": 0.7,
+      "away_xgot": 2.13
+    },
+    {
+      "date": "2026-10-17",
+      "home_team": "fulham",
+      "away_team": "hull-city",
+      "home_goals": 1,
+      "away_goals": 0,
+      "home_xG": 1.44,
+      "away_xG": 0.16,
+      "home_xg_open_play": 1.09,
+      "away_xg_open_play": 0.09,
+      "home_xg_set_play": 0.35,
+      "away_xg_set_play": 0.07,
+      "home_npxg": 1.44,
+      "away_npxg": 0.16,
+      "home_xgot": 0.47,
+      "away_xgot": 0
+    },
+    {
+      "date": "2026-10-17",
+      "home_team": "manchester-city",
+      "away_team": "ipswich-town",
+      "home_goals": 3,
+      "away_goals": 2,
+      "home_xG": 3.53,
+      "away_xG": 1.66,
+      "home_xg_open_play": 3.15,
+      "away_xg_open_play": 0.68,
+      "home_xg_set_play": 0.38,
+      "away_xg_set_play": 0.19,
+      "home_npxg": 3.53,
+      "away_npxg": 0.87,
+      "home_xgot": 1.56,
+      "away_xgot": 1.8
+    }
   ]
 }
