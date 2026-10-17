@@ -1,6 +1,7 @@
+import logoMark from '../assets/logo-mark.png';
 import './HomePage.css';
 
-export type LeagueFlag = 'scotland' | 'england' | 'spain' | 'germany' | 'italy' | 'france';
+export type LeagueFlag = 'scotland' | 'england' | 'spain' | 'germany' | 'italy' | 'france' | 'europe';
 
 export interface HomeLeagueTile {
   key: string;
@@ -73,6 +74,19 @@ function FranceFlag() {
   );
 }
 
+function EuropeFlag() {
+  const stars = Array.from({ length: 12 }, (_, i) => {
+    const a = (i * Math.PI) / 6;
+    return <circle key={i} cx={30 + 11 * Math.sin(a)} cy={18 - 11 * Math.cos(a)} r="1.6" fill="#FFCC00" />;
+  });
+  return (
+    <svg className="league-tile-flag" viewBox="0 0 60 36" role="img" aria-label="Europe flag">
+      <rect width="60" height="36" fill="#003399" />
+      {stars}
+    </svg>
+  );
+}
+
 const FLAG_COMPONENTS: Record<LeagueFlag, () => JSX.Element> = {
   scotland: ScotlandFlag,
   england: EnglandFlag,
@@ -80,38 +94,68 @@ const FLAG_COMPONENTS: Record<LeagueFlag, () => JSX.Element> = {
   germany: GermanyFlag,
   italy: ItalyFlag,
   france: FranceFlag,
+  europe: EuropeFlag,
 };
 
+function LeagueTile({ league, onSelect }: { league: HomeLeagueTile; onSelect: (key: string) => void }) {
+  const Flag = FLAG_COMPONENTS[league.flag];
+  return (
+    <button className="league-tile" onClick={() => onSelect(league.key)}>
+      <Flag />
+      <span className="league-tile-body">
+        <span className="league-tile-label">{league.label}</span>
+        {league.seasonLabel && <span className="league-tile-season">{league.seasonLabel} season</span>}
+      </span>
+      <svg className="league-tile-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+        <polyline points="9 6 15 12 9 18" />
+      </svg>
+    </button>
+  );
+}
+
 export function HomePage({ leagues, onSelectLeague, onShowTips }: HomePageProps) {
+  const domestic = leagues.filter(l => l.flag !== 'europe');
+  const european = leagues.filter(l => l.flag === 'europe');
   return (
     <div className="home-page">
-      <button className="home-tips-btn" onClick={onShowTips}>Tips</button>
-      <div className="home-intro">
-        <h2 className="home-heading">Choose a League</h2>
-        <p className="home-tagline">Tables, projections, stats and team comparisons for the season.</p>
-      </div>
-      <div className="home-tiles">
-        {leagues.map(l => {
-          const Flag = FLAG_COMPONENTS[l.flag];
-          return (
-            <button
-              key={l.key}
-              className="league-tile"
-              onClick={() => onSelectLeague(l.key)}
-            >
-              <span className="league-tile-accent" />
-              <span className="league-tile-body">
-                <span className="league-tile-title-row">
-                  <Flag />
-                  <span className="league-tile-label">{l.label}</span>
-                </span>
-                {l.seasonLabel && <span className="league-tile-season">{l.seasonLabel} Season</span>}
-              </span>
-              <span className="league-tile-cta">Explore →</span>
-            </button>
-          );
-        })}
-      </div>
+      <section className="home-hero">
+        <img className="home-hero-mark" src={logoMark} alt="" />
+        <h2 className="home-heading">
+          oanthe<span className="home-heading-accent">numbers</span>
+        </h2>
+        <p className="home-tagline">Tables, projections, xG and team comparisons across Europe&rsquo;s top competitions.</p>
+      </section>
+
+      <button className="home-tips-card" onClick={onShowTips}>
+        <span className="home-tips-icon" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.25" strokeLinecap="round" strokeLinejoin="round">
+            <line x1="6" y1="20" x2="6" y2="14" />
+            <line x1="12" y1="20" x2="12" y2="9" />
+            <line x1="18" y1="20" x2="18" y2="4" />
+          </svg>
+        </span>
+        <span className="home-tips-text">
+          <span className="home-tips-title">Betting tips</span>
+          <span className="home-tips-sub">Picks for the next round of fixtures, across every domestic league</span>
+        </span>
+        <span className="home-tips-cta">View tips →</span>
+      </button>
+
+      <section className="home-group">
+        <h3 className="home-group-title">Domestic leagues</h3>
+        <div className="home-tiles">
+          {domestic.map(l => <LeagueTile key={l.key} league={l} onSelect={onSelectLeague} />)}
+        </div>
+      </section>
+
+      {european.length > 0 && (
+        <section className="home-group">
+          <h3 className="home-group-title">European competitions</h3>
+          <div className="home-tiles">
+            {european.map(l => <LeagueTile key={l.key} league={l} onSelect={onSelectLeague} />)}
+          </div>
+        </section>
+      )}
     </div>
   );
 }

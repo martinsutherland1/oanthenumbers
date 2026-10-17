@@ -1,5 +1,5 @@
 import type { LeagueTableRow } from '../utils/dataProcessing';
-import { getContrastText, getTeamColor, getTeamName } from '../utils/teamColors';
+import { getTeamName } from '../utils/teamColors';
 import './TeamHeader.css';
 
 interface TeamHeaderProps {
@@ -10,10 +10,7 @@ interface TeamHeaderProps {
 export function TeamHeader({ team, leagueRow }: TeamHeaderProps) {
   return (
     <div className="team-header-card">
-      <div
-        className="team-header-avatar"
-        style={{ backgroundColor: getTeamColor(team), color: getContrastText(getTeamColor(team)) }}
-      >
+      <div className="team-header-avatar">
         {getTeamName(team).charAt(0)}
       </div>
       <div>

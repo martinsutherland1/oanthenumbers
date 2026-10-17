@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { HomePage, type LeagueFlag } from './components/HomePage';
 import { LeagueTable } from './components/LeagueTable';
 import { LeagueHighlights } from './components/LeagueHighlights';
@@ -24,7 +24,7 @@ import {
   flattenSchedule,
   type ProjectionConfig
 } from './utils/dataProcessing';
-import { getLeagueTips } from './utils/bettingTips';
+import { getLeagueTips, type LeagueTips } from './utils/bettingTips';
 import { PROJECTION_CONFIG } from './utils/projectionConfig';
 import { SHOW_PROJECTION_EXTRAS } from './utils/featureFlags';
 import { getTeamName } from './utils/teamColors';
@@ -41,6 +41,12 @@ import serieaFixturesData from './data/seriea_results_2026_27.json';
 import serieaLastSeasonFixturesData from './data/seriea_results_2025_26.json';
 import ligue1FixturesData from './data/ligue1_results_2026_27.json';
 import ligue1LastSeasonFixturesData from './data/ligue1_results_2025_26.json';
+import championsleagueFixturesData from './data/championsleague_results_2026_27.json';
+import europaleagueFixturesData from './data/europaleague_results_2026_27.json';
+import conferenceleagueFixturesData from './data/conferenceleague_results_2026_27.json';
+import championsleagueScheduleData from './data/championsleague_fixtures_2026_27.json';
+import europaleagueScheduleData from './data/europaleague_fixtures_2026_27.json';
+import conferenceleagueScheduleData from './data/conferenceleague_fixtures_2026_27.json';
 import eplScheduleData from './data/epl_fixtures_2026_27.json';
 import spflScheduleData from './data/spfl_fixtures_2026_27.json';
 import laligaScheduleData from './data/laliga_fixtures_2026_27.json';
@@ -49,7 +55,7 @@ import serieaScheduleData from './data/seriea_fixtures_2026_27.json';
 import ligue1ScheduleData from './data/ligue1_fixtures_2026_27.json';
 import dataUpdate from './data/data_update.json';
 import type { Fixture, FixturesData, ScheduleData, ScheduledFixture } from './types';
-import logo from './assets/logo-header.png';
+import logo from './assets/logo-mark.png';
 import './App.css';
 
 type Page = 'home' | 'league' | 'tips';
@@ -59,7 +65,7 @@ type ProjectionView = 'table' | 'next' | 'analysis';
 type FixturesTab = 'fixtures' | 'results';
 type StatsTab = 'team' | 'all' | 'comparisons';
 type AnalysisTab = 'data' | 'tips';
-type League = 'spfl' | 'epl' | 'laliga' | 'bundesliga' | 'seriea' | 'ligue1';
+type League = 'spfl' | 'epl' | 'laliga' | 'bundesliga' | 'seriea' | 'ligue1' | 'championsleague' | 'europaleague' | 'conferenceleague';
 
 const spflFixtures = flattenFixtures(spflFixturesData as FixturesData);
 // Some older fixtures in prior-season files are missing extended stats (xG breakdowns, shots,
@@ -79,12 +85,19 @@ const serieaLastSeasonFixtures = flattenFixtures(serieaLastSeasonFixturesData as
 const ligue1Fixtures = flattenFixtures(ligue1FixturesData as FixturesData);
 const ligue1LastSeasonFixtures = flattenFixtures(ligue1LastSeasonFixturesData as FixturesData);
 
+const championsleagueFixtures = flattenFixtures(championsleagueFixturesData as FixturesData);
+const europaleagueFixtures = flattenFixtures(europaleagueFixturesData as FixturesData);
+const conferenceleagueFixtures = flattenFixtures(conferenceleagueFixturesData as FixturesData);
+
 const spflSchedule = flattenSchedule(spflScheduleData as ScheduleData);
 const eplSchedule = flattenSchedule(eplScheduleData as ScheduleData);
 const laligaSchedule = flattenSchedule(laligaScheduleData as ScheduleData);
 const bundesligaSchedule = flattenSchedule(bundesligaScheduleData as ScheduleData);
 const serieaSchedule = flattenSchedule(serieaScheduleData as ScheduleData);
 const ligue1Schedule = flattenSchedule(ligue1ScheduleData as ScheduleData);
+const championsleagueSchedule = flattenSchedule(championsleagueScheduleData as ScheduleData);
+const europaleagueSchedule = flattenSchedule(europaleagueScheduleData as ScheduleData);
+const conferenceleagueSchedule = flattenSchedule(conferenceleagueScheduleData as ScheduleData);
 
 interface LeagueConfig {
   label: string;
@@ -101,6 +114,10 @@ interface LeagueConfig {
   seasonGames: number;
   tableDividers: number[];
   projectionDividers: number[];
+  // Whether betting tips are offered for this competition
+  showTips: boolean;
+  // Whether the projected final table is offered for this competition
+  showProjection: boolean;
 }
 
 const LEAGUE_CONFIG: Record<League, LeagueConfig> = {
@@ -115,6 +132,8 @@ const LEAGUE_CONFIG: Record<League, LeagueConfig> = {
     seasonGames: 38,
     tableDividers: [1, 6, 10, 11],
     projectionDividers: [1, 6, 10, 11],
+    showTips: true,
+    showProjection: true,
   },
   epl: {
     label: 'Premier League',
@@ -127,6 +146,8 @@ const LEAGUE_CONFIG: Record<League, LeagueConfig> = {
     seasonGames: 38,
     tableDividers: [4, 10, 17],
     projectionDividers: [4, 10, 17],
+    showTips: true,
+    showProjection: true,
   },
   laliga: {
     label: 'La Liga',
@@ -139,6 +160,8 @@ const LEAGUE_CONFIG: Record<League, LeagueConfig> = {
     seasonGames: 38,
     tableDividers: [4, 7, 17],
     projectionDividers: [4, 7, 17],
+    showTips: true,
+    showProjection: true,
   },
   bundesliga: {
     label: 'Bundesliga',
@@ -151,6 +174,8 @@ const LEAGUE_CONFIG: Record<League, LeagueConfig> = {
     seasonGames: 34,
     tableDividers: [4, 6, 15, 16],
     projectionDividers: [4, 6, 15, 16],
+    showTips: true,
+    showProjection: true,
   },
   seriea: {
     label: 'Serie A',
@@ -163,6 +188,8 @@ const LEAGUE_CONFIG: Record<League, LeagueConfig> = {
     seasonGames: 38,
     tableDividers: [4, 6, 17],
     projectionDividers: [4, 6, 17],
+    showTips: true,
+    showProjection: true,
   },
   ligue1: {
     label: 'Ligue 1',
@@ -175,18 +202,71 @@ const LEAGUE_CONFIG: Record<League, LeagueConfig> = {
     seasonGames: 34,
     tableDividers: [4, 6, 15, 16],
     projectionDividers: [4, 6, 15, 16],
+    showTips: true,
+    showProjection: true,
+  },
+  championsleague: {
+    label: 'Champions League',
+    flag: 'europe',
+    schedule: championsleagueSchedule,
+    fixtures: championsleagueFixtures,
+    // First season of data for the competition, so no prior-season form to build priors from
+    lastSeasonFixtures: [],
+    historicalSeasons: [],
+    projection: PROJECTION_CONFIG.championsleague,
+    seasonGames: 8,
+    tableDividers: [8, 24],
+    projectionDividers: [8, 24],
+    showTips: false,
+    showProjection: false,
+  },
+  europaleague: {
+    label: 'Europa League',
+    flag: 'europe',
+    schedule: europaleagueSchedule,
+    fixtures: europaleagueFixtures,
+    // First season of data for the competition, so no prior-season form to build priors from
+    lastSeasonFixtures: [],
+    historicalSeasons: [],
+    projection: PROJECTION_CONFIG.europaleague,
+    seasonGames: 8,
+    tableDividers: [8, 24],
+    projectionDividers: [8, 24],
+    showTips: false,
+    showProjection: false,
+  },
+  conferenceleague: {
+    label: 'Conference League',
+    flag: 'europe',
+    schedule: conferenceleagueSchedule,
+    fixtures: conferenceleagueFixtures,
+    // First season of data for the competition, so no prior-season form to build priors from
+    lastSeasonFixtures: [],
+    historicalSeasons: [],
+    projection: PROJECTION_CONFIG.conferenceleague,
+    seasonGames: 6,
+    tableDividers: [8, 24],
+    projectionDividers: [8, 24],
+    showTips: false,
+    showProjection: false,
   },
 };
 
-const LEAGUE_ORDER: League[] = ['spfl', 'epl', 'laliga', 'bundesliga', 'seriea', 'ligue1'];
+const LEAGUE_ORDER: League[] = ['spfl', 'epl', 'laliga', 'bundesliga', 'seriea', 'ligue1', 'championsleague', 'europaleague', 'conferenceleague'];
 
-const ANALYSIS_LEAGUES = LEAGUE_ORDER.map(key => ({
+const ANALYSIS_LEAGUES = LEAGUE_ORDER.filter(key => LEAGUE_CONFIG[key].showProjection).map(key => ({
   key,
   label: LEAGUE_CONFIG[key].label,
   fixtures: LEAGUE_CONFIG[key].fixtures,
   lastSeasonFixtures: LEAGUE_CONFIG[key].lastSeasonFixtures,
   schedule: LEAGUE_CONFIG[key].schedule,
 }));
+
+const NO_TIPS: LeagueTips = {
+  next: [],
+  top: [],
+  record: { rounds: 0, topPlaced: 0, topWon: 0, allPlaced: 0, allWon: 0 },
+};
 
 const lastUpdated = new Date(dataUpdate.updateTime).toLocaleString('en-GB', {
   timeZone: 'Europe/London',
@@ -236,12 +316,12 @@ function App() {
     [fixtures, config.seasonGames, projectionContext]
   );
   const tips = useMemo(
-    () => getLeagueTips(fixtures, lastSeasonFixtures, config.schedule),
-    [fixtures, lastSeasonFixtures, config.schedule]
+    () => config.showTips ? getLeagueTips(fixtures, lastSeasonFixtures, config.schedule) : NO_TIPS,
+    [fixtures, lastSeasonFixtures, config]
   );
   // Only worked out when the all-leagues tips page is open
   const allLeagueTips = useMemo(
-    () => page !== 'tips' ? [] : LEAGUE_ORDER.map(key => ({
+    () => page !== 'tips' ? [] : LEAGUE_ORDER.filter(key => LEAGUE_CONFIG[key].showTips).map(key => ({
       key,
       label: LEAGUE_CONFIG[key].label,
       tips: getLeagueTips(LEAGUE_CONFIG[key].fixtures, LEAGUE_CONFIG[key].lastSeasonFixtures, LEAGUE_CONFIG[key].schedule),
@@ -256,6 +336,11 @@ function App() {
     seasonLabel: getSeasonLabel(LEAGUE_CONFIG[key].fixtures),
     flag: LEAGUE_CONFIG[key].flag,
   })), []);
+
+  // Each page and league opens at the top, rather than wherever the previous one was scrolled to
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [page, league]);
 
   const handleSelectLeague = (next: string, tab?: 'tips') => {
     setLeague(next as League);
@@ -297,11 +382,13 @@ function App() {
                 onClick={e => { e.stopPropagation(); handleGoHome(); }}
                 aria-label="Go to home page"
               >
-                <img className="title-logo" src={logo} alt="Oan the Numbers" />
+                <img className="title-logo" src={logo} alt="" />
               </button>
-              Football Analysis
+              <span className={page === 'league' ? 'title-wordmark-league' : undefined}>
+                oanthe<span className="title-wordmark-accent">numbers</span>
+              </span>
             </h1>
-            {page === 'league' && <span className="subtitle">{config.label} Analysis</span>}
+            {page === 'league' && <span className="subtitle">{config.label}</span>}
           </div>
           {page === 'league' && (
             <div className="header-controls">
@@ -345,95 +432,99 @@ function App() {
                 </button>
               </div>
 
-              {section === 'tables' && (
-                <div className="view-tabs secondary-tabs">
-                  <button
-                    className={`view-tab ${tablesTab === 'current' ? 'active' : ''}`}
-                    onClick={() => setTablesTab('current')}
-                  >
-                    Current
-                  </button>
-                  <button
-                    className={`view-tab ${tablesTab === 'projection' ? 'active' : ''}`}
-                    onClick={() => setTablesTab('projection')}
-                  >
-                    Projection
-                  </button>
-                </div>
-              )}
+              <div className="sub-toolbar">
+                {section === 'tables' && config.showProjection && (
+                  <div className="view-tabs secondary-tabs">
+                    <button
+                      className={`view-tab ${tablesTab === 'current' ? 'active' : ''}`}
+                      onClick={() => setTablesTab('current')}
+                    >
+                      Current
+                    </button>
+                    <button
+                      className={`view-tab ${tablesTab === 'projection' ? 'active' : ''}`}
+                      onClick={() => setTablesTab('projection')}
+                    >
+                      Projection
+                    </button>
+                  </div>
+                )}
 
-              {section === 'stats' && (
-                <div className="view-tabs secondary-tabs">
-                  <button
-                    className={`view-tab ${statsTab === 'team' ? 'active' : ''}`}
-                    onClick={() => setStatsTab('team')}
-                  >
-                    Team
-                  </button>
-                  <button
-                    className={`view-tab ${statsTab === 'all' ? 'active' : ''}`}
-                    onClick={() => setStatsTab('all')}
-                  >
-                    All
-                  </button>
-                  <button
-                    className={`view-tab ${statsTab === 'comparisons' ? 'active' : ''}`}
-                    onClick={() => setStatsTab('comparisons')}
-                  >
-                    Charts
-                  </button>
-                </div>
-              )}
+                {section === 'stats' && (
+                  <div className="view-tabs secondary-tabs">
+                    <button
+                      className={`view-tab ${statsTab === 'team' ? 'active' : ''}`}
+                      onClick={() => setStatsTab('team')}
+                    >
+                      Team
+                    </button>
+                    <button
+                      className={`view-tab ${statsTab === 'all' ? 'active' : ''}`}
+                      onClick={() => setStatsTab('all')}
+                    >
+                      All
+                    </button>
+                    <button
+                      className={`view-tab ${statsTab === 'comparisons' ? 'active' : ''}`}
+                      onClick={() => setStatsTab('comparisons')}
+                    >
+                      Charts
+                    </button>
+                  </div>
+                )}
 
-              {section === 'fixtures' && (
-                <div className="view-tabs secondary-tabs">
-                  <button
-                    className={`view-tab ${fixturesTab === 'fixtures' ? 'active' : ''}`}
-                    onClick={() => setFixturesTab('fixtures')}
-                  >
-                    Fixtures
-                  </button>
-                  <button
-                    className={`view-tab ${fixturesTab === 'results' ? 'active' : ''}`}
-                    onClick={() => setFixturesTab('results')}
-                  >
-                    Results
-                  </button>
-                </div>
-              )}
+                {section === 'fixtures' && (
+                  <div className="view-tabs secondary-tabs">
+                    <button
+                      className={`view-tab ${fixturesTab === 'fixtures' ? 'active' : ''}`}
+                      onClick={() => setFixturesTab('fixtures')}
+                    >
+                      Fixtures
+                    </button>
+                    <button
+                      className={`view-tab ${fixturesTab === 'results' ? 'active' : ''}`}
+                      onClick={() => setFixturesTab('results')}
+                    >
+                      Results
+                    </button>
+                  </div>
+                )}
 
-              {section === 'analysis' && (
-                <div className="view-tabs secondary-tabs">
-                  <button
-                    className={`view-tab ${analysisTab === 'data' ? 'active' : ''}`}
-                    onClick={() => setAnalysisTab('data')}
-                  >
-                    Data
-                  </button>
-                  <button
-                    className={`view-tab ${analysisTab === 'tips' ? 'active' : ''}`}
-                    onClick={() => setAnalysisTab('tips')}
-                  >
-                    Tips
-                  </button>
-                </div>
-              )}
+                {section === 'analysis' && (
+                  <div className="view-tabs secondary-tabs">
+                    <button
+                      className={`view-tab ${analysisTab === 'data' ? 'active' : ''}`}
+                      onClick={() => setAnalysisTab('data')}
+                    >
+                      Data
+                    </button>
+                    {config.showTips && (
+                      <button
+                        className={`view-tab ${analysisTab === 'tips' ? 'active' : ''}`}
+                        onClick={() => setAnalysisTab('tips')}
+                      >
+                        Tips
+                      </button>
+                    )}
+                  </div>
+                )}
 
-              {section === 'stats' && statsTab === 'team' && (
-                <div className="team-select-group">
-                  <label htmlFor="team-select">Team</label>
-                  <select
-                    id="team-select"
-                    className="team-select"
-                    value={activeTeam}
-                    onChange={e => setSelectedTeam(e.target.value)}
-                  >
-                    {teams.map(team => (
-                      <option key={team} value={team}>{getTeamName(team)}</option>
-                    ))}
-                  </select>
-                </div>
-              )}
+                {section === 'stats' && statsTab === 'team' && (
+                  <div className="team-select-group">
+                    <label htmlFor="team-select">Team</label>
+                    <select
+                      id="team-select"
+                      className="team-select"
+                      value={activeTeam}
+                      onChange={e => setSelectedTeam(e.target.value)}
+                    >
+                      {teams.map(team => (
+                        <option key={team} value={team}>{getTeamName(team)}</option>
+                      ))}
+                    </select>
+                  </div>
+                )}
+              </div>
             </div>
           </div>
         )}
@@ -460,7 +551,7 @@ function App() {
                 <LeagueHighlights fixtures={fixtures} />
               </>
             )}
-            {section === 'tables' && tablesTab === 'projection' && (
+            {section === 'tables' && tablesTab === 'projection' && config.showProjection && (
               <>
                 {SHOW_PROJECTION_EXTRAS && (
                   <div className="projection-view-toggle">
@@ -503,12 +594,16 @@ function App() {
             )}
             {section === 'fixtures' && <FixturesView mode={fixturesTab} results={fixtures} schedule={config.schedule} tips={tips} />}
             {section === 'analysis' && analysisTab === 'data' && <BettingView key={league} data={bettingStats} />}
-            {section === 'analysis' && analysisTab === 'tips' && <TipsView tips={tips} />}
+            {section === 'analysis' && analysisTab === 'tips' && config.showTips && <TipsView tips={tips} />}
           </>
         )}
       </main>
 
       <footer className="app-footer">
+        <div className="footer-brand">
+          <img src={logo} alt="" />
+          <span>oanthe<span className="title-wordmark-accent">numbers</span></span>
+        </div>
         <p className="footer-source">Data sourced from <a href="https://www.fotmob.com" target="_blank" rel="noreferrer">fotmob.com</a></p>
         <p className="footer-updated">Last updated {lastUpdated}</p>
         <p className="footer-credit">Created by <a href="https://x.com/oanthenumbers" target="_blank" rel="noreferrer">@oanthenumbers</a></p>

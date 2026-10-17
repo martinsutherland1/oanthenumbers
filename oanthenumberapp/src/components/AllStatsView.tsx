@@ -1,6 +1,6 @@
 import { useMemo, useState } from 'react';
 import { XG_TYPES, getTeamXgTotals, getTeamXPointsTotals, type TeamStatTotal } from '../utils/dataProcessing';
-import { getTeamColor, getTeamName } from '../utils/teamColors';
+import { getTeamName } from '../utils/teamColors';
 import type { Fixture } from '../types';
 import './AllStatsView.css';
 
@@ -42,7 +42,6 @@ function StatTable({ title, description, rows }: { title: string; description: s
               <td className="stats-rank">{i + 1}</td>
               <td>
                 <div className="stats-team-cell">
-                  <span className="team-color-dot" style={{ backgroundColor: getTeamColor(row.team) }} />
                   <span className="stats-team-name">{getTeamName(row.team)}</span>
                 </div>
               </td>

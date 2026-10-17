@@ -1,5 +1,5 @@
 import type { H2HRecord } from '../utils/dataProcessing';
-import { getTeamColor, getTeamName } from '../utils/teamColors';
+import { getTeamName } from '../utils/teamColors';
 import './H2HTable.css';
 
 interface H2HTableProps {
@@ -31,10 +31,6 @@ export function H2HTable({ team, data }: H2HTableProps) {
               <tr key={row.opponent}>
                 <td className="h2h-opponent-name">
                   <div className="h2h-opponent-cell">
-                    <span
-                      className="team-color-dot"
-                      style={{ backgroundColor: getTeamColor(row.opponent) }}
-                    />
                     <span className="h2h-opponent-name-text">{getTeamName(row.opponent)}</span>
                   </div>
                 </td>

@@ -1,6 +1,6 @@
 .xg-log-container {
   background: var(--surface);
-  border-radius: 12px;
+  border-radius: var(--radius);
   padding: 16px;
   border: 1px solid var(--border);
 }
@@ -54,7 +54,7 @@
 
 .xg-log-btn.active {
   background: var(--primary);
-  color: white;
+  color: var(--on-primary);
 }
 
 .xg-log-subtitle {
@@ -125,12 +125,12 @@
 
 .xg-log-table tbody td.xg-log-positive,
 .xg-log-table tfoot td.xg-log-positive {
-  color: #22c55e;
+  color: var(--positive);
 }
 
 .xg-log-table tbody td.xg-log-negative,
 .xg-log-table tfoot td.xg-log-negative {
-  color: #ef4444;
+  color: var(--negative);
 }
 
 @media (max-width: 480px) {

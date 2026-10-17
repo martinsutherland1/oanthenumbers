@@ -1,135 +1,261 @@
 .home-page {
   display: flex;
   flex-direction: column;
-  align-items: center;
   gap: 32px;
-  padding: 40px 0 24px;
+  width: 100%;
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 16px 0 8px;
 }
 
-.home-tips-btn {
-  align-self: flex-end;
-  margin-bottom: -16px;
-  padding: 6px 16px;
-  border: none;
-  border-radius: 8px;
-  background: var(--primary);
-  color: white;
-  font-size: 0.8rem;
-  font-weight: 600;
-  cursor: pointer;
-}
-
-.home-tips-btn:hover {
-  opacity: 0.9;
-}
-
-.home-intro {
+/* Hero */
+.home-hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
-  max-width: 480px;
+  padding: 24px 0 8px;
+}
+
+.home-hero-mark {
+  width: 88px;
+  height: 88px;
+  margin-bottom: 16px;
 }
 
 .home-heading {
-  margin: 0 0 8px;
-  font-size: 1.75rem;
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 2.5rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  color: var(--text);
+}
+
+.home-heading-accent {
+  color: var(--primary);
+}
+
+.home-tagline {
+  margin: 14px 0 0;
+  max-width: 520px;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: var(--text-secondary);
+}
+
+/* Tips call-to-action */
+.home-tips-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  padding: 18px 20px;
+  text-align: left;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  background: linear-gradient(100deg, var(--primary-light), transparent 70%), var(--surface);
+  border: 1px solid rgba(255, 107, 0, 0.35);
+  border-radius: var(--radius);
+  transition: border-color 0.15s ease, transform 0.15s ease;
+}
+
+.home-tips-card:hover {
+  border-color: var(--primary);
+  transform: translateY(-2px);
+}
+
+.home-tips-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  background: var(--primary);
+  color: var(--on-primary);
+}
+
+.home-tips-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex: 1;
+  min-width: 0;
+}
+
+.home-tips-title {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
   font-weight: 700;
   color: var(--text);
 }
 
-.home-tagline {
-  margin: 0;
-  font-size: 0.95rem;
+.home-tips-sub {
+  font-size: 0.85rem;
   color: var(--text-secondary);
+}
+
+.home-tips-cta {
+  flex-shrink: 0;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--primary);
+}
+
+/* League groups */
+.home-group {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.home-group-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--text-muted);
+}
+
+/* Rule after the label, like the lines around the logo's tagline */
+.home-group-title::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--border);
 }
 
 .home-tiles {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 20px;
-  width: 100%;
-  max-width: 800px;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 12px;
 }
 
 .league-tile {
+  position: relative;
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 18px;
   text-align: left;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
   background: var(--surface);
   border: 1px solid var(--border);
-  border-radius: 16px;
-  padding: 0;
+  border-radius: var(--radius);
   overflow: hidden;
-  cursor: pointer;
-  color: inherit;
-  font: inherit;
-  transition: transform 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
+  transition: border-color 0.15s ease, background 0.15s ease, transform 0.15s ease;
+}
+
+/* Orange edge slides in on hover */
+.league-tile::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: var(--primary);
+  transform: scaleY(0);
+  transition: transform 0.18s ease;
 }
 
 .league-tile:hover {
-  transform: translateY(-4px);
-  border-color: var(--primary);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.18);
+  background: var(--surface-raised);
+  border-color: var(--border-strong);
+  transform: translateY(-2px);
 }
 
-.league-tile-accent {
-  height: 6px;
-  width: 100%;
-  background: var(--primary);
+.league-tile:hover::before {
+  transform: scaleY(1);
+}
+
+.league-tile-flag {
+  width: 32px;
+  height: 20px;
+  flex-shrink: 0;
+  border-radius: 4px;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.08);
 }
 
 .league-tile-body {
   display: flex;
   flex-direction: column;
-  gap: 4px;
-  padding: 24px 24px 8px;
-}
-
-.league-tile-title-row {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.league-tile-flag {
-  width: 28px;
-  height: 17px;
-  flex-shrink: 0;
-  border-radius: 3px;
-  border: 1px solid var(--border);
+  gap: 2px;
+  flex: 1;
+  min-width: 0;
 }
 
 .league-tile-label {
-  font-size: 1.25rem;
-  font-weight: 700;
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 600;
   color: var(--text);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .league-tile-season {
-  font-size: 0.85rem;
-  color: var(--text-secondary);
+  font-size: 0.8rem;
+  color: var(--text-muted);
 }
 
-.league-tile-cta {
-  padding: 0 24px 20px;
+.league-tile-chevron {
+  flex-shrink: 0;
+  color: var(--text-muted);
+  transition: color 0.15s ease, transform 0.15s ease;
+}
+
+.league-tile:hover .league-tile-chevron {
   color: var(--primary);
-  font-weight: 600;
-  font-size: 0.9rem;
+  transform: translateX(3px);
 }
 
-@media (max-width: 480px) {
+@media (max-width: 560px) {
   .home-page {
-    padding: 24px 0 16px;
     gap: 24px;
+    padding-top: 0;
+  }
+
+  .home-hero-mark {
+    width: 68px;
+    height: 68px;
   }
 
   .home-heading {
-    font-size: 1.4rem;
+    font-size: 1.9rem;
   }
 
-  .league-tile-body {
-    padding: 20px 20px 6px;
+  .home-tagline {
+    font-size: 0.875rem;
   }
 
-  .league-tile-cta {
-    padding: 0 20px 16px;
+  .home-tips-card {
+    padding: 14px 16px;
+    gap: 12px;
+  }
+
+  .home-tips-cta {
+    display: none;
+  }
+
+  .home-tiles {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .league-tile {
+    padding: 14px 16px;
   }
 }

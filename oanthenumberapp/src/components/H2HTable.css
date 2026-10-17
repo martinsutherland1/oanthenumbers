@@ -1,6 +1,6 @@
 .h2h-table-container {
   background: var(--surface);
-  border-radius: 12px;
+  border-radius: var(--radius);
   padding: 16px;
   border: 1px solid var(--border);
 }
@@ -62,12 +62,6 @@
   min-width: 0;
 }
 
-.team-color-dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  flex-shrink: 0;
-}
 
 .h2h-num {
   font-variant-numeric: tabular-nums;
@@ -78,11 +72,11 @@
 }
 
 .h2h-wins {
-  color: #22c55e;
+  color: var(--positive);
 }
 
 .h2h-losses {
-  color: #ef4444;
+  color: var(--negative);
 }
 
 .h2h-draws {
@@ -90,7 +84,7 @@
 }
 
 .h2h-pct.positive {
-  color: #22c55e;
+  color: var(--positive);
   font-weight: 600;
 }
 
@@ -100,7 +94,7 @@
 }
 
 .h2h-pct.negative {
-  color: #ef4444;
+  color: var(--negative);
   font-weight: 500;
 }
 
@@ -110,7 +104,7 @@
   color: var(--text-secondary);
   font-size: 0.9rem;
   background: var(--surface);
-  border-radius: 12px;
+  border-radius: var(--radius);
   border: 1px solid var(--border);
 }
 
@@ -163,7 +157,4 @@
     width: 12%;
   }
 
-  .team-color-dot {
-    display: none;
-  }
 }

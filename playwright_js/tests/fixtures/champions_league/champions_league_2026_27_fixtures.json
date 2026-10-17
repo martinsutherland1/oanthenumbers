@@ -1,0 +1,882 @@
+{
+  "fixtures_0": [
+    {
+      "date": "2026-09-08",
+      "team_home": "aek-athens",
+      "team_away": "lask",
+      "round": 1
+    },
+    {
+      "date": "2026-09-08",
+      "team_home": "club-brugge",
+      "team_away": "aston-villa",
+      "round": 1
+    },
+    {
+      "date": "2026-09-08",
+      "team_home": "borussia-dortmund",
+      "team_away": "villarreal",
+      "round": 1
+    },
+    {
+      "date": "2026-09-08",
+      "team_home": "porto",
+      "team_away": "manchester-city",
+      "round": 1
+    },
+    {
+      "date": "2026-09-08",
+      "team_home": "lille",
+      "team_away": "real-betis",
+      "round": 1
+    },
+    {
+      "date": "2026-09-08",
+      "team_home": "real-madrid",
+      "team_away": "inter",
+      "round": 1
+    },
+    {
+      "date": "2026-09-09",
+      "team_home": "barcelona",
+      "team_away": "feyenoord",
+      "round": 1
+    },
+    {
+      "date": "2026-09-09",
+      "team_home": "stuttgart",
+      "team_away": "viking",
+      "round": 1
+    },
+    {
+      "date": "2026-09-09",
+      "team_home": "liverpool",
+      "team_away": "atletico-madrid",
+      "round": 1
+    },
+    {
+      "date": "2026-09-09",
+      "team_home": "paris-saint-germain",
+      "team_away": "slovan-bratislava",
+      "round": 1
+    },
+    {
+      "date": "2026-09-09",
+      "team_home": "sporting-cp",
+      "team_away": "galatasaray",
+      "round": 1
+    },
+    {
+      "date": "2026-09-09",
+      "team_home": "napoli",
+      "team_away": "arsenal",
+      "round": 1
+    },
+    {
+      "date": "2026-09-10",
+      "team_home": "fenerbahce",
+      "team_away": "roma",
+      "round": 1
+    },
+    {
+      "date": "2026-09-10",
+      "team_home": "psv-eindhoven",
+      "team_away": "shakhtar-donetsk",
+      "round": 1
+    },
+    {
+      "date": "2026-09-10",
+      "team_home": "como",
+      "team_away": "rb-leipzig",
+      "round": 1
+    },
+    {
+      "date": "2026-09-10",
+      "team_home": "bayern-munchen",
+      "team_away": "bodoglimt",
+      "round": 1
+    },
+    {
+      "date": "2026-09-10",
+      "team_home": "manchester-united",
+      "team_away": "sabah",
+      "round": 1
+    },
+    {
+      "date": "2026-09-10",
+      "team_home": "slavia-prague",
+      "team_away": "lens",
+      "round": 1
+    }
+  ],
+  "fixtures_1": [
+    {
+      "date": "2026-10-13",
+      "team_home": "lens",
+      "team_away": "sporting-cp",
+      "round": 2
+    },
+    {
+      "date": "2026-10-13",
+      "team_home": "sabah",
+      "team_away": "slavia-prague",
+      "round": 2
+    },
+    {
+      "date": "2026-10-13",
+      "team_home": "arsenal",
+      "team_away": "lille",
+      "round": 2
+    },
+    {
+      "date": "2026-10-13",
+      "team_home": "atletico-madrid",
+      "team_away": "manchester-united",
+      "round": 2
+    },
+    {
+      "date": "2026-10-13",
+      "team_home": "inter",
+      "team_away": "club-brugge",
+      "round": 2
+    },
+    {
+      "date": "2026-10-13",
+      "team_home": "galatasaray",
+      "team_away": "barcelona",
+      "round": 2
+    },
+    {
+      "date": "2026-10-13",
+      "team_home": "rb-leipzig",
+      "team_away": "psv-eindhoven",
+      "round": 2
+    },
+    {
+      "date": "2026-10-13",
+      "team_home": "viking",
+      "team_away": "bayern-munchen",
+      "round": 2
+    },
+    {
+      "date": "2026-10-13",
+      "team_home": "villarreal",
+      "team_away": "napoli",
+      "round": 2
+    },
+    {
+      "date": "2026-10-14",
+      "team_home": "feyenoord",
+      "team_away": "como",
+      "round": 2
+    },
+    {
+      "date": "2026-10-14",
+      "team_home": "lask",
+      "team_away": "liverpool",
+      "round": 2
+    },
+    {
+      "date": "2026-10-14",
+      "team_home": "roma",
+      "team_away": "real-madrid",
+      "round": 2
+    },
+    {
+      "date": "2026-10-14",
+      "team_home": "aston-villa",
+      "team_away": "fenerbahce",
+      "round": 2
+    },
+    {
+      "date": "2026-10-14",
+      "team_home": "shakhtar-donetsk",
+      "team_away": "aek-athens",
+      "round": 2
+    },
+    {
+      "date": "2026-10-14",
+      "team_home": "bodoglimt",
+      "team_away": "borussia-dortmund",
+      "round": 2
+    },
+    {
+      "date": "2026-10-14",
+      "team_home": "manchester-city",
+      "team_away": "paris-saint-germain",
+      "round": 2
+    },
+    {
+      "date": "2026-10-14",
+      "team_home": "real-betis",
+      "team_away": "porto",
+      "round": 2
+    },
+    {
+      "date": "2026-10-14",
+      "team_home": "slovan-bratislava",
+      "team_away": "stuttgart",
+      "round": 2
+    }
+  ],
+  "fixtures_2": [
+    {
+      "date": "2026-10-20",
+      "team_home": "fenerbahce",
+      "team_away": "slavia-prague",
+      "round": 3
+    },
+    {
+      "date": "2026-10-20",
+      "team_home": "sabah",
+      "team_away": "borussia-dortmund",
+      "round": 3
+    },
+    {
+      "date": "2026-10-20",
+      "team_home": "roma",
+      "team_away": "slovan-bratislava",
+      "round": 3
+    },
+    {
+      "date": "2026-10-20",
+      "team_home": "porto",
+      "team_away": "psv-eindhoven",
+      "round": 3
+    },
+    {
+      "date": "2026-10-20",
+      "team_home": "liverpool",
+      "team_away": "villarreal",
+      "round": 3
+    },
+    {
+      "date": "2026-10-20",
+      "team_home": "manchester-city",
+      "team_away": "aek-athens",
+      "round": 3
+    },
+    {
+      "date": "2026-10-20",
+      "team_home": "paris-saint-germain",
+      "team_away": "barcelona",
+      "round": 3
+    },
+    {
+      "date": "2026-10-20",
+      "team_home": "napoli",
+      "team_away": "bodoglimt",
+      "round": 3
+    },
+    {
+      "date": "2026-10-20",
+      "team_home": "stuttgart",
+      "team_away": "atletico-madrid",
+      "round": 3
+    },
+    {
+      "date": "2026-10-21",
+      "team_home": "como",
+      "team_away": "manchester-united",
+      "round": 3
+    },
+    {
+      "date": "2026-10-21",
+      "team_home": "lille",
+      "team_away": "galatasaray",
+      "round": 3
+    },
+    {
+      "date": "2026-10-21",
+      "team_home": "aston-villa",
+      "team_away": "viking",
+      "round": 3
+    },
+    {
+      "date": "2026-10-21",
+      "team_home": "club-brugge",
+      "team_away": "lens",
+      "round": 3
+    },
+    {
+      "date": "2026-10-21",
+      "team_home": "bayern-munchen",
+      "team_away": "arsenal",
+      "round": 3
+    },
+    {
+      "date": "2026-10-21",
+      "team_home": "inter",
+      "team_away": "shakhtar-donetsk",
+      "round": 3
+    },
+    {
+      "date": "2026-10-21",
+      "team_home": "real-madrid",
+      "team_away": "rb-leipzig",
+      "round": 3
+    },
+    {
+      "date": "2026-10-21",
+      "team_home": "real-betis",
+      "team_away": "feyenoord",
+      "round": 3
+    },
+    {
+      "date": "2026-10-21",
+      "team_home": "sporting-cp",
+      "team_away": "lask",
+      "round": 3
+    }
+  ],
+  "fixtures_3": [
+    {
+      "date": "2026-11-03",
+      "team_home": "shakhtar-donetsk",
+      "team_away": "sporting-cp",
+      "round": 4
+    },
+    {
+      "date": "2026-11-03",
+      "team_home": "galatasaray",
+      "team_away": "stuttgart",
+      "round": 4
+    },
+    {
+      "date": "2026-11-03",
+      "team_home": "atletico-madrid",
+      "team_away": "bayern-munchen",
+      "round": 4
+    },
+    {
+      "date": "2026-11-03",
+      "team_home": "barcelona",
+      "team_away": "aston-villa",
+      "round": 4
+    },
+    {
+      "date": "2026-11-03",
+      "team_home": "feyenoord",
+      "team_away": "inter",
+      "round": 4
+    },
+    {
+      "date": "2026-11-03",
+      "team_home": "bodoglimt",
+      "team_away": "lille",
+      "round": 4
+    },
+    {
+      "date": "2026-11-03",
+      "team_home": "lask",
+      "team_away": "slovan-bratislava",
+      "round": 4
+    },
+    {
+      "date": "2026-11-03",
+      "team_home": "manchester-united",
+      "team_away": "roma",
+      "round": 4
+    },
+    {
+      "date": "2026-11-03",
+      "team_home": "villarreal",
+      "team_away": "paris-saint-germain",
+      "round": 4
+    },
+    {
+      "date": "2026-11-04",
+      "team_home": "aek-athens",
+      "team_away": "real-madrid",
+      "round": 4
+    },
+    {
+      "date": "2026-11-04",
+      "team_home": "fenerbahce",
+      "team_away": "liverpool",
+      "round": 4
+    },
+    {
+      "date": "2026-11-04",
+      "team_home": "borussia-dortmund",
+      "team_away": "real-betis",
+      "round": 4
+    },
+    {
+      "date": "2026-11-04",
+      "team_home": "porto",
+      "team_away": "napoli",
+      "round": 4
+    },
+    {
+      "date": "2026-11-04",
+      "team_home": "psv-eindhoven",
+      "team_away": "club-brugge",
+      "round": 4
+    },
+    {
+      "date": "2026-11-04",
+      "team_home": "rb-leipzig",
+      "team_away": "manchester-city",
+      "round": 4
+    },
+    {
+      "date": "2026-11-04",
+      "team_home": "lens",
+      "team_away": "como",
+      "round": 4
+    },
+    {
+      "date": "2026-11-04",
+      "team_home": "slavia-prague",
+      "team_away": "arsenal",
+      "round": 4
+    },
+    {
+      "date": "2026-11-04",
+      "team_home": "viking",
+      "team_away": "sabah",
+      "round": 4
+    }
+  ],
+  "fixtures_4": [
+    {
+      "date": "2026-11-24",
+      "team_home": "bodoglimt",
+      "team_away": "lask",
+      "round": 5
+    },
+    {
+      "date": "2026-11-24",
+      "team_home": "galatasaray",
+      "team_away": "aston-villa",
+      "round": 5
+    },
+    {
+      "date": "2026-11-24",
+      "team_home": "arsenal",
+      "team_away": "borussia-dortmund",
+      "round": 5
+    },
+    {
+      "date": "2026-11-24",
+      "team_home": "como",
+      "team_away": "aek-athens",
+      "round": 5
+    },
+    {
+      "date": "2026-11-24",
+      "team_home": "feyenoord",
+      "team_away": "porto",
+      "round": 5
+    },
+    {
+      "date": "2026-11-24",
+      "team_home": "manchester-city",
+      "team_away": "napoli",
+      "round": 5
+    },
+    {
+      "date": "2026-11-24",
+      "team_home": "rb-leipzig",
+      "team_away": "lens",
+      "round": 5
+    },
+    {
+      "date": "2026-11-24",
+      "team_home": "real-madrid",
+      "team_away": "psv-eindhoven",
+      "round": 5
+    },
+    {
+      "date": "2026-11-24",
+      "team_home": "slovan-bratislava",
+      "team_away": "real-betis",
+      "round": 5
+    },
+    {
+      "date": "2026-11-25",
+      "team_home": "sabah",
+      "team_away": "barcelona",
+      "round": 5
+    },
+    {
+      "date": "2026-11-25",
+      "team_home": "slavia-prague",
+      "team_away": "villarreal",
+      "round": 5
+    },
+    {
+      "date": "2026-11-25",
+      "team_home": "atletico-madrid",
+      "team_away": "viking",
+      "round": 5
+    },
+    {
+      "date": "2026-11-25",
+      "team_home": "club-brugge",
+      "team_away": "liverpool",
+      "round": 5
+    },
+    {
+      "date": "2026-11-25",
+      "team_home": "inter",
+      "team_away": "stuttgart",
+      "round": 5
+    },
+    {
+      "date": "2026-11-25",
+      "team_home": "shakhtar-donetsk",
+      "team_away": "fenerbahce",
+      "round": 5
+    },
+    {
+      "date": "2026-11-25",
+      "team_home": "lille",
+      "team_away": "bayern-munchen",
+      "round": 5
+    },
+    {
+      "date": "2026-11-25",
+      "team_home": "paris-saint-germain",
+      "team_away": "roma",
+      "round": 5
+    },
+    {
+      "date": "2026-11-25",
+      "team_home": "sporting-cp",
+      "team_away": "manchester-united",
+      "round": 5
+    }
+  ],
+  "fixtures_5": [
+    {
+      "date": "2026-12-08",
+      "team_home": "viking",
+      "team_away": "feyenoord",
+      "round": 6
+    },
+    {
+      "date": "2026-12-08",
+      "team_home": "villarreal",
+      "team_away": "sabah",
+      "round": 6
+    },
+    {
+      "date": "2026-12-08",
+      "team_home": "aek-athens",
+      "team_away": "galatasaray",
+      "round": 6
+    },
+    {
+      "date": "2026-12-08",
+      "team_home": "roma",
+      "team_away": "sporting-cp",
+      "round": 6
+    },
+    {
+      "date": "2026-12-08",
+      "team_home": "aston-villa",
+      "team_away": "paris-saint-germain",
+      "round": 6
+    },
+    {
+      "date": "2026-12-08",
+      "team_home": "barcelona",
+      "team_away": "manchester-city",
+      "round": 6
+    },
+    {
+      "date": "2026-12-08",
+      "team_home": "bayern-munchen",
+      "team_away": "slavia-prague",
+      "round": 6
+    },
+    {
+      "date": "2026-12-08",
+      "team_home": "manchester-united",
+      "team_away": "rb-leipzig",
+      "round": 6
+    },
+    {
+      "date": "2026-12-08",
+      "team_home": "napoli",
+      "team_away": "club-brugge",
+      "round": 6
+    },
+    {
+      "date": "2026-12-09",
+      "team_home": "real-betis",
+      "team_away": "como",
+      "round": 6
+    },
+    {
+      "date": "2026-12-09",
+      "team_home": "slovan-bratislava",
+      "team_away": "shakhtar-donetsk",
+      "round": 6
+    },
+    {
+      "date": "2026-12-09",
+      "team_home": "arsenal",
+      "team_away": "real-madrid",
+      "round": 6
+    },
+    {
+      "date": "2026-12-09",
+      "team_home": "borussia-dortmund",
+      "team_away": "inter",
+      "round": 6
+    },
+    {
+      "date": "2026-12-09",
+      "team_home": "lask",
+      "team_away": "fenerbahce",
+      "round": 6
+    },
+    {
+      "date": "2026-12-09",
+      "team_home": "liverpool",
+      "team_away": "porto",
+      "round": 6
+    },
+    {
+      "date": "2026-12-09",
+      "team_home": "lens",
+      "team_away": "bodoglimt",
+      "round": 6
+    },
+    {
+      "date": "2026-12-09",
+      "team_home": "psv-eindhoven",
+      "team_away": "atletico-madrid",
+      "round": 6
+    },
+    {
+      "date": "2026-12-09",
+      "team_home": "stuttgart",
+      "team_away": "lille",
+      "round": 6
+    }
+  ],
+  "fixtures_6": [
+    {
+      "date": "2027-01-19",
+      "team_home": "bodoglimt",
+      "team_away": "atletico-madrid",
+      "round": 7
+    },
+    {
+      "date": "2027-01-19",
+      "team_home": "galatasaray",
+      "team_away": "feyenoord",
+      "round": 7
+    },
+    {
+      "date": "2027-01-19",
+      "team_home": "aek-athens",
+      "team_away": "roma",
+      "round": 7
+    },
+    {
+      "date": "2027-01-19",
+      "team_home": "aston-villa",
+      "team_away": "borussia-dortmund",
+      "round": 7
+    },
+    {
+      "date": "2027-01-19",
+      "team_home": "inter",
+      "team_away": "liverpool",
+      "round": 7
+    },
+    {
+      "date": "2027-01-19",
+      "team_home": "porto",
+      "team_away": "slavia-prague",
+      "round": 7
+    },
+    {
+      "date": "2027-01-19",
+      "team_home": "lille",
+      "team_away": "slovan-bratislava",
+      "round": 7
+    },
+    {
+      "date": "2027-01-19",
+      "team_home": "real-madrid",
+      "team_away": "lask",
+      "round": 7
+    },
+    {
+      "date": "2027-01-19",
+      "team_home": "stuttgart",
+      "team_away": "club-brugge",
+      "round": 7
+    },
+    {
+      "date": "2027-01-20",
+      "team_home": "fenerbahce",
+      "team_away": "villarreal",
+      "round": 7
+    },
+    {
+      "date": "2027-01-20",
+      "team_home": "sabah",
+      "team_away": "napoli",
+      "round": 7
+    },
+    {
+      "date": "2027-01-20",
+      "team_home": "como",
+      "team_away": "paris-saint-germain",
+      "round": 7
+    },
+    {
+      "date": "2027-01-20",
+      "team_home": "manchester-united",
+      "team_away": "bayern-munchen",
+      "round": 7
+    },
+    {
+      "date": "2027-01-20",
+      "team_home": "rb-leipzig",
+      "team_away": "shakhtar-donetsk",
+      "round": 7
+    },
+    {
+      "date": "2027-01-20",
+      "team_home": "lens",
+      "team_away": "manchester-city",
+      "round": 7
+    },
+    {
+      "date": "2027-01-20",
+      "team_home": "real-betis",
+      "team_away": "arsenal",
+      "round": 7
+    },
+    {
+      "date": "2027-01-20",
+      "team_home": "sporting-cp",
+      "team_away": "barcelona",
+      "round": 7
+    },
+    {
+      "date": "2027-01-20",
+      "team_home": "viking",
+      "team_away": "psv-eindhoven",
+      "round": 7
+    }
+  ],
+  "fixtures_7": [
+    {
+      "date": "2027-01-27",
+      "team_home": "arsenal",
+      "team_away": "sabah",
+      "round": 8
+    },
+    {
+      "date": "2027-01-27",
+      "team_home": "roma",
+      "team_away": "lille",
+      "round": 8
+    },
+    {
+      "date": "2027-01-27",
+      "team_home": "atletico-madrid",
+      "team_away": "fenerbahce",
+      "round": 8
+    },
+    {
+      "date": "2027-01-27",
+      "team_home": "borussia-dortmund",
+      "team_away": "aek-athens",
+      "round": 8
+    },
+    {
+      "date": "2027-01-27",
+      "team_home": "club-brugge",
+      "team_away": "bodoglimt",
+      "round": 8
+    },
+    {
+      "date": "2027-01-27",
+      "team_home": "bayern-munchen",
+      "team_away": "real-betis",
+      "round": 8
+    },
+    {
+      "date": "2027-01-27",
+      "team_home": "barcelona",
+      "team_away": "como",
+      "round": 8
+    },
+    {
+      "date": "2027-01-27",
+      "team_home": "shakhtar-donetsk",
+      "team_away": "real-madrid",
+      "round": 8
+    },
+    {
+      "date": "2027-01-27",
+      "team_home": "feyenoord",
+      "team_away": "rb-leipzig",
+      "round": 8
+    },
+    {
+      "date": "2027-01-27",
+      "team_home": "lask",
+      "team_away": "porto",
+      "round": 8
+    },
+    {
+      "date": "2027-01-27",
+      "team_home": "liverpool",
+      "team_away": "lens",
+      "round": 8
+    },
+    {
+      "date": "2027-01-27",
+      "team_home": "manchester-city",
+      "team_away": "sporting-cp",
+      "round": 8
+    },
+    {
+      "date": "2027-01-27",
+      "team_home": "paris-saint-germain",
+      "team_away": "galatasaray",
+      "round": 8
+    },
+    {
+      "date": "2027-01-27",
+      "team_home": "psv-eindhoven",
+      "team_away": "stuttgart",
+      "round": 8
+    },
+    {
+      "date": "2027-01-27",
+      "team_home": "slavia-prague",
+      "team_away": "aston-villa",
+      "round": 8
+    },
+    {
+      "date": "2027-01-27",
+      "team_home": "napoli",
+      "team_away": "viking",
+      "round": 8
+    },
+    {
+      "date": "2027-01-27",
+      "team_home": "villarreal",
+      "team_away": "manchester-united",
+      "round": 8
+    },
+    {
+      "date": "2027-01-27",
+      "team_home": "slovan-bratislava",
+      "team_away": "inter",
+      "round": 8
+    }
+  ]
+}

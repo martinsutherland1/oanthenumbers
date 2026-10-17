@@ -8,7 +8,7 @@
 .highlight-group {
   background: var(--surface);
   border: 1px solid var(--border);
-  border-radius: 12px;
+  border-radius: var(--radius);
   padding: 16px;
 }
 
@@ -61,13 +61,6 @@
   min-width: 0;
 }
 
-.highlight-team .team-color-dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  flex-shrink: 0;
-}
-
 .highlight-team-name {
   overflow: hidden;
   text-overflow: ellipsis;
@@ -93,7 +86,7 @@
 }
 
 .highlight-info-btn:hover {
-  color: white;
+  color: var(--on-primary);
   background: var(--primary);
   border-color: var(--primary);
 }

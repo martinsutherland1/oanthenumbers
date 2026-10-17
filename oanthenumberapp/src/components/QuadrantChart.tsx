@@ -11,7 +11,7 @@ import {
 } from 'recharts';
 import type { TeamGoalsVsXg, XgType } from '../utils/dataProcessing';
 import { XgTypeSelect } from './XgTypeSelect';
-import { getTeamColor, getTeamName } from '../utils/teamColors';
+import { getSeriesColor, getTeamName, LEAGUE_AVERAGE_COLOR } from '../utils/teamColors';
 import './QuadrantChart.css';
 
 interface QuadrantChartProps {
@@ -32,7 +32,8 @@ function renderPoint(selectedTeams: string[]) {
     const { cx, cy, payload } = props as DotProps;
     if (cx == null || cy == null || !payload) return <g />;
     const isDimmed = selectedTeams.length > 0 && !selectedTeams.includes(payload.team);
-    const color = getTeamColor(payload.team);
+    const selectedIndex = selectedTeams.indexOf(payload.team);
+    const color = selectedIndex >= 0 ? getSeriesColor(selectedIndex) : LEAGUE_AVERAGE_COLOR;
     return (
       <g>
         <circle

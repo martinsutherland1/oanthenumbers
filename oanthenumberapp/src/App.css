@@ -1,12 +1,41 @@
+/* ------------------------------------------------------------------
+   Theme tokens — taken from the oanthenumbers logo: charcoal, orange, white
+   ------------------------------------------------------------------ */
 :root {
-  --primary: #f1c40f;
-  --primary-light: rgba(241, 196, 15, 0.15);
-  --background: #0f172a;
-  --surface: #1e293b;
-  --surface-hover: #334155;
-  --border: #334155;
-  --text: #f1f5f9;
-  --text-secondary: #94a3b8;
+  --primary: #FF6B00;
+  --primary-hover: #FF8126;
+  --primary-light: rgba(255, 107, 0, 0.14);
+  --primary-ring: rgba(255, 107, 0, 0.45);
+  /* Text on an orange fill — dark reads far better than white at this brightness */
+  --on-primary: #141414;
+
+  --background: #121212;
+  --surface: #1A1A1A;
+  --surface-raised: #212121;
+  --surface-hover: #262626;
+  --border: #2A2A2A;
+  --border-strong: #3A3A3A;
+
+  --text: #F5F5F5;
+  --text-secondary: #A3A3A3;
+  --text-muted: #737373;
+
+  --positive: #22C55E;
+  --positive-soft: rgba(34, 197, 94, 0.14);
+  --negative: #EF4444;
+  --negative-soft: rgba(239, 68, 68, 0.14);
+  --neutral: #8C8C8C;
+  --warning: #F59E0B;
+
+  --radius: 14px;
+  --radius-sm: 8px;
+  --shadow: 0 1px 2px rgba(0, 0, 0, 0.35), 0 8px 24px rgba(0, 0, 0, 0.22);
+
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --font-display: 'Poppins', var(--font-body);
+
+  --content-width: 1200px;
+  color-scheme: dark;
 }
 
 * {
@@ -21,11 +50,27 @@ body {
   margin: 0;
   padding: 0;
   overflow-x: clip;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-family: var(--font-body);
   background-color: var(--background);
   color: var(--text);
--webkit-font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background: var(--primary);
+  color: var(--on-primary);
+}
+
+button,
+select,
+input {
+  font-family: inherit;
+}
+
+:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
 }
 
 .app {
@@ -34,41 +79,62 @@ body {
   flex-direction: column;
 }
 
+/* ------------------------------------------------------------------
+   Header
+   ------------------------------------------------------------------ */
 .app-header {
-  background: var(--surface);
+  background: rgba(18, 18, 18, 0.88);
+  backdrop-filter: saturate(160%) blur(14px);
+  -webkit-backdrop-filter: saturate(160%) blur(14px);
   border-bottom: 1px solid var(--border);
   position: sticky;
   top: 0;
   z-index: 100;
 }
 
+/* Thin brand rule along the top edge, echoing the lines either side of the logo's tagline */
+.app-header::before {
+  content: '';
+  display: block;
+  height: 3px;
+  background: var(--primary);
+}
+
 .header-content {
-  max-width: 1200px;
+  max-width: var(--content-width);
   margin: 0 auto;
-  padding: 16px 20px;
+  padding: 12px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 16px;
 }
 
 .logo-section {
   display: flex;
-  flex-direction: column;
-  gap: 2px;
+  align-items: center;
+  gap: 14px;
+  min-width: 0;
 }
 
 .logo-section h1 {
   margin: 0;
-  font-size: 1.5rem;
+  font-family: var(--font-display);
+  font-size: 1.35rem;
   font-weight: 700;
-  letter-spacing: -0.5px;
+  letter-spacing: -0.02em;
+  line-height: 1;
 }
 
 .logo-section h1.title {
   color: var(--text);
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
+}
+
+.title-wordmark-accent {
+  color: var(--primary);
 }
 
 .title-logo-btn {
@@ -76,26 +142,21 @@ body {
   padding: 0;
   border: none;
   background: none;
-  border-radius: 6px;
+  border-radius: 50%;
   cursor: pointer;
   flex-shrink: 0;
-  transition: opacity 0.2s ease;
+  transition: transform 0.2s ease;
 }
 
 .title-logo-btn:hover {
-  opacity: 0.85;
-}
-
-.title-logo-btn:focus-visible {
-  outline: 2px solid var(--primary);
-  outline-offset: 2px;
+  transform: rotate(-12deg);
 }
 
 .title-logo {
-  height: 40px;
-  width: auto;
-  border-radius: 6px;
+  height: 36px;
+  width: 36px;
   flex-shrink: 0;
+  display: block;
 }
 
 .title-clickable {
@@ -103,16 +164,22 @@ body {
 }
 
 .subtitle {
-  font-size: 0.8rem;
-  font-weight: 700;
-  color: var(--primary);
+  padding-left: 14px;
+  border-left: 1px solid var(--border-strong);
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .header-controls {
   display: flex;
   align-items: center;
-  gap: 12px;
-  flex-wrap: wrap;
+  gap: 10px;
+  flex-shrink: 0;
 }
 
 .header-badges {
@@ -122,57 +189,141 @@ body {
 }
 
 .home-back-btn {
-  padding: 6px 14px;
-  border: 1px solid var(--border);
-  border-radius: 10px;
-  background: var(--background);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 14px;
+  border: 1px solid var(--border-strong);
+  border-radius: 999px;
+  background: transparent;
   color: var(--text-secondary);
   font-size: 0.8rem;
   font-weight: 600;
   cursor: pointer;
   white-space: nowrap;
-  transition: all 0.15s ease;
+  transition: color 0.15s ease, border-color 0.15s ease, background 0.15s ease;
 }
 
 .home-back-btn:hover {
   color: var(--text);
-  background: var(--surface-hover);
+  border-color: var(--primary);
+  background: var(--primary-light);
 }
 
 .header-badge {
-  padding: 5px 12px;
+  padding: 6px 12px;
   border-radius: 999px;
-  border: 1px solid var(--border);
-  background: var(--background);
-  color: var(--text-secondary);
+  background: var(--primary-light);
+  color: var(--primary);
   font-size: 0.75rem;
-  font-weight: 500;
+  font-weight: 600;
   white-space: nowrap;
 }
 
-.app-main {
-  flex: 1;
-  max-width: 1200px;
-  width: 100%;
-  margin: 0 auto;
-  padding: 24px 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-}
-
+/* ------------------------------------------------------------------
+   Navigation — main sections as an underlined tab bar, sub-views as a
+   segmented control underneath
+   ------------------------------------------------------------------ */
 .toolbar-bar {
-  max-width: 1200px;
+  max-width: var(--content-width);
   margin: 0 auto;
-  padding: 0 20px 16px;
+  padding: 0 20px;
 }
 
 .view-toolbar {
   display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0;
+}
+
+.view-tabs {
+  display: flex;
+  gap: 4px;
+}
+
+.view-tab {
+  position: relative;
+  padding: 12px 16px 14px;
+  border: none;
+  background: transparent;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: color 0.15s ease;
+}
+
+.view-tab::after {
+  content: '';
+  position: absolute;
+  left: 12px;
+  right: 12px;
+  bottom: 0;
+  height: 3px;
+  border-radius: 3px 3px 0 0;
+  background: transparent;
+  transition: background 0.15s ease;
+}
+
+.view-tab:hover {
+  color: var(--text);
+}
+
+.view-tab.active {
+  color: var(--text);
+}
+
+.view-tab.active::after {
+  background: var(--primary);
+}
+
+/* Sub-view row: sits on its own line below the section tabs */
+.view-toolbar > .secondary-tabs,
+.view-toolbar > .team-select-group {
+  margin: 0;
+}
+
+.sub-toolbar {
+  display: flex;
   align-items: center;
-  justify-content: flex-start;
   flex-wrap: wrap;
-  gap: 16px;
+  gap: 12px;
+  padding: 12px 0 14px;
+  border-top: 1px solid var(--border);
+}
+
+.sub-toolbar:empty {
+  display: none;
+}
+
+.secondary-tabs {
+  display: inline-flex;
+  gap: 2px;
+  padding: 3px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+}
+
+.secondary-tabs .view-tab {
+  padding: 6px 16px;
+  border-radius: 999px;
+  font-size: 0.8rem;
+}
+
+.secondary-tabs .view-tab::after {
+  display: none;
+}
+
+.secondary-tabs .view-tab:hover {
+  background: var(--surface-hover);
+}
+
+.secondary-tabs .view-tab.active {
+  background: var(--primary);
+  color: var(--on-primary);
 }
 
 .team-select-group {
@@ -182,85 +333,118 @@ body {
 }
 
 .team-select-group label {
-  font-size: 0.85rem;
-  color: var(--text-secondary);
-  font-weight: 500;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
 }
 
 .team-select {
-  background: var(--surface);
-  border: 1px solid var(--border);
+  appearance: none;
+  -webkit-appearance: none;
+  background: var(--surface)
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23A3A3A3' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E")
+    no-repeat right 12px center;
+  border: 1px solid var(--border-strong);
   color: var(--text);
-  border-radius: 8px;
-  padding: 7px 12px;
-  font-size: 0.875rem;
-  font-weight: 500;
+  border-radius: 999px;
+  padding: 7px 34px 7px 14px;
+  font-size: 0.85rem;
+  font-weight: 600;
   cursor: pointer;
+  transition: border-color 0.15s ease;
 }
 
 .team-select:hover {
-  border-color: var(--text-secondary);
+  border-color: var(--text-muted);
 }
 
 .team-select:focus {
   outline: none;
   border-color: var(--primary);
+  box-shadow: 0 0 0 3px var(--primary-light);
 }
 
-.view-tabs {
+/* ------------------------------------------------------------------
+   Main content
+   ------------------------------------------------------------------ */
+.app-main {
+  flex: 1;
+  max-width: var(--content-width);
+  width: 100%;
+  margin: 0 auto;
+  padding: 28px 20px 40px;
   display: flex;
-  gap: 4px;
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: 10px;
-  padding: 4px;
+  flex-direction: column;
+  gap: 24px;
 }
 
-.view-tab {
-  padding: 6px 20px;
-  border: none;
-  border-radius: 7px;
-  background: transparent;
-  color: var(--text-secondary);
-  font-size: 0.875rem;
-  font-weight: 700;
+.projection-view-toggle {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 12px;
+}
+
+/* ------------------------------------------------------------------
+   Shared polish for every view's cards and tables. App.css loads after
+   the component stylesheets, so these win where they overlap.
+   ------------------------------------------------------------------ */
+.app-main h2,
+.app-main h3 {
+  font-family: var(--font-display);
+  letter-spacing: -0.01em;
+}
+
+.app-main table {
+  font-variant-numeric: tabular-nums;
+}
+
+.app-main table th {
+  font-size: 0.7rem;
+  font-weight: 600;
   text-transform: uppercase;
-  cursor: pointer;
-  transition: all 0.15s ease;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
 }
 
-.view-tab:hover {
-  color: var(--text);
-  background: var(--surface-hover);
+.app-main table tbody tr {
+  transition: background 0.12s ease;
 }
 
-.view-tab.active {
-  background: var(--primary);
-  color: #fff;
+.app-main table tbody tr:hover {
+  background: var(--surface-raised);
 }
 
-.secondary-tabs {
-  padding: 3px;
-  border-radius: 8px;
-}
-
-.secondary-tabs .view-tab {
-  padding: 5px 14px;
-  border-radius: 5px;
-  font-size: 0.8rem;
-}
-
+/* ------------------------------------------------------------------
+   Footer
+   ------------------------------------------------------------------ */
 .app-footer {
-  background: var(--surface);
   border-top: 1px solid var(--border);
-  padding: 16px 20px;
+  padding: 28px 20px;
   text-align: center;
+}
+
+.footer-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--text);
+}
+
+.footer-brand img {
+  width: 22px;
+  height: 22px;
 }
 
 .app-footer p {
   margin: 0 0 4px;
-  color: var(--text-secondary);
-  font-size: 0.875rem;
+  color: var(--text-muted);
+  font-size: 0.8rem;
 }
 
 .app-footer p:last-child {
@@ -268,70 +452,63 @@ body {
 }
 
 .app-footer a {
-  color: var(--primary);
+  color: var(--text-secondary);
   text-decoration: none;
+  transition: color 0.15s ease;
 }
 
 .app-footer a:hover {
-  text-decoration: underline;
+  color: var(--primary);
 }
 
+/* ------------------------------------------------------------------
+   Responsive
+   ------------------------------------------------------------------ */
 @media (max-width: 768px) {
   .header-content {
-    padding: 12px 16px;
-    flex-wrap: wrap;
-    gap: 10px;
+    padding: 10px 16px;
   }
 
   .logo-section {
-    flex: 1 1 100%;
+    gap: 10px;
   }
 
   .logo-section h1 {
-    font-size: 1.25rem;
+    font-size: 1.15rem;
   }
 
   .title-logo {
-    height: 34px;
+    height: 32px;
+    width: 32px;
   }
 
   .subtitle {
-    font-size: 0.75rem;
-  }
-
-  .header-controls {
-    width: 100%;
-    justify-content: space-between;
+    padding-left: 10px;
+    font-size: 0.85rem;
   }
 
   .header-badges {
-    justify-content: flex-start;
-    flex-wrap: wrap;
+    display: none;
   }
 
   .app-main {
-    padding: 16px;
+    padding: 20px 16px 32px;
     gap: 16px;
   }
 
   .toolbar-bar {
-    padding: 0 16px 12px;
+    padding: 0 16px;
   }
+}
 
-  .view-toolbar {
-    justify-content: center;
+@media (max-width: 560px) {
+  /* On league pages the wordmark gives way to the competition name */
+  .title-wordmark-league {
+    display: none;
   }
 }
 
 @media (max-width: 480px) {
-  .logo-section h1 {
-    font-size: 1.1rem;
-  }
-
-  .title-logo {
-    height: 30px;
-  }
-
   .view-tabs {
     max-width: 100%;
     overflow-x: auto;
@@ -343,15 +520,21 @@ body {
     display: none;
   }
 
+  .view-toolbar > .view-tabs {
+    justify-content: space-between;
+  }
+
   .view-tab {
-    padding: 6px 12px;
-    font-size: 0.8rem;
+    padding: 12px 10px 14px;
+    font-size: 0.85rem;
     flex-shrink: 0;
   }
-}
 
-.projection-view-toggle {
-  display: flex;
-  justify-content: flex-end;
-  margin-bottom: 12px;
+  .secondary-tabs .view-tab {
+    padding: 6px 12px;
+  }
+
+  .home-back-btn {
+    padding: 7px 10px;
+  }
 }

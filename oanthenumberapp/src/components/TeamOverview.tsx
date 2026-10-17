@@ -13,7 +13,7 @@ import {
   type ProjectionContext,
   type XgType
 } from '../utils/dataProcessing';
-import { getTeamColor, getTeamName } from '../utils/teamColors';
+import { BRAND_COLOR, getTeamName } from '../utils/teamColors';
 import { TeamHeader } from './TeamHeader';
 import { MetricTrendCard } from './MetricTrendCard';
 import { PerformanceIndicator, type TrendDirection, type PerformanceBreakdownTable } from './PerformanceIndicator';
@@ -61,7 +61,7 @@ function getTrendDirection(series: { rollingAverage: number }[]): TrendDirection
 
 export function TeamOverview({ team, fixtures, lastSeasonFixtures, leagueTable, projection, seasonGames }: TeamOverviewProps) {
   const leagueRow = leagueTable.find(r => r.team === team);
-  const color = getTeamColor(team);
+  const color = BRAND_COLOR;
 
   const xgSeries = useMemo(() => getTeamRollingAverageOverTime(fixtures, team, 10, 'xg'), [fixtures, team]);
   const [xgType, setXgType] = useState<XgType>('npxg');

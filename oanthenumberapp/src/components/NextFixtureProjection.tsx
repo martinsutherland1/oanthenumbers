@@ -10,7 +10,7 @@ import {
   type MatchGoalProjection,
   type TeamGoalProjection,
 } from '../utils/goalProjection';
-import { getTeamColor, getTeamName } from '../utils/teamColors';
+import { getTeamName } from '../utils/teamColors';
 import './LeagueTable.css';
 import './NextFixtureProjection.css';
 
@@ -31,7 +31,6 @@ const errorClass = (err: number) => BAND_CLASS[errorBand(err)];
 function TeamName({ team }: { team: string }) {
   return (
     <span className="team-cell">
-      <span className="team-color-dot" style={{ backgroundColor: getTeamColor(team) }} />
       <span className="team-cell-name">{getTeamName(team)}</span>
     </span>
   );

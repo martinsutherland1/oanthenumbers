@@ -1,5 +1,5 @@
 import type { MiniLeagueRow } from '../utils/dataProcessing';
-import { getTeamColor, getTeamName } from '../utils/teamColors';
+import { getTeamName } from '../utils/teamColors';
 import './LeagueTable.css';
 import './H2HMiniLeague.css';
 
@@ -33,7 +33,6 @@ export function H2HMiniLeague({ rows }: H2HMiniLeagueProps) {
                 <td className="col-pos">{row.position}</td>
                 <td className="col-team">
                   <div className="team-cell">
-                    <span className="team-color-dot" style={{ backgroundColor: getTeamColor(row.team) }} />
                     <span className="team-cell-name">{getTeamName(row.team)}</span>
                   </div>
                 </td>

@@ -1,6 +1,6 @@
 .line-chart-container {
   background: var(--surface);
-  border-radius: 12px;
+  border-radius: var(--radius);
   padding: 20px;
   border: 1px solid var(--border);
 }
@@ -58,7 +58,7 @@
   position: absolute;
   width: 100%;
   height: 100%;
-  background-color: #888888;
+  background-color: var(--neutral);
   mask: repeating-linear-gradient(
     90deg,
     black 0,

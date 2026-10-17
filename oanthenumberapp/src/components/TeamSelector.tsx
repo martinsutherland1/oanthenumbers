@@ -1,4 +1,4 @@
-import { getTeamColor, getTeamName } from '../utils/teamColors';
+import { getSeriesColor, getTeamName } from '../utils/teamColors';
 import './TeamSelector.css';
 
 interface TeamSelectorProps {
@@ -30,23 +30,17 @@ export function TeamSelector({ teams, selectedTeams, onTeamToggle, onSelectAll, 
       </div>
       <div className="team-chips">
         {teams.map(team => {
-          const isSelected = selectedTeams.includes(team);
-          const teamColor = getTeamColor(team);
+          const selectedIndex = selectedTeams.indexOf(team);
+          const isSelected = selectedIndex >= 0;
           return (
             <button
               key={team}
               className={`team-chip ${isSelected ? 'selected' : ''}`}
               onClick={() => onTeamToggle(team)}
-              style={{
-                '--team-color': teamColor,
-                borderColor: isSelected ? teamColor : 'var(--border)',
-                backgroundColor: isSelected ? `${teamColor}20` : 'var(--surface)'
-              } as React.CSSProperties}
+              aria-pressed={isSelected}
             >
-              <span
-                className="team-color-dot"
-                style={{ backgroundColor: teamColor }}
-              />
+              {/* Matches this team's line/area in the charts below */}
+              {isSelected && <span className="team-chip-swatch" style={{ backgroundColor: getSeriesColor(selectedIndex) }} />}
               {getTeamName(team)}
             </button>
           );

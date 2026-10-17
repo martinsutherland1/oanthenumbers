@@ -6,7 +6,7 @@
 
 .split-group {
   background: var(--surface);
-  border-radius: 12px;
+  border-radius: var(--radius);
   padding: 16px;
   border: 1px solid var(--border);
 }

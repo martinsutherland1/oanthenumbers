@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from 'react';
 import { getTeamHighlightStats, type TeamHighlightStats } from '../utils/dataProcessing';
 import type { Fixture } from '../types';
-import { getTeamColor, getTeamName } from '../utils/teamColors';
+import { getTeamName } from '../utils/teamColors';
 import './LeagueHighlights.css';
 
 interface LeagueHighlightsProps {
@@ -127,7 +127,6 @@ function HighlightDetailModal({ group, metric, stats, onClose }: DetailTarget & 
                   <td className="highlight-rank-col">{i + 1}</td>
                   <td>
                     <span className="highlight-team">
-                      <span className="team-color-dot" style={{ backgroundColor: getTeamColor(row.team) }} />
                       <span className="highlight-team-name">{getTeamName(row.team)}</span>
                     </span>
                   </td>
@@ -179,7 +178,6 @@ export function LeagueHighlights({ fixtures }: LeagueHighlightsProps) {
                   <div className="highlight-teams">
                     {best.teams.map(team => (
                       <span key={team} className="highlight-team">
-                        <span className="team-color-dot" style={{ backgroundColor: getTeamColor(team) }} />
                         <span className="highlight-team-name">{getTeamName(team)}</span>
                       </span>
                     ))}

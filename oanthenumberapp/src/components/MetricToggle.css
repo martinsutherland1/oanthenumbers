@@ -29,7 +29,7 @@
 
 .metric-btn.active {
   background: var(--primary);
-  color: white;
+  color: var(--on-primary);
 }
 
 .metric-btn.active:hover {

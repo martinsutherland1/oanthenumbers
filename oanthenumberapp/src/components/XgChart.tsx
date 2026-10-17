@@ -11,7 +11,7 @@ import {
 } from 'recharts';
 import type { TeamRollingAverage } from '../types';
 import type { MetricType } from './MetricToggle';
-import { getTeamColor, getTeamName, LEAGUE_AVERAGE_COLOR } from '../utils/teamColors';
+import { BRAND_COLOR, getTeamName, LEAGUE_AVERAGE_COLOR } from '../utils/teamColors';
 import './XgChart.css';
 
 interface XgChartProps {
@@ -61,9 +61,9 @@ export function XgChart({ data, selectedTeams, leagueAverage, metricType }: XgCh
 
   const getBarColor = (entry: ChartData): string => {
     if (selectedTeams.length === 0) {
-      return getTeamColor(entry.slug);
+      return BRAND_COLOR;
     }
-    return entry.isSelected ? getTeamColor(entry.slug) : '#cccccc40';
+    return entry.isSelected ? BRAND_COLOR : LEAGUE_AVERAGE_COLOR;
   };
 
   const metricLabel = metricType === 'xg' ? 'xG' : metricType === 'goals' ? 'Goal' : 'Points';

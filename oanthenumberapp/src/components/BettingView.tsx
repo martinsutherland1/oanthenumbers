@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import type { TeamBettingStats } from '../utils/dataProcessing';
-import { getTeamColor, getTeamName } from '../utils/teamColors';
+import { getTeamName } from '../utils/teamColors';
 import './BettingView.css';
 
 type SortKey = keyof TeamBettingStats;
@@ -56,7 +56,6 @@ function BettingTable({ title, columns, rows }: BettingTableProps) {
               <td className="bet-rank">{i + 1}</td>
               <td>
                 <div className="bet-team-cell">
-                  <span className="team-color-dot" style={{ backgroundColor: getTeamColor(row.team) }} />
                   {getTeamName(row.team)}
                 </div>
               </td>

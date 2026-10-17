@@ -1,7 +1,7 @@
 .performance-indicator-card {
   background: var(--surface);
   border: 1px solid var(--border);
-  border-radius: 12px;
+  border-radius: var(--radius);
   padding: 18px 20px;
 }
 
@@ -50,15 +50,15 @@
 }
 
 .performance-status-dot.green {
-  background: #22c55e;
+  background: var(--positive);
 }
 
 .performance-status-dot.amber {
-  background: #f59e0b;
+  background: var(--warning);
 }
 
 .performance-status-dot.red {
-  background: #ef4444;
+  background: var(--negative);
 }
 
 .performance-trend-arrow {
@@ -68,22 +68,22 @@
 }
 
 .performance-trend-arrow.green {
-  color: #22c55e;
+  color: var(--positive);
 }
 
 .performance-trend-arrow.amber {
-  color: #f59e0b;
+  color: var(--warning);
 }
 
 .performance-trend-arrow.red {
-  color: #ef4444;
+  color: var(--negative);
 }
 
 .performance-gauge-track {
   position: relative;
   height: 8px;
   border-radius: 999px;
-  background: linear-gradient(to right, #ef4444, #94a3b8, #22c55e);
+  background: linear-gradient(to right, var(--negative), var(--neutral), var(--positive));
   margin: 0 8px;
 }
 
@@ -180,11 +180,11 @@
 }
 
 .performance-breakdown-diff.positive {
-  color: #22c55e;
+  color: var(--positive);
 }
 
 .performance-breakdown-diff.negative {
-  color: #ef4444;
+  color: var(--negative);
 }
 
 @media (max-width: 640px) {

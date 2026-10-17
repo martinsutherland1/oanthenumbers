@@ -1,7 +1,7 @@
 import { useMemo } from 'react';
 import { tipKey, type LeagueTips } from '../utils/bettingTips';
 import { parseDate } from '../utils/dataProcessing';
-import { getTeamColor, getTeamName } from '../utils/teamColors';
+import { getTeamName } from '../utils/teamColors';
 import './LeagueTable.css';
 import './BettingView.css';
 import './TipsView.css';
@@ -19,7 +19,6 @@ const signedPct = (p: number) => `${p >= 0 ? '+' : ''}${Math.round(p * 100)}%`;
 function Team({ team }: { team: string }) {
   return (
     <span className="bet-team-cell">
-      <span className="team-color-dot" style={{ backgroundColor: getTeamColor(team) }} />
       {getTeamName(team)}
     </span>
   );

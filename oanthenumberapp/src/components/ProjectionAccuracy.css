@@ -25,9 +25,9 @@
 }
 
 .an-bar span { height: 100%; }
-.an-bar-good { background: #22c55e; }
+.an-bar-good { background: var(--positive); }
 .an-bar-fair { background: var(--text); }
-.an-bar-poor { background: #ef4444; }
+.an-bar-poor { background: var(--negative); }
 
 @media (max-width: 600px) {
   .an-table .an-col-num { width: 60px; }

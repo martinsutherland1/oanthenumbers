@@ -1,0 +1,662 @@
+{
+  "fixtures_0": [
+    {
+      "date": "2026-10-15",
+      "team_home": "lugano",
+      "team_away": "crvena-zvezda",
+      "round": 1
+    },
+    {
+      "date": "2026-10-15",
+      "team_home": "hajduk-split",
+      "team_away": "ajax",
+      "round": 1
+    },
+    {
+      "date": "2026-10-15",
+      "team_home": "gent",
+      "team_away": "agf",
+      "round": 1
+    },
+    {
+      "date": "2026-10-15",
+      "team_home": "egnatia",
+      "team_away": "midtjylland",
+      "round": 1
+    },
+    {
+      "date": "2026-10-15",
+      "team_home": "kups",
+      "team_away": "trabzonspor",
+      "round": 1
+    },
+    {
+      "date": "2026-10-15",
+      "team_home": "mjallby",
+      "team_away": "inter-club-descaldes",
+      "round": 1
+    },
+    {
+      "date": "2026-10-15",
+      "team_home": "panathinaikos",
+      "team_away": "borac",
+      "round": 1
+    },
+    {
+      "date": "2026-10-15",
+      "team_home": "cska-sofia",
+      "team_away": "monaco",
+      "round": 1
+    },
+    {
+      "date": "2026-10-15",
+      "team_home": "riga",
+      "team_away": "kairat-almaty",
+      "round": 1
+    },
+    {
+      "date": "2026-10-15",
+      "team_home": "universitatea-craiova",
+      "team_away": "getafe",
+      "round": 1
+    },
+    {
+      "date": "2026-10-15",
+      "team_home": "atalanta",
+      "team_away": "pafos",
+      "round": 1
+    },
+    {
+      "date": "2026-10-15",
+      "team_home": "brighton",
+      "team_away": "kauno-zalgiris",
+      "round": 1
+    },
+    {
+      "date": "2026-10-15",
+      "team_home": "fc-kobenhavn",
+      "team_away": "braga",
+      "round": 1
+    },
+    {
+      "date": "2026-10-15",
+      "team_home": "twente",
+      "team_away": "thun",
+      "round": 1
+    },
+    {
+      "date": "2026-10-15",
+      "team_home": "heart-midlothian",
+      "team_away": "nordsjaelland",
+      "round": 1
+    },
+    {
+      "date": "2026-10-15",
+      "team_home": "sttruiden",
+      "team_away": "iberia-1999",
+      "round": 1
+    },
+    {
+      "date": "2026-10-15",
+      "team_home": "freiburg",
+      "team_away": "jablonec",
+      "round": 1
+    },
+    {
+      "date": "2026-10-15",
+      "team_home": "brann",
+      "team_away": "lincoln-red-imps",
+      "round": 1
+    }
+  ],
+  "fixtures_1": [
+    {
+      "date": "2026-10-22",
+      "team_home": "kairat-almaty",
+      "team_away": "panathinaikos",
+      "round": 2
+    },
+    {
+      "date": "2026-10-22",
+      "team_home": "iberia-1999",
+      "team_away": "mjallby",
+      "round": 2
+    },
+    {
+      "date": "2026-10-22",
+      "team_home": "nordsjaelland",
+      "team_away": "cska-sofia",
+      "round": 2
+    },
+    {
+      "date": "2026-10-22",
+      "team_home": "crvena-zvezda",
+      "team_away": "fc-kobenhavn",
+      "round": 2
+    },
+    {
+      "date": "2026-10-22",
+      "team_home": "jablonec",
+      "team_away": "brighton",
+      "round": 2
+    },
+    {
+      "date": "2026-10-22",
+      "team_home": "kauno-zalgiris",
+      "team_away": "brann",
+      "round": 2
+    },
+    {
+      "date": "2026-10-22",
+      "team_home": "getafe",
+      "team_away": "lugano",
+      "round": 2
+    },
+    {
+      "date": "2026-10-22",
+      "team_home": "inter-club-descaldes",
+      "team_away": "universitatea-craiova",
+      "round": 2
+    },
+    {
+      "date": "2026-10-22",
+      "team_home": "pafos",
+      "team_away": "riga",
+      "round": 2
+    },
+    {
+      "date": "2026-10-22",
+      "team_home": "trabzonspor",
+      "team_away": "heart-midlothian",
+      "round": 2
+    },
+    {
+      "date": "2026-10-22",
+      "team_home": "ajax",
+      "team_away": "atalanta",
+      "round": 2
+    },
+    {
+      "date": "2026-10-22",
+      "team_home": "agf",
+      "team_away": "egnatia",
+      "round": 2
+    },
+    {
+      "date": "2026-10-22",
+      "team_home": "monaco",
+      "team_away": "freiburg",
+      "round": 2
+    },
+    {
+      "date": "2026-10-22",
+      "team_home": "midtjylland",
+      "team_away": "sttruiden",
+      "round": 2
+    },
+    {
+      "date": "2026-10-22",
+      "team_home": "thun",
+      "team_away": "hajduk-split",
+      "round": 2
+    },
+    {
+      "date": "2026-10-22",
+      "team_home": "borac",
+      "team_away": "kups",
+      "round": 2
+    },
+    {
+      "date": "2026-10-22",
+      "team_home": "lincoln-red-imps",
+      "team_away": "twente",
+      "round": 2
+    },
+    {
+      "date": "2026-10-22",
+      "team_home": "braga",
+      "team_away": "gent",
+      "round": 2
+    }
+  ],
+  "fixtures_2": [
+    {
+      "date": "2026-11-05",
+      "team_home": "agf",
+      "team_away": "braga",
+      "round": 3
+    },
+    {
+      "date": "2026-11-05",
+      "team_home": "atalanta",
+      "team_away": "kairat-almaty",
+      "round": 3
+    },
+    {
+      "date": "2026-11-05",
+      "team_home": "midtjylland",
+      "team_away": "ajax",
+      "round": 3
+    },
+    {
+      "date": "2026-11-05",
+      "team_home": "thun",
+      "team_away": "heart-midlothian",
+      "round": 3
+    },
+    {
+      "date": "2026-11-05",
+      "team_home": "crvena-zvezda",
+      "team_away": "inter-club-descaldes",
+      "round": 3
+    },
+    {
+      "date": "2026-11-05",
+      "team_home": "kups",
+      "team_away": "gent",
+      "round": 3
+    },
+    {
+      "date": "2026-11-05",
+      "team_home": "lincoln-red-imps",
+      "team_away": "hajduk-split",
+      "round": 3
+    },
+    {
+      "date": "2026-11-05",
+      "team_home": "mjallby",
+      "team_away": "borac",
+      "round": 3
+    },
+    {
+      "date": "2026-11-05",
+      "team_home": "trabzonspor",
+      "team_away": "freiburg",
+      "round": 3
+    },
+    {
+      "date": "2026-11-05",
+      "team_home": "monaco",
+      "team_away": "nordsjaelland",
+      "round": 3
+    },
+    {
+      "date": "2026-11-05",
+      "team_home": "fc-kobenhavn",
+      "team_away": "iberia-1999",
+      "round": 3
+    },
+    {
+      "date": "2026-11-05",
+      "team_home": "lugano",
+      "team_away": "kauno-zalgiris",
+      "round": 3
+    },
+    {
+      "date": "2026-11-05",
+      "team_home": "twente",
+      "team_away": "pafos",
+      "round": 3
+    },
+    {
+      "date": "2026-11-05",
+      "team_home": "getafe",
+      "team_away": "brighton",
+      "round": 3
+    },
+    {
+      "date": "2026-11-05",
+      "team_home": "sttruiden",
+      "team_away": "brann",
+      "round": 3
+    },
+    {
+      "date": "2026-11-05",
+      "team_home": "panathinaikos",
+      "team_away": "cska-sofia",
+      "round": 3
+    },
+    {
+      "date": "2026-11-05",
+      "team_home": "riga",
+      "team_away": "jablonec",
+      "round": 3
+    },
+    {
+      "date": "2026-11-05",
+      "team_home": "universitatea-craiova",
+      "team_away": "egnatia",
+      "round": 3
+    }
+  ],
+  "fixtures_3": [
+    {
+      "date": "2026-11-26",
+      "team_home": "kairat-almaty",
+      "team_away": "mjallby",
+      "round": 4
+    },
+    {
+      "date": "2026-11-26",
+      "team_home": "ajax",
+      "team_away": "thun",
+      "round": 4
+    },
+    {
+      "date": "2026-11-26",
+      "team_home": "brighton",
+      "team_away": "universitatea-craiova",
+      "round": 4
+    },
+    {
+      "date": "2026-11-26",
+      "team_home": "iberia-1999",
+      "team_away": "getafe",
+      "round": 4
+    },
+    {
+      "date": "2026-11-26",
+      "team_home": "jablonec",
+      "team_away": "lugano",
+      "round": 4
+    },
+    {
+      "date": "2026-11-26",
+      "team_home": "kauno-zalgiris",
+      "team_away": "riga",
+      "round": 4
+    },
+    {
+      "date": "2026-11-26",
+      "team_home": "heart-midlothian",
+      "team_away": "monaco",
+      "round": 4
+    },
+    {
+      "date": "2026-11-26",
+      "team_home": "egnatia",
+      "team_away": "lincoln-red-imps",
+      "round": 4
+    },
+    {
+      "date": "2026-11-26",
+      "team_home": "pafos",
+      "team_away": "midtjylland",
+      "round": 4
+    },
+    {
+      "date": "2026-11-26",
+      "team_home": "brann",
+      "team_away": "agf",
+      "round": 4
+    },
+    {
+      "date": "2026-11-26",
+      "team_home": "nordsjaelland",
+      "team_away": "panathinaikos",
+      "round": 4
+    },
+    {
+      "date": "2026-11-26",
+      "team_home": "borac",
+      "team_away": "atalanta",
+      "round": 4
+    },
+    {
+      "date": "2026-11-26",
+      "team_home": "hajduk-split",
+      "team_away": "sttruiden",
+      "round": 4
+    },
+    {
+      "date": "2026-11-26",
+      "team_home": "inter-club-descaldes",
+      "team_away": "fc-kobenhavn",
+      "round": 4
+    },
+    {
+      "date": "2026-11-26",
+      "team_home": "gent",
+      "team_away": "crvena-zvezda",
+      "round": 4
+    },
+    {
+      "date": "2026-11-26",
+      "team_home": "cska-sofia",
+      "team_away": "trabzonspor",
+      "round": 4
+    },
+    {
+      "date": "2026-11-26",
+      "team_home": "braga",
+      "team_away": "kups",
+      "round": 4
+    },
+    {
+      "date": "2026-11-26",
+      "team_home": "freiburg",
+      "team_away": "twente",
+      "round": 4
+    }
+  ],
+  "fixtures_4": [
+    {
+      "date": "2026-12-10",
+      "team_home": "kairat-almaty",
+      "team_away": "universitatea-craiova",
+      "round": 5
+    },
+    {
+      "date": "2026-12-10",
+      "team_home": "fc-kobenhavn",
+      "team_away": "lugano",
+      "round": 5
+    },
+    {
+      "date": "2026-12-10",
+      "team_home": "iberia-1999",
+      "team_away": "crvena-zvezda",
+      "round": 5
+    },
+    {
+      "date": "2026-12-10",
+      "team_home": "getafe",
+      "team_away": "inter-club-descaldes",
+      "round": 5
+    },
+    {
+      "date": "2026-12-10",
+      "team_home": "kups",
+      "team_away": "cska-sofia",
+      "round": 5
+    },
+    {
+      "date": "2026-12-10",
+      "team_home": "lincoln-red-imps",
+      "team_away": "midtjylland",
+      "round": 5
+    },
+    {
+      "date": "2026-12-10",
+      "team_home": "riga",
+      "team_away": "atalanta",
+      "round": 5
+    },
+    {
+      "date": "2026-12-10",
+      "team_home": "freiburg",
+      "team_away": "panathinaikos",
+      "round": 5
+    },
+    {
+      "date": "2026-12-10",
+      "team_home": "brann",
+      "team_away": "braga",
+      "round": 5
+    },
+    {
+      "date": "2026-12-10",
+      "team_home": "trabzonspor",
+      "team_away": "jablonec",
+      "round": 5
+    },
+    {
+      "date": "2026-12-10",
+      "team_home": "agf",
+      "team_away": "twente",
+      "round": 5
+    },
+    {
+      "date": "2026-12-10",
+      "team_home": "brighton",
+      "team_away": "monaco",
+      "round": 5
+    },
+    {
+      "date": "2026-12-10",
+      "team_home": "thun",
+      "team_away": "gent",
+      "round": 5
+    },
+    {
+      "date": "2026-12-10",
+      "team_home": "heart-midlothian",
+      "team_away": "borac",
+      "round": 5
+    },
+    {
+      "date": "2026-12-10",
+      "team_home": "hajduk-split",
+      "team_away": "nordsjaelland",
+      "round": 5
+    },
+    {
+      "date": "2026-12-10",
+      "team_home": "sttruiden",
+      "team_away": "ajax",
+      "round": 5
+    },
+    {
+      "date": "2026-12-10",
+      "team_home": "egnatia",
+      "team_away": "kauno-zalgiris",
+      "round": 5
+    },
+    {
+      "date": "2026-12-10",
+      "team_home": "mjallby",
+      "team_away": "pafos",
+      "round": 5
+    }
+  ],
+  "fixtures_5": [
+    {
+      "date": "2026-12-17",
+      "team_home": "ajax",
+      "team_away": "getafe",
+      "round": 6
+    },
+    {
+      "date": "2026-12-17",
+      "team_home": "monaco",
+      "team_away": "lincoln-red-imps",
+      "round": 6
+    },
+    {
+      "date": "2026-12-17",
+      "team_home": "atalanta",
+      "team_away": "mjallby",
+      "round": 6
+    },
+    {
+      "date": "2026-12-17",
+      "team_home": "lugano",
+      "team_away": "sttruiden",
+      "round": 6
+    },
+    {
+      "date": "2026-12-17",
+      "team_home": "midtjylland",
+      "team_away": "hajduk-split",
+      "round": 6
+    },
+    {
+      "date": "2026-12-17",
+      "team_home": "nordsjaelland",
+      "team_away": "kups",
+      "round": 6
+    },
+    {
+      "date": "2026-12-17",
+      "team_home": "twente",
+      "team_away": "kairat-almaty",
+      "round": 6
+    },
+    {
+      "date": "2026-12-17",
+      "team_home": "borac",
+      "team_away": "riga",
+      "round": 6
+    },
+    {
+      "date": "2026-12-17",
+      "team_home": "crvena-zvezda",
+      "team_away": "trabzonspor",
+      "round": 6
+    },
+    {
+      "date": "2026-12-17",
+      "team_home": "jablonec",
+      "team_away": "iberia-1999",
+      "round": 6
+    },
+    {
+      "date": "2026-12-17",
+      "team_home": "kauno-zalgiris",
+      "team_away": "freiburg",
+      "round": 6
+    },
+    {
+      "date": "2026-12-17",
+      "team_home": "inter-club-descaldes",
+      "team_away": "agf",
+      "round": 6
+    },
+    {
+      "date": "2026-12-17",
+      "team_home": "gent",
+      "team_away": "brann",
+      "round": 6
+    },
+    {
+      "date": "2026-12-17",
+      "team_home": "pafos",
+      "team_away": "heart-midlothian",
+      "round": 6
+    },
+    {
+      "date": "2026-12-17",
+      "team_home": "panathinaikos",
+      "team_away": "brighton",
+      "round": 6
+    },
+    {
+      "date": "2026-12-17",
+      "team_home": "cska-sofia",
+      "team_away": "thun",
+      "round": 6
+    },
+    {
+      "date": "2026-12-17",
+      "team_home": "braga",
+      "team_away": "egnatia",
+      "round": 6
+    },
+    {
+      "date": "2026-12-17",
+      "team_home": "universitatea-craiova",
+      "team_away": "fc-kobenhavn",
+      "round": 6
+    }
+  ]
+}

@@ -29,7 +29,7 @@
 
 .toggle-btn.active {
   background: var(--primary);
-  color: white;
+  color: var(--on-primary);
 }
 
 .toggle-btn.active:hover {

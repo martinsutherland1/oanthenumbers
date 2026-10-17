@@ -72,7 +72,7 @@
   line-height: 1;
 }
 
-.streak-active { color: #22c55e; }
+.streak-active { color: var(--positive); }
 .streak-record { color: var(--primary); }
 
 .streak-key {
@@ -88,8 +88,8 @@
   width: 16px;
 }
 
-.diff-positive { color: #22c55e; font-weight: 600; }
-.diff-negative { color: #ef4444; font-weight: 600; }
+.diff-positive { color: var(--positive); font-weight: 600; }
+.diff-negative { color: var(--negative); font-weight: 600; }
 
 .stat-card-row {
   display: flex;
@@ -208,13 +208,6 @@
   color: var(--primary);
 }
 
-.team-color-dot {
-  display: inline-block;
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  flex-shrink: 0;
-}
 
 .streak-inline {
   display: flex;
@@ -252,7 +245,7 @@
 .allstats-toggle-btn.active {
   background: var(--primary);
   border-color: var(--primary);
-  color: #000;
+  color: var(--on-primary);
   font-weight: 600;
 }
 

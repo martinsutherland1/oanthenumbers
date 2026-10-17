@@ -1,7 +1,7 @@
 import { useMemo, useState } from 'react';
 import type { Fixture } from '../types';
 import { calculateLeagueAverage, getLineChartData, getTeamSeasonStats, getTeamRecentSeasonStats, getTeamGoalsVsXg, type MetricType, type XgType } from '../utils/dataProcessing';
-import { getTeamColor, getTeamName } from '../utils/teamColors';
+import { getSeriesColor, getTeamName } from '../utils/teamColors';
 import { TeamSelector } from './TeamSelector';
 import { MetricToggle } from './MetricToggle';
 import { XgLineChart } from './XgLineChart';
@@ -39,9 +39,9 @@ export function ComparisonsView({ fixtures, teams }: ComparisonsViewProps) {
   const pool = period === 'season' ? seasonStats : recentStats;
   const goalsVsXg = useMemo(() => getTeamGoalsVsXg(fixtures, xgType), [fixtures, xgType]);
   const radarSeries = useMemo<RadarSeries[]>(
-    () => selectedTeams.flatMap(t => {
+    () => selectedTeams.flatMap((t, i) => {
       const stats = pool.find(s => s.team === t);
-      return stats ? [{ id: t, label: getTeamName(t), color: getTeamColor(t), stats, pool }] : [];
+      return stats ? [{ id: t, label: getTeamName(t), color: getSeriesColor(i), stats, pool }] : [];
     }),
     [selectedTeams, pool]
   );

@@ -1,6 +1,6 @@
 import { useMemo, useState } from 'react';
 import type { TeamSeasonStats, StreakRecord } from '../utils/dataProcessing';
-import { getTeamColor, getTeamName } from '../utils/teamColors';
+import { getTeamName } from '../utils/teamColors';
 import './StatsView.css';
 
 interface StatsViewProps {
@@ -24,7 +24,6 @@ function StreakRow({ period, record }: { period: string; record: StreakRecord })
     <div className="stat-card-row">
       <span className="stat-row-period">{period}</span>
       <div className="stat-card-team">
-        <span className="team-color-dot" style={{ backgroundColor: getTeamColor(record.team) }} />
         <span className="stat-card-name">{getTeamName(record.team)}</span>
       </div>
       <div className="streak-inline">
@@ -64,7 +63,6 @@ function DualStatCard({ label, seasonTeam, seasonValue, recentTeam, recentValue 
       <div className="stat-card-row">
         <span className="stat-row-period">Last 6</span>
         <div className="stat-card-team">
-          <span className="team-color-dot" style={{ backgroundColor: getTeamColor(recentTeam) }} />
           <span className="stat-card-name">{getTeamName(recentTeam)}</span>
         </div>
         <span className="stat-card-value">{recentValue}</span>
@@ -72,7 +70,6 @@ function DualStatCard({ label, seasonTeam, seasonValue, recentTeam, recentValue 
       <div className="stat-card-row">
         <span className="stat-row-period">Season</span>
         <div className="stat-card-team">
-          <span className="team-color-dot" style={{ backgroundColor: getTeamColor(seasonTeam) }} />
           <span className="stat-card-name">{getTeamName(seasonTeam)}</span>
         </div>
         <span className="stat-card-value">{seasonValue}</span>
@@ -136,7 +133,6 @@ function TriColTable({ title, note, colA, colB, colDiff, rows }: {
               <td className="stats-rank">{i + 1}</td>
               <td>
                 <div className="stats-team-cell">
-                  <span className="team-color-dot" style={{ backgroundColor: getTeamColor(row.team) }} />
                   <span className="stats-team-name">{getTeamName(row.team)}</span>
                 </div>
               </td>

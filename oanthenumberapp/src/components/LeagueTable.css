@@ -1,6 +1,6 @@
 .league-table-container {
   background: var(--surface);
-  border-radius: 12px;
+  border-radius: var(--radius);
   padding: 16px;
   border: 1px solid var(--border);
 }
@@ -44,21 +44,27 @@
 }
 
 .league-table tbody tr.divider-below td {
-  border-bottom: 2px dashed var(--primary);
+  border-bottom: 1px solid rgba(255, 107, 0, 0.55);
+}
+
+.league-table td.col-pos {
+  color: var(--text-muted);
+  font-weight: 600;
 }
 
 .col-pos  { width: 36px; }
 .col-team { text-align: left; width: auto; }
+.league-table th.col-team { text-align: left; }
 .col-pts  { font-weight: 700; }
 .col-form { width: 90px; }
 .col-p  { width: 26px; }
 .col-gd { width: 32px; }
 
-.col-w { color: #22c55e; }
+.col-w { color: var(--positive); }
 .col-d { color: var(--text-secondary); }
-.col-l { color: #ef4444; }
-.positive { color: #22c55e; }
-.negative { color: #ef4444; }
+.col-l { color: var(--negative); }
+.positive { color: var(--positive); }
+.negative { color: var(--negative); }
 
 .team-cell {
   display: flex;
@@ -75,12 +81,6 @@
   font-weight: 700;
 }
 
-.team-color-dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  flex-shrink: 0;
-}
 
 /* Form squares */
 .form-squares {
@@ -93,13 +93,13 @@
   display: inline-block;
   width: 14px;
   height: 14px;
-  border-radius: 3px;
+  border-radius: 4px;
   flex-shrink: 0;
 }
 
-.form-W { background: #22c55e; }
-.form-D { background: #94a3b8; }
-.form-L { background: #ef4444; }
+.form-W { background: var(--positive); }
+.form-D { background: #525252; }
+.form-L { background: var(--negative); }
 
 /* Mobile */
 @media (max-width: 768px) {
@@ -132,16 +132,16 @@
     border-radius: 2px;
   }
 
-  .team-color-dot {
-    width: 7px;
-    height: 7px;
-  }
 }
 
 .team-cell-link {
   cursor: pointer;
 }
 
+.team-cell-name {
+  transition: color 0.12s ease;
+}
+
 .team-cell-link:hover .team-cell-name {
-  text-decoration: underline;
+  color: var(--primary);
 }

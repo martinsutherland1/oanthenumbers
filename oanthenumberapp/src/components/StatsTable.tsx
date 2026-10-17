@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import type { TeamFullStats } from '../utils/dataProcessing';
-import { getTeamColor, getTeamName } from '../utils/teamColors';
+import { getTeamName } from '../utils/teamColors';
 import './StatsTable.css';
 
 type SortKey = 'avgPoints' | 'avgGoals' | 'avgXg';
@@ -43,10 +43,6 @@ export function StatsTable({ data }: StatsTableProps) {
               <tr key={team.team}>
                 <td className="rank">{index + 1}</td>
                 <td className="team-name">
-                  <span
-                    className="team-color-indicator"
-                    style={{ backgroundColor: getTeamColor(team.team) }}
-                  />
                   <span className="team-name-text">{getTeamName(team.team)}</span>
                 </td>
                 <td className="xg-value">{team.avgPoints.toFixed(2)}</td>

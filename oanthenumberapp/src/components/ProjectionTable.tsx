@@ -1,5 +1,5 @@
 import type { ProjectedStanding } from '../utils/dataProcessing';
-import { getTeamColor, getTeamName } from '../utils/teamColors';
+import { getTeamName } from '../utils/teamColors';
 import './LeagueTable.css';
 import './ProjectionTable.css';
 
@@ -36,7 +36,6 @@ export function ProjectionTable({ data, dividerPositions = [], onTeamClick }: Pr
                     className={`team-cell${onTeamClick ? ' team-cell-link' : ''}`}
                     onClick={onTeamClick ? () => onTeamClick(row.team) : undefined}
                   >
-                    <span className="team-color-dot" style={{ backgroundColor: getTeamColor(row.team) }} />
                     <span className="team-cell-name">{getTeamName(row.team)}</span>
                   </div>
                 </td>

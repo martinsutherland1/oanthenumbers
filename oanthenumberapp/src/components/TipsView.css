@@ -22,7 +22,7 @@
   height: 26px;
   border-radius: 50%;
   background: var(--primary);
-  color: white;
+  color: var(--on-primary);
   font-size: 0.8rem;
   font-weight: 600;
   display: flex;

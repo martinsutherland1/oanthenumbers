@@ -89,13 +89,6 @@
   font-variant-numeric: tabular-nums;
 }
 
-.team-color-dot {
-  display: inline-block;
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  flex-shrink: 0;
-}
 
 .allstats-val-col {
   width: 62px;

@@ -12,7 +12,7 @@ on:
       league:
         description: League to collect
         type: choice
-        options: [all, spfl, epl, laliga, bundesliga, seriea, ligue1]
+        options: [all, spfl, epl, laliga, bundesliga, seriea, ligue1, championsleague, europaleague, conferenceleague]
         default: all
 
 # Queue runs so overlapping commits never race each other
@@ -35,7 +35,7 @@ jobs:
           SCHEDULE: ${{ github.event.schedule }}
           LEAGUE_INPUT: ${{ inputs.league }}
         run: |
-          all="spfl epl laliga bundesliga seriea ligue1"
+          all="spfl epl laliga bundesliga seriea ligue1 championsleague europaleague conferenceleague"
           if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
             case "$LEAGUE_INPUT" in
               all) leagues="$all" ;;
@@ -103,6 +103,19 @@ jobs:
       - name: Collect Ligue 1 2026/27
         if: contains(needs.plan.outputs.leagues, 'ligue1')
         run: npm run collect_ligue1_2026_27
+
+      - name: Collect Champions League 2026/27
+        if: contains(needs.plan.outputs.leagues, 'championsleague')
+        run: npm run collect_championsleague_2026_27
+
+      # This script runs the browser headed, so give it a virtual display
+      - name: Collect Europa League 2026/27
+        if: contains(needs.plan.outputs.leagues, 'europaleague')
+        run: xvfb-run -a npm run collect_europaleague_2026_27
+
+      - name: Collect Conference League 2026/27
+        if: contains(needs.plan.outputs.leagues, 'conferenceleague')
+        run: npm run collect_conferenceleague_2026_27
 
       - name: Upload Playwright report
         if: failure()

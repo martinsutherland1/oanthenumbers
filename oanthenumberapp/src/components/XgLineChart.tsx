@@ -12,7 +12,7 @@ import type { LineChartDataPoint } from '../types';
 import type { MetricType } from './MetricToggle';
 import type { XgType } from '../utils/dataProcessing';
 import { XgTypeSelect } from './XgTypeSelect';
-import { getTeamColor, getTeamName, LEAGUE_AVERAGE_COLOR } from '../utils/teamColors';
+import { getSeriesColor, getTeamName, LEAGUE_AVERAGE_COLOR } from '../utils/teamColors';
 import './XgLineChart.css';
 
 interface XgLineChartProps {
@@ -121,15 +121,15 @@ export function XgLineChart({ data, selectedTeams, leagueAverage, metricType, xg
             />
 
             {/* Team Lines */}
-            {selectedTeams.map(team => (
+            {selectedTeams.map((team, i) => (
               <Line
                 key={team}
                 type="monotone"
                 dataKey={team}
                 name={getTeamName(team)}
-                stroke={getTeamColor(team)}
+                stroke={getSeriesColor(i)}
                 strokeWidth={2.5}
-                dot={{ fill: getTeamColor(team), strokeWidth: 0, r: 3 }}
+                dot={{ fill: getSeriesColor(i), strokeWidth: 0, r: 3 }}
                 activeDot={{ r: 5, strokeWidth: 0 }}
                 connectNulls
               />

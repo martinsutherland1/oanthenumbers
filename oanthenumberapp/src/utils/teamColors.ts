@@ -147,6 +147,77 @@ export const TEAM_NAMES: Record<string, string> = {
   'strasbourg': 'Strasbourg',
   'toulouse': 'Toulouse',
   'troyes': 'Troyes',
+
+  // European competitions (clubs not already listed under their domestic league)
+  'aek-athens': 'AEK Athens',
+  'bodoglimt': 'Bodø/Glimt',
+  'club-brugge': 'Club Brugge',
+  'fenerbahce': 'Fenerbahçe',
+  'feyenoord': 'Feyenoord',
+  'galatasaray': 'Galatasaray',
+  'lask': 'LASK',
+  'porto': 'Porto',
+  'psv-eindhoven': 'PSV',
+  'sabah': 'Sabah',
+  'shakhtar-donetsk': 'Shakhtar Donetsk',
+  'slavia-prague': 'Slavia Prague',
+  'slovan-bratislava': 'Slovan Bratislava',
+  'sporting-cp': 'Sporting CP',
+  'viking': 'Viking',
+  'anderlecht': 'Anderlecht',
+  'ararat-armenia': 'Ararat-Armenia',
+  'az-alkmaar': 'AZ Alkmaar',
+  'benfica': 'Benfica',
+  'besiktas': 'Beşiktaş',
+  'celje': 'Celje',
+  'dinamo-zagreb': 'Dinamo Zagreb',
+  'ferencvaros': 'Ferencváros',
+  'hapoel-beer-sheva': 'Hapoel Beer Sheva',
+  'jagiellonia': 'Jagiellonia',
+  'lech-poznan': 'Lech Poznań',
+  'levski-sofia': 'Levski Sofia',
+  'lillestrom': 'Lillestrøm',
+  'nec-nijmegen': 'NEC Nijmegen',
+  'ofi-crete': 'OFI Crete',
+  'olympiacos': 'Olympiacos',
+  'omonia': 'Omonia',
+  'salzburg': 'Salzburg',
+  'sparta-prague': 'Sparta Prague',
+  'sturm-graz': 'Sturm Graz',
+  'torreense': 'Torreense',
+  'union-stgilloise': 'Union SG',
+  'viktoria-plzen': 'Viktoria Plzeň',
+  'agf': 'AGF',
+  'ajax': 'Ajax',
+  'borac': 'Borac',
+  'braga': 'Braga',
+  'brann': 'Brann',
+  'brighton': 'Brighton',
+  'crvena-zvezda': 'Red Star Belgrade',
+  'cska-sofia': 'CSKA Sofia',
+  'egnatia': 'Egnatia',
+  'fc-kobenhavn': 'FC Copenhagen',
+  'gent': 'Gent',
+  'hajduk-split': 'Hajduk Split',
+  'iberia-1999': 'Iberia 1999',
+  'inter-club-descaldes': "Inter Club d'Escaldes",
+  'jablonec': 'Jablonec',
+  'kairat-almaty': 'Kairat Almaty',
+  'kauno-zalgiris': 'Kauno Žalgiris',
+  'kups': 'KuPS',
+  'lincoln-red-imps': 'Lincoln Red Imps',
+  'lugano': 'Lugano',
+  'midtjylland': 'Midtjylland',
+  'mjallby': 'Mjällby',
+  'nordsjaelland': 'Nordsjælland',
+  'pafos': 'Pafos',
+  'panathinaikos': 'Panathinaikos',
+  'riga': 'Riga',
+  'sttruiden': 'Sint-Truiden',
+  'thun': 'Thun',
+  'trabzonspor': 'Trabzonspor',
+  'twente': 'Twente',
+  'universitatea-craiova': 'U Craiova',
 };
 
 export function getTeamName(team: string): string {
@@ -157,162 +228,27 @@ export function getTeamName(team: string): string {
 export const TOP_6 = ['hearts', 'rangers', 'celtic', 'motherwell', 'hibernian', 'falkirk'];
 export const BOTTOM_6 = ['aberdeen', 'dundee-fc', 'dundee-united', 'kilmarnock', 'livingston', 'st-mirren'];
 
-// SPFL Premiership team colors - accurate club colors
-export const TEAM_COLORS: Record<string, string> = {
-  'aberdeen': '#DC2626',
-  'celtic': '#10B981',
-  'dundee-fc': '#1E3A8A',
-  'dundee-united': '#F97316',
-  'heart-midlothian': '#7F1D1D',
-  'hibernian': '#22C55E',
-  'kilmarnock': '#3B82F6',
-  'livingston': '#FACC15',
-  'motherwell': '#991B1B',
-  'rangers': '#1D4ED8',
-  'st-mirren': '#171717',
-  'falkirk': '#1E3A5F',
-  'ross-county': '#1E40AF',
-  'st-johnstone': '#2563EB',
-  'partick-thistle': '#EF4444',
+// Brand accent, from the logo. Used wherever a single team is charted.
+export const BRAND_COLOR = '#FF6B00';
 
-  // EPL - accurate club colors
-  'arsenal': '#EF0107',
-  'aston-villa': '#670E36',
-  'afc-bournemouth': '#B91C1C',
-  'brentford': '#E30613',
-  'brighton-hove-albion': '#0057B8',
-  'burnley': '#8A2244',
-  'chelsea': '#034694',
-  'crystal-palace': '#1B458F',
-  'everton': '#003399',
-  'fulham': '#FFFFFF',
-  'leeds-united': '#FFFFFF',
-  'liverpool': '#C8102E',
-  'manchester-city': '#6CABDD',
-  'manchester-united': '#DA020E',
-  'newcastle-united': '#000000',
-  'nottingham-forest': '#DD0000',
-  'sunderland': '#EB172B',
-  'tottenham-hotspur': '#FFFFFF',
-  'west-ham-united': '#7A263A',
-  'wolverhampton-wanderers': '#FDB913',
-  'coventry-city': '#5BA4CF',
-  'hull-city': '#F5A20A',
-  'ipswich-town': '#3A64A3',
+// Neutral color for league average and unselected teams
+export const LEAGUE_AVERAGE_COLOR = '#8C8C8C';
 
-  // La Liga
-  'alaves': '#1E5AA8',
-  'athletic-club': '#EE2523',
-  'atletico-madrid': '#CB3524',
-  'barcelona': '#A50044',
-  'celta-vigo': '#8AC3EE',
-  'elche': '#2E8B57',
-  'espanyol': '#007FC8',
-  'getafe': '#005999',
-  'girona': '#CD2534',
-  'levante': '#B4053F',
-  'mallorca': '#E20613',
-  'osasuna': '#8B0000',
-  'rayo-vallecano': '#FFFFFF',
-  'real-betis': '#00954C',
-  'real-madrid': '#F5F5F5',
-  'real-oviedo': '#0033A0',
-  'real-sociedad': '#FFFFFF',
-  'sevilla': '#D71920',
-  'valencia': '#FFFFFF',
-  'villarreal': '#FFE114',
-  'racing-santander': '#0B8043',
-  'deportivo-coruna': '#0057B8',
-  'malaga': '#0094D8',
+// Teams aren't shown in club colors. When several are charted together each takes the next
+// color here, in the order they were selected, so series stay distinct on the dark theme.
+export const SERIES_COLORS = [
+  BRAND_COLOR,
+  '#F2F2F2',
+  '#38BDF8',
+  '#A3E635',
+  '#C084FC',
+  '#FACC15',
+  '#F472B6',
+  '#2DD4BF',
+];
 
-  // Bundesliga
-  'augsburg': '#BA3733',
-  'bayer-leverkusen': '#E32221',
-  'bayern-munchen': '#DC052D',
-  'borussia-dortmund': '#FDE100',
-  'borussia-monchengladbach': '#2E8B57',
-  'eintracht-frankfurt': '#E1000F',
-  'elversberg': '#1B1B1B',
-  'freiburg': '#D0202E',
-  'hamburger-sv': '#0A3A8C',
-  'heidenheim': '#E2001A',
-  'hoffenheim': '#1961B5',
-  'koln': '#ED1C24',
-  'mainz': '#C3141E',
-  'paderborn': '#0061AA',
-  'rb-leipzig': '#DD0741',
-  'schalke': '#004D9D',
-  'st-pauli': '#6F4E37',
-  'stuttgart': '#E32219',
-  'union-berlin': '#EB1923',
-  'werder-bremen': '#1D9053',
-  'wolfsburg': '#65B32E',
-
-  // Serie A
-  'atalanta': '#1E71B8',
-  'bologna': '#1A2F48',
-  'cagliari': '#B01E2E',
-  'como': '#0B4EA2',
-  'cremonese': '#9A9A9A',
-  'fiorentina': '#5B2D8E',
-  'frosinone': '#F2C300',
-  'genoa': '#A6192E',
-  'hellas-verona': '#F5C400',
-  'inter': '#0068A8',
-  'juventus': '#1B1B1B',
-  'lazio': '#87CEEB',
-  'lecce': '#E2A500',
-  'milan': '#FB090B',
-  'monza': '#D51E2D',
-  'napoli': '#12A0D7',
-  'parma': '#F2C600',
-  'pisa': '#1B4F9C',
-  'roma': '#8E1F2F',
-  'sassuolo': '#00A650',
-  'torino': '#8B1E3F',
-  'udinese': '#6E6E6E',
-  'venezia': '#E8731A',
-
-  // Ligue 1
-  'angers': '#1B1B1B',
-  'auxerre': '#005BAC',
-  'brest': '#E30613',
-  'le-havre': '#4A90D9',
-  'le-mans': '#C8102E',
-  'lens': '#F2C500',
-  'lille': '#D0102A',
-  'lorient': '#F58220',
-  'lyon': '#1C3F94',
-  'marseille': '#2FAEE0',
-  'metz': '#8A1E3D',
-  'monaco': '#E8112D',
-  'nantes': '#F5D000',
-  'nice': '#D6001C',
-  'paris-fc': '#003A8F',
-  'paris-saint-germain': '#004170',
-  'rennes': '#D2232A',
-  'strasbourg': '#0072BC',
-  'toulouse': '#5D2E8C',
-  'troyes': '#0A4DA2',
-};
-
-// Neutral color for league average
-export const LEAGUE_AVERAGE_COLOR = '#6B7280';
-
-// Get team color with fallback
-export function getTeamColor(team: string): string {
-  return TEAM_COLORS[team] || '#6B7280';
-}
-
-// Readable text color (black or white) for a given background color, so pale team
-// colors like white don't render white-on-white text
-export function getContrastText(hexColor: string): string {
-  const hex = hexColor.replace('#', '');
-  const r = parseInt(hex.substring(0, 2), 16);
-  const g = parseInt(hex.substring(2, 4), 16);
-  const b = parseInt(hex.substring(4, 6), 16);
-  const luminance = (0.299 * r + 0.587 * g + 0.114 * b) / 255;
-  return luminance > 0.6 ? '#111111' : '#ffffff';
+export function getSeriesColor(index: number): string {
+  return SERIES_COLORS[index % SERIES_COLORS.length];
 }
 
 export const TEAM_ABBR: Record<string, string> = {
