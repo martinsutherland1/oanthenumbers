@@ -104,14 +104,12 @@ export function BettingView({ data }: BettingViewProps) {
         rows={data}
       />
       <BettingTable
-        title="Winning Margin"
+        title="Handicap"
         columns={[
-          { key: 'winBy1', label: 'W -1' },
-          { key: 'winBy2', label: 'W -2' },
-          { key: 'winBy3Plus', label: 'W -3>' },
-          { key: 'loseBy1', label: 'L -1' },
-          { key: 'loseBy2', label: 'L -2' },
-          { key: 'loseBy3Plus', label: 'L -3>' },
+          { key: 'hcapMinus2', label: '-2' },
+          { key: 'hcapMinus1', label: '-1' },
+          { key: 'hcapPlus1', label: '+1' },
+          { key: 'hcapPlus2', label: '+2' },
         ]}
         rows={data}
       />

@@ -772,23 +772,22 @@ export interface TeamBettingStats {
   bttsDraw: number;
   winToNil: number;
   draw: number;
-  winBy1: number;
-  winBy2: number;
-  winBy3Plus: number;
-  loseBy1: number;
-  loseBy2: number;
-  loseBy3Plus: number;
+  hcapMinus1: number;
+  hcapMinus2: number;
+  hcapPlus1: number;
+  hcapPlus2: number;
 }
 
-// Percentage of each team's games hitting common betting markets. Win/lose margins are
-// exact for 1 and 2 goals and 3+ for the last, so they sum with draw to 100%.
+// Percentage of each team's games hitting common betting markets. Handicap columns are
+// the share of games the team would have covered that handicap (start of -1 needs a win
+// by 2+, +1 needs a win or draw, etc.), so they are cumulative rather than exclusive.
 export function getBettingStats(fixtures: Fixture[]): TeamBettingStats[] {
   const teams = extractTeams(fixtures);
   const stats = new Map<string, Omit<TeamBettingStats, 'team'>>();
   teams.forEach(t => stats.set(t, {
     played: 0, over15: 0, over25: 0, over35: 0, over45: 0,
     btts: 0, bttsWin: 0, bttsDraw: 0, winToNil: 0, draw: 0,
-    winBy1: 0, winBy2: 0, winBy3Plus: 0, loseBy1: 0, loseBy2: 0, loseBy3Plus: 0,
+    hcapMinus1: 0, hcapMinus2: 0, hcapPlus1: 0, hcapPlus2: 0,
   }));
 
   fixtures.forEach(f => {
@@ -813,12 +812,10 @@ export function getBettingStats(fixtures: Fixture[]): TeamBettingStats[] {
       if (bothScored && diff === 0) s.bttsDraw++;
       if (diff > 0 && conceded === 0) s.winToNil++;
       if (diff === 0) s.draw++;
-      if (diff === 1) s.winBy1++;
-      if (diff === 2) s.winBy2++;
-      if (diff >= 3) s.winBy3Plus++;
-      if (diff === -1) s.loseBy1++;
-      if (diff === -2) s.loseBy2++;
-      if (diff <= -3) s.loseBy3Plus++;
+      if (diff >= 2) s.hcapMinus1++;
+      if (diff >= 3) s.hcapMinus2++;
+      if (diff >= 0) s.hcapPlus1++;
+      if (diff >= -1) s.hcapPlus2++;
     });
   });
 
