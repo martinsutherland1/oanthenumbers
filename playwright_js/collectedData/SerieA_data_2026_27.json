@@ -725,6 +725,23 @@
       "xgot_for": 0.58,
       "xgot_against": 3.38,
       "location": "away"
+    },
+    {
+      "date": "2026-10-16",
+      "opposition": "sassuolo",
+      "goals_for": 4,
+      "goals_against": 2,
+      "xG_for": 2.08,
+      "xG_against": 1.92,
+      "xg_open_play_for": 1.56,
+      "xg_open_play_against": 1.65,
+      "xg_set_play_for": 0.52,
+      "xg_set_play_against": 0.27,
+      "npxg_for": 2.08,
+      "npxg_against": 1.92,
+      "xgot_for": 4.51,
+      "xgot_against": 3.05,
+      "location": "home"
     }
   ],
   "genoa": [
@@ -1765,6 +1782,23 @@
       "xgot_for": 1.24,
       "xgot_against": 1.65,
       "location": "home"
+    },
+    {
+      "date": "2026-10-16",
+      "opposition": "frosinone",
+      "goals_for": 2,
+      "goals_against": 4,
+      "xG_for": 1.92,
+      "xG_against": 2.08,
+      "xg_open_play_for": 1.65,
+      "xg_open_play_against": 1.56,
+      "xg_set_play_for": 0.27,
+      "xg_set_play_against": 0.52,
+      "npxg_for": 1.92,
+      "npxg_against": 2.08,
+      "xgot_for": 3.05,
+      "xgot_against": 4.51,
+      "location": "away"
     }
   ],
   "torino": [

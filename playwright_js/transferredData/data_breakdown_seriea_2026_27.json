@@ -1060,5 +1060,24 @@
       "home_xgot": 2.13,
       "away_xgot": 0.15
     }
+  ],
+  "2026-10-16": [
+    {
+      "date": "2026-10-16",
+      "home_team": "frosinone",
+      "away_team": "sassuolo",
+      "home_goals": 4,
+      "away_goals": 2,
+      "home_xG": 2.08,
+      "away_xG": 1.92,
+      "home_xg_open_play": 1.56,
+      "away_xg_open_play": 1.65,
+      "home_xg_set_play": 0.52,
+      "away_xg_set_play": 0.27,
+      "home_npxg": 2.08,
+      "away_npxg": 1.92,
+      "home_xgot": 4.51,
+      "away_xgot": 3.05
+    }
   ]
 }

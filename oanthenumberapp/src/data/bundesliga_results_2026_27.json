@@ -793,5 +793,24 @@
       "home_xgot": 1.37,
       "away_xgot": 0.7
     }
+  ],
+  "2026-10-16": [
+    {
+      "date": "2026-10-16",
+      "home_team": "eintracht-frankfurt",
+      "away_team": "koln",
+      "home_goals": 1,
+      "away_goals": 0,
+      "home_xG": 1.8,
+      "away_xG": 0.8,
+      "home_xg_open_play": 1.53,
+      "away_xg_open_play": 0.5,
+      "home_xg_set_play": 0.27,
+      "away_xg_set_play": 0.3,
+      "home_npxg": 1.8,
+      "away_npxg": 0.8,
+      "home_xgot": 1.78,
+      "away_xgot": 1.14
+    }
   ]
 }

@@ -954,5 +954,24 @@
       "home_xgot": 1.25,
       "away_xgot": 0.69
     }
+  ],
+  "2026-10-16": [
+    {
+      "date": "2026-10-16",
+      "home_team": "le-mans",
+      "away_team": "toulouse",
+      "home_goals": 0,
+      "away_goals": 3,
+      "home_xG": 0.95,
+      "away_xG": 1.81,
+      "home_xg_open_play": 0.67,
+      "away_xg_open_play": 1.61,
+      "home_xg_set_play": 0.27,
+      "away_xg_set_play": 0.2,
+      "home_npxg": 0.95,
+      "away_npxg": 1.81,
+      "home_xgot": 0.16,
+      "away_xgot": 3.19
+    }
   ]
 }

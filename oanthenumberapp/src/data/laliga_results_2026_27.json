@@ -1411,5 +1411,24 @@
       "home_xgot": 3.15,
       "away_xgot": 2.61
     }
+  ],
+  "2026-10-16": [
+    {
+      "date": "2026-10-16",
+      "home_team": "deportivo-coruna",
+      "away_team": "levante",
+      "home_goals": 1,
+      "away_goals": 1,
+      "home_xG": 1.08,
+      "away_xG": 0.83,
+      "home_xg_open_play": 1.05,
+      "away_xg_open_play": 0.56,
+      "home_xg_set_play": 0.03,
+      "away_xg_set_play": 0.27,
+      "home_npxg": 1.08,
+      "away_npxg": 0.83,
+      "home_xgot": 1.1,
+      "away_xgot": 1.06
+    }
   ]
 }

@@ -808,6 +808,23 @@
       "xgot_for": 1.55,
       "xgot_against": 2.53,
       "location": "away"
+    },
+    {
+      "date": "2026-10-16",
+      "opposition": "levante",
+      "goals_for": 1,
+      "goals_against": 1,
+      "xG_for": 1.08,
+      "xG_against": 0.83,
+      "xg_open_play_for": 1.05,
+      "xg_open_play_against": 0.56,
+      "xg_set_play_for": 0.03,
+      "xg_set_play_against": 0.27,
+      "npxg_for": 1.08,
+      "npxg_against": 0.83,
+      "xgot_for": 1.1,
+      "xgot_against": 1.06,
+      "location": "home"
     }
   ],
   "elche": [
@@ -1343,6 +1360,23 @@
       "xgot_for": 3.15,
       "xgot_against": 2.61,
       "location": "home"
+    },
+    {
+      "date": "2026-10-16",
+      "opposition": "deportivo-coruna",
+      "goals_for": 1,
+      "goals_against": 1,
+      "xG_for": 0.83,
+      "xG_against": 1.08,
+      "xg_open_play_for": 0.56,
+      "xg_open_play_against": 1.05,
+      "xg_set_play_for": 0.27,
+      "xg_set_play_against": 0.03,
+      "npxg_for": 0.83,
+      "npxg_against": 1.08,
+      "xgot_for": 1.06,
+      "xgot_against": 1.1,
+      "location": "away"
     }
   ],
   "malaga": [
