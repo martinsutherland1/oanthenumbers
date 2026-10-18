@@ -290,6 +290,23 @@
       "xgot_for": 3.58,
       "xgot_against": 0.38,
       "location": "away"
+    },
+    {
+      "date": "2026-10-18",
+      "opposition": "heart-midlothian",
+      "goals_for": 7,
+      "goals_against": 1,
+      "xG_for": 4.16,
+      "xG_against": 1.2,
+      "xg_open_play_for": 3.44,
+      "xg_open_play_against": 0.56,
+      "xg_set_play_for": 0.72,
+      "xg_set_play_against": 0.64,
+      "npxg_for": 4.16,
+      "npxg_against": 1.2,
+      "xgot_for": 5.55,
+      "xgot_against": 1.26,
+      "location": "home"
     }
   ],
   "dundee-fc": [
@@ -893,6 +910,23 @@
       "xgot_for": 3.5,
       "xgot_against": 0.63,
       "location": "home"
+    },
+    {
+      "date": "2026-10-18",
+      "opposition": "celtic",
+      "goals_for": 1,
+      "goals_against": 7,
+      "xG_for": 1.2,
+      "xG_against": 4.16,
+      "xg_open_play_for": 0.56,
+      "xg_open_play_against": 3.44,
+      "xg_set_play_for": 0.64,
+      "xg_set_play_against": 0.72,
+      "npxg_for": 1.2,
+      "npxg_against": 4.16,
+      "xgot_for": 1.26,
+      "xgot_against": 5.55,
+      "location": "away"
     }
   ],
   "hibernian": [

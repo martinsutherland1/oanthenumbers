@@ -1500,5 +1500,75 @@
       "home_xgot": 1.11,
       "away_xgot": 0.25
     }
+  ],
+  "2026-10-18": [
+    {
+      "date": "2026-10-18",
+      "home_team": "celta-vigo",
+      "away_team": "alaves",
+      "home_goals": 2,
+      "away_goals": 1,
+      "home_xG": 0.87,
+      "away_xG": 1.03,
+      "home_xg_open_play": 0.73,
+      "away_xg_open_play": 0.87,
+      "home_xg_set_play": 0.14,
+      "away_xg_set_play": 0.16,
+      "home_npxg": 0.87,
+      "away_npxg": 1.03,
+      "home_xgot": 1.31,
+      "away_xgot": 2.15
+    },
+    {
+      "date": "2026-10-18",
+      "home_team": "malaga",
+      "away_team": "real-sociedad",
+      "home_goals": 2,
+      "away_goals": 5,
+      "home_xG": 1.24,
+      "away_xG": 2.44,
+      "home_xg_open_play": 1.04,
+      "away_xg_open_play": 2.25,
+      "home_xg_set_play": 0.2,
+      "away_xg_set_play": 0.19,
+      "home_npxg": 1.24,
+      "away_npxg": 2.44,
+      "home_xgot": 2.19,
+      "away_xgot": 2.95
+    },
+    {
+      "date": "2026-10-18",
+      "home_team": "osasuna",
+      "away_team": "racing-santander",
+      "home_goals": 2,
+      "away_goals": 0,
+      "home_xG": 3.38,
+      "away_xG": 0.28,
+      "home_xg_open_play": 0.72,
+      "away_xg_open_play": 0.24,
+      "home_xg_set_play": 1.88,
+      "away_xg_set_play": 0.05,
+      "home_npxg": 2.59,
+      "away_npxg": 0.28,
+      "home_xgot": 4.23,
+      "away_xgot": 0.01
+    },
+    {
+      "date": "2026-10-18",
+      "home_team": "real-madrid",
+      "away_team": "sevilla",
+      "home_goals": 4,
+      "away_goals": 1,
+      "home_xG": 2.24,
+      "away_xG": 0.75,
+      "home_xg_open_play": 1.42,
+      "away_xg_open_play": 0.69,
+      "home_xg_set_play": 0.03,
+      "away_xg_set_play": 0.07,
+      "home_npxg": 1.45,
+      "away_npxg": 0.75,
+      "home_xgot": 2.8,
+      "away_xgot": 1.07
+    }
   ]
 }
