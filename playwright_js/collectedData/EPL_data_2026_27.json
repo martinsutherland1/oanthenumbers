@@ -309,6 +309,23 @@
       "xgot_for": 2.47,
       "xgot_against": 0.59,
       "location": "home"
+    },
+    {
+      "date": "2026-10-17",
+      "opposition": "newcastle-united",
+      "goals_for": 1,
+      "goals_against": 0,
+      "xG_for": 1.57,
+      "xG_against": 0.99,
+      "xg_open_play_for": 1.49,
+      "xg_open_play_against": 0.77,
+      "xg_set_play_for": 0.08,
+      "xg_set_play_against": 0.22,
+      "npxg_for": 1.57,
+      "npxg_against": 0.99,
+      "xgot_for": 1.05,
+      "xgot_against": 0.25,
+      "location": "away"
     }
   ],
   "brentford": [
@@ -1901,6 +1918,23 @@
       "xgot_for": 0.39,
       "xgot_against": 2.63,
       "location": "away"
+    },
+    {
+      "date": "2026-10-17",
+      "opposition": "aston-villa",
+      "goals_for": 0,
+      "goals_against": 1,
+      "xG_for": 0.99,
+      "xG_against": 1.57,
+      "xg_open_play_for": 0.77,
+      "xg_open_play_against": 1.49,
+      "xg_set_play_for": 0.22,
+      "xg_set_play_against": 0.08,
+      "npxg_for": 0.99,
+      "npxg_against": 1.57,
+      "xgot_for": 0.25,
+      "xgot_against": 1.05,
+      "location": "home"
     }
   ],
   "nottingham-forest": [

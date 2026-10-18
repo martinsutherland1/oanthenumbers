@@ -1062,6 +1062,23 @@
   "2026-10-17": [
     {
       "date": "2026-10-17",
+      "home_team": "newcastle-united",
+      "away_team": "aston-villa",
+      "home_goals": 0,
+      "away_goals": 1,
+      "home_xG": 0.99,
+      "away_xG": 1.57,
+      "home_xg_open_play": 0.77,
+      "away_xg_open_play": 1.49,
+      "home_xg_set_play": 0.22,
+      "away_xg_set_play": 0.08,
+      "home_npxg": 0.99,
+      "away_npxg": 1.57,
+      "home_xgot": 0.25,
+      "away_xgot": 1.05
+    },
+    {
+      "date": "2026-10-17",
       "home_team": "brentford",
       "away_team": "liverpool",
       "home_goals": 1,
