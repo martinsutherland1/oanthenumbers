@@ -1145,5 +1145,75 @@
       "home_xgot": 1.56,
       "away_xgot": 1.8
     }
+  ],
+  "2026-10-18": [
+    {
+      "date": "2026-10-18",
+      "home_team": "afc-bournemouth",
+      "away_team": "sunderland",
+      "home_goals": 2,
+      "away_goals": 0,
+      "home_xG": 4.23,
+      "away_xG": 0.07,
+      "home_xg_open_play": 3.87,
+      "away_xg_open_play": 0.01,
+      "home_xg_set_play": 0.36,
+      "away_xg_set_play": 0.06,
+      "home_npxg": 4.23,
+      "away_npxg": 0.07,
+      "home_xgot": 2.89,
+      "away_xgot": 0
+    },
+    {
+      "date": "2026-10-18",
+      "home_team": "nottingham-forest",
+      "away_team": "arsenal",
+      "home_goals": 0,
+      "away_goals": 1,
+      "home_xG": 0.75,
+      "away_xG": 1.07,
+      "home_xg_open_play": 0.35,
+      "away_xg_open_play": 0.48,
+      "home_xg_set_play": 0.4,
+      "away_xg_set_play": 0.58,
+      "home_npxg": 0.75,
+      "away_npxg": 1.07,
+      "home_xgot": 0.16,
+      "away_xgot": 0.16
+    },
+    {
+      "date": "2026-10-18",
+      "home_team": "brighton-hove-albion",
+      "away_team": "crystal-palace",
+      "home_goals": 5,
+      "away_goals": 0,
+      "home_xG": 2,
+      "away_xG": 0.77,
+      "home_xg_open_play": 0.93,
+      "away_xg_open_play": 0.52,
+      "home_xg_set_play": 1.07,
+      "away_xg_set_play": 0.25,
+      "home_npxg": 2,
+      "away_npxg": 0.77,
+      "home_xgot": 3.03,
+      "away_xgot": 0.05
+    },
+    {
+      "date": "2026-10-18",
+      "home_team": "leeds-united",
+      "away_team": "manchester-united",
+      "home_goals": 1,
+      "away_goals": 1,
+      "home_xG": 1.44,
+      "away_xG": 0.91,
+      "home_xg_open_play": 0.25,
+      "away_xg_open_play": 0.79,
+      "home_xg_set_play": 1.18,
+      "away_xg_set_play": 0.12,
+      "home_npxg": 1.44,
+      "away_npxg": 0.91,
+      "home_xgot": 0.95,
+      "away_xgot": 0.95
+    }
   ]
 }
