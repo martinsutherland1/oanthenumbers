@@ -1570,5 +1570,24 @@
       "home_xgot": 2.8,
       "away_xgot": 1.07
     }
+  ],
+  "2026-10-19": [
+    {
+      "date": "2026-10-19",
+      "home_team": "getafe",
+      "away_team": "rayo-vallecano",
+      "home_goals": 1,
+      "away_goals": 1,
+      "home_xG": 0.63,
+      "away_xG": 2.14,
+      "home_xg_open_play": 0.49,
+      "away_xg_open_play": 1.95,
+      "home_xg_set_play": 0.14,
+      "away_xg_set_play": 0.18,
+      "home_npxg": 0.63,
+      "away_npxg": 2.14,
+      "home_xgot": 1.49,
+      "away_xgot": 1.44
+    }
   ]
 }

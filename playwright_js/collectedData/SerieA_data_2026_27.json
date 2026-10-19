@@ -464,6 +464,23 @@
       "xgot_for": 0.58,
       "xgot_against": 2.55,
       "location": "home"
+    },
+    {
+      "date": "2026-10-19",
+      "opposition": "monza",
+      "goals_for": 0,
+      "goals_against": 4,
+      "xG_for": 2.37,
+      "xG_against": 2.06,
+      "xg_open_play_for": 1.93,
+      "xg_open_play_against": 1.83,
+      "xg_set_play_for": 0.44,
+      "xg_set_play_against": 0.23,
+      "npxg_for": 2.37,
+      "npxg_against": 2.06,
+      "xgot_for": 1.26,
+      "xgot_against": 2.36,
+      "location": "away"
     }
   ],
   "como": [
@@ -1536,6 +1553,23 @@
       "xgot_for": 1.92,
       "xgot_against": 2.16,
       "location": "away"
+    },
+    {
+      "date": "2026-10-19",
+      "opposition": "cagliari",
+      "goals_for": 4,
+      "goals_against": 0,
+      "xG_for": 2.06,
+      "xG_against": 2.37,
+      "xg_open_play_for": 1.83,
+      "xg_open_play_against": 1.93,
+      "xg_set_play_for": 0.23,
+      "xg_set_play_against": 0.44,
+      "npxg_for": 2.06,
+      "npxg_against": 2.37,
+      "xgot_for": 2.36,
+      "xgot_against": 1.26,
+      "location": "home"
     }
   ],
   "napoli": [
@@ -1761,6 +1795,23 @@
       "xgot_for": 0.08,
       "xgot_against": 1.96,
       "location": "away"
+    },
+    {
+      "date": "2026-10-19",
+      "opposition": "torino",
+      "goals_for": 0,
+      "goals_against": 3,
+      "xG_for": 1.39,
+      "xG_against": 1.35,
+      "xg_open_play_for": 1.02,
+      "xg_open_play_against": 1.07,
+      "xg_set_play_for": 0.37,
+      "xg_set_play_against": 0.29,
+      "npxg_for": 1.39,
+      "npxg_against": 1.35,
+      "xgot_for": 1.18,
+      "xgot_against": 1.8,
+      "location": "home"
     }
   ],
   "roma": [
@@ -2107,6 +2158,23 @@
       "xgot_for": 2.13,
       "xgot_against": 0.15,
       "location": "home"
+    },
+    {
+      "date": "2026-10-19",
+      "opposition": "parma",
+      "goals_for": 3,
+      "goals_against": 0,
+      "xG_for": 1.35,
+      "xG_against": 1.39,
+      "xg_open_play_for": 1.07,
+      "xg_open_play_against": 1.02,
+      "xg_set_play_for": 0.29,
+      "xg_set_play_against": 0.37,
+      "npxg_for": 1.35,
+      "npxg_against": 1.39,
+      "xgot_for": 1.8,
+      "xgot_against": 1.18,
+      "location": "away"
     }
   ],
   "udinese": [

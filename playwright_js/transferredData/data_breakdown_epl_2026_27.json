@@ -1215,5 +1215,24 @@
       "home_xgot": 0.95,
       "away_xgot": 0.95
     }
+  ],
+  "2026-10-19": [
+    {
+      "date": "2026-10-19",
+      "home_team": "tottenham-hotspur",
+      "away_team": "coventry-city",
+      "home_goals": 3,
+      "away_goals": 1,
+      "home_xG": 0.87,
+      "away_xG": 0.82,
+      "home_xg_open_play": 0.78,
+      "away_xg_open_play": 0.74,
+      "home_xg_set_play": 0.09,
+      "away_xg_set_play": 0.08,
+      "home_npxg": 0.87,
+      "away_npxg": 0.82,
+      "home_xgot": 0.83,
+      "away_xgot": 0.19
+    }
   ]
 }

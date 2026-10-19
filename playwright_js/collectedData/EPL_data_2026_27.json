@@ -827,6 +827,23 @@
       "xgot_for": 2.63,
       "xgot_against": 0.39,
       "location": "home"
+    },
+    {
+      "date": "2026-10-19",
+      "opposition": "tottenham-hotspur",
+      "goals_for": 1,
+      "goals_against": 3,
+      "xG_for": 0.82,
+      "xG_against": 0.87,
+      "xg_open_play_for": 0.74,
+      "xg_open_play_against": 0.78,
+      "xg_set_play_for": 0.08,
+      "xg_set_play_against": 0.09,
+      "npxg_for": 0.82,
+      "npxg_against": 0.87,
+      "xgot_for": 0.19,
+      "xgot_against": 0.83,
+      "location": "away"
     }
   ],
   "crystal-palace": [
@@ -2383,6 +2400,23 @@
       "xgot_for": 1.38,
       "xgot_against": 0.61,
       "location": "away"
+    },
+    {
+      "date": "2026-10-19",
+      "opposition": "coventry-city",
+      "goals_for": 3,
+      "goals_against": 1,
+      "xG_for": 0.87,
+      "xG_against": 0.82,
+      "xg_open_play_for": 0.78,
+      "xg_open_play_against": 0.74,
+      "xg_set_play_for": 0.09,
+      "xg_set_play_against": 0.08,
+      "npxg_for": 0.87,
+      "npxg_against": 0.82,
+      "xgot_for": 0.83,
+      "xgot_against": 0.19,
+      "location": "home"
     }
   ]
 }

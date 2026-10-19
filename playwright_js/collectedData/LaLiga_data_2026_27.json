@@ -1358,6 +1358,23 @@
       "xgot_for": 0.23,
       "xgot_against": 1.7,
       "location": "away"
+    },
+    {
+      "date": "2026-10-19",
+      "opposition": "rayo-vallecano",
+      "goals_for": 1,
+      "goals_against": 1,
+      "xG_for": 0.63,
+      "xG_against": 2.14,
+      "xg_open_play_for": 0.49,
+      "xg_open_play_against": 1.95,
+      "xg_set_play_for": 0.14,
+      "xg_set_play_against": 0.18,
+      "npxg_for": 0.63,
+      "npxg_against": 2.14,
+      "xgot_for": 1.49,
+      "xgot_against": 1.44,
+      "location": "home"
     }
   ],
   "levante": [
@@ -2099,6 +2116,23 @@
       "xgot_for": 0.28,
       "xgot_against": 0,
       "location": "home"
+    },
+    {
+      "date": "2026-10-19",
+      "opposition": "getafe",
+      "goals_for": 1,
+      "goals_against": 1,
+      "xG_for": 2.14,
+      "xG_against": 0.63,
+      "xg_open_play_for": 1.95,
+      "xg_open_play_against": 0.49,
+      "xg_set_play_for": 0.18,
+      "xg_set_play_against": 0.14,
+      "npxg_for": 2.14,
+      "npxg_against": 0.63,
+      "xgot_for": 1.44,
+      "xgot_against": 1.49,
+      "location": "away"
     }
   ],
   "real-betis": [
