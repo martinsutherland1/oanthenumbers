@@ -125,6 +125,13 @@ jobs:
           path: playwright_js/playwright-report
           retention-days: 7
 
+      # Record the current top tips so their results can be tracked on the History tab
+      - name: Log top tips
+        working-directory: oanthenumberapp
+        run: |
+          npm ci
+          npm run log-tips
+
       - name: Commit updated data
         id: commit
         working-directory: .

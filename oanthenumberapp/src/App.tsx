@@ -20,41 +20,41 @@ import {
   getBettingStats,
   createProjectionContext,
   parseDate,
-  flattenFixtures,
-  flattenSchedule,
   type ProjectionConfig
 } from './utils/dataProcessing';
 import { getLeagueTips, type LeagueTips } from './utils/bettingTips';
 import { PROJECTION_CONFIG } from './utils/projectionConfig';
 import { SHOW_PROJECTION_EXTRAS } from './utils/featureFlags';
 import { getTeamName } from './utils/teamColors';
-import spflFixturesData from './data/spfl_results_2026_27.json';
-import spflLastSeasonFixturesData from './data/spfl_results_2025_26.json';
-import spflTwoSeasonsAgoFixturesData from './data/spfl_results_2024_25.json';
-import eplFixturesData from './data/epl_results_2026_27.json';
-import eplLastSeasonFixturesData from './data/epl_results_2025_26.json';
-import laligaFixturesData from './data/laliga_results_2026_27.json';
-import laligaLastSeasonFixturesData from './data/laliga_results_2025_26.json';
-import bundesligaFixturesData from './data/bundesliga_results_2026_27.json';
-import bundesligaLastSeasonFixturesData from './data/bundesliga_results_2025_26.json';
-import serieaFixturesData from './data/seriea_results_2026_27.json';
-import serieaLastSeasonFixturesData from './data/seriea_results_2025_26.json';
-import ligue1FixturesData from './data/ligue1_results_2026_27.json';
-import ligue1LastSeasonFixturesData from './data/ligue1_results_2025_26.json';
-import championsleagueFixturesData from './data/championsleague_results_2026_27.json';
-import europaleagueFixturesData from './data/europaleague_results_2026_27.json';
-import conferenceleagueFixturesData from './data/conferenceleague_results_2026_27.json';
-import championsleagueScheduleData from './data/championsleague_fixtures_2026_27.json';
-import europaleagueScheduleData from './data/europaleague_fixtures_2026_27.json';
-import conferenceleagueScheduleData from './data/conferenceleague_fixtures_2026_27.json';
-import eplScheduleData from './data/epl_fixtures_2026_27.json';
-import spflScheduleData from './data/spfl_fixtures_2026_27.json';
-import laligaScheduleData from './data/laliga_fixtures_2026_27.json';
-import bundesligaScheduleData from './data/bundesliga_fixtures_2026_27.json';
-import serieaScheduleData from './data/seriea_fixtures_2026_27.json';
-import ligue1ScheduleData from './data/ligue1_fixtures_2026_27.json';
+import {
+  spflFixtures,
+  spflLastSeasonFixtures,
+  spflTwoSeasonsAgoFixtures,
+  eplFixtures,
+  eplLastSeasonFixtures,
+  laligaFixtures,
+  laligaLastSeasonFixtures,
+  bundesligaFixtures,
+  bundesligaLastSeasonFixtures,
+  serieaFixtures,
+  serieaLastSeasonFixtures,
+  ligue1Fixtures,
+  ligue1LastSeasonFixtures,
+  championsleagueFixtures,
+  europaleagueFixtures,
+  conferenceleagueFixtures,
+  spflSchedule,
+  eplSchedule,
+  laligaSchedule,
+  bundesligaSchedule,
+  serieaSchedule,
+  ligue1Schedule,
+  championsleagueSchedule,
+  europaleagueSchedule,
+  conferenceleagueSchedule,
+} from './utils/leagueData';
 import dataUpdate from './data/data_update.json';
-import type { Fixture, FixturesData, ScheduleData, ScheduledFixture } from './types';
+import type { Fixture, ScheduledFixture } from './types';
 import logo from './assets/logo-mark.png';
 import './App.css';
 
@@ -67,37 +67,10 @@ type StatsTab = 'team' | 'all' | 'comparisons';
 type AnalysisTab = 'data' | 'tips';
 type League = 'spfl' | 'epl' | 'laliga' | 'bundesliga' | 'seriea' | 'ligue1' | 'championsleague' | 'europaleague' | 'conferenceleague';
 
-const spflFixtures = flattenFixtures(spflFixturesData as FixturesData);
-// Some older fixtures in prior-season files are missing extended stats (xG breakdowns, shots,
-// etc.) — goals are always present, which is all the year-on-year comparison needs.
-const spflLastSeasonFixtures = flattenFixtures(spflLastSeasonFixturesData as unknown as FixturesData);
-const spflTwoSeasonsAgoFixtures = flattenFixtures(spflTwoSeasonsAgoFixturesData as unknown as FixturesData);
-const eplFixtures = flattenFixtures(eplFixturesData as FixturesData);
-const eplLastSeasonFixtures = flattenFixtures(eplLastSeasonFixturesData as FixturesData);
-const laligaFixtures = flattenFixtures(laligaFixturesData as FixturesData);
-const laligaLastSeasonFixtures = flattenFixtures(laligaLastSeasonFixturesData as FixturesData);
-const bundesligaFixtures = flattenFixtures(bundesligaFixturesData as FixturesData);
-const bundesligaLastSeasonFixtures = flattenFixtures(bundesligaLastSeasonFixturesData as FixturesData);
 
-const serieaFixtures = flattenFixtures(serieaFixturesData as FixturesData);
-const serieaLastSeasonFixtures = flattenFixtures(serieaLastSeasonFixturesData as FixturesData);
 
-const ligue1Fixtures = flattenFixtures(ligue1FixturesData as FixturesData);
-const ligue1LastSeasonFixtures = flattenFixtures(ligue1LastSeasonFixturesData as FixturesData);
 
-const championsleagueFixtures = flattenFixtures(championsleagueFixturesData as FixturesData);
-const europaleagueFixtures = flattenFixtures(europaleagueFixturesData as FixturesData);
-const conferenceleagueFixtures = flattenFixtures(conferenceleagueFixturesData as FixturesData);
 
-const spflSchedule = flattenSchedule(spflScheduleData as ScheduleData);
-const eplSchedule = flattenSchedule(eplScheduleData as ScheduleData);
-const laligaSchedule = flattenSchedule(laligaScheduleData as ScheduleData);
-const bundesligaSchedule = flattenSchedule(bundesligaScheduleData as ScheduleData);
-const serieaSchedule = flattenSchedule(serieaScheduleData as ScheduleData);
-const ligue1Schedule = flattenSchedule(ligue1ScheduleData as ScheduleData);
-const championsleagueSchedule = flattenSchedule(championsleagueScheduleData as ScheduleData);
-const europaleagueSchedule = flattenSchedule(europaleagueScheduleData as ScheduleData);
-const conferenceleagueSchedule = flattenSchedule(conferenceleagueScheduleData as ScheduleData);
 
 interface LeagueConfig {
   label: string;

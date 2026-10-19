@@ -138,3 +138,26 @@
   cursor: pointer;
   margin-bottom: 8px;
 }
+
+.tips-result {
+  flex: 0 0 26px;
+  height: 26px;
+  border-radius: 50%;
+  font-size: 0.85rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--surface-raised);
+  color: var(--text-muted);
+}
+
+.tips-result-won {
+  background: var(--positive-soft);
+  color: var(--positive);
+}
+
+.tips-result-lost {
+  background: var(--negative-soft);
+  color: var(--negative);
+}

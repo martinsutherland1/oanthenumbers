@@ -1,6 +1,9 @@
+import { useState } from 'react';
 import { TOP_TIPS, tipKey, type FixtureTip, type LeagueTips } from '../utils/bettingTips';
 import { parseDate } from '../utils/dataProcessing';
 import { getTeamName } from '../utils/teamColors';
+import { TipHistoryView } from './TipHistoryView';
+import { ViewToggle } from './ViewToggle';
 import './LeagueTable.css';
 import './BettingView.css';
 import './TipsView.css';
@@ -40,7 +43,10 @@ function TipItem({ tip, rank, league }: { tip: FixtureTip; rank: number; league?
   );
 }
 
+type TipsTab = 'tips' | 'history';
+
 export function AllTipsView({ leagues, onBack, onSelectLeague }: AllTipsViewProps) {
+  const [tab, setTab] = useState<TipsTab>('tips');
   // Each league's top 4 pooled, then the 4 most likely overall
   const overall = leagues
     .flatMap(l => l.tips.top.map(tip => ({ tip, league: l.label })))
@@ -56,6 +62,14 @@ export function AllTipsView({ leagues, onBack, onSelectLeague }: AllTipsViewProp
         <h3>Top Tips · All Leagues</h3>
         <button className="home-back-btn" onClick={onBack}>← Leagues</button>
       </div>
+      <ViewToggle
+        ariaLabel="Tips view"
+        options={[{ key: 'tips', label: 'Tips' }, { key: 'history', label: 'History' }]}
+        value={tab}
+        onChange={setTab}
+      />
+      {tab === 'history' && <TipHistoryView />}
+      {tab === 'tips' && <>
       <p className="betting-note">
         The four most likely tips from each league's next round, then the best four of those overall. Open a league's Analysis &gt; Tips for every fixture.
       </p>
@@ -114,6 +128,7 @@ export function AllTipsView({ leagues, onBack, onSelectLeague }: AllTipsViewProp
           )}
         </div>
       ))}
+      </>}
     </div>
   );
 }
