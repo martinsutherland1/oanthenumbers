@@ -3,7 +3,6 @@ import { TOP_TIPS, tipKey, type FixtureTip, type LeagueTips } from '../utils/bet
 import { parseDate } from '../utils/dataProcessing';
 import { getTeamName } from '../utils/teamColors';
 import { TipHistoryView } from './TipHistoryView';
-import { ViewToggle } from './ViewToggle';
 import './LeagueTable.css';
 import './BettingView.css';
 import './TipsView.css';
@@ -59,15 +58,13 @@ export function AllTipsView({ leagues, onBack, onSelectLeague }: AllTipsViewProp
   return (
     <div className="betting-view">
       <div className="all-tips-header">
-        <h3>Top Tips · All Leagues</h3>
         <button className="home-back-btn" onClick={onBack}>← Leagues</button>
+        <h3>Top Tips · All Leagues</h3>
       </div>
-      <ViewToggle
-        ariaLabel="Tips view"
-        options={[{ key: 'tips', label: 'Tips' }, { key: 'history', label: 'History' }]}
-        value={tab}
-        onChange={setTab}
-      />
+      <div className="view-tabs secondary-tabs tips-tabs">
+        <button className={`view-tab ${tab === 'tips' ? 'active' : ''}`} onClick={() => setTab('tips')}>Tips</button>
+        <button className={`view-tab ${tab === 'history' ? 'active' : ''}`} onClick={() => setTab('history')}>History</button>
+      </div>
       {tab === 'history' && <TipHistoryView />}
       {tab === 'tips' && <>
       <p className="betting-note">

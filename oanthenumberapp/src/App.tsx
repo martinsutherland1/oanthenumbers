@@ -345,6 +345,11 @@ function App() {
       <header className="app-header">
         <div className="header-content">
           <div className="logo-section">
+            {page === 'league' && (
+              <button className="home-back-btn" onClick={handleGoHome}>
+                ← Leagues
+              </button>
+            )}
             <h1
               className={`title ${page !== 'home' ? 'title-clickable' : ''}`}
               onClick={page !== 'home' ? handleGoHome : undefined}
@@ -365,9 +370,6 @@ function App() {
           </div>
           {page === 'league' && (
             <div className="header-controls">
-              <button className="home-back-btn" onClick={handleGoHome}>
-                ← Leagues
-              </button>
               <div className="header-badges">
                 {seasonLabel && <span className="header-badge">{seasonLabel} Season</span>}
               </div>

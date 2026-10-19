@@ -101,7 +101,6 @@
 .all-tips-header {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   gap: 12px;
 }
 
@@ -160,4 +159,29 @@
 .tips-result-lost {
   background: var(--negative-soft);
   color: var(--negative);
+}
+
+.tips-tabs {
+  align-self: flex-start;
+}
+
+.tips-round > summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  cursor: pointer;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.tips-round[open] > summary {
+  margin-bottom: 10px;
+}
+
+.tips-round-score {
+  color: var(--text-secondary);
+  font-size: 0.8rem;
+  font-variant-numeric: tabular-nums;
 }

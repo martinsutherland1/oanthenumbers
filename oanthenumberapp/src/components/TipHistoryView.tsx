@@ -55,11 +55,18 @@ export function TipHistoryView() {
     return <p className="betting-note">No tips logged yet.</p>;
   }
 
-  const total = tally(tips);
   const byLeague = TIP_LEAGUES
     .map(l => ({ name: l.label, tips: tips.filter(t => t.league === l.key) }))
     .filter(r => r.tips.length > 0);
-  const recent = [...tips].sort((a, b) => b.date.localeCompare(a.date) || a.league.localeCompare(b.league));
+  // One group per league round, most recent first
+  const byRound = new Map<string, SettledTip[]>();
+  tips.forEach(t => {
+    const key = `${t.league}|${t.round}`;
+    byRound.set(key, [...(byRound.get(key) ?? []), t]);
+  });
+  const groups = [...byRound.values()]
+    .map(g => g.sort((x, y) => x.date.localeCompare(y.date) || x.home.localeCompare(y.home)))
+    .sort((x, y) => y[0].date.localeCompare(x[0].date));
 
   return (
     <div className="betting-view">
@@ -68,40 +75,41 @@ export function TipHistoryView() {
       </p>
       <SummaryTable
         title="Success Rate"
-        rows={[
-          { name: 'All logged tips', tips },
-          { name: 'Top 4 overall', tips: tips.filter(t => t.overall) },
-        ]}
+        rows={[{ name: 'All logged tips', tips }]}
       />
-      <p className="betting-note tips-record">
-        {total.placed > 0
-          ? `${total.won} of ${total.placed} settled tips have landed (${pct(successRate(total))}); ${total.pending} awaiting a result.`
-          : `${total.pending} tips awaiting results.`}
-      </p>
       <SummaryTable title="By League" rows={byLeague} />
-      <div className="betting-section">
-        <h4>All Tips</h4>
-        <ol className="tips-top">
-          {recent.map(t => (
-            <li key={`${t.league}|${t.round}|${t.home}|${t.away}`} className="tips-top-item">
-              <span className={`tips-result tips-result-${t.status}`} aria-label={t.status}>
-                {t.status === 'won' ? '✓' : t.status === 'lost' ? '✗' : '·'}
+      {groups.map((group, gi) => {
+        const t = tally(group);
+        return (
+          <details key={`${group[0].league}|${group[0].round}`} className="betting-section tips-round" open={gi === 0}>
+            <summary>
+              <span className="tips-round-title">{LABELS[group[0].league]} · Round {group[0].round}</span>
+              <span className="tips-round-score">
+                {t.placed > 0 ? `${t.won}/${t.placed}` : 'Pending'}
               </span>
-              <div className="tips-top-body">
-                <span className="tips-bet">{t.label}</span>
-                <span className="tips-match">
-                  {getTeamName(t.home)} {t.score ? `${t.score.home}-${t.score.away}` : 'v'} {getTeamName(t.away)}
-                  {' · '}{LABELS[t.league]} · {formatDate(t.date)}
-                </span>
-              </div>
-              <div className="tips-likelihood">
-                <strong>{Math.round(t.likelihood * 100)}%</strong>
-                <span>{t.overall ? 'top 4' : 'league top 4'}</span>
-              </div>
-            </li>
-          ))}
-        </ol>
-      </div>
+            </summary>
+            <ol className="tips-top">
+              {group.map(tip => (
+                <li key={`${tip.home}|${tip.away}`} className="tips-top-item">
+                  <span className={`tips-result tips-result-${tip.status}`} aria-label={tip.status}>
+                    {tip.status === 'won' ? '✓' : tip.status === 'lost' ? '✗' : '·'}
+                  </span>
+                  <div className="tips-top-body">
+                    <span className="tips-bet">{tip.label}</span>
+                    <span className="tips-match">
+                      {getTeamName(tip.home)} {tip.score ? `${tip.score.home}-${tip.score.away}` : 'v'} {getTeamName(tip.away)}
+                      {' · '}{formatDate(tip.date)}
+                    </span>
+                  </div>
+                  <div className="tips-likelihood">
+                    <strong>{Math.round(tip.likelihood * 100)}%</strong>
+                  </div>
+                </li>
+              ))}
+            </ol>
+          </details>
+        );
+      })}
     </div>
   );
 }
