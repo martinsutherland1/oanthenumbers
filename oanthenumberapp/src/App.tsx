@@ -25,6 +25,7 @@ import {
 import { createGoalProjectionContext } from './utils/goalProjection';
 import { createScheduleModel } from './utils/scheduleStrength';
 import { getLeagueTips, type LeagueTips } from './utils/bettingTips';
+import seoPages from './seoPages.json';
 import { PROJECTION_CONFIG } from './utils/projectionConfig';
 import { SHOW_PROJECTION_EXTRAS } from './utils/featureFlags';
 import { getTeamName } from './utils/teamColors';
@@ -263,9 +264,16 @@ function getSeasonLabel(fixtures: Fixture[]): string {
   return `${startYear}/${String((startYear + 1) % 100).padStart(2, '0')}`;
 }
 
+// Each league has its own crawlable URL (see scripts/generateSeoPages.mjs)
+const leagueFromPath = (pathname: string): League | null => {
+  const match = (Object.keys(seoPages.leagues) as League[]).find(key => seoPages.leagues[key].path === (pathname.endsWith('/') ? pathname : `${pathname}/`));
+  return match ?? null;
+};
+
 function App() {
-  const [page, setPage] = useState<Page>('home');
-  const [league, setLeague] = useState<League>('spfl');
+  const initialLeague = typeof window !== 'undefined' ? leagueFromPath(window.location.pathname) : null;
+  const [page, setPage] = useState<Page>(initialLeague ? 'league' : 'home');
+  const [league, setLeague] = useState<League>(initialLeague ?? 'spfl');
   const [section, setSection] = useState<Section>('tables');
   const [tablesTab, setTablesTab] = useState<TablesTab>('current');
   const [projectionView, setProjectionView] = useState<ProjectionView>('table');
@@ -319,6 +327,26 @@ function App() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [page, league]);
+
+  // Keep the address bar and tab title in step with the page, so each league is linkable
+  useEffect(() => {
+    const target = page === 'league' ? seoPages.leagues[league] : seoPages.home;
+    document.title = target.title;
+    document.querySelector('meta[name="description"]')?.setAttribute('content', target.description);
+    const path = page === 'league' ? seoPages.leagues[league].path : '/';
+    if (window.location.pathname !== path) window.history.pushState(null, '', path);
+    document.querySelector('link[rel="canonical"]')?.setAttribute('href', seoPages.siteUrl + path);
+  }, [page, league]);
+
+  // Back/forward buttons
+  useEffect(() => {
+    const onPop = () => {
+      const fromPath = leagueFromPath(window.location.pathname);
+      if (fromPath) { setLeague(fromPath); setPage('league'); } else { setPage('home'); }
+    };
+    window.addEventListener('popstate', onPop);
+    return () => window.removeEventListener('popstate', onPop);
+  }, []);
 
   const handleSelectLeague = (next: string, tab?: 'tips') => {
     setLeague(next as League);

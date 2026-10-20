@@ -1,0 +1,55 @@
+{
+  "siteUrl": "https://www.oanthenumbers.com",
+  "siteName": "oanthenumbers",
+  "home": {
+    "title": "oanthenumbers | Football Stats & Data: SPFL, EPL, La Liga, Bundesliga & More",
+    "description": "Free football stats and data for Scottish and English football. SPFL Premiership and Premier League (EPL) tables, xG, projected final tables, team form, head to head records and betting tips."
+  },
+  "leagues": {
+    "spfl": {
+      "path": "/spfl/",
+      "title": "SPFL Premiership Stats, xG & Projected Table | oanthenumbers",
+      "description": "Scottish football stats and data: SPFL Premiership table, projected final table, xG and xPoints, team form, head to head records and fixtures for Celtic, Rangers, Hearts, Aberdeen and more."
+    },
+    "epl": {
+      "path": "/epl/",
+      "title": "EPL Premier League Stats, xG & Projected Table | oanthenumbers",
+      "description": "English football stats and data: EPL Premier League table, projected final table, xG and xPoints, team form, head to head records and fixtures for every club."
+    },
+    "laliga": {
+      "path": "/la-liga/",
+      "title": "La Liga Stats, xG & Projected Table | oanthenumbers",
+      "description": "La Liga football stats and data: table, projected final table, xG and xPoints, team form and fixtures for every Spanish club."
+    },
+    "bundesliga": {
+      "path": "/bundesliga/",
+      "title": "Bundesliga Stats, xG & Projected Table | oanthenumbers",
+      "description": "Bundesliga football stats and data: table, projected final table, xG and xPoints, team form and fixtures for every German club."
+    },
+    "seriea": {
+      "path": "/serie-a/",
+      "title": "Serie A Stats, xG & Projected Table | oanthenumbers",
+      "description": "Serie A football stats and data: table, projected final table, xG and xPoints, team form and fixtures for every Italian club."
+    },
+    "ligue1": {
+      "path": "/ligue-1/",
+      "title": "Ligue 1 Stats, xG & Projected Table | oanthenumbers",
+      "description": "Ligue 1 football stats and data: table, projected final table, xG and xPoints, team form and fixtures for every French club."
+    },
+    "championsleague": {
+      "path": "/champions-league/",
+      "title": "Champions League Stats, xG & Table | oanthenumbers",
+      "description": "Champions League football stats and data: league phase table, xG, team form and fixtures."
+    },
+    "europaleague": {
+      "path": "/europa-league/",
+      "title": "Europa League Stats, xG & Table | oanthenumbers",
+      "description": "Europa League football stats and data: league phase table, xG, team form and fixtures."
+    },
+    "conferenceleague": {
+      "path": "/conference-league/",
+      "title": "Conference League Stats, xG & Table | oanthenumbers",
+      "description": "Conference League football stats and data: league phase table, xG, team form and fixtures."
+    }
+  }
+}

@@ -10,6 +10,8 @@ export interface HomeLeagueTile {
   flag: LeagueFlag;
 }
 
+import seoPages from '../seoPages.json';
+
 interface HomePageProps {
   leagues: HomeLeagueTile[];
   onSelectLeague: (key: string) => void;
@@ -100,7 +102,11 @@ const FLAG_COMPONENTS: Record<LeagueFlag, () => JSX.Element> = {
 function LeagueTile({ league, onSelect }: { league: HomeLeagueTile; onSelect: (key: string) => void }) {
   const Flag = FLAG_COMPONENTS[league.flag];
   return (
-    <button className="league-tile" onClick={() => onSelect(league.key)}>
+    <a
+      className="league-tile"
+      href={seoPages.leagues[league.key as keyof typeof seoPages.leagues]?.path ?? '/'}
+      onClick={e => { e.preventDefault(); onSelect(league.key); }}
+    >
       <Flag />
       <span className="league-tile-body">
         <span className="league-tile-label">{league.label}</span>
@@ -109,7 +115,7 @@ function LeagueTile({ league, onSelect }: { league: HomeLeagueTile; onSelect: (k
       <svg className="league-tile-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
         <polyline points="9 6 15 12 9 18" />
       </svg>
-    </button>
+    </a>
   );
 }
 
@@ -120,10 +126,15 @@ export function HomePage({ leagues, onSelectLeague, onShowTips }: HomePageProps)
     <div className="home-page">
       <section className="home-hero">
         <img className="home-hero-mark" src={logoMark} alt="" />
-        <h2 className="home-heading">
+        <h1 className="home-heading">
           oanthe<span className="home-heading-accent">numbers</span>
-        </h2>
+        </h1>
         <p className="home-tagline">Tables, projections, xG and team comparisons across Europe&rsquo;s top competitions.</p>
+        <p className="home-seo-copy">
+          Free football stats and data for Scottish and English football. Follow the SPFL Premiership and
+          the EPL Premier League with live tables, projected final tables, expected goals (xG), team form,
+          head to head records and betting tips, plus La Liga, Bundesliga, Serie A, Ligue 1 and Europe.
+        </p>
       </section>
 
       <button className="home-tips-card" onClick={onShowTips}>
