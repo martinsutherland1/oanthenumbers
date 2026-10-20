@@ -131,7 +131,7 @@ export function HomePage({ leagues, onSelectLeague, onShowTips }: HomePageProps)
         </h1>
         <p className="home-tagline">Tables, projections, xG and team comparisons across Europe&rsquo;s top competitions.</p>
         <p className="home-seo-copy">
-          Free football stats and data for Scottish and English football. Follow the SPFL Premiership and
+          Oan the Numbers: free football stats and data for Scottish and English football. Follow the SPFL Premiership and
           the EPL Premier League with live tables, projected final tables, expected goals (xG), team form,
           head to head records and betting tips, plus La Liga, Bundesliga, Serie A, Ligue 1 and Europe.
         </p>

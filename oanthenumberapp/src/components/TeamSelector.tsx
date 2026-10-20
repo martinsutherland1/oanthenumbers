@@ -7,16 +7,19 @@ interface TeamSelectorProps {
   onTeamToggle: (team: string) => void;
   onSelectAll: () => void;
   onClearAll: () => void;
+  // For pickers that only make sense with a few teams (e.g. head to head)
+  title?: string;
+  showSelectAll?: boolean;
 }
 
-export function TeamSelector({ teams, selectedTeams, onTeamToggle, onSelectAll, onClearAll }: TeamSelectorProps) {
+export function TeamSelector({ teams, selectedTeams, onTeamToggle, onSelectAll, onClearAll, title = 'Compare Teams', showSelectAll = true }: TeamSelectorProps) {
   const allSelected = selectedTeams.length === teams.length;
   return (
     <div className="team-selector">
       <div className="team-selector-header">
-        <h3>Compare Teams</h3>
+        <h3>{title}</h3>
         <div className="team-selector-buttons">
-          {!allSelected && (
+          {showSelectAll && !allSelected && (
             <button className="select-all-btn" onClick={onSelectAll}>
               Select All
             </button>

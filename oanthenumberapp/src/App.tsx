@@ -6,6 +6,7 @@ import { ProjectionTable } from './components/ProjectionTable';
 import { TeamOverview } from './components/TeamOverview';
 import { ComparisonsView } from './components/ComparisonsView';
 import { AllStatsView } from './components/AllStatsView';
+import { H2HView } from './components/H2HView';
 import { FixturesView } from './components/FixturesView';
 import { NextFixtureProjection } from './components/NextFixtureProjection';
 import { ViewToggle } from './components/ViewToggle';
@@ -66,7 +67,7 @@ type Section = 'tables' | 'stats' | 'fixtures' | 'analysis';
 type TablesTab = 'current' | 'projection';
 type ProjectionView = 'table' | 'next' | 'analysis';
 type FixturesTab = 'fixtures' | 'results';
-type StatsTab = 'team' | 'all' | 'comparisons';
+type StatsTab = 'team' | 'all' | 'h2h' | 'comparisons';
 type AnalysisTab = 'data' | 'tips';
 type League = 'spfl' | 'epl' | 'laliga' | 'bundesliga' | 'seriea' | 'ligue1' | 'championsleague' | 'europaleague' | 'conferenceleague';
 
@@ -473,6 +474,12 @@ function App() {
                       All
                     </button>
                     <button
+                      className={`view-tab ${statsTab === 'h2h' ? 'active' : ''}`}
+                      onClick={() => setStatsTab('h2h')}
+                    >
+                      H2H
+                    </button>
+                    <button
                       className={`view-tab ${statsTab === 'comparisons' ? 'active' : ''}`}
                       onClick={() => setStatsTab('comparisons')}
                     >
@@ -596,6 +603,9 @@ function App() {
             )}
             {section === 'stats' && statsTab === 'all' && (
               <AllStatsView fixtures={fixtures} />
+            )}
+            {section === 'stats' && statsTab === 'h2h' && (
+              <H2HView key={league} fixtures={fixtures} teams={teams} />
             )}
             {section === 'stats' && statsTab === 'comparisons' && (
               <ComparisonsView fixtures={fixtures} teams={teams} />
