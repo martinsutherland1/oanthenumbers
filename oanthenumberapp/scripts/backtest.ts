@@ -13,6 +13,8 @@ import {
   parseDate,
   type ProjectionConfig,
 } from '../src/utils/dataProcessing';
+import { createGoalProjectionContext } from '../src/utils/goalProjection';
+import { createScheduleModel } from '../src/utils/scheduleStrength';
 import { PROJECTION_CONFIG } from '../src/utils/projectionConfig';
 import type { Fixture, FixturesData } from '../src/types';
 import spfl2425 from '../src/data/spfl_results_2024_25.json';
@@ -20,6 +22,7 @@ import spfl2526 from '../src/data/spfl_results_2025_26.json';
 import epl2526 from '../src/data/epl_results_2025_26.json';
 
 const K_VALUES = [4, 6, 8, 10, 12, 15, 20];
+const SCHEDULE_WEIGHTS = [0, 1, 1.5, 2, 3];
 const R_VALUES = [0.5, 0.6, 0.67, 0.75, 1.0];
 const STAGES = [
   { label: '1-5', min: 1, max: 5 },
@@ -88,6 +91,7 @@ function runLeague(league: 'spfl' | 'epl') {
 
   const baseline = new ErrorStats();
   const grid = new Map<string, ErrorStats>();
+  const scheduleGrid = new Map<number, ErrorStats>();
   const scaling: number[] = [];
   let testedSeasons = 0;
 
@@ -131,6 +135,21 @@ function runLeague(league: 'spfl' | 'epl') {
       });
     });
 
+    // Remaining-fixture difficulty at the configured k/r. The season's own fixtures stand in
+    // for the schedule: whatever is dated after the cutoff is still to play.
+    const schedule = season.fixtures.map(f => ({ date: f.date, home_team: f.home_team, away_team: f.away_team, round: 0 }));
+    const scheduleModel = createScheduleModel(createGoalProjectionContext(lastSeason, currentTeams), schedule);
+    SCHEDULE_WEIGHTS.forEach(scheduleWeight => {
+      const config: ProjectionConfig = { ...baseConfig, method: 'prior_weighted', scheduleWeight };
+      const context = { ...createProjectionContext(lastSeason, history, config, currentTeams), scheduleModel };
+      if (!scheduleGrid.has(scheduleWeight)) scheduleGrid.set(scheduleWeight, new ErrorStats());
+      snapshots.forEach(({ matchweek, fixtures }) => {
+        getProjectedStandings(fixtures, seasonGames, context).forEach(row => {
+          scheduleGrid.get(scheduleWeight)!.add(stageOf(matchweek), row.projectedPoints - actual.get(row.team)!);
+        });
+      });
+    });
+
     // Scaling applied by normalisation under the configured k and r
     const context = createProjectionContext(lastSeason, history, { ...baseConfig, method: 'prior_weighted' }, currentTeams);
     snapshots.forEach(({ fixtures }) => {
@@ -165,6 +184,9 @@ function runLeague(league: 'spfl' | 'epl') {
     const [k, r] = key.split('|');
     console.log(line(`k=${k} r=${r}`, stats));
   });
+
+  console.log('\nRemaining-fixture difficulty (configured k/r), by scheduleWeight:');
+  SCHEDULE_WEIGHTS.forEach(w => console.log(line(`weight=${w}`, scheduleGrid.get(w)!)));
 
   const [bestKey, bestStats] = ranked[0];
   const [bestK, bestR] = bestKey.split('|');

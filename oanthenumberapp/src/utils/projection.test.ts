@@ -130,3 +130,24 @@ describe('method: current', () => {
     }
   });
 });
+
+describe('remaining-fixture difficulty', () => {
+  const base: ProjectionConfig = { ...DEFAULT_PROJECTION_CONFIG, scheduleWeight: 1 };
+  const played = [fixture('2026-08-01', 'a', 'b', 1, 0), fixture('2026-08-01', 'c', 'd', 1, 0)];
+  const priors = buildProjectionPriors([], [], base);
+  const model = (delta: Record<string, number>) => () => delta;
+
+  it('moves projected points by delta x remaining games, faded by season progress', () => {
+    const off = getProjectionResult(played, 4, { config: { ...base, scheduleWeight: 0 }, priors, scheduleModel: model({ a: 0.5 }) }, ['a', 'b', 'c', 'd']);
+    const on = getProjectionResult(played, 4, { config: { ...base, normaliseTotal: false }, priors, scheduleModel: model({ a: 0.5 }) }, ['a', 'b', 'c', 'd']);
+    const offA = off.rows.find(r => r.team === 'a')!;
+    const onA = on.rows.find(r => r.team === 'a')!;
+    expect(offA.scheduleDeltaPpg).toBe(0);
+    expect(onA.scheduleDeltaPpg).toBeCloseTo(0.5 * (1 / 4), 5);
+  });
+
+  it('leaves teams without a delta unchanged', () => {
+    const on = getProjectionResult(played, 4, { config: base, priors, scheduleModel: model({ a: 0.5 }) }, ['a', 'b', 'c', 'd']);
+    expect(on.rows.find(r => r.team === 'b')!.scheduleDeltaPpg).toBe(0);
+  });
+});

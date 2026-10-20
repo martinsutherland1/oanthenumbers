@@ -22,6 +22,8 @@ import {
   parseDate,
   type ProjectionConfig
 } from './utils/dataProcessing';
+import { createGoalProjectionContext } from './utils/goalProjection';
+import { createScheduleModel } from './utils/scheduleStrength';
 import { getLeagueTips, type LeagueTips } from './utils/bettingTips';
 import { PROJECTION_CONFIG } from './utils/projectionConfig';
 import { SHOW_PROJECTION_EXTRAS } from './utils/featureFlags';
@@ -102,7 +104,7 @@ const LEAGUE_CONFIG: Record<League, LeagueConfig> = {
     lastSeasonFixtures: spflLastSeasonFixtures,
     historicalSeasons: [spflTwoSeasonsAgoFixtures, spflLastSeasonFixtures],
     projection: PROJECTION_CONFIG.spfl,
-    seasonGames: 38,
+    seasonGames: 33,
     tableDividers: [1, 6, 10, 11],
     projectionDividers: [1, 6, 10, 11],
     showTips: true,
@@ -280,10 +282,13 @@ function App() {
   const teams = useMemo(() => extractTeams(fixtures), [fixtures]);
   const leagueTableData = useMemo(() => getLeagueTable(fixtures), [fixtures]);
   const bettingStats = useMemo(() => getBettingStats(fixtures), [fixtures]);
-  const projectionContext = useMemo(
-    () => createProjectionContext(config.lastSeasonFixtures, config.historicalSeasons, config.projection, extractTeams(config.fixtures)),
-    [config]
-  );
+  const projectionContext = useMemo(() => {
+    const context = createProjectionContext(config.lastSeasonFixtures, config.historicalSeasons, config.projection, extractTeams(config.fixtures));
+    if (config.projection.scheduleWeight <= 0) return context;
+    const scheduleTeams = extractTeams(config.schedule as unknown as Fixture[]);
+    const goalContext = createGoalProjectionContext(config.lastSeasonFixtures, scheduleTeams);
+    return { ...context, scheduleModel: createScheduleModel(goalContext, config.schedule) };
+  }, [config]);
   const projectedStandings = useMemo(
     () => getProjectedStandings(fixtures, config.seasonGames, projectionContext),
     [fixtures, config.seasonGames, projectionContext]

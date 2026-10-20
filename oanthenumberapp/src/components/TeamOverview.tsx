@@ -32,6 +32,10 @@ interface TeamOverviewProps {
   seasonGames?: number;
 }
 
+const ROLLING_WINDOW = 10;
+// Larger than any league season, so the window never drops games (season-to-date average)
+const SEASON_WINDOW = 100;
+
 function signTone(n: number | null): 'positive' | 'negative' | 'neutral' {
   if (n === null || n === 0) return 'neutral';
   return n > 0 ? 'positive' : 'negative';
@@ -63,16 +67,20 @@ export function TeamOverview({ team, fixtures, lastSeasonFixtures, leagueTable, 
   const leagueRow = leagueTable.find(r => r.team === team);
   const color = BRAND_COLOR;
 
-  const xgSeries = useMemo(() => getTeamRollingAverageOverTime(fixtures, team, 10, 'xg'), [fixtures, team]);
+  const [averageMode, setAverageMode] = useState<'rolling' | 'season'>('rolling');
+  const avgWindow = averageMode === 'rolling' ? ROLLING_WINDOW : SEASON_WINDOW;
+
+  // The performance trend arrow always uses the 10-game form, regardless of the chart toggle.
+  const xgSeries = useMemo(() => getTeamRollingAverageOverTime(fixtures, team, ROLLING_WINDOW, 'xg'), [fixtures, team]);
   const [xgType, setXgType] = useState<XgType>('npxg');
   const xgChartSeries = useMemo(
-    () => (xgType === 'npxg' ? xgSeries : getTeamRollingAverageOverTime(fixtures, team, 10, 'xg', xgType)),
-    [fixtures, team, xgType, xgSeries]
+    () => getTeamRollingAverageOverTime(fixtures, team, avgWindow, 'xg', xgType),
+    [fixtures, team, xgType, avgWindow]
   );
-  const goalsSeries = useMemo(() => getTeamRollingAverageOverTime(fixtures, team, 10, 'goals'), [fixtures, team]);
-  const pointsSeries = useMemo(() => getTeamRollingAverageOverTime(fixtures, team, 10, 'points'), [fixtures, team]);
+  const goalsSeries = useMemo(() => getTeamRollingAverageOverTime(fixtures, team, avgWindow, 'goals'), [fixtures, team, avgWindow]);
+  const pointsSeries = useMemo(() => getTeamRollingAverageOverTime(fixtures, team, avgWindow, 'points'), [fixtures, team, avgWindow]);
   const positionSeries = useMemo(() => getProjectedPositionOverTime(fixtures, team, seasonGames, projection), [fixtures, team, seasonGames, projection]);
-  const leaguePpg = useMemo(() => calculateLeagueAverage(fixtures, 10, 'points'), [fixtures]);
+  const leaguePpg = useMemo(() => calculateLeagueAverage(fixtures, avgWindow, 'points'), [fixtures, avgWindow]);
 
   // Every team's "current" projection must come from the same full-dataset snapshot,
   // otherwise teams whose last match fell on an earlier date than a rival's get compared
@@ -148,6 +156,15 @@ export function TeamOverview({ team, fixtures, lastSeasonFixtures, leagueTable, 
         trend={trend}
         tables={breakdownTables}
       />
+
+      <div className="log-view-toggle">
+        <ViewToggle
+          ariaLabel="Chart averaging window"
+          options={[{ key: 'rolling', label: 'Rolling 10' }, { key: 'season', label: 'Season' }]}
+          value={averageMode}
+          onChange={setAverageMode}
+        />
+      </div>
 
       <div className="metric-trend-grid">
         <MetricTrendCard

@@ -242,6 +242,31 @@ export function projectMatch(
   };
 }
 
+// Projected goals for any pairing as of a set of played fixtures. Ratings and league scale
+// are worked out once, so many hypothetical fixtures can be projected cheaply. H2H is left
+// out (it is off by default and meetings don't change what a rating says about a side).
+export function createFixtureGoalModel(
+  ctx: GoalProjectionContext,
+  playedFixtures: Fixture[]
+): (home: string, away: string) => { home: number; away: number } {
+  const played = [...playedFixtures].sort(byDate);
+  const avgs = venueAverages([...ctx.lastSeason, ...played], ctx.config.xgWeight)
+    ?? { homeMetric: 1.5, awayMetric: 1.2, homeGoals: 1.5, awayGoals: 1.2 };
+  const strengths = new Map<string, ReturnType<typeof teamStrength>>();
+  const strengthOf = (team: string) => {
+    if (!strengths.has(team)) strengths.set(team, teamStrength(ctx, played, avgs, team));
+    return strengths.get(team)!;
+  };
+  return (home, away) => {
+    const h = strengthOf(home);
+    const a = strengthOf(away);
+    return {
+      home: clamp(avgs.homeGoals * h.attack * a.defence, 0.1, 5),
+      away: clamp(avgs.awayGoals * a.attack * h.defence, 0.1, 5),
+    };
+  };
+}
+
 const pairKey = (home: string, away: string) => `${home}|${away}`;
 
 // The next round's unplayed fixtures. Postponed games left over from earlier rounds (dated

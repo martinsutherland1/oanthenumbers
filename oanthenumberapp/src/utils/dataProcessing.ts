@@ -854,6 +854,7 @@ export interface ProjectedStanding {
   priorBasis: TeamPriorBasis | null;
   weightW: number;               // weight on this season's xPPG; the prior carries 1 - weightW
   blendedPpg: number;
+  scheduleDeltaPpg: number;      // remaining-fixture difficulty adjustment added to blendedPpg (0 when off)
   remainingGames: number;
   projectedPoints: number;       // projection from the configured method
   projectedPointsOld: number;    // original method: current points + remaining x xPPG
@@ -908,6 +909,9 @@ export interface ProjectionConfig {
   priorRegressionR: number;     // share of last season's figure kept when regressing to the mean
   leagueAvgPpg?: number;        // omit to compute from history
   promotedPriorPpg?: number;    // omit to compute from history
+  // Share of the remaining-fixture difficulty adjustment applied to a team's remaining PPG.
+  // 0 turns it off; it also needs a scheduleModel on the ProjectionContext.
+  scheduleWeight: number;
   normaliseTotal: boolean;
   normaliseTolerance: number;   // fraction of the expected league total
   teamOverrides: Record<string, ProjectionTeamOverride>;
@@ -917,6 +921,7 @@ export const DEFAULT_PROJECTION_CONFIG: ProjectionConfig = {
   method: 'prior_weighted',
   k: 10,
   priorRegressionR: 0.67,
+  scheduleWeight: 0,
   normaliseTotal: true,
   normaliseTolerance: 0.01,
   teamOverrides: {},
@@ -940,9 +945,14 @@ export interface ProjectionPriors {
   teamPriors: Record<string, TeamPrior>;
 }
 
+// Given the fixtures played so far, the change in each team's expected PPG over its remaining
+// fixtures relative to an average schedule (positive = easier run-in than average)
+export type ScheduleModel = (playedFixtures: Fixture[]) => Record<string, number>;
+
 export interface ProjectionContext {
   config: ProjectionConfig;
   priors: ProjectionPriors;
+  scheduleModel?: ScheduleModel;
 }
 
 const hasXgData = (f: Fixture) => typeof f.home_npxg === 'number' && typeof f.away_npxg === 'number';
@@ -1097,6 +1107,10 @@ export function getProjectionResult(
     allTeams.filter(t => !present.has(t)).forEach(team => table.push({ team, played: 0, points: 0 }));
   }
 
+  const scheduleDeltas = projection?.scheduleModel && projection.config.scheduleWeight > 0
+    ? projection.scheduleModel(fixtures)
+    : {};
+
   const rows = table.map(row => {
     const { xgDiffPerGame, xPointsPerGame } = getSeasonToDateXStats(fixtures, row.team);
     const remainingGames = Math.max(0, seasonGames - row.played);
@@ -1120,6 +1134,10 @@ export function getProjectionResult(
       priorBasis: prior ? prior.basis : null,
       weightW,
       blendedPpg,
+      // Faded in with season progress: early ratings are mostly prior, so who is "easy" is unreliable
+      scheduleDeltaPpg: projection
+        ? (scheduleDeltas[row.team] ?? 0) * projection.config.scheduleWeight * Math.min(1, row.played / seasonGames)
+        : 0,
       remainingGames,
       projectedPoints: projectedPointsOld,
       projectedPointsOld,
@@ -1131,7 +1149,7 @@ export function getProjectionResult(
   let normalisation: ProjectionNormalisation | null = null;
   if (projection) {
     const { config, priors } = projection;
-    const remaining = rows.map(r => r.blendedPpg * r.remainingGames);
+    const remaining = rows.map(r => (r.blendedPpg + r.scheduleDeltaPpg) * r.remainingGames);
     const earnedTotal = rows.reduce((sum, r) => sum + r.points, 0);
     const remainingTotal = remaining.reduce((a, b) => a + b, 0);
     const rawTotal = earnedTotal + remainingTotal;
