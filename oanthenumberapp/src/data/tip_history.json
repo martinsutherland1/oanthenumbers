@@ -526,6 +526,56 @@
     "loggedOn": "2026-10-20"
   },
   {
+    "league": "laliga",
+    "round": 10,
+    "date": "2026-10-25",
+    "home": "athletic-club",
+    "away": "getafe",
+    "market": "winOrDraw",
+    "side": "home",
+    "label": "Athletic Club to win or draw",
+    "likelihood": 0.853,
+    "overall": true,
+    "loggedOn": "2026-10-22"
+  },
+  {
+    "league": "laliga",
+    "round": 10,
+    "date": "2026-10-25",
+    "home": "barcelona",
+    "away": "real-madrid",
+    "market": "over25",
+    "label": "Over 2.5 goals",
+    "likelihood": 0.813,
+    "overall": true,
+    "loggedOn": "2026-10-22"
+  },
+  {
+    "league": "laliga",
+    "round": 10,
+    "date": "2026-10-25",
+    "home": "real-sociedad",
+    "away": "levante",
+    "market": "over25",
+    "label": "Over 2.5 goals",
+    "likelihood": 0.746,
+    "overall": false,
+    "loggedOn": "2026-10-22"
+  },
+  {
+    "league": "laliga",
+    "round": 10,
+    "date": "2026-10-25",
+    "home": "valencia",
+    "away": "villarreal",
+    "market": "winOrDraw",
+    "side": "away",
+    "label": "Villarreal to win or draw",
+    "likelihood": 0.737,
+    "overall": false,
+    "loggedOn": "2026-10-22"
+  },
+  {
     "league": "ligue1",
     "round": 8,
     "date": "2026-10-25",
