@@ -39,6 +39,14 @@
     }
     </script>
 
+    <!-- Avoid a flash of unstyled content: app CSS loads with the JS bundle, so paint the
+         dark background immediately and hide the crawler fallback until React replaces it -->
+    <style>
+      html, body { margin: 0; background: #121212; color: #fff; }
+      #root > .seo-fallback { visibility: hidden; }
+    </style>
+    <noscript><style>#root > .seo-fallback { visibility: visible; }</style></noscript>
+
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-YK4R4P9WM2"></script>
     <script>
@@ -51,12 +59,14 @@
   <body>
     <div id="root">
       <!-- Replaced when the app loads; gives crawlers and no-JS visitors real content -->
-      <h1>oanthenumbers (Oan the Numbers): football stats and data</h1>
-      <p>Free football stats and data for Scottish and English football: SPFL Premiership and Premier League (EPL) tables, xG, projected final tables, team form, head to head records and betting tips. Also La Liga, Bundesliga, Serie A and Ligue 1.</p>
-      <nav>
-        <a href="/spfl/">SPFL Premiership</a> <a href="/epl/">EPL Premier League</a> <a href="/la-liga/">La Liga</a>
-        <a href="/bundesliga/">Bundesliga</a> <a href="/serie-a/">Serie A</a> <a href="/ligue-1/">Ligue 1</a>
-      </nav>
+      <div class="seo-fallback">
+        <h1>oanthenumbers (Oan the Numbers): football stats and data</h1>
+        <p>Free football stats and data for Scottish and English football: SPFL Premiership and Premier League (EPL) tables, xG, projected final tables, team form, head to head records and betting tips. Also La Liga, Bundesliga, Serie A and Ligue 1.</p>
+        <nav>
+          <a href="/spfl/">SPFL Premiership</a> <a href="/epl/">EPL Premier League</a> <a href="/la-liga/">La Liga</a>
+          <a href="/bundesliga/">Bundesliga</a> <a href="/serie-a/">Serie A</a> <a href="/ligue-1/">Ligue 1</a>
+        </nav>
+      </div>
     </div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
