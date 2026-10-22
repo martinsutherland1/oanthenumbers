@@ -12,8 +12,12 @@ on:
       league:
         description: League to collect
         type: choice
-        options: [all, spfl, epl, laliga, bundesliga, seriea, ligue1, championsleague, europaleague, conferenceleague]
+        options: [all, spfl, epl, laliga, bundesliga, seriea, ligue1]
         default: all
+      collect_all:
+        description: Re-collect every played fixture, ignoring data already collected
+        type: boolean
+        default: false
 
 # Queue runs so overlapping commits never race each other
 concurrency:
@@ -35,7 +39,7 @@ jobs:
           SCHEDULE: ${{ github.event.schedule }}
           LEAGUE_INPUT: ${{ inputs.league }}
         run: |
-          all="spfl epl laliga bundesliga seriea ligue1 championsleague europaleague conferenceleague"
+          all="spfl epl laliga bundesliga seriea ligue1"
           if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
             case "$LEAGUE_INPUT" in
               all) leagues="$all" ;;
@@ -54,12 +58,14 @@ jobs:
   collect:
     needs: plan
     if: needs.plan.outputs.leagues != ''
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     permissions:
       contents: write
     outputs:
       changed: ${{ steps.commit.outputs.changed }}
       sha: ${{ steps.commit.outputs.sha }}
+    env:
+      COLLECT_ALL: ${{ inputs.collect_all && 'true' || 'false' }}
     defaults:
       run:
         working-directory: playwright_js

@@ -40,7 +40,12 @@ const OUTPUT_PATH = path.join(
 // Allow time after kick-off for the match to finish and stats to be published
 const MATCH_DURATION_MS = 2.5 * 60 * 60 * 1000;
 
+// Set COLLECT_ALL=true to ignore previously collected data and re-collect every
+// played fixture from scratch (the output file is rebuilt, not appended to).
+const COLLECT_ALL = process.env.COLLECT_ALL === "true";
+
 async function loadExistingData() {
+  if (COLLECT_ALL) return {};
   try {
     const raw = await fs.readFile(OUTPUT_PATH, "utf-8");
     return JSON.parse(raw);
@@ -60,13 +65,17 @@ function hasBeenPlayed(fixture) {
   return kickOff.getTime() + MATCH_DURATION_MS <= Date.now();
 }
 
-// The date is included so each fixture is identified uniquely.
+// The date is included so each fixture is identified uniquely. Home/away is
+// not checked: the scrape may swap the teams to match FotMob's order, so the
+// match can be stored under either team as "home".
 function isCollected(seasonData, fixture) {
-  return (seasonData[fixture.team_home] || []).some(
-    (f) =>
-      f.opposition === fixture.team_away &&
-      f.location === "home" &&
-      f.date === fixture.date
+  const has = (team, opposition) =>
+    (seasonData[team] || []).some(
+      (f) => f.opposition === opposition && f.date === fixture.date
+    );
+  return (
+    has(fixture.team_home, fixture.team_away) ||
+    has(fixture.team_away, fixture.team_home)
   );
 }
 

@@ -229,7 +229,8 @@ const LEAGUE_CONFIG: Record<League, LeagueConfig> = {
   },
 };
 
-const LEAGUE_ORDER: League[] = ['spfl', 'epl', 'laliga', 'bundesliga', 'seriea', 'ligue1', 'championsleague', 'europaleague', 'conferenceleague'];
+// European competitions are switched off for now; add 'championsleague', 'europaleague', 'conferenceleague' back to re-enable
+const LEAGUE_ORDER: League[] = ['spfl', 'epl', 'laliga', 'bundesliga', 'seriea', 'ligue1'];
 
 const ANALYSIS_LEAGUES = LEAGUE_ORDER.filter(key => LEAGUE_CONFIG[key].showProjection).map(key => ({
   key,
@@ -267,7 +268,7 @@ function getSeasonLabel(fixtures: Fixture[]): string {
 
 // Each league has its own crawlable URL (see scripts/generateSeoPages.mjs)
 const leagueFromPath = (pathname: string): League | null => {
-  const match = (Object.keys(seoPages.leagues) as League[]).find(key => seoPages.leagues[key].path === (pathname.endsWith('/') ? pathname : `${pathname}/`));
+  const match = (Object.keys(seoPages.leagues) as League[]).find(key => LEAGUE_ORDER.includes(key) && seoPages.leagues[key].path === (pathname.endsWith('/') ? pathname : `${pathname}/`));
   return match ?? null;
 };
 

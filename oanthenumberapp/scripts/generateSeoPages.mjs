@@ -28,7 +28,7 @@ function render({ title, description }, path) {
 }
 
 const paths = ['/'];
-Object.values(seo.leagues).forEach(league => {
+Object.values(seo.leagues).filter(league => !league.disabled).forEach(league => {
   const dir = join(dist, league.path);
   mkdirSync(dir, { recursive: true });
   writeFileSync(join(dir, 'index.html'), render(league, league.path));

@@ -39,17 +39,20 @@
     "championsleague": {
       "path": "/champions-league/",
       "title": "Champions League Stats, xG & Table | oanthenumbers",
-      "description": "Champions League football stats and data: league phase table, xG, team form and fixtures."
+      "description": "Champions League football stats and data: league phase table, xG, team form and fixtures.",
+      "disabled": true
     },
     "europaleague": {
       "path": "/europa-league/",
       "title": "Europa League Stats, xG & Table | oanthenumbers",
-      "description": "Europa League football stats and data: league phase table, xG, team form and fixtures."
+      "description": "Europa League football stats and data: league phase table, xG, team form and fixtures.",
+      "disabled": true
     },
     "conferenceleague": {
       "path": "/conference-league/",
       "title": "Conference League Stats, xG & Table | oanthenumbers",
-      "description": "Conference League football stats and data: league phase table, xG, team form and fixtures."
+      "description": "Conference League football stats and data: league phase table, xG, team form and fixtures.",
+      "disabled": true
     }
   }
 }

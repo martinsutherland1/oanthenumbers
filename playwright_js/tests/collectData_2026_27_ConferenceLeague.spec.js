@@ -40,7 +40,12 @@ const OUTPUT_PATH = path.join(
 // Allow time after kick-off for the match to finish and stats to be published
 const MATCH_DURATION_MS = 2.5 * 60 * 60 * 1000;
 
+// Set COLLECT_ALL=true to ignore previously collected data and re-collect every
+// played fixture from scratch (the output file is rebuilt, not appended to).
+const COLLECT_ALL = process.env.COLLECT_ALL === "true";
+
 async function loadExistingData() {
+  if (COLLECT_ALL) return {};
   try {
     const raw = await fs.readFile(OUTPUT_PATH, "utf-8");
     return JSON.parse(raw);
