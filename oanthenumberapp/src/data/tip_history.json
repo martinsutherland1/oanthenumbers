@@ -472,6 +472,19 @@
     "loggedOn": "2026-10-20"
   },
   {
+    "league": "spfl",
+    "round": 10,
+    "date": "2026-10-24",
+    "home": "st-mirren",
+    "away": "dundee-fc",
+    "market": "winOrDraw",
+    "side": "away",
+    "label": "Dundee FC to win or draw",
+    "likelihood": 0.618,
+    "overall": false,
+    "loggedOn": "2026-10-22"
+  },
+  {
     "league": "bundesliga",
     "round": 7,
     "date": "2026-10-25",
