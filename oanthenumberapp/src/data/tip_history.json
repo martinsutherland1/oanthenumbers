@@ -626,6 +626,19 @@
     "loggedOn": "2026-10-20"
   },
   {
+    "league": "seriea",
+    "round": 8,
+    "date": "2026-10-25",
+    "home": "genoa",
+    "away": "venezia",
+    "market": "winOrDraw",
+    "side": "home",
+    "label": "Genoa to win or draw",
+    "likelihood": 0.723,
+    "overall": false,
+    "loggedOn": "2026-10-23"
+  },
+  {
     "league": "spfl",
     "round": 10,
     "date": "2026-10-25",
