@@ -552,6 +552,20 @@
     "loggedOn": "2026-10-24"
   },
   {
+    "league": "epl",
+    "round": 8,
+    "date": "2026-10-25",
+    "time": "14:00",
+    "home": "liverpool",
+    "away": "brighton-hove-albion",
+    "market": "winOrDraw",
+    "side": "away",
+    "label": "Brighton to win or draw",
+    "likelihood": 0.648,
+    "overall": false,
+    "loggedOn": "2026-10-24"
+  },
+  {
     "league": "laliga",
     "round": 10,
     "date": "2026-10-25",
