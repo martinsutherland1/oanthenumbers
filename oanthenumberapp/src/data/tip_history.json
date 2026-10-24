@@ -380,6 +380,19 @@
     "loggedOn": "2026-10-20"
   },
   {
+    "league": "bundesliga",
+    "round": 7,
+    "date": "2026-10-24",
+    "home": "augsburg",
+    "away": "union-berlin",
+    "market": "win",
+    "side": "home",
+    "label": "FC Augsburg to win",
+    "likelihood": 0.644,
+    "overall": false,
+    "loggedOn": "2026-10-24"
+  },
+  {
     "league": "epl",
     "round": 8,
     "date": "2026-10-24",
@@ -524,6 +537,19 @@
     "likelihood": 0.673,
     "overall": false,
     "loggedOn": "2026-10-20"
+  },
+  {
+    "league": "epl",
+    "round": 8,
+    "date": "2026-10-25",
+    "time": "14:00",
+    "home": "crystal-palace",
+    "away": "newcastle-united",
+    "market": "btts",
+    "label": "Both teams to score",
+    "likelihood": 0.654,
+    "overall": false,
+    "loggedOn": "2026-10-24"
   },
   {
     "league": "laliga",

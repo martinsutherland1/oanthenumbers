@@ -952,5 +952,24 @@
       "home_xgot": 1.2,
       "away_xgot": 2.48
     }
+  ],
+  "2026-10-23": [
+    {
+      "date": "2026-10-23",
+      "home_team": "stuttgart",
+      "away_team": "borussia-monchengladbach",
+      "home_goals": 2,
+      "away_goals": 3,
+      "home_xG": 1.53,
+      "away_xG": 2.6,
+      "home_xg_open_play": 1.2,
+      "away_xg_open_play": 2.12,
+      "home_xg_set_play": 0.33,
+      "away_xg_set_play": 0.48,
+      "home_npxg": 1.53,
+      "away_npxg": 2.6,
+      "home_xgot": 1.69,
+      "away_xgot": 2.67
+    }
   ]
 }

@@ -360,6 +360,23 @@
       "xgot_for": 0.87,
       "xgot_against": 2.2,
       "location": "away"
+    },
+    {
+      "date": "2026-10-23",
+      "opposition": "nice",
+      "goals_for": 1,
+      "goals_against": 2,
+      "xG_for": 2.48,
+      "xG_against": 0.44,
+      "xg_open_play_for": 1.55,
+      "xg_open_play_against": 0.15,
+      "xg_set_play_for": 0.14,
+      "xg_set_play_against": 0.29,
+      "npxg_for": 1.7,
+      "npxg_against": 0.44,
+      "xgot_for": 1.96,
+      "xgot_against": 1.65,
+      "location": "home"
     }
   ],
   "le-havre": [
@@ -1448,6 +1465,23 @@
       "npxg_against": 1.51,
       "xgot_for": 1.18,
       "xgot_against": 1.35,
+      "location": "away"
+    },
+    {
+      "date": "2026-10-23",
+      "opposition": "brest",
+      "goals_for": 2,
+      "goals_against": 1,
+      "xG_for": 0.44,
+      "xG_against": 2.48,
+      "xg_open_play_for": 0.15,
+      "xg_open_play_against": 1.55,
+      "xg_set_play_for": 0.29,
+      "xg_set_play_against": 0.14,
+      "npxg_for": 0.44,
+      "npxg_against": 1.7,
+      "xgot_for": 1.65,
+      "xgot_against": 1.96,
       "location": "away"
     }
   ],

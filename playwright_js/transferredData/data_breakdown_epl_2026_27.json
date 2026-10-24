@@ -1234,5 +1234,24 @@
       "home_xgot": 1.32,
       "away_xgot": 0.19
     }
+  ],
+  "2026-10-23": [
+    {
+      "date": "2026-10-23",
+      "home_team": "ipswich-town",
+      "away_team": "nottingham-forest",
+      "home_goals": 1,
+      "away_goals": 1,
+      "home_xG": 0.46,
+      "away_xG": 2.31,
+      "home_xg_open_play": 0.38,
+      "away_xg_open_play": 1.68,
+      "home_xg_set_play": 0.07,
+      "away_xg_set_play": 0.64,
+      "home_npxg": 0.46,
+      "away_npxg": 2.31,
+      "home_xgot": 0.71,
+      "away_xgot": 0.9
+    }
   ]
 }

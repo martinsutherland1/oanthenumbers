@@ -517,6 +517,23 @@
       "xgot_for": 1.2,
       "xgot_against": 2.48,
       "location": "home"
+    },
+    {
+      "date": "2026-10-23",
+      "opposition": "stuttgart",
+      "goals_for": 3,
+      "goals_against": 2,
+      "xG_for": 2.6,
+      "xG_against": 1.53,
+      "xg_open_play_for": 2.12,
+      "xg_open_play_against": 1.2,
+      "xg_set_play_for": 0.48,
+      "xg_set_play_against": 0.33,
+      "npxg_for": 2.6,
+      "npxg_against": 1.53,
+      "xgot_for": 2.67,
+      "xgot_against": 1.69,
+      "location": "away"
     }
   ],
   "eintracht-frankfurt": [
@@ -1661,6 +1678,23 @@
       "xgot_for": 0.82,
       "xgot_against": 1.53,
       "location": "away"
+    },
+    {
+      "date": "2026-10-23",
+      "opposition": "borussia-monchengladbach",
+      "goals_for": 2,
+      "goals_against": 3,
+      "xG_for": 1.53,
+      "xG_against": 2.6,
+      "xg_open_play_for": 1.2,
+      "xg_open_play_against": 2.12,
+      "xg_set_play_for": 0.33,
+      "xg_set_play_against": 0.48,
+      "npxg_for": 1.53,
+      "npxg_against": 2.6,
+      "xgot_for": 1.69,
+      "xgot_against": 2.67,
+      "location": "home"
     }
   ],
   "union-berlin": [
