@@ -152,6 +152,23 @@
       "xgot_for": 3.5,
       "xgot_against": 2.54,
       "location": "home"
+    },
+    {
+      "date": "2026-10-24",
+      "opposition": "dundee-united",
+      "goals_for": 2,
+      "goals_against": 3,
+      "xG_for": 1.56,
+      "xG_against": 1.5,
+      "xg_open_play_for": 1.07,
+      "xg_open_play_against": 0.93,
+      "xg_set_play_for": 0.49,
+      "xg_set_play_against": 0.57,
+      "npxg_for": 1.56,
+      "npxg_against": 1.5,
+      "xgot_for": 1.12,
+      "xgot_against": 0.91,
+      "location": "away"
     }
   ],
   "celtic": [
@@ -462,6 +479,23 @@
       "xgot_for": 1.72,
       "xgot_against": 1.85,
       "location": "home"
+    },
+    {
+      "date": "2026-10-24",
+      "opposition": "st-mirren",
+      "goals_for": 1,
+      "goals_against": 2,
+      "xG_for": 1.44,
+      "xG_against": 1.41,
+      "xg_open_play_for": 0.81,
+      "xg_open_play_against": 1.25,
+      "xg_set_play_for": 0.63,
+      "xg_set_play_against": 0.16,
+      "npxg_for": 1.44,
+      "npxg_against": 1.41,
+      "xgot_for": 0.45,
+      "xgot_against": 1.32,
+      "location": "away"
     }
   ],
   "dundee-united": [
@@ -617,6 +651,23 @@
       "xgot_for": 1.42,
       "xgot_against": 0.74,
       "location": "away"
+    },
+    {
+      "date": "2026-10-24",
+      "opposition": "aberdeen",
+      "goals_for": 3,
+      "goals_against": 2,
+      "xG_for": 1.5,
+      "xG_against": 1.56,
+      "xg_open_play_for": 0.93,
+      "xg_open_play_against": 1.07,
+      "xg_set_play_for": 0.57,
+      "xg_set_play_against": 0.49,
+      "npxg_for": 1.5,
+      "npxg_against": 1.56,
+      "xgot_for": 0.91,
+      "xgot_against": 1.12,
+      "location": "home"
     }
   ],
   "falkirk": [
@@ -772,6 +823,23 @@
       "xgot_for": 1,
       "xgot_against": 0.97,
       "location": "away"
+    },
+    {
+      "date": "2026-10-24",
+      "opposition": "kilmarnock",
+      "goals_for": 3,
+      "goals_against": 0,
+      "xG_for": 2,
+      "xG_against": 1.82,
+      "xg_open_play_for": 0.84,
+      "xg_open_play_against": 0.64,
+      "xg_set_play_for": 1.16,
+      "xg_set_play_against": 1.19,
+      "npxg_for": 2,
+      "npxg_against": 1.82,
+      "xgot_for": 2.87,
+      "xgot_against": 0,
+      "location": "home"
     }
   ],
   "heart-midlothian": [
@@ -1237,6 +1305,23 @@
       "xgot_for": 2.23,
       "xgot_against": 3.82,
       "location": "home"
+    },
+    {
+      "date": "2026-10-24",
+      "opposition": "falkirk",
+      "goals_for": 0,
+      "goals_against": 3,
+      "xG_for": 1.82,
+      "xG_against": 2,
+      "xg_open_play_for": 0.64,
+      "xg_open_play_against": 0.84,
+      "xg_set_play_for": 1.19,
+      "xg_set_play_against": 1.16,
+      "npxg_for": 1.82,
+      "npxg_against": 2,
+      "xgot_for": 0,
+      "xgot_against": 2.87,
+      "location": "away"
     }
   ],
   "motherwell": [
@@ -1547,6 +1632,23 @@
       "xgot_for": 1.85,
       "xgot_against": 1.72,
       "location": "away"
+    },
+    {
+      "date": "2026-10-24",
+      "opposition": "st-johnstone",
+      "goals_for": 4,
+      "goals_against": 0,
+      "xG_for": 4.57,
+      "xG_against": 0.58,
+      "xg_open_play_for": 3.84,
+      "xg_open_play_against": 0.43,
+      "xg_set_play_for": 0.73,
+      "xg_set_play_against": 0.16,
+      "npxg_for": 4.57,
+      "npxg_against": 0.58,
+      "xgot_for": 3.44,
+      "xgot_against": 0.05,
+      "location": "home"
     }
   ],
   "st-johnstone": [
@@ -1702,6 +1804,23 @@
       "xgot_for": 0.74,
       "xgot_against": 1.42,
       "location": "home"
+    },
+    {
+      "date": "2026-10-24",
+      "opposition": "rangers",
+      "goals_for": 0,
+      "goals_against": 4,
+      "xG_for": 0.58,
+      "xG_against": 4.57,
+      "xg_open_play_for": 0.43,
+      "xg_open_play_against": 3.84,
+      "xg_set_play_for": 0.16,
+      "xg_set_play_against": 0.73,
+      "npxg_for": 0.58,
+      "npxg_against": 4.57,
+      "xgot_for": 0.05,
+      "xgot_against": 3.44,
+      "location": "away"
     }
   ],
   "st-mirren": [
@@ -1857,6 +1976,23 @@
       "xgot_for": 2.54,
       "xgot_against": 3.5,
       "location": "away"
+    },
+    {
+      "date": "2026-10-24",
+      "opposition": "dundee-fc",
+      "goals_for": 2,
+      "goals_against": 1,
+      "xG_for": 1.41,
+      "xG_against": 1.44,
+      "xg_open_play_for": 1.25,
+      "xg_open_play_against": 0.81,
+      "xg_set_play_for": 0.16,
+      "xg_set_play_against": 0.63,
+      "npxg_for": 1.41,
+      "npxg_against": 1.44,
+      "xgot_for": 1.32,
+      "xgot_against": 0.45,
+      "location": "home"
     }
   ]
 }
