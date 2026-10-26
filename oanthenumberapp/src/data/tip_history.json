@@ -754,5 +754,61 @@
     "likelihood": 0.65,
     "overall": false,
     "loggedOn": "2026-10-26"
+  },
+  {
+    "league": "epl",
+    "round": 9,
+    "date": "2026-10-31",
+    "time": "15:00",
+    "home": "afc-bournemouth",
+    "away": "leeds-united",
+    "market": "winOrDraw",
+    "side": "home",
+    "label": "Bournemouth to win or draw",
+    "likelihood": 0.734,
+    "overall": false,
+    "loggedOn": "2026-10-26"
+  },
+  {
+    "league": "epl",
+    "round": 9,
+    "date": "2026-10-31",
+    "time": "17:30",
+    "home": "tottenham-hotspur",
+    "away": "crystal-palace",
+    "market": "winOrDraw",
+    "side": "home",
+    "label": "Tottenham to win or draw",
+    "likelihood": 0.729,
+    "overall": false,
+    "loggedOn": "2026-10-26"
+  },
+  {
+    "league": "epl",
+    "round": 9,
+    "date": "2026-10-31",
+    "time": "15:00",
+    "home": "brentford",
+    "away": "nottingham-forest",
+    "market": "winOrDraw",
+    "side": "home",
+    "label": "Brentford to win or draw",
+    "likelihood": 0.722,
+    "overall": false,
+    "loggedOn": "2026-10-26"
+  },
+  {
+    "league": "epl",
+    "round": 9,
+    "date": "2026-11-01",
+    "time": "16:30",
+    "home": "liverpool",
+    "away": "arsenal",
+    "market": "winOrDraw",
+    "side": "away",
+    "label": "Arsenal to win or draw",
+    "likelihood": 0.742,
+    "overall": false,
+    "loggedOn": "2026-10-26"
   }
 ]
