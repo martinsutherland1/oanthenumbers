@@ -704,6 +704,58 @@
     "loggedOn": "2026-10-20"
   },
   {
+    "league": "seriea",
+    "round": 9,
+    "date": "2026-10-27",
+    "home": "sassuolo",
+    "away": "lazio",
+    "market": "winOrDraw",
+    "side": "away",
+    "label": "Lazio to win or draw",
+    "likelihood": 0.719,
+    "overall": false,
+    "loggedOn": "2026-10-26"
+  },
+  {
+    "league": "seriea",
+    "round": 9,
+    "date": "2026-10-27",
+    "home": "roma",
+    "away": "cagliari",
+    "market": "win",
+    "side": "home",
+    "label": "Roma to win",
+    "likelihood": 0.717,
+    "overall": false,
+    "loggedOn": "2026-10-26"
+  },
+  {
+    "league": "seriea",
+    "round": 9,
+    "date": "2026-10-28",
+    "home": "genoa",
+    "away": "juventus",
+    "market": "winOrDraw",
+    "side": "away",
+    "label": "Juventus to win or draw",
+    "likelihood": 0.854,
+    "overall": true,
+    "loggedOn": "2026-10-26"
+  },
+  {
+    "league": "seriea",
+    "round": 9,
+    "date": "2026-10-28",
+    "home": "venezia",
+    "away": "inter",
+    "market": "win",
+    "side": "away",
+    "label": "Inter to win",
+    "likelihood": 0.826,
+    "overall": true,
+    "loggedOn": "2026-10-26"
+  },
+  {
     "league": "spfl",
     "round": 11,
     "date": "2026-10-28",
