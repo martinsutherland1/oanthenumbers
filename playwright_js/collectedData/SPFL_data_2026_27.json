@@ -324,6 +324,23 @@
       "xgot_for": 6.24,
       "xgot_against": 1.22,
       "location": "home"
+    },
+    {
+      "date": "2026-10-25",
+      "opposition": "hibernian",
+      "goals_for": 2,
+      "goals_against": 1,
+      "xG_for": 1.15,
+      "xG_against": 1.19,
+      "xg_open_play_for": 1.15,
+      "xg_open_play_against": 0.55,
+      "xg_set_play_for": 0,
+      "xg_set_play_against": 0.64,
+      "npxg_for": 1.15,
+      "npxg_against": 1.19,
+      "xgot_for": 0.88,
+      "xgot_against": 0.73,
+      "location": "away"
     }
   ],
   "dundee-fc": [
@@ -995,6 +1012,23 @@
       "xgot_for": 1.22,
       "xgot_against": 6.24,
       "location": "away"
+    },
+    {
+      "date": "2026-10-25",
+      "opposition": "motherwell",
+      "goals_for": 2,
+      "goals_against": 0,
+      "xG_for": 1.06,
+      "xG_against": 1.26,
+      "xg_open_play_for": 0.77,
+      "xg_open_play_against": 0.96,
+      "xg_set_play_for": 0.29,
+      "xg_set_play_against": 0.3,
+      "npxg_for": 1.06,
+      "npxg_against": 1.26,
+      "xgot_for": 1.28,
+      "xgot_against": 1.07,
+      "location": "away"
     }
   ],
   "hibernian": [
@@ -1149,6 +1183,23 @@
       "npxg_against": 0.68,
       "xgot_for": 0.97,
       "xgot_against": 1,
+      "location": "home"
+    },
+    {
+      "date": "2026-10-25",
+      "opposition": "celtic",
+      "goals_for": 1,
+      "goals_against": 2,
+      "xG_for": 1.19,
+      "xG_against": 1.15,
+      "xg_open_play_for": 0.55,
+      "xg_open_play_against": 1.15,
+      "xg_set_play_for": 0.64,
+      "xg_set_play_against": 0,
+      "npxg_for": 1.19,
+      "npxg_against": 1.15,
+      "xgot_for": 0.73,
+      "xgot_against": 0.88,
       "location": "home"
     }
   ],
@@ -1477,6 +1528,23 @@
       "xgot_for": 3.82,
       "xgot_against": 2.23,
       "location": "away"
+    },
+    {
+      "date": "2026-10-25",
+      "opposition": "heart-midlothian",
+      "goals_for": 0,
+      "goals_against": 2,
+      "xG_for": 1.26,
+      "xG_against": 1.06,
+      "xg_open_play_for": 0.96,
+      "xg_open_play_against": 0.77,
+      "xg_set_play_for": 0.3,
+      "xg_set_play_against": 0.29,
+      "npxg_for": 1.26,
+      "npxg_against": 1.06,
+      "xgot_for": 1.07,
+      "xgot_against": 1.28,
+      "location": "home"
     }
   ],
   "rangers": [

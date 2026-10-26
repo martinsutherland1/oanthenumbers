@@ -702,5 +702,57 @@
     "likelihood": 0.628,
     "overall": false,
     "loggedOn": "2026-10-20"
+  },
+  {
+    "league": "spfl",
+    "round": 11,
+    "date": "2026-10-28",
+    "home": "celtic",
+    "away": "dundee-united",
+    "market": "win",
+    "side": "home",
+    "label": "Celtic to win",
+    "likelihood": 0.775,
+    "overall": false,
+    "loggedOn": "2026-10-26"
+  },
+  {
+    "league": "spfl",
+    "round": 11,
+    "date": "2026-10-28",
+    "home": "aberdeen",
+    "away": "falkirk",
+    "market": "winOrDraw",
+    "side": "home",
+    "label": "Aberdeen to win or draw",
+    "likelihood": 0.724,
+    "overall": false,
+    "loggedOn": "2026-10-26"
+  },
+  {
+    "league": "spfl",
+    "round": 11,
+    "date": "2026-10-28",
+    "home": "st-johnstone",
+    "away": "motherwell",
+    "market": "winOrDraw",
+    "side": "away",
+    "label": "Motherwell to win or draw",
+    "likelihood": 0.686,
+    "overall": false,
+    "loggedOn": "2026-10-26"
+  },
+  {
+    "league": "spfl",
+    "round": 11,
+    "date": "2026-10-28",
+    "home": "st-mirren",
+    "away": "hibernian",
+    "market": "winOrDraw",
+    "side": "away",
+    "label": "Hibernian to win or draw",
+    "likelihood": 0.65,
+    "overall": false,
+    "loggedOn": "2026-10-26"
   }
 ]
