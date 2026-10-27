@@ -889,6 +889,31 @@
     "loggedOn": "2026-10-26"
   },
   {
+    "league": "ligue1",
+    "round": 9,
+    "date": "2026-10-31",
+    "home": "nice",
+    "away": "rennes",
+    "market": "btts",
+    "label": "Both teams to score",
+    "likelihood": 0.66,
+    "overall": false,
+    "loggedOn": "2026-10-27"
+  },
+  {
+    "league": "ligue1",
+    "round": 9,
+    "date": "2026-10-31",
+    "home": "lyon",
+    "away": "angers",
+    "market": "win",
+    "side": "home",
+    "label": "Lyon to win",
+    "likelihood": 0.643,
+    "overall": false,
+    "loggedOn": "2026-10-27"
+  },
+  {
     "league": "bundesliga",
     "round": 8,
     "date": "2026-11-01",
@@ -914,5 +939,81 @@
     "likelihood": 0.742,
     "overall": false,
     "loggedOn": "2026-10-26"
+  },
+  {
+    "league": "laliga",
+    "round": 11,
+    "date": "2026-11-01",
+    "home": "barcelona",
+    "away": "alaves",
+    "market": "win",
+    "side": "home",
+    "label": "Barcelona to win",
+    "likelihood": 0.845,
+    "overall": true,
+    "loggedOn": "2026-10-27"
+  },
+  {
+    "league": "laliga",
+    "round": 11,
+    "date": "2026-11-01",
+    "home": "racing-santander",
+    "away": "real-madrid",
+    "market": "win",
+    "side": "away",
+    "label": "Real Madrid to win",
+    "likelihood": 0.718,
+    "overall": false,
+    "loggedOn": "2026-10-27"
+  },
+  {
+    "league": "laliga",
+    "round": 11,
+    "date": "2026-11-01",
+    "home": "real-betis",
+    "away": "malaga",
+    "market": "win",
+    "side": "home",
+    "label": "Real Betis to win",
+    "likelihood": 0.703,
+    "overall": false,
+    "loggedOn": "2026-10-27"
+  },
+  {
+    "league": "laliga",
+    "round": 11,
+    "date": "2026-11-01",
+    "home": "getafe",
+    "away": "sevilla",
+    "market": "winOrDraw",
+    "side": "away",
+    "label": "Sevilla to win or draw",
+    "likelihood": 0.702,
+    "overall": false,
+    "loggedOn": "2026-10-27"
+  },
+  {
+    "league": "ligue1",
+    "round": 9,
+    "date": "2026-11-01",
+    "home": "marseille",
+    "away": "toulouse",
+    "market": "btts",
+    "label": "Both teams to score",
+    "likelihood": 0.702,
+    "overall": false,
+    "loggedOn": "2026-10-27"
+  },
+  {
+    "league": "ligue1",
+    "round": 9,
+    "date": "2026-11-01",
+    "home": "strasbourg",
+    "away": "auxerre",
+    "market": "btts",
+    "label": "Both teams to score",
+    "likelihood": 0.657,
+    "overall": false,
+    "loggedOn": "2026-10-27"
   }
 ]
