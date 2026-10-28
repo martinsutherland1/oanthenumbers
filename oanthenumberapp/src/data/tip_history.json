@@ -808,6 +808,30 @@
     "loggedOn": "2026-10-26"
   },
   {
+    "league": "seriea",
+    "round": 9,
+    "date": "2026-10-29",
+    "home": "fiorentina",
+    "away": "atalanta",
+    "market": "btts",
+    "label": "Both teams to score",
+    "likelihood": 0.687,
+    "overall": false,
+    "loggedOn": "2026-10-28"
+  },
+  {
+    "league": "seriea",
+    "round": 9,
+    "date": "2026-10-29",
+    "home": "frosinone",
+    "away": "lecce",
+    "market": "btts",
+    "label": "Both teams to score",
+    "likelihood": 0.673,
+    "overall": false,
+    "loggedOn": "2026-10-28"
+  },
+  {
     "league": "bundesliga",
     "round": 8,
     "date": "2026-10-31",
