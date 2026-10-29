@@ -938,6 +938,45 @@
     "loggedOn": "2026-10-27"
   },
   {
+    "league": "spfl",
+    "round": 12,
+    "date": "2026-10-31",
+    "home": "hibernian",
+    "away": "dundee-fc",
+    "market": "winOrDraw",
+    "side": "home",
+    "label": "Hibernian to win or draw",
+    "likelihood": 0.732,
+    "overall": false,
+    "loggedOn": "2026-10-29"
+  },
+  {
+    "league": "spfl",
+    "round": 12,
+    "date": "2026-10-31",
+    "home": "rangers",
+    "away": "aberdeen",
+    "market": "win",
+    "side": "home",
+    "label": "Rangers to win",
+    "likelihood": 0.729,
+    "overall": false,
+    "loggedOn": "2026-10-29"
+  },
+  {
+    "league": "spfl",
+    "round": 12,
+    "date": "2026-10-31",
+    "home": "falkirk",
+    "away": "celtic",
+    "market": "win",
+    "side": "away",
+    "label": "Celtic to win",
+    "likelihood": 0.635,
+    "overall": false,
+    "loggedOn": "2026-10-29"
+  },
+  {
     "league": "bundesliga",
     "round": 8,
     "date": "2026-11-01",
@@ -1039,5 +1078,18 @@
     "likelihood": 0.657,
     "overall": false,
     "loggedOn": "2026-10-27"
+  },
+  {
+    "league": "spfl",
+    "round": 12,
+    "date": "TBC",
+    "home": "dundee-united",
+    "away": "heart-midlothian",
+    "market": "winOrDraw",
+    "side": "away",
+    "label": "Hearts to win or draw",
+    "likelihood": 0.746,
+    "overall": true,
+    "loggedOn": "2026-10-29"
   }
 ]
