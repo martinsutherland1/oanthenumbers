@@ -938,6 +938,19 @@
     "loggedOn": "2026-10-27"
   },
   {
+    "league": "seriea",
+    "round": 10,
+    "date": "2026-10-31",
+    "home": "udinese",
+    "away": "roma",
+    "market": "win",
+    "side": "away",
+    "label": "Roma to win",
+    "likelihood": 0.724,
+    "overall": false,
+    "loggedOn": "2026-10-30"
+  },
+  {
     "league": "spfl",
     "round": 12,
     "date": "2026-10-31",
@@ -1078,6 +1091,44 @@
     "likelihood": 0.657,
     "overall": false,
     "loggedOn": "2026-10-27"
+  },
+  {
+    "league": "seriea",
+    "round": 10,
+    "date": "2026-11-01",
+    "home": "como",
+    "away": "venezia",
+    "market": "win",
+    "side": "home",
+    "label": "Como to win",
+    "likelihood": 0.773,
+    "overall": true,
+    "loggedOn": "2026-10-30"
+  },
+  {
+    "league": "seriea",
+    "round": 10,
+    "date": "2026-11-01",
+    "home": "juventus",
+    "away": "napoli",
+    "market": "winOrDraw",
+    "side": "home",
+    "label": "Juventus to win or draw",
+    "likelihood": 0.716,
+    "overall": false,
+    "loggedOn": "2026-10-30"
+  },
+  {
+    "league": "seriea",
+    "round": 10,
+    "date": "2026-11-01",
+    "home": "frosinone",
+    "away": "torino",
+    "market": "btts",
+    "label": "Both teams to score",
+    "likelihood": 0.715,
+    "overall": false,
+    "loggedOn": "2026-10-30"
   },
   {
     "league": "spfl",
