@@ -1272,5 +1272,41 @@
       "home_xgot": 2.68,
       "away_xgot": 0.16
     }
+  ],
+  "2026-10-30": [
+    {
+      "date": "2026-10-30",
+      "home_team": "le-havre",
+      "away_team": "paris-saint-germain",
+      "home_goals": 1,
+      "away_goals": 5,
+      "home_xG": 2.01,
+      "away_xG": 3.97,
+      "home_xg_open_play": 1.57,
+      "away_xg_open_play": 3.91,
+      "home_xg_set_play": 0.44,
+      "away_xg_set_play": 0.07,
+      "home_npxg": 2.01,
+      "away_npxg": 3.97,
+      "home_xgot": 1.92,
+      "away_xgot": 4.79
+    },
+    {
+      "date": "2026-10-30",
+      "home_team": "lille",
+      "away_team": "lens",
+      "home_goals": 1,
+      "away_goals": 0,
+      "home_xG": 1.63,
+      "away_xG": 0.19,
+      "home_xg_open_play": 1.19,
+      "away_xg_open_play": 0.16,
+      "home_xg_set_play": 0.44,
+      "away_xg_set_play": 0.04,
+      "home_npxg": 1.63,
+      "away_npxg": 0.19,
+      "home_xgot": 2.14,
+      "away_xgot": 0.21
+    }
   ]
 }

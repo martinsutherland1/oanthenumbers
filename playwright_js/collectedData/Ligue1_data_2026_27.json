@@ -549,6 +549,23 @@
       "xgot_for": 2.74,
       "xgot_against": 3.09,
       "location": "away"
+    },
+    {
+      "date": "2026-10-30",
+      "opposition": "paris-saint-germain",
+      "goals_for": 1,
+      "goals_against": 5,
+      "xG_for": 2.01,
+      "xG_against": 3.97,
+      "xg_open_play_for": 1.57,
+      "xg_open_play_against": 3.91,
+      "xg_set_play_for": 0.44,
+      "xg_set_play_against": 0.07,
+      "npxg_for": 2.01,
+      "npxg_against": 3.97,
+      "xgot_for": 1.92,
+      "xgot_against": 4.79,
+      "location": "home"
     }
   ],
   "le-mans": [
@@ -825,6 +842,23 @@
       "xgot_for": 1.38,
       "xgot_against": 0.62,
       "location": "home"
+    },
+    {
+      "date": "2026-10-30",
+      "opposition": "lille",
+      "goals_for": 0,
+      "goals_against": 1,
+      "xG_for": 0.19,
+      "xG_against": 1.63,
+      "xg_open_play_for": 0.16,
+      "xg_open_play_against": 1.19,
+      "xg_set_play_for": 0.04,
+      "xg_set_play_against": 0.44,
+      "npxg_for": 0.19,
+      "npxg_against": 1.63,
+      "xgot_for": 0.21,
+      "xgot_against": 2.14,
+      "location": "away"
     }
   ],
   "lille": [
@@ -963,6 +997,23 @@
       "xgot_for": 0.95,
       "xgot_against": 1.41,
       "location": "away"
+    },
+    {
+      "date": "2026-10-30",
+      "opposition": "lens",
+      "goals_for": 1,
+      "goals_against": 0,
+      "xG_for": 1.63,
+      "xG_against": 0.19,
+      "xg_open_play_for": 1.19,
+      "xg_open_play_against": 0.16,
+      "xg_set_play_for": 0.44,
+      "xg_set_play_against": 0.04,
+      "npxg_for": 1.63,
+      "npxg_against": 0.19,
+      "xgot_for": 2.14,
+      "xgot_against": 0.21,
+      "location": "home"
     }
   ],
   "lorient": [
@@ -1929,6 +1980,23 @@
       "xgot_for": 1.33,
       "xgot_against": 0.6,
       "location": "home"
+    },
+    {
+      "date": "2026-10-30",
+      "opposition": "le-havre",
+      "goals_for": 5,
+      "goals_against": 1,
+      "xG_for": 3.97,
+      "xG_against": 2.01,
+      "xg_open_play_for": 3.91,
+      "xg_open_play_against": 1.57,
+      "xg_set_play_for": 0.07,
+      "xg_set_play_against": 0.44,
+      "npxg_for": 3.97,
+      "npxg_against": 2.01,
+      "xgot_for": 4.79,
+      "xgot_against": 1.92,
+      "location": "away"
     }
   ],
   "rennes": [

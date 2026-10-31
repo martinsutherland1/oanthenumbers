@@ -1111,5 +1111,24 @@
       "home_xgot": 1.05,
       "away_xgot": 3.22
     }
+  ],
+  "2026-10-30": [
+    {
+      "date": "2026-10-30",
+      "home_team": "elversberg",
+      "away_team": "mainz",
+      "home_goals": 4,
+      "away_goals": 1,
+      "home_xG": 0.93,
+      "away_xG": 1.15,
+      "home_xg_open_play": 0.47,
+      "away_xg_open_play": 1,
+      "home_xg_set_play": 0.46,
+      "away_xg_set_play": 0.15,
+      "home_npxg": 0.93,
+      "away_npxg": 1.15,
+      "home_xgot": 1.31,
+      "away_xgot": 0.78
+    }
   ]
 }
