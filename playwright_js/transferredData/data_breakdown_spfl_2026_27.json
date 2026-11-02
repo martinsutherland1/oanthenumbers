@@ -1168,5 +1168,58 @@
       "home_xgot": 1.19,
       "away_xgot": 2.43
     }
+  ],
+  "2026-10-31": [
+    {
+      "date": "2026-10-31",
+      "home_team": "falkirk",
+      "away_team": "celtic",
+      "home_goals": 2,
+      "away_goals": 0,
+      "home_xG": 0.96,
+      "away_xG": 2.84,
+      "home_xg_open_play": 0.91,
+      "away_xg_open_play": 1.86,
+      "home_xg_set_play": 0.05,
+      "away_xg_set_play": 0.98,
+      "home_npxg": 0.96,
+      "away_npxg": 2.84,
+      "home_xgot": 1.63,
+      "away_xgot": 2.02
+    },
+    {
+      "date": "2026-10-31",
+      "home_team": "kilmarnock",
+      "away_team": "st-johnstone",
+      "home_goals": 2,
+      "away_goals": 2,
+      "home_xG": 3.36,
+      "away_xG": 0.84,
+      "home_xg_open_play": 2.34,
+      "away_xg_open_play": 0.34,
+      "home_xg_set_play": 1.01,
+      "away_xg_set_play": 0.5,
+      "home_npxg": 3.36,
+      "away_npxg": 0.84,
+      "home_xgot": 2.89,
+      "away_xgot": 1.7
+    },
+    {
+      "date": "2026-10-31",
+      "home_team": "motherwell",
+      "away_team": "st-mirren",
+      "home_goals": 1,
+      "away_goals": 0,
+      "home_xG": 2.31,
+      "away_xG": 0.2,
+      "home_xg_open_play": 1.05,
+      "away_xg_open_play": 0.12,
+      "home_xg_set_play": 0.48,
+      "away_xg_set_play": 0.08,
+      "home_npxg": 1.53,
+      "away_npxg": 0.2,
+      "home_xgot": 1.18,
+      "away_xgot": 0.02
+    }
   ]
 }

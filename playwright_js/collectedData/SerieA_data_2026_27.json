@@ -152,6 +152,23 @@
       "xgot_for": 1.5,
       "xgot_against": 2.49,
       "location": "home"
+    },
+    {
+      "date": "2026-10-31",
+      "opposition": "inter",
+      "goals_for": 3,
+      "goals_against": 1,
+      "xG_for": 0.62,
+      "xG_against": 1.68,
+      "xg_open_play_for": 0.4,
+      "xg_open_play_against": 0.69,
+      "xg_set_play_for": 0.22,
+      "xg_set_play_against": 1,
+      "npxg_for": 0.62,
+      "npxg_against": 1.68,
+      "xgot_for": 2.12,
+      "xgot_against": 1.64,
+      "location": "home"
     }
   ],
   "atalanta": [
@@ -462,6 +479,23 @@
       "xgot_for": 2.49,
       "xgot_against": 1.5,
       "location": "away"
+    },
+    {
+      "date": "2026-10-31",
+      "opposition": "monza",
+      "goals_for": 2,
+      "goals_against": 1,
+      "xG_for": 2.03,
+      "xG_against": 1.79,
+      "xg_open_play_for": 0.96,
+      "xg_open_play_against": 0.1,
+      "xg_set_play_for": 0.28,
+      "xg_set_play_against": 0.11,
+      "npxg_for": 1.24,
+      "npxg_against": 0.22,
+      "xgot_for": 1.95,
+      "xgot_against": 1.51,
+      "location": "home"
     }
   ],
   "cagliari": [
@@ -616,6 +650,23 @@
       "npxg_against": 2.87,
       "xgot_for": 3.73,
       "xgot_against": 2.74,
+      "location": "away"
+    },
+    {
+      "date": "2026-11-01",
+      "opposition": "lazio",
+      "goals_for": 1,
+      "goals_against": 2,
+      "xG_for": 0.99,
+      "xG_against": 1.02,
+      "xg_open_play_for": 0.78,
+      "xg_open_play_against": 0.83,
+      "xg_set_play_for": 0.21,
+      "xg_set_play_against": 0.18,
+      "npxg_for": 0.99,
+      "npxg_against": 1.02,
+      "xgot_for": 1.22,
+      "xgot_against": 1.32,
       "location": "away"
     }
   ],
@@ -772,6 +823,23 @@
       "xgot_for": 1.71,
       "xgot_against": 1,
       "location": "away"
+    },
+    {
+      "date": "2026-11-01",
+      "opposition": "venezia",
+      "goals_for": 1,
+      "goals_against": 0,
+      "xG_for": 1.63,
+      "xG_against": 0.19,
+      "xg_open_play_for": 0.53,
+      "xg_open_play_against": 0.16,
+      "xg_set_play_for": 0.31,
+      "xg_set_play_against": 0.03,
+      "npxg_for": 0.84,
+      "npxg_against": 0.19,
+      "xgot_for": 1.54,
+      "xgot_against": 0.02,
+      "location": "home"
     }
   ],
   "fiorentina": [
@@ -1082,6 +1150,23 @@
       "xgot_for": 3.73,
       "xgot_against": 1.31,
       "location": "home"
+    },
+    {
+      "date": "2026-11-01",
+      "opposition": "torino",
+      "goals_for": 2,
+      "goals_against": 0,
+      "xG_for": 1.73,
+      "xG_against": 0.51,
+      "xg_open_play_for": 1.5,
+      "xg_open_play_against": 0.44,
+      "xg_set_play_for": 0.23,
+      "xg_set_play_against": 0.08,
+      "npxg_for": 1.73,
+      "npxg_against": 0.51,
+      "xgot_for": 2.15,
+      "xgot_against": 0.92,
+      "location": "home"
     }
   ],
   "genoa": [
@@ -1237,6 +1322,23 @@
       "xgot_for": 0.93,
       "xgot_against": 1.26,
       "location": "home"
+    },
+    {
+      "date": "2026-11-01",
+      "opposition": "lecce",
+      "goals_for": 2,
+      "goals_against": 1,
+      "xG_for": 1.34,
+      "xG_against": 1.19,
+      "xg_open_play_for": 1.27,
+      "xg_open_play_against": 0.93,
+      "xg_set_play_for": 0.07,
+      "xg_set_play_against": 0.26,
+      "npxg_for": 1.34,
+      "npxg_against": 1.19,
+      "xgot_for": 1.32,
+      "xgot_against": 1.24,
+      "location": "away"
     }
   ],
   "inter": [
@@ -1391,6 +1493,23 @@
       "npxg_against": 1.59,
       "xgot_for": 0.49,
       "xgot_against": 0.67,
+      "location": "away"
+    },
+    {
+      "date": "2026-10-31",
+      "opposition": "milan",
+      "goals_for": 1,
+      "goals_against": 3,
+      "xG_for": 1.68,
+      "xG_against": 0.62,
+      "xg_open_play_for": 0.69,
+      "xg_open_play_against": 0.4,
+      "xg_set_play_for": 1,
+      "xg_set_play_against": 0.22,
+      "npxg_for": 1.68,
+      "npxg_against": 0.62,
+      "xgot_for": 1.64,
+      "xgot_against": 2.12,
       "location": "away"
     }
   ],
@@ -1547,6 +1666,23 @@
       "xgot_for": 1.26,
       "xgot_against": 0.93,
       "location": "away"
+    },
+    {
+      "date": "2026-11-01",
+      "opposition": "napoli",
+      "goals_for": 2,
+      "goals_against": 0,
+      "xG_for": 0.79,
+      "xG_against": 0.52,
+      "xg_open_play_for": 0.47,
+      "xg_open_play_against": 0.23,
+      "xg_set_play_for": 0.32,
+      "xg_set_play_against": 0.29,
+      "npxg_for": 0.79,
+      "npxg_against": 0.52,
+      "xgot_for": 0.7,
+      "xgot_against": 0.21,
+      "location": "home"
     }
   ],
   "lazio": [
@@ -1702,6 +1838,23 @@
       "xgot_for": 4.62,
       "xgot_against": 0.25,
       "location": "away"
+    },
+    {
+      "date": "2026-11-01",
+      "opposition": "cagliari",
+      "goals_for": 2,
+      "goals_against": 1,
+      "xG_for": 1.02,
+      "xG_against": 0.99,
+      "xg_open_play_for": 0.83,
+      "xg_open_play_against": 0.78,
+      "xg_set_play_for": 0.18,
+      "xg_set_play_against": 0.21,
+      "npxg_for": 1.02,
+      "npxg_against": 0.99,
+      "xgot_for": 1.32,
+      "xgot_against": 1.22,
+      "location": "home"
     }
   ],
   "lecce": [
@@ -1857,6 +2010,23 @@
       "xgot_for": 1.31,
       "xgot_against": 3.73,
       "location": "away"
+    },
+    {
+      "date": "2026-11-01",
+      "opposition": "genoa",
+      "goals_for": 1,
+      "goals_against": 2,
+      "xG_for": 1.19,
+      "xG_against": 1.34,
+      "xg_open_play_for": 0.93,
+      "xg_open_play_against": 1.27,
+      "xg_set_play_for": 0.26,
+      "xg_set_play_against": 0.07,
+      "npxg_for": 1.19,
+      "npxg_against": 1.34,
+      "xgot_for": 1.24,
+      "xgot_against": 1.32,
+      "location": "home"
     }
   ],
   "monza": [
@@ -2012,6 +2182,23 @@
       "xgot_for": 1.56,
       "xgot_against": 3.51,
       "location": "home"
+    },
+    {
+      "date": "2026-10-31",
+      "opposition": "bologna",
+      "goals_for": 1,
+      "goals_against": 2,
+      "xG_for": 1.79,
+      "xG_against": 2.03,
+      "xg_open_play_for": 0.1,
+      "xg_open_play_against": 0.96,
+      "xg_set_play_for": 0.11,
+      "xg_set_play_against": 0.28,
+      "npxg_for": 0.22,
+      "npxg_against": 1.24,
+      "xgot_for": 1.51,
+      "xgot_against": 1.95,
+      "location": "away"
     }
   ],
   "napoli": [
@@ -2166,6 +2353,23 @@
       "npxg_against": 1.14,
       "xgot_for": 3.51,
       "xgot_against": 1.56,
+      "location": "away"
+    },
+    {
+      "date": "2026-11-01",
+      "opposition": "juventus",
+      "goals_for": 0,
+      "goals_against": 2,
+      "xG_for": 0.52,
+      "xG_against": 0.79,
+      "xg_open_play_for": 0.23,
+      "xg_open_play_against": 0.47,
+      "xg_set_play_for": 0.29,
+      "xg_set_play_against": 0.32,
+      "npxg_for": 0.52,
+      "npxg_against": 0.79,
+      "xgot_for": 0.21,
+      "xgot_against": 0.7,
       "location": "away"
     }
   ],
@@ -2477,6 +2681,23 @@
       "xgot_for": 2.74,
       "xgot_against": 3.73,
       "location": "home"
+    },
+    {
+      "date": "2026-10-31",
+      "opposition": "udinese",
+      "goals_for": 5,
+      "goals_against": 2,
+      "xG_for": 2.76,
+      "xG_against": 1.77,
+      "xg_open_play_for": 2.5,
+      "xg_open_play_against": 0.88,
+      "xg_set_play_for": 0.26,
+      "xg_set_play_against": 0.89,
+      "npxg_for": 2.76,
+      "npxg_against": 1.77,
+      "xgot_for": 3.96,
+      "xgot_against": 2.78,
+      "location": "away"
     }
   ],
   "sassuolo": [
@@ -2787,6 +3008,23 @@
       "xgot_for": 1,
       "xgot_against": 1.71,
       "location": "home"
+    },
+    {
+      "date": "2026-11-01",
+      "opposition": "frosinone",
+      "goals_for": 0,
+      "goals_against": 2,
+      "xG_for": 0.51,
+      "xG_against": 1.73,
+      "xg_open_play_for": 0.44,
+      "xg_open_play_against": 1.5,
+      "xg_set_play_for": 0.08,
+      "xg_set_play_against": 0.23,
+      "npxg_for": 0.51,
+      "npxg_against": 1.73,
+      "xgot_for": 0.92,
+      "xgot_against": 2.15,
+      "location": "away"
     }
   ],
   "udinese": [
@@ -2942,6 +3180,23 @@
       "xgot_for": 1.09,
       "xgot_against": 0.92,
       "location": "away"
+    },
+    {
+      "date": "2026-10-31",
+      "opposition": "roma",
+      "goals_for": 2,
+      "goals_against": 5,
+      "xG_for": 1.77,
+      "xG_against": 2.76,
+      "xg_open_play_for": 0.88,
+      "xg_open_play_against": 2.5,
+      "xg_set_play_for": 0.89,
+      "xg_set_play_against": 0.26,
+      "npxg_for": 1.77,
+      "npxg_against": 2.76,
+      "xgot_for": 2.78,
+      "xgot_against": 3.96,
+      "location": "home"
     }
   ],
   "venezia": [
@@ -3097,6 +3352,23 @@
       "xgot_for": 0.67,
       "xgot_against": 0.49,
       "location": "home"
+    },
+    {
+      "date": "2026-11-01",
+      "opposition": "como",
+      "goals_for": 0,
+      "goals_against": 1,
+      "xG_for": 0.19,
+      "xG_against": 1.63,
+      "xg_open_play_for": 0.16,
+      "xg_open_play_against": 0.53,
+      "xg_set_play_for": 0.03,
+      "xg_set_play_against": 0.31,
+      "npxg_for": 0.19,
+      "npxg_against": 0.84,
+      "xgot_for": 0.02,
+      "xgot_against": 1.54,
+      "location": "away"
     }
   ]
 }
