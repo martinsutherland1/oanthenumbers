@@ -1209,6 +1209,62 @@
     "loggedOn": "2026-11-02"
   },
   {
+    "league": "epl",
+    "round": 10,
+    "date": "2026-11-07",
+    "time": "15:00",
+    "home": "fulham",
+    "away": "newcastle-united",
+    "market": "winOrDraw",
+    "side": "home",
+    "label": "Fulham to win or draw",
+    "likelihood": 0.742,
+    "overall": false,
+    "loggedOn": "2026-11-03"
+  },
+  {
+    "league": "epl",
+    "round": 10,
+    "date": "2026-11-07",
+    "time": "15:00",
+    "home": "arsenal",
+    "away": "hull-city",
+    "market": "win",
+    "side": "home",
+    "label": "Arsenal to win",
+    "likelihood": 0.73,
+    "overall": false,
+    "loggedOn": "2026-11-03"
+  },
+  {
+    "league": "epl",
+    "round": 10,
+    "date": "2026-11-07",
+    "time": "15:00",
+    "home": "leeds-united",
+    "away": "tottenham-hotspur",
+    "market": "winOrDraw",
+    "side": "home",
+    "label": "Leeds to win or draw",
+    "likelihood": 0.714,
+    "overall": false,
+    "loggedOn": "2026-11-03"
+  },
+  {
+    "league": "epl",
+    "round": 10,
+    "date": "2026-11-07",
+    "time": "15:00",
+    "home": "nottingham-forest",
+    "away": "manchester-city",
+    "market": "winOrDraw",
+    "side": "away",
+    "label": "Man City to win or draw",
+    "likelihood": 0.694,
+    "overall": false,
+    "loggedOn": "2026-11-03"
+  },
+  {
     "league": "ligue1",
     "round": 10,
     "date": "2026-11-07",
@@ -1233,6 +1289,44 @@
     "likelihood": 0.706,
     "overall": false,
     "loggedOn": "2026-11-02"
+  },
+  {
+    "league": "seriea",
+    "round": 11,
+    "date": "2026-11-07",
+    "home": "parma",
+    "away": "bologna",
+    "market": "winOrDraw",
+    "side": "away",
+    "label": "Bologna to win or draw",
+    "likelihood": 0.792,
+    "overall": true,
+    "loggedOn": "2026-11-03"
+  },
+  {
+    "league": "seriea",
+    "round": 11,
+    "date": "2026-11-07",
+    "home": "roma",
+    "away": "sassuolo",
+    "market": "win",
+    "side": "home",
+    "label": "Roma to win",
+    "likelihood": 0.766,
+    "overall": true,
+    "loggedOn": "2026-11-03"
+  },
+  {
+    "league": "seriea",
+    "round": 11,
+    "date": "2026-11-07",
+    "home": "cagliari",
+    "away": "frosinone",
+    "market": "btts",
+    "label": "Both teams to score",
+    "likelihood": 0.668,
+    "overall": false,
+    "loggedOn": "2026-11-03"
   },
   {
     "league": "bundesliga",
@@ -1321,6 +1415,18 @@
     "likelihood": 0.709,
     "overall": false,
     "loggedOn": "2026-11-02"
+  },
+  {
+    "league": "seriea",
+    "round": 11,
+    "date": "2026-11-08",
+    "home": "monza",
+    "away": "atalanta",
+    "market": "btts",
+    "label": "Both teams to score",
+    "likelihood": 0.709,
+    "overall": false,
+    "loggedOn": "2026-11-03"
   },
   {
     "league": "spfl",
