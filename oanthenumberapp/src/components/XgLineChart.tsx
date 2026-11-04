@@ -22,6 +22,8 @@ interface XgLineChartProps {
   metricType: MetricType;
   xgType: XgType;
   onXgTypeChange: (value: XgType) => void;
+  // Averaging window shown in the title, e.g. 'Rolling 10' or 'Season'
+  windowLabel?: string;
 }
 
 interface CustomTooltipProps {
@@ -50,10 +52,10 @@ function CustomTooltip({ active, payload, label }: CustomTooltipProps) {
   return null;
 }
 
-export function XgLineChart({ data, selectedTeams, leagueAverage, metricType, xgType, onXgTypeChange }: XgLineChartProps) {
-  const chartTitle = metricType === 'xg' ? 'Rolling xG Difference Progression' : metricType === 'goals' ? 'Rolling Goal Difference Progression' : 'Rolling Points Progression';
+export function XgLineChart({ data, selectedTeams, leagueAverage, metricType, xgType, onXgTypeChange, windowLabel = 'Rolling' }: XgLineChartProps) {
+  const chartTitle = metricType === 'xg' ? `${windowLabel} xG Difference Progression` : metricType === 'goals' ? `${windowLabel} Goal Difference Progression` : `${windowLabel} Points Progression`;
   const titleNode = metricType === 'xg'
-    ? <>Rolling <XgTypeSelect value={xgType} onChange={onXgTypeChange} /> Difference Progression</>
+    ? <>{windowLabel} <XgTypeSelect value={xgType} onChange={onXgTypeChange} /> Difference Progression</>
     : chartTitle;
 
   if (selectedTeams.length === 0) {

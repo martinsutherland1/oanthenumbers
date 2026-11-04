@@ -1,0 +1,44 @@
+.fixture-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 12px 8px 4px;
+}
+
+.fixture-detail-v {
+  color: var(--text-secondary);
+  font-weight: 400;
+}
+
+.fixture-detail-score {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 14px;
+  font-weight: 700;
+}
+
+.fixture-detail-score span:first-child {
+  text-align: right;
+}
+
+.fixture-detail-score strong {
+  font-size: 1.6rem;
+  color: var(--text);
+  font-variant-numeric: tabular-nums;
+}
+
+.fixture-detail-tip {
+  margin: 0;
+  justify-self: center;
+  align-self: center;
+  padding: 4px 10px;
+  border-radius: 4px;
+  background: var(--surface-hover);
+  color: var(--text-secondary);
+  font-size: 0.8rem;
+}
+
+.fixture-detail-tip strong {
+  color: var(--text);
+}

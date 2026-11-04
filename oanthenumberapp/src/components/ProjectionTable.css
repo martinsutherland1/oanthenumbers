@@ -8,3 +8,9 @@
   .projection-table .col-xgdiff { width: 72px; }
   .projection-table .col-proj-pts { width: 68px; }
 }
+
+.projection-note {
+  margin: 8px 0 0;
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+}

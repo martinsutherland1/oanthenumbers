@@ -7,9 +7,11 @@ interface ProjectionTableProps {
   data: ProjectedStanding[];
   dividerPositions?: number[];
   onTeamClick?: (team: string) => void;
+  // Short caveat shown under the table
+  note?: string;
 }
 
-export function ProjectionTable({ data, dividerPositions = [], onTeamClick }: ProjectionTableProps) {
+export function ProjectionTable({ data, dividerPositions = [], onTeamClick, note }: ProjectionTableProps) {
   return (
     <div className="league-table-container">
       <h3>Projected Final Standings</h3>
@@ -52,6 +54,7 @@ export function ProjectionTable({ data, dividerPositions = [], onTeamClick }: Pr
           </tbody>
         </table>
       </div>
+      {note && <p className="projection-note">{note}</p>}
     </div>
   );
 }

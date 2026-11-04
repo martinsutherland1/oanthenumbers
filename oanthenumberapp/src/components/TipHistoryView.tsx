@@ -1,5 +1,5 @@
 import { useMemo } from 'react';
-import { parseDate } from '../utils/dataProcessing';
+import { formatMatchDate } from '../utils/dataProcessing';
 import { TIP_LEAGUES } from '../utils/leagueData';
 import { getTeamName } from '../utils/teamColors';
 import { settleTips, successRate, tally, type LoggedTip, type SettledTip } from '../utils/tipHistory';
@@ -13,7 +13,7 @@ const RESULTS = Object.fromEntries(TIP_LEAGUES.map(l => [l.key, l.fixtures]));
 const pct = (rate: number | null) => rate === null ? '–' : `${Math.round(rate * 100)}%`;
 
 const formatDate = (date: string) =>
-  parseDate(date).toLocaleDateString('en-GB', { day: 'numeric', month: 'short' });
+  formatMatchDate(date, { day: 'numeric', month: 'short' });
 
 function SummaryRow({ name, tips }: { name: string; tips: SettledTip[] }) {
   const t = tally(tips);

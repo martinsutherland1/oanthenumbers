@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { TOP_TIPS, tipKey, type FixtureTip, type LeagueTips } from '../utils/bettingTips';
-import { parseDate } from '../utils/dataProcessing';
+import { formatMatchDate } from '../utils/dataProcessing';
 import { getTeamName } from '../utils/teamColors';
 import { TipHistoryView } from './TipHistoryView';
 import './LeagueTable.css';
@@ -20,7 +20,7 @@ interface AllTipsViewProps {
 }
 
 const formatDate = (date: string) =>
-  parseDate(date).toLocaleDateString('en-GB', { weekday: 'short', day: 'numeric', month: 'short' });
+  formatMatchDate(date, { weekday: 'short', day: 'numeric', month: 'short' });
 
 function TipItem({ tip, rank, league }: { tip: FixtureTip; rank: number; league?: string }) {
   return (
@@ -59,16 +59,16 @@ export function AllTipsView({ leagues, onBack, onSelectLeague }: AllTipsViewProp
     <div className="betting-view">
       <div className="all-tips-header">
         <button className="home-back-btn" onClick={onBack}>← Leagues</button>
-        <h3>Top Tips · All Leagues</h3>
+        <h3>Predictions · All Leagues</h3>
       </div>
       <div className="view-tabs secondary-tabs tips-tabs">
-        <button className={`view-tab ${tab === 'tips' ? 'active' : ''}`} onClick={() => setTab('tips')}>Tips</button>
+        <button className={`view-tab ${tab === 'tips' ? 'active' : ''}`} onClick={() => setTab('tips')}>Predictions</button>
         <button className={`view-tab ${tab === 'history' ? 'active' : ''}`} onClick={() => setTab('history')}>History</button>
       </div>
       {tab === 'history' && <TipHistoryView />}
       {tab === 'tips' && <>
       <p className="betting-note">
-        The four most likely tips from each league's next round, then the best four of those overall. Open a league's Analysis &gt; Tips for every fixture.
+        The four most likely predictions from each league's next round, then the best four of those overall. Open a league's Analysis &gt; Predictions for every fixture.
       </p>
       {pool.length > 0 && (
         <div className="betting-section">

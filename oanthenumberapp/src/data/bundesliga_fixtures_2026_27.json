@@ -2,594 +2,693 @@
   "fixtures_0": [
     {
       "date": "2026-08-28",
+      "time": "19:30",
       "team_home": "bayern-munchen",
       "team_away": "stuttgart",
       "round": 1
     },
     {
       "date": "2026-08-29",
+      "time": "14:30",
       "team_home": "rb-leipzig",
       "team_away": "borussia-monchengladbach",
       "round": 1
     },
     {
       "date": "2026-08-29",
+      "time": "14:30",
       "team_home": "mainz",
       "team_away": "paderborn",
       "round": 1
     },
     {
       "date": "2026-08-29",
+      "time": "14:30",
       "team_home": "union-berlin",
       "team_away": "eintracht-frankfurt",
       "round": 1
     },
     {
       "date": "2026-08-29",
+      "time": "14:30",
       "team_home": "elversberg",
       "team_away": "bayer-leverkusen",
       "round": 1
     },
     {
       "date": "2026-08-29",
+      "time": "14:30",
       "team_home": "koln",
       "team_away": "hoffenheim",
       "round": 1
     },
     {
       "date": "2026-08-29",
+      "time": "17:30",
       "team_home": "borussia-dortmund",
       "team_away": "hamburger-sv",
       "round": 1
     },
     {
       "date": "2026-08-30",
+      "time": "14:30",
       "team_home": "freiburg",
       "team_away": "werder-bremen",
       "round": 1
     },
     {
       "date": "2026-08-30",
+      "time": "16:30",
       "team_home": "augsburg",
       "team_away": "schalke",
       "round": 1
     },
     {
       "date": "2026-09-04",
+      "time": "19:30",
       "team_home": "stuttgart",
       "team_away": "koln",
       "round": 2
     },
     {
       "date": "2026-09-05",
+      "time": "14:30",
       "team_home": "werder-bremen",
       "team_away": "rb-leipzig",
       "round": 2
     },
     {
       "date": "2026-09-05",
+      "time": "14:30",
       "team_home": "hoffenheim",
       "team_away": "borussia-dortmund",
       "round": 2
     },
     {
       "date": "2026-09-05",
+      "time": "14:30",
       "team_home": "bayer-leverkusen",
       "team_away": "union-berlin",
       "round": 2
     },
     {
       "date": "2026-09-05",
+      "time": "14:30",
       "team_home": "borussia-monchengladbach",
       "team_away": "elversberg",
       "round": 2
     },
     {
       "date": "2026-09-05",
+      "time": "14:30",
       "team_home": "paderborn",
       "team_away": "freiburg",
       "round": 2
     },
     {
       "date": "2026-09-05",
+      "time": "17:30",
       "team_home": "schalke",
       "team_away": "bayern-munchen",
       "round": 2
     },
     {
       "date": "2026-09-06",
+      "time": "14:30",
       "team_home": "hamburger-sv",
       "team_away": "mainz",
       "round": 2
     },
     {
       "date": "2026-09-06",
+      "time": "16:30",
       "team_home": "eintracht-frankfurt",
       "team_away": "augsburg",
       "round": 2
     },
     {
       "date": "2026-09-11",
+      "time": "19:30",
       "team_home": "union-berlin",
       "team_away": "schalke",
       "round": 3
     },
     {
       "date": "2026-09-12",
+      "time": "14:30",
       "team_home": "hoffenheim",
       "team_away": "stuttgart",
       "round": 3
     },
     {
       "date": "2026-09-12",
+      "time": "14:30",
       "team_home": "borussia-dortmund",
       "team_away": "paderborn",
       "round": 3
     },
     {
       "date": "2026-09-12",
+      "time": "14:30",
       "team_home": "augsburg",
       "team_away": "bayer-leverkusen",
       "round": 3
     },
     {
       "date": "2026-09-12",
+      "time": "14:30",
       "team_home": "mainz",
       "team_away": "eintracht-frankfurt",
       "round": 3
     },
     {
       "date": "2026-09-12",
+      "time": "14:30",
       "team_home": "freiburg",
       "team_away": "borussia-monchengladbach",
       "round": 3
     },
     {
       "date": "2026-09-12",
+      "time": "17:30",
       "team_home": "koln",
       "team_away": "werder-bremen",
       "round": 3
     },
     {
       "date": "2026-09-13",
+      "time": "14:30",
       "team_home": "rb-leipzig",
       "team_away": "hamburger-sv",
       "round": 3
     },
     {
       "date": "2026-09-13",
+      "time": "16:30",
       "team_home": "elversberg",
       "team_away": "bayern-munchen",
       "round": 3
     },
     {
       "date": "2026-09-18",
+      "time": "19:30",
       "team_home": "bayern-munchen",
       "team_away": "union-berlin",
       "round": 4
     },
     {
       "date": "2026-09-19",
+      "time": "14:30",
       "team_home": "hamburger-sv",
       "team_away": "koln",
       "round": 4
     },
     {
       "date": "2026-09-19",
+      "time": "14:30",
       "team_home": "borussia-monchengladbach",
       "team_away": "mainz",
       "round": 4
     },
     {
       "date": "2026-09-19",
+      "time": "14:30",
       "team_home": "werder-bremen",
       "team_away": "augsburg",
       "round": 4
     },
     {
       "date": "2026-09-19",
+      "time": "14:30",
       "team_home": "eintracht-frankfurt",
       "team_away": "freiburg",
       "round": 4
     },
     {
       "date": "2026-09-19",
+      "time": "17:30",
       "team_home": "stuttgart",
       "team_away": "borussia-dortmund",
       "round": 4
     },
     {
       "date": "2026-09-20",
+      "time": "14:30",
       "team_home": "bayer-leverkusen",
       "team_away": "rb-leipzig",
       "round": 4
     },
     {
       "date": "2026-09-20",
+      "time": "16:30",
       "team_home": "schalke",
       "team_away": "elversberg",
       "round": 4
     },
     {
       "date": "2026-09-20",
+      "time": "18:30",
       "team_home": "paderborn",
       "team_away": "hoffenheim",
       "round": 4
     },
     {
       "date": "2026-10-09",
+      "time": "19:30",
       "team_home": "borussia-dortmund",
       "team_away": "werder-bremen",
       "round": 5
     },
     {
       "date": "2026-10-10",
+      "time": "14:30",
       "team_home": "mainz",
       "team_away": "bayer-leverkusen",
       "round": 5
     },
     {
       "date": "2026-10-10",
+      "time": "14:30",
       "team_home": "paderborn",
       "team_away": "stuttgart",
       "round": 5
     },
     {
       "date": "2026-10-10",
+      "time": "14:30",
       "team_home": "union-berlin",
       "team_away": "elversberg",
       "round": 5
     },
     {
       "date": "2026-10-10",
+      "time": "14:30",
       "team_home": "hoffenheim",
       "team_away": "hamburger-sv",
       "round": 5
     },
     {
       "date": "2026-10-10",
+      "time": "14:30",
       "team_home": "augsburg",
       "team_away": "bayern-munchen",
       "round": 5
     },
     {
       "date": "2026-10-10",
+      "time": "17:30",
       "team_home": "rb-leipzig",
       "team_away": "eintracht-frankfurt",
       "round": 5
     },
     {
       "date": "2026-10-11",
+      "time": "14:30",
       "team_home": "koln",
       "team_away": "borussia-monchengladbach",
       "round": 5
     },
     {
       "date": "2026-10-11",
+      "time": "16:30",
       "team_home": "freiburg",
       "team_away": "schalke",
       "round": 5
     },
     {
       "date": "2026-10-16",
+      "time": "19:30",
       "team_home": "eintracht-frankfurt",
       "team_away": "koln",
       "round": 6
     },
     {
       "date": "2026-10-17",
+      "time": "14:30",
       "team_home": "union-berlin",
       "team_away": "borussia-dortmund",
       "round": 6
     },
     {
       "date": "2026-10-17",
+      "time": "14:30",
       "team_home": "hamburger-sv",
       "team_away": "stuttgart",
       "round": 6
     },
     {
       "date": "2026-10-17",
+      "time": "14:30",
       "team_home": "werder-bremen",
       "team_away": "paderborn",
       "round": 6
     },
     {
       "date": "2026-10-17",
+      "time": "14:30",
       "team_home": "elversberg",
       "team_away": "augsburg",
       "round": 6
     },
     {
       "date": "2026-10-17",
+      "time": "14:30",
       "team_home": "schalke",
       "team_away": "mainz",
       "round": 6
     },
     {
       "date": "2026-10-17",
+      "time": "17:30",
       "team_home": "bayern-munchen",
       "team_away": "rb-leipzig",
       "round": 6
     },
     {
       "date": "2026-10-18",
+      "time": "14:30",
       "team_home": "bayer-leverkusen",
       "team_away": "freiburg",
       "round": 6
     },
     {
       "date": "2026-10-18",
+      "time": "16:30",
       "team_home": "borussia-monchengladbach",
       "team_away": "hoffenheim",
       "round": 6
     },
     {
       "date": "2026-10-23",
+      "time": "19:30",
       "team_home": "stuttgart",
       "team_away": "borussia-monchengladbach",
       "round": 7
     },
     {
       "date": "2026-10-24",
+      "time": "14:30",
       "team_home": "mainz",
       "team_away": "werder-bremen",
       "round": 7
     },
     {
       "date": "2026-10-24",
+      "time": "14:30",
       "team_home": "koln",
       "team_away": "schalke",
       "round": 7
     },
     {
       "date": "2026-10-24",
+      "time": "14:30",
       "team_home": "rb-leipzig",
       "team_away": "elversberg",
       "round": 7
     },
     {
       "date": "2026-10-24",
+      "time": "14:30",
       "team_home": "paderborn",
       "team_away": "hamburger-sv",
       "round": 7
     },
     {
       "date": "2026-10-24",
+      "time": "14:30",
       "team_home": "augsburg",
       "team_away": "union-berlin",
       "round": 7
     },
     {
       "date": "2026-10-24",
+      "time": "17:30",
       "team_home": "borussia-dortmund",
       "team_away": "eintracht-frankfurt",
       "round": 7
     },
     {
       "date": "2026-10-25",
+      "time": "14:30",
       "team_home": "hoffenheim",
       "team_away": "bayer-leverkusen",
       "round": 7
     },
     {
       "date": "2026-10-25",
+      "time": "16:30",
       "team_home": "freiburg",
       "team_away": "bayern-munchen",
       "round": 7
     },
     {
       "date": "2026-10-30",
+      "time": "19:30",
       "team_home": "elversberg",
       "team_away": "mainz",
       "round": 8
     },
     {
       "date": "2026-10-31",
+      "time": "14:30",
       "team_home": "borussia-monchengladbach",
       "team_away": "paderborn",
       "round": 8
     },
     {
       "date": "2026-10-31",
+      "time": "14:30",
       "team_home": "schalke",
       "team_away": "rb-leipzig",
       "round": 8
     },
     {
       "date": "2026-10-31",
+      "time": "14:30",
       "team_home": "augsburg",
       "team_away": "freiburg",
       "round": 8
     },
     {
       "date": "2026-10-31",
+      "time": "14:30",
       "team_home": "werder-bremen",
       "team_away": "hoffenheim",
       "round": 8
     },
     {
       "date": "2026-10-31",
+      "time": "14:30",
       "team_home": "bayer-leverkusen",
       "team_away": "stuttgart",
       "round": 8
     },
     {
       "date": "2026-10-31",
+      "time": "17:30",
       "team_home": "bayern-munchen",
       "team_away": "borussia-dortmund",
       "round": 8
     },
     {
       "date": "2026-11-01",
+      "time": "14:30",
       "team_home": "union-berlin",
       "team_away": "koln",
       "round": 8
     },
     {
       "date": "2026-11-01",
+      "time": "16:30",
       "team_home": "eintracht-frankfurt",
       "team_away": "hamburger-sv",
       "round": 8
     },
     {
       "date": "2026-11-06",
+      "time": "19:30",
       "team_home": "hamburger-sv",
       "team_away": "borussia-monchengladbach",
       "round": 9
     },
     {
       "date": "2026-11-07",
+      "time": "14:30",
       "team_home": "rb-leipzig",
       "team_away": "augsburg",
       "round": 9
     },
     {
       "date": "2026-11-07",
+      "time": "14:30",
       "team_home": "borussia-dortmund",
       "team_away": "elversberg",
       "round": 9
     },
     {
       "date": "2026-11-07",
+      "time": "14:30",
       "team_home": "mainz",
       "team_away": "bayern-munchen",
       "round": 9
     },
     {
       "date": "2026-11-07",
+      "time": "14:30",
       "team_home": "paderborn",
       "team_away": "eintracht-frankfurt",
       "round": 9
     },
     {
       "date": "2026-11-07",
+      "time": "17:30",
       "team_home": "stuttgart",
       "team_away": "werder-bremen",
       "round": 9
     },
     {
       "date": "2026-11-08",
+      "time": "14:30",
       "team_home": "koln",
       "team_away": "bayer-leverkusen",
       "round": 9
     },
     {
       "date": "2026-11-08",
+      "time": "16:30",
       "team_home": "freiburg",
       "team_away": "union-berlin",
       "round": 9
     },
     {
       "date": "2026-11-08",
+      "time": "18:30",
       "team_home": "hoffenheim",
       "team_away": "schalke",
       "round": 9
     },
     {
       "date": "2026-11-20",
+      "time": "19:30",
       "team_home": "bayern-munchen",
       "team_away": "koln",
       "round": 10
     },
     {
       "date": "2026-11-21",
+      "time": "14:30",
       "team_home": "bayer-leverkusen",
       "team_away": "paderborn",
       "round": 10
     },
     {
       "date": "2026-11-21",
+      "time": "14:30",
       "team_home": "union-berlin",
       "team_away": "rb-leipzig",
       "round": 10
     },
     {
       "date": "2026-11-21",
+      "time": "14:30",
       "team_home": "elversberg",
       "team_away": "freiburg",
       "round": 10
     },
     {
       "date": "2026-11-21",
+      "time": "14:30",
       "team_home": "borussia-monchengladbach",
       "team_away": "borussia-dortmund",
       "round": 10
     },
     {
       "date": "2026-11-21",
+      "time": "14:30",
       "team_home": "eintracht-frankfurt",
       "team_away": "hoffenheim",
       "round": 10
     },
     {
       "date": "2026-11-21",
+      "time": "17:30",
       "team_home": "schalke",
       "team_away": "stuttgart",
       "round": 10
     },
     {
       "date": "2026-11-22",
+      "time": "14:30",
       "team_home": "augsburg",
       "team_away": "mainz",
       "round": 10
     },
     {
       "date": "2026-11-22",
+      "time": "16:30",
       "team_home": "werder-bremen",
       "team_away": "hamburger-sv",
       "round": 10
     },
     {
       "date": "2026-11-27",
+      "time": "19:30",
       "team_home": "werder-bremen",
       "team_away": "borussia-monchengladbach",
       "round": 11
     },
     {
       "date": "2026-11-28",
+      "time": "14:30",
       "team_home": "koln",
       "team_away": "elversberg",
       "round": 11
     },
     {
       "date": "2026-11-28",
+      "time": "14:30",
       "team_home": "mainz",
       "team_away": "union-berlin",
       "round": 11
     },
     {
       "date": "2026-11-28",
+      "time": "14:30",
       "team_home": "paderborn",
       "team_away": "schalke",
       "round": 11
     },
     {
       "date": "2026-11-28",
+      "time": "14:30",
       "team_home": "hamburger-sv",
       "team_away": "bayern-munchen",
       "round": 11
     },
     {
       "date": "2026-11-28",
+      "time": "17:30",
       "team_home": "stuttgart",
       "team_away": "eintracht-frankfurt",
       "round": 11
     },
     {
       "date": "2026-11-29",
+      "time": "14:30",
       "team_home": "freiburg",
       "team_away": "rb-leipzig",
       "round": 11
     },
     {
       "date": "2026-11-29",
+      "time": "16:30",
       "team_home": "hoffenheim",
       "team_away": "augsburg",
       "round": 11
     },
     {
       "date": "2026-11-29",
+      "time": "18:30",
       "team_home": "borussia-dortmund",
       "team_away": "bayer-leverkusen",
       "round": 11
@@ -1784,54 +1883,63 @@
     },
     {
       "date": "2027-05-22",
+      "time": "14:30",
       "team_home": "rb-leipzig",
       "team_away": "hoffenheim",
       "round": 34
     },
     {
       "date": "2027-05-22",
+      "time": "14:30",
       "team_home": "union-berlin",
       "team_away": "borussia-monchengladbach",
       "round": 34
     },
     {
       "date": "2027-05-22",
+      "time": "14:30",
       "team_home": "mainz",
       "team_away": "stuttgart",
       "round": 34
     },
     {
       "date": "2027-05-22",
+      "time": "14:30",
       "team_home": "schalke",
       "team_away": "bayer-leverkusen",
       "round": 34
     },
     {
       "date": "2027-05-22",
+      "time": "14:30",
       "team_home": "elversberg",
       "team_away": "werder-bremen",
       "round": 34
     },
     {
       "date": "2027-05-22",
+      "time": "14:30",
       "team_home": "bayern-munchen",
       "team_away": "eintracht-frankfurt",
       "round": 34
     },
     {
       "date": "2027-05-22",
+      "time": "14:30",
       "team_home": "augsburg",
       "team_away": "hamburger-sv",
       "round": 34
     },
     {
       "date": "2027-05-22",
+      "time": "14:30",
       "team_home": "freiburg",
       "team_away": "borussia-dortmund",
       "round": 34
     },
     {
       "date": "2027-05-22",
+      "time": "14:30",
       "team_home": "koln",
       "team_away": "paderborn",
       "round": 34

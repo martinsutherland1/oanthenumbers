@@ -91,61 +91,6 @@
   border-color: var(--primary);
 }
 
-.highlight-modal-backdrop {
-  position: fixed;
-  inset: 0;
-  z-index: 1000;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 16px;
-  background: rgba(0, 0, 0, 0.55);
-}
-
-.highlight-modal {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  max-width: 520px;
-  max-height: 85vh;
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: 14px;
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
-}
-
-.highlight-modal-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 14px 18px;
-  border-bottom: 1px solid var(--border);
-}
-
-.highlight-modal-header h3 {
-  margin: 0;
-  font-size: 1.05rem;
-  color: var(--text);
-}
-
-.highlight-modal-close {
-  border: none;
-  background: transparent;
-  color: var(--text-secondary);
-  font-size: 1.6rem;
-  line-height: 1;
-  cursor: pointer;
-}
-
-.highlight-modal-close:hover {
-  color: var(--text);
-}
-
-.highlight-modal-body {
-  overflow: auto;
-  padding: 0 8px 8px;
-}
-
 .highlight-modal-table {
   width: 100%;
   border-collapse: collapse;

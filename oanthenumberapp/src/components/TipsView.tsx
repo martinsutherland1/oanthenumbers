@@ -1,6 +1,6 @@
 import { useMemo } from 'react';
 import { tipKey, type LeagueTips } from '../utils/bettingTips';
-import { parseDate } from '../utils/dataProcessing';
+import { formatMatchDate } from '../utils/dataProcessing';
 import { getTeamName } from '../utils/teamColors';
 import './LeagueTable.css';
 import './BettingView.css';
@@ -11,7 +11,7 @@ interface TipsViewProps {
 }
 
 const formatDate = (date: string) =>
-  parseDate(date).toLocaleDateString('en-GB', { weekday: 'short', day: 'numeric', month: 'short' });
+  formatMatchDate(date, { weekday: 'short', day: 'numeric', month: 'short' });
 
 const pct = (p: number) => `${Math.round(p * 100)}%`;
 const signedPct = (p: number) => `${p >= 0 ? '+' : ''}${Math.round(p * 100)}%`;

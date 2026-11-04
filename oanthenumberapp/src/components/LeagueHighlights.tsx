@@ -1,7 +1,8 @@
-import { useEffect, useMemo, useState } from 'react';
+import { useMemo, useState } from 'react';
 import { getTeamHighlightStats, type TeamHighlightStats } from '../utils/dataProcessing';
 import type { Fixture } from '../types';
 import { getTeamName } from '../utils/teamColors';
+import { Modal } from './Modal';
 import './LeagueHighlights.css';
 
 interface LeagueHighlightsProps {
@@ -77,12 +78,6 @@ function HighlightDetailModal({ group, metric, stats, onClose }: DetailTarget & 
   // null direction = best first
   const [reversed, setReversed] = useState(false);
 
-  useEffect(() => {
-    const onKey = (e: KeyboardEvent) => { if (e.key === 'Escape') onClose(); };
-    window.addEventListener('keydown', onKey);
-    return () => window.removeEventListener('keydown', onKey);
-  }, [onClose]);
-
   const rows = useMemo(() => {
     const sign = sortMetric.lowerIsBetter ? 1 : -1;
     return [...stats].sort((a, b) => {
@@ -97,51 +92,43 @@ function HighlightDetailModal({ group, metric, stats, onClose }: DetailTarget & 
   };
 
   return (
-    <div className="highlight-modal-backdrop" onClick={onClose}>
-      <div className="highlight-modal" role="dialog" aria-modal="true" aria-label={group.title} onClick={e => e.stopPropagation()}>
-        <div className="highlight-modal-header">
-          <h3>{group.title}</h3>
-          <button className="highlight-modal-close" onClick={onClose} aria-label="Close">×</button>
-        </div>
-        <div className="highlight-modal-body">
-          <table className="highlight-modal-table">
-            <thead>
-              <tr>
-                <th className="highlight-rank-col">#</th>
-                <th>Team</th>
-                {group.metrics.map(m => (
-                  <th
-                    key={m.key}
-                    className={`highlight-sortable${m.key === sortMetric.key ? ' highlight-sort-active' : ''}`}
-                    onClick={() => handleSort(m)}
-                  >
-                    {m.label}
-                    {m.key === sortMetric.key ? (sortMetric.lowerIsBetter !== reversed ? ' ↑' : ' ↓') : ''}
-                  </th>
-                ))}
-              </tr>
-            </thead>
-            <tbody>
-              {rows.map((row, i) => (
-                <tr key={row.team}>
-                  <td className="highlight-rank-col">{i + 1}</td>
-                  <td>
-                    <span className="highlight-team">
-                      <span className="highlight-team-name">{getTeamName(row.team)}</span>
-                    </span>
-                  </td>
-                  {group.metrics.map(m => (
-                    <td key={m.key} className={`highlight-num${m.key === sortMetric.key ? ' highlight-sort-active' : ''}`}>
-                      {formatValue(row[m.key], m)}
-                    </td>
-                  ))}
-                </tr>
+    <Modal title={group.title} ariaLabel={group.title} onClose={onClose}>
+      <table className="highlight-modal-table">
+        <thead>
+          <tr>
+            <th className="highlight-rank-col">#</th>
+            <th>Team</th>
+            {group.metrics.map(m => (
+              <th
+                key={m.key}
+                className={`highlight-sortable${m.key === sortMetric.key ? ' highlight-sort-active' : ''}`}
+                onClick={() => handleSort(m)}
+              >
+                {m.label}
+                {m.key === sortMetric.key ? (sortMetric.lowerIsBetter !== reversed ? ' ↑' : ' ↓') : ''}
+              </th>
+            ))}
+          </tr>
+        </thead>
+        <tbody>
+          {rows.map((row, i) => (
+            <tr key={row.team}>
+              <td className="highlight-rank-col">{i + 1}</td>
+              <td>
+                <span className="highlight-team">
+                  <span className="highlight-team-name">{getTeamName(row.team)}</span>
+                </span>
+              </td>
+              {group.metrics.map(m => (
+                <td key={m.key} className={`highlight-num${m.key === sortMetric.key ? ' highlight-sort-active' : ''}`}>
+                  {formatValue(row[m.key], m)}
+                </td>
               ))}
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </div>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </Modal>
   );
 }
 

@@ -33,7 +33,7 @@ interface MetricRow {
 const fmt = (n: number, decimals: number, signed?: boolean) =>
   `${signed && n > 0 ? '+' : ''}${n.toFixed(decimals)}`;
 
-function StatsComparison({ fixtures, teamA, teamB }: { fixtures: Fixture[]; teamA: string; teamB: string }) {
+export function StatsComparison({ fixtures, teamA, teamB }: { fixtures: Fixture[]; teamA: string; teamB: string }) {
   const rows = useMemo<MetricRow[]>(() => {
     // Every figure is per game, which equals per 90 minutes in league football
     const season = getTeamSeasonStats(fixtures);
@@ -128,14 +128,66 @@ function RecordRow({ team, record, color }: { team: string; record: H2HRecord | 
   );
 }
 
-function ResultsComparison({ fixtures, teamA, teamB }: { fixtures: Fixture[]; teamA: string; teamB: string }) {
+const meetingsBetween = (fixtures: Fixture[], teamA: string, teamB: string) =>
+  fixtures
+    .filter(f => (f.home_team === teamA && f.away_team === teamB) || (f.home_team === teamB && f.away_team === teamA))
+    .sort((a, b) => parseDate(b.date).getTime() - parseDate(a.date).getTime());
+
+function MeetingsCard({ title, note, meetings, teamA, emptyText }: { title: string; note: string; meetings: Fixture[]; teamA: string; emptyText: string }) {
+  return (
+    <div className="h2h-card">
+      <h4 className="h2h-card-title">{title} <span className="h2h-compare-note">{note}</span></h4>
+      {meetings.length === 0 ? (
+        <p className="h2h-empty-inline">{emptyText}</p>
+      ) : (
+        <div className="h2h-scroll">
+          <table className="h2h-results-table h2h-meetings">
+            <thead>
+              <tr><th>Date</th><th className="h2h-right">Home</th><th className="h2h-score-col">Score</th><th>Away</th><th className="h2h-num-col">xG</th></tr>
+            </thead>
+            <tbody>
+              {meetings.map(f => (
+                <tr key={`${f.date}-${f.home_team}-${f.away_team}`}>
+                  <td className="h2h-date">{parseDate(f.date).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' })}</td>
+                  <td className="h2h-right" style={{ color: f.home_team === teamA ? getSeriesColor(0) : getSeriesColor(1) }}>{getTeamName(f.home_team)}</td>
+                  <td className="h2h-score">{f.home_goals} – {f.away_goals}</td>
+                  <td style={{ color: f.away_team === teamA ? getSeriesColor(0) : getSeriesColor(1) }}>{getTeamName(f.away_team)}</td>
+                  <td className="h2h-num-col">{Number(f.home_xG).toFixed(2)} – {Number(f.away_xG).toFixed(2)}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      )}
+    </div>
+  );
+}
+
+export function ResultsComparison({ fixtures, teamA, teamB, lastSeasonFixtures }: {
+  fixtures: Fixture[];
+  teamA: string;
+  teamB: string;
+  // When given, last season's meetings are listed too
+  lastSeasonFixtures?: Fixture[];
+}) {
   const recordA = useMemo(() => getH2HData(fixtures, teamA).find(r => r.opponent === teamB), [fixtures, teamA, teamB]);
   const recordB = useMemo(() => getH2HData(fixtures, teamB).find(r => r.opponent === teamA), [fixtures, teamA, teamB]);
-  const meetings = useMemo(
-    () => fixtures
-      .filter(f => (f.home_team === teamA && f.away_team === teamB) || (f.home_team === teamB && f.away_team === teamA))
-      .sort((a, b) => parseDate(b.date).getTime() - parseDate(a.date).getTime()),
-    [fixtures, teamA, teamB]
+  // Most points first, then goal difference, then goals scored
+  const standings = useMemo(() => {
+    const score = (r: H2HRecord | undefined) => [r?.points ?? 0, (r?.goalsFor ?? 0) - (r?.goalsAgainst ?? 0), r?.goalsFor ?? 0];
+    const rows = [
+      { team: teamA, record: recordA, color: getSeriesColor(0) },
+      { team: teamB, record: recordB, color: getSeriesColor(1) },
+    ];
+    return rows.sort((x, y) => {
+      const [a, b] = [score(x.record), score(y.record)];
+      return b[0] - a[0] || b[1] - a[1] || b[2] - a[2];
+    });
+  }, [teamA, teamB, recordA, recordB]);
+  const meetings = useMemo(() => meetingsBetween(fixtures, teamA, teamB), [fixtures, teamA, teamB]);
+  const lastSeasonMeetings = useMemo(
+    () => lastSeasonFixtures ? meetingsBetween(lastSeasonFixtures, teamA, teamB) : [],
+    [lastSeasonFixtures, teamA, teamB]
   );
 
   return (
@@ -148,38 +200,28 @@ function ResultsComparison({ fixtures, teamA, teamB }: { fixtures: Fixture[]; te
               <tr><th>Team</th><th>P</th><th>W</th><th>D</th><th>L</th><th>GF</th><th>GA</th><th>Pts</th></tr>
             </thead>
             <tbody>
-              <RecordRow team={teamA} record={recordA} color={getSeriesColor(0)} />
-              <RecordRow team={teamB} record={recordB} color={getSeriesColor(1)} />
+              {standings.map(row => <RecordRow key={row.team} {...row} />)}
             </tbody>
           </table>
         </div>
       </div>
 
-      <div className="h2h-card">
-        <h4 className="h2h-card-title">Results <span className="h2h-compare-note">this season</span></h4>
-        {meetings.length === 0 ? (
-          <p className="h2h-empty-inline">These teams haven&rsquo;t met yet this season.</p>
-        ) : (
-          <div className="h2h-scroll">
-            <table className="h2h-results-table h2h-meetings">
-              <thead>
-                <tr><th>Date</th><th className="h2h-right">Home</th><th className="h2h-score-col">Score</th><th>Away</th><th className="h2h-num-col">xG</th></tr>
-              </thead>
-              <tbody>
-                {meetings.map(f => (
-                  <tr key={`${f.date}-${f.home_team}-${f.away_team}`}>
-                    <td className="h2h-date">{parseDate(f.date).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' })}</td>
-                    <td className="h2h-right" style={{ color: f.home_team === teamA ? getSeriesColor(0) : getSeriesColor(1) }}>{getTeamName(f.home_team)}</td>
-                    <td className="h2h-score">{f.home_goals} – {f.away_goals}</td>
-                    <td style={{ color: f.away_team === teamA ? getSeriesColor(0) : getSeriesColor(1) }}>{getTeamName(f.away_team)}</td>
-                    <td className="h2h-num-col">{Number(f.home_xG).toFixed(2)} – {Number(f.away_xG).toFixed(2)}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        )}
-      </div>
+      <MeetingsCard
+        title="Results"
+        note="this season"
+        meetings={meetings}
+        teamA={teamA}
+        emptyText="These teams haven’t met yet this season."
+      />
+      {lastSeasonFixtures && lastSeasonFixtures.length > 0 && (
+        <MeetingsCard
+          title="Results"
+          note="last season"
+          meetings={lastSeasonMeetings}
+          teamA={teamA}
+          emptyText="These teams didn’t meet last season."
+        />
+      )}
     </>
   );
 }

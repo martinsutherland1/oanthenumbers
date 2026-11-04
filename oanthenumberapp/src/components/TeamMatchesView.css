@@ -1,0 +1,59 @@
+/* Extends the fixture rows in FixturesView.css with a trailing W/D/L column */
+.team-match-row {
+  grid-template-columns: 140px 1fr auto 1fr 28px;
+}
+
+.team-match-row .fixture-score {
+  min-width: 70px;
+}
+
+.team-match-row .fixture-date {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.team-match-comp {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+}
+
+.team-match-self {
+  font-weight: 700;
+}
+
+.team-match-outcome {
+  justify-self: end;
+  width: 22px;
+  height: 22px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.team-match-outcome-W {
+  background: var(--positive);
+}
+
+.team-match-outcome-D {
+  background: var(--text-muted);
+}
+
+.team-match-outcome-L {
+  background: var(--negative);
+}
+
+@media (max-width: 600px) {
+  .team-match-row {
+    grid-template-columns: 1fr auto 1fr 24px;
+  }
+
+  .team-match-row .fixture-date {
+    flex-direction: row;
+    gap: 8px;
+  }
+}

@@ -285,6 +285,25 @@ input {
   margin: 0;
 }
 
+/* League / Teams switch, with the team picker beside it once a team is open */
+.mode-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 12px 0 4px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
 .sub-toolbar {
   display: flex;
   align-items: center;
