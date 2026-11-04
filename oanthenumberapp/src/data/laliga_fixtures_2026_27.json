@@ -2,60 +2,70 @@
   "fixtures_0": [
     {
       "date": "2026-08-15",
+      "time": "18:30",
       "team_home": "alaves",
       "team_away": "getafe",
       "round": 1
     },
     {
       "date": "2026-08-15",
+      "time": "20:30",
       "team_home": "sevilla",
       "team_away": "rayo-vallecano",
       "round": 1
     },
     {
       "date": "2026-08-16",
+      "time": "16:00",
       "team_home": "racing-santander",
       "team_away": "villarreal",
       "round": 1
     },
     {
       "date": "2026-08-16",
+      "time": "18:00",
       "team_home": "espanyol",
       "team_away": "levante",
       "round": 1
     },
     {
       "date": "2026-08-17",
+      "time": "20:00",
       "team_home": "deportivo-coruna",
       "team_away": "elche",
       "round": 1
     },
     {
       "date": "2026-08-19",
+      "time": "20:00",
       "team_home": "atletico-madrid",
       "team_away": "malaga",
       "round": 1
     },
     {
       "date": "2026-08-25",
+      "time": "20:00",
       "team_home": "valencia",
       "team_away": "real-betis",
       "round": 1
     },
     {
       "date": "2026-08-26",
+      "time": "20:00",
       "team_home": "real-madrid",
       "team_away": "real-sociedad",
       "round": 1
     },
     {
       "date": "2026-08-27",
+      "time": "19:30",
       "team_home": "celta-vigo",
       "team_away": "osasuna",
       "round": 1
     },
     {
       "date": "2026-08-27",
+      "time": "20:00",
       "team_home": "barcelona",
       "team_away": "athletic-club",
       "round": 1
@@ -64,60 +74,70 @@
   "fixtures_1": [
     {
       "date": "2026-08-20",
+      "time": "20:00",
       "team_home": "rayo-vallecano",
       "team_away": "alaves",
       "round": 2
     },
     {
       "date": "2026-08-21",
+      "time": "20:00",
       "team_home": "real-betis",
       "team_away": "real-sociedad",
       "round": 2
     },
     {
       "date": "2026-08-22",
+      "time": "16:00",
       "team_home": "athletic-club",
       "team_away": "sevilla",
       "round": 2
     },
     {
       "date": "2026-08-22",
+      "time": "18:30",
       "team_home": "valencia",
       "team_away": "celta-vigo",
       "round": 2
     },
     {
       "date": "2026-08-22",
+      "time": "20:30",
       "team_home": "espanyol",
       "team_away": "real-madrid",
       "round": 2
     },
     {
       "date": "2026-08-23",
+      "time": "16:00",
       "team_home": "atletico-madrid",
       "team_away": "villarreal",
       "round": 2
     },
     {
       "date": "2026-08-23",
+      "time": "18:30",
       "team_home": "getafe",
       "team_away": "racing-santander",
       "round": 2
     },
     {
       "date": "2026-08-23",
+      "time": "20:30",
       "team_home": "elche",
       "team_away": "barcelona",
       "round": 2
     },
     {
       "date": "2026-08-24",
+      "time": "18:30",
       "team_home": "osasuna",
       "team_away": "levante",
       "round": 2
     },
     {
       "date": "2026-08-24",
+      "time": "20:30",
       "team_home": "malaga",
       "team_away": "deportivo-coruna",
       "round": 2
@@ -126,60 +146,70 @@
   "fixtures_2": [
     {
       "date": "2026-08-28",
+      "time": "18:00",
       "team_home": "racing-santander",
       "team_away": "elche",
       "round": 3
     },
     {
       "date": "2026-08-28",
+      "time": "20:30",
       "team_home": "alaves",
       "team_away": "villarreal",
       "round": 3
     },
     {
       "date": "2026-08-29",
+      "time": "16:00",
       "team_home": "levante",
       "team_away": "real-betis",
       "round": 3
     },
     {
       "date": "2026-08-29",
+      "time": "18:00",
       "team_home": "real-sociedad",
       "team_away": "espanyol",
       "round": 3
     },
     {
       "date": "2026-08-29",
+      "time": "20:30",
       "team_home": "sevilla",
       "team_away": "atletico-madrid",
       "round": 3
     },
     {
       "date": "2026-08-30",
+      "time": "16:00",
       "team_home": "real-madrid",
       "team_away": "malaga",
       "round": 3
     },
     {
       "date": "2026-08-30",
+      "time": "18:30",
       "team_home": "deportivo-coruna",
       "team_away": "valencia",
       "round": 3
     },
     {
       "date": "2026-08-30",
+      "time": "20:30",
       "team_home": "celta-vigo",
       "team_away": "athletic-club",
       "round": 3
     },
     {
       "date": "2026-08-31",
+      "time": "18:30",
       "team_home": "osasuna",
       "team_away": "getafe",
       "round": 3
     },
     {
       "date": "2026-08-31",
+      "time": "20:30",
       "team_home": "barcelona",
       "team_away": "rayo-vallecano",
       "round": 3
@@ -188,60 +218,70 @@
   "fixtures_3": [
     {
       "date": "2026-09-04",
+      "time": "20:00",
       "team_home": "real-betis",
       "team_away": "real-madrid",
       "round": 4
     },
     {
       "date": "2026-09-05",
+      "time": "15:15",
       "team_home": "athletic-club",
       "team_away": "atletico-madrid",
       "round": 4
     },
     {
       "date": "2026-09-05",
+      "time": "17:30",
       "team_home": "rayo-vallecano",
       "team_away": "racing-santander",
       "round": 4
     },
     {
       "date": "2026-09-05",
+      "time": "20:00",
       "team_home": "villarreal",
       "team_away": "deportivo-coruna",
       "round": 4
     },
     {
       "date": "2026-09-06",
+      "time": "15:15",
       "team_home": "valencia",
       "team_away": "barcelona",
       "round": 4
     },
     {
       "date": "2026-09-06",
+      "time": "17:30",
       "team_home": "alaves",
       "team_away": "osasuna",
       "round": 4
     },
     {
       "date": "2026-09-06",
+      "time": "17:30",
       "team_home": "malaga",
       "team_away": "levante",
       "round": 4
     },
     {
       "date": "2026-09-06",
+      "time": "20:00",
       "team_home": "espanyol",
       "team_away": "sevilla",
       "round": 4
     },
     {
       "date": "2026-09-07",
+      "time": "18:00",
       "team_home": "getafe",
       "team_away": "celta-vigo",
       "round": 4
     },
     {
       "date": "2026-09-07",
+      "time": "20:30",
       "team_home": "elche",
       "team_away": "real-sociedad",
       "round": 4
@@ -250,60 +290,70 @@
   "fixtures_4": [
     {
       "date": "2026-09-11",
+      "time": "20:00",
       "team_home": "sevilla",
       "team_away": "valencia",
       "round": 5
     },
     {
       "date": "2026-09-12",
+      "time": "13:00",
       "team_home": "racing-santander",
       "team_away": "alaves",
       "round": 5
     },
     {
       "date": "2026-09-12",
+      "time": "15:15",
       "team_home": "osasuna",
       "team_away": "espanyol",
       "round": 5
     },
     {
       "date": "2026-09-12",
+      "time": "17:30",
       "team_home": "athletic-club",
       "team_away": "elche",
       "round": 5
     },
     {
       "date": "2026-09-12",
+      "time": "20:00",
       "team_home": "real-madrid",
       "team_away": "rayo-vallecano",
       "round": 5
     },
     {
       "date": "2026-09-13",
+      "time": "13:00",
       "team_home": "celta-vigo",
       "team_away": "malaga",
       "round": 5
     },
     {
       "date": "2026-09-13",
+      "time": "15:15",
       "team_home": "levante",
       "team_away": "barcelona",
       "round": 5
     },
     {
       "date": "2026-09-13",
+      "time": "17:30",
       "team_home": "getafe",
       "team_away": "deportivo-coruna",
       "round": 5
     },
     {
       "date": "2026-09-13",
+      "time": "20:00",
       "team_home": "real-sociedad",
       "team_away": "atletico-madrid",
       "round": 5
     },
     {
       "date": "2026-09-14",
+      "time": "20:00",
       "team_home": "villarreal",
       "team_away": "real-betis",
       "round": 5
@@ -312,60 +362,70 @@
   "fixtures_5": [
     {
       "date": "2026-09-03",
+      "time": "20:00",
       "team_home": "real-sociedad",
       "team_away": "celta-vigo",
       "round": 6
     },
     {
       "date": "2026-09-15",
+      "time": "18:00",
       "team_home": "rayo-vallecano",
       "team_away": "espanyol",
       "round": 6
     },
     {
       "date": "2026-09-15",
+      "time": "19:00",
       "team_home": "alaves",
       "team_away": "valencia",
       "round": 6
     },
     {
       "date": "2026-09-15",
+      "time": "20:30",
       "team_home": "elche",
       "team_away": "real-madrid",
       "round": 6
     },
     {
       "date": "2026-09-16",
+      "time": "18:00",
       "team_home": "deportivo-coruna",
       "team_away": "sevilla",
       "round": 6
     },
     {
       "date": "2026-09-16",
+      "time": "18:00",
       "team_home": "atletico-madrid",
       "team_away": "osasuna",
       "round": 6
     },
     {
       "date": "2026-09-16",
+      "time": "20:30",
       "team_home": "barcelona",
       "team_away": "racing-santander",
       "round": 6
     },
     {
       "date": "2026-09-17",
+      "time": "18:00",
       "team_home": "real-betis",
       "team_away": "getafe",
       "round": 6
     },
     {
       "date": "2026-09-17",
+      "time": "20:30",
       "team_home": "malaga",
       "team_away": "villarreal",
       "round": 6
     },
     {
       "date": "2026-10-21",
+      "time": "19:00",
       "team_home": "levante",
       "team_away": "athletic-club",
       "round": 6
@@ -374,60 +434,70 @@
   "fixtures_6": [
     {
       "date": "2026-09-18",
+      "time": "20:00",
       "team_home": "espanyol",
       "team_away": "elche",
       "round": 7
     },
     {
       "date": "2026-09-19",
+      "time": "13:00",
       "team_home": "osasuna",
       "team_away": "rayo-vallecano",
       "round": 7
     },
     {
       "date": "2026-09-19",
+      "time": "15:15",
       "team_home": "athletic-club",
       "team_away": "alaves",
       "round": 7
     },
     {
       "date": "2026-09-19",
+      "time": "17:30",
       "team_home": "celta-vigo",
       "team_away": "racing-santander",
       "round": 7
     },
     {
       "date": "2026-09-19",
+      "time": "20:00",
       "team_home": "sevilla",
       "team_away": "barcelona",
       "round": 7
     },
     {
       "date": "2026-09-20",
+      "time": "13:00",
       "team_home": "getafe",
       "team_away": "malaga",
       "round": 7
     },
     {
       "date": "2026-09-20",
+      "time": "15:15",
       "team_home": "atletico-madrid",
       "team_away": "real-madrid",
       "round": 7
     },
     {
       "date": "2026-09-20",
+      "time": "17:30",
       "team_home": "deportivo-coruna",
       "team_away": "real-betis",
       "round": 7
     },
     {
       "date": "2026-09-20",
+      "time": "17:30",
       "team_home": "villarreal",
       "team_away": "levante",
       "round": 7
     },
     {
       "date": "2026-09-20",
+      "time": "20:00",
       "team_home": "valencia",
       "team_away": "real-sociedad",
       "round": 7
@@ -436,60 +506,70 @@
   "fixtures_7": [
     {
       "date": "2026-10-09",
+      "time": "20:00",
       "team_home": "malaga",
       "team_away": "espanyol",
       "round": 8
     },
     {
-      "date": "2026-10-10",
+      "date": "2026-12-09",
+      "time": "19:00",
       "team_home": "rayo-vallecano",
       "team_away": "athletic-club",
       "round": 8
     },
     {
       "date": "2026-10-10",
+      "time": "15:15",
       "team_home": "alaves",
       "team_away": "atletico-madrid",
       "round": 8
     },
     {
       "date": "2026-10-10",
+      "time": "17:30",
       "team_home": "barcelona",
       "team_away": "getafe",
       "round": 8
     },
     {
       "date": "2026-10-10",
+      "time": "20:00",
       "team_home": "real-madrid",
       "team_away": "villarreal",
       "round": 8
     },
     {
       "date": "2026-10-11",
+      "time": "13:00",
       "team_home": "elche",
       "team_away": "celta-vigo",
       "round": 8
     },
     {
       "date": "2026-10-11",
+      "time": "15:15",
       "team_home": "real-sociedad",
       "team_away": "deportivo-coruna",
       "round": 8
     },
     {
       "date": "2026-10-11",
+      "time": "17:30",
       "team_home": "real-betis",
       "team_away": "osasuna",
       "round": 8
     },
     {
       "date": "2026-10-11",
+      "time": "20:00",
       "team_home": "racing-santander",
       "team_away": "valencia",
       "round": 8
     },
     {
       "date": "2026-10-12",
+      "time": "20:00",
       "team_home": "levante",
       "team_away": "sevilla",
       "round": 8
@@ -498,60 +578,70 @@
   "fixtures_8": [
     {
       "date": "2026-10-16",
+      "time": "20:00",
       "team_home": "deportivo-coruna",
       "team_away": "levante",
       "round": 9
     },
     {
       "date": "2026-10-17",
+      "time": "13:00",
       "team_home": "espanyol",
       "team_away": "atletico-madrid",
       "round": 9
     },
     {
       "date": "2026-10-17",
+      "time": "15:15",
       "team_home": "villarreal",
       "team_away": "elche",
       "round": 9
     },
     {
       "date": "2026-10-17",
+      "time": "17:30",
       "team_home": "real-betis",
       "team_away": "barcelona",
       "round": 9
     },
     {
       "date": "2026-10-17",
+      "time": "20:00",
       "team_home": "valencia",
       "team_away": "athletic-club",
       "round": 9
     },
     {
       "date": "2026-10-18",
+      "time": "13:00",
       "team_home": "osasuna",
       "team_away": "racing-santander",
       "round": 9
     },
     {
       "date": "2026-10-18",
+      "time": "15:15",
       "team_home": "celta-vigo",
       "team_away": "alaves",
       "round": 9
     },
     {
       "date": "2026-10-18",
+      "time": "17:30",
       "team_home": "malaga",
       "team_away": "real-sociedad",
       "round": 9
     },
     {
       "date": "2026-10-18",
+      "time": "20:00",
       "team_home": "real-madrid",
       "team_away": "sevilla",
       "round": 9
     },
     {
       "date": "2026-10-19",
+      "time": "20:00",
       "team_home": "getafe",
       "team_away": "rayo-vallecano",
       "round": 9
@@ -572,6 +662,7 @@
     },
     {
       "date": "2026-10-25",
+      "time": "13:00",
       "team_home": "athletic-club",
       "team_away": "getafe",
       "round": 10
@@ -590,6 +681,7 @@
     },
     {
       "date": "2026-10-25",
+      "time": "20:00",
       "team_home": "barcelona",
       "team_away": "real-madrid",
       "round": 10
@@ -602,12 +694,14 @@
     },
     {
       "date": "2026-10-25",
+      "time": "15:15",
       "team_home": "celta-vigo",
       "team_away": "real-betis",
       "round": 10
     },
     {
       "date": "2026-10-25",
+      "time": "17:30",
       "team_home": "real-sociedad",
       "team_away": "levante",
       "round": 10
@@ -634,12 +728,14 @@
     },
     {
       "date": "2026-11-01",
+      "time": "17:30",
       "team_home": "elche",
       "team_away": "valencia",
       "round": 11
     },
     {
       "date": "2026-11-01",
+      "time": "20:00",
       "team_home": "athletic-club",
       "team_away": "real-sociedad",
       "round": 11
@@ -664,12 +760,14 @@
     },
     {
       "date": "2026-11-01",
+      "time": "13:00",
       "team_home": "getafe",
       "team_away": "sevilla",
       "round": 11
     },
     {
       "date": "2026-11-01",
+      "time": "15:15",
       "team_home": "racing-santander",
       "team_away": "real-madrid",
       "round": 11
@@ -684,60 +782,70 @@
   "fixtures_11": [
     {
       "date": "2026-11-08",
+      "time": "13:00",
       "team_home": "elche",
       "team_away": "real-betis",
       "round": 12
     },
     {
-      "date": "2026-11-08",
+      "date": "2026-11-07",
+      "time": "17:30",
       "team_home": "osasuna",
       "team_away": "athletic-club",
       "round": 12
     },
     {
-      "date": "2026-11-08",
+      "date": "2026-11-06",
+      "time": "20:00",
       "team_home": "sevilla",
       "team_away": "alaves",
       "round": 12
     },
     {
-      "date": "2026-11-08",
+      "date": "2026-11-07",
+      "time": "20:00",
       "team_home": "valencia",
       "team_away": "real-madrid",
       "round": 12
     },
     {
       "date": "2026-11-08",
+      "time": "17:30",
       "team_home": "celta-vigo",
       "team_away": "levante",
       "round": 12
     },
     {
       "date": "2026-11-08",
+      "time": "15:15",
       "team_home": "real-sociedad",
       "team_away": "rayo-vallecano",
       "round": 12
     },
     {
-      "date": "2026-11-08",
+      "date": "2026-11-07",
+      "time": "13:00",
       "team_home": "malaga",
       "team_away": "racing-santander",
       "round": 12
     },
     {
-      "date": "2026-11-08",
+      "date": "2026-11-07",
+      "time": "15:15",
       "team_home": "espanyol",
       "team_away": "deportivo-coruna",
       "round": 12
     },
     {
       "date": "2026-11-08",
+      "time": "20:00",
       "team_home": "atletico-madrid",
       "team_away": "barcelona",
       "round": 12
     },
     {
       "date": "2026-11-08",
+      "time": "17:30",
       "team_home": "villarreal",
       "team_away": "getafe",
       "round": 12
@@ -745,61 +853,71 @@
   ],
   "fixtures_12": [
     {
-      "date": "2026-11-22",
+      "date": "2026-11-20",
+      "time": "20:00",
       "team_home": "athletic-club",
       "team_away": "espanyol",
       "round": 13
     },
     {
       "date": "2026-11-22",
+      "time": "13:00",
       "team_home": "barcelona",
       "team_away": "villarreal",
       "round": 13
     },
     {
       "date": "2026-11-22",
+      "time": "15:15",
       "team_home": "racing-santander",
       "team_away": "real-sociedad",
       "round": 13
     },
     {
-      "date": "2026-11-22",
+      "date": "2026-11-21",
+      "time": "15:15",
       "team_home": "rayo-vallecano",
       "team_away": "valencia",
       "round": 13
     },
     {
       "date": "2026-11-22",
+      "time": "17:30",
       "team_home": "osasuna",
       "team_away": "malaga",
       "round": 13
     },
     {
       "date": "2026-11-22",
+      "time": "20:00",
       "team_home": "getafe",
       "team_away": "atletico-madrid",
       "round": 13
     },
     {
-      "date": "2026-11-22",
+      "date": "2026-11-21",
+      "time": "20:00",
       "team_home": "real-madrid",
       "team_away": "celta-vigo",
       "round": 13
     },
     {
-      "date": "2026-11-22",
+      "date": "2026-11-21",
+      "time": "13:00",
       "team_home": "alaves",
       "team_away": "deportivo-coruna",
       "round": 13
     },
     {
-      "date": "2026-11-22",
+      "date": "2026-11-21",
+      "time": "17:30",
       "team_home": "sevilla",
       "team_away": "real-betis",
       "round": 13
     },
     {
-      "date": "2026-11-22",
+      "date": "2026-11-23",
+      "time": "20:00",
       "team_home": "levante",
       "team_away": "elche",
       "round": 13

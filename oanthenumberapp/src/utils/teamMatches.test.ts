@@ -1,4 +1,4 @@
-import { describe, expect, it } from 'vitest';
+import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import type { Fixture, ScheduledFixture } from '../types';
 import { getMatchOutcome, getTeamMatches, groupByCompetition, type CompetitionSource } from './teamMatches';
 
@@ -26,6 +26,13 @@ const europe: CompetitionSource = {
 };
 
 describe('team matches', () => {
+  // Fixed "today" before the sample season, so its fixtures count as upcoming
+  beforeEach(() => {
+    vi.useFakeTimers();
+    vi.setSystemTime(new Date(2026, 7, 1));
+  });
+  afterEach(() => vi.useRealTimers());
+
   it('collects a team’s results and fixtures across competitions', () => {
     const { played, upcoming } = getTeamMatches('a', [league, europe]);
     expect(played.map(m => [m.competition, m.date, m.round])).toEqual([
@@ -49,6 +56,24 @@ describe('team matches', () => {
     const { played, upcoming } = getTeamMatches('a', [flipped]);
     expect(played.map(m => m.round)).toEqual([2]);
     expect(upcoming.map(m => m.date)).toEqual(['2026-12-01']);
+  });
+
+  it('keeps a repeat meeting upcoming after the first one is played', () => {
+    const spfl: CompetitionSource = {
+      key: 'spfl',
+      label: 'SPFL Premiership',
+      fixtures: [result('2026-08-16', 'a', 'b', 1, 0)],
+      schedule: [scheduled('2026-08-16', 'a', 'b', 1), scheduled('2026-12-05', 'a', 'b', 20)],
+    };
+    const { played, upcoming } = getTeamMatches('a', [spfl]);
+    expect(played.map(m => m.round)).toEqual([1]);
+    expect(upcoming.map(m => m.round)).toEqual([20]);
+  });
+
+  it('leaves out fixtures dated before today even when their result is missing', () => {
+    vi.setSystemTime(new Date(2026, 7, 25));
+    const { upcoming } = getTeamMatches('a', [league, europe]);
+    expect(upcoming.map(m => m.date)).toEqual(['2026-08-28', '2026-08-30']);
   });
 
   it('splits fixtures by competition in the given order', () => {

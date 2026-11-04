@@ -101,6 +101,8 @@ interface LeagueConfig {
   showTips: boolean;
   // Whether the projected final table is offered for this competition
   showProjection: boolean;
+  // Caveat shown under the projected table
+  projectionNote?: string;
 }
 
 const LEAGUE_CONFIG: Record<League, LeagueConfig> = {
@@ -117,6 +119,7 @@ const LEAGUE_CONFIG: Record<League, LeagueConfig> = {
     projectionDividers: [1, 6, 10, 11],
     showTips: true,
     showProjection: true,
+    projectionNote: 'Projection runs to the split after 33 games; post-split fixtures are not included.',
   },
   epl: {
     label: 'Premier League',
@@ -253,6 +256,7 @@ const TEAM_MATCH_COMPETITIONS: CompetitionSource[] = (Object.keys(LEAGUE_CONFIG)
   label: LEAGUE_CONFIG[key].label,
   fixtures: LEAGUE_CONFIG[key].fixtures,
   schedule: LEAGUE_CONFIG[key].schedule,
+  lastSeasonFixtures: LEAGUE_CONFIG[key].lastSeasonFixtures,
 }));
 
 const NO_TIPS: LeagueTips = {
@@ -492,7 +496,7 @@ function App() {
                     className={`view-tab ${section === 'fixtures' ? 'active' : ''}`}
                     onClick={() => setSection('fixtures')}
                   >
-                    Fixtures
+                    Schedule
                   </button>
                   <button
                     className={`view-tab ${section === 'analysis' ? 'active' : ''}`}
@@ -648,7 +652,7 @@ function App() {
                   </div>
                 )}
                 {(!SHOW_PROJECTION_EXTRAS || projectionView === 'table') && (
-                  <ProjectionTable data={projectedStandings} dividerPositions={config.projectionDividers} onTeamClick={handleTeamClick} />
+                  <ProjectionTable data={projectedStandings} dividerPositions={config.projectionDividers} onTeamClick={handleTeamClick} note={config.projectionNote} />
                 )}
                 {SHOW_PROJECTION_EXTRAS && projectionView === 'next' && (
                   <NextFixtureProjection fixtures={fixtures} lastSeasonFixtures={lastSeasonFixtures} schedule={config.schedule} />
@@ -665,7 +669,7 @@ function App() {
             {section === 'stats' && statsTab === 'comparisons' && (
               <ComparisonsView fixtures={fixtures} teams={teams} />
             )}
-            {section === 'fixtures' && <FixturesView mode={fixturesTab} results={fixtures} schedule={config.schedule} tips={tips} />}
+            {section === 'fixtures' && <FixturesView mode={fixturesTab} results={fixtures} lastSeasonFixtures={lastSeasonFixtures} schedule={config.schedule} tips={tips} />}
             {section === 'analysis' && analysisTab === 'data' && <BettingView key={league} data={bettingStats} />}
             {section === 'analysis' && analysisTab === 'tips' && config.showTips && <TipsView tips={tips} />}
           </>

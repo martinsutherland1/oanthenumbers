@@ -28,6 +28,24 @@
   font-size: 0.9rem;
 }
 
+.fixture-row-clickable {
+  margin: 0 -6px;
+  padding-left: 6px;
+  padding-right: 6px;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background 0.15s ease;
+}
+
+.fixture-row-clickable:hover {
+  background: var(--surface-hover);
+}
+
+.fixture-row-clickable:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
 .fixture-row:first-of-type {
   border-top: none;
 }

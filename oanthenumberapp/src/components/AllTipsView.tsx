@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { TOP_TIPS, tipKey, type FixtureTip, type LeagueTips } from '../utils/bettingTips';
-import { parseDate } from '../utils/dataProcessing';
+import { formatMatchDate } from '../utils/dataProcessing';
 import { getTeamName } from '../utils/teamColors';
 import { TipHistoryView } from './TipHistoryView';
 import './LeagueTable.css';
@@ -20,7 +20,7 @@ interface AllTipsViewProps {
 }
 
 const formatDate = (date: string) =>
-  parseDate(date).toLocaleDateString('en-GB', { weekday: 'short', day: 'numeric', month: 'short' });
+  formatMatchDate(date, { weekday: 'short', day: 'numeric', month: 'short' });
 
 function TipItem({ tip, rank, league }: { tip: FixtureTip; rank: number; league?: string }) {
   return (

@@ -2,51 +2,61 @@
   "fixtures_0": [
     {
       "date": "2026-08-22",
+      "time": "17:30",
       "team_home": "udinese",
       "team_away": "como"
     },
     {
       "date": "2026-08-22",
+      "time": "17:30",
       "team_home": "inter",
       "team_away": "monza"
     },
     {
       "date": "2026-08-22",
+      "time": "19:45",
       "team_home": "genoa",
       "team_away": "napoli"
     },
     {
       "date": "2026-08-22",
+      "time": "19:45",
       "team_home": "parma",
       "team_away": "cagliari"
     },
     {
       "date": "2026-08-23",
+      "time": "17:30",
       "team_home": "frosinone",
       "team_away": "juventus"
     },
     {
       "date": "2026-08-23",
+      "time": "17:30",
       "team_home": "venezia",
       "team_away": "lecce"
     },
     {
       "date": "2026-08-23",
+      "time": "19:45",
       "team_home": "atalanta",
       "team_away": "sassuolo"
     },
     {
       "date": "2026-08-23",
+      "time": "19:45",
       "team_home": "torino",
       "team_away": "milan"
     },
     {
       "date": "2026-08-24",
+      "time": "17:30",
       "team_home": "bologna",
       "team_away": "lazio"
     },
     {
       "date": "2026-08-24",
+      "time": "19:45",
       "team_home": "roma",
       "team_away": "fiorentina"
     }
@@ -54,51 +64,61 @@
   "fixtures_1": [
     {
       "date": "2026-08-28",
+      "time": "19:45",
       "team_home": "milan",
       "team_away": "venezia"
     },
     {
       "date": "2026-08-29",
+      "time": "17:30",
       "team_home": "sassuolo",
       "team_away": "torino"
     },
     {
       "date": "2026-08-29",
+      "time": "17:30",
       "team_home": "monza",
       "team_away": "udinese"
     },
     {
       "date": "2026-08-29",
+      "time": "17:30",
       "team_home": "fiorentina",
       "team_away": "frosinone"
     },
     {
       "date": "2026-08-29",
+      "time": "19:45",
       "team_home": "juventus",
       "team_away": "parma"
     },
     {
       "date": "2026-08-30",
+      "time": "17:30",
       "team_home": "napoli",
       "team_away": "como"
     },
     {
       "date": "2026-08-30",
+      "time": "19:45",
       "team_home": "lazio",
       "team_away": "genoa"
     },
     {
       "date": "2026-08-30",
+      "time": "19:45",
       "team_home": "cagliari",
       "team_away": "inter"
     },
     {
       "date": "2026-08-31",
+      "time": "17:30",
       "team_home": "lecce",
       "team_away": "roma"
     },
     {
       "date": "2026-08-31",
+      "time": "19:45",
       "team_home": "atalanta",
       "team_away": "bologna"
     }
@@ -106,51 +126,61 @@
   "fixtures_2": [
     {
       "date": "2026-09-04",
+      "time": "19:45",
       "team_home": "genoa",
       "team_away": "como"
     },
     {
       "date": "2026-09-05",
+      "time": "14:00",
       "team_home": "fiorentina",
       "team_away": "torino"
     },
     {
       "date": "2026-09-05",
+      "time": "17:00",
       "team_home": "inter",
       "team_away": "napoli"
     },
     {
       "date": "2026-09-05",
+      "time": "19:45",
       "team_home": "roma",
       "team_away": "atalanta"
     },
     {
       "date": "2026-09-06",
+      "time": "14:00",
       "team_home": "parma",
       "team_away": "monza"
     },
     {
       "date": "2026-09-06",
+      "time": "14:00",
       "team_home": "frosinone",
       "team_away": "venezia"
     },
     {
       "date": "2026-09-06",
+      "time": "17:00",
       "team_home": "bologna",
       "team_away": "sassuolo"
     },
     {
       "date": "2026-09-06",
+      "time": "19:45",
       "team_home": "juventus",
       "team_away": "milan"
     },
     {
       "date": "2026-09-07",
+      "time": "17:30",
       "team_home": "cagliari",
       "team_away": "lecce"
     },
     {
       "date": "2026-09-07",
+      "time": "19:45",
       "team_home": "udinese",
       "team_away": "lazio"
     }
@@ -158,51 +188,61 @@
   "fixtures_3": [
     {
       "date": "2026-09-11",
+      "time": "19:45",
       "team_home": "venezia",
       "team_away": "fiorentina"
     },
     {
       "date": "2026-09-12",
+      "time": "14:00",
       "team_home": "genoa",
       "team_away": "frosinone"
     },
     {
       "date": "2026-09-12",
+      "time": "17:00",
       "team_home": "lazio",
       "team_away": "milan"
     },
     {
       "date": "2026-09-12",
+      "time": "19:45",
       "team_home": "atalanta",
       "team_away": "cagliari"
     },
     {
       "date": "2026-09-13",
+      "time": "14:00",
       "team_home": "lecce",
       "team_away": "monza"
     },
     {
       "date": "2026-09-13",
+      "time": "17:00",
       "team_home": "napoli",
       "team_away": "bologna"
     },
     {
       "date": "2026-09-13",
+      "time": "19:45",
       "team_home": "sassuolo",
       "team_away": "juventus"
     },
     {
       "date": "2026-09-14",
+      "time": "17:30",
       "team_home": "como",
       "team_away": "parma"
     },
     {
       "date": "2026-09-14",
+      "time": "17:30",
       "team_home": "torino",
       "team_away": "roma"
     },
     {
       "date": "2026-09-14",
+      "time": "19:45",
       "team_home": "inter",
       "team_away": "udinese"
     }
@@ -210,51 +250,61 @@
   "fixtures_4": [
     {
       "date": "2026-09-18",
+      "time": "19:45",
       "team_home": "monza",
       "team_away": "sassuolo"
     },
     {
       "date": "2026-09-19",
+      "time": "14:00",
       "team_home": "bologna",
       "team_away": "torino"
     },
     {
       "date": "2026-09-19",
+      "time": "14:00",
       "team_home": "udinese",
       "team_away": "cagliari"
     },
     {
       "date": "2026-09-19",
+      "time": "17:00",
       "team_home": "roma",
       "team_away": "inter"
     },
     {
       "date": "2026-09-19",
+      "time": "19:45",
       "team_home": "venezia",
       "team_away": "lazio"
     },
     {
       "date": "2026-09-20",
+      "time": "11:30",
       "team_home": "fiorentina",
       "team_away": "napoli"
     },
     {
       "date": "2026-09-20",
+      "time": "14:00",
       "team_home": "frosinone",
       "team_away": "como"
     },
     {
       "date": "2026-09-20",
+      "time": "14:00",
       "team_home": "parma",
       "team_away": "genoa"
     },
     {
       "date": "2026-09-20",
+      "time": "17:00",
       "team_home": "juventus",
       "team_away": "atalanta"
     },
     {
       "date": "2026-09-20",
+      "time": "19:45",
       "team_home": "milan",
       "team_away": "lecce"
     }
@@ -262,51 +312,61 @@
   "fixtures_5": [
     {
       "date": "2026-10-10",
+      "time": "14:00",
       "team_home": "genoa",
       "team_away": "fiorentina"
     },
     {
       "date": "2026-10-10",
+      "time": "17:00",
       "team_home": "inter",
       "team_away": "parma"
     },
     {
       "date": "2026-10-10",
+      "time": "19:45",
       "team_home": "napoli",
       "team_away": "frosinone"
     },
     {
       "date": "2026-10-11",
+      "time": "11:30",
       "team_home": "como",
       "team_away": "roma"
     },
     {
       "date": "2026-10-11",
+      "time": "14:00",
       "team_home": "lecce",
       "team_away": "bologna"
     },
     {
       "date": "2026-10-11",
+      "time": "14:00",
       "team_home": "lazio",
       "team_away": "monza"
     },
     {
       "date": "2026-10-11",
+      "time": "17:00",
       "team_home": "sassuolo",
       "team_away": "milan"
     },
     {
       "date": "2026-10-11",
+      "time": "19:45",
       "team_home": "cagliari",
       "team_away": "juventus"
     },
     {
       "date": "2026-10-12",
+      "time": "17:30",
       "team_home": "atalanta",
       "team_away": "venezia"
     },
     {
       "date": "2026-10-12",
+      "time": "19:45",
       "team_home": "torino",
       "team_away": "udinese"
     }
@@ -314,51 +374,61 @@
   "fixtures_6": [
     {
       "date": "2026-10-16",
+      "time": "19:45",
       "team_home": "frosinone",
       "team_away": "sassuolo"
     },
     {
       "date": "2026-10-17",
+      "time": "14:00",
       "team_home": "venezia",
       "team_away": "napoli"
     },
     {
       "date": "2026-10-17",
+      "time": "17:00",
       "team_home": "bologna",
       "team_away": "inter"
     },
     {
       "date": "2026-10-17",
+      "time": "19:45",
       "team_home": "roma",
       "team_away": "genoa"
     },
     {
       "date": "2026-10-18",
+      "time": "11:30",
       "team_home": "udinese",
       "team_away": "lecce"
     },
     {
       "date": "2026-10-18",
+      "time": "14:00",
       "team_home": "fiorentina",
       "team_away": "como"
     },
     {
       "date": "2026-10-18",
+      "time": "17:00",
       "team_home": "milan",
       "team_away": "atalanta"
     },
     {
       "date": "2026-10-18",
+      "time": "19:45",
       "team_home": "juventus",
       "team_away": "lazio"
     },
     {
       "date": "2026-10-19",
+      "time": "17:30",
       "team_home": "monza",
       "team_away": "cagliari"
     },
     {
       "date": "2026-10-19",
+      "time": "19:45",
       "team_home": "parma",
       "team_away": "torino"
     }
@@ -366,51 +436,61 @@
   "fixtures_7": [
     {
       "date": "2026-10-23",
+      "time": "19:45",
       "team_home": "torino",
       "team_away": "monza"
     },
     {
       "date": "2026-10-24",
+      "time": "14:00",
       "team_home": "cagliari",
       "team_away": "bologna"
     },
     {
       "date": "2026-10-24",
+      "time": "14:00",
       "team_home": "como",
       "team_away": "sassuolo"
     },
     {
       "date": "2026-10-24",
+      "time": "17:00",
       "team_home": "napoli",
       "team_away": "roma"
     },
     {
       "date": "2026-10-24",
+      "time": "19:45",
       "team_home": "lazio",
       "team_away": "parma"
     },
     {
       "date": "2026-10-25",
+      "time": "11:30",
       "team_home": "inter",
       "team_away": "fiorentina"
     },
     {
       "date": "2026-10-25",
+      "time": "14:00",
       "team_home": "atalanta",
       "team_away": "frosinone"
     },
     {
       "date": "2026-10-25",
+      "time": "14:00",
       "team_home": "genoa",
       "team_away": "venezia"
     },
     {
       "date": "2026-10-25",
+      "time": "17:00",
       "team_home": "lecce",
       "team_away": "juventus"
     },
     {
       "date": "2026-10-25",
+      "time": "19:45",
       "team_home": "udinese",
       "team_away": "milan"
     }
@@ -418,51 +498,61 @@
   "fixtures_8": [
     {
       "date": "2026-10-27",
+      "time": "17:30",
       "team_home": "sassuolo",
       "team_away": "lazio"
     },
     {
       "date": "2026-10-27",
+      "time": "19:45",
       "team_home": "roma",
       "team_away": "cagliari"
     },
     {
       "date": "2026-10-27",
+      "time": "19:45",
       "team_home": "torino",
       "team_away": "como"
     },
     {
       "date": "2026-10-28",
+      "time": "17:30",
       "team_home": "milan",
       "team_away": "bologna"
     },
     {
       "date": "2026-10-28",
+      "time": "17:30",
       "team_home": "venezia",
       "team_away": "inter"
     },
     {
       "date": "2026-10-28",
+      "time": "17:30",
       "team_home": "parma",
       "team_away": "udinese"
     },
     {
       "date": "2026-10-28",
+      "time": "19:45",
       "team_home": "genoa",
       "team_away": "juventus"
     },
     {
       "date": "2026-10-28",
+      "time": "19:45",
       "team_home": "monza",
       "team_away": "napoli"
     },
     {
       "date": "2026-10-29",
+      "time": "17:30",
       "team_home": "frosinone",
       "team_away": "lecce"
     },
     {
       "date": "2026-10-29",
+      "time": "19:45",
       "team_home": "fiorentina",
       "team_away": "atalanta"
     }
@@ -470,51 +560,61 @@
   "fixtures_9": [
     {
       "date": "2026-10-31",
+      "time": "14:00",
       "team_home": "bologna",
       "team_away": "monza"
     },
     {
       "date": "2026-10-31",
+      "time": "17:00",
       "team_home": "udinese",
       "team_away": "roma"
     },
     {
       "date": "2026-10-31",
+      "time": "19:45",
       "team_home": "milan",
       "team_away": "inter"
     },
     {
       "date": "2026-11-01",
+      "time": "11:30",
       "team_home": "como",
       "team_away": "venezia"
     },
     {
       "date": "2026-11-01",
+      "time": "14:00",
       "team_home": "frosinone",
       "team_away": "torino"
     },
     {
       "date": "2026-11-01",
+      "time": "14:00",
       "team_home": "lazio",
       "team_away": "cagliari"
     },
     {
       "date": "2026-11-01",
+      "time": "17:00",
       "team_home": "lecce",
       "team_away": "genoa"
     },
     {
       "date": "2026-11-01",
+      "time": "19:45",
       "team_home": "juventus",
       "team_away": "napoli"
     },
     {
       "date": "2026-11-02",
+      "time": "17:30",
       "team_home": "sassuolo",
       "team_away": "fiorentina"
     },
     {
       "date": "2026-11-02",
+      "time": "19:45",
       "team_home": "atalanta",
       "team_away": "parma"
     }
@@ -522,51 +622,61 @@
   "fixtures_10": [
     {
       "date": "2026-11-06",
+      "time": "19:45",
       "team_home": "venezia",
       "team_away": "udinese"
     },
     {
       "date": "2026-11-07",
+      "time": "14:00",
       "team_home": "torino",
       "team_away": "lecce"
     },
     {
       "date": "2026-11-07",
+      "time": "14:00",
       "team_home": "cagliari",
       "team_away": "frosinone"
     },
     {
       "date": "2026-11-07",
+      "time": "17:00",
       "team_home": "parma",
       "team_away": "bologna"
     },
     {
       "date": "2026-11-07",
+      "time": "19:45",
       "team_home": "roma",
       "team_away": "sassuolo"
     },
     {
       "date": "2026-11-08",
+      "time": "11:30",
       "team_home": "napoli",
       "team_away": "lazio"
     },
     {
       "date": "2026-11-08",
+      "time": "14:00",
       "team_home": "genoa",
       "team_away": "milan"
     },
     {
       "date": "2026-11-08",
+      "time": "14:00",
       "team_home": "monza",
       "team_away": "atalanta"
     },
     {
       "date": "2026-11-08",
+      "time": "17:00",
       "team_home": "inter",
       "team_away": "como"
     },
     {
       "date": "2026-11-08",
+      "time": "19:45",
       "team_home": "fiorentina",
       "team_away": "juventus"
     }
@@ -574,51 +684,61 @@
   "fixtures_11": [
     {
       "date": "2026-11-21",
+      "time": "14:00",
       "team_home": "como",
       "team_away": "cagliari"
     },
     {
       "date": "2026-11-21",
+      "time": "14:00",
       "team_home": "lazio",
       "team_away": "lecce"
     },
     {
       "date": "2026-11-21",
+      "time": "17:00",
       "team_home": "parma",
       "team_away": "roma"
     },
     {
       "date": "2026-11-21",
+      "time": "19:45",
       "team_home": "napoli",
       "team_away": "torino"
     },
     {
       "date": "2026-11-22",
+      "time": "14:00",
       "team_home": "sassuolo",
       "team_away": "genoa"
     },
     {
       "date": "2026-11-22",
+      "time": "17:00",
       "team_home": "milan",
       "team_away": "frosinone"
     },
     {
       "date": "2026-11-22",
+      "time": "14:00",
       "team_home": "bologna",
       "team_away": "udinese"
     },
     {
       "date": "2026-11-22",
+      "time": "19:45",
       "team_home": "atalanta",
       "team_away": "inter"
     },
     {
       "date": "2026-11-23",
+      "time": "19:45",
       "team_home": "monza",
       "team_away": "fiorentina"
     },
     {
-      "date": "2026-11-23",
+      "date": "2026-11-22",
+      "time": "11:30",
       "team_home": "juventus",
       "team_away": "venezia"
     }
@@ -626,51 +746,61 @@
   "fixtures_12": [
     {
       "date": "2026-11-29",
+      "time": "14:00",
       "team_home": "sassuolo",
       "team_away": "napoli"
     },
     {
-      "date": "2026-11-29",
+      "date": "2026-11-30",
+      "time": "19:45",
       "team_home": "cagliari",
       "team_away": "milan"
     },
     {
       "date": "2026-11-29",
+      "time": "19:45",
       "team_home": "como",
       "team_away": "juventus"
     },
     {
       "date": "2026-11-29",
+      "time": "17:00",
       "team_home": "roma",
       "team_away": "monza"
     },
     {
-      "date": "2026-11-29",
+      "date": "2026-11-28",
+      "time": "14:00",
       "team_home": "frosinone",
       "team_away": "parma"
     },
     {
-      "date": "2026-11-29",
+      "date": "2026-11-28",
+      "time": "17:00",
       "team_home": "torino",
       "team_away": "lazio"
     },
     {
-      "date": "2026-11-29",
+      "date": "2026-11-27",
+      "time": "19:45",
       "team_home": "venezia",
       "team_away": "bologna"
     },
     {
-      "date": "2026-11-29",
+      "date": "2026-11-30",
+      "time": "17:30",
       "team_home": "lecce",
       "team_away": "atalanta"
     },
     {
       "date": "2026-11-29",
+      "time": "11:30",
       "team_home": "udinese",
       "team_away": "fiorentina"
     },
     {
-      "date": "2026-11-29",
+      "date": "2026-11-28",
+      "time": "19:45",
       "team_home": "inter",
       "team_away": "genoa"
     }
@@ -678,51 +808,61 @@
   "fixtures_13": [
     {
       "date": "2026-12-06",
+      "time": "11:30",
       "team_home": "genoa",
       "team_away": "torino"
     },
     {
       "date": "2026-12-06",
+      "time": "17:00",
       "team_home": "juventus",
       "team_away": "udinese"
     },
     {
-      "date": "2026-12-06",
+      "date": "2026-12-05",
+      "time": "17:00",
       "team_home": "frosinone",
       "team_away": "inter"
     },
     {
-      "date": "2026-12-06",
+      "date": "2026-12-04",
+      "time": "19:45",
       "team_home": "bologna",
       "team_away": "roma"
     },
     {
-      "date": "2026-12-06",
+      "date": "2026-12-07",
+      "time": "19:45",
       "team_home": "fiorentina",
       "team_away": "cagliari"
     },
     {
       "date": "2026-12-06",
+      "time": "14:00",
       "team_home": "lazio",
       "team_away": "atalanta"
     },
     {
       "date": "2026-12-06",
+      "time": "19:45",
       "team_home": "milan",
       "team_away": "parma"
     },
     {
-      "date": "2026-12-06",
+      "date": "2026-12-07",
+      "time": "17:30",
       "team_home": "venezia",
       "team_away": "sassuolo"
     },
     {
-      "date": "2026-12-06",
+      "date": "2026-12-05",
+      "time": "14:00",
       "team_home": "monza",
       "team_away": "como"
     },
     {
-      "date": "2026-12-06",
+      "date": "2026-12-05",
+      "time": "19:45",
       "team_home": "napoli",
       "team_away": "lecce"
     }
@@ -730,103 +870,123 @@
   "fixtures_14": [
     {
       "date": "2026-12-13",
+      "time": "19:45",
       "team_home": "napoli",
       "team_away": "milan"
     },
     {
-      "date": "2026-12-13",
+      "date": "2026-12-12",
+      "time": "19:45",
       "team_home": "como",
       "team_away": "bologna"
     },
     {
-      "date": "2026-12-13",
+      "date": "2026-12-11",
+      "time": "19:45",
       "team_home": "udinese",
       "team_away": "frosinone"
     },
     {
-      "date": "2026-12-13",
+      "date": "2026-12-12",
+      "time": "17:00",
       "team_home": "lecce",
       "team_away": "sassuolo"
     },
     {
       "date": "2026-12-13",
+      "time": "17:00",
       "team_home": "parma",
       "team_away": "fiorentina"
     },
     {
-      "date": "2026-12-13",
+      "date": "2026-12-12",
+      "time": "14:00",
       "team_home": "cagliari",
       "team_away": "venezia"
     },
     {
       "date": "2026-12-13",
+      "time": "14:00",
       "team_home": "inter",
       "team_away": "torino"
     },
     {
-      "date": "2026-12-13",
+      "date": "2026-12-14",
+      "time": "19:45",
       "team_home": "juventus",
       "team_away": "monza"
     },
     {
-      "date": "2026-12-13",
+      "date": "2026-12-14",
+      "time": "17:30",
       "team_home": "atalanta",
       "team_away": "genoa"
     },
     {
       "date": "2026-12-13",
+      "time": "11:30",
       "team_home": "lazio",
       "team_away": "roma"
     }
   ],
   "fixtures_15": [
     {
-      "date": "2026-12-20",
+      "date": "2026-12-19",
+      "time": "17:00",
       "team_home": "milan",
       "team_away": "como"
     },
     {
-      "date": "2026-12-20",
+      "date": "2026-12-19",
+      "time": "14:00",
       "team_home": "sassuolo",
       "team_away": "parma"
     },
     {
-      "date": "2026-12-20",
+      "date": "2026-12-19",
+      "time": "19:45",
       "team_home": "roma",
       "team_away": "juventus"
     },
     {
-      "date": "2026-12-20",
+      "date": "2026-12-18",
+      "time": "17:30",
       "team_home": "frosinone",
       "team_away": "lazio"
     },
     {
       "date": "2026-12-20",
+      "time": "19:45",
       "team_home": "atalanta",
       "team_away": "napoli"
     },
     {
       "date": "2026-12-20",
+      "time": "11:30",
       "team_home": "fiorentina",
       "team_away": "bologna"
     },
     {
       "date": "2026-12-20",
+      "time": "17:00",
       "team_home": "genoa",
       "team_away": "udinese"
     },
     {
-      "date": "2026-12-20",
+      "date": "2026-12-18",
+      "time": "19:45",
       "team_home": "lecce",
       "team_away": "inter"
     },
     {
       "date": "2026-12-20",
+      "time": "14:00",
       "team_home": "torino",
       "team_away": "cagliari"
     },
     {
       "date": "2026-12-20",
+      "time": "14:00",
       "team_home": "venezia",
       "team_away": "monza"
     }
@@ -834,51 +994,61 @@
   "fixtures_16": [
     {
       "date": "2027-01-03",
+      "time": "14:00",
       "team_home": "udinese",
       "team_away": "atalanta"
     },
     {
       "date": "2027-01-03",
+      "time": "14:00",
       "team_home": "como",
       "team_away": "lecce"
     },
     {
-      "date": "2027-01-03",
+      "date": "2027-01-02",
+      "time": "17:00",
       "team_home": "roma",
       "team_away": "frosinone"
     },
     {
       "date": "2027-01-03",
+      "time": "17:00",
       "team_home": "parma",
       "team_away": "napoli"
     },
     {
-      "date": "2027-01-03",
+      "date": "2027-01-02",
+      "time": "11:30",
       "team_home": "cagliari",
       "team_away": "genoa"
     },
     {
-      "date": "2027-01-03",
+      "date": "2027-01-02",
+      "time": "14:00",
       "team_home": "torino",
       "team_away": "venezia"
     },
     {
-      "date": "2027-01-03",
+      "date": "2027-01-02",
+      "time": "19:45",
       "team_home": "monza",
       "team_away": "milan"
     },
     {
       "date": "2027-01-03",
+      "time": "11:30",
       "team_home": "inter",
       "team_away": "sassuolo"
     },
     {
       "date": "2027-01-03",
+      "time": "19:45",
       "team_home": "bologna",
       "team_away": "juventus"
     },
     {
-      "date": "2027-01-03",
+      "date": "2027-01-02",
+      "time": "14:00",
       "team_home": "fiorentina",
       "team_away": "lazio"
     }
@@ -886,51 +1056,61 @@
   "fixtures_17": [
     {
       "date": "2027-01-06",
+      "time": "14:00",
       "team_home": "frosinone",
       "team_away": "bologna"
     },
     {
-      "date": "2027-01-06",
+      "date": "2027-01-07",
+      "time": "17:30",
       "team_home": "sassuolo",
       "team_away": "udinese"
     },
     {
-      "date": "2027-01-06",
+      "date": "2027-01-05",
+      "time": "17:30",
       "team_home": "genoa",
       "team_away": "monza"
     },
     {
-      "date": "2027-01-06",
+      "date": "2027-01-05",
+      "time": "17:30",
       "team_home": "venezia",
       "team_away": "roma"
     },
     {
-      "date": "2027-01-06",
+      "date": "2027-01-07",
+      "time": "19:45",
       "team_home": "napoli",
       "team_away": "cagliari"
     },
     {
-      "date": "2027-01-06",
+      "date": "2027-01-05",
+      "time": "19:45",
       "team_home": "milan",
       "team_away": "fiorentina"
     },
     {
       "date": "2027-01-06",
+      "time": "11:30",
       "team_home": "juventus",
       "team_away": "torino"
     },
     {
       "date": "2027-01-06",
+      "time": "17:00",
       "team_home": "atalanta",
       "team_away": "como"
     },
     {
       "date": "2027-01-06",
+      "time": "19:45",
       "team_home": "lazio",
       "team_away": "inter"
     },
     {
       "date": "2027-01-06",
+      "time": "14:00",
       "team_home": "lecce",
       "team_away": "parma"
     }
@@ -938,51 +1118,61 @@
   "fixtures_18": [
     {
       "date": "2027-01-10",
+      "time": "14:00",
       "team_home": "fiorentina",
       "team_away": "lecce"
     },
     {
-      "date": "2027-01-10",
+      "date": "2027-01-11",
+      "time": "19:45",
       "team_home": "udinese",
       "team_away": "napoli"
     },
     {
       "date": "2027-01-10",
+      "time": "17:00",
       "team_home": "torino",
       "team_away": "atalanta"
     },
     {
-      "date": "2027-01-10",
+      "date": "2027-01-09",
+      "time": "14:00",
       "team_home": "monza",
       "team_away": "frosinone"
     },
     {
       "date": "2027-01-10",
+      "time": "19:45",
       "team_home": "inter",
       "team_away": "juventus"
     },
     {
       "date": "2027-01-10",
+      "time": "14:00",
       "team_home": "parma",
       "team_away": "venezia"
     },
     {
-      "date": "2027-01-10",
+      "date": "2027-01-09",
+      "time": "19:45",
       "team_home": "bologna",
       "team_away": "genoa"
     },
     {
-      "date": "2027-01-10",
+      "date": "2027-01-11",
+      "time": "17:30",
       "team_home": "cagliari",
       "team_away": "sassuolo"
     },
     {
       "date": "2027-01-10",
+      "time": "11:30",
       "team_home": "como",
       "team_away": "lazio"
     },
     {
-      "date": "2027-01-10",
+      "date": "2027-01-09",
+      "time": "17:00",
       "team_home": "roma",
       "team_away": "milan"
     }

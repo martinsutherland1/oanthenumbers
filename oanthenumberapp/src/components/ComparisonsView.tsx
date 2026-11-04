@@ -16,20 +16,24 @@ interface ComparisonsViewProps {
 }
 
 const ROLLING_GAMES = 10;
+// Larger than any league season, so the window never drops games (season-to-date average)
+const SEASON_GAMES = 100;
 
 export function ComparisonsView({ fixtures, teams }: ComparisonsViewProps) {
   const [selectedTeams, setSelectedTeams] = useState<string[]>([]);
   const [metricType, setMetricType] = useState<MetricType>('xg');
   const [xgType, setXgType] = useState<XgType>('npxg');
+  const [averageMode, setAverageMode] = useState<'rolling' | 'season'>('rolling');
+  const avgWindow = averageMode === 'rolling' ? ROLLING_GAMES : SEASON_GAMES;
 
   const leagueAverage = useMemo(
-    () => calculateLeagueAverage(fixtures, ROLLING_GAMES, metricType, xgType),
-    [fixtures, metricType, xgType]
+    () => calculateLeagueAverage(fixtures, avgWindow, metricType, xgType),
+    [fixtures, avgWindow, metricType, xgType]
   );
 
   const chartData = useMemo(
-    () => selectedTeams.length >= 2 ? getLineChartData(fixtures, selectedTeams, ROLLING_GAMES, metricType, xgType) : [],
-    [fixtures, selectedTeams, metricType, xgType]
+    () => selectedTeams.length >= 2 ? getLineChartData(fixtures, selectedTeams, avgWindow, metricType, xgType) : [],
+    [fixtures, selectedTeams, avgWindow, metricType, xgType]
   );
 
   const [view, setView] = useState<'line' | 'radar' | 'quadrant'>('line');
@@ -70,6 +74,14 @@ export function ComparisonsView({ fixtures, teams }: ComparisonsViewProps) {
           onChange={setView}
         />
         {view === 'line' && <MetricToggle metricType={metricType} onToggle={setMetricType} />}
+        {view === 'line' && (
+          <ViewToggle
+            ariaLabel="Chart averaging window"
+            options={[{ key: 'rolling', label: `Rolling ${ROLLING_GAMES}` }, { key: 'season', label: 'Season' }]}
+            value={averageMode}
+            onChange={setAverageMode}
+          />
+        )}
         {view === 'radar' && (
           <ViewToggle
             ariaLabel="Radar period"
@@ -101,6 +113,7 @@ export function ComparisonsView({ fixtures, teams }: ComparisonsViewProps) {
           metricType={metricType}
           xgType={xgType}
           onXgTypeChange={setXgType}
+          windowLabel={averageMode === 'rolling' ? `Rolling ${ROLLING_GAMES}` : 'Season'}
         />
       )}
     </div>

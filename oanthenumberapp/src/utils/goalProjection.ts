@@ -1,5 +1,5 @@
 import type { Fixture, ScheduledFixture } from '../types';
-import { extractTeams, parseDate } from './dataProcessing';
+import { dateSortValue, extractTeams, parseDate } from './dataProcessing';
 
 // ---------------------------------------------------------------------------------------
 // Per-fixture goal projection (multiplicative attack/defence model).
@@ -280,7 +280,7 @@ export function getNextRoundProjections(
   const latestPlayed = Math.max(0, ...currentSeason.map(f => parseDate(f.date).getTime()));
   const unplayed = schedule
     .filter(s => !played.has(pairKey(s.home_team, s.away_team)))
-    .sort((a, b) => parseDate(a.date).getTime() - parseDate(b.date).getTime() || (a.time ?? '').localeCompare(b.time ?? ''));
+    .sort((a, b) => dateSortValue(a.date) - dateSortValue(b.date) || (a.time ?? '').localeCompare(b.time ?? ''));
   const next = unplayed.find(s => parseDate(s.date).getTime() >= latestPlayed) ?? unplayed[0];
   if (!next) return [];
   return unplayed

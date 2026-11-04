@@ -1,5 +1,5 @@
 import type { Fixture, ScheduledFixture } from '../types';
-import { parseDate } from './dataProcessing';
+import { dateSortValue, isPastDate } from './dataProcessing';
 
 // One competition's data, as searched for a team's matches. Teams are linked across
 // competitions by slug, which domestic and European data share (see TEAM_ALIASES for exceptions).
@@ -8,6 +8,8 @@ export interface CompetitionSource {
   label: string;
   fixtures: Fixture[];
   schedule: ScheduledFixture[];
+  // Used for last season's meetings in the match detail popup
+  lastSeasonFixtures?: Fixture[];
 }
 
 export interface TeamMatch {
@@ -30,11 +32,43 @@ export interface TeamCompetitionFixtures {
 
 const pairKey = (home: string, away: string) => `${home}|${away}`;
 
-const byDate = (a: TeamMatch, b: TeamMatch) =>
-  parseDate(a.date).getTime() - parseDate(b.date).getTime() || (a.time ?? '').localeCompare(b.time ?? '');
+const byDate = (a: { date: string; time?: string }, b: { date: string; time?: string }) =>
+  dateSortValue(a.date) - dateSortValue(b.date) || (a.time ?? '').localeCompare(b.time ?? '');
 
 const involves = (team: string) => (m: { home_team: string; away_team: string }) =>
   m.home_team === team || m.away_team === team;
+
+// Pair each result with one schedule entry. Teams can meet more than once in a season (the SPFL
+// plays each pairing three times), so a team pair alone isn't enough. Some schedules list home and
+// away the other way round from the result (seen in the Champions League data), so a reversed pair
+// counts when it's on the same date. Otherwise take the unused entry for the pair nearest the result's date.
+export function matchResultsToSchedule(results: Fixture[], schedule: ScheduledFixture[]): Map<Fixture, ScheduledFixture> {
+  const entriesByPair = new Map<string, ScheduledFixture[]>();
+  schedule.forEach(s => {
+    const key = pairKey(s.home_team, s.away_team);
+    entriesByPair.set(key, [...(entriesByPair.get(key) ?? []), s]);
+  });
+
+  const used = new Set<ScheduledFixture>();
+  const matched = new Map<Fixture, ScheduledFixture>();
+  const gap = (s: ScheduledFixture, r: Fixture) => {
+    const diff = Math.abs(dateSortValue(s.date) - dateSortValue(r.date));
+    return Number.isNaN(diff) ? Infinity : diff;
+  };
+
+  [...results].sort(byDate).forEach(r => {
+    const exact = (entriesByPair.get(pairKey(r.home_team, r.away_team)) ?? []).filter(s => !used.has(s));
+    const reversed = (entriesByPair.get(pairKey(r.away_team, r.home_team)) ?? []).filter(s => !used.has(s));
+    const entry = exact.find(s => s.date === r.date)
+      ?? reversed.find(s => s.date === r.date)
+      ?? [...exact].sort((a, b) => gap(a, r) - gap(b, r))[0];
+    if (entry) {
+      used.add(entry);
+      matched.set(r, entry);
+    }
+  });
+  return matched;
+}
 
 // Every match the team has played or has still to play, across all the given competitions.
 // Results come latest first, upcoming fixtures soonest first.
@@ -46,21 +80,11 @@ export function getTeamMatches(team: string, competitions: CompetitionSource[]):
     const base = { competition: c.key, competitionLabel: c.label };
     const results = c.fixtures.filter(involves(team));
     const schedule = c.schedule.filter(involves(team));
-    const scheduleByPair = new Map(schedule.map(s => [pairKey(s.home_team, s.away_team), s]));
-    // Some schedules list a match with home and away the other way round from its result
-    // (seen in the Champions League data), so a reversed pair on the same date also counts
-    const scheduledFor = (r: Fixture) => {
-      const exact = scheduleByPair.get(pairKey(r.home_team, r.away_team));
-      const reversed = scheduleByPair.get(pairKey(r.away_team, r.home_team));
-      if (exact?.date === r.date) return exact;
-      if (reversed?.date === r.date) return reversed;
-      return exact;
-    };
-    const playedEntries = new Set<ScheduledFixture>();
+    const entryByResult = matchResultsToSchedule(results, schedule);
+    const playedEntries = new Set(entryByResult.values());
 
     results.forEach(r => {
-      const entry = scheduledFor(r);
-      if (entry) playedEntries.add(entry);
+      const entry = entryByResult.get(r);
       played.push({
         ...base,
         date: r.date,
@@ -71,7 +95,8 @@ export function getTeamMatches(team: string, competitions: CompetitionSource[]):
       });
     });
     schedule
-      .filter(s => !playedEntries.has(s))
+      // Matches dated before today have been played, even if their result isn't in yet
+      .filter(s => !playedEntries.has(s) && !isPastDate(s.date))
       .forEach(s => upcoming.push({ ...base, date: s.date, time: s.time, round: s.round, home_team: s.home_team, away_team: s.away_team }));
   });
 

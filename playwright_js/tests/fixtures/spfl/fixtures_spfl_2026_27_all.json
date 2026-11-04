@@ -426,12 +426,6 @@
     },
     {
       "date": "2026-10-31",
-      "team_home": "hibernian",
-      "team_away": "dundee-fc",
-      "round": 12
-    },
-    {
-      "date": "2026-10-31",
       "team_home": "kilmarnock",
       "team_away": "st-johnstone",
       "round": 12
@@ -440,18 +434,6 @@
       "date": "2026-10-31",
       "team_home": "motherwell",
       "team_away": "st-mirren",
-      "round": 12
-    },
-    {
-      "date": "2026-10-31",
-      "team_home": "rangers",
-      "team_away": "aberdeen",
-      "round": 12
-    },
-    {
-      "date": "TBC",
-      "team_home": "dundee-united",
-      "team_away": "heart-midlothian",
       "round": 12
     }
   ],

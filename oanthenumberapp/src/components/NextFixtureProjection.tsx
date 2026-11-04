@@ -1,6 +1,6 @@
 import { useMemo, useState } from 'react';
 import type { Fixture, ScheduledFixture } from '../types';
-import { extractTeams, parseDate } from '../utils/dataProcessing';
+import { extractTeams, formatMatchDate } from '../utils/dataProcessing';
 import {
   createGoalProjectionContext,
   errorBand,
@@ -21,7 +21,7 @@ interface NextFixtureProjectionProps {
 }
 
 const formatDate = (date: string) =>
-  parseDate(date).toLocaleDateString('en-GB', { weekday: 'short', day: 'numeric', month: 'short' });
+  formatMatchDate(date, { weekday: 'short', day: 'numeric', month: 'short' });
 
 const pairKey = (m: MatchGoalProjection) => `${m.home.team}|${m.away.team}`;
 

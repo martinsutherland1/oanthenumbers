@@ -11,6 +11,26 @@ export function parseDate(dateStr: string): Date {
   return new Date(year, month - 1, day);
 }
 
+// Sort value for a match date; unset dates ('TBC') sort last
+export function dateSortValue(dateStr: string): number {
+  const time = parseDate(dateStr).getTime();
+  return Number.isNaN(time) ? Infinity : time;
+}
+
+// Whether a match date is before today, i.e. the match has already been played even if its
+// result hasn't reached the data yet. Unset dates ('TBC') are never in the past.
+export function isPastDate(dateStr: string): boolean {
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
+  return dateSortValue(dateStr) < today.getTime();
+}
+
+// Display a match date, or 'TBC' when it hasn't been set yet
+export function formatMatchDate(dateStr: string, options: Intl.DateTimeFormatOptions): string {
+  const date = parseDate(dateStr);
+  return Number.isNaN(date.getTime()) ? 'TBC' : date.toLocaleDateString('en-GB', options);
+}
+
 // Flatten date-keyed fixtures object into array, normalizing team name variants
 export function flattenFixtures(fixturesData: FixturesData): Fixture[] {
   return Object.values(fixturesData).flat().map(f => ({
