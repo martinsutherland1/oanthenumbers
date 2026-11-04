@@ -4,6 +4,8 @@ export const TEAM_ALIASES: Record<string, string> = {
   'dundee utd': 'dundee-united',
   'st mirren': 'st-mirren',
   'hearts': 'heart-midlothian',
+  // European competition data uses the short slug
+  'brighton': 'brighton-hove-albion',
 };
 
 export function normalizeTeamName(name: string): string {

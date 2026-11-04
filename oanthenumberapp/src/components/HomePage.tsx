@@ -146,10 +146,10 @@ export function HomePage({ leagues, onSelectLeague, onShowTips }: HomePageProps)
           </svg>
         </span>
         <span className="home-tips-text">
-          <span className="home-tips-title">Betting tips</span>
+          <span className="home-tips-title">Predictions</span>
           <span className="home-tips-sub">Picks for the next round of fixtures, across every domestic league</span>
         </span>
-        <span className="home-tips-cta">View tips →</span>
+        <span className="home-tips-cta">View predictions →</span>
       </button>
 
       <section className="home-group">

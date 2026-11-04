@@ -59,16 +59,16 @@ export function AllTipsView({ leagues, onBack, onSelectLeague }: AllTipsViewProp
     <div className="betting-view">
       <div className="all-tips-header">
         <button className="home-back-btn" onClick={onBack}>← Leagues</button>
-        <h3>Top Tips · All Leagues</h3>
+        <h3>Predictions · All Leagues</h3>
       </div>
       <div className="view-tabs secondary-tabs tips-tabs">
-        <button className={`view-tab ${tab === 'tips' ? 'active' : ''}`} onClick={() => setTab('tips')}>Tips</button>
+        <button className={`view-tab ${tab === 'tips' ? 'active' : ''}`} onClick={() => setTab('tips')}>Predictions</button>
         <button className={`view-tab ${tab === 'history' ? 'active' : ''}`} onClick={() => setTab('history')}>History</button>
       </div>
       {tab === 'history' && <TipHistoryView />}
       {tab === 'tips' && <>
       <p className="betting-note">
-        The four most likely tips from each league's next round, then the best four of those overall. Open a league's Analysis &gt; Tips for every fixture.
+        The four most likely predictions from each league's next round, then the best four of those overall. Open a league's Analysis &gt; Predictions for every fixture.
       </p>
       {pool.length > 0 && (
         <div className="betting-section">

@@ -14,6 +14,8 @@ import { ProjectionAccuracy } from './components/ProjectionAccuracy';
 import { BettingView } from './components/BettingView';
 import { TipsView } from './components/TipsView';
 import { AllTipsView } from './components/AllTipsView';
+import { TeamList } from './components/TeamList';
+import { TeamMatchesView } from './components/TeamMatchesView';
 import {
   extractTeams,
   getLeagueTable,
@@ -30,6 +32,7 @@ import seoPages from './seoPages.json';
 import { PROJECTION_CONFIG } from './utils/projectionConfig';
 import { SHOW_PROJECTION_EXTRAS } from './utils/featureFlags';
 import { getTeamName } from './utils/teamColors';
+import type { CompetitionSource } from './utils/teamMatches';
 import {
   spflFixtures,
   spflLastSeasonFixtures,
@@ -63,11 +66,14 @@ import logo from './assets/logo-mark.png';
 import './App.css';
 
 type Page = 'home' | 'league' | 'tips';
+// A league page shows either the competition as a whole or one of its teams
+type LeagueMode = 'league' | 'team';
 type Section = 'tables' | 'stats' | 'fixtures' | 'analysis';
 type TablesTab = 'current' | 'projection';
 type ProjectionView = 'table' | 'next' | 'analysis';
 type FixturesTab = 'fixtures' | 'results';
-type StatsTab = 'team' | 'all' | 'h2h' | 'comparisons';
+type StatsTab = 'all' | 'h2h' | 'comparisons';
+type TeamTab = 'stats' | 'results' | 'fixtures';
 type AnalysisTab = 'data' | 'tips';
 type League = 'spfl' | 'epl' | 'laliga' | 'bundesliga' | 'seriea' | 'ligue1' | 'championsleague' | 'europaleague' | 'conferenceleague';
 
@@ -240,6 +246,15 @@ const ANALYSIS_LEAGUES = LEAGUE_ORDER.filter(key => LEAGUE_CONFIG[key].showProje
   schedule: LEAGUE_CONFIG[key].schedule,
 }));
 
+// Every competition with data, domestic first, searched for a team's results and fixtures.
+// Includes the European competitions even while they're hidden from the league list.
+const TEAM_MATCH_COMPETITIONS: CompetitionSource[] = (Object.keys(LEAGUE_CONFIG) as League[]).map(key => ({
+  key,
+  label: LEAGUE_CONFIG[key].label,
+  fixtures: LEAGUE_CONFIG[key].fixtures,
+  schedule: LEAGUE_CONFIG[key].schedule,
+}));
+
 const NO_TIPS: LeagueTips = {
   next: [],
   top: [],
@@ -276,11 +291,13 @@ function App() {
   const initialLeague = typeof window !== 'undefined' ? leagueFromPath(window.location.pathname) : null;
   const [page, setPage] = useState<Page>(initialLeague ? 'league' : 'home');
   const [league, setLeague] = useState<League>(initialLeague ?? 'spfl');
+  const [mode, setMode] = useState<LeagueMode>('league');
   const [section, setSection] = useState<Section>('tables');
   const [tablesTab, setTablesTab] = useState<TablesTab>('current');
   const [projectionView, setProjectionView] = useState<ProjectionView>('table');
   const [fixturesTab, setFixturesTab] = useState<FixturesTab>('fixtures');
-  const [statsTab, setStatsTab] = useState<StatsTab>('team');
+  const [statsTab, setStatsTab] = useState<StatsTab>('all');
+  const [teamTab, setTeamTab] = useState<TeamTab>('stats');
   const [analysisTab, setAnalysisTab] = useState<AnalysisTab>('data');
   const [selectedTeam, setSelectedTeam] = useState<string>('');
 
@@ -316,7 +333,8 @@ function App() {
     })),
     [page]
   );
-  const activeTeam = selectedTeam || teams[0] || '';
+  // No team picked means the team list is showing
+  const activeTeam = teams.includes(selectedTeam) ? selectedTeam : '';
 
   const homeLeagueTiles = useMemo(() => LEAGUE_ORDER.map(key => ({
     key,
@@ -353,9 +371,11 @@ function App() {
   const handleSelectLeague = (next: string, tab?: 'tips') => {
     setLeague(next as League);
     setSelectedTeam('');
+    setMode('league');
     setSection('tables');
     setTablesTab('current');
-    setStatsTab('team');
+    setStatsTab('all');
+    setTeamTab('stats');
     setFixturesTab('fixtures');
     setAnalysisTab('data');
     if (tab) {
@@ -367,8 +387,9 @@ function App() {
 
   const handleTeamClick = (team: string) => {
     setSelectedTeam(team);
-    setStatsTab('team');
-    setSection('stats');
+    setTeamTab('stats');
+    setMode('team');
+    window.scrollTo(0, 0);
   };
 
   const handleGoHome = () => {
@@ -415,119 +436,30 @@ function App() {
         {page === 'league' && (
           <div className="toolbar-bar">
             <div className="view-toolbar">
-              <div className="view-tabs">
-                <button
-                  className={`view-tab ${section === 'tables' ? 'active' : ''}`}
-                  onClick={() => setSection('tables')}
-                >
-                  Tables
-                </button>
-                <button
-                  className={`view-tab ${section === 'stats' ? 'active' : ''}`}
-                  onClick={() => setSection('stats')}
-                >
-                  Stats
-                </button>
-                <button
-                  className={`view-tab ${section === 'fixtures' ? 'active' : ''}`}
-                  onClick={() => setSection('fixtures')}
-                >
-                  Fixtures
-                </button>
-                <button
-                  className={`view-tab ${section === 'analysis' ? 'active' : ''}`}
-                  onClick={() => setSection('analysis')}
-                >
-                  Analysis
-                </button>
-              </div>
+              <div className="mode-bar">
+                <div className="view-tabs secondary-tabs" role="group" aria-label="League or team view">
+                  <button
+                    className={`view-tab ${mode === 'league' ? 'active' : ''}`}
+                    onClick={() => setMode('league')}
+                    aria-pressed={mode === 'league'}
+                  >
+                    League
+                  </button>
+                  <button
+                    className={`view-tab ${mode === 'team' ? 'active' : ''}`}
+                    onClick={() => setMode('team')}
+                    aria-pressed={mode === 'team'}
+                  >
+                    Teams
+                  </button>
+                </div>
 
-              <div className="sub-toolbar">
-                {section === 'tables' && config.showProjection && (
-                  <div className="view-tabs secondary-tabs">
-                    <button
-                      className={`view-tab ${tablesTab === 'current' ? 'active' : ''}`}
-                      onClick={() => setTablesTab('current')}
-                    >
-                      Current
-                    </button>
-                    <button
-                      className={`view-tab ${tablesTab === 'projection' ? 'active' : ''}`}
-                      onClick={() => setTablesTab('projection')}
-                    >
-                      Projection
-                    </button>
-                  </div>
-                )}
-
-                {section === 'stats' && (
-                  <div className="view-tabs secondary-tabs">
-                    <button
-                      className={`view-tab ${statsTab === 'team' ? 'active' : ''}`}
-                      onClick={() => setStatsTab('team')}
-                    >
-                      Team
-                    </button>
-                    <button
-                      className={`view-tab ${statsTab === 'all' ? 'active' : ''}`}
-                      onClick={() => setStatsTab('all')}
-                    >
-                      All
-                    </button>
-                    <button
-                      className={`view-tab ${statsTab === 'h2h' ? 'active' : ''}`}
-                      onClick={() => setStatsTab('h2h')}
-                    >
-                      H2H
-                    </button>
-                    <button
-                      className={`view-tab ${statsTab === 'comparisons' ? 'active' : ''}`}
-                      onClick={() => setStatsTab('comparisons')}
-                    >
-                      Charts
-                    </button>
-                  </div>
-                )}
-
-                {section === 'fixtures' && (
-                  <div className="view-tabs secondary-tabs">
-                    <button
-                      className={`view-tab ${fixturesTab === 'fixtures' ? 'active' : ''}`}
-                      onClick={() => setFixturesTab('fixtures')}
-                    >
-                      Fixtures
-                    </button>
-                    <button
-                      className={`view-tab ${fixturesTab === 'results' ? 'active' : ''}`}
-                      onClick={() => setFixturesTab('results')}
-                    >
-                      Results
-                    </button>
-                  </div>
-                )}
-
-                {section === 'analysis' && (
-                  <div className="view-tabs secondary-tabs">
-                    <button
-                      className={`view-tab ${analysisTab === 'data' ? 'active' : ''}`}
-                      onClick={() => setAnalysisTab('data')}
-                    >
-                      Data
-                    </button>
-                    {config.showTips && (
-                      <button
-                        className={`view-tab ${analysisTab === 'tips' ? 'active' : ''}`}
-                        onClick={() => setAnalysisTab('tips')}
-                      >
-                        Tips
-                      </button>
-                    )}
-                  </div>
-                )}
-
-                {section === 'stats' && statsTab === 'team' && (
+                {mode === 'team' && activeTeam && (
                   <div className="team-select-group">
-                    <label htmlFor="team-select">Team</label>
+                    <button className="home-back-btn" onClick={() => setSelectedTeam('')}>
+                      ← All teams
+                    </button>
+                    <label htmlFor="team-select" className="visually-hidden">Team</label>
                     <select
                       id="team-select"
                       className="team-select"
@@ -541,6 +473,138 @@ function App() {
                   </div>
                 )}
               </div>
+
+              {mode === 'league' && (
+                <div className="view-tabs">
+                  <button
+                    className={`view-tab ${section === 'tables' ? 'active' : ''}`}
+                    onClick={() => setSection('tables')}
+                  >
+                    Tables
+                  </button>
+                  <button
+                    className={`view-tab ${section === 'stats' ? 'active' : ''}`}
+                    onClick={() => setSection('stats')}
+                  >
+                    Stats
+                  </button>
+                  <button
+                    className={`view-tab ${section === 'fixtures' ? 'active' : ''}`}
+                    onClick={() => setSection('fixtures')}
+                  >
+                    Fixtures
+                  </button>
+                  <button
+                    className={`view-tab ${section === 'analysis' ? 'active' : ''}`}
+                    onClick={() => setSection('analysis')}
+                  >
+                    Analysis
+                  </button>
+                </div>
+              )}
+
+              {mode === 'team' && activeTeam && (
+                <div className="view-tabs">
+                  <button
+                    className={`view-tab ${teamTab === 'stats' ? 'active' : ''}`}
+                    onClick={() => setTeamTab('stats')}
+                  >
+                    Stats
+                  </button>
+                  <button
+                    className={`view-tab ${teamTab === 'results' ? 'active' : ''}`}
+                    onClick={() => setTeamTab('results')}
+                  >
+                    Results
+                  </button>
+                  <button
+                    className={`view-tab ${teamTab === 'fixtures' ? 'active' : ''}`}
+                    onClick={() => setTeamTab('fixtures')}
+                  >
+                    Fixtures
+                  </button>
+                </div>
+              )}
+
+              {mode === 'league' && (
+                <div className="sub-toolbar">
+                  {section === 'tables' && config.showProjection && (
+                    <div className="view-tabs secondary-tabs">
+                      <button
+                        className={`view-tab ${tablesTab === 'current' ? 'active' : ''}`}
+                        onClick={() => setTablesTab('current')}
+                      >
+                        Current
+                      </button>
+                      <button
+                        className={`view-tab ${tablesTab === 'projection' ? 'active' : ''}`}
+                        onClick={() => setTablesTab('projection')}
+                      >
+                        Projected
+                      </button>
+                    </div>
+                  )}
+
+                  {section === 'stats' && (
+                    <div className="view-tabs secondary-tabs">
+                      <button
+                        className={`view-tab ${statsTab === 'all' ? 'active' : ''}`}
+                        onClick={() => setStatsTab('all')}
+                      >
+                        All
+                      </button>
+                      <button
+                        className={`view-tab ${statsTab === 'h2h' ? 'active' : ''}`}
+                        onClick={() => setStatsTab('h2h')}
+                      >
+                        H2H
+                      </button>
+                      <button
+                        className={`view-tab ${statsTab === 'comparisons' ? 'active' : ''}`}
+                        onClick={() => setStatsTab('comparisons')}
+                      >
+                        Charts
+                      </button>
+                    </div>
+                  )}
+
+                  {section === 'fixtures' && (
+                    <div className="view-tabs secondary-tabs">
+                      <button
+                        className={`view-tab ${fixturesTab === 'fixtures' ? 'active' : ''}`}
+                        onClick={() => setFixturesTab('fixtures')}
+                      >
+                        Fixtures
+                      </button>
+                      <button
+                        className={`view-tab ${fixturesTab === 'results' ? 'active' : ''}`}
+                        onClick={() => setFixturesTab('results')}
+                      >
+                        Results
+                      </button>
+                    </div>
+                  )}
+
+                  {section === 'analysis' && (
+                    <div className="view-tabs secondary-tabs">
+                      <button
+                        className={`view-tab ${analysisTab === 'data' ? 'active' : ''}`}
+                        onClick={() => setAnalysisTab('data')}
+                      >
+                        Data
+                      </button>
+                      {config.showTips && (
+                        <button
+                          className={`view-tab ${analysisTab === 'tips' ? 'active' : ''}`}
+                          onClick={() => setAnalysisTab('tips')}
+                        >
+                          Predictions
+                        </button>
+                      )}
+                    </div>
+                  )}
+                </div>
+              )}
             </div>
           </div>
         )}
@@ -559,7 +623,7 @@ function App() {
           />
         )}
 
-        {page === 'league' && (
+        {page === 'league' && mode === 'league' && (
           <>
             {section === 'tables' && tablesTab === 'current' && (
               <>
@@ -592,16 +656,6 @@ function App() {
                 {SHOW_PROJECTION_EXTRAS && projectionView === 'analysis' && <ProjectionAccuracy leagues={ANALYSIS_LEAGUES} activeLeague={league} />}
               </>
             )}
-            {section === 'stats' && statsTab === 'team' && activeTeam && (
-              <TeamOverview
-                team={activeTeam}
-                fixtures={fixtures}
-                lastSeasonFixtures={lastSeasonFixtures}
-                leagueTable={leagueTableData}
-                projection={projectionContext}
-                seasonGames={config.seasonGames}
-              />
-            )}
             {section === 'stats' && statsTab === 'all' && (
               <AllStatsView fixtures={fixtures} />
             )}
@@ -614,6 +668,28 @@ function App() {
             {section === 'fixtures' && <FixturesView mode={fixturesTab} results={fixtures} schedule={config.schedule} tips={tips} />}
             {section === 'analysis' && analysisTab === 'data' && <BettingView key={league} data={bettingStats} />}
             {section === 'analysis' && analysisTab === 'tips' && config.showTips && <TipsView tips={tips} />}
+          </>
+        )}
+
+        {page === 'league' && mode === 'team' && !activeTeam && (
+          <TeamList teams={teams} leagueTable={leagueTableData} onSelectTeam={handleTeamClick} />
+        )}
+
+        {page === 'league' && mode === 'team' && activeTeam && (
+          <>
+            {teamTab === 'stats' && (
+              <TeamOverview
+                team={activeTeam}
+                fixtures={fixtures}
+                lastSeasonFixtures={lastSeasonFixtures}
+                leagueTable={leagueTableData}
+                projection={projectionContext}
+                seasonGames={config.seasonGames}
+              />
+            )}
+            {teamTab !== 'stats' && (
+              <TeamMatchesView mode={teamTab} team={activeTeam} competitions={TEAM_MATCH_COMPETITIONS} />
+            )}
           </>
         )}
       </main>
