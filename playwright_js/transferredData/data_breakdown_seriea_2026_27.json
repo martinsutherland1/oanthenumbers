@@ -1766,5 +1766,24 @@
       "home_xgot": 0.89,
       "away_xgot": 3.05
     }
+  ],
+  "2026-11-06": [
+    {
+      "date": "2026-11-06",
+      "home_team": "venezia",
+      "away_team": "udinese",
+      "home_goals": 2,
+      "away_goals": 1,
+      "home_xG": 1.52,
+      "away_xG": 1.03,
+      "home_xg_open_play": 1.09,
+      "away_xg_open_play": 0.76,
+      "home_xg_set_play": 0.43,
+      "away_xg_set_play": 0.27,
+      "home_npxg": 1.52,
+      "away_npxg": 1.03,
+      "home_xgot": 0.79,
+      "away_xgot": 0.62
+    }
   ]
 }

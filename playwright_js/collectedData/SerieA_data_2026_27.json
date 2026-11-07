@@ -3265,6 +3265,23 @@
       "xgot_for": 2.78,
       "xgot_against": 3.96,
       "location": "home"
+    },
+    {
+      "date": "2026-11-06",
+      "opposition": "venezia",
+      "goals_for": 1,
+      "goals_against": 2,
+      "xG_for": 1.03,
+      "xG_against": 1.52,
+      "xg_open_play_for": 0.76,
+      "xg_open_play_against": 1.09,
+      "xg_set_play_for": 0.27,
+      "xg_set_play_against": 0.43,
+      "npxg_for": 1.03,
+      "npxg_against": 1.52,
+      "xgot_for": 0.62,
+      "xgot_against": 0.79,
+      "location": "away"
     }
   ],
   "venezia": [
@@ -3437,6 +3454,23 @@
       "xgot_for": 0.02,
       "xgot_against": 1.54,
       "location": "away"
+    },
+    {
+      "date": "2026-11-06",
+      "opposition": "udinese",
+      "goals_for": 2,
+      "goals_against": 1,
+      "xG_for": 1.52,
+      "xG_against": 1.03,
+      "xg_open_play_for": 1.09,
+      "xg_open_play_against": 0.76,
+      "xg_set_play_for": 0.43,
+      "xg_set_play_against": 0.27,
+      "npxg_for": 1.52,
+      "npxg_against": 1.03,
+      "xgot_for": 0.79,
+      "xgot_against": 0.62,
+      "location": "home"
     }
   ]
 }

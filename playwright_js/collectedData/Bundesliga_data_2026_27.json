@@ -687,6 +687,23 @@
       "xgot_for": 1.6,
       "xgot_against": 0.54,
       "location": "home"
+    },
+    {
+      "date": "2026-11-06",
+      "opposition": "hamburger-sv",
+      "goals_for": 1,
+      "goals_against": 3,
+      "xG_for": 2.22,
+      "xG_against": 2.27,
+      "xg_open_play_for": 2.06,
+      "xg_open_play_against": 1.76,
+      "xg_set_play_for": 0.16,
+      "xg_set_play_against": 0.51,
+      "npxg_for": 2.22,
+      "npxg_against": 2.27,
+      "xgot_for": 1.36,
+      "xgot_against": 3.09,
+      "location": "away"
     }
   ],
   "eintracht-frankfurt": [
@@ -1239,6 +1256,23 @@
       "xgot_for": 0.82,
       "xgot_against": 4.41,
       "location": "away"
+    },
+    {
+      "date": "2026-11-06",
+      "opposition": "borussia-monchengladbach",
+      "goals_for": 3,
+      "goals_against": 1,
+      "xG_for": 2.27,
+      "xG_against": 2.22,
+      "xg_open_play_for": 1.76,
+      "xg_open_play_against": 2.06,
+      "xg_set_play_for": 0.51,
+      "xg_set_play_against": 0.16,
+      "npxg_for": 2.27,
+      "npxg_against": 2.22,
+      "xgot_for": 3.09,
+      "xgot_against": 1.36,
+      "location": "home"
     }
   ],
   "hoffenheim": [

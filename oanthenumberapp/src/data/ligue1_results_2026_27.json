@@ -1431,5 +1431,24 @@
       "home_xgot": 3.25,
       "away_xgot": 0.99
     }
+  ],
+  "2026-11-06": [
+    {
+      "date": "2026-11-06",
+      "home_team": "toulouse",
+      "away_team": "strasbourg",
+      "home_goals": 3,
+      "away_goals": 1,
+      "home_xG": 1.18,
+      "away_xG": 0.75,
+      "home_xg_open_play": 0.66,
+      "away_xg_open_play": 0.71,
+      "home_xg_set_play": 0.51,
+      "away_xg_set_play": 0.04,
+      "home_npxg": 1.18,
+      "away_npxg": 0.75,
+      "home_xgot": 2.26,
+      "away_xgot": 1.3
+    }
   ]
 }
