@@ -186,6 +186,23 @@
       "xgot_for": 0.29,
       "xgot_against": 1.13,
       "location": "home"
+    },
+    {
+      "date": "2026-11-07",
+      "opposition": "hibernian",
+      "goals_for": 0,
+      "goals_against": 4,
+      "xG_for": 0.96,
+      "xG_against": 2.41,
+      "xg_open_play_for": 0.8,
+      "xg_open_play_against": 2.09,
+      "xg_set_play_for": 0.16,
+      "xg_set_play_against": 0.31,
+      "npxg_for": 0.96,
+      "npxg_against": 2.41,
+      "xgot_for": 0.32,
+      "xgot_against": 2.93,
+      "location": "home"
     }
   ],
   "celtic": [
@@ -581,6 +598,23 @@
       "xgot_for": 3.06,
       "xgot_against": 1.44,
       "location": "home"
+    },
+    {
+      "date": "2026-11-07",
+      "opposition": "st-johnstone",
+      "goals_for": 1,
+      "goals_against": 2,
+      "xG_for": 0.58,
+      "xG_against": 1.53,
+      "xg_open_play_for": 0.57,
+      "xg_open_play_against": 1.33,
+      "xg_set_play_for": 0.01,
+      "xg_set_play_against": 0.2,
+      "npxg_for": 0.58,
+      "npxg_against": 1.53,
+      "xgot_for": 0.83,
+      "xgot_against": 1.56,
+      "location": "away"
     }
   ],
   "dundee-united": [
@@ -770,6 +804,23 @@
       "xgot_for": 1.25,
       "xgot_against": 1.69,
       "location": "away"
+    },
+    {
+      "date": "2026-11-07",
+      "opposition": "motherwell",
+      "goals_for": 1,
+      "goals_against": 1,
+      "xG_for": 1.91,
+      "xG_against": 1.75,
+      "xg_open_play_for": 1.54,
+      "xg_open_play_against": 0.74,
+      "xg_set_play_for": 0.37,
+      "xg_set_play_against": 0.22,
+      "npxg_for": 1.91,
+      "npxg_against": 0.96,
+      "xgot_for": 1.52,
+      "xgot_against": 1.63,
+      "location": "home"
     }
   ],
   "falkirk": [
@@ -1354,6 +1405,23 @@
       "xgot_for": 0.81,
       "xgot_against": 0.58,
       "location": "away"
+    },
+    {
+      "date": "2026-11-07",
+      "opposition": "aberdeen",
+      "goals_for": 4,
+      "goals_against": 0,
+      "xG_for": 2.41,
+      "xG_against": 0.96,
+      "xg_open_play_for": 2.09,
+      "xg_open_play_against": 0.8,
+      "xg_set_play_for": 0.31,
+      "xg_set_play_against": 0.16,
+      "npxg_for": 2.41,
+      "npxg_against": 0.96,
+      "xgot_for": 2.93,
+      "xgot_against": 0.32,
+      "location": "away"
     }
   ],
   "kilmarnock": [
@@ -1766,6 +1834,23 @@
       "xgot_for": 1.18,
       "xgot_against": 0.02,
       "location": "home"
+    },
+    {
+      "date": "2026-11-07",
+      "opposition": "dundee-united",
+      "goals_for": 1,
+      "goals_against": 1,
+      "xG_for": 1.75,
+      "xG_against": 1.91,
+      "xg_open_play_for": 0.74,
+      "xg_open_play_against": 1.54,
+      "xg_set_play_for": 0.22,
+      "xg_set_play_against": 0.37,
+      "npxg_for": 0.96,
+      "npxg_against": 1.91,
+      "xgot_for": 1.63,
+      "xgot_against": 1.52,
+      "location": "away"
     }
   ],
   "rangers": [
@@ -1954,6 +2039,23 @@
       "npxg_against": 1.71,
       "xgot_for": 2.12,
       "xgot_against": 2.2,
+      "location": "away"
+    },
+    {
+      "date": "2026-11-07",
+      "opposition": "st-mirren",
+      "goals_for": 2,
+      "goals_against": 0,
+      "xG_for": 3.34,
+      "xG_against": 1.08,
+      "xg_open_play_for": 2.35,
+      "xg_open_play_against": 1.06,
+      "xg_set_play_for": 0.2,
+      "xg_set_play_against": 0.02,
+      "npxg_for": 2.55,
+      "npxg_against": 1.08,
+      "xgot_for": 2.32,
+      "xgot_against": 1.49,
       "location": "away"
     }
   ],
@@ -2161,6 +2263,23 @@
       "xgot_for": 1.7,
       "xgot_against": 2.89,
       "location": "away"
+    },
+    {
+      "date": "2026-11-07",
+      "opposition": "dundee-fc",
+      "goals_for": 2,
+      "goals_against": 1,
+      "xG_for": 1.53,
+      "xG_against": 0.58,
+      "xg_open_play_for": 1.33,
+      "xg_open_play_against": 0.57,
+      "xg_set_play_for": 0.2,
+      "xg_set_play_against": 0.01,
+      "npxg_for": 1.53,
+      "npxg_against": 0.58,
+      "xgot_for": 1.56,
+      "xgot_against": 0.83,
+      "location": "home"
     }
   ],
   "st-mirren": [
@@ -2367,6 +2486,23 @@
       "xgot_for": 0.02,
       "xgot_against": 1.18,
       "location": "away"
+    },
+    {
+      "date": "2026-11-07",
+      "opposition": "rangers",
+      "goals_for": 0,
+      "goals_against": 2,
+      "xG_for": 1.08,
+      "xG_against": 3.34,
+      "xg_open_play_for": 1.06,
+      "xg_open_play_against": 2.35,
+      "xg_set_play_for": 0.02,
+      "xg_set_play_against": 0.2,
+      "npxg_for": 1.08,
+      "npxg_against": 2.55,
+      "xgot_for": 1.49,
+      "xgot_against": 2.32,
+      "location": "home"
     }
   ]
 }
