@@ -409,6 +409,23 @@
       "xgot_for": 2.02,
       "xgot_against": 1.63,
       "location": "away"
+    },
+    {
+      "date": "2026-11-08",
+      "opposition": "kilmarnock",
+      "goals_for": 1,
+      "goals_against": 0,
+      "xG_for": 2.21,
+      "xG_against": 1.47,
+      "xg_open_play_for": 1.02,
+      "xg_open_play_against": 1.43,
+      "xg_set_play_for": 0.4,
+      "xg_set_play_against": 0.03,
+      "npxg_for": 1.42,
+      "npxg_against": 1.47,
+      "xgot_for": 2,
+      "xgot_against": 0.95,
+      "location": "home"
     }
   ],
   "dundee-fc": [
@@ -1027,6 +1044,23 @@
       "xgot_for": 1.63,
       "xgot_against": 2.02,
       "location": "home"
+    },
+    {
+      "date": "2026-11-08",
+      "opposition": "heart-midlothian",
+      "goals_for": 5,
+      "goals_against": 2,
+      "xG_for": 2.5,
+      "xG_against": 1.84,
+      "xg_open_play_for": 2.33,
+      "xg_open_play_against": 0.76,
+      "xg_set_play_for": 0.17,
+      "xg_set_play_against": 0.3,
+      "npxg_for": 2.5,
+      "npxg_against": 1.06,
+      "xgot_for": 3.98,
+      "xgot_against": 1.86,
+      "location": "away"
     }
   ],
   "heart-midlothian": [
@@ -1215,6 +1249,23 @@
       "npxg_against": 2.2,
       "xgot_for": 2.2,
       "xgot_against": 2.12,
+      "location": "home"
+    },
+    {
+      "date": "2026-11-08",
+      "opposition": "falkirk",
+      "goals_for": 2,
+      "goals_against": 5,
+      "xG_for": 1.84,
+      "xG_against": 2.5,
+      "xg_open_play_for": 0.76,
+      "xg_open_play_against": 2.33,
+      "xg_set_play_for": 0.3,
+      "xg_set_play_against": 0.17,
+      "npxg_for": 1.06,
+      "npxg_against": 2.5,
+      "xgot_for": 1.86,
+      "xgot_against": 3.98,
       "location": "home"
     }
   ],
@@ -1628,6 +1679,23 @@
       "xgot_for": 2.89,
       "xgot_against": 1.7,
       "location": "home"
+    },
+    {
+      "date": "2026-11-08",
+      "opposition": "celtic",
+      "goals_for": 0,
+      "goals_against": 1,
+      "xG_for": 1.47,
+      "xG_against": 2.21,
+      "xg_open_play_for": 1.43,
+      "xg_open_play_against": 1.02,
+      "xg_set_play_for": 0.03,
+      "xg_set_play_against": 0.4,
+      "npxg_for": 1.47,
+      "npxg_against": 1.42,
+      "xgot_for": 0.95,
+      "xgot_against": 2,
+      "location": "away"
     }
   ],
   "motherwell": [
