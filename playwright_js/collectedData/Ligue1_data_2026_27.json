@@ -152,6 +152,23 @@
       "xgot_for": 0.31,
       "xgot_against": 1.96,
       "location": "away"
+    },
+    {
+      "date": "2026-11-08",
+      "opposition": "nice",
+      "goals_for": 0,
+      "goals_against": 2,
+      "xG_for": 0.85,
+      "xG_against": 2.13,
+      "xg_open_play_for": 0.68,
+      "xg_open_play_against": 2.04,
+      "xg_set_play_for": 0.17,
+      "xg_set_play_against": 0.09,
+      "npxg_for": 0.85,
+      "npxg_against": 2.13,
+      "xgot_for": 1.38,
+      "xgot_against": 2.77,
+      "location": "home"
     }
   ],
   "auxerre": [
@@ -307,6 +324,23 @@
       "xgot_for": 0.65,
       "xgot_against": 3.08,
       "location": "away"
+    },
+    {
+      "date": "2026-11-07",
+      "opposition": "paris-fc",
+      "goals_for": 0,
+      "goals_against": 1,
+      "xG_for": 0.81,
+      "xG_against": 0.76,
+      "xg_open_play_for": 0.73,
+      "xg_open_play_against": 0.6,
+      "xg_set_play_for": 0.08,
+      "xg_set_play_against": 0.16,
+      "npxg_for": 0.81,
+      "npxg_against": 0.76,
+      "xgot_for": 0.32,
+      "xgot_against": 1.17,
+      "location": "home"
     }
   ],
   "brest": [
@@ -462,6 +496,23 @@
       "xgot_for": 1.67,
       "xgot_against": 0,
       "location": "away"
+    },
+    {
+      "date": "2026-11-08",
+      "opposition": "lyon",
+      "goals_for": 2,
+      "goals_against": 0,
+      "xG_for": 1.84,
+      "xG_against": 0.64,
+      "xg_open_play_for": 1.04,
+      "xg_open_play_against": 0.32,
+      "xg_set_play_for": 0.02,
+      "xg_set_play_against": 0.31,
+      "npxg_for": 1.05,
+      "npxg_against": 0.64,
+      "xgot_for": 2.38,
+      "xgot_against": 0.58,
+      "location": "home"
     }
   ],
   "le-havre": [
@@ -616,6 +667,23 @@
       "npxg_against": 3.97,
       "xgot_for": 1.92,
       "xgot_against": 4.79,
+      "location": "home"
+    },
+    {
+      "date": "2026-11-08",
+      "opposition": "lorient",
+      "goals_for": 0,
+      "goals_against": 2,
+      "xG_for": 0.96,
+      "xG_against": 1.65,
+      "xg_open_play_for": 0.49,
+      "xg_open_play_against": 1.65,
+      "xg_set_play_for": 0.47,
+      "xg_set_play_against": 0,
+      "npxg_for": 0.96,
+      "npxg_against": 1.65,
+      "xgot_for": 0.37,
+      "xgot_against": 0.94,
       "location": "home"
     }
   ],
@@ -772,6 +840,23 @@
       "xgot_for": 0.09,
       "xgot_against": 2.45,
       "location": "away"
+    },
+    {
+      "date": "2026-11-08",
+      "opposition": "monaco",
+      "goals_for": 1,
+      "goals_against": 1,
+      "xG_for": 1.45,
+      "xG_against": 0.96,
+      "xg_open_play_for": 0.96,
+      "xg_open_play_against": 0.76,
+      "xg_set_play_for": 0.49,
+      "xg_set_play_against": 0.2,
+      "npxg_for": 1.45,
+      "npxg_against": 0.96,
+      "xgot_for": 2.46,
+      "xgot_against": 1.12,
+      "location": "home"
     }
   ],
   "lens": [
@@ -927,6 +1012,23 @@
       "xgot_for": 0.21,
       "xgot_against": 2.14,
       "location": "away"
+    },
+    {
+      "date": "2026-11-08",
+      "opposition": "marseille",
+      "goals_for": 1,
+      "goals_against": 2,
+      "xG_for": 1.92,
+      "xG_against": 2.16,
+      "xg_open_play_for": 1.88,
+      "xg_open_play_against": 2,
+      "xg_set_play_for": 0.04,
+      "xg_set_play_against": 0.16,
+      "npxg_for": 1.92,
+      "npxg_against": 2.16,
+      "xgot_for": 2.53,
+      "xgot_against": 2.21,
+      "location": "home"
     }
   ],
   "lille": [
@@ -1082,6 +1184,23 @@
       "xgot_for": 2.14,
       "xgot_against": 0.21,
       "location": "home"
+    },
+    {
+      "date": "2026-11-08",
+      "opposition": "rennes",
+      "goals_for": 2,
+      "goals_against": 1,
+      "xG_for": 0.36,
+      "xG_against": 1.53,
+      "xg_open_play_for": 0.34,
+      "xg_open_play_against": 0.58,
+      "xg_set_play_for": 0.02,
+      "xg_set_play_against": 0.95,
+      "npxg_for": 0.36,
+      "npxg_against": 1.53,
+      "xgot_for": 1.12,
+      "xgot_against": 1.32,
+      "location": "away"
     }
   ],
   "lorient": [
@@ -1237,6 +1356,23 @@
       "xgot_for": 0,
       "xgot_against": 1.67,
       "location": "home"
+    },
+    {
+      "date": "2026-11-08",
+      "opposition": "le-havre",
+      "goals_for": 2,
+      "goals_against": 0,
+      "xG_for": 1.65,
+      "xG_against": 0.96,
+      "xg_open_play_for": 1.65,
+      "xg_open_play_against": 0.49,
+      "xg_set_play_for": 0,
+      "xg_set_play_against": 0.47,
+      "npxg_for": 1.65,
+      "npxg_against": 0.96,
+      "xgot_for": 0.94,
+      "xgot_against": 0.37,
+      "location": "away"
     }
   ],
   "lyon": [
@@ -1392,6 +1528,23 @@
       "xgot_for": 1.96,
       "xgot_against": 0.31,
       "location": "home"
+    },
+    {
+      "date": "2026-11-08",
+      "opposition": "brest",
+      "goals_for": 0,
+      "goals_against": 2,
+      "xG_for": 0.64,
+      "xG_against": 1.84,
+      "xg_open_play_for": 0.32,
+      "xg_open_play_against": 1.04,
+      "xg_set_play_for": 0.31,
+      "xg_set_play_against": 0.02,
+      "npxg_for": 0.64,
+      "npxg_against": 1.05,
+      "xgot_for": 0.58,
+      "xgot_against": 2.38,
+      "location": "away"
     }
   ],
   "marseille": [
@@ -1547,6 +1700,23 @@
       "xgot_for": 1.07,
       "xgot_against": 1.06,
       "location": "home"
+    },
+    {
+      "date": "2026-11-08",
+      "opposition": "lens",
+      "goals_for": 2,
+      "goals_against": 1,
+      "xG_for": 2.16,
+      "xG_against": 1.92,
+      "xg_open_play_for": 2,
+      "xg_open_play_against": 1.88,
+      "xg_set_play_for": 0.16,
+      "xg_set_play_against": 0.04,
+      "npxg_for": 2.16,
+      "npxg_against": 1.92,
+      "xgot_for": 2.21,
+      "xgot_against": 2.53,
+      "location": "away"
     }
   ],
   "monaco": [
@@ -1701,6 +1871,23 @@
       "npxg_against": 2.15,
       "xgot_for": 0.99,
       "xgot_against": 3.25,
+      "location": "away"
+    },
+    {
+      "date": "2026-11-08",
+      "opposition": "le-mans",
+      "goals_for": 1,
+      "goals_against": 1,
+      "xG_for": 0.96,
+      "xG_against": 1.45,
+      "xg_open_play_for": 0.76,
+      "xg_open_play_against": 0.96,
+      "xg_set_play_for": 0.2,
+      "xg_set_play_against": 0.49,
+      "npxg_for": 0.96,
+      "npxg_against": 1.45,
+      "xgot_for": 1.12,
+      "xgot_against": 2.46,
       "location": "away"
     }
   ],
@@ -1857,6 +2044,23 @@
       "xgot_for": 2.93,
       "xgot_against": 2.47,
       "location": "home"
+    },
+    {
+      "date": "2026-11-08",
+      "opposition": "angers",
+      "goals_for": 2,
+      "goals_against": 0,
+      "xG_for": 2.13,
+      "xG_against": 0.85,
+      "xg_open_play_for": 2.04,
+      "xg_open_play_against": 0.68,
+      "xg_set_play_for": 0.09,
+      "xg_set_play_against": 0.17,
+      "npxg_for": 2.13,
+      "npxg_against": 0.85,
+      "xgot_for": 2.77,
+      "xgot_against": 1.38,
+      "location": "away"
     }
   ],
   "paris-fc": [
@@ -2012,6 +2216,23 @@
       "xgot_for": 3.25,
       "xgot_against": 0.99,
       "location": "home"
+    },
+    {
+      "date": "2026-11-07",
+      "opposition": "auxerre",
+      "goals_for": 1,
+      "goals_against": 0,
+      "xG_for": 0.76,
+      "xG_against": 0.81,
+      "xg_open_play_for": 0.6,
+      "xg_open_play_against": 0.73,
+      "xg_set_play_for": 0.16,
+      "xg_set_play_against": 0.08,
+      "npxg_for": 0.76,
+      "npxg_against": 0.81,
+      "xgot_for": 1.17,
+      "xgot_against": 0.32,
+      "location": "away"
     }
   ],
   "paris-saint-germain": [
@@ -2167,6 +2388,23 @@
       "xgot_for": 4.79,
       "xgot_against": 1.92,
       "location": "away"
+    },
+    {
+      "date": "2026-11-07",
+      "opposition": "troyes",
+      "goals_for": 1,
+      "goals_against": 0,
+      "xG_for": 2.06,
+      "xG_against": 0.65,
+      "xg_open_play_for": 1.65,
+      "xg_open_play_against": 0.64,
+      "xg_set_play_for": 0.41,
+      "xg_set_play_against": 0.01,
+      "npxg_for": 2.06,
+      "npxg_against": 0.65,
+      "xgot_for": 2.96,
+      "xgot_against": 0.47,
+      "location": "home"
     }
   ],
   "rennes": [
@@ -2322,6 +2560,23 @@
       "xgot_for": 2.47,
       "xgot_against": 2.93,
       "location": "away"
+    },
+    {
+      "date": "2026-11-08",
+      "opposition": "lille",
+      "goals_for": 1,
+      "goals_against": 2,
+      "xG_for": 1.53,
+      "xG_against": 0.36,
+      "xg_open_play_for": 0.58,
+      "xg_open_play_against": 0.34,
+      "xg_set_play_for": 0.95,
+      "xg_set_play_against": 0.02,
+      "npxg_for": 1.53,
+      "npxg_against": 0.36,
+      "xgot_for": 1.32,
+      "xgot_against": 1.12,
+      "location": "home"
     }
   ],
   "strasbourg": [
@@ -2821,6 +3076,23 @@
       "xgot_for": 2.45,
       "xgot_against": 0.09,
       "location": "home"
+    },
+    {
+      "date": "2026-11-07",
+      "opposition": "paris-saint-germain",
+      "goals_for": 0,
+      "goals_against": 1,
+      "xG_for": 0.65,
+      "xG_against": 2.06,
+      "xg_open_play_for": 0.64,
+      "xg_open_play_against": 1.65,
+      "xg_set_play_for": 0.01,
+      "xg_set_play_against": 0.41,
+      "npxg_for": 0.65,
+      "npxg_against": 2.06,
+      "xgot_for": 0.47,
+      "xgot_against": 2.96,
+      "location": "away"
     }
   ]
 }
