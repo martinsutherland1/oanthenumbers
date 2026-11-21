@@ -1590,5 +1590,24 @@
       "home_xgot": 1.32,
       "away_xgot": 1.12
     }
+  ],
+  "2026-11-20": [
+    {
+      "date": "2026-11-20",
+      "home_team": "troyes",
+      "away_team": "le-havre",
+      "home_goals": 3,
+      "away_goals": 1,
+      "home_xG": 2.64,
+      "away_xG": 0.63,
+      "home_xg_open_play": 1.66,
+      "away_xg_open_play": 0.32,
+      "home_xg_set_play": 0.2,
+      "away_xg_set_play": 0.31,
+      "home_npxg": 1.85,
+      "away_npxg": 0.63,
+      "home_xgot": 2.92,
+      "away_xgot": 0.32
+    }
   ]
 }

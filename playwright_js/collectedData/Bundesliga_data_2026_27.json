@@ -462,6 +462,23 @@
       "xgot_for": 2.65,
       "xgot_against": 0.31,
       "location": "away"
+    },
+    {
+      "date": "2026-11-20",
+      "opposition": "koln",
+      "goals_for": 1,
+      "goals_against": 1,
+      "xG_for": 1.07,
+      "xG_against": 1.99,
+      "xg_open_play_for": 1.04,
+      "xg_open_play_against": 1.99,
+      "xg_set_play_for": 0.03,
+      "xg_set_play_against": 0,
+      "npxg_for": 1.07,
+      "npxg_against": 1.99,
+      "xgot_for": 0.38,
+      "xgot_against": 1.63,
+      "location": "home"
     }
   ],
   "borussia-dortmund": [
@@ -1702,6 +1719,23 @@
       "xgot_for": 1.11,
       "xgot_against": 4.59,
       "location": "home"
+    },
+    {
+      "date": "2026-11-20",
+      "opposition": "bayern-munchen",
+      "goals_for": 1,
+      "goals_against": 1,
+      "xG_for": 1.99,
+      "xG_against": 1.07,
+      "xg_open_play_for": 1.99,
+      "xg_open_play_against": 1.04,
+      "xg_set_play_for": 0,
+      "xg_set_play_against": 0.03,
+      "npxg_for": 1.99,
+      "npxg_against": 1.07,
+      "xgot_for": 1.63,
+      "xgot_against": 0.38,
+      "location": "away"
     }
   ],
   "mainz": [

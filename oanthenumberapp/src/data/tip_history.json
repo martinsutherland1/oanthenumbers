@@ -1761,6 +1761,19 @@
     "loggedOn": "2026-11-09"
   },
   {
+    "league": "bundesliga",
+    "round": 10,
+    "date": "2026-11-22",
+    "time": "14:30",
+    "home": "augsburg",
+    "away": "mainz",
+    "market": "bttsNoDraw",
+    "label": "BTTS & no draw",
+    "likelihood": 0.627,
+    "overall": false,
+    "loggedOn": "2026-11-21"
+  },
+  {
     "league": "epl",
     "round": 11,
     "date": "2026-11-22",

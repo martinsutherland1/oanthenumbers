@@ -685,6 +685,23 @@
       "xgot_for": 0.37,
       "xgot_against": 0.94,
       "location": "home"
+    },
+    {
+      "date": "2026-11-20",
+      "opposition": "troyes",
+      "goals_for": 1,
+      "goals_against": 3,
+      "xG_for": 0.63,
+      "xG_against": 2.64,
+      "xg_open_play_for": 0.32,
+      "xg_open_play_against": 1.66,
+      "xg_set_play_for": 0.31,
+      "xg_set_play_against": 0.2,
+      "npxg_for": 0.63,
+      "npxg_against": 1.85,
+      "xgot_for": 0.32,
+      "xgot_against": 2.92,
+      "location": "away"
     }
   ],
   "le-mans": [
@@ -3093,6 +3110,23 @@
       "xgot_for": 0.47,
       "xgot_against": 2.96,
       "location": "away"
+    },
+    {
+      "date": "2026-11-20",
+      "opposition": "le-havre",
+      "goals_for": 3,
+      "goals_against": 1,
+      "xG_for": 2.64,
+      "xG_against": 0.63,
+      "xg_open_play_for": 1.66,
+      "xg_open_play_against": 0.32,
+      "xg_set_play_for": 0.2,
+      "xg_set_play_against": 0.31,
+      "npxg_for": 1.85,
+      "npxg_against": 0.63,
+      "xgot_for": 2.92,
+      "xgot_against": 0.32,
+      "location": "home"
     }
   ]
 }

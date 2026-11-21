@@ -1429,5 +1429,24 @@
       "home_xgot": 1.58,
       "away_xgot": 0.81
     }
+  ],
+  "2026-11-20": [
+    {
+      "date": "2026-11-20",
+      "home_team": "bayern-munchen",
+      "away_team": "koln",
+      "home_goals": 1,
+      "away_goals": 1,
+      "home_xG": 1.07,
+      "away_xG": 1.99,
+      "home_xg_open_play": 1.04,
+      "away_xg_open_play": 1.99,
+      "home_xg_set_play": 0.03,
+      "away_xg_set_play": 0,
+      "home_npxg": 1.07,
+      "away_npxg": 1.99,
+      "home_xgot": 0.38,
+      "away_xgot": 1.63
+    }
   ]
 }
