@@ -1774,6 +1774,20 @@
     "loggedOn": "2026-11-21"
   },
   {
+    "league": "bundesliga",
+    "round": 10,
+    "date": "2026-11-22",
+    "time": "16:30",
+    "home": "werder-bremen",
+    "away": "hamburger-sv",
+    "market": "win",
+    "side": "home",
+    "label": "Werder Bremen to win",
+    "likelihood": 0.612,
+    "overall": false,
+    "loggedOn": "2026-11-22"
+  },
+  {
     "league": "epl",
     "round": 11,
     "date": "2026-11-22",
