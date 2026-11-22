@@ -1869,6 +1869,19 @@
     "loggedOn": "2026-11-09"
   },
   {
+    "league": "ligue1",
+    "round": 11,
+    "date": "2026-11-22",
+    "time": "16:15",
+    "home": "lorient",
+    "away": "rennes",
+    "market": "btts",
+    "label": "Both teams to score",
+    "likelihood": 0.61,
+    "overall": false,
+    "loggedOn": "2026-11-22"
+  },
+  {
     "league": "seriea",
     "round": 12,
     "date": "2026-11-22",
