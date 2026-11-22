@@ -1896,6 +1896,20 @@
     "loggedOn": "2026-11-09"
   },
   {
+    "league": "seriea",
+    "round": 12,
+    "date": "2026-11-22",
+    "time": "19:45",
+    "home": "atalanta",
+    "away": "inter",
+    "market": "win",
+    "side": "away",
+    "label": "Inter to win",
+    "likelihood": 0.673,
+    "overall": false,
+    "loggedOn": "2026-11-22"
+  },
+  {
     "league": "epl",
     "round": 11,
     "date": "2026-11-23",
@@ -1908,6 +1922,19 @@
     "likelihood": 0.735,
     "overall": true,
     "loggedOn": "2026-11-09"
+  },
+  {
+    "league": "seriea",
+    "round": 12,
+    "date": "2026-11-23",
+    "time": "19:45",
+    "home": "monza",
+    "away": "fiorentina",
+    "market": "btts",
+    "label": "Both teams to score",
+    "likelihood": 0.697,
+    "overall": false,
+    "loggedOn": "2026-11-22"
   },
   {
     "league": "spfl",
