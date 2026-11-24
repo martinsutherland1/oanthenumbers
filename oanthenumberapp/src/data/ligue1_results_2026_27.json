@@ -1696,5 +1696,58 @@
       "home_xgot": 1.68,
       "away_xgot": 2.46
     }
+  ],
+  "2026-11-22": [
+    {
+      "date": "2026-11-22",
+      "home_team": "paris-fc",
+      "away_team": "angers",
+      "home_goals": 4,
+      "away_goals": 0,
+      "home_xG": 3.51,
+      "away_xG": 0.46,
+      "home_xg_open_play": 2.08,
+      "away_xg_open_play": 0.31,
+      "home_xg_set_play": 1.43,
+      "away_xg_set_play": 0.15,
+      "home_npxg": 3.51,
+      "away_npxg": 0.46,
+      "home_xgot": 4.98,
+      "away_xgot": 0.02
+    },
+    {
+      "date": "2026-11-22",
+      "home_team": "marseille",
+      "away_team": "le-mans",
+      "home_goals": 2,
+      "away_goals": 3,
+      "home_xG": 1.42,
+      "away_xG": 3.92,
+      "home_xg_open_play": 1.33,
+      "away_xg_open_play": 2.99,
+      "home_xg_set_play": 0.09,
+      "away_xg_set_play": 0.15,
+      "home_npxg": 1.42,
+      "away_npxg": 3.13,
+      "home_xgot": 1.9,
+      "away_xgot": 4.88
+    },
+    {
+      "date": "2026-11-22",
+      "home_team": "lorient",
+      "away_team": "rennes",
+      "home_goals": 1,
+      "away_goals": 1,
+      "home_xG": 1.45,
+      "away_xG": 1.25,
+      "home_xg_open_play": 0.47,
+      "away_xg_open_play": 1.17,
+      "home_xg_set_play": 0.19,
+      "away_xg_set_play": 0.08,
+      "home_npxg": 0.66,
+      "away_npxg": 1.25,
+      "home_xgot": 0.55,
+      "away_xgot": 1.42
+    }
   ]
 }

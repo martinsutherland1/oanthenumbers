@@ -152,6 +152,23 @@
       "xgot_for": 3.42,
       "xgot_against": 3.29,
       "location": "away"
+    },
+    {
+      "date": "2026-11-22",
+      "opposition": "mainz",
+      "goals_for": 3,
+      "goals_against": 1,
+      "xG_for": 4.04,
+      "xG_against": 1.2,
+      "xg_open_play_for": 1.2,
+      "xg_open_play_against": 1.09,
+      "xg_set_play_for": 2.84,
+      "xg_set_play_against": 0.11,
+      "npxg_for": 4.04,
+      "npxg_against": 1.2,
+      "xgot_for": 3.9,
+      "xgot_against": 0.97,
+      "location": "home"
     }
   ],
   "bayer-leverkusen": [
@@ -1511,6 +1528,23 @@
       "xgot_for": 3.09,
       "xgot_against": 1.36,
       "location": "home"
+    },
+    {
+      "date": "2026-11-22",
+      "opposition": "werder-bremen",
+      "goals_for": 0,
+      "goals_against": 4,
+      "xG_for": 1.54,
+      "xG_against": 1.51,
+      "xg_open_play_for": 1.14,
+      "xg_open_play_against": 1.32,
+      "xg_set_play_for": 0.39,
+      "xg_set_play_against": 0.19,
+      "npxg_for": 1.54,
+      "npxg_against": 1.51,
+      "xgot_for": 0.03,
+      "xgot_against": 2.07,
+      "location": "away"
     }
   ],
   "hoffenheim": [
@@ -2010,6 +2044,23 @@
       "xgot_for": 0.31,
       "xgot_against": 2.65,
       "location": "home"
+    },
+    {
+      "date": "2026-11-22",
+      "opposition": "augsburg",
+      "goals_for": 1,
+      "goals_against": 3,
+      "xG_for": 1.2,
+      "xG_against": 4.04,
+      "xg_open_play_for": 1.09,
+      "xg_open_play_against": 1.2,
+      "xg_set_play_for": 0.11,
+      "xg_set_play_against": 2.84,
+      "npxg_for": 1.2,
+      "npxg_against": 4.04,
+      "xgot_for": 0.97,
+      "xgot_against": 3.9,
+      "location": "away"
     }
   ],
   "paderborn": [
@@ -3025,6 +3076,23 @@
       "xgot_for": 0.92,
       "xgot_against": 1.5,
       "location": "away"
+    },
+    {
+      "date": "2026-11-22",
+      "opposition": "hamburger-sv",
+      "goals_for": 4,
+      "goals_against": 0,
+      "xG_for": 1.51,
+      "xG_against": 1.54,
+      "xg_open_play_for": 1.32,
+      "xg_open_play_against": 1.14,
+      "xg_set_play_for": 0.19,
+      "xg_set_play_against": 0.39,
+      "npxg_for": 1.51,
+      "npxg_against": 1.54,
+      "xgot_for": 2.07,
+      "xgot_against": 0.03,
+      "location": "home"
     }
   ]
 }
