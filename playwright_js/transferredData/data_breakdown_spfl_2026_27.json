@@ -1431,5 +1431,41 @@
       "home_xgot": 0.53,
       "away_xgot": 4.95
     }
+  ],
+  "2026-11-24": [
+    {
+      "date": "2026-11-24",
+      "home_team": "rangers",
+      "away_team": "aberdeen",
+      "home_goals": 3,
+      "away_goals": 2,
+      "home_xG": 3.38,
+      "away_xG": 0.54,
+      "home_xg_open_play": 3.17,
+      "away_xg_open_play": 0.29,
+      "home_xg_set_play": 0.21,
+      "away_xg_set_play": 0.25,
+      "home_npxg": 3.38,
+      "away_npxg": 0.54,
+      "home_xgot": 1.51,
+      "away_xgot": 1.65
+    },
+    {
+      "date": "2026-11-24",
+      "home_team": "hibernian",
+      "away_team": "dundee-fc",
+      "home_goals": 2,
+      "away_goals": 1,
+      "home_xG": 1.33,
+      "away_xG": 1.47,
+      "home_xg_open_play": 0.38,
+      "away_xg_open_play": 0.21,
+      "home_xg_set_play": 0.15,
+      "away_xg_set_play": 1.26,
+      "home_npxg": 0.54,
+      "away_npxg": 1.47,
+      "home_xgot": 2.15,
+      "away_xgot": 0.59
+    }
   ]
 }
