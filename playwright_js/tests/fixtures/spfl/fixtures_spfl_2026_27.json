@@ -435,7 +435,20 @@
       "team_home": "motherwell",
       "team_away": "st-mirren",
       "round": 12
-    }
+    },
+    {
+  "date": "2026-11-25",
+  "team_home": "rangers",
+  "team_away": "aberdeen",
+  "round": 12
+},
+{
+  "date": "2026-11-25",
+  "team_home": "hibernian",
+  "team_away": "dundee-fc",
+  "round": 12
+},
+
   ],
   "fixtures_12": [
     {
