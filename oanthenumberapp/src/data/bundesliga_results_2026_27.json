@@ -1588,5 +1588,24 @@
       "home_xgot": 2.07,
       "away_xgot": 0.03
     }
+  ],
+  "2026-11-27": [
+    {
+      "date": "2026-11-27",
+      "home_team": "werder-bremen",
+      "away_team": "borussia-monchengladbach",
+      "home_goals": 3,
+      "away_goals": 3,
+      "home_xG": 1.47,
+      "away_xG": 2.71,
+      "home_xg_open_play": 1.39,
+      "away_xg_open_play": 1.62,
+      "home_xg_set_play": 0.08,
+      "away_xg_set_play": 0.3,
+      "home_npxg": 1.47,
+      "away_npxg": 1.92,
+      "home_xgot": 2.69,
+      "away_xgot": 2.71
+    }
   ]
 }

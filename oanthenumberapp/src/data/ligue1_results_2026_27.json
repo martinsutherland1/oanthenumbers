@@ -1749,5 +1749,24 @@
       "home_xgot": 0.55,
       "away_xgot": 1.42
     }
+  ],
+  "2026-11-27": [
+    {
+      "date": "2026-11-27",
+      "home_team": "brest",
+      "away_team": "paris-fc",
+      "home_goals": 1,
+      "away_goals": 0,
+      "home_xG": 2.31,
+      "away_xG": 1.96,
+      "home_xg_open_play": 2.13,
+      "away_xg_open_play": 1.09,
+      "home_xg_set_play": 0.19,
+      "away_xg_set_play": 0.86,
+      "home_npxg": 2.31,
+      "away_npxg": 1.96,
+      "home_xgot": 1.29,
+      "away_xgot": 1.11
+    }
   ]
 }

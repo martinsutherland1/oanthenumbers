@@ -564,6 +564,23 @@
       "xgot_for": 0.48,
       "xgot_against": 1.17,
       "location": "away"
+    },
+    {
+      "date": "2026-11-27",
+      "opposition": "paris-fc",
+      "goals_for": 1,
+      "goals_against": 0,
+      "xG_for": 2.31,
+      "xG_against": 1.96,
+      "xg_open_play_for": 2.13,
+      "xg_open_play_against": 1.09,
+      "xg_set_play_for": 0.19,
+      "xg_set_play_against": 0.86,
+      "npxg_for": 2.31,
+      "npxg_against": 1.96,
+      "xgot_for": 1.29,
+      "xgot_against": 1.11,
+      "location": "home"
     }
   ],
   "le-havre": [
@@ -2454,6 +2471,23 @@
       "xgot_for": 4.98,
       "xgot_against": 0.02,
       "location": "home"
+    },
+    {
+      "date": "2026-11-27",
+      "opposition": "brest",
+      "goals_for": 0,
+      "goals_against": 1,
+      "xG_for": 1.96,
+      "xG_against": 2.31,
+      "xg_open_play_for": 1.09,
+      "xg_open_play_against": 2.13,
+      "xg_set_play_for": 0.86,
+      "xg_set_play_against": 0.19,
+      "npxg_for": 1.96,
+      "npxg_against": 2.31,
+      "xgot_for": 1.11,
+      "xgot_against": 1.29,
+      "location": "away"
     }
   ],
   "paris-saint-germain": [

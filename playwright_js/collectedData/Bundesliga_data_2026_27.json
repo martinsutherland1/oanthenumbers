@@ -857,6 +857,23 @@
       "xgot_for": 0.59,
       "xgot_against": 1.4,
       "location": "home"
+    },
+    {
+      "date": "2026-11-27",
+      "opposition": "werder-bremen",
+      "goals_for": 3,
+      "goals_against": 3,
+      "xG_for": 2.71,
+      "xG_against": 1.47,
+      "xg_open_play_for": 1.62,
+      "xg_open_play_against": 1.39,
+      "xg_set_play_for": 0.3,
+      "xg_set_play_against": 0.08,
+      "npxg_for": 1.92,
+      "npxg_against": 1.47,
+      "xgot_for": 2.71,
+      "xgot_against": 2.69,
+      "location": "away"
     }
   ],
   "eintracht-frankfurt": [
@@ -3092,6 +3109,23 @@
       "npxg_against": 1.54,
       "xgot_for": 2.07,
       "xgot_against": 0.03,
+      "location": "home"
+    },
+    {
+      "date": "2026-11-27",
+      "opposition": "borussia-monchengladbach",
+      "goals_for": 3,
+      "goals_against": 3,
+      "xG_for": 1.47,
+      "xG_against": 2.71,
+      "xg_open_play_for": 1.39,
+      "xg_open_play_against": 1.62,
+      "xg_set_play_for": 0.08,
+      "xg_set_play_against": 0.3,
+      "npxg_for": 1.47,
+      "npxg_against": 1.92,
+      "xgot_for": 2.69,
+      "xgot_against": 2.71,
       "location": "home"
     }
   ]

@@ -2116,6 +2116,19 @@
     "loggedOn": "2026-11-24"
   },
   {
+    "league": "bundesliga",
+    "round": 11,
+    "date": "2026-11-29",
+    "time": "16:30",
+    "home": "hoffenheim",
+    "away": "augsburg",
+    "market": "bttsNoDraw",
+    "label": "BTTS & no draw",
+    "likelihood": 0.594,
+    "overall": false,
+    "loggedOn": "2026-11-28"
+  },
+  {
     "league": "epl",
     "round": 12,
     "date": "2026-11-29",
